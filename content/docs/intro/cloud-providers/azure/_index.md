@@ -18,7 +18,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/a
 
 ## Setup
 
-The Azure provider supports several options for providing access to Azure credentials.  See [Azure setup page]({{< relref "/docs/intro/cloud-providers/azure/setup.md" >}}) for details.
+The Azure provider supports several options for providing access to Azure credentials.  See [Azure setup page]({{< relref "/docs/intro/cloud-providers/azure/setup" >}}) for details.
 
 ## Getting Started
 
@@ -54,6 +54,7 @@ The following packages are available in package managers:
 * JavaScript/TypeScript: [`@pulumi/azure`](https://www.npmjs.com/package/@pulumi/azure)
 * Python: [`pulumi-azure`](https://pypi.org/project/pulumi-azure/)
 * Go: [`github.com/pulumi/pulumi-azure/sdk/go/azure`](https://github.com/pulumi/pulumi-azure)
+* .NET: [`Pulumi.Azure`](https://www.nuget.org/packages/Pulumi.Azure)
 
 The Azure provider is open source and available in the [pulumi/pulumi-azure](https://github.com/pulumi/pulumi-azure) repo.
 

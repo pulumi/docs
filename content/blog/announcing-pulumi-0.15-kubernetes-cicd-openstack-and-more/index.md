@@ -13,17 +13,17 @@ platform.  The response has been overwhelming and we've been hard at
 work responding to your feedback ever since.
 
 Today, we are excited to release [Pulumi 0.15](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0150-2018-08-13) and make
-it [available to download]({{< ref "/docs/get-started/install" >}}).  This release
+it [available to download]({{< relref "/docs/get-started/install" >}}).  This release
 includes improvements across the entire Pulumi development experience.
 Pulumi supports more platforms
-([Kubernetes]({{< ref "/docs/get-started/kubernetes" >}}) and
-[OpenStack]({{< ref "/docs/intro/cloud-providers/openstack" >}})), is faster
+([Kubernetes]({{< relref "/docs/get-started/kubernetes" >}}) and
+[OpenStack]({{< relref "/docs/intro/cloud-providers/openstack" >}})), is faster
 (Parallelism, simpler (native
 TypeScript support), richer
 (serverless frameworks for Azure and
 GCP),  and is more deeply
 integrated into the application lifecycle
-([GitHub App for CI/CD integration]({{< ref "/docs/guides/continuous-delivery/github-app" >}})).
+([GitHub App for CI/CD integration]({{< relref "/docs/guides/continuous-delivery/github-app" >}})).
 
 In this post, we'll take a quick tour of these new features. Stay tuned
 for follow up blog posts to dive deeper into individual topics.
@@ -86,8 +86,8 @@ const kibana = new helm.v2.Chart("kibana", {
 ```
 
 Check out the [Kubernetes
-overview]({{< ref "/docs/get-started/kubernetes" >}}) docs, the [API
-documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
+overview]({{< relref "/docs/get-started/kubernetes" >}}) docs, the [API
+documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
 and the [pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes)
 GitHub project for additional details.
 
@@ -194,7 +194,7 @@ const instance = new os.compute.Instance("test", {
 exports.instanceIP = instance.accessIpV4;
 ```
 
-Check out the [API documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/openstack" >}})
+Check out the [API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/openstack" >}})
 and the [pulumi-openstack](https://github.com/pulumi/pulumi-openstack)
 GitHub project for additional details. Huge thanks to Fraser for his
 work on this!
@@ -241,7 +241,7 @@ export let url = f.function.httpsTriggerUrl;
 
 ## GitHub App for CI/CD Integration
 
-Pulumi already works with [your favorite CI/CD systems]({{< ref "/docs/guides/continuous-delivery" >}})
+Pulumi already works with [your favorite CI/CD systems]({{< relref "/docs/guides/continuous-delivery" >}})
 to accomplish automated
 and continuous deployments of cloud infrastructure and applications.
 This is how Pulumi deploys and manages our own infrastructure that runs
@@ -263,14 +263,14 @@ infrastructure changes.
 The Pulumi GitHub App is still in preview as we work to support more CI
 systems and extend its capabilities. For information on how to install
 it and configure it with your CI system, please [read the
-documentation]({{< ref "/docs/guides/continuous-delivery/github-app" >}}).
+documentation]({{< relref "/docs/guides/continuous-delivery/github-app" >}}).
 
 ## Summary
 
 We're excited about all the new features in this release and the new
 scenarios they enable for the Pulumi community . If you are new to
 Pulumi, [download the tools and get started
-today]({{< ref "/docs/get-started" >}}), or [join us in Slack](https://slack.pulumi.com). A big thanks to all the users and
+today]({{< relref "/docs/get-started" >}}), or [join us in Slack](https://slack.pulumi.com). A big thanks to all the users and
 contributors who have helped shape this release -- we can't wait to see
 what you build next !
 

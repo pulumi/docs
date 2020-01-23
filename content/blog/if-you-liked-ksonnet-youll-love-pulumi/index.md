@@ -132,7 +132,7 @@ Another fun example is
 ## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [click here to get started today]({{< ref "/docs/get-started" >}}). Pulumi is open source and free to
+infrastructure and Kubernetes through code, [click here to get started today]({{< relref "/docs/get-started" >}}). Pulumi is open source and free to
 use.
 
 If you'd like to go deeper on certain topics, here are some additional
@@ -140,12 +140,12 @@ resources to check out:
 
 - [Overview of Pulumi Kubernetes Scenarios]({{< relref "/topics/kubernetes" >}})
 - Tutorial: Create a Kubernetes cluster on a cloud provider
-  [Amazon EKS]({{< ref "/docs/tutorials/kubernetes/eks" >}}),
-  [Google GKE]({{< ref "/docs/tutorials/kubernetes/gke" >}}), or
+  [Amazon EKS]({{< relref "/docs/tutorials/kubernetes/eks" >}}),
+  [Google GKE]({{< relref "/docs/tutorials/kubernetes/gke" >}}), or
   [Azure AKS](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean)
-- Tutorial: [Operate and deploy to a Kubernetes cluster]({{< ref "/docs/tutorials/kubernetes/exposed-deployment" >}})
-- Docs: [Pulumi docs]({{< ref "/docs/reference" >}}), including an
-  [overview of the programming model]({{< ref "/docs/intro/concepts/programming-model" >}})
+- Tutorial: [Operate and deploy to a Kubernetes cluster]({{< relref "/docs/tutorials/kubernetes/exposed-deployment" >}})
+- Docs: [Pulumi docs]({{< relref "/docs/reference" >}}), including an
+  [overview of the programming model]({{< relref "/docs/intro/concepts/programming-model" >}})
 - Video: In February, we were honored to have Joe Beda
 [show where Pulumi fits in on his TGIK livestream](https://www.youtube.com/watch?v=ILMK65YVSKw),
 highlighting how to use your favorite language and consistent workflows to create,
@@ -161,4 +161,4 @@ any questions, need support, or just want to say hello.
 
 If you'd like to chat with our team, or get hands-on assistance with
 migrating your existing configuration code (including ksonnet programs)
-to Pulumi, please don't hesitate to [drop us a line]({{< ref "/contact" >}}).
+to Pulumi, please don't hesitate to [drop us a line]({{< relref "/contact" >}}).

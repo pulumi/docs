@@ -390,7 +390,13 @@ is not provided, the provider project is used.</p></li>
 for CSV and JSON formats and is disallowed for Google Cloud
 Bigtable, Cloud Datastore backups, and Avro formats when using
 external tables. For more information see the
-<a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#resource">BigQuery API documentation</a>.</p></li>
+<a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#resource">BigQuery API documentation</a>.
+~&gt;<strong>NOTE</strong>: Because this field expects a JSON string, any changes to the
+string will create a diff, even if the JSON itself hasn’t changed.
+If the API returns a different value for the same schema, e.g. it
+switched the order of values or replaced <code class="docutils literal notranslate"><span class="pre">STRUCT</span></code> field type with <code class="docutils literal notranslate"><span class="pre">RECORD</span></code>
+field type, we currently cannot suppress the recurring diff this causes.
+As a workaround, we recommend using the schema as returned by the API.</p></li>
 <li><p><strong>table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique ID for the resource.
 Changing this forces a new resource to be created.</p></li>
 <li><p><strong>time_partitioning</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – If specified, configures time-based
@@ -586,7 +592,13 @@ is not provided, the provider project is used.</p>
 for CSV and JSON formats and is disallowed for Google Cloud
 Bigtable, Cloud Datastore backups, and Avro formats when using
 external tables. For more information see the
-<a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#resource">BigQuery API documentation</a>.</p>
+<a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#resource">BigQuery API documentation</a>.
+~&gt;<strong>NOTE</strong>: Because this field expects a JSON string, any changes to the
+string will create a diff, even if the JSON itself hasn’t changed.
+If the API returns a different value for the same schema, e.g. it
+switched the order of values or replaced <code class="docutils literal notranslate"><span class="pre">STRUCT</span></code> field type with <code class="docutils literal notranslate"><span class="pre">RECORD</span></code>
+field type, we currently cannot suppress the recurring diff this causes.
+As a workaround, we recommend using the schema as returned by the API.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -675,7 +687,13 @@ is not provided, the provider project is used.</p></li>
 for CSV and JSON formats and is disallowed for Google Cloud
 Bigtable, Cloud Datastore backups, and Avro formats when using
 external tables. For more information see the
-<a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#resource">BigQuery API documentation</a>.</p>
+<a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#resource">BigQuery API documentation</a>.
+~&gt;<strong>NOTE</strong>: Because this field expects a JSON string, any changes to the
+string will create a diff, even if the JSON itself hasn’t changed.
+If the API returns a different value for the same schema, e.g. it
+switched the order of values or replaced <code class="docutils literal notranslate"><span class="pre">STRUCT</span></code> field type with <code class="docutils literal notranslate"><span class="pre">RECORD</span></code>
+field type, we currently cannot suppress the recurring diff this causes.
+As a workaround, we recommend using the schema as returned by the API.</p>
 </p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
 <li><p><strong>table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique ID for the resource.

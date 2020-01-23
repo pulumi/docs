@@ -19,7 +19,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/d
 
 ## Setup
 
-The DigitalOcean provider supports several options for providing access to DigitalOcean credentials.  See the [DigitalOcean setup page]({{< relref "setup.md" >}}) for details.
+The DigitalOcean provider supports several options for providing access to DigitalOcean credentials.  See the [DigitalOcean setup page]({{< relref "setup" >}}) for details.
 
 ## Example
 
@@ -89,5 +89,6 @@ The following packages are available in packager managers:
 * JavaScript/TypeScript: [`@pulumi/digitalocean`](https://www.npmjs.com/package/@pulumi/digitalocean)
 * Python: [`pulumi-digitalocean`](https://pypi.org/project/pulumi-digitalocean/)
 * Go: [`github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean`](https://github.com/pulumi/pulumi-digitalocean)
+* .NET: [`Pulumi.DigitalOcean`](https://www.nuget.org/packages/Pulumi.DigitalOcean)
 
 The DigitalOcean provider is open source and available in the [pulumi/pulumi-digitalocean](https://github.com/pulumi/pulumi-digitalocean) repo.

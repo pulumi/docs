@@ -3094,7 +3094,9 @@ distributed router. The default policy setting in Neutron restricts
 usage of this property to administrative users only.</p></li>
 <li><p><strong>enable_snat</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable Source NAT for the router. Valid values are
 “true” or “false”. An <code class="docutils literal notranslate"><span class="pre">external_network_id</span></code> has to be set in order to
-set this property. Changing this updates the <code class="docutils literal notranslate"><span class="pre">enable_snat</span></code> of the router.</p></li>
+set this property. Changing this updates the <code class="docutils literal notranslate"><span class="pre">enable_snat</span></code> of the router.
+Setting this value <strong>requires</strong> an <strong>ext-gw-mode</strong> extension to be enabled
+in OpenStack Neutron.</p></li>
 <li><p><strong>external_fixed_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An external fixed IP for the router. This
 can be repeated. The structure is described below. An <code class="docutils literal notranslate"><span class="pre">external_network_id</span></code>
 has to be set in order to set this property. Changing this updates the
@@ -3177,7 +3179,9 @@ usage of this property to administrative users only.</p>
 <code class="sig-name descname">enable_snat</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Router.enable_snat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable Source NAT for the router. Valid values are
 “true” or “false”. An <code class="docutils literal notranslate"><span class="pre">external_network_id</span></code> has to be set in order to
-set this property. Changing this updates the <code class="docutils literal notranslate"><span class="pre">enable_snat</span></code> of the router.</p>
+set this property. Changing this updates the <code class="docutils literal notranslate"><span class="pre">enable_snat</span></code> of the router.
+Setting this value <strong>requires</strong> an <strong>ext-gw-mode</strong> extension to be enabled
+in OpenStack Neutron.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3282,7 +3286,9 @@ distributed router. The default policy setting in Neutron restricts
 usage of this property to administrative users only.</p></li>
 <li><p><strong>enable_snat</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable Source NAT for the router. Valid values are
 “true” or “false”. An <code class="docutils literal notranslate"><span class="pre">external_network_id</span></code> has to be set in order to
-set this property. Changing this updates the <code class="docutils literal notranslate"><span class="pre">enable_snat</span></code> of the router.</p></li>
+set this property. Changing this updates the <code class="docutils literal notranslate"><span class="pre">enable_snat</span></code> of the router.
+Setting this value <strong>requires</strong> an <strong>ext-gw-mode</strong> extension to be enabled
+in OpenStack Neutron.</p></li>
 <li><p><strong>external_fixed_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An external fixed IP for the router. This
 can be repeated. The structure is described below. An <code class="docutils literal notranslate"><span class="pre">external_network_id</span></code>
 has to be set in order to set this property. Changing this updates the

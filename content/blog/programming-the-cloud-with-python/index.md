@@ -134,7 +134,7 @@ If you'd like to try the above example out for yourself, we've put the [full cod
 Full instructions for installing Pulumi and deploying your own static website on S3 are in the `README`.
 Don't take our word for it, though! We'd love for you to check it out and see for yourself how
 great it is to reclaim the “code” in “infrastructure as code”. If you want to know more about
-Pulumi and the things it can do for you, check out our [Getting Started]({{< ref "/docs/get-started" >}}) page and our Documentation for more information.
+Pulumi and the things it can do for you, check out our [Getting Started]({{< relref "/docs/get-started" >}}) page and our Documentation for more information.
 
 Python is the language of automation today and the future. Pulumi is the infrastructure as
 code automation tool of the future. Using them both together is an incredible way to automate a

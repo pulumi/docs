@@ -14,7 +14,7 @@
                 <p>
                     <strong>Now Available</strong>:
                     <a href="{{ relref . "/crosswalk/aws" }}">
-                        Pulumi Crosswalk for AWS: Accelerate Delivery of Well-Architected Infrastructure as Code
+                        Pulumi Crosswalk for AWS: Accelerate Delivery of Well-Architected AWS Infrastructure as Code
                     </a>
                 </p>
                 <div class="header-hero-actions">
@@ -67,7 +67,7 @@ let server = new aws.ec2.Instance("web-server-www", {
 
     {{ partial "benefits-v1.html" . }}
 
-    <section id="code" class="bg-gray-200 py-16 px-4 md:px-0">
+    <section id="code" class="bg-gray-200 py-16 px-4">
         <div class="container mx-auto">
 
             <!-- Example 1 -->
@@ -76,10 +76,10 @@ let server = new aws.ec2.Instance("web-server-www", {
                     <h2>Creating a Serverless REST API</h2>
                     <p>
                         With Pulumi, you can combine infrastructure definitions and application code in one program. The
-                        <a href="{{ relref . "/crosswalk/aws" }}">Crosswalk for AWS library</a> is a set of Pulumi
-                        components that provide a higher-level abstraction over AWS. So, instead of provisioning an API
-                        Gateway instance, Lambda functions, and setting up IAM roles, you can use this library and define
-                        application code at the same time as the infrastructure it depends on.
+                        <a href="{{ relref . "/crosswalk/aws" }}">
+                        Crosswalk for AWS Infrastructure Library</a> is a set of Pulumi components that provide a higher-level abstraction
+                        over AWS. So, instead of provisioning an API Gateway instance, Lambda functions, and setting up IAM roles,
+                        you can use this library and define application code at the same time as the infrastructure it depends on.
                     </p>
                     <p>
                         This example shows how to create a simple REST API that counts the number of times a route has been hit. To implement this API, we need a DynamoDB table, an API endpoint, and a Lambda function.
@@ -225,7 +225,7 @@ export let frontendIp = frontend.ipAddress;` }}
                 <div class="md:w-1/2 md:mr-4">
                     <h2>Creating a Simple Web Server</h2>
                     <p>
-                        Pulumi gives you a way to express infrastructure configuration using your favorite programming language.
+                        Pulumi gives you a way to express AWS infrastructure configuration using your favorite programming language.
                     </p>
                     <p>
                         This code uses TypeScript on Node.js to define the necessary security group, and defines a very simple web server, and then creates the instance, before exporting the IP and Hostname.

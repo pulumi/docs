@@ -13,7 +13,7 @@ and visualizations directly inside your Pulumi application.
 As cloud applications tend to be long-lived, we think it's vital that it
 be possible to get regular insights on the performance of the
 application at all times. Using
-[Crosswalk for AWS]({{< ref "/docs/guides/crosswalk/aws" >}}) Pulumi applications
+[Crosswalk for AWS]({{< relref "/docs/guides/crosswalk/aws" >}}) Pulumi applications
 allow you to easily define and visualize the appropriate
 [metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/working_with_metrics.html)
 that show the health of your services, create
@@ -91,10 +91,10 @@ two resources. That's very simple to do:
 
 Then, we want to get information about how long these functions are
 taking. With Pulumi's
-[Crosswalk]({{< ref "/docs/guides/crosswalk/aws" >}}) APIs it's simple
+[Crosswalk]({{< relref "/docs/guides/crosswalk/aws" >}}) APIs it's simple
 to get at this information. Inside all the main "Crosswalk for AWS"
 modules are exposed
-[Metrics]({{< ref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#Metric" >}})
+[Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#Metric" >}})
 for almost anything you might ever need. In this case, we want to know
 how long those Functions are taking so we can get that information as
 follows:
@@ -166,4 +166,4 @@ content:
 
 1. [Pulumi Crosswalk for AWS Announcement]({{< relref "introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws" >}})
 2. [Mapbox IOT-as-Code with Pulumi Crosswalk for AWS]({{< relref "mapbox-iot-as-code-with-pulumi-crosswalk-for-aws" >}})
-3. [Pulumi Crosswalk for AWS Documentation]({{< ref "/docs/guides/crosswalk/aws" >}})
+3. [Pulumi Crosswalk for AWS Documentation]({{< relref "/docs/guides/crosswalk/aws" >}})

@@ -13,11 +13,11 @@ tags:
 
 ![Pulumi Booth KubeCon2019](booth.jpg)
 
-We had a fantastic time at KubeCon in San Diego. At the event, the Pulumi team released two technology previews: [Pulumi Crosswalk for Kubernetes](https://www.pulumi.com/docs/guides/crosswalk/kubernetes/) and [Pulumi Query for Kubernetes](https://github.com/pulumi/pulumi-query-kubernetes).
+We had a fantastic time at KubeCon in San Diego. At the event, the Pulumi team released two technology previews: [Pulumi Crosswalk for Kubernetes]({{< relref "/docs/guides/crosswalk/kubernetes" >}}) and [Pulumi Query for Kubernetes](https://github.com/pulumi/pulumi-query-kubernetes).
 
-Crosswalk for Kubernetes is a set of common patterns compiled in playbooks. These patterns reduce the complex Kubernetes API syntax by providing trusted defaults with idiomatic Kubernetes. Checkout a quick introduction to Crosswalk for Kubernetes in this [blog post](https://www.pulumi.com/blog/inside-crosswalk-for-kubernetes/).
+Crosswalk for Kubernetes is a set of common patterns compiled in playbooks. These patterns reduce the complex Kubernetes API syntax by providing trusted defaults with idiomatic Kubernetes. Checkout a quick introduction to Crosswalk for Kubernetes in this [blog post]({{< relref "/blog/inside-crosswalk-for-kubernetes" >}}).
 
-[Sara Novotny](https://twitter.com/sarahnovotny) defined observability as *“the ability to ask of your system and learn from it”* during her [keynote](https://www.youtube.com/watch?v=W_8MHdtrgZE) with [Liz Fong-Jones](https://twitter.com/lizthegrey). Query for Kubernetes enables observability programmatically by exposing resource processes through either batch or streaming queries. Learn more about Query for Kubernetes in our [blog post](https://www.pulumi.com/blog/query-kubernetes/).
+[Sara Novotny](https://twitter.com/sarahnovotny) defined observability as *“the ability to ask of your system and learn from it”* during her [keynote](https://www.youtube.com/watch?v=W_8MHdtrgZE) with [Liz Fong-Jones](https://twitter.com/lizthegrey). Query for Kubernetes enables observability programmatically by exposing resource processes through either batch or streaming queries. Learn more about Query for Kubernetes in our [blog post]({{< relref "/blog/query-kubernetes" >}}).
 
 To see both Crosswalk and Query for Kubernetes in action, watch the demo video!
 

@@ -17,29 +17,29 @@ Here are some highlights we've added in partnership with the community
 since launching:
 
 - Over 100 [examples](https://github.com/pulumi/examples),
-    [tutorials]({{< ref "/docs/tutorials" >}}), and a brand new
-    [Getting Started guide]({{< ref "/docs/get-started" >}}).
+    [tutorials]({{< relref "/docs/tutorials" >}}), and a brand new
+    [Getting Started guide]({{< relref "/docs/get-started" >}}).
 - [A native Kubernetes provider with 100% Kubernetes API/version coverage.]({{< relref "pulumi-a-better-way-to-kubernetes" >}})
 - A steady stream of improvements across
-    [AWS]({{< ref "/docs/get-started/aws" >}}),
-    [Azure]({{< ref "/docs/get-started/azure" >}}), and
-    [Google Cloud]({{< ref "/docs/get-started/gcp" >}}) providers.
+    [AWS]({{< relref "/docs/get-started/aws" >}}),
+    [Azure]({{< relref "/docs/get-started/azure" >}}), and
+    [Google Cloud]({{< relref "/docs/get-started/gcp" >}}) providers.
 - [Pulumi Crosswalk for AWS, a framework with built-in AWS infrastructure best practices.]({{< relref "/crosswalk/aws" >}})
 - Over 20 additional providers, including
     [CloudFlare](https://github.com/pulumi/pulumi-cloudflare),
     [Digital Ocean](https://github.com/pulumi/pulumi-digitalocean), and
     [MySQL]({{< relref "managing-your-mysql-databases-with-pulumi" >}}).
-- Brought our [Python 3 SDK]({{< ref "/docs/reference/pkg/python" >}})
+- Brought our [Python 3 SDK]({{< relref "/docs/reference/pkg/python" >}})
     to parity with our
-    [Node.js-based JavaScript and TypeScript SDKs]({{< ref "/docs/reference/pkg/nodejs" >}}).
-- [Team and Enterprise SaaS editions for teams managing infrastructure in production.](https://www.pulumi.com/pricing)
-- [GitHub, GitLab, Atlassian, and SAML/SSO identity providers.]({{< ref "/docs/intro/console/accounts-and-organizations/organizations" >}})
-- [CI/CD integrations with GitHub, GitLab, Codefresh, CircleCI, major clouds, and more.]({{< ref "/docs/guides/continuous-delivery" >}})
+    [Node.js-based JavaScript and TypeScript SDKs]({{< relref "/docs/reference/pkg/nodejs" >}}).
+- [Team and Enterprise SaaS editions for teams managing infrastructure in production.]({{< relref "/pricing" >}})
+- [GitHub, GitLab, Atlassian, and SAML/SSO identity providers.]({{< relref "/docs/intro/console/accounts-and-organizations/organizations" >}})
+- [CI/CD integrations with GitHub, GitLab, Codefresh, CircleCI, major clouds, and more.]({{< relref "/docs/guides/continuous-delivery" >}})
 - [Pluggable secrets management and transitive state encryption.]({{< relref "managing-secrets-with-pulumi" >}})
-- [Pluggable state backends for AWS S3, Azure Blob Store, and Google Cloud Store.]({{< ref "/docs/intro/concepts/state" >}})
+- [Pluggable state backends for AWS S3, Azure Blob Store, and Google Cloud Store.]({{< relref "/docs/intro/concepts/state" >}})
 - [Tools for managing complex, multi-stack environments, including Terraform integration.]({{< relref "using-terraform-remote-state-with-pulumi" >}})
 - Numerous engine reliability and performance improvements, including parallelism.
-- [75 blogs, increasingly focused on end to end solutions we see working with customers.]({{< ref "/blog" >}})
+- [75 blogs, increasingly focused on end to end solutions we see working with customers.]({{< relref "/blog" >}})
 
 In addition to the steady stream of product improvements, the community
 has grown fast:

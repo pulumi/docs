@@ -19,6 +19,133 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.workspaces.Directory">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.workspaces.</code><code class="sig-name descname">Directory</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">directory_id=None</em>, <em class="sig-param">self_service_permissions=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.Directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a directory registration in AWS WorkSpaces Service</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>directory_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The directory identifier for registration in WorkSpaces service.</p></li>
+<li><p><strong>self_service_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The permissions to enable or disable self-service capabilities.</p></li>
+<li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The identifiers of the subnets where the directory resides.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags assigned to the WorkSpaces directory.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>self_service_permissions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">changeComputeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">increaseVolumeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rebuildWorkspace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restartWorkspace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether WorkSpaces directory users can restart their workspace. Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">switchRunningMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether WorkSpaces directory users can switch the running mode of their workspace. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/workspaces_directory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/workspaces_directory.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.workspaces.Directory.directory_id">
+<code class="sig-name descname">directory_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Directory.directory_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The directory identifier for registration in WorkSpaces service.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.workspaces.Directory.self_service_permissions">
+<code class="sig-name descname">self_service_permissions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Directory.self_service_permissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>The permissions to enable or disable self-service capabilities.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">changeComputeType</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">increaseVolumeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rebuildWorkspace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restartWorkspace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether WorkSpaces directory users can restart their workspace. Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">switchRunningMode</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether WorkSpaces directory users can switch the running mode of their workspace. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.workspaces.Directory.subnet_ids">
+<code class="sig-name descname">subnet_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Directory.subnet_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identifiers of the subnets where the directory resides.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.workspaces.Directory.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Directory.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the WorkSpaces directory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.workspaces.Directory.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">directory_id=None</em>, <em class="sig-param">self_service_permissions=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.Directory.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Directory resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>directory_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The directory identifier for registration in WorkSpaces service.</p></li>
+<li><p><strong>self_service_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The permissions to enable or disable self-service capabilities.</p></li>
+<li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The identifiers of the subnets where the directory resides.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags assigned to the WorkSpaces directory.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>self_service_permissions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">changeComputeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">increaseVolumeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rebuildWorkspace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restartWorkspace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether WorkSpaces directory users can restart their workspace. Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">switchRunningMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether WorkSpaces directory users can switch the running mode of their workspace. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/workspaces_directory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/workspaces_directory.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.workspaces.Directory.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.Directory.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.workspaces.Directory.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.Directory.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.workspaces.GetBundleResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.workspaces.</code><code class="sig-name descname">GetBundleResult</code><span class="sig-paren">(</span><em class="sig-param">bundle_id=None</em>, <em class="sig-param">compute_types=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">root_storages=None</em>, <em class="sig-param">user_storages=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.GetBundleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBundle.</p>
@@ -69,7 +196,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="class">
 <dt id="pulumi_aws.workspaces.IpGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.workspaces.</code><code class="sig-name descname">IpGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.IpGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an IP access control group in AWS Workspaces Service</p>
+<dd><p>Provides an IP access control group in AWS WorkSpaces Service</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -179,7 +306,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_aws.workspaces.get_bundle">
 <code class="sig-prename descclassname">pulumi_aws.workspaces.</code><code class="sig-name descname">get_bundle</code><span class="sig-paren">(</span><em class="sig-param">bundle_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.get_bundle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to get information about a Workspaces Bundle.</p>
+<dd><p>Use this data source to get information about a WorkSpaces Bundle.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>bundle_id</strong> (<em>str</em>) – The ID of the bundle.</p>

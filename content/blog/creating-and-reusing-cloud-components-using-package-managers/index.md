@@ -83,7 +83,7 @@ become just a few lines of very simple, understandable code.
 ## Reusing Infrastructure as Code
 
 To use this new package, head on over to a Pulumi program, or
-[create a new one]({{< ref "/docs/get-started" >}})
+[create a new one]({{< relref "/docs/get-started" >}})
 (for instance, with `pulumi new aws-typescript`).
 Then just add a reference like any other dependency:
 
@@ -205,12 +205,12 @@ this.logsBucket = new aws.s3.Bucket(`${name }-logs`,
 Components are a powerful construct in Pulumi, and let you build larger
 first class resources out of smaller ones. There are other benefits,
 including seeing resource attribution in the CLI tree view, and the
-richer visualization in the [pulumi.com](http://pulumi.com) console:
+richer visualization in the [Pulumi Console](https://app.pulumi.com):
 
 ![pulumi app graph](./pulumi-resource-visualization.png)
 
 If you want to learn more about components, see the
-[documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/pulumi" >}}).
+[documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi" >}}).
 
 ## Package Everything!
 

@@ -19,7 +19,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/p
 
 ## Setup
 
-The Packet.net provider supports several options for providing access to Packet.net credentials.  See [Packet setup page]({{< relref "/docs/intro/cloud-providers/packet/setup.md" >}}) for details.
+The Packet.net provider supports several options for providing access to Packet.net credentials.  See [Packet setup page]({{< relref "/docs/intro/cloud-providers/packet/setup" >}}) for details.
 
 ## Example
 
@@ -82,5 +82,6 @@ The following packages are available in packager managers:
 * JavaScript/TypeScript: [`@pulumi/packet`](https://www.npmjs.com/package/@pulumi/packet)
 * Python: [`pulumi-packet`](https://pypi.org/project/pulumi-packet/)
 * Go: [`github.com/pulumi/pulumi-packet/sdk/go/packet`](https://github.com/pulumi/pulumi-packet)
+* .NET: [`Pulumi.Packet`](https://www.nuget.org/packages/Pulumi.Packet)
 
 The Packet.net provider is open source and available in the [pulumi/pulumi-packet](https://github.com/pulumi/pulumi-packet) repo.

@@ -12,7 +12,7 @@ tags:
     - "F#"
     - "Visual Basic"
 ---
-With the release of [Pulumi for .NET preview](https://www.pulumi.com/blog/pulumi-dotnet-core/), we've open the doors to infrastructure as code to even more developers and operators. Millions of .NET developers can now use their favorite languages and open source ecosystems to build modern, cloud native applications. We've added support for C#, F#, and Visual Basic. Because .NET Core is available on Windows, Linux, and macOS, you have a choice of platforms to use.
+With the release of [Pulumi for .NET preview]({{< relref "/blog/pulumi-dotnet-core" >}}), we've open the doors to infrastructure as code to even more developers and operators. Millions of .NET developers can now use their favorite languages and open source ecosystems to build modern, cloud native applications. We've added support for C#, F#, and Visual Basic. Because .NET Core is available on Windows, Linux, and macOS, you have a choice of platforms to use.
 
 You can create cloud resources by writing Microsoft .NET Core programs to build and deploy cloud resources to a wide variety of clouds, including Azure, AWS, GCP and more.  On Azure, you can manage resources like AKS Clusters, Functions, Azure App Services, Virtual Machines, Cosmos DBs, KeyVaults, and much, much more. Let's take a first look at Pulumi for .NET by deploying an application on Azure.
 
@@ -32,7 +32,7 @@ A Pulumi project uses a .NET Core console application to build infrastructure. T
 
 ### Prerequisites
 
-1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
+1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
 
 1. [Install .NET Core SDK 3.0+](https://dotnet.microsoft.com/download)
 
@@ -132,7 +132,7 @@ $ pulumi stack rm --yes
 
 In this post, we've shown how to use Pulumi to deploy a modern application to Azure. The example code performs a number of tasks.
 
-First, we created a [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview#resource-groups), a [storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy-lrs), and an [application service plan](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans) for our application:
+First, we created a [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview#resource-groups), a [storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy-lrs), and an [application service plan](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans) for our application:
 
 ```csharp
 var resourceGroup = new ResourceGroup("appservice-rg");
@@ -231,4 +231,4 @@ var app = new AppService("app", new AppServiceArgs
 
 ## Summary
 
-In this example, we declared resources for a website and a database using C# and the Pulumi engine deployed them to Azure. To get started with infrastructure as code, download [Pulumi](https://www.pulumi.com/docs/get-started/install/) to build and deploy modern applications using .NET Core.
+In this example, we declared resources for a website and a database using C# and the Pulumi engine deployed them to Azure. To get started with infrastructure as code, download [Pulumi]({{< relref "/docs/get-started/install" >}}) to build and deploy modern applications using .NET Core.

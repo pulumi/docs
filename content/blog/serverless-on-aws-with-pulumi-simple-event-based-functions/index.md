@@ -37,7 +37,7 @@ const bucket = new aws.s3.Bucket("testbucket", {
 
 // Create a lambda that will post a message to slack when the bucket changes.
 // We can pass a simple JavaScript/TypeScript lambda here thanks to the magic of "Lambdas as Lambdas"
-// See: www.pulumi.com{{< relref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}}
+// See: www.pulumi.com{{< relref "/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}}
 const lambda = new aws.lambda.CallbackFunction("postToSlack", {
     callback: async (e) => {
       const client = new slack.WebClient(...);

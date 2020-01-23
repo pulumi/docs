@@ -81,6 +81,6 @@ We hope you like these helpers. If you're keen to get stuck in:
 - [Join the Slack conversation](https://slack.pulumi.com) - it's
   heating up in there.
 - Try out the [many examples we have](https://app.pulumi.com), and
-  [dive into the docs]({{< ref "/docs/reference" >}}).
+  [dive into the docs]({{< relref "/docs/reference" >}}).
 - [Submit new templates as PRs](https://github.com/pulumi/templates) -
   contribution == [t-shirts at least](https://info.pulumi.com/community/give-me-a-tshirt).

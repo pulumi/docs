@@ -20,7 +20,7 @@ a way to create, deploy, and manage Kubernetes applications using your
 favorite programming languages.
 that works across AWS, Azure, Google Cloud, OpenStack, and other clouds,
 now to Kubernetes and cloud native architectures. You can
-[dive right in here]({{< ref "/docs/get-started/kubernetes" >}}) and
+[dive right in here]({{< relref "/docs/get-started/kubernetes" >}}) and
 look at some
 [powerful things Pulumi enables here]({{< relref "program-kubernetes-with-11-cloud-native-pulumi-pearls" >}}).
 <!--more-->
@@ -126,14 +126,14 @@ entry for using Kubernetes with real components and reuse.
 We can't wait to hear what you think. To learn more or give it a try,
 please check out these resources:
 
-- [EKS Quickstart]({{< ref "/docs/tutorials/kubernetes/eks" >}})
-- [GKE Quickstart]({{< ref "/docs/tutorials/kubernetes/gke" >}})
-- [AKS Quickstart]({{< ref "/docs/tutorials/kubernetes/aks" >}})
+- [EKS Quickstart]({{< relref "/docs/tutorials/kubernetes/eks" >}})
+- [GKE Quickstart]({{< relref "/docs/tutorials/kubernetes/gke" >}})
+- [AKS Quickstart]({{< relref "/docs/tutorials/kubernetes/aks" >}})
 
 These two tutorials will walk you through your first Pulumi for Kubernetes project:
 
-- [Tutorial: Deploy a Stateless Nginx Application]({{< ref "/docs/tutorials/kubernetes/stateless-app" >}})
-- [Tutorial: Deploy a Load-Balanced Guestbook App with Redis and Nginx]({{< ref "/docs/tutorials/kubernetes/guestbook" >}})
+- [Tutorial: Deploy a Stateless Nginx Application]({{< relref "/docs/tutorials/kubernetes/stateless-app" >}})
+- [Tutorial: Deploy a Load-Balanced Guestbook App with Redis and Nginx]({{< relref "/docs/tutorials/kubernetes/guestbook" >}})
 
 [Program Kubernetes with 11 Pearls]({{< relref "program-kubernetes-with-11-cloud-native-pulumi-pearls" >}}):
 a companion blog post with 11 exciting examples.

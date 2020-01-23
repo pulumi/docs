@@ -1,6 +1,6 @@
 ---
 title: Architecture & Concepts
-meta_desc: This page provides an overview of Architecture and Concepts when using the Pulumi Cloud Development Platform.
+meta_desc: This page describes the primary concepts behind the Pulumi infrastructure as code platform.
 menu:
   intro:
     identifier: concepts
@@ -9,22 +9,49 @@ menu:
 aliases: ["/docs/reference/concepts/"]
 ---
 
-The Pulumi Cloud Development Platform is a combination of tools, libraries, runtime, and service that delivers a consistent development and operational control plane for cloud-native infrastructure.  Not only does Pulumi enable you to manage your infrastructure as code, it also lets you define and manage your infrastructure using real programming languages (and all of their supporting tools) instead of YAML.
+Pulumi is a modern infrastructure as code platform. It includes a CLI, runtime, libraries, and a hosted service that, working together, deliver a robust way of provisioning, updating, and managing cloud infrastructure. Instead of YAML or a domain-specific language (DSL), Pulumi leverages existing, familiar programming languages, including TypeScript, JavaScript, Python, Go, and .NET, and their native tools, libraries, and package managers.
 
-At the center of Pulumi is an open-source cloud object model, coupled with an evaluation runtime that knows how to take programs written in any language, understand the cloud resources necessary to execute them, and then plan and manage those resources in a robust way. This cloud runtime and object model is inherently language- and cloud-neutral, enabling Pulumi to support many languages and clouds rapidly.
+This section will teach you the core concepts behind Pulumi, including how to author your Pulumi programs, the CLI you will use to deploy those programs, how projects (and their related concept, "stacks") help you to organize your environments, and how Pulumi works under the hood.
 
-Each Pulumi [project]({{< relref "project.md" >}}) contains a [program]({{< relref "programming-model.md" >}})---executable code in a familiar language such as JavaScript, TypeScript, Python, or Go. You will manage this program as you would any other source code. For example, by using Git.
-
-Each project also has associated [stacks]({{< relref "stack.md" >}}). When you select a stack and run the program, the Pulumi engine creates a model of the desired state of that stack. The objects and dependencies created by your program form the model. The model describes the [resources]({{< relref "programming-model.md" >}}) needed in the stack and their settings. For example, `new aws.ec2.Instance(...)`.  Pulumi updates the stack to match the desired state.
+> If this is your first time using Pulumi, you likely want to begin with [the Getting Started guide]({{< relref "/docs/get-started" >}}) for your cloud of choice. It will walk you through an [AWS]({{< relref "/docs/get-started/aws" >}}), [Azure]({{< relref "/docs/get-started/azure" >}}), [GCP]({{< relref "/docs/get-started/gcp" >}}), or [Kubernetes]({{< relref "/docs/get-started/kubernetes" >}}) deployment from start to finish.
 
 The following topics describe the core concepts behind Pulumi in more detail:
 
-* [Programming Model]({{< relref "programming-model.md" >}}): _The most important concepts you'll use in Pulumi programs._
-* [Projects]({{< relref "project.md" >}}): _Pulumi's way of organizing your infrastructure as code._
-* [Stacks]({{< relref "stack.md" >}}): _Pulumi's fundamental unit of partitioning, configuring, and scaling environments._
-* [Configuration and Secrets]({{< relref "config.md" >}}): _How to configure stacks, including storing secret encrypted settings._
-* [Organizing Stacks and Projects]({{< relref "organizing-stacks-projects.md" >}}): _Best practices for organizing your Pulumi programs._
-* [How Pulumi Works]({{< relref "how-pulumi-works.md" >}}): _A peek under the hood to learn more about how Pulumi performs deployments._
-* [State and Backends]({{< relref "state.md" >}}): _An overview of how Pulumi stores state and manages concurrency._
+<div class="md:flex flex-row mt-6 mb-6">
+    <div class="w-1/2 border-solid border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="{{< relref "programming-model" >}}"><i class="fas fa-book pr-2"></i>Programming Model</a></h3>
+        <p>The core concepts you will use when authoring your Pulumi programs.</p>
+    </div>
+    <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="{{< relref "project" >}}"><i class="far fa-window-maximize pr-2"></i>Projects</a></h3>
+        <p>Pulumi's way of organizing your infrastructure as code projects.</p>
+    </div>
+</div>
+<div class="md:flex flex-row mt-6 mb-6">
+    <div class="w-1/2 border-solid border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="{{< relref "stack" >}}"><i class="fas fa-cloud pr-2"></i>Stacks</a></h3>
+        <p>Pulumi's fundamental unit of partitioning, configuring, and scaling environments.</p>
+    </div>
+    <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="{{< relref "config" >}}"><i class="fas fa-keyboard pr-2"></i>Configuration and Secrets</a></h3>
+        <p>How to configure stacks, including storing secret encrypted settings.</p>
+    </div>
+</div>
+<div class="md:flex flex-row mt-6 mb-6">
+    <div class="w-1/2 border-solid border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="{{< relref "organizing-stacks-projects" >}}"><i class="fas fa-greater-than pr-2"></i>Organizing Projects</a></h3>
+        <p>Best practices for organizing your Pulumi programs.</p>
+    </div>
+    <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="{{< relref "how-pulumi-works" >}}"><i class="fas fa-keyboard pr-2"></i>How Pulumi Works</a></h3>
+        <p>A peek under the hood to learn more about how Pulumi performs deployments.</p>
+    </div>
+</div>
+<div class="md:flex flex-row mt-6 mb-6">
+    <div class="w-1/2 border-solid border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="{{< relref "state" >}}"><i class="fas fa-greater-than pr-2"></i>State and Backends</a></h3>
+        <p>An overview of how Pulumi stores state and manages concurrency.</p>
+    </div>
+</div>
 
 After learning these core concepts, you'll want to learn [more about the CLI]({{< relref "/docs/reference/cli" >}}).

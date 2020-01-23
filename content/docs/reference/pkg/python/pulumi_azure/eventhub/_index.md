@@ -1092,7 +1092,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ignoreMissingVirtualNetworkServiceEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 </ul>
@@ -1176,7 +1176,7 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 <li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ignoreMissingVirtualNetworkServiceEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
 </ul>
@@ -1242,7 +1242,7 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 <li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ignoreMissingVirtualNetworkServiceEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 </ul>

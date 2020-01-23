@@ -144,10 +144,10 @@ GitHub Action to communicate with the Pulumi service on your behalf.
 Next, add secrets for your cloud credentials, just as you did `PULUMI_ACCESS_TOKEN` above,
 based on your provider of choice. For example:
 
-* `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for [AWS]({{< relref "/docs/intro/cloud-providers/aws/setup.md" >}})
-* `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure]({{< relref "/docs/intro/cloud-providers/azure/setup.md" >}})
-* `GOOGLE_CREDENTIALS` for [GCP]({{< relref "/docs/intro/cloud-providers/gcp/setup.md" >}})
-* `KUBECONFIG` for [Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes/setup.md" >}})
+* `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for [AWS]({{< relref "/docs/intro/cloud-providers/aws/setup" >}})
+* `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure]({{< relref "/docs/intro/cloud-providers/azure/setup" >}})
+* `GOOGLE_CREDENTIALS` for [GCP]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}})
+* `KUBECONFIG` for [Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}})
 
 ## Try It Out!
 
@@ -162,7 +162,7 @@ deployment on the Pulumi Console with more details:
 
 ![Action Logs](/images/docs/reference/gh-actions-logs.png)
 
-For even better Pull Request integration, make sure to also [install our GitHub App]({{< relref "github-app.md" >}})!
+For even better Pull Request integration, make sure to also [install our GitHub App]({{< relref "github-app" >}})!
 
 ![Action Pull Requests](/images/docs/reference/gh-actions-prs.png)
 
@@ -177,7 +177,7 @@ the GitHub Actions container directly.
 
 ### Pulumi GitHub App
 
-The [Pulumi GitHub App]({{< relref "github-app.md" >}}) is something you install on your
+The [Pulumi GitHub App]({{< relref "github-app" >}}) is something you install on your
 GitHub organization. It allows the Pulumi service to leave comments on Pull Requests but does not give it access to your source code.
 
 Once the Pulumi GitHub App is installed, when your GitHub Actions run Pulumi, a summary of

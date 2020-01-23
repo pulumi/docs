@@ -1,29 +1,36 @@
 <aside class="toc">
     {{ if hasPrefix .RelPermalink "/docs/aws/" }}
         <h4 class="no-anchor">
-            <a href="{{ relref . "/docs/aws" }}">AWS</a>
+            <a data-track="toc-aws" href="{{ relref . "/docs/aws" }}">AWS</a>
         </h4>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.aws) }}
     {{ else if hasPrefix .RelPermalink "/docs/" }}
-        <!-- Get Started guides and installation -->
-        <h5 class="no-anchor">Getting Started</h5>
-        {{ template "toc" (dict "page" . "menu" .Site.Menus.getstarted) }}
+        {{/* Render a top-level menu for our major docs sections */}}
+        {{ $toc_page := . }}
+        {{ $toc_sections := slice "Getting Started" "Intro" "Guides and Tutorials" "Reference" "Support" }}
+        {{ $toc_menus := dict "Getting Started" .Site.Menus.getstarted "Intro" .Site.Menus.intro "Guides and Tutorials" .Site.Menus.userguides "Reference" .Site.Menus.reference "Support" .Site.Menus.troubleshooting }}
+        {{ range $toc_sections }}
+            {{ $toc_name := . }}
+            {{ $toc_menu := (index $toc_menus $toc_name) }}
 
-        <!-- Core concepts, supported clouds, comparison -->
-        <h5 class="no-anchor">Intro</h5>
-        {{ template "toc" (dict "page" . "menu" .Site.Menus.intro) }}
+            {{/* If this section has an "Overview" page, link to it from the header */}}
+            {{ $toc_section_link := "" }}
+            {{ range $toc_menu }}
+                {{ if (eq .Name "Overview") }}
+                    {{ $toc_section_link = .URL }}
+                {{ end }}
+            {{ end }}
 
-        <!-- Guides and Tutorials -->
-        <h5 class="no-anchor">Guides and Tutorials</h5>
-        {{ template "toc" (dict "page" . "menu" .Site.Menus.userguides) }}
+            <h5 class="no-anchor">
+                {{ if $toc_section_link }}
+                    <a href="{{ $toc_section_link }}">{{ $toc_name }}</a>
+                {{ else }}
+                    {{ $toc_name }}
+                {{ end }}
+            </h5>
 
-        <!-- API, CLI, and glossary -->
-        <h5 class="no-anchor">Reference</h5>
-        {{ template "toc" (dict "page" . "menu" .Site.Menus.reference) }}
-
-        <!-- Troubleshooting and FAQ -->
-        <h5 class="no-anchor">Support</h5>
-        {{ template "toc" (dict "page" . "menu" .Site.Menus.troubleshooting) }}
+            {{ template "toc" (dict "page" $toc_page "menu" $toc_menu) }}
+        {{ end }}
     {{ end }}
 </aside>
 
@@ -31,42 +38,45 @@
     {{ $page := .page }}
 
     {{ range .menu }}
-        {{ $toggle_state := "toggle" }}
-        {{ $sidenav_selected := "" }}
+        {{/* Note that we skip "Overview" pages, since they are linked to from above */}}
+        {{ if ne .Name "Overview" }}
+            {{ $toggle_state := "toggle" }}
+            {{ $sidenav_selected := "" }}
 
-        {{ if or (eq $page.RelPermalink .URL) (and (not .HasChildren) (hasPrefix $page.RelPermalink .URL) (ne .Name "Overview") (ne .Name "Troubleshooting")) }}
-            {{ $toggle_state = "toggleVisible" }}
-            {{ $sidenav_selected = "active" }}
-        {{ else if hasPrefix $page.RelPermalink .URL }}
-            {{ $toggle_state = "toggleVisible" }}
-        {{ end }}
+            {{ if or (eq $page.RelPermalink .URL) (and (not .HasChildren) (hasPrefix $page.RelPermalink .URL) (ne .Name "Troubleshooting")) }}
+                {{ $toggle_state = "toggleVisible" }}
+                {{ $sidenav_selected = "active" }}
+            {{ else if hasPrefix $page.RelPermalink .URL }}
+                {{ $toggle_state = "toggleVisible" }}
+            {{ end }}
 
-        <div class="{{ $toggle_state }}">
-            <div class="collapsed">
-                <div class="sidenav-topic {{ $sidenav_selected }}">
-                    <a href="{{ .URL }}">{{ .Name }}</a>
-                    {{- if .HasChildren -}}
-                        <span class="toggleButton">
-                            <i class="fas fa-caret-right"></i>
-                        </span>
-                    {{- end -}}
-                </div>
-            </div>
-            <div class="expanded">
-                <div class="sidenav-topic {{ if .HasChildren }} sidenav-parent {{ end }} {{ $sidenav_selected }}">
-                    <a href="{{ .URL }}">{{ .Name }}</a>
-                    {{- if .HasChildren -}}
-                        <span class="toggleButton">
-                            <i class="fas fa-caret-down"></i>
-                        </span>
-                    {{- end -}}
-                </div>
-                {{ if .HasChildren }}
-                    <div class="sidenav-subsection">
-                        {{ template "toc" (dict "page" $page "menu" .Children) }}
+            <div class="{{ $toggle_state }}">
+                <div class="collapsed">
+                    <div class="sidenav-topic {{ $sidenav_selected }}">
+                        <a href="{{ .URL }}">{{ .Name }}</a>
+                        {{- if .HasChildren -}}
+                            <span class="toggleButton">
+                                <i class="fas fa-caret-right"></i>
+                            </span>
+                        {{- end -}}
                     </div>
-                {{ end }}
+                </div>
+                <div class="expanded">
+                    <div class="sidenav-topic {{ if .HasChildren }} sidenav-parent {{ end }} {{ $sidenav_selected }}">
+                        <a href="{{ .URL }}">{{ .Name }}</a>
+                        {{- if .HasChildren -}}
+                            <span class="toggleButton">
+                                <i class="fas fa-caret-down"></i>
+                            </span>
+                        {{- end -}}
+                    </div>
+                    {{ if .HasChildren }}
+                        <div class="sidenav-subsection">
+                            {{ template "toc" (dict "page" $page "menu" .Children) }}
+                        </div>
+                    {{ end }}
+                </div>
             </div>
-        </div>
+        {{ end }}
     {{ end }}
 {{ end }}

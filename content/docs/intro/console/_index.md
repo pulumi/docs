@@ -9,7 +9,7 @@ no_on_this_page: true
 aliases: [/docs/reference/service]
 ---
 
-The [Pulumi Console](https://app.pulumi.com) web application automatically manages deployment state and enables collaboration between developers and operators. The Pulumi CLI automatically uses it unless you [explicitly opt out](https://www.pulumi.com/docs/intro/concepts/state/). Explore the different sections to learn more about the features and benefits of using the Pulumi Console.
+The [Pulumi Console](https://app.pulumi.com) web application automatically manages deployment state and enables collaboration between developers and operators. The Pulumi CLI automatically uses it unless you [explicitly opt out]({{< relref "/docs/intro/concepts/state" >}}). Explore the different sections to learn more about the features and benefits of using the Pulumi Console.
 
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="w-1/2 border-solid border-t-2 border-gray-200">

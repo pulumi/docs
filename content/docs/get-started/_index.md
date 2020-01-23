@@ -8,7 +8,9 @@ menu:
       name: Overview
       weight: 1
 
-aliases: ["/docs/quickstart/"]
+aliases:
+  - /docs/quickstart/
+  - /start/
 ---
 
 <div class="flex max-w-2xl">

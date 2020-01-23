@@ -22,7 +22,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
 
     * Enter in a Pulumi project name, and description to detail what this
       Pulumi program does
-    * Enter in a name for the [Pulumi stack]({{< relref "/docs/intro/concepts/stack.md" >}}), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
+    * Enter in a name for the [Pulumi stack]({{< relref "/docs/intro/concepts/stack" >}}), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
     * Enter in the Azure environment to use.
     * Follow the instructions presented to change directories to the newly created Pulumi project and install the dependencies.
 
@@ -189,7 +189,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
     pulumi.export('kubeconfig', aks.kube_config_raw)
     ```
 
-    This example uses the [@pulumi_azure]({{< relref "/docs/reference/pkg/python/pulumi_azure" >}}) package to create and manage several Azure resources including: a [KubernetesCluster]({{< relref "/docs/reference/pkg/python/pulumi_azure/containerservice#pulumi_azure.containerservice.KubernetesCluster" >}}), [Registry]({{< relref "/docs/reference/pkg/python/pulumi_azure/containerservice#pulumi_azure.containerservice.Registry" >}}) which will store Docker images and [VirtualNetwork]({{< relref "/docs/reference/pkg/python/pulumi_azure/network#pulumi_azure.network.VirtualNetwork" >}}) that will contain AKS worker nodes and several others. We are using implicit and explicit dependencies in this configuration. For example, resource outputs can be used as inputs to imply dependency between resources, but you can also declare dependency using [ResourceOptions]({{< relref "/docs/intro/concepts/programming-model.md#resources" >}}) passed to the resource as additional arguments.
+    This example uses the [@pulumi_azure]({{< relref "/docs/reference/pkg/python/pulumi_azure" >}}) package to create and manage several Azure resources including: a [KubernetesCluster]({{< relref "/docs/reference/pkg/python/pulumi_azure/containerservice#pulumi_azure.containerservice.KubernetesCluster" >}}), [Registry]({{< relref "/docs/reference/pkg/python/pulumi_azure/containerservice#pulumi_azure.containerservice.Registry" >}}) which will store Docker images and [VirtualNetwork]({{< relref "/docs/reference/pkg/python/pulumi_azure/network#pulumi_azure.network.VirtualNetwork" >}}) that will contain AKS worker nodes and several others. We are using implicit and explicit dependencies in this configuration. For example, resource outputs can be used as inputs to imply dependency between resources, but you can also declare dependency using [ResourceOptions]({{< relref "/docs/intro/concepts/programming-model#resources" >}}) passed to the resource as additional arguments.
 
 1. To preview and deploy changes, run `pulumi up` and select "yes."
 

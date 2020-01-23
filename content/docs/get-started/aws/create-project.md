@@ -14,7 +14,7 @@ aliases: ["/docs/quickstart/aws/create-project/"]
 
 Let's get started with a new project in a new directory.
 
-{{< langchoose nogo csharp >}}
+{{< langchoose csharp >}}
 
 <div class="language-prologue-javascript"></div>
 
@@ -35,6 +35,13 @@ $ pulumi new aws-typescript
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new aws-python
+```
+
+<div class="language-prologue-go"></div>
+
+```bash
+$ mkdir quickstart && cd quickstart
+$ pulumi new aws-go
 ```
 
 <div class="language-prologue-csharp"></div>
@@ -80,6 +87,10 @@ After some dependency installations from `npm`, the project and stack will be re
 {{% /lang %}}
 
 {{% lang python %}}
+After the command completes, the project and stack will be ready.
+{{% /lang %}}
+
+{{% lang go %}}
 After the command completes, the project and stack will be ready.
 {{% /lang %}}
 

@@ -971,6 +971,7 @@ type typeDocNodeKind string
 
 const (
 	typeDocPackageNode        typeDocNodeKind = ""
+	typeDocAccessorNode       typeDocNodeKind = "Accessor"
 	typeDocCallSigNode        typeDocNodeKind = "Call signature"
 	typeDocClassNode          typeDocNodeKind = "Class"
 	typeDocConstructorNode    typeDocNodeKind = "Constructor"
@@ -993,6 +994,8 @@ const (
 func (e *moduleEmitter) createLabel(node *typeDocNode, parent *typeDocNode) string {
 	switch node.Kind {
 	// Create node kinds, we simply summarize.
+	case typeDocAccessorNode:
+		return "accessor"
 	case typeDocClassNode:
 		return "class"
 	case typeDocConstructorNode:
@@ -1155,6 +1158,18 @@ func (e *moduleEmitter) createCodeDetails(node *typeDocNode) string {
 			}
 		}
 		return label
+
+	case typeDocAccessorNode:
+		label := createVisibilityLabel(node.Flags)
+		if len(node.GetSignatures) > 0 {
+			label += fmt.Sprintf("<span class='kd'>get</span> %s()", node.Name)
+			if typ := e.createTypeLabel(node.GetSignatures[0].Type, 0); typ != "" {
+				label += ": " + typ
+			}
+		} else {
+			label += node.Name
+		}
+		return label + ";"
 
 	default:
 		return ""
@@ -1530,6 +1545,8 @@ type typeDocNode struct {
 	Comment typeDocComment `json:"comment,omitempty"`
 	// DefaultValue is an optional default value for this entry (or nil if none).
 	DefaultValue *string `json:"defaultValue,omitempty"`
+	// GetSignatures is a list of get signature nodes for this node, when an Accessor.
+	GetSignatures []*typeDocNode `json:"getSignature,omitempty"`
 	// IndexSignature is used to represent indexed types (e.g., `{[key: string]: any}`).
 	IndexSignatures []*typeDocNode `json:"indexSignature,omitempty"`
 	// Children is a list of one or more child members of this node.

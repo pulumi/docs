@@ -474,7 +474,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.ram.get_resource_share">
-<code class="sig-prename descclassname">pulumi_aws.ram.</code><code class="sig-name descname">get_resource_share</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_owner=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ram.get_resource_share" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.ram.</code><code class="sig-name descname">get_resource_share</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_owner=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ram.get_resource_share" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ram.ResourceShare</span></code> Retrieve information about a RAM Resource Share.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

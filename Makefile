@@ -3,10 +3,10 @@
 HUGO_ENVIRONMENT ?= development
 
 .PHONY: default
-default: banner lint_markdown generate build
+default: banner generate build
 
 .PHONY: all
-all: banner lint_markdown generate build
+all: banner generate build
 
 .PHONY: banner
 banner:
@@ -25,6 +25,7 @@ lint_markdown:
 .PHONY: serve
 serve:
 	@echo -e "\033[0;32mSERVE:\033[0m"
+	yarn lint-markdown --no-error
 	hugo server --buildDrafts --buildFuture
 
 .PHONY: generate

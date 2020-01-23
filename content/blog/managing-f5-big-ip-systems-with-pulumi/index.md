@@ -207,6 +207,6 @@ applications.
 To start managing your F5 BIG-IP systems with real programming
 languages, please check out the following links:
 
-- [Node.js documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/f5bigip" >}})
-- [Python documentation]({{< ref "/docs/reference/pkg/python/pulumi_f5bigip" >}})
+- [Node.js documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/f5bigip" >}})
+- [Python documentation]({{< relref "/docs/reference/pkg/python/pulumi_f5bigip" >}})
 - [F5 BIG-IP Example using Pulumi](https://github.com/pulumi/examples/tree/master/f5bigip-ts-ltm-pool)

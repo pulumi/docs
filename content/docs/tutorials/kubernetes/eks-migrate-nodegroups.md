@@ -461,7 +461,7 @@ clusters, or deploy workloads to a cluster, check out the rest of the
 
 <!-- markdownlint-disable url -->
 [example-gh]: https://github.com/pulumi/examples/tree/master/aws-ts-eks-migrate-nodegroups
-[stack]: {{< relref "/docs/intro/concepts/stack.md" >}}
+[stack]: {{< relref "/docs/intro/concepts/stack" >}}
 [eks-amis]: https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
 [ingress-nginx]: https://github.com/kubernetes/ingress-nginx
 [echoserver]: https://github.com/kubernetes-retired/contrib/blob/master/ingress/echoheaders/echo-app.yaml

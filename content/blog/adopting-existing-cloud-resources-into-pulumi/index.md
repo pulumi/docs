@@ -24,15 +24,15 @@ We'll review referencing existing resources, and then dive deeper into how you c
 
 For referencing existing resources, Pulumi offers several tools.
 
-* The `.get` methods available on every resource let you [get all the details for a resource](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Vpc-get) from the cloud provider based just on its `id`.
-* The `StackReference` resource lets you reference outputs of another stack for use as inputs to a stack, which is very useful for [organizing projects and stacks](https://www.pulumi.com/docs/reference/organizing-stacks-projects/).
-* [`terraform.state.RemoteStateReference()`](https://www.pulumi.com/blog/using-terraform-remote-state-with-pulumi/), [`aws.cloudformation.getStack()`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/cloudformation/#getStack) and [`azure.core.TemplateDeployment.get()`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/azure/core/#TemplateDeployment-get) let you reference outputs from existing Terraform, CloudFormation and ARM deployments respectively.
+* The `.get` methods available on every resource let you [get all the details for a resource]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/ec2#Vpc-get" >}}) from the cloud provider based just on its `id`.
+* The `StackReference` resource lets you reference outputs of another stack for use as inputs to a stack, which is very useful for [organizing projects and stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}).
+* [`terraform.state.RemoteStateReference()`]({{< relref "/blog/using-terraform-remote-state-with-pulumi" >}}), [`aws.cloudformation.getStack()`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudformation#getStack" >}}) and [`azure.core.TemplateDeployment.get()`]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment-get" >}}) let you reference outputs from existing Terraform, CloudFormation and ARM deployments respectively.
 
 Together, these make it easy to reference existing infrastructure regardless of how it was provisioned.
 
 ## Adopting Existing Resources
 
-For adopting existing resources, Pulumi offers the [`import`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/azure/core/#TemplateDeployment-get) resource option to request that a resource defined in your Pulumi program adopt an existing resource in the cloud provider instead of creating a new one.  In keeping with its focus on infrastructure as *code*, Pulumi lets you specify this `import` behavior inside the Pulumi code for your infrastructure deployment, instead of outside of it in some manual workflow.  In its simplest form, it looks like this:
+For adopting existing resources, Pulumi offers the [`import`]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment-get" >}}) resource option to request that a resource defined in your Pulumi program adopt an existing resource in the cloud provider instead of creating a new one.  In keeping with its focus on infrastructure as *code*, Pulumi lets you specify this `import` behavior inside the Pulumi code for your infrastructure deployment, instead of outside of it in some manual workflow.  In its simplest form, it looks like this:
 
 ```ts
 const myVpc = new aws.ec2.Vpc("my-vpc", {

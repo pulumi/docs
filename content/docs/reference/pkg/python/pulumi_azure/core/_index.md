@@ -86,7 +86,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_azure.core.GetResourcesResult.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetResourcesResult.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of this resource.</p>
+<dd><p>The name of this Resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -98,7 +98,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_azure.core.GetResourcesResult.type">
 <code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetResourcesResult.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of this resoource.</p>
+<dd><p>The type of this Resource. (e.g. <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/virtualNetworks</span></code>).</p>
 </dd></dl>
 
 <dl class="attribute">

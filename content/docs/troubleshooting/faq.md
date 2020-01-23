@@ -25,6 +25,15 @@ If there is an existing Terraform Resource Provider for the target, you can also
 
 Supported languages run out of process and communicate over gRPC with the Pulumi engine and resource providers.  The protocol definitions can be found at [https://github.com/pulumi/pulumi/tree/master/sdk/proto](https://github.com/pulumi/pulumi/tree/master/sdk/proto) along with the language providers themselves.  You can look at how we added support for Go at [https://github.com/pulumi/pulumi/pull/1456](https://github.com/pulumi/pulumi/pull/1456), which should help with scoping.
 
+## Does Pulumi support automatic rollback in the event of an error or failure?
+
+No, Pulumi does not automatically rollback changes made during an update if an error or failure occurs. In the event that an error or failure occurs, Pulumi will complete any pending operations
+currently in progress and then exit and report the error or failure.
+
+To accomplish a _manual_ rollback after a failed deployment, revert the code and configuration changes of the failed deployment and run `pulumi up` to update your infrastructure to its previous "good" state. This is also known as a _roll forward_.
+
+There is an issue related to the idea of automatic rollbacks on GitHub at <https://github.com/pulumi/pulumi/issues/96> if you would like to add to the discussion.
+
 ## How does Pulumi manage secrets?
 
 When you set a configuration value, you may pass `--secret` to `pulumi config set` which causes the value to be encrypted so it can be safely persisted in `Pulumi.<stack-name>.yaml`. For every stack, pulumi.com manages a unique encryption key, which it uses to encrypt secrets for that stack. Because a different key is used for each stack, encrypting the same value across two different stacks will lead to different encrypted strings being stored in the `Pulumi.<stack-name>.yaml` files. This also means that you can not copy an encrypted value from one file to another using a text editor. Instead, you must use `pulumi config set`.
@@ -33,7 +42,7 @@ When you run a preview, update or destroy, pulumi decrypts this data. It is plai
 
 ## Are my secrets ever visible?
 
-As noted above, Pulumi provides primitives so you can enforce your secrets are stored in a secure manner in the CLI UI, State file and Pulumi Web Console. During an update, your secrets will be unencrypted in memory and visible to your Pulumi program. It is your responsibility to ensure that you do not persist them outside of Pulumi without securing them. To learn more, see [Secrets]({{< relref "/docs/intro/concepts/programming-model.md#secrets" >}}).
+As noted above, Pulumi provides primitives so you can enforce your secrets are stored in a secure manner in the CLI UI, State file and Pulumi Web Console. During an update, your secrets will be unencrypted in memory and visible to your Pulumi program. It is your responsibility to ensure that you do not persist them outside of Pulumi without securing them. To learn more, see [Secrets]({{< relref "/docs/intro/concepts/programming-model#secrets" >}}).
 
 ## How do I create a stack inside an Organization instead of my User account?
 

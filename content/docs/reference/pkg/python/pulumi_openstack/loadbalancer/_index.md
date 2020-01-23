@@ -1184,7 +1184,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.loadbalancer.Monitor">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">Monitor</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_state_up=None</em>, <em class="sig-param">delay=None</em>, <em class="sig-param">expected_codes=None</em>, <em class="sig-param">http_method=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pool_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">url_path=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Monitor" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">Monitor</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_state_up=None</em>, <em class="sig-param">delay=None</em>, <em class="sig-param">expected_codes=None</em>, <em class="sig-param">http_method=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">max_retries_down=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pool_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">url_path=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Monitor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 monitor resource within OpenStack.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1202,7 +1202,10 @@ for requests by the monitor. If this attribute is not specified, it
 defaults to “GET”.</p></li>
 <li><p><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of permissible ping failures before
 changing the member’s status to INACTIVE. Must be a number between 1
-and 10..</p></li>
+and 10.</p></li>
+<li><p><strong>max_retries_down</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of permissible ping failures befor changing the member’s
+status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
+Changing this updates the max_retries_down of the existing monitor.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name of the Monitor.</p></li>
 <li><p><strong>pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the pool that this monitor will be assigned to.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
@@ -1260,7 +1263,15 @@ defaults to “GET”.</p>
 <code class="sig-name descname">max_retries</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Monitor.max_retries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of permissible ping failures before
 changing the member’s status to INACTIVE. Must be a number between 1
-and 10..</p>
+and 10.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.loadbalancer.Monitor.max_retries_down">
+<code class="sig-name descname">max_retries_down</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Monitor.max_retries_down" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of permissible ping failures befor changing the member’s
+status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
+Changing this updates the max_retries_down of the existing monitor.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1317,7 +1328,7 @@ accessed if monitor type is HTTP or HTTPS.</p>
 
 <dl class="method">
 <dt id="pulumi_openstack.loadbalancer.Monitor.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_state_up=None</em>, <em class="sig-param">delay=None</em>, <em class="sig-param">expected_codes=None</em>, <em class="sig-param">http_method=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pool_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">url_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Monitor.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_state_up=None</em>, <em class="sig-param">delay=None</em>, <em class="sig-param">expected_codes=None</em>, <em class="sig-param">http_method=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">max_retries_down=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pool_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">url_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Monitor.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Monitor resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1337,7 +1348,10 @@ for requests by the monitor. If this attribute is not specified, it
 defaults to “GET”.</p></li>
 <li><p><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of permissible ping failures before
 changing the member’s status to INACTIVE. Must be a number between 1
-and 10..</p></li>
+and 10.</p></li>
+<li><p><strong>max_retries_down</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of permissible ping failures befor changing the member’s
+status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
+Changing this updates the max_retries_down of the existing monitor.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name of the Monitor.</p></li>
 <li><p><strong>pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the pool that this monitor will be assigned to.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.

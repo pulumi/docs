@@ -16,7 +16,7 @@ In this blog, we will work through an example that shows how to use AWS EFS CSI 
 
 ## Step 1: Initialize Pulumi Project and Stack for your organization:
 
-[Install Pulumi CLI]({{< ref "/docs/get-started" >}}) and set up your [AWS credentials]({{< ref "/docs/get-started/aws" >}}). Initialize a new [Pulumi project]({{< ref "/docs/intro/concepts/project" >}}) from available templates. We use `aws-typescript` template here to install all library dependencies.
+[Install Pulumi CLI]({{< relref "/docs/get-started" >}}) and set up your [AWS credentials]({{< relref "/docs/get-started/aws" >}}). Initialize a new [Pulumi project]({{< relref "/docs/intro/concepts/project" >}}) from available templates. We use `aws-typescript` template here to install all library dependencies.
 
 We will work with two Pulumi stacks in this example, one for the Amazon EKS cluster and AWS EFS CSI components caled k8sinfra. The other for the application and its storage class, persistent volume and persistent volume claim called app. The AWS EFS CSI (Container Storage Interface) is based on the initial [AWS EFS CSI Driver](https://github.com/kubernetes-sigs/aws-efs-csi-driver/) work done by Kubernetes SIG-AWS.
 
@@ -55,9 +55,9 @@ import * as k8s from "@pulumi/kubernetes";
 //* STEP 1: Create an EKS cluster, an EFS endpoint and mount the EFS endpoint in each public subnet of the EKS cluster
 
 // Create an EKS Cluster
-const vpc = new awsx.Network("vpc", { usePrivateSubnets: false });
+const vpc = new awsx.ec2.Vpc("vpc", {});
 export const cluster = new eks.Cluster("eks-cluster", {
-  vpcId: vpc.vpcId,
+  vpcId: vpc.id,
   subnetIds: vpc.publicSubnetIds,
   instanceType: "t2.medium",
   version: "1.12",
@@ -493,4 +493,4 @@ Mon Jul 8 06:12:15 UTC 2019
 
 ```
 
-This brings us to the end of our solution with Pulumi and AWS EFS on Amazon EKS. For more examples, refer to Pulumi's open source repository [here](https://github.com/pulumi/examples) or refer to my other [Kubernetes articles](https://www.pulumi.com/blog/author/nishi-davidson/).
+This brings us to the end of our solution with Pulumi and AWS EFS on Amazon EKS. For more examples, refer to Pulumi's open source repository [here](https://github.com/pulumi/examples) or refer to my other [Kubernetes articles](/blog/author/nishi-davidson/).

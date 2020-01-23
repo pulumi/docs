@@ -1,14 +1,16 @@
 ---
-title: "Node.js"
-meta_desc: An overview of how to use Javascript when writing cloud applications for any
-           Cloud Provider (AWS, Azure, GCE, Kubernetes, etc.).
+title: "Node.js (JavaScript, TypeScript)"
+meta_desc: An overview of how to use Node.js languages like JavaScript and TypeScript for
+           infrastructure as code on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
 menu:
   intro:
     parent: languages
-    weight: 1
+    weight: 3
 
 aliases: ["/docs/reference/javascript/"]
 ---
+
+<img src="/logos/tech/logo-nodejs.png" align="right" width="150" style="padding:8px; margin-top: -64px">
 
 Pulumi supports JavaScript programs running on Node.js version 8 and later.
 
@@ -16,18 +18,18 @@ Because programs are just JavaScript, you may elect to write them in any manner 
 That includes TypeScript, CoffeeScript, or Babel, in addition to your favorite tools such as build systems, linters, or
 test frameworks.
 
-<a href="https://nodejs.org/en/download/" target="_blank"><button class="button primary small">INSTALL NODE.JS</button></a>
+<a class="btn" href="https://nodejs.org/en/download/" target="_blank" title="Install Node.js">INSTALL NODE.JS</a>
 
 ## Getting Started
 
-The fastest way to get started in JavaScript is using a template.  From an empty directory in which you'd like to create a new project:
+The fastest way to get started in JavaScript is using a template. From an empty directory in which you'd like to create a new project:
 
 ```bash
 $ mkdir myproject && cd myproject
 $ pulumi new javascript
 ```
 
-This will create a `Pulumi.yaml` [project file]({{< relref "project.md" >}}), a `package.json` file for dependencies, and an `index.js` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
+This will create a `Pulumi.yaml` [project file]({{< relref "project" >}}), a `package.json` file for dependencies, and an `index.js` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
 
 ## TypeScript
 
@@ -126,5 +128,5 @@ runtime:
 
 <!-- LINKS -->
 [`pulumi.Config`]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config" >}}
-[Using configuration values in JavaScript]: {{< relref "config.md#javascript" >}}
+[Using configuration values in JavaScript]: {{< relref "config#javascript" >}}
 <!-- END LINKS -->

@@ -28,16 +28,16 @@ In this blog, we will show snippets of the Javascript code that embraces
 the power of Pulumi to program AWS service APIs to create the Mapbox
 solution. To see the full architecture in action with a live bike race
 across America, please refer to this
-[webinar](https://www.pulumi.com/webinar/aws-mapbox/?utm_campaign=Partner%20-%20AWS&utm_medium=email&_hsenc=p2ANqtz--wro3maaq0AodmaPINTCc0V7Cpd2xRwWLbVlSOp9d5kwsWV-2sgjVxDyUjeS7FfNinlOk2DKKa6wQ07K0xP-NQ9p1kGA&_hsmi=73158875&utm_content=73158875&utm_source=hs_email&hsCtaTracking=cd221e5f-79fa-4b95-b7e3-43b5a49609b2%7Ccd0a7d93-082a-4572-8e8e-abf1c1b2548f)
+[webinar]({{< relref "/webinar/aws-mapbox" >}}?utm_campaign=Partner%20-%20AWS&utm_medium=email&_hsenc=p2ANqtz--wro3maaq0AodmaPINTCc0V7Cpd2xRwWLbVlSOp9d5kwsWV-2sgjVxDyUjeS7FfNinlOk2DKKa6wQ07K0xP-NQ9p1kGA&_hsmi=73158875&utm_content=73158875&utm_source=hs_email&hsCtaTracking=cd221e5f-79fa-4b95-b7e3-43b5a49609b2%7Ccd0a7d93-082a-4572-8e8e-abf1c1b2548f)
 recorded on June 13th 2019 and the Mapbox
 [asset tracking solution](https://www.mapbox.com/solutions/asset-tracking/).
 Also refer to this blog of the [Race across America](https://blog.mapbox.com/team-haase-partners-with-mapbox-for-2019-race-across-america-bid-7803a3bdbe49)
 showcased live during the webinar tomorrow.
 <!--more-->
 
-**Prerequisites:** [Install Pulumi]({{< ref "/docs/get-started/install" >}});
+**Prerequisites:** [Install Pulumi]({{< relref "/docs/get-started/install" >}});
 [Install Node.js version 8 or later](https://nodejs.org/en/download/) and
-[Setup AWS]({{< ref "/docs/get-started/aws" >}})
+[Setup AWS]({{< relref "/docs/get-started/aws" >}})
 
 The diagram represents how Mapbox's solution design on AWS services is
 built with Pulumi AWS and AWSX libraries in Javascript. Data is ingested

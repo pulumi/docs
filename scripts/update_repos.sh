@@ -35,6 +35,7 @@ TOOLS_REPOS=(
     "pulumi-policy"
     "pulumi-postgresql"
     "pulumi-rabbitmq"
+    "pulumi-rancher2"
     "pulumi-random"
     "pulumi-signalfx"
     "pulumi-spotinst"

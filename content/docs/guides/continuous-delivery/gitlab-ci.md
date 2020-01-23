@@ -38,7 +38,7 @@ The source code for the stack is in a repository in GitLab and uses `TypeScript`
 You may choose a naming convention that best suits your organization.
 
 Alternatively, you can also run `pulumi new [template]` to create a template project.
-Learn more [here]({{< ref "/docs/reference/cli/pulumi_new.md" >}}).
+Learn more [here]({{< relref "/docs/reference/cli/pulumi_new" >}}).
 
 ## GitLab CI Runners
 

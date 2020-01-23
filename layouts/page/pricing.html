@@ -11,7 +11,7 @@
 {{ end }}
 
 {{ define "main" }}
-    <section class="bg-purple-800 pt-24 text-white px-4 lg:px-0 justify-center text-center" id="editions">
+    <section class="bg-purple-800 pt-24 text-white px-4 justify-center text-center" id="editions">
         <div class="container mx-auto lg:flex justify-center">
             <div class="bg-white rounded py-8 px-8 lg:w-1/4 mb-4 lg:mb-0" id="community-edition">
                 <div class="text-center flex flex-col justify-between h-full">
@@ -52,7 +52,7 @@
                             <span class="flex-1">Free forever</span>
                         </li>
                     </ul>
-                    <a class="text-center btn btn-lg btn-blue mx-auto mt-8 py-4 px-6" href="{{ relref . "/docs/get-started" }}">Get Started</a>
+                    <a data-track="community" class="text-center btn btn-lg btn-blue mx-auto mt-8 py-4 px-6" href="{{ relref . "/docs/get-started" }}">Get Started</a>
                 </div>
             </div>
             <div class="bg-white rounded py-8 px-8 lg:mx-5 lg:w-1/4 lg:mr-3 mb-4 lg:mb-0" id="team-edition">
@@ -74,7 +74,7 @@
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
-                            <span class="flex-1">1 <a href="{{ relref . "/docs/intro/console/accounts-and-organizations/organizations" }}">organization</a></span>
+                            <span class="flex-1">1 <a data-track="team-starter" href="{{ relref . "/docs/intro/console/accounts-and-organizations/organizations" }}">organization</a></span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
@@ -93,7 +93,7 @@
                             <span class="flex-1">Try it free for 14 days</span>
                         </li>
                     </ul>
-                    <a class="text-center btn btn-lg btn-orange mx-auto mt-8 py-4 px-6" href="https://app.pulumi.com/site/organizations/add">
+                    <a data-track="team-starter" class="text-center btn btn-lg btn-orange mx-auto mt-8 py-4 px-6" href="https://app.pulumi.com/site/organizations/add">
                         Start Your Free Trial
                     </a>
                 </div>
@@ -136,7 +136,7 @@
                             <span class="flex-1">Try it free for 14 days</span>
                         </li>
                     </ul>
-                    <a class="text-center btn btn-lg btn-orange mx-auto mt-8 py-4 px-6" href="https://app.pulumi.com/site/organizations/add">
+                    <a data-track="team-pro" class="text-center btn btn-lg btn-orange mx-auto mt-8 py-4 px-6" href="https://app.pulumi.com/site/organizations/add">
                         Start Your Free Trial
                     </a>
                 </div>
@@ -179,7 +179,7 @@
                             <span class="flex-1">Custom trials available</span>
                         </li>
                     </ul>
-                    <a class="text-center btn btn-lg btn-purple mx-auto mt-8 py-4 px-6" href="#contact">Contact Us</a>
+                    <a data-track="enterprise" class="text-center btn btn-lg btn-purple mx-auto mt-8 py-4 px-6" href="#contact">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -193,7 +193,7 @@
 
     <section id="grid" class="py-16">
         <div class="container mx-auto">
-            <div class="mx-auto text-center max-w-4xl px-4 lg:px-0 mb-12">
+            <div class="mx-auto text-center max-w-4xl px-4 mb-12">
                 <h2>Plan details</h2>
                 <p>
                     From teams just getting started, to established organizations running Pulumi at scale, we have an option for you.
@@ -229,7 +229,7 @@
                 <span class="pricing-item-label">Price</span>
                 <span class="pricing-item-value">$50/mo</span>
                 <span class="pricing-item-value">Starting at $225/mo</span>
-                <span class="pricing-item-value">Custom (<a class="link" href="#contact">Contact Us</a>)</span>
+                <span class="pricing-item-value">Custom (<a data-track="grid-pricing" class="link" href="#contact">Contact Us</a>)</span>
             </div>
             <div class="pricing-item">
                 <span class="pricing-item-label">Team Members</span>
@@ -241,40 +241,40 @@
                 <span class="pricing-item-label">Extra Team Members</span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
                 <span class="pricing-item-value">$75/user/mo</span>
-                <span class="pricing-item-value">Custom (<a class="link" href="#contact">Contact Us</a>)</span>
+                <span class="pricing-item-value">Custom (<a data-track="grid-team-members" class="link" href="#contact">Contact Us</a>)</span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/console/accounts-and-organizations/organizations" }}" class="link">Organizations</a></span>
+                <span class="pricing-item-label"><a data-track="grid-organizations" href="{{ relref . "/docs/intro/console/accounts-and-organizations/organizations" }}" class="link">Organizations</a></span>
                 <span class="pricing-item-value">1 included</span>
                 <span class="pricing-item-value">1 included</span>
                 <span class="pricing-item-value">Unlimited</span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/console/collaboration/project-and-stack-management" }}" class="link">Project Stacks</a></span>
+                <span class="pricing-item-label"><a data-track="grid-stacks" href="{{ relref . "/docs/intro/console/collaboration/project-and-stack-management" }}" class="link">Project Stacks</a></span>
                 <span class="pricing-item-value">Up to 20</span>
                 <span class="pricing-item-value">Unlimited</span>
                 <span class="pricing-item-value">Unlimited</span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro" }}" class="link">Infrastructure as Code</a></span>
+                <span class="pricing-item-label"><a data-track="grid-infra-as-code" href="{{ relref . "/docs/intro" }}" class="link">Infrastructure as Code</a></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/cloud-providers" }}" class="link">Any Cloud</a></span>
+                <span class="pricing-item-label"><a data-track="grid-any-cloud" href="{{ relref . "/docs/intro/cloud-providers" }}" class="link">Any Cloud</a></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/languages" }}" class="link">Any Language</a></span>
+                <span class="pricing-item-label"><a data-track="grid-languages" href="{{ relref . "/docs/intro/languages" }}" class="link">Any Language</a></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label"><a href="{{ relref . "/docs/guides/self-hosted" }}" class="link">Self-Hosting</a> <span class="badge badge-preview">PREVIEW</span></span>
+                <span class="pricing-item-label"><a data-track="grid-self-hosted" href="{{ relref . "/docs/guides/self-hosted" }}" class="link">Self-Hosting</a> <span class="badge badge-preview">PREVIEW</span></span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
                 <span class="pricing-item-value">Available</span>
@@ -297,13 +297,13 @@
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/console" }}" class="link">Pulumi Console</a></span>
+                <span class="pricing-item-label"><a data-track="grid-console" href="{{ relref . "/docs/intro/console" }}" class="link">Pulumi Console</a></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label"><a href="{{ relref . "/docs/guides/continuous-delivery" }}" class="link">CI/CD Integrations</a></span>
+                <span class="pricing-item-label"><a data-track="grid-integrations" href="{{ relref . "/docs/guides/continuous-delivery" }}" class="link">CI/CD Integrations</a></span>
                 <span class="pricing-item-value">
                     AWS Code Services, Azure DevOps, Codeship, CircleCI,
                     GitHub, GitLab, Google Cloud Build, Jenkins, Travis, more
@@ -327,7 +327,7 @@
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/console/extensions/webhooks" }}" class="link">APIs and Webhooks</a></span>
+                <span class="pricing-item-label"><a data-track="grid-webhooks" href="{{ relref . "/docs/intro/console/extensions/webhooks" }}" class="link">APIs and Webhooks</a></span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
@@ -338,7 +338,7 @@
             </div>
 
             <div class="pricing-item">
-                <span class="pricing-item-label"><a href="{{ relref . "/docs/guides/crossguard" }}" class="link">Policy as Code</a></span>
+                <span class="pricing-item-label"><a data-track="grid-crossguard" href="{{ relref . "/docs/guides/crossguard" }}" class="link">Policy as Code</a></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
@@ -361,14 +361,14 @@
             </div>
 
             <div class="pricing-item">
-                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/concepts/config" }}" class="link">Secrets and Encryption</a></span>
+                <span class="pricing-item-label"><a data-track="grid-secrets" href="{{ relref . "/docs/intro/concepts/config" }}" class="link">Secrets and Encryption</a></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
 
             <div class="pricing-item">
-                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/console/accounts-and-organizations/accounts" }}" class="link">Identity Providers</a></span>
+                <span class="pricing-item-label"><a data-track="grid-identities" href="{{ relref . "/docs/intro/console/accounts-and-organizations/accounts" }}" class="link">Identity Providers</a></span>
                 <span class="pricing-item-value">
                     <ul class="inline-flex flex-wrap items-center list-none p-0 justify-center">
                         <li class="mx-2">
@@ -422,7 +422,7 @@
                 </span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/console/collaboration/teams" }}" class="link">Team Management</a></span>
+                <span class="pricing-item-label"><a data-track="grid-teams" href="{{ relref . "/docs/intro/console/collaboration/teams" }}" class="link">Team Management</a></span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
@@ -434,20 +434,20 @@
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/console/collaboration/organization-roles" }}" class="link">Role Based Access Control</a></span>
+                <span class="pricing-item-label"><a data-track="grid-roles" href="{{ relref . "/docs/intro/console/collaboration/organization-roles" }}" class="link">Role Based Access Control</a></span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label"><a href="{{ relref . "/docs/guides/saml" }}" class="link">SAML/SSO</a></span>
+                <span class="pricing-item-label"><a data-track="grid-saml" href="{{ relref . "/docs/guides/saml" }}" class="link">SAML/SSO</a></span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
                 <span class="pricing-item-value">
-                    <a href="{{ relref . "/docs/guides/saml/aad" }}" class="link">Azure Active Directory</a>,
-                    <a href="{{ relref . "/docs/guides/saml/gsuite" }}" class="link">G Suite</a>,
-                    <a href="{{ relref . "/docs/guides/saml/okta" }}" class="link">Okta</a>,
-                    <a href="{{ relref . "/docs/guides/saml/sso" }}" class="link">any SAML SSO 2.0 identity provider</a>
+                    <a data-track="grid-saml-azure" href="{{ relref . "/docs/guides/saml/aad" }}" class="link">Azure Active Directory</a>,
+                    <a data-track="grid-saml-gsuite" href="{{ relref . "/docs/guides/saml/gsuite" }}" class="link">G Suite</a>,
+                    <a data-track="grid-saml-okta" href="{{ relref . "/docs/guides/saml/okta" }}" class="link">Okta</a>,
+                    <a data-track="gird-saml-any" href="{{ relref . "/docs/guides/saml/sso" }}" class="link">any SAML SSO 2.0 identity provider</a>
                 </span>
             </div>
 
@@ -456,7 +456,7 @@
             </div>
 
             <div class="pricing-item">
-                <span class="pricing-item-label"><a href="https://slack.pulumi.com" class="link">Community Slack</a></span>
+                <span class="pricing-item-label"><a data-track="grid-slack" href="https://slack.pulumi.com" class="link">Community Slack</a></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
@@ -488,7 +488,7 @@
         </div>
     </section>
 
-    <section id="faq" class="bg-gray-100 py-16 px-4 lg:px-0">
+    <section id="faq" class="bg-gray-100 py-16 px-4">
         <div class="container mx-auto max-w-4xl">
             <h2>FAQ</h2>
             <h3>Can I use Pulumi for free? </h3>
@@ -514,11 +514,10 @@
             </p>
             <h3>How do I get started? </h3>
             <p>
-                To get started with a team-based plan, simply <a
-                href="https://app.pulumi.com/signup">sign up for free</a> using your
-                identity provider of choice (ideally the same one your organization will
-                be backed by). From there, <a href="https://app.pulumi.com/site/organizations/add">create
-                an organization</a> that your team members will use.
+                To get started with a team-based plan, simply <a href="https://app.pulumi.com/signup">
+                sign up for free</a> using your identity provider of choice (ideally the same one your organization will
+                be backed by). From there, <a href="https://app.pulumi.com/site/organizations/add">
+                create an organization</a> that your team members will use.
             </p>
             <p>
                 You can also sign up as an individual for
@@ -547,13 +546,14 @@
             </p>
             <h3>What are projects and stacks? </h3>
             <p>
-                Pulumi <a href="{{ relref . "/docs/intro/concepts/project" }}">projects</a> and <a href="{{ relref . "/docs/intro/concepts/stack" }}">stacks</a> are a way to organize
+                Pulumi <a href="{{ relref . "/docs/intro/concepts/project" }}">projects</a>
+                and <a href="{{ relref . "/docs/intro/concepts/stack" }}">stacks</a> are a way to organize
                 Pulumi code. You can consider a Pulumi Project to be analogous to a GitHub repo: a
                 single place for code -- and a Stack to be an instance of that code which has
                 separate configuration. For instance, Project Foo may have multiple stacks for
                 Dev, Test, Prod, or perhaps for different cloud configurations (e.g. geographic
-                region). Please <a href="{{ relref . "/docs/intro/concepts/organizing-stacks-projects" }}"></a> for some best practices on organizing your Pulumi
-                projects and stacks.
+                region). Please <a href="{{ relref . "/docs/intro/concepts/organizing-stacks-projects" }}"></a>
+                for some best practices on organizing your Pulumi projects and stacks.
             </p>
             <h3>How much will Pulumi cost?</h3>
             <p>

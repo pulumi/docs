@@ -16,7 +16,7 @@ aliases: ["/docs/quickstart/azure/install-language-runtime/"]
 
 ## Choose Your Language
 
-{{< langchoose nogo csharp >}}
+{{< langchoose csharp >}}
 
 {{% lang nodejs %}}
 {{< install-node >}}
@@ -24,6 +24,10 @@ aliases: ["/docs/quickstart/azure/install-language-runtime/"]
 
 {{% lang python %}}
 {{< install-python >}}
+{{< /lang >}}
+
+{{% lang go %}}
+{{< install-go >}}
 {{< /lang >}}
 
 {{% lang dotnet %}}

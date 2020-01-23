@@ -2820,7 +2820,7 @@ Allowed values include <code class="docutils literal notranslate"><span class="p
 </dl>
 <p>The <strong>access_log_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ARN of the log group to send the logs to. Automatically removes trailing <code class="docutils literal notranslate"><span class="pre">:*</span></code> if present.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with <code class="docutils literal notranslate"><span class="pre">amazon-apigateway-</span></code>. Automatically removes trailing <code class="docutils literal notranslate"><span class="pre">:*</span></code> if present.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The formatting and values recorded in the logs. 
 For more information on configuring the log format rules visit the AWS <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html">documentation</a></p></li>
 </ul>
@@ -2832,7 +2832,7 @@ For more information on configuring the log format rules visit the AWS <a class=
 <code class="sig-name descname">access_log_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Stage.access_log_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables access logs for the API stage. Detailed below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ARN of the log group to send the logs to. Automatically removes trailing <code class="docutils literal notranslate"><span class="pre">:*</span></code> if present.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with <code class="docutils literal notranslate"><span class="pre">amazon-apigateway-</span></code>. Automatically removes trailing <code class="docutils literal notranslate"><span class="pre">:*</span></code> if present.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The formatting and values recorded in the logs. 
 For more information on configuring the log format rules visit the AWS <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html">documentation</a></p></li>
 </ul>
@@ -2961,7 +2961,7 @@ e.g. <code class="docutils literal notranslate"><span class="pre">https://z4675b
 </dl>
 <p>The <strong>access_log_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ARN of the log group to send the logs to. Automatically removes trailing <code class="docutils literal notranslate"><span class="pre">:*</span></code> if present.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with <code class="docutils literal notranslate"><span class="pre">amazon-apigateway-</span></code>. Automatically removes trailing <code class="docutils literal notranslate"><span class="pre">:*</span></code> if present.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The formatting and values recorded in the logs. 
 For more information on configuring the log format rules visit the AWS <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html">documentation</a></p></li>
 </ul>

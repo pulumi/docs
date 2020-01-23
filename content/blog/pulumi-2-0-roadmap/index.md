@@ -40,7 +40,7 @@ Expect to see a steady stream of improvements between now and 2.0 being finished
 
 ### Policy as Code ("CrossGuard")
 
-[Today we have released preview support for a new policy as code offering that we call CrossGuard](/blog/announcing-crossguard-preview/). Just as you can write your infrastructure as code in your favorite language, so too can you now write your policies. These policies run whenever you do a Pulumi deployment, enabling CrossGuard to restrict deployments that violate security, compliance, cost, or stylistic requirements.
+[Today we have released preview support for a new policy as code offering that we call CrossGuard]({{< relref "/blog/announcing-crossguard-preview" >}}). Just as you can write your infrastructure as code in your favorite language, so too can you now write your policies. These policies run whenever you do a Pulumi deployment, enabling CrossGuard to restrict deployments that violate security, compliance, cost, or stylistic requirements.
 
 You can write custom policies, or use off-the-shelf policies authored by the community, including our preview [AWS pack](https://github.com/pulumi/pulumi-policy-aws) and [Open Policy Agent (OPA) integration](https://github.com/pulumi/pulumi-policy-opa). Just as you can share your own infrastructure creations using your language's package manager, you can share your policies too.
 

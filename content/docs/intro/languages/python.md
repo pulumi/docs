@@ -1,14 +1,16 @@
 ---
 title: "Python"
-meta_desc: An overview of how to use Python when writing cloud applications for any
-           Cloud Provider (AWS, Azure, GCE, Kubernetes, etc.).
+meta_desc: An overview of how to use Python for infrastructure as code
+           on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
 menu:
   intro:
     parent: languages
-    weight: 2
+    weight: 4
 
 aliases: ["/docs/reference/python/"]
 ---
+
+<img src="/logos/tech/logo-python.svg" align="right" width="150" style="padding:8px; margin-top: -64px">
 
 Pulumi supports programs written in Python 3.
 
@@ -21,7 +23,6 @@ Python 3 and pip3 are required by Pulumi.
 <a href="https://www.python.org/downloads/" target="_blank"><button class="button primary small">INSTALL PYTHON 3</button></a>
 
 <a href="https://pip.pypa.io/en/stable/installing/" target="_blank"><button class="button primary small">INSTALL PIP3</button></a>
-
 ## Getting Started
 
 The fastest way to get started with Pulumi Python is by using a template.  From an empty directory in which you'd like to create a new project:

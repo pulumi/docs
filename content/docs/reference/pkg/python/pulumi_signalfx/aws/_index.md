@@ -19,7 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>SignalFx AWS CloudWatch integrations using Role ARNs. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#connect-to-aws">Connect to AWS CloudWatch</a>.</p>
 <p><strong>Note:</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
 <blockquote>
-<div><p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with one of either <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>. Check with SignalFx support for your realm’s AWS account id.</p>
+<div><p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>. Check with SignalFx support for your realm’s AWS account id.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -129,7 +129,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>namespace_sync_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the <code class="docutils literal notranslate"><span class="pre">services</span></code> property. If you don’t specify either property, SignalFx syncs all data in all AWS namespaces.</p></li>
 <li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – AWS poll rate (in seconds). One of <code class="docutils literal notranslate"><span class="pre">60</span></code> or <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p></li>
 <li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of AWS regions that SignalFx should monitor.</p></li>
-<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role ARN that you add to an existing AWS integration object.</p></li>
+<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role ARN that you add to an existing AWS integration object. <strong>Note</strong>: Ensure you use the <code class="docutils literal notranslate"><span class="pre">arn</span></code> property of your role, not the id!</p></li>
 <li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with <code class="docutils literal notranslate"><span class="pre">namespace_sync_rule</span></code>.</p></li>
 </ul>
 </dd>
@@ -232,7 +232,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_signalfx.aws.Integration.role_arn">
 <code class="sig-name descname">role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.role_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>Role ARN that you add to an existing AWS integration object.</p>
+<dd><p>Role ARN that you add to an existing AWS integration object. <strong>Note</strong>: Ensure you use the <code class="docutils literal notranslate"><span class="pre">arn</span></code> property of your role, not the id!</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -263,7 +263,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>namespace_sync_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the <code class="docutils literal notranslate"><span class="pre">services</span></code> property. If you don’t specify either property, SignalFx syncs all data in all AWS namespaces.</p></li>
 <li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – AWS poll rate (in seconds). One of <code class="docutils literal notranslate"><span class="pre">60</span></code> or <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p></li>
 <li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of AWS regions that SignalFx should monitor.</p></li>
-<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role ARN that you add to an existing AWS integration object.</p></li>
+<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role ARN that you add to an existing AWS integration object. <strong>Note</strong>: Ensure you use the <code class="docutils literal notranslate"><span class="pre">arn</span></code> property of your role, not the id!</p></li>
 <li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with <code class="docutils literal notranslate"><span class="pre">namespace_sync_rule</span></code>.</p></li>
 </ul>
 </dd>
@@ -331,7 +331,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>SignalFx AWS CloudWatch integrations using security tokens. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#connect-to-aws">Connect to AWS CloudWatch</a>.</p>
 <p><strong>Note:</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
 <blockquote>
-<div><p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with one of either <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>.</p>
+<div><p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

@@ -11,7 +11,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/vpc/"]
 ---
 
-<a href="{{< relref "_index.md" >}}">
+<a href="{{< relref "./" >}}">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 

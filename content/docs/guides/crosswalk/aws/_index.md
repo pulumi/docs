@@ -10,7 +10,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/"]
 ---
 
-<a href="{{< relref "_index.md" >}}">
+<a href="{{< relref "./" >}}">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -21,17 +21,17 @@ Pulumi Crosswalk for AWS is a collection of libraries that use automatic well-ar
 ## Overview
 
 Pulumi Crosswalk for AWS supports "day one" tasks, such as creating your initial container-based workloads using
-[Amazon Elastic Container Service (ECS)]({{< relref "ecs.md" >}})---including Fargate or [Kubernetes (EKS)](
-{{< relref "eks.md" >}})---and creating serverless workloads using [Amazon API Gateway]({{< relref "api-gateway.md" >}}) and [AWS Lambda]({{< relref "lambda.md" >}}). Secure and cost-conscious defaults are chosen so that simple programs automatically use best practices for the underlying infrastructure, enabling better productivity with confidence.
+[Amazon Elastic Container Service (ECS)]({{< relref "ecs" >}})---including Fargate or [Kubernetes (EKS)](
+{{< relref "eks" >}})---and creating serverless workloads using [Amazon API Gateway]({{< relref "api-gateway" >}}) and [AWS Lambda]({{< relref "lambda" >}}). Secure and cost-conscious defaults are chosen so that simple programs automatically use best practices for the underlying infrastructure, enabling better productivity with confidence.
 
 Pulumi Crosswalk for AWS also supports "day two and beyond" tasks, such as scaling your workload, securing and
-integrating it with your existing infrastructure, or going to production in multiple complex environments. This includes [Amazon Virtual Private Cloud (VPC)]({{< relref "vpc.md" >}}) for network isolation, [AWS Auto Scaling](
-{{< relref "autoscaling.md" >}}) for dynamic scaling, [Amazon CloudWatch]({{< relref "cloudwatch.md" >}}) for
-monitoring, alarms, and dashboards, and [AWS Identity and Access Management (IAM)]({{< relref "iam.md" >}}) for
+integrating it with your existing infrastructure, or going to production in multiple complex environments. This includes [Amazon Virtual Private Cloud (VPC)]({{< relref "vpc" >}}) for network isolation, [AWS Auto Scaling](
+{{< relref "autoscaling" >}}) for dynamic scaling, [Amazon CloudWatch]({{< relref "cloudwatch" >}}) for
+monitoring, alarms, and dashboards, and [AWS Identity and Access Management (IAM)]({{< relref "iam" >}}) for
 securing your infrastructure.
 
 For example, this program builds and publishes a Dockerized application to a private [Elastic Container Registry (ECR)](
-{{< relref "ecr.md" >}}), spins up an ECS Fargate cluster, and runs a scalable, load balanced service, all in
+{{< relref "ecr" >}}), spins up an ECS Fargate cluster, and runs a scalable, load balanced service, all in
 response to a single `pulumi up` command line invocation:
 
 ```typescript
@@ -59,31 +59,31 @@ This example uses the default VPC and reasonable security defaults, but supports
 
 ## Getting Started
 
-To get started with Pulumi Crosswalk for AWS, [download and install Pulumi]({{< relref "/docs/get-started/install" >}}), and [configure it to work with your AWS account]({{< relref "/docs/intro/cloud-providers/aws/setup.md" >}}). Afterwards,
+To get started with Pulumi Crosswalk for AWS, [download and install Pulumi]({{< relref "/docs/get-started/install" >}}), and [configure it to work with your AWS account]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}). Afterwards,
 [try the Getting Started tutorial]({{< relref "/docs/tutorials/aws/ecs-fargate" >}}) or select one of the
 relevant User Guides to get started:
 
 ### Containers
 
-* [Elastic Container Service (ECS)]({{< relref "ecs.md" >}})
-* [Elastic Kubernetes Service (EKS)]({{< relref "eks.md" >}})
-* [Elastic Container Registry (ECR)]({{< relref "ecr.md" >}})
+* [Elastic Container Service (ECS)]({{< relref "ecs" >}})
+* [Elastic Kubernetes Service (EKS)]({{< relref "eks" >}})
+* [Elastic Container Registry (ECR)]({{< relref "ecr" >}})
 
 ### Serverless
 
-* [Lambda]({{< relref "lambda.md" >}})
-* [API Gateway]({{< relref "api-gateway.md" >}})
+* [Lambda]({{< relref "lambda" >}})
+* [API Gateway]({{< relref "api-gateway" >}})
 
 ### Monitoring
 
-* [CloudWatch]({{< relref "cloudwatch.md" >}})
+* [CloudWatch]({{< relref "cloudwatch" >}})
 
 ### Core Infrastructure
 
-* [Auto Scaling]({{< relref "autoscaling.md" >}})
-* [Elastic Load Balancing (ELB)]({{< relref "elb.md" >}})
-* [Identity and Access Management (IAM)]({{< relref "iam.md" >}})
-* [Virtual Private Cloud (VPC)]({{< relref "vpc.md" >}})
+* [Auto Scaling]({{< relref "autoscaling" >}})
+* [Elastic Load Balancing (ELB)]({{< relref "elb" >}})
+* [Identity and Access Management (IAM)]({{< relref "iam" >}})
+* [Virtual Private Cloud (VPC)]({{< relref "vpc" >}})
 
 ### Continuous Deployment
 
@@ -93,7 +93,7 @@ relevant User Guides to get started:
 
 Pulumi supports the entirety of the AWS platform. If your favorite service isn't listed above, check out:
 
-* [Other AWS Services]({{< relref "other.md" >}})
+* [Other AWS Services]({{< relref "other" >}})
 
 ## Frequently Asked Questions (FAQ)
 

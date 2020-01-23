@@ -23,8 +23,8 @@ multiple products together.
 
 This isn't a hypothetical benefit of using the Pulumi programming model.
 We use a setup similar to the one described in this post for powering
-our own static websites, like [www.pulumi.com](http://www.pulumi.com/)
-and [get.pulumi.com](http://get.pulumi.com).
+our own static websites, like [www.pulumi.com](/)
+and [get.pulumi.com](https://get.pulumi.com).
 <!--more-->
 
 ## Overview
@@ -143,7 +143,7 @@ for using using constants like tenMinutes rather than the number 600.
 
 Finally, we hook up our domain to the CloudFront distribution. We just
 create an alias (A) record that aliases our own domain (e.g.
-[www.pulumi.com](http://www.pulumi.com/)) to the CloudFront distribution
+[www.pulumi.com](/)) to the CloudFront distribution
 (e.g. `dhy4niicdm7ba.cloudfront.net`).
 
 There is a little extra processing we need to do to get the Amazon
@@ -199,4 +199,4 @@ Pulumi opens up a lot of possibilities and we are excited to see what
 sorts of things people build using it. If you are interested in using
 Pulumi for more sophisticated website hosting, or just have questions
 about serving static files like described here, feel free to ask away on
-our [Pulumi Community Slack](http://slack.pulumi.com/).
+our [Pulumi Community Slack](https://slack.pulumi.com/).

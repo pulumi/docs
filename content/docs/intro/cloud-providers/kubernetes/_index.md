@@ -59,12 +59,13 @@ The [`pulumi/kubernetes`](https://github.com/pulumi/pulumi-kubernetes) SDK is av
 - JavaScript/TypeScript: [npm](https://www.npmjs.com/package/@pulumi/kubernetes)
 - Python: [PyPI](https://pypi.org/project/pulumi-kubernetes/)
 - Go: Planned
+- .NET: [`Pulumi.Kubernetes`](https://www.nuget.org/packages/Pulumi.Kubernetes)
 
 [k8s]: https://kubernetes.io
 
 ## Crosswalk for Kubernetes
 
-<a href="{{< relref "_index.md" >}}">
+<a href="{{< relref "./" >}}">
     <img src="/images/docs/reference/crosswalk/kubernetes/crosswalk-for-k8s.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 

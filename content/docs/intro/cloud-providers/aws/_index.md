@@ -20,7 +20,7 @@ Additionally, higher-level libraries offering simpler interfaces and higher-prod
 
 ## Setup
 
-The AWS provider supports several options for providing access to AWS credentials.  See [AWS setup page]({{< relref "setup.md" >}}) for details.
+The AWS provider supports several options for providing access to AWS credentials.  See [AWS setup page]({{< relref "setup" >}}) for details.
 
 ## Getting Started
 
@@ -29,7 +29,7 @@ The quickest way to get started with AWS is to follow the [Get Started]({{< relr
 Additionally, there are several tutorials available to follow:
 
 * [Containers on ECS "Fargate"]({{< relref "/docs/tutorials/aws/ecs-fargate" >}}): Deploy containers to Amazon
-* [EC2 Linux WebServer VM]({{< relref "/docs/tutorials/aws/ec2-webserver.md" >}}): Create an EC2 Linux Web Server virtual machine
+* [EC2 Linux WebServer VM]({{< relref "/docs/tutorials/aws/ec2-webserver" >}}): Create an EC2 Linux Web Server virtual machine
 * [Serverless REST API Gateways using Lambda]({{< relref "/docs/tutorials/aws/rest-api" >}}): Create simple RESTful web server using AWS Lambdas
 * [Serve a Static Website from S3]({{< relref "/docs/tutorials/aws/s3-website" >}}): Serve a static website out of content in an S3 bucket
 * [Serverless + Containers + Infrastructure]({{< relref "/docs/tutorials/aws/video-thumbnailer" >}}): Deploy a complete  application using a combination of buckets, serverless functions and containers.
@@ -74,6 +74,7 @@ The following packages are available in package managers:
 * JavaScript/TypeScript: [`@pulumi/aws`](https://www.npmjs.com/package/@pulumi/aws)
 * Python: [`pulumi-aws`](https://pypi.org/project/pulumi-aws/)
 * Go: [`github.com/pulumi/pulumi-aws/sdk/go/aws`](https://github.com/pulumi/pulumi-aws)
+* .NET: [`Pulumi.Aws`](https://www.nuget.org/packages/Pulumi.Aws)
 
 The AWS provider is open source and available in the [pulumi/pulumi-aws](https://github.com/pulumi/pulumi-aws) repo.
 

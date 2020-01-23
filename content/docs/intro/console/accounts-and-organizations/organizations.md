@@ -144,8 +144,8 @@ and Settings tabs.
 | Stacks | A searchable list of organization stacks that you can group by project and tag. See [Project and Stack Management]({{< relref "../collaboration/project-and-stack-management"
 >}}) to learn more. |
 | People | A list of active members of the Pulumi organization. |
-| Teams | A [Team Pro](https://www.pulumi.com/pricing/) feature that provides a way to assign stack permissions to groups of organization members. |
-| Webhooks | A [Team Pro](https://www.pulumi.com/pricing/) feature that allows external services to be notified about events happening on an organization, including events occurring on organization stacks. |
+| Teams | A [Team Pro]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
+| Webhooks | A [Team Pro]({{< relref "/pricing" >}}) feature that allows external services to be notified about events happening on an organization, including events occurring on organization stacks. |
 | Settings | A place for you to manage your organization settings including subscription and payment information and history, base permissions to all of the organization's stacks (including stack creation and deletion), and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
 
 ## Next Steps

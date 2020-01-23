@@ -14,6 +14,11 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.eventgrid"></span><dl class="class">
+<dt id="pulumi_azure.eventgrid.AwaitableGetTopicResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventgrid.</code><code class="sig-name descname">AwaitableGetTopicResult</code><span class="sig-paren">(</span><em class="sig-param">endpoint=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventgrid.AwaitableGetTopicResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.eventgrid.Domain">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventgrid.</code><code class="sig-name descname">Domain</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">input_mapping_default_values=None</em>, <em class="sig-param">input_mapping_fields=None</em>, <em class="sig-param">input_schema=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventgrid.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EventGrid Domain</p>
@@ -474,6 +479,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.eventgrid.GetTopicResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventgrid.</code><code class="sig-name descname">GetTopicResult</code><span class="sig-paren">(</span><em class="sig-param">endpoint=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventgrid.GetTopicResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getTopic.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.eventgrid.GetTopicResult.endpoint">
+<code class="sig-name descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventgrid.GetTopicResult.endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Endpoint associated with the EventGrid Topic.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventgrid.GetTopicResult.primary_access_key">
+<code class="sig-name descname">primary_access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventgrid.GetTopicResult.primary_access_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Primary Shared Access Key associated with the EventGrid Topic.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventgrid.GetTopicResult.secondary_access_key">
+<code class="sig-name descname">secondary_access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventgrid.GetTopicResult.secondary_access_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Secondary Shared Access Key associated with the EventGrid Topic.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventgrid.GetTopicResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventgrid.GetTopicResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.eventgrid.Topic">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventgrid.</code><code class="sig-name descname">Topic</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventgrid.Topic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EventGrid Topic</p>
@@ -599,6 +634,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.eventgrid.get_topic">
+<code class="sig-prename descclassname">pulumi_azure.eventgrid.</code><code class="sig-name descname">get_topic</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventgrid.get_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing EventGrid Topic</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the EventGrid Topic resource.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The name of the resource group in which the EventGrid Topic exists.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/eventgrid_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/eventgrid_topic.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

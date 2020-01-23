@@ -1,5 +1,6 @@
 ---
 title: Search Results
 layout: search
-noindex: true
+exclude_from_pulumi_search_index: true
+block_external_search_index: true
 ---
