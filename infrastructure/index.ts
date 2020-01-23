@@ -264,17 +264,24 @@ const assetTypes = [
 
 // Keep track of the asset paths we encounter and the resources we create from them, so we
 // can declare the necessary dependency relationships.
-const assetPaths: string[] = [];
+const assetPaths = new Set<string>();
 const assetResources: aws.s3.BucketObject[] = [];
+
+// Find all files by pattern (e.g., "/path/to/begin/from/**/*.jpg"), matching those with
+// dot-prefixed folders or filenames (".net", for example) and excluding directories.
+// https://github.com/isaacs/node-glob#options
+function filePathsByPattern(pattern: string): string[] {
+    return glob.sync(pattern, { dot: true, nodir: true });
+}
 
 // Find all files matching the patterns above, creating a new BucketObject for each one.
 // These objects are declared first in order to pass them conditionally as dependencies
 // below.
 assetTypes.forEach(pattern => {
-    glob.sync(`${webContentsRootPath}/**/*.${pattern}`).forEach(assetPath => {
+    filePathsByPattern(`${webContentsRootPath}/**/*.${pattern}`).forEach(assetPath => {
 
         // Remember the asset path, so we can ignore it later.
-        assetPaths.push(assetPath);
+        assetPaths.add(assetPath);
 
         // Turn the full (local) path into a relative path, so we can use it for an S3 object key.
         const relativeAssetPath = assetPath.replace(webContentsRootPath + "/", "");
@@ -300,15 +307,10 @@ assetTypes.forEach(pattern => {
 });
 
 // Now create bucket objects for everything else, bypassing anything created already.
-glob.sync(`${webContentsRootPath}/**/*`).forEach(filePath => {
-
-    // Ignore directories.
-    if (fs.lstatSync(filePath).isDirectory()) {
-        return;
-    }
+filePathsByPattern(`${webContentsRootPath}/**/*`).forEach(filePath => {
 
     // Ignore previously encountered asset paths, since they'll already have been declared.
-    if (assetPaths.includes(filePath)) {
+    if (assetPaths.has(filePath)) {
         return;
     }
 
@@ -327,7 +329,6 @@ glob.sync(`${webContentsRootPath}/**/*`).forEach(filePath => {
     const redirect = getMetaRefreshRedirect(filePath);
     if (!redirect) {
         const contentType = getMimeType(filePath) || undefined;
-        console.log(contentType);
 
         const contentFile = new aws.s3.BucketObject(
             relativeFilePath,
