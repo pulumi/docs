@@ -60,20 +60,6 @@ Duration: 12s
 
 You can see we now have an `ip` [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}) that we can `curl` to get the output from the service.
 
-> **Using Minikube:** Note that Minikube does not support type `LoadBalancer`. If you are deploying to Minikube, see the following example to run the `kubectl port-forward service/YOUR_SERVICE_NAME 8080:80` command to forward the cluster port to the local machine. Then, the service can be accessed via `curl http://localhost:8080`, which will get the same result as `curl $(pulumi stack output ip)` as in the environment without using Minikube.
-> ```bash
-> $ kubectl get service
-> NAME             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
-> kubernetes       ClusterIP   10.96.0.1       <none>        443/TCP   26h
-> nginx-3hq3kux6   ClusterIP   10.96.185.206   <none>        80/TCP    15m
-> ```
->
-> ```bash
-> $ kubectl port-forward service/nginx-3hq3kux6 8080:80
-> Forwarding from 127.0.0.1:8080 -> 80
-> Forwarding from [::1]:8080 -> 80
-> ```
-
 ```bash
 $ curl $(pulumi stack output ip)
 <!DOCTYPE html>
@@ -101,6 +87,21 @@ Commercial support is available at
 <p><em>Thank you for using nginx.</em></p>
 </body>
 </html>
+```
+
+**Using Minikube:** Note that Minikube does not support type `LoadBalancer`. If you are deploying to Minikube, see the following example to run the `kubectl port-forward service/YOUR_SERVICE_NAME 8080:80` command to forward the cluster port to the local machine. Then, the service can be accessed via `curl http://localhost:8080`, which will get the same result as `curl $(pulumi stack output ip)` as in the environment without using Minikube.
+
+```bash
+$ kubectl get service
+NAME             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+kubernetes       ClusterIP   10.96.0.1       <none>        443/TCP   26h
+nginx-3hq3kux6   ClusterIP   10.96.185.206   <none>        80/TCP    15m
+```
+
+```bash
+$ kubectl port-forward service/nginx-3hq3kux6 8080:80
+Forwarding from 127.0.0.1:8080 -> 80
+Forwarding from [::1]:8080 -> 80
 ```
 
 Next, we'll destroy the stack.
