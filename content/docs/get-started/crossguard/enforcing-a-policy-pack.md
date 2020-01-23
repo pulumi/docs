@@ -78,7 +78,7 @@ pulumi policy publish [org-name]
     ```
 
 <!-- markdownlint-disable ul -->
-1. You can apply this Policy Pack to your organization’s default Policy Group by running:
+1. You can enable this Policy Pack to your organization’s default Policy Group by running:
 
     {{< oschoose >}}
 
@@ -88,7 +88,7 @@ pulumi policy publish [org-name]
 <!-- markdownlint-enable ul -->
 
 ```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy apply <org-name>/<policy-pack-name> <version>
+$ PULUMI_EXPERIMENTAL=true pulumi policy enable <org-name>/<policy-pack-name> <version>
 ```
 
 {{% /md %}}
@@ -99,7 +99,7 @@ $ PULUMI_EXPERIMENTAL=true pulumi policy apply <org-name>/<policy-pack-name> <ve
 {{% md %}}
 
 ```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy apply <org-name>/<policy-pack-name> <version>
+$ PULUMI_EXPERIMENTAL=true pulumi policy enable <org-name>/<policy-pack-name> <version>
 ```
 
 {{% /md %}}
@@ -115,7 +115,7 @@ $ PULUMI_EXPERIMENTAL=true pulumi policy apply <org-name>/<policy-pack-name> <ve
 
 ```bat
 set PULUMI_EXPERIMENTAL=true
-pulumi policy apply <org-name>/<policy-pack-name> <version>
+pulumi policy enable <org-name>/<policy-pack-name> <version>
 ```
 
 <!-- markdownlint-disable emphasis -->
@@ -124,13 +124,13 @@ pulumi policy apply <org-name>/<policy-pack-name> <version>
 
 ```powershell
 $env:PULUMI_EXPERIMENTAL = 'true'
-pulumi policy apply <org-name>/<policy-pack-name> <version>
+pulumi policy enable <org-name>/<policy-pack-name> <version>
 ```
 
 {{% /md %}}
     </div>
 
-    For example, to apply the Policy Pack created in the previous step:
+    For example, to enable the Policy Pack created in the previous step:
 
     {{< oschoose >}}
 
@@ -139,7 +139,7 @@ pulumi policy apply <org-name>/<policy-pack-name> <version>
 {{% md %}}
 
 ```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy apply pulumi/policy-pack-typescript 1
+$ PULUMI_EXPERIMENTAL=true pulumi policy enable pulumi/policy-pack-typescript --latest
 ```
 
 {{% /md %}}
@@ -150,7 +150,7 @@ $ PULUMI_EXPERIMENTAL=true pulumi policy apply pulumi/policy-pack-typescript 1
 {{% md %}}
 
 ```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy apply pulumi/policy-pack-typescript 1
+$ PULUMI_EXPERIMENTAL=true pulumi policy enable pulumi/policy-pack-typescript --latest
 ```
 
 {{% /md %}}
@@ -166,7 +166,7 @@ $ PULUMI_EXPERIMENTAL=true pulumi policy apply pulumi/policy-pack-typescript 1
 
 ```bat
 set PULUMI_EXPERIMENTAL=true
-pulumi policy apply pulumi/policy-pack-typescript 1
+pulumi policy enable pulumi/policy-pack-typescript --latest
 ```
 
 <!-- markdownlint-disable emphasis -->
@@ -175,13 +175,13 @@ pulumi policy apply pulumi/policy-pack-typescript 1
 
 ```powershell
 $env:PULUMI_EXPERIMENTAL = 'true'
-pulumi policy apply pulumi/policy-pack-typescript 1
+pulumi policy enable pulumi/policy-pack-typescript --latest
 ```
 
 {{% /md %}}
     </div>
 
-    The CLI can only be used to apply the Policy Pack to your default Policy Group. If you would like to add the Policy Pack to a different Policy Group, you can do so via the Pulumi Console.
+    The CLI by default enables the Policy Pack to your default Policy Group. If you would like to add the Policy Pack to a different Policy Group, you can use the `--policy-group` flag.
 
 ## Next Steps
 
