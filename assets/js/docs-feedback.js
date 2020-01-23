@@ -60,11 +60,21 @@ $(function(){
                 $("#feedbackThankYou").removeClass("hidden");
             });
 
+            $("#docsCloseFeedbackLongForm").on("click", function() {
+                // Send to Segment.
+                sendFeedbackToSegement(answer, "", "");
+
+                // Show the thank you section.
+                $("#feedbackButtons").addClass("hidden");
+                $("#feedbackLongForm").addClass("hidden");
+                $("#feedbackThankYou").removeClass("hidden");
+            });
+
             $(window).on("beforeunload", function() {
                 // When page unloads send the answer if it has not already been sent.
                 var feedbackSent = $("#feedbackLongForm").hasClass("hidden");
                 if (!feedbackSent) {
-                    sendFeedbackToSegement(answer);
+                    sendFeedbackToSegement(answer, "", "");
                 }
             });
         }
