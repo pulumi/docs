@@ -23,6 +23,7 @@ Python 3 and pip3 are required by Pulumi.
 <a href="https://www.python.org/downloads/" target="_blank"><button class="button primary small">INSTALL PYTHON 3</button></a>
 
 <a href="https://pip.pypa.io/en/stable/installing/" target="_blank"><button class="button primary small">INSTALL PIP3</button></a>
+
 ## Getting Started
 
 The fastest way to get started with Pulumi Python is by using a template.  From an empty directory in which you'd like to create a new project:
