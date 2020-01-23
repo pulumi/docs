@@ -780,7 +780,7 @@ configuration value is not a legal number, an error is thrown.</p>
 
 <dl class="method">
 <dt id="pulumi.Config.require_secret_float">
-<code class="sig-name descname">require_secret_float</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pulumi.Config.require_secret_float" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">require_secret_float</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[float][float]<a class="headerlink" href="#pulumi.Config.require_secret_float" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a configuration value, as a float, marked as a secret by its given key.  If it doesn’t exist, or the
 configuration value is not a legal number, an error is thrown.</p>
 <dl class="field-list simple">
