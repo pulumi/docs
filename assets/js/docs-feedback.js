@@ -1,7 +1,4 @@
-/**
- *
- */
-$(document).ready(function(){
+$(function(){
     // Check that the analytics track function is available.
     var analyticsAvailable = window.analytics && window.analytics.track &&
                              (typeof window.analytics.track === "function");
@@ -10,7 +7,7 @@ $(document).ready(function(){
         // Show the docs feedback container.
         $("#docsFeedbackContainer").removeClass("hidden");
 
-        // For each of the button ids attach a click hanlder that shows
+        // For each of the button ids attach a click handler that shows
         // the additional comment section.
         ["#docsFeedbackYes", "#docsFeedbackNo"].forEach(function(key) {
             var answer = key === "#docsFeedbackYes" ? "Yes" : "No";
@@ -30,11 +27,11 @@ $(document).ready(function(){
          * @param {string} comments The value of the text area in the comment section. Defaults to an empty string
          * @param {string} email The value of the email input in the comment section. Defaults to an empty string
          */
-        function sendFeedbackToSegement(answer, comments = "", email = "") {
+        function sendFeedbackToSegement(answer, comments, email) {
             var trackingObj = {
-                answer,
-                comments,
-                email,
+                answer: answer,
+                comments: comments || "",
+                email: email || "",
                 url: window.location.pathname,
                 category: "Documentation Feedback",
                 label: answer,
@@ -49,7 +46,7 @@ $(document).ready(function(){
          * @param {string} answer The value of the button the user clicked when giving feedback.
          */
         function showAdditionalCommentSection(answer) {
-            // Add a click handler to the submit button
+            // Add a click handler to the submit button.
             $("#docsSubmitFeedback").on("click", function() {
                 // Grab the values of the comments and email inputs.
                 var comments = $("#feedbackAdditionalComments").val().trim();
@@ -65,8 +62,8 @@ $(document).ready(function(){
 
             $(window).on("beforeunload", function() {
                 // When page unloads send the answer if it has not already been sent.
-                var shouldSendFeedback = $("#feedbackLongForm").hasClass("hidden");
-                if (!shouldSendFeedback) {
+                var feedbackSent = $("#feedbackLongForm").hasClass("hidden");
+                if (!feedbackSent) {
                     sendFeedbackToSegement(answer);
                 }
             });

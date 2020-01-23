@@ -16,12 +16,12 @@
     <div id="feedbackLongForm" class="hidden">
         <p>Additional Comments?</p>
         <textarea id="feedbackAdditionalComments" rows="5" class="mb-3 w-full md:w-3/4 p-2 bg-white rounded border border-gray-500 outline-none"></textarea>
-        <input id="feedbackEmail" type="text" class="block mb-4 w-full md:w-3/4 p-2 rounded border border-gray-500 outline-none" placeholder="Email (optional)" />
+        <input id="feedbackEmail" type="email" class="block mb-4 w-full md:w-3/4 p-2 rounded border border-gray-500 outline-none" placeholder="Email (optional)" />
         <a id="docsSubmitFeedback" class="btn md:w-1/4 text-center block">Submit</a>
     </div>
     <div id="feedbackThankYou" class="hidden">
-        {{ $problemTitle := printf "Issue with %s" .Permalink}}
-        {{ $improvementTitle := printf "Improvement for %s" .Permalink}}
+        {{ $problemTitle := printf "Issue with %s" .Permalink }}
+        {{ $improvementTitle := printf "Improvement for %s" .Permalink }}
         <p>
             Thank you for your feedback. If you have a specific, answerable question about how
             to use Pulumi, ask it in our <a href="https://slack.pulumi.com/">Community Slack</a>.
