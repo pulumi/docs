@@ -4,6 +4,7 @@ import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
 
 import * as fs from "fs";
+import * as glob from "glob";
 import * as mime from "mime";
 import * as path from "path";
 
@@ -226,22 +227,6 @@ const cdn = new aws.cloudfront.Distribution(
         dependsOn: [ contentBucket, logsBucket ],
     });
 
-// crawlDirectory recursive crawls the provided directory, applying the provided function
-// to every file it contains. Doesn't handle cycles from symlinks.
-function crawlDirectory(dir: string, f: (_: string) => void) {
-    const files = fs.readdirSync(dir);
-    for (const file of files) {
-        const filePath = `${dir}/${file}`;
-        const stat = fs.statSync(filePath);
-        if (stat.isDirectory()) {
-            crawlDirectory(filePath, f);
-        }
-        if (stat.isFile()) {
-            f(filePath);
-        }
-    }
-}
-
 // Some files do not get the correct mime/type inferred from the mime package, and we
 // need to set our own.
 function getMimeType(filePath: string): string | undefined {
@@ -257,47 +242,122 @@ function getMimeType(filePath: string): string | undefined {
 // Sync the contents of the source directory with the S3 bucket, which will in-turn show up on the CDN.
 const webContentsRootPath = path.join(process.cwd(), config.pathToWebsiteContents);
 console.log("Syncing contents from local disk at", webContentsRootPath);
-crawlDirectory(
-    webContentsRootPath,
-    (filePath: string) => {
-        const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
 
-        const baseArgs = {
-            acl: "public-read",
-            key: relativeFilePath,
-            bucket: contentBucket,
-        };
+// Certain files, like JavaScript and CSS files produced during the build, must exist
+// before the website's HTML files can use them (otherwise, pages won't render properly,
+// or may be unusable), and others, like fonts and images, would be nice to have there in
+// advance, too. Extensions listed here are used for identifying files that should exist
+// on S3 before any HTML pages are updated to reference them.
+const assetTypes = [
+    "js",
+    "css",
+    "png",
+    "jpg",
+    "gif",
+    "svg",
+    "pdf",
+    "eot",
+    "ttf",
+    "woff",
+    "woff2",
+];
 
-        // Create a new S3 object for most files, but HTML files that contain a redirect
-        // just create a stubbed out S3 object with the right metadata so they return a
-        // 301 redirect (instead of serving the HTML with a meta-redirect). This ensures
-        // the right HTTP code response is returned for search engines, as well as
-        // enables better support for URL anchors.
-        const redirect = getMetaRefreshRedirect(filePath);
-        if (!redirect) {
-            const contentFile = new aws.s3.BucketObject(
-                relativeFilePath,
-                {
-                    ...baseArgs,
-                    source: new pulumi.asset.FileAsset(filePath),
-                    contentType: getMimeType(filePath) || undefined,
-                },
-                {
-                    parent: contentBucket,
-                });
-        } else {
-            const s3Redirect = new aws.s3.BucketObject(
-                relativeFilePath,
-                {
-                    ...baseArgs,
-                    source: new pulumi.asset.FileAsset("/dev/null"), // Empty file.
-                    websiteRedirect: translateRedirect(filePath, redirect),
-                },
-                {
-                    parent: contentBucket,
-                });
-        }
+// Keep track of the asset paths we encounter and the resources we create from them, so we
+// can declare the necessary dependency relationships.
+const assetPaths = new Set<string>();
+const assetResources: aws.s3.BucketObject[] = [];
+
+// Find all files by pattern (e.g., "/path/to/begin/from/**/*.jpg"), matching those with
+// dot-prefixed folders or filenames (".net", for example) and excluding directories.
+// https://github.com/isaacs/node-glob#options
+function filePathsByPattern(pattern: string): string[] {
+    return glob.sync(pattern, { dot: true, nodir: true });
+}
+
+// Find all files matching the patterns above, creating a new BucketObject for each one.
+// These objects are declared first in order to pass them conditionally as dependencies
+// below.
+assetTypes.forEach(pattern => {
+    filePathsByPattern(`${webContentsRootPath}/**/*.${pattern}`).forEach(assetPath => {
+
+        // Remember the asset path, so we can ignore it later.
+        assetPaths.add(assetPath);
+
+        // Turn the full (local) path into a relative path, so we can use it for an S3 object key.
+        const relativeAssetPath = assetPath.replace(webContentsRootPath + "/", "");
+
+        // Create a resource object with the asset.
+        const assetResource = new aws.s3.BucketObject(
+            relativeAssetPath,
+            {
+                acl: "public-read",
+                key: relativeAssetPath,
+                source: new pulumi.asset.FileAsset(assetPath),
+                contentType: getMimeType(assetPath) || undefined,
+                bucket: contentBucket,
+            },
+            {
+                parent: contentBucket,
+            },
+        );
+
+        // Add the bucket resource to the list of asset dependencies.
+        assetResources.push(assetResource);
     });
+});
+
+// Now create bucket objects for everything else, bypassing anything created already.
+filePathsByPattern(`${webContentsRootPath}/**/*`).forEach(filePath => {
+
+    // Ignore previously encountered asset paths, since they'll already have been declared.
+    if (assetPaths.has(filePath)) {
+        return;
+    }
+
+    const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
+    const baseArgs = {
+        acl: "public-read",
+        key: relativeFilePath,
+        bucket: contentBucket,
+    };
+
+    // Create a new S3 object for most files, but HTML files that contain a redirect
+    // just create a stubbed out S3 object with the right metadata so they return a
+    // 301 redirect (instead of serving the HTML with a meta-redirect). This ensures
+    // the right HTTP code response is returned for search engines, as well as
+    // enables better support for URL anchors.
+    const redirect = getMetaRefreshRedirect(filePath);
+    if (!redirect) {
+        const contentType = getMimeType(filePath) || undefined;
+
+        const contentFile = new aws.s3.BucketObject(
+            relativeFilePath,
+            {
+                ...baseArgs,
+                source: new pulumi.asset.FileAsset(filePath),
+                contentType,
+            },
+            {
+                parent: contentBucket,
+
+                // Only HTML files need depend on asset files.
+                dependsOn: contentType === "text/html" ? assetResources : undefined,
+            },
+        );
+    } else {
+        const s3Redirect = new aws.s3.BucketObject(
+            relativeFilePath,
+            {
+                ...baseArgs,
+                source: new pulumi.asset.FileAsset("/dev/null"), // Empty file.
+                websiteRedirect: translateRedirect(filePath, redirect),
+            },
+            {
+                parent: contentBucket,
+            },
+        );
+    }
+});
 
 // Returns the redirect URL if filePath is an HTML file that contains a meta refresh tag, otherwise undefined.
 function getMetaRefreshRedirect(filePath: string): string | undefined {
