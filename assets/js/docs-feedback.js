@@ -12,7 +12,6 @@ $(function(){
         ["#docsFeedbackYes", "#docsFeedbackNo"].forEach(function(key) {
             var answer = key === "#docsFeedbackYes" ? "Yes" : "No";
             $(key).on("click", function() {
-                $("#feedbackButtons").addClass("hidden");
                 $("#feedbackLongForm").removeClass("hidden");
 
                 // Show the additional comment section.
@@ -56,6 +55,7 @@ $(function(){
                 sendFeedbackToSegement(answer, comments, email);
 
                 // Show the thank you section.
+                $("#feedbackButtons").addClass("hidden");
                 $("#feedbackLongForm").addClass("hidden");
                 $("#feedbackThankYou").removeClass("hidden");
             });
