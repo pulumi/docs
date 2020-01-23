@@ -245,7 +245,7 @@ Our program now creates a service to access the NGINX deployment, and requires a
 
 The configuration value can be set for the stack using `pulumi config set isMinikube <true|false>` command.
 
-If you are currently using `minikube`, set `isMinikube` to `true`. Else, set `isMinikube` to `false` as shown in the following command.
+If you are currently using Minikube, set `isMinikube` to `true`, otherwise, set `isMinikube` to `false` as shown in the following command.
 
 ```bash
 $ pulumi config set isMinikube false
