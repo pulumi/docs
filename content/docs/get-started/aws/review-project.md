@@ -83,8 +83,6 @@ This Pulumi program creates an S3 bucket and exports the name of the bucket.
 
 {{% lang python %}}
 
-> *Note*: As a prerequisite, [install virtualenv](https://virtualenv.pypa.io/en/latest/installation/) to manage project requirements
-
 For Python, before we deploy the stack, the following commands need to be run to create a virtual environment, activate it, and install dependencies:
 
 Create a virtual environment:

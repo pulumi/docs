@@ -82,8 +82,6 @@ This Pulumi program creates a storage bucket and exports the bucket URL.
 
 {{% lang python %}}
 
-> *Note*: As a prerequisite, [install virtualenv](https://virtualenv.pypa.io/en/latest/installation/) to manage project requirements
-
 For Python, before we deploy the stack, the following commands need to be run to create a virtual environment, activate it, and install dependencies:
 
 Create a virtual environment:
