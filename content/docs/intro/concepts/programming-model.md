@@ -2541,6 +2541,45 @@ class MyResource extends pulumi.dynamic.Resource {
 }
 ```
 
+```python
+from pulumi import Input, Output, ResourceOptions
+from pulumi.dynamic import *
+from typing import Any, Optional
+
+class MyResourceInputs(object):
+    my_string_prop: Input[str]
+    my_bool_prop: Input[bool]
+
+    def __init__(self, my_string_prop, my_bool_prop):
+        self.my_string_prop = my_string_prop
+        self.my_bool_prop = my_bool_prop
+
+class _MyResourceProviderInputs(object):
+    """
+    MyResourceProviderInputs is the unwrapped version of the same inputs
+    from the MyResourceInputs class.
+    """
+    my_string_prop: str
+    my_bool_prop: bool
+
+    def __init__(self, my_string_prop: str, my_bool_prop: bool):
+        self.my_bool_prop = my_bool_prop
+        self.my_string_prop = my_string_prop
+
+class MyResourceProvider(ResourceProvider):
+    def create(self, inputs: _MyResourceProviderInputs) -> CreateResult:
+        ...
+        return CreateResult()
+
+    def diff(self, id: str, oldInputs: _MyResourceProviderInputs, newInputs: _MyResourceProviderInputs) -> DiffResult:
+        ...
+        return DiffResult()
+
+class MyResource(Resource):
+    def __init__(self, name: str, props: MyResourceInputs, opts: Optional[ResourceOptions] = None):
+        super().__init__(MyResourceProvider(), name, {**vars(props)}, opts)
+```
+
 ```go
 // Dynamic Providers are currently not supported in Go.
 ```
@@ -2617,10 +2656,17 @@ export class MyResource extends pulumi.dynamic.Resource {
 }
 ```
 
+```javascript
+JavaScript does not support types.
+```
+
 ```python
 from pulumi import ResourceOptions, Input, Output
 from pulumi.dynamic import Resource, ResourceProvider, CreateResult
 from typing import Any, Optional
+
+...
+...
 
 class MyProvider(ResourceProvider):
     def create(self, inputs):
@@ -2629,6 +2675,7 @@ class MyProvider(ResourceProvider):
 class MyResource(Resource):
     my_string_output: Output[str]
     my_number_output: Output[str]
+
     def __init__(self, name: str, props: MyResourceInputs, opts: Optional[ResourceOptions] = None):
          super().__init__(MyProvider(), name, { 'my_string_output': None, 'my_number_output': None, **vars(props) }, opts)
 ```
@@ -2858,6 +2905,15 @@ export("label_url", label.url)
 ```csharp
 // Dynamic Providers are currently not supported in .NET.
 ```
+
+#### Additional Examples
+
+* [Enable Azure Storage’s Static Websites Feature](https://github.com/pulumi/examples/tree/master/azure-ts-static-website)
+    * The Azure resource provider does not support enabling the static website feature for a storage account. However, there is a REST API that can be called to enable the feature, so we can easily call the API from within the dynamic provider.
+* [Add a Custom Domain to an Azure CDN endpoint](https://github.com/pulumi/examples/tree/master/azure-ts-dynamicresource)
+    * Similar to the previous example, this is another example of a shortcoming of the regular Azure resource provider available in Pulumi. However, due to the availability of a REST API, we can easily add a custom domain to an Azure CDN resource using a dynamic provider.
+* [Dynamic Providers as Provisioners](https://github.com/pulumi/examples/tree/master/aws-ts-ec2-provisioners)
+    * Provisioning a VM after it is created is a common problem. Developers have the option to run user-supplied scripts while creating the VM itself. For example, the AWS EC2 resource has a userData parameter, that allows you to specify an inline script, which EC2 will run at instance startup. However, this example of dynamic providers as provisioners allows you to copy/execute scripts on the target instance without replacing the instance itself.
 
 ### Runtime Functions
 
