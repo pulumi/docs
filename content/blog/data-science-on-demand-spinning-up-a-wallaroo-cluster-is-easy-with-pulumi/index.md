@@ -10,14 +10,14 @@ tags: ["Infrastructure","Customer"]
 
 *This guest post is from Simon Zelazny of
 [Wallaroo Labs](https://www.wallaroolabs.com/), and previously appeared on the
-[Wallaroo Labs blog](https://blog.wallaroolabs.com/2018/10/spinning-up-a-wallaroo-cluster-is-easy/).
+[Wallaroo Labs blog](https://blog.wallaroolabs.com/).
 Find out how Wallaroo powered their cluster provisioning with Pulumi,
 for data science on demand.*
 
 ## Oh no, more data!
 
 Last month, we took a
-[long-running pandas classifier](https://blog.wallaroolabs.com/2018/09/make-python-pandas-go-fast/)
+[long-running pandas classifier](https://github.com/WallarooLabs/wallaroo_blog_examples/tree/master/provisioned-classifier/classifier)
 and made it run faster by leveraging Wallaroo's parallelization
 capabilities. This time around, we'd like to kick it up a notch and see
 if we can keep scaling out to meet higher demand. We'd also like to be
