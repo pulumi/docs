@@ -26,7 +26,7 @@ $(function(){
          * @param {string} comments The value of the text area in the comment section. Defaults to an empty string
          * @param {string} email The value of the email input in the comment section. Defaults to an empty string
          */
-        function sendFeedbackToSegement(answer, comments, email) {
+        function sendFeedbackToSegment(answer, comments, email) {
             var trackingObj = {
                 answer: answer,
                 comments: comments || "",
@@ -52,7 +52,11 @@ $(function(){
                 var email = $("#feedbackEmail").val().trim();
 
                 // Send to Segment.
-                sendFeedbackToSegement(answer, comments, email);
+                sendFeedbackToSegment(answer, comments, email);
+
+                // Clear the form
+                $("#feedbackAdditionalComments").val("");
+                $("#feedbackEmail").val("");
 
                 // Show the thank you section.
                 $("#feedbackButtons").addClass("hidden");
@@ -62,7 +66,11 @@ $(function(){
 
             $("#docsCloseFeedbackLongForm").on("click", function() {
                 // Send to Segment.
-                sendFeedbackToSegement(answer, "", "");
+                sendFeedbackToSegment(answer, "", "");
+
+                // Clear the form
+                $("#feedbackAdditionalComments").val("");
+                $("#feedbackEmail").val("");
 
                 // Show the thank you section.
                 $("#feedbackButtons").addClass("hidden");
@@ -74,7 +82,7 @@ $(function(){
                 // When page unloads send the answer if it has not already been sent.
                 var feedbackSent = $("#feedbackLongForm").hasClass("hidden");
                 if (!feedbackSent) {
-                    sendFeedbackToSegement(answer, "", "");
+                    sendFeedbackToSegment(answer, "", "");
                 }
             });
         }
