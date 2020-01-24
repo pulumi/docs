@@ -40,6 +40,11 @@ aliases: ["/docs/reference/clouds/"]
 * [Spotinst]({{< relref "./spotinst" >}})
 * [Vault]({{< relref "./vault" >}})
 
+## Database Providers
+
+* [MySQL]({{< relref "./mysql" >}})
+* [PostgreSQL]({{< relref "./postgresql" >}})
+
 ## Monitoring Providers
 
 * [Datadog]({{< relref "./datadog" >}})
