@@ -46,7 +46,7 @@ import (
   mysql "github.com/pulumi/pulumi-mysql/sdk/go/mysql"
 )
 
-myDb, _ := mysql.NewDatabase(ctx, "my-database", &mysql.TopicArgs{})
+myDb, _ := mysql.NewDatabase(ctx, "my-database", &mysql.DatabaseArgs{})
 ```
 
 ```csharp
@@ -59,7 +59,7 @@ class Program
 {
     static Task Main() =>
         Deployment.Run(() => {
-            mydatabase topic = new Database("my-database", new DatabaseArgs{});
+            mydatabase = new Database("my-database", new DatabaseArgs{});
         });
 }
 ```
