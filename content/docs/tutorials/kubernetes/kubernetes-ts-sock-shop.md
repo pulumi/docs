@@ -1,5 +1,7 @@
 ---
-title: "Sock Shop Pulumi Demo"
+title: "Sock Shop Pulumi Demo | TypeScript"
+h1: "Sock Shop Pulumi Demo"
+linktitle: "Sock Shop Pulumi Demo"
 no_edit_this_page: true
 ---
 

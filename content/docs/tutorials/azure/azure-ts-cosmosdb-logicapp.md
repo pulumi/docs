@@ -1,5 +1,7 @@
 ---
-title: "Azure Cosmos DB, an API Connection, and a Logic App"
+title: "Azure Cosmos DB, an API Connection, and a Logic App | TypeScript"
+h1: "Azure Cosmos DB, an API Connection, and a Logic App"
+linktitle: "Azure Cosmos DB, an API Connection, and a Logic App"
 no_edit_this_page: true
 ---
 

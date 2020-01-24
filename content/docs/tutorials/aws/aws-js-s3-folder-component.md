@@ -1,5 +1,7 @@
 ---
-title: "Static Website Hosted on AWS S3"
+title: "Static Website Hosted on AWS S3 | JavaScript"
+h1: "Static Website Hosted on AWS S3"
+linktitle: "Static Website Hosted on AWS S3"
 no_edit_this_page: true
 ---
 

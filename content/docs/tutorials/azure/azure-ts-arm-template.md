@@ -1,5 +1,7 @@
 ---
-title: "Azure Resource Manager (ARM) Template"
+title: "Azure Resource Manager (ARM) Template | TypeScript"
+h1: "Azure Resource Manager (ARM) Template"
+linktitle: "Azure Resource Manager (ARM) Template"
 no_edit_this_page: true
 ---
 
@@ -23,7 +25,7 @@ as code using Pulumi. Once deployed, it is easy to incrementally refactor resour
 and into code.
 
 [Read more about ARM templates here](
-https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview#template-deployment).
+https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/overview).
 
 ## Prerequisites
 
@@ -52,6 +54,7 @@ npm install
 
     ```bash
     $ pulumi config set azure:environment public
+    $ pulumi config set azure:location westus2
     $ az login
     ```
 
@@ -85,7 +88,7 @@ npm install
     $ pulumi stack rm -y --skip-preview
     ```
 
-# Next Steps
+## Next Steps
 
 For more Azure examples, please [check out the Azure Getting Started Guide](
 https://www.pulumi.com/docs/intro/cloud-providers/azure/).

@@ -1,5 +1,7 @@
 ---
-title: "AWS Resources"
+title: "AWS Resources | TypeScript"
+h1: "AWS Resources"
+linktitle: "AWS Resources"
 no_edit_this_page: true
 ---
 

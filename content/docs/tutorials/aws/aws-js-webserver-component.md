@@ -1,5 +1,7 @@
 ---
-title: "AWS Web Server Component"
+title: "AWS Web Server Component | JavaScript"
+h1: "AWS Web Server Component"
+linktitle: "AWS Web Server Component"
 no_edit_this_page: true
 ---
 

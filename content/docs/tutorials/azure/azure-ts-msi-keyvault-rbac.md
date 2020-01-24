@@ -1,5 +1,7 @@
 ---
-title: "Managing Secrets and Secure Access in Azure Applications"
+title: "Managing Secrets and Secure Access in Azure Applications | TypeScript"
+h1: "Managing Secrets and Secure Access in Azure Applications"
+linktitle: "Managing Secrets and Secure Access in Azure Applications"
 no_edit_this_page: true
 ---
 

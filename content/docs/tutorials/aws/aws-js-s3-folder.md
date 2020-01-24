@@ -1,5 +1,7 @@
 ---
-title: "Host a Static Website on Amazon S3"
+title: "Host a Static Website on Amazon S3 | JavaScript"
+h1: "Host a Static Website on Amazon S3"
+linktitle: "Host a Static Website on Amazon S3"
 no_edit_this_page: true
 ---
 

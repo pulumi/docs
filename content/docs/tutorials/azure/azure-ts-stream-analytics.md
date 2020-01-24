@@ -1,5 +1,7 @@
 ---
-title: "Azure Stream Analytics"
+title: "Azure Stream Analytics | TypeScript"
+h1: "Azure Stream Analytics"
+linktitle: "Azure Stream Analytics"
 no_edit_this_page: true
 ---
 

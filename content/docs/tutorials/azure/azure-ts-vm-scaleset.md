@@ -1,5 +1,7 @@
 ---
-title: "Azure VM Scale Sets"
+title: "Azure VM Scale Sets | TypeScript"
+h1: "Azure VM Scale Sets"
+linktitle: "Azure VM Scale Sets"
 no_edit_this_page: true
 ---
 

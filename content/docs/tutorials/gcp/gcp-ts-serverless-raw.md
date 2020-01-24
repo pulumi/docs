@@ -1,5 +1,7 @@
 ---
-title: "Google Cloud Functions in Python and Go Deployed with TypeScript"
+title: "Google Cloud Functions in Python and Go Deployed with TypeScript | TypeScript"
+h1: "Google Cloud Functions in Python and Go Deployed with TypeScript"
+linktitle: "Google Cloud Functions in Python and Go Deployed with TypeScript"
 no_edit_this_page: true
 ---
 

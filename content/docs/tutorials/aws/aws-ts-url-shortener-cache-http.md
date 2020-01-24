@@ -1,5 +1,7 @@
 ---
-title: "Serverless URL Shortener with Redis Cache and HttpServer"
+title: "Serverless URL Shortener with Redis Cache and HttpServer | TypeScript"
+h1: "Serverless URL Shortener with Redis Cache and HttpServer"
+linktitle: "Serverless URL Shortener with Redis Cache and HttpServer"
 no_edit_this_page: true
 ---
 

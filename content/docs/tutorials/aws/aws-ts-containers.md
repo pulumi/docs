@@ -1,5 +1,7 @@
 ---
-title: "Easy container example"
+title: "Easy container example | TypeScript"
+h1: "Easy container example"
+linktitle: "Easy container example"
 no_edit_this_page: true
 ---
 

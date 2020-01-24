@@ -1,5 +1,7 @@
 ---
-title: "Continuous Integration with Jenkins"
+title: "Continuous Integration with Jenkins | TypeScript"
+h1: "Continuous Integration with Jenkins"
+linktitle: "Continuous Integration with Jenkins"
 no_edit_this_page: true
 ---
 

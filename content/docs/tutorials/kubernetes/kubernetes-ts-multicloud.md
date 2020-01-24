@@ -1,5 +1,7 @@
 ---
-title: "Kubernetes Application Deployed To Multiple Clusters"
+title: "Kubernetes Application Deployed To Multiple Clusters | TypeScript"
+h1: "Kubernetes Application Deployed To Multiple Clusters"
+linktitle: "Kubernetes Application Deployed To Multiple Clusters"
 no_edit_this_page: true
 ---
 

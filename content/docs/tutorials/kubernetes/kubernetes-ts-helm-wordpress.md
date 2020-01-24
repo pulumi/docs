@@ -1,5 +1,7 @@
 ---
-title: "Wordpress Helm Chart"
+title: "Wordpress Helm Chart | TypeScript"
+h1: "Wordpress Helm Chart"
+linktitle: "Wordpress Helm Chart"
 no_edit_this_page: true
 ---
 
@@ -32,17 +34,11 @@ Helm Chart and submit the expanded YAML to the cluster.
 
 ## Running the App
 
-Use the [Helm installation guide](https://docs.helm.sh/using_helm/#installing-helm) to install the
+Use the [Helm installation guide](https://helm.sh/docs/intro/install/) to install the
 `helm` CLI. On macOS this might look something like:
 
 ```sh
-brew install kubernetes-helm
-```
-
-Once `helm` is installed, initialize it with:
-
-```sh
-helm init --client-only
+brew install helm
 ```
 
 If you haven't already, follow the steps in [Pulumi Installation and

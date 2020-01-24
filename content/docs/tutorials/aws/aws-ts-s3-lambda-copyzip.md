@@ -1,5 +1,7 @@
 ---
-title: "Serverless App to Copy and Zip Objects Between Amazon S3 Buckets"
+title: "Serverless App to Copy and Zip Objects Between Amazon S3 Buckets | TypeScript"
+h1: "Serverless App to Copy and Zip Objects Between Amazon S3 Buckets"
+linktitle: "Serverless App to Copy and Zip Objects Between Amazon S3 Buckets"
 no_edit_this_page: true
 ---
 
