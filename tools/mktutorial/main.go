@@ -167,16 +167,20 @@ func gatherTutorials(root string) ([]tutorial, error) {
 			continue
 		}
 
+		// Assign the parts of the tutorial name to variables.
+		cloud := parts[0]
+		language := parts[1]
+
 		// Add the language to the page title to avoid duplicate titles.
 		var title string
 		langMap := map[string]string{
-			"js": "Javascript",
+			"js": "JavaScript",
 			"ts": "TypeScript",
 			"go": "Go",
 			"py": "Python",
 			"cs": "C#",
 		}
-		if val, ok := langMap[parts[1]]; ok {
+		if val, ok := langMap[language]; ok {
 			title = fmt.Sprintf("%s | %s", h1, val)
 		}
 
@@ -188,10 +192,10 @@ func gatherTutorials(root string) ([]tutorial, error) {
 			// LinkTitle is the display text for the breadcrumb control.
 			LinkTitle:         h1,
 			MetaDesc:          "",
-			Cloud:             parts[0],
-			Language:          parts[1],
+			Cloud:             cloud,
+			Language:          language,
 			Body:              cleanMarkdownBody(name, string(body)),
-			URL:               fmt.Sprintf("/docs/tutorials/%s/%s/", parts[0], name),
+			URL:               fmt.Sprintf("/docs/tutorials/%s/%s/", cloud, name),
 			GitHubURL:         githubURL,
 			PulumiTemplateURL: pulumiTemplateURL,
 		})
