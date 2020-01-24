@@ -19,7 +19,7 @@ In this section, we will see the most basic concepts required to start declaring
 
 Pulumi programs are written in general-purpose programming languages, including [JavaScript]({{< relref "/docs/intro/languages/javascript" >}}), [TypeScript]({{< relref "/docs/intro/languages/javascript" >}}), [Python]({{< relref "/docs/intro/languages/python" >}}), [Go]({{< relref "/docs/intro/languages/go" >}}) or [any .NET language]({{< relref "/docs/intro/languages/dotnet" >}}) such as C#, F#, or VB. You use the language's native tools and libraries, including [Pulumi's own packages]({{< relref "/docs/reference/pkg" >}}) containing infrastructure resource types.
 
-Although you use general-purpose languages, Pulumi is still a declarative infrasturcture as code tool. After writing a program, you run the Pulumi CLI command `pulumi up`, which executes the program and determines the desired infrastructure state for all resources declared. The CLI will show you a preview of changes to be made, including all new resources to be created and existing resources to update or destroy. After confirming, Pulumi will carry out the changes.
+Although you use general-purpose languages, Pulumi is still a declarative infrastructure as code tool. After writing a program, you run the Pulumi CLI command `pulumi up`, which executes the program and determines the desired infrastructure state for all resources declared. The CLI will show you a preview of changes to be made, including all new resources to be created and existing resources to update or destroy. After confirming, Pulumi will carry out the changes.
 
 ### Program Structure
 
@@ -27,7 +27,7 @@ Pulumi programs are structured as projects and stacks. The distinction between t
 
 * [Program](#programs): a collection of files written in your chosen programming language
 * [Project]({{< relref "project" >}}): a directory containing a program, with metadata, so Pulumi knows how to run it
-* [Stack]({{< relref "stack" >}}): an instance of your project, each often corresponding to different cloud environment
+* [Stack]({{< relref "stack" >}}): an instance of your project, each often corresponding to a different cloud environment
 
 Infrastructure and application artifacts can be managed together or separately. For instance, Pulumi can build and publish Docker container images containing application code when you do a `pulumi up`, alongside the private registry and container service infrastructure that consumes it. Equally as well, however, your infrastructure can reference independently deployed artifacts.
 
@@ -93,7 +93,7 @@ import (
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
+    pulumi.Run(func(ctx *pulumi.Context) error {
         group, err := ec2.NewSecurityGroup(ctx, "web-sg", &ec2.SecurityGroupArgs{
             Description: "Enable HTTP access",
             Ingress: []map[string]interface{}{
