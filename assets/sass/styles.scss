@@ -152,6 +152,11 @@ main {
     }
 }
 
+.popup-overlay {
+    @apply flex w-full h-full fixed inset-0 z-50;
+    background-color: rgba(44, 44, 44, 0.6);
+}
+
 .transition-all {
     @include transition(all);
 
