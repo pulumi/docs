@@ -245,11 +245,21 @@ console.log("Syncing contents from local disk at", webContentsRootPath);
 
 // Certain files, like JavaScript and CSS files produced during the build, must exist
 // before the website's HTML files can use them (otherwise, pages won't render properly,
-// or may be unusable). Extensions listed here identify file types that must exist
-// on S3 before any HTML pages are uploaded to reference them.
+// or may be unusable), and others, like fonts and images, would be nice to have there in
+// advance, too. Extensions listed here are used for identifying files that should exist
+// on S3 before any HTML pages are updated to reference them.
 const assetTypes = [
     "js",
     "css",
+    "png",
+    "jpg",
+    "gif",
+    "svg",
+    "pdf",
+    "eot",
+    "ttf",
+    "woff",
+    "woff2",
 ];
 
 // Keep track of the asset paths we encounter and the resources we create from them, so we
