@@ -443,7 +443,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, gitSha string, ro
 		Link string
 	}
 	for modname, module := range mod.Modules {
-		if len(module.Exports) == 0 && len(module.Modules) == 0 {
+		if module.IsEmpty() {
 			continue
 		}
 
@@ -537,7 +537,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, gitSha string, ro
 
 	// Next up: generate all submodules underneath this one.
 	for sub, module := range mod.Modules {
-		if len(module.Exports) == 0 && len(module.Modules) == 0 {
+		if module.IsEmpty() {
 			continue
 		}
 		if err = e.emitMarkdownModule(sub, module, gitSha, false); err != nil {
@@ -830,6 +830,19 @@ func newModule(name string) *module {
 		Exports: make(map[string]*typeDocNode),
 		Modules: make(map[string]*module),
 	}
+}
+
+// IsEmpty determines if the module is empty, recursively.
+func (m *module) IsEmpty() bool {
+	if len(m.Exports) > 0 {
+		return false
+	}
+	for _, module := range m.Modules {
+		if !module.IsEmpty() {
+			return false
+		}
+	}
+	return true
 }
 
 // Merge another module into this one, in place, by mutating it.
