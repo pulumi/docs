@@ -1,11 +1,13 @@
 // Copyright 2016-2019, Pulumi Corporation.  All rights reserved.
 
 import * as aws from "@pulumi/aws";
+import * as awsx from "@pulumi/awsx"
 import * as pulumi from "@pulumi/pulumi";
 
 import * as fs from "fs";
-import * as mime from "mime";
 import * as path from "path";
+import * as tar from "tar";
+import * as tmp from "tmp";
 
 const stackConfig = new pulumi.Config();
 
@@ -41,26 +43,111 @@ const contentBucket = new aws.s3.Bucket(
     },
     {
         protect: false,
-    });
+    },
+);
 
-// contentBucket needs to have the "public-read" ACL so its contents can be ready by CloudFront and
-// served. But we deny the s3:ListBucket permission to prevent unintended disclosure of the bucket's
-// contents.
-const denyListPolicyState: aws.s3.BucketPolicyArgs = {
-    bucket: contentBucket.bucket,
-    policy: contentBucket.arn.apply((arn: string) => JSON.stringify({
-        Version: "2008-10-17",
-        Statement: [
+const cluster = awsx.ecs.Cluster.getDefault();
+const archiveBucket = new aws.s3.Bucket("archive-bucket", { forceDestroy: true });
+const archiveHandler = new awsx.ecs.FargateTaskDefinition("archiveHandler", {
+    container: {
+        image: awsx.ecs.Image.fromPath("archiveHandlerImage", "./"),
+        memory: 4096,
+        cpu: 4,
+    },
+});
+
+archiveBucket.onObjectCreated("onArchiveUploaded", new aws.lambda.CallbackFunction<aws.s3.BucketEvent, void>("onUploadHandler", {
+    runtime: "nodejs10.x",
+    policies: [
+        aws.iam.ManagedPolicies.AWSLambdaFullAccess,
+        aws.iam.ManagedPolicies.AmazonEC2ContainerServiceFullAccess,
+    ],
+    callback: async bucketArgs => {
+        if (!bucketArgs.Records) {
+            return;
+        }
+
+        for (const record of bucketArgs.Records) {
+            console.log(`A file was uploaded to ${archiveBucket.id.get()} file: ${record.s3.object.key}`);
+            const source = `s3://${archiveBucket.id.get()}/${record.s3.object.key}`;
+            const dest = `s3://${contentBucket.id.get()}`;
+
+            await archiveHandler.run({
+                cluster,
+                overrides: {
+                    containerOverrides: [
+                        {
+                            name: "container",
+                            command: [
+                                source,
+                                dest,
+                            ],
+                        },
+                    ],
+                },
+            });
+        }
+    },
+}));
+
+// Upload the website archive.
+if (!pulumi.runtime.isDryRun()) {
+
+    pulumi.all([ archiveBucket.id, contentBucket.id ]).apply(async ([ archiveBucketId, contentBucketId ]) => {
+        const s3 = new aws.sdk.S3();
+
+        // Download the last few JS and CSS bundles, filtering for the ones we care about.
+        // TODO: Age these out, like only keep them around for a month, or something.
+        const cssResult = await s3.listObjectsV2({
+            Bucket: contentBucketId,
+            Prefix: "css/",
+        }).promise();
+
+        const jsResult = await s3.listObjectsV2({
+            Bucket: contentBucketId,
+            Prefix: "js/",
+        }).promise();
+
+        const cssBundles = (cssResult.Contents?.filter(f => f.Key?.match(/styles\..+\.css/)) || []).map(o => o.Key);
+        const jsBundles = (jsResult.Contents?.filter(f => f.Key?.match(/bundle\.min\..+\.js/)) || []).map(o => o.Key);
+
+        // Add them to the build.
+        [ ...cssBundles, ...jsBundles ].forEach(async (key) => {
+            if (key) {
+                const bundlesResult = await s3.getObject({
+                    Bucket: contentBucketId,
+                    Key: key,
+                }).promise();
+
+                fs.writeFileSync(`${webContentsRootPath}/${key}`, bundlesResult.Body);
+                console.log(`Wrote ${`${webContentsRootPath}/${key}`}`);
+            }
+        });
+
+        // Tar everything up.
+        const archivePath = tmp.fileSync({ postfix: ".tgz" }).name;
+        tar.c(
             {
-                Effect: "Deny",
-                Principal: "*",
-                Action: "s3:ListBucket",
-                Resource: arn,
+                gzip: true,
+                sync: true,
+                file: archivePath,
+                C: config.pathToWebsiteContents,
+                portable: true,
             },
-        ],
-    })),
-};
-const denyListPolicy = new aws.s3.BucketPolicy("deny-list", denyListPolicyState);
+            fs.readdirSync(config.pathToWebsiteContents),
+        );
+
+        // Upload the tarball.
+        const result = s3.putObject({
+            Bucket: archiveBucketId,
+            Key: path.basename(archivePath),
+            Body: fs.readFileSync(archivePath),
+        })
+        .promise();
+
+        console.log(`Website archive ${archivePath} was uploaded.`);
+    });
+}
 
 // logsBucket stores the request logs for incoming requests.
 const logsBucket = new aws.s3.Bucket(
@@ -71,7 +158,8 @@ const logsBucket = new aws.s3.Bucket(
     },
     {
         protect: true,
-    });
+    },
+);
 
 const fiveMinutes = 60 * 5;
 const oneHour = fiveMinutes * 12;
@@ -80,9 +168,7 @@ const oneWeek = oneHour * 24 * 7;
 const baseCacheBehavior = {
     targetOriginId: contentBucket.arn,
     compress: true,
-
     viewerProtocolPolicy: "redirect-to-https",
-
     allowedMethods: ["GET", "HEAD", "OPTIONS"],
     cachedMethods: ["GET", "HEAD", "OPTIONS"],
 
@@ -224,122 +310,11 @@ const cdn = new aws.cloudfront.Distribution(
     {
         protect: true,
         dependsOn: [ contentBucket, logsBucket ],
-    });
-
-// crawlDirectory recursive crawls the provided directory, applying the provided function
-// to every file it contains. Doesn't handle cycles from symlinks.
-function crawlDirectory(dir: string, f: (_: string) => void) {
-    const files = fs.readdirSync(dir);
-    for (const file of files) {
-        const filePath = `${dir}/${file}`;
-        const stat = fs.statSync(filePath);
-        if (stat.isDirectory()) {
-            crawlDirectory(filePath, f);
-        }
-        if (stat.isFile()) {
-            f(filePath);
-        }
-    }
-}
-
-// Some files do not get the correct mime/type inferred from the mime package, and we
-// need to set our own.
-function getMimeType(filePath: string): string | undefined {
-    // Ensure that latest-version's mime type is always text/plain. Otherwise it
-    // will end up being set to binary/octet-stream, which is not what we want.
-    if (path.basename(filePath) === "latest-version") {
-        return "text/plain";
-    }
-
-    return mime.getType(filePath) || undefined;
-}
+    },
+);
 
 // Sync the contents of the source directory with the S3 bucket, which will in-turn show up on the CDN.
 const webContentsRootPath = path.join(process.cwd(), config.pathToWebsiteContents);
-console.log("Syncing contents from local disk at", webContentsRootPath);
-crawlDirectory(
-    webContentsRootPath,
-    (filePath: string) => {
-        const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
-
-        const baseArgs = {
-            acl: "public-read",
-            key: relativeFilePath,
-            bucket: contentBucket,
-        };
-
-        // Create a new S3 object for most files, but HTML files that contain a redirect
-        // just create a stubbed out S3 object with the right metadata so they return a
-        // 301 redirect (instead of serving the HTML with a meta-redirect). This ensures
-        // the right HTTP code response is returned for search engines, as well as
-        // enables better support for URL anchors.
-        const redirect = getMetaRefreshRedirect(filePath);
-        if (!redirect) {
-            const contentFile = new aws.s3.BucketObject(
-                relativeFilePath,
-                {
-                    ...baseArgs,
-                    source: new pulumi.asset.FileAsset(filePath),
-                    contentType: getMimeType(filePath) || undefined,
-                },
-                {
-                    parent: contentBucket,
-                });
-        } else {
-            const s3Redirect = new aws.s3.BucketObject(
-                relativeFilePath,
-                {
-                    ...baseArgs,
-                    source: new pulumi.asset.FileAsset("/dev/null"), // Empty file.
-                    websiteRedirect: translateRedirect(filePath, redirect),
-                },
-                {
-                    parent: contentBucket,
-                });
-        }
-    });
-
-// Returns the redirect URL if filePath is an HTML file that contains a meta refresh tag, otherwise undefined.
-function getMetaRefreshRedirect(filePath: string): string | undefined {
-    // Only .html files contain meta refresh redirects.
-    if (path.extname(filePath) !== ".html") {
-        return undefined;
-    }
-
-    // Extract the redirect from the content of the file.
-    const text = fs.readFileSync(filePath, "utf8");
-    const regex = /<meta\s+?http-equiv="refresh"\s+?content="0;\s+?url=(.*?)"/gmi;
-    const match = regex.exec(text);
-
-    if (match && match.length === 2) {
-        const redirect = match[1];
-        if (!redirect || redirect.length === 0) {
-            throw new Error(`Meta refresh tag found in "${filePath}" but the redirect URL was empty.`);
-        }
-        return redirect;
-    }
-
-    return match && match.length === 2 ? match[1] : undefined;
-}
-
-// translateRedirect fixes up the redirect, if needed.
-// If the redirect is already prefixed with "https://" or "http://", it is returned unmodified.
-// If the redirect starts with "/", it is translated to an `https://${redirectDomain}${redirect}`.
-// Otherwise, an Error is thrown.
-function translateRedirect(filePath: string, redirect: string): string {
-    // If the redirect already has the https or http protocol specified, return it.
-    if (redirect.startsWith("https://") || redirect.startsWith("http://")) {
-        return redirect;
-    }
-
-    // If the redirect starts with "/", prefix with the redirect domain and return it.
-    if (redirect.startsWith("/")) {
-        return `https://${redirectDomain}${redirect}`;
-    }
-
-    // Otherwise, it's not in a format that we expect so throw an error.
-    throw new Error(`The redirect "${redirect}" in "${filePath}" is not in an expected format.`);
-}
 
 // Split a domain name into its subdomain and parent domain names.
 // e.g. "www.example.com" => "www", "example.com".
@@ -384,9 +359,12 @@ async function createAliasRecord(
             ],
         });
 }
-const aRecord = createAliasRecord(config.targetDomain, cdn);
 
+// const aRecord = createAliasRecord(config.targetDomain, cdn);
+
+export const contentBucketName = contentBucket.bucket;
 export const contentBucketUri = contentBucket.bucket.apply(b => `s3://${b}`);
+export const archiveBucketUri = archiveBucket.bucket.apply(b => `s3://${b}`);
 export const contentBucketWebsiteDomain = contentBucket.websiteDomain;
 export const contentBucketWebsiteEndpoint = contentBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
