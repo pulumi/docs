@@ -28,6 +28,7 @@ TOOLS_REPOS=(
     "pulumi-kubernetes"
     "pulumi-kubernetesx"
     "pulumi-linode"
+    "pulumi-mailgun"
     "pulumi-mysql"
     "pulumi-newrelic"
     "pulumi-okta"
