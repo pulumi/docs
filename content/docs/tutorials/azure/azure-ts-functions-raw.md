@@ -1,5 +1,7 @@
 ---
-title: "Azure Functions in All Supported Languages"
+title: "Azure Functions in All Supported Languages | TypeScript"
+h1: "Azure Functions in All Supported Languages"
+linktitle: "Azure Functions in All Supported Languages"
 no_edit_this_page: true
 ---
 
@@ -25,8 +27,6 @@ Azure Functions created from raw deployment packages in all supported languages.
 - [Apache Maven](https://maven.apache.org/) for the Java Function App
 
 Please remove the corresponding resources from the program in case you don't need those runtimes.
-
-Known issue: [#2784](https://github.com/pulumi/pulumi/issues/2784)&mdash;Python deployment package gets corrupted if deployed from Windows. Workaround: deploy from WSL (Windows Subsystem for Linux), Mac OS, or Linux.
 
 ## Running the App
 

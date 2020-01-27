@@ -1,5 +1,7 @@
 ---
-title: "Google Kubernetes Engine (GKE) with a Canary Deployment"
+title: "Google Kubernetes Engine (GKE) with a Canary Deployment | Python"
+h1: "Google Kubernetes Engine (GKE) with a Canary Deployment"
+linktitle: "Google Kubernetes Engine (GKE) with a Canary Deployment"
 no_edit_this_page: true
 ---
 
@@ -22,7 +24,7 @@ infrastructure-as-code, and then deploys a Kubernetes Deployment into it, to tes
 demonstrates that you can manage both the Kubernetes objects themselves, in addition to underlying cloud infrastructure,
 using a single configuration language (in this case, Python), tool, and workflow.
 
-# Prerequisites
+## Prerequisites
 
 Ensure you have [Python 3](https://www.python.org/downloads/) and [the Pulumi CLI](https://www.pulumi.com/docs/get-started/install/).
 
@@ -33,7 +35,7 @@ We will be deploying to Google Cloud Platform (GCP), so you will need an account
 This example assumes that you have GCP's `gcloud` CLI on your path. This is installed as part of the
 [GCP SDK](https://cloud.google.com/sdk/).
 
-# Running the Example
+## Running the Example
 
 After cloning this repo, `cd` into it and run these commands. A GKE Kubernetes cluster will appear!
 

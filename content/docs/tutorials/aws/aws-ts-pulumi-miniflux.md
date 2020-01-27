@@ -1,5 +1,7 @@
 ---
-title: "Run an RSS Service with Miniflux"
+title: "Run an RSS Service with Miniflux | TypeScript"
+h1: "Run an RSS Service with Miniflux"
+linktitle: "Run an RSS Service with Miniflux"
 no_edit_this_page: true
 ---
 

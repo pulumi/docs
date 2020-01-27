@@ -1,5 +1,7 @@
 ---
-title: "Amazon EKS Cluster: Hello World!"
+title: "Amazon EKS Cluster: Hello World! | TypeScript"
+h1: "Amazon EKS Cluster: Hello World!"
+linktitle: "Amazon EKS Cluster: Hello World!"
 no_edit_this_page: true
 ---
 
@@ -301,7 +303,7 @@ After cloning this repo, from this working directory, run these commands:
     // Create resources for the Kubernetes Guestbook from its YAML manifests
     const guestbook = new k8s.yaml.ConfigFile("guestbook",
         {
-            file: "https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/master/examples/yaml-guestbook/yaml/guestbook.yaml",
+            file: "https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/master/tests/examples/yaml-guestbook/yaml/guestbook.yaml",
             transformations: [
                 (obj: any) => {
                     // Do transformations on the YAML to use the same namespace and

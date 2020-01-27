@@ -1,5 +1,7 @@
 ---
-title: "Video Thumbnailer Using AWS Fargate"
+title: "Video Thumbnailer Using AWS Fargate | TypeScript"
+h1: "Video Thumbnailer Using AWS Fargate"
+linktitle: "Video Thumbnailer Using AWS Fargate"
 no_edit_this_page: true
 ---
 

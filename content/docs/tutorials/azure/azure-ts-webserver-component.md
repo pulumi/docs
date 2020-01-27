@@ -1,5 +1,7 @@
 ---
-title: "Web Server Component Using Azure Virtual Machine"
+title: "Web Server Component Using Azure Virtual Machine | TypeScript"
+h1: "Web Server Component Using Azure Virtual Machine"
+linktitle: "Web Server Component Using Azure Virtual Machine"
 no_edit_this_page: true
 ---
 

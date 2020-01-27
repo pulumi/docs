@@ -1,5 +1,7 @@
 ---
-title: "AWS Step Functions"
+title: "AWS Step Functions | TypeScript"
+h1: "AWS Step Functions"
+linktitle: "AWS Step Functions"
 no_edit_this_page: true
 ---
 

@@ -1,5 +1,7 @@
 ---
-title: "GraphQL Endpoint in AWS AppSync"
+title: "GraphQL Endpoint in AWS AppSync | TypeScript"
+h1: "GraphQL Endpoint in AWS AppSync"
+linktitle: "GraphQL Endpoint in AWS AppSync"
 no_edit_this_page: true
 ---
 
