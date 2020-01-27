@@ -20,14 +20,11 @@ git_sha: "567a5152969a5d33022b0c3aaa1b4be63c7f21a3"
 
 <h3>APIs</h3>
 <ul class="api">
-    <li><a href="#_setQueryMode"><span class="symbol api"></span>_setQueryMode</a></li>
     <li><a href="#allConfig"><span class="symbol api"></span>allConfig</a></li>
-    <li><a href="#debuggablePromise"><span class="symbol api"></span>debuggablePromise</a></li>
     <li><a href="#deserializeProperties"><span class="symbol api"></span>deserializeProperties</a></li>
     <li><a href="#deserializeProperty"><span class="symbol api"></span>deserializeProperty</a></li>
     <li><a href="#disconnect"><span class="symbol api"></span>disconnect</a></li>
     <li><a href="#disconnectSync"><span class="symbol api"></span>disconnectSync</a></li>
-    <li><a href="#errorString"><span class="symbol api"></span>errorString</a></li>
     <li><a href="#excessiveDebugOutput"><span class="symbol api"></span>excessiveDebugOutput</a></li>
     <li><a href="#getConfig"><span class="symbol api"></span>getConfig</a></li>
     <li><a href="#getEngine"><span class="symbol api"></span>getEngine</a></li>
@@ -47,7 +44,6 @@ git_sha: "567a5152969a5d33022b0c3aaa1b4be63c7f21a3"
     <li><a href="#monitorSupportsSecrets"><span class="symbol api"></span>monitorSupportsSecrets</a></li>
     <li><a href="#Options"><span class="symbol api"></span>Options</a></li>
     <li><a href="#OutputResolvers"><span class="symbol api"></span>OutputResolvers</a></li>
-    <li><a href="#PushableAsyncIterable"><span class="symbol api"></span>PushableAsyncIterable</a></li>
     <li><a href="#readResource"><span class="symbol api"></span>readResource</a></li>
     <li><a href="#registerResource"><span class="symbol api"></span>registerResource</a></li>
     <li><a href="#registerResourceOutputs"><span class="symbol api"></span>registerResourceOutputs</a></li>
@@ -76,15 +72,6 @@ git_sha: "567a5152969a5d33022b0c3aaa1b4be63c7f21a3"
 
 
 <h2 id="apis">APIs</h2>
-<h3 class="pdoc-module-header" id="_setQueryMode" data-link-title="_setQueryMode">
-    <a href="https://github.com/pulumi/pulumi/blob/{{< param git_sha >}}/sdk/nodejs/runtime/settings.ts#L94">
-        function <strong>_setQueryMode</strong>
-    </a>
-</h3>
-
-
-<pre class="highlight"><code><span class='kd'></span>_setQueryMode(val: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
-
 <h3 class="pdoc-module-header" id="allConfig" data-link-title="allConfig">
     <a href="https://github.com/pulumi/pulumi/blob/{{< param git_sha >}}/sdk/nodejs/runtime/config.ts#L25">
         function <strong>allConfig</strong>
@@ -96,18 +83,6 @@ git_sha: "567a5152969a5d33022b0c3aaa1b4be63c7f21a3"
 
 
 allConfig returns a copy of the full config map.
-
-<h3 class="pdoc-module-header" id="debuggablePromise" data-link-title="debuggablePromise">
-    <a href="https://github.com/pulumi/pulumi/blob/{{< param git_sha >}}/sdk/nodejs/runtime/debuggable.ts#L40">
-        function <strong>debuggablePromise</strong>
-    </a>
-</h3>
-
-
-<pre class="highlight"><code><span class='kd'></span>debuggablePromise&lt;T&gt;(p: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt;, ctx: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt;</code></pre>
-
-
-debuggablePromise optionally wraps a promise with some goo to make it easier to debug common problems.
 
 <h3 class="pdoc-module-header" id="deserializeProperties" data-link-title="deserializeProperties">
     <a href="https://github.com/pulumi/pulumi/blob/{{< param git_sha >}}/sdk/nodejs/runtime/rpc.ts#L125">
@@ -158,18 +133,6 @@ queue to drain.  If any RPCs come in afterwards, however, they will crash the pr
 
 disconnectSync permanently disconnects from the server, closing the connections. Unlike `disconnect`. it does not
 wait for the existing RPC queue to drain. Any RPCs that come in after this call will crash the process.
-
-<h3 class="pdoc-module-header" id="errorString" data-link-title="errorString">
-    <a href="https://github.com/pulumi/pulumi/blob/{{< param git_sha >}}/sdk/nodejs/runtime/debuggable.ts#L102">
-        function <strong>errorString</strong>
-    </a>
-</h3>
-
-
-<pre class="highlight"><code><span class='kd'></span>errorString(err: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
-
-
-errorString produces a string from an error, conditionally including additional diagnostics.
 
 <h3 class="pdoc-module-header" id="excessiveDebugOutput" data-link-title="excessiveDebugOutput">
     <a href="https://github.com/pulumi/pulumi/blob/{{< param git_sha >}}/sdk/nodejs/runtime/settings.ts#L31">
@@ -475,39 +438,6 @@ Directory containing the send/receive files for making synchronous invokes to th
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> OutputResolvers = Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, (value: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, isStable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, isSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PushableAsyncIterable" data-link-title="PushableAsyncIterable">
-    <a href="https://github.com/pulumi/pulumi/blob/{{< param git_sha >}}/sdk/nodejs/runtime/asyncIterableUtil.ts#L36">
-        class <strong>PushableAsyncIterable</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code> <span class='kr'>implements</span> AsyncIterable&lt;T | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
-<h4 class="pdoc-member-header" id="PushableAsyncIterable-__@asyncIterator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/{{< param git_sha >}}/sdk/nodejs/runtime/asyncIterableUtil.ts#L71">method <b>__@asyncIterator</b></a>
-</h4>
-
-
-<pre class="highlight"><code><span class='kd'></span>__@asyncIterator(): {
-    <span class='kd'></span>next(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    done: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    value: T | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;
-}&gt;;
-}</code></pre>
-
-<h4 class="pdoc-member-header" id="PushableAsyncIterable-complete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/{{< param git_sha >}}/sdk/nodejs/runtime/asyncIterableUtil.ts#L50">method <b>complete</b></a>
-</h4>
-
-
-<pre class="highlight"><code><span class='kd'></span>complete(): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
-
-<h4 class="pdoc-member-header" id="PushableAsyncIterable-push">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/{{< param git_sha >}}/sdk/nodejs/runtime/asyncIterableUtil.ts#L41">method <b>push</b></a>
-</h4>
-
-
-<pre class="highlight"><code><span class='kd'></span>push(payload: T): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
-
 <h3 class="pdoc-module-header" id="readResource" data-link-title="readResource">
     <a href="https://github.com/pulumi/pulumi/blob/{{< param git_sha >}}/sdk/nodejs/runtime/resource.ts#L92">
         function <strong>readResource</strong>

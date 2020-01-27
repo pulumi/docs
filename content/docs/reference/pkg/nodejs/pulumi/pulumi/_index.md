@@ -75,12 +75,10 @@ import * as pulumi from "@pulumi/pulumi";
 <h3>Modules</h3>
 <ul class="api">
     <li><a href="asset/"><span class="symbol module"></span>asset</a></li>
-    <li><a href="cmd/"><span class="symbol module"></span>cmd</a></li>
     <li><a href="dynamic/"><span class="symbol module"></span>dynamic</a></li>
     <li><a href="iterable/"><span class="symbol module"></span>iterable</a></li>
     <li><a href="log/"><span class="symbol module"></span>log</a></li>
     <li><a href="runtime/"><span class="symbol module"></span>runtime</a></li>
-    <li><a href="tests/"><span class="symbol module"></span>tests</a></li>
 </ul>
 
 
