@@ -5,10 +5,10 @@ import * as awsx from "@pulumi/awsx"
 import * as pulumi from "@pulumi/pulumi";
 
 import * as fs from "fs";
+import * as glob from "glob";
 import * as path from "path";
 import * as tar from "tar";
 import * as tmp from "tmp";
-import * as glob from "glob";
 
 const stackConfig = new pulumi.Config();
 
@@ -52,9 +52,6 @@ const archiveBucket = new aws.s3.Bucket("archive-bucket", { forceDestroy: true }
 const archiveHandler = new awsx.ecs.FargateTaskDefinition("archiveHandler", {
     container: {
         image: awsx.ecs.Image.fromPath("archiveHandlerImage", "./"),
-        // image: awsx.ecs.Image.fromFunction(() => {
-        //     console.log("Boy it'd be neat if we could just do this.");
-        // }),
         memory: 4096,
         cpu: 4,
     },
@@ -312,7 +309,6 @@ glob.sync(`${webContentsRootPath}/**/*.html`).map(filePath => {
     const redirect = getMetaRefreshRedirect(filePath);
 
     if (redirect) {
-        console.log(">> redir: ", relativeFilePath);
         redirectPaths.add(relativeFilePath);
 
         const redirectObject = new aws.s3.BucketObject(
@@ -331,22 +327,21 @@ glob.sync(`${webContentsRootPath}/**/*.html`).map(filePath => {
     }
 });
 
-// If the current run is an update, zip up the contents of the website and upload the
-// archive to S3.
+// If the current run is an update (i.e., not a preview), zip up the contents of the
+// website directory and upload the archive to S3.
 if (!pulumi.runtime.isDryRun()) {
 
     pulumi.all([ archiveBucket.id, contentBucket.id ]).apply(async ([ archiveBucketId, contentBucketId ]) => {
         const s3 = new aws.sdk.S3();
 
-        // Tar up the contents of the `public` directory, filtering out those already marked as redirects.
+        // Tar up the files in the `public` directory.
         const archivePath = tmp.fileSync({ postfix: ".tgz" }).name;
         tar.c(
             {
                 gzip: true,
                 sync: true,
-                filter: (filePath, stat) => {
-                    return !redirectPaths.has(filePath);
-                },
+                // Include only files not flagged as redirects.
+                filter: (filePath, stat) => !redirectPaths.has(filePath),
                 file: archivePath,
                 C: config.pathToWebsiteContents,
                 portable: true,
@@ -354,7 +349,7 @@ if (!pulumi.runtime.isDryRun()) {
             fs.readdirSync(config.pathToWebsiteContents),
         );
 
-        // Upload it.
+        // Upload the archive.
         const result = s3.putObject({
             Bucket: archiveBucketId,
             Key: path.basename(archivePath),
@@ -410,7 +405,7 @@ async function createAliasRecord(
         });
 }
 
-// const aRecord = createAliasRecord(config.targetDomain, cdn);
+const aRecord = createAliasRecord(config.targetDomain, cdn);
 
 export const contentBucketName = contentBucket.bucket;
 export const contentBucketUri = contentBucket.bucket.apply(b => `s3://${b}`);
