@@ -1,5 +1,7 @@
 ---
-title: "Azure Functions"
+title: "Azure Functions | TypeScript"
+h1: "Azure Functions"
+linktitle: "Azure Functions"
 no_edit_this_page: true
 ---
 

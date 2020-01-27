@@ -1,5 +1,7 @@
 ---
-title: "Nginx Server Using Compute Engine"
+title: "Nginx Server Using Compute Engine | Python"
+h1: "Nginx Server Using Compute Engine"
+linktitle: "Nginx Server Using Compute Engine"
 no_edit_this_page: true
 ---
 

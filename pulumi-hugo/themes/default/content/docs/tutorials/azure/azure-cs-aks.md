@@ -1,5 +1,5 @@
 ---
-title: "Azure Kubernetes Service (AKS) Cluster | Python"
+title: "Azure Kubernetes Service (AKS) Cluster | C#"
 h1: "Azure Kubernetes Service (AKS) Cluster"
 linktitle: "Azure Kubernetes Service (AKS) Cluster"
 no_edit_this_page: true
@@ -9,17 +9,17 @@ no_edit_this_page: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/mktutorial. -->
 
 <p class="mb-4 flex">
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-py-aks" target="_blank">
+    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-cs-aks" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
 
-    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-py-aks" target="_blank">
+    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-cs-aks" target="_blank">
         <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
     </a>
 </p>
 
 
-This example deploys an AKS cluster, virtual network and Azure Container Registry and grants AKS permissions to access and manage those.
+Stands up an [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/) (AKS) cluster.
 
 ## Deploying the App
 
@@ -28,33 +28,22 @@ To deploy your infrastructure, follow the below steps.
 ### Prerequisites
 
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
-2. [Install Python 3.6](https://www.python.org/downloads/)
-3. [Configure Azure Credentials](https://www.pulumi.com/docs/intro/cloud-providers/azure/setup/)
-4. [Generate SSH Key](https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key)
+2. [Install .NET Core 3.0+](https://dotnet.microsoft.com/download)
 
 ### Steps
 
-After cloning this repo, from this working directory, run these commands:
+1. Create a new stack:
 
-1. Install the required Python packages packages:
-
-    ```bash
-    $ pip install -r requirements.txt
-    ```
-
-2. Create a new stack, which is an isolated deployment target for this example:
-
-    ```bash
+    ```sh
     $ pulumi stack init
+    Enter a stack name: dev
     ```
 
-3. Set the configuration variables for this program:
+1. Set the required configuration variable for this program:
 
     ```bash
-    $ pulumi config set password service_principal_password
-    $ pulumi config set sshkey < ~/.ssh/id_rsa.pub
-    $ # set the azure location in which to run the test
-    $ pulumi config set azure:location westus2
+    $ pulumi config set azure:location westus
+    $ az login
     ```
 
 4. Stand up the AKS cluster:

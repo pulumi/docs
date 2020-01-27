@@ -1,5 +1,7 @@
 ---
-title: "Azure App Service Running Docker Containers on Linux"
+title: "Azure App Service Running Docker Containers on Linux | TypeScript"
+h1: "Azure App Service Running Docker Containers on Linux"
+linktitle: "Azure App Service Running Docker Containers on Linux"
 no_edit_this_page: true
 ---
 
@@ -42,6 +44,12 @@ The example shows two scenarios:
 
     ```
     $ npm install
+    ```
+    
+1. Set the azure location in which to run the test:
+    
+    ```
+    $ pulumi config set azure:location westus2
     ```
 
 1.  Run `pulumi up` to preview and deploy changes:

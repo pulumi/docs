@@ -1,5 +1,5 @@
 ---
-title: "Azure App Service with SQL Database and Application Insights | TypeScript"
+title: "Azure App Service with SQL Database and Application Insights | Python"
 h1: "Azure App Service with SQL Database and Application Insights"
 linktitle: "Azure App Service with SQL Database and Application Insights"
 no_edit_this_page: true
@@ -9,11 +9,11 @@ no_edit_this_page: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/mktutorial. -->
 
 <p class="mb-4 flex">
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-ts-appservice" target="_blank">
+    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-py-appservice" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
 
-    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-appservice" target="_blank">
+    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-py-appservice" target="_blank">
         <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
     </a>
 </p>
@@ -29,7 +29,7 @@ with App Service.
 1.  Create a new stack:
 
     ```
-    $ pulumi stack init azure-appservice
+    $ pulumi stack init dev
     ```
 
 1.  Login to Azure CLI (you will be prompted to do this during deployment if you forget this step):
@@ -38,16 +38,14 @@ with App Service.
     $ az login
     ```
 
-1.  Restore NPM dependencies:
+1.  Create a Python virtualenv, activate it, and install dependencies:
+
+    This installs the dependent packages [needed](https://www.pulumi.com/docs/intro/concepts/how-pulumi-works/) for our Pulumi program.
 
     ```
-    $ npm install
-    ```
-    
-1. Set the azure location in which to run the test:
-    
-    ```
-    $ pulumi config set azure:location westus2
+    $ virtualenv -p python3 venv
+    $ source venv/bin/activate
+    $ pip3 install -r requirements.txt
     ```
 
 1. Define SQL Server password (make it complex enough to satisfy Azure policy):

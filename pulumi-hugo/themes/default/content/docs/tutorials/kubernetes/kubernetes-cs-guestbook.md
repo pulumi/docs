@@ -1,5 +1,5 @@
 ---
-title: "Simple and Component-based Kubernetes Guestbook Apps | TypeScript"
+title: "Simple and Component-based Kubernetes Guestbook Apps | C#"
 h1: "Simple and Component-based Kubernetes Guestbook Apps"
 linktitle: "Simple and Component-based Kubernetes Guestbook Apps"
 no_edit_this_page: true
@@ -9,11 +9,11 @@ no_edit_this_page: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/mktutorial. -->
 
 <p class="mb-4 flex">
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook" target="_blank">
+    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/kubernetes-cs-guestbook" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
 
-    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/components" target="_blank">
+    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/kubernetes-cs-guestbook/components" target="_blank">
         <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
     </a>
 </p>
@@ -27,13 +27,10 @@ Docker, and consists of three components:
 * Multiple replicated Redis instances to serve reads
 * Multiple web frontend instances
 
-There is an [interactive Tutorial available](https://www.pulumi.com/docs/tutorials/kubernetes/guestbook/) for
-this example. If this is your first time using Pulumi for Kubernetes, we recommend starting there.
-
 In this directory, you will find two variants of the Guestbook:
 
-1. [simple/](https://github.com/pulumi/examples/blob/master/kubernetes-ts-guestbook/simple) is a straight port of the original YAML.
-2. [components](https://github.com/pulumi/examples/blob/master/kubernetes-ts-guestbook/components) demonstrates benefits of using a real language, namely eliminating boilerplate through
+1. [simple/](https://github.com/pulumi/examples/blob/master/kubernetes-cs-guestbook/simple) is a straight port of the original YAML.
+2. [components](https://github.com/pulumi/examples/blob/master/kubernetes-cs-guestbook/components) demonstrates benefits of using a real language, namely eliminating boilerplate through
    the use of real component abstractions.
 
 Both examples provision the exact same Kubernetes Guestbook application, but showcase different aspects of Pulumi.

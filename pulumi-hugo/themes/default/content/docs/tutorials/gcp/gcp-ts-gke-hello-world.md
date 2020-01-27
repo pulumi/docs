@@ -1,5 +1,7 @@
 ---
-title: "Google Kubernetes Engine (GKE) Cluster"
+title: "Google Kubernetes Engine (GKE) Cluster | TypeScript"
+h1: "Google Kubernetes Engine (GKE) Cluster"
+linktitle: "Google Kubernetes Engine (GKE) Cluster"
 no_edit_this_page: true
 ---
 

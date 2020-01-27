@@ -1,5 +1,7 @@
 ---
-title: "App Rollout via ConfigMap Data Change"
+title: "App Rollout via ConfigMap Data Change | TypeScript"
+h1: "App Rollout via ConfigMap Data Change"
+linktitle: "App Rollout via ConfigMap Data Change"
 no_edit_this_page: true
 ---
 

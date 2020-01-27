@@ -1,5 +1,7 @@
 ---
-title: "App Rollout via Data Change in Amazon S3"
+title: "App Rollout via Data Change in Amazon S3 | TypeScript"
+h1: "App Rollout via Data Change in Amazon S3"
+linktitle: "App Rollout via Data Change in Amazon S3"
 no_edit_this_page: true
 ---
 
