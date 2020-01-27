@@ -6,6 +6,7 @@ set -o nounset -o errexit -o pipefail
 TOOLS_REPOS=(
     "pulumi"
     "pulumi-aiven"
+    "pulumi-alicloud"
     "pulumi-aws"
     "pulumi-awsx"
     "pulumi-azure"
@@ -27,6 +28,7 @@ TOOLS_REPOS=(
     "pulumi-kubernetes"
     "pulumi-kubernetesx"
     "pulumi-linode"
+    "pulumi-mailgun"
     "pulumi-mysql"
     "pulumi-newrelic"
     "pulumi-okta"

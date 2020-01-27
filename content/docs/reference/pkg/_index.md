@@ -55,6 +55,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
     * [**Kubernetes Extensions** (`@pulumi/kubernetesx`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "nodejs/pulumi/kubernetesx" >}}) - simpler interface for working with Kubernetes
 
 * [**Aiven** (`@pulumi/aiven`)]({{< relref "nodejs/pulumi/aiven" >}})
+* [**Alibaba Cloud** (`@pulumi/alicloud`)]({{< relref "nodejs/pulumi/alicloud" >}})
 * [**CloudAMQP** (`@pulumi/cloudamqp`)]({{< relref "nodejs/pulumi/cloudamqp" >}})
 * [**Cloudflare** (`@pulumi/cloudflare`)]({{< relref "nodejs/pulumi/cloudflare" >}})
 * [**HashiCorp Consul** (`@pulumi/consul`)]({{< relref "nodejs/pulumi/consul" >}})
@@ -66,6 +67,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**GitLab** (`@pulumi/gitlab`)]({{< relref "nodejs/pulumi/gitlab" >}})
 * [**Kafka** (`@pulumi/kafka`)]({{< relref "nodejs/pulumi/kafka" >}})
 * [**Linode** (`@pulumi/linode`)]({{< relref "nodejs/pulumi/linode" >}})
+* [**Mailgun** (`@pulumi/mailgun`)]({{< relref "nodejs/pulumi/mailgun" >}})
 * [**MySQL** (`@pulumi/mysql`)]({{< relref "nodejs/pulumi/mysql" >}})
 * [**New Relic** (`@pulumi/newrelic`)]({{< relref "nodejs/pulumi/newrelic" >}})
 * [**Okta** (`@pulumi/okta`)]({{< relref "nodejs/pulumi/okta" >}})
@@ -90,6 +92,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**Kubernetes** (`pulumi_kubernetes`)]({{< relref "python/pulumi_kubernetes" >}})
 
 * [**Aiven** (`pulumi_aiven`)]({{< relref "python/pulumi_aiven" >}})
+* [**Alibaba Cloud** (`pulumi_alicloud`)]({{< relref "python/pulumi_alicloud" >}})
 * [**CloudAMQP** (`pulumi_cloudamqp`)]({{< relref "python/pulumi_cloudamqp" >}})
 * [**Cloudflare** (`pulumi_cloudflare`)]({{< relref "python/pulumi_cloudflare" >}})
 * [**HashiCorp Consul** (`pulumi_consul`)]({{< relref "python/pulumi_consul" >}})
@@ -101,6 +104,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**GitLab** (`pulumi_gitlab`)]({{< relref "python/pulumi_gitlab" >}})
 * [**Kafka** (`pulumi_kafka`)]({{< relref "python/pulumi_kafka" >}})
 * [**Linode** (`pulumi_linode`)]({{< relref "python/pulumi_linode" >}})
+* [**Mailgun** (`pulumi_mailgun`)]({{< relref "python/pulumi_mailgun" >}})
 * [**MySQL** (`pulumi_mysql`)]({{< relref "python/pulumi_mysql" >}})
 * [**New Relic** (`pulumi_newrelic`)]({{< relref "python/pulumi_newrelic" >}})
 * [**Okta** (`pulumi_okta`)]({{< relref "python/pulumi_okta" >}})
