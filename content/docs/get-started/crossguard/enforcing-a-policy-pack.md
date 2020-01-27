@@ -139,7 +139,7 @@ pulumi policy enable <org-name>/<policy-pack-name> <version>
 {{% md %}}
 
 ```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy enable pulumi/policy-pack-typescript --latest
+$ PULUMI_EXPERIMENTAL=true pulumi policy enable pulumi/policy-pack-typescript latest
 ```
 
 {{% /md %}}
@@ -150,7 +150,7 @@ $ PULUMI_EXPERIMENTAL=true pulumi policy enable pulumi/policy-pack-typescript --
 {{% md %}}
 
 ```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy enable pulumi/policy-pack-typescript --latest
+$ PULUMI_EXPERIMENTAL=true pulumi policy enable pulumi/policy-pack-typescript latest
 ```
 
 {{% /md %}}
@@ -166,7 +166,7 @@ $ PULUMI_EXPERIMENTAL=true pulumi policy enable pulumi/policy-pack-typescript --
 
 ```bat
 set PULUMI_EXPERIMENTAL=true
-pulumi policy enable pulumi/policy-pack-typescript --latest
+pulumi policy enable pulumi/policy-pack-typescript latest
 ```
 
 <!-- markdownlint-disable emphasis -->
@@ -175,7 +175,7 @@ pulumi policy enable pulumi/policy-pack-typescript --latest
 
 ```powershell
 $env:PULUMI_EXPERIMENTAL = 'true'
-pulumi policy enable pulumi/policy-pack-typescript --latest
+pulumi policy enable pulumi/policy-pack-typescript latest
 ```
 
 {{% /md %}}
