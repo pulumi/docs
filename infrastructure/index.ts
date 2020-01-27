@@ -47,8 +47,9 @@ const contentBucket = new aws.s3.Bucket(
     },
 );
 
+// Create a bucket for handling uploads of website archive files.
 const cluster = awsx.ecs.Cluster.getDefault();
-const archiveBucket = new aws.s3.Bucket("archive-bucket", { forceDestroy: true });
+const archiveBucket = new aws.s3.Bucket("archive-bucket");
 const archiveHandler = new awsx.ecs.FargateTaskDefinition("archiveHandler", {
     container: {
         image: awsx.ecs.Image.fromPath("archiveHandlerImage", "./"),
@@ -57,6 +58,8 @@ const archiveHandler = new awsx.ecs.FargateTaskDefinition("archiveHandler", {
     },
 });
 
+// Handle archive uploads by running container task that downloads and unpacks the file
+// and synchronizes its contents with S3.
 archiveBucket.onObjectCreated("onArchiveUploaded", new aws.lambda.CallbackFunction<aws.s3.BucketEvent, void>("onUploadHandler", {
     runtime: "nodejs10.x",
     policies: [
@@ -301,9 +304,10 @@ function translateRedirect(filePath: string, redirect: string): string {
     throw new Error(`The redirect "${redirect}" in "${filePath}" is not in an expected format.`);
 }
 
+// Find all Hugo-generated meta-refresh redirects and convert them to proper
+// (Pulumi-managed) AWS web-page redirects.
+// https://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html
 const redirectPaths = new Set<string>();
-
-// Convert
 glob.sync(`${webContentsRootPath}/**/*.html`).map(filePath => {
     const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
     const redirect = getMetaRefreshRedirect(filePath);
