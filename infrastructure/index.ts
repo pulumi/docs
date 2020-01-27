@@ -8,6 +8,7 @@ import * as fs from "fs";
 import * as path from "path";
 import * as tar from "tar";
 import * as tmp from "tmp";
+import * as glob from "glob";
 
 const stackConfig = new pulumi.Config();
 
@@ -51,6 +52,9 @@ const archiveBucket = new aws.s3.Bucket("archive-bucket", { forceDestroy: true }
 const archiveHandler = new awsx.ecs.FargateTaskDefinition("archiveHandler", {
     container: {
         image: awsx.ecs.Image.fromPath("archiveHandlerImage", "./"),
+        // image: awsx.ecs.Image.fromFunction(() => {
+        //     console.log("Boy it'd be neat if we could just do this.");
+        // }),
         memory: 4096,
         cpu: 4,
     },
@@ -123,6 +127,8 @@ if (!pulumi.runtime.isDryRun()) {
                 console.log(`Wrote ${`${webContentsRootPath}/${key}`}`);
             }
         });
+
+
 
         // Tar everything up.
         const archivePath = tmp.fileSync({ postfix: ".tgz" }).name;
@@ -315,6 +321,69 @@ const cdn = new aws.cloudfront.Distribution(
 
 // Sync the contents of the source directory with the S3 bucket, which will in-turn show up on the CDN.
 const webContentsRootPath = path.join(process.cwd(), config.pathToWebsiteContents);
+
+// Returns the redirect URL if filePath is an HTML file that contains a meta refresh tag, otherwise undefined.
+function getMetaRefreshRedirect(filePath: string): string | undefined {
+    // Only .html files contain meta refresh redirects.
+    if (path.extname(filePath) !== ".html") {
+        return undefined;
+    }
+
+    // Extract the redirect from the content of the file.
+    const text = fs.readFileSync(filePath, "utf8");
+    const regex = /<meta\s+?http-equiv="refresh"\s+?content="0;\s+?url=(.*?)"/gmi;
+    const match = regex.exec(text);
+
+    if (match && match.length === 2) {
+        const redirect = match[1];
+        if (!redirect || redirect.length === 0) {
+            throw new Error(`Meta refresh tag found in "${filePath}" but the redirect URL was empty.`);
+        }
+        return redirect;
+    }
+
+    return match && match.length === 2 ? match[1] : undefined;
+}
+
+// translateRedirect fixes up the redirect, if needed.
+// If the redirect is already prefixed with "https://" or "http://", it is returned unmodified.
+// If the redirect starts with "/", it is translated to an `https://${redirectDomain}${redirect}`.
+// Otherwise, an Error is thrown.
+function translateRedirect(filePath: string, redirect: string): string {
+    // If the redirect already has the https or http protocol specified, return it.
+    if (redirect.startsWith("https://") || redirect.startsWith("http://")) {
+        return redirect;
+    }
+
+    // If the redirect starts with "/", prefix with the redirect domain and return it.
+    if (redirect.startsWith("/")) {
+        return `https://${redirectDomain}${redirect}`;
+    }
+
+    // Otherwise, it's not in a format that we expect so throw an error.
+    throw new Error(`The redirect "${redirect}" in "${filePath}" is not in an expected format.`);
+}
+
+glob.sync(`${webContentsRootPath}/**/*.html`).map(filePath => {
+    const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
+    const redirect = getMetaRefreshRedirect(filePath);
+
+    if (redirect) {
+        const redirectObject = new aws.s3.BucketObject(
+            relativeFilePath,
+            {
+                acl: "public-read",
+                key: relativeFilePath,
+                bucket: contentBucket,
+                source: new pulumi.asset.FileAsset("/dev/null"), // Empty file.
+                websiteRedirect: translateRedirect(filePath, redirect),
+            },
+            {
+                parent: contentBucket,
+            },
+        );
+    }
+});
 
 // Split a domain name into its subdomain and parent domain names.
 // e.g. "www.example.com" => "www", "example.com".

@@ -4,10 +4,12 @@
         "lint": "tslint --project tsconfig.json"
     },
     "devDependencies": {
+        "@types/glob": "^7.1.1",
         "@types/mime": "^2.0.1",
         "@types/node": "^12.7.2",
         "@types/tar": "^4.0.3",
         "@types/tmp": "^0.1.0",
+        "glob": "^7.1.6",
         "tslint": "^5.19.0"
     },
     "dependencies": {
