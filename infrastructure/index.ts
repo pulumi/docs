@@ -72,10 +72,11 @@ archiveBucket.onObjectCreated("onArchiveUploaded", new aws.lambda.CallbackFuncti
         }
 
         for (const record of bucketArgs.Records) {
-            console.log(`A file was uploaded to ${archiveBucket.id.get()} file: ${record.s3.object.key}`);
+            console.log(`A file was uploaded to the ${archiveBucket.id.get()} bucket: ${record.s3.object.key}`);
             const source = `s3://${archiveBucket.id.get()}/${record.s3.object.key}`;
             const dest = `s3://${contentBucket.id.get()}`;
 
+            console.log(`Running the container task...`);
             await archiveHandler.run({
                 cluster,
                 overrides: {
@@ -93,67 +94,6 @@ archiveBucket.onObjectCreated("onArchiveUploaded", new aws.lambda.CallbackFuncti
         }
     },
 }));
-
-// Upload the website archive.
-if (!pulumi.runtime.isDryRun()) {
-
-    pulumi.all([ archiveBucket.id, contentBucket.id ]).apply(async ([ archiveBucketId, contentBucketId ]) => {
-        const s3 = new aws.sdk.S3();
-
-        // Download the last few JS and CSS bundles, filtering for the ones we care about.
-        // TODO: Age these out, like only keep them around for a month, or something.
-        const cssResult = await s3.listObjectsV2({
-            Bucket: contentBucketId,
-            Prefix: "css/",
-        }).promise();
-
-        const jsResult = await s3.listObjectsV2({
-            Bucket: contentBucketId,
-            Prefix: "js/",
-        }).promise();
-
-        const cssBundles = (cssResult.Contents?.filter(f => f.Key?.match(/styles\..+\.css/)) || []).map(o => o.Key);
-        const jsBundles = (jsResult.Contents?.filter(f => f.Key?.match(/bundle\.min\..+\.js/)) || []).map(o => o.Key);
-
-        // Add them to the build.
-        [ ...cssBundles, ...jsBundles ].forEach(async (key) => {
-            if (key) {
-                const bundlesResult = await s3.getObject({
-                    Bucket: contentBucketId,
-                    Key: key,
-                }).promise();
-
-                fs.writeFileSync(`${webContentsRootPath}/${key}`, bundlesResult.Body);
-                console.log(`Wrote ${`${webContentsRootPath}/${key}`}`);
-            }
-        });
-
-
-
-        // Tar everything up.
-        const archivePath = tmp.fileSync({ postfix: ".tgz" }).name;
-        tar.c(
-            {
-                gzip: true,
-                sync: true,
-                file: archivePath,
-                C: config.pathToWebsiteContents,
-                portable: true,
-            },
-            fs.readdirSync(config.pathToWebsiteContents),
-        );
-
-        // Upload the tarball.
-        const result = s3.putObject({
-            Bucket: archiveBucketId,
-            Key: path.basename(archivePath),
-            Body: fs.readFileSync(archivePath),
-        })
-        .promise();
-
-        console.log(`Website archive ${archivePath} was uploaded.`);
-    });
-}
 
 // logsBucket stores the request logs for incoming requests.
 const logsBucket = new aws.s3.Bucket(
@@ -364,11 +304,17 @@ function translateRedirect(filePath: string, redirect: string): string {
     throw new Error(`The redirect "${redirect}" in "${filePath}" is not in an expected format.`);
 }
 
+const redirectPaths = new Set<string>();
+
+// Convert
 glob.sync(`${webContentsRootPath}/**/*.html`).map(filePath => {
     const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
     const redirect = getMetaRefreshRedirect(filePath);
 
     if (redirect) {
+        console.log(">> redir: ", relativeFilePath);
+        redirectPaths.add(relativeFilePath);
+
         const redirectObject = new aws.s3.BucketObject(
             relativeFilePath,
             {
@@ -384,6 +330,41 @@ glob.sync(`${webContentsRootPath}/**/*.html`).map(filePath => {
         );
     }
 });
+
+// If the current run is an update, zip up the contents of the website and upload the
+// archive to S3.
+if (!pulumi.runtime.isDryRun()) {
+
+    pulumi.all([ archiveBucket.id, contentBucket.id ]).apply(async ([ archiveBucketId, contentBucketId ]) => {
+        const s3 = new aws.sdk.S3();
+
+        // Tar up the contents of the `public` directory, filtering out those already marked as redirects.
+        const archivePath = tmp.fileSync({ postfix: ".tgz" }).name;
+        tar.c(
+            {
+                gzip: true,
+                sync: true,
+                filter: (filePath, stat) => {
+                    return !redirectPaths.has(filePath);
+                },
+                file: archivePath,
+                C: config.pathToWebsiteContents,
+                portable: true,
+            },
+            fs.readdirSync(config.pathToWebsiteContents),
+        );
+
+        // Upload it.
+        const result = s3.putObject({
+            Bucket: archiveBucketId,
+            Key: path.basename(archivePath),
+            Body: fs.readFileSync(archivePath),
+        })
+        .promise();
+
+        console.log(`Website archive ${archivePath} was uploaded.`);
+    });
+}
 
 // Split a domain name into its subdomain and parent domain names.
 // e.g. "www.example.com" => "www", "example.com".
