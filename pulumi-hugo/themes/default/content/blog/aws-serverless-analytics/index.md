@@ -126,9 +126,9 @@ export const impressionInputStream = impressionsInputStream.name;
 export const clickInputStream = clicksInputStream.name;
 ```
 
-In a dozen lines of code, we’ve provisioned two of our desired tables, “clicks” and “impressions”, using our serverless streaming input architecture. It takes care of everything, including implicitly creating an arrival time [partition scheme](https://docs.aws.amazon.com/athena/latest/ug/partitions.html) with the key “inserted_at”. We export our Kinesis input streams as [stack outputs](docs/intro/concepts/stack/#outputs) that can be referenced in other projects, such as the instrumentation within our ad server or consumer-facing web app.
+In a dozen lines of code, we’ve provisioned two of our desired tables, “clicks” and “impressions”, using our serverless streaming input architecture. It takes care of everything, including implicitly creating an arrival time [partition scheme](https://docs.aws.amazon.com/athena/latest/ug/partitions.html) with the key “inserted_at”. We export our Kinesis input streams as [stack outputs](/docs/intro/concepts/stack/#outputs) that can be referenced in other projects, such as the instrumentation within our ad server or consumer-facing web app.
 
-While on the surface this Pulumi component is described imperatively, it produces a declarative output in the form of a [state file](docs/intro/concepts/state/) that can be managed locally, in an object store like S3, or by the Pulumi Service backend. Running a ‘pulumi up’ shows that we’ve created 45 AWS resources, and lists our stack outputs to the console.
+While on the surface this Pulumi component is described imperatively, it produces a declarative output in the form of a [state file](/docs/intro/concepts/state/) that can be managed locally, in an object store like S3, or by the Pulumi Service backend. Running a ‘pulumi up’ shows that we’ve created 45 AWS resources, and lists our stack outputs to the console.
 
 ![Pulumi Up Result](./PulumiUpOutput.png)
 
@@ -173,7 +173,7 @@ export class ServerlessDataWarehouse extends pulumi.ComponentResource {
 }
 ```
 
-The ServerlessDataWarehouse class creates a shared S3 data bucket, Athena query results bucket, and glue database. We’ve exposed a fluent method, .withStreamingInputTable(), that creates the Glue table, Kinesis input stream, Firehose destination stream, and the Lambda cron that registers the hourly partitions. Many of these pieces themselves are also encapsulated into higher-order components.
+The `ServerlessDataWarehouse` class creates a shared S3 data bucket, Athena query results bucket, and glue database. We’ve exposed a fluent method, `.withStreamingInputTable()`, that creates the Glue table, Kinesis input stream, Firehose destination stream, and the Lambda cron that registers the hourly partitions. Many of these pieces themselves are also encapsulated into higher-order components.
 
 ```typescript
 public withStreamingInputTable(name: string, args: StreamingInputTableArgs):
@@ -224,7 +224,7 @@ ServerlessDataWarehouse {
 }
 ```
 
-Our withStreamingInputTable call makes use of another fluent API, .withTable(), that encapsulates the logic around various storage and SerDe details required for storing different formats in glue (Parquet vs. JSON) in a way that Athena can understand:
+Our withStreamingInputTable call makes use of another fluent API, `.withTable()`, that encapsulates the logic around various storage and SerDe details required for storing different formats in glue (Parquet vs. JSON) in a way that Athena can understand:
 
 ```typescript
 public withTable(name: string, args: TableArgs): ServerlessDataWarehouse {
@@ -288,7 +288,7 @@ private createTable(name: string,
 }
 ```
 
-Encapsulating core functionality like this enables other analytics use cases, and can act as an escape hatch for more complex ones. Users can create a data warehouse with component owned and managed streaming tables, use .withTable() to enable the same database to own the table, and then write custom external logic to populate that table.
+Encapsulating core functionality like this enables other analytics use cases, and can act as an escape hatch for more complex ones. Users can create a data warehouse with component owned and managed streaming tables, use `.withTable()` to enable the same database to own the table, and then write custom external logic to populate that table.
 
 ```typescript
 // create a static fact table
@@ -329,7 +329,7 @@ Here we create a static fact table that never changes. While this population mec
 
 ## Creating a Batch Table API
 
-We now have a very opinionated streaming table API (withStreamingInputTable), and an escape hatch (withTable). Can we provide something for the general batch use case? It is quite a significant problem, but we can come up with a useful API if we constrain it a bit:
+We now have a very opinionated streaming table API (`withStreamingInputTable`), and an escape hatch (`withTable`). Can we provide something for the general batch use case? It is quite a significant problem, but we can come up with a useful API if we constrain it a bit:
 
 1. Execute user-specified code on a user-specified interval.
 2. The runtime platform is AWS Lambda. Job must execute within [Lambda resource constraints for time, memory, CPU, and disk](https://docs.aws.amazon.com/lambda/latest/dg/limits.html) (15 mins, 3 GB, and 500 MB at the time of writing).
@@ -367,7 +367,7 @@ ServerlessDataWarehouse {
 }
 ```
 
-Our .withBatchInputTable() API creates a table and schedules a lambda that writes data into the table in batches. In our example below, we create a function that queries our clicks and impressions streaming tables over a given hour and writes a JSON file with aggregations. In fifty lines of code, we can publish higher-level statistics about our streaming tables that can be consumed by business users:
+Our `.withBatchInputTable()` API creates a table and schedules a lambda that writes data into the table in batches. In our example below, we create a function that queries our clicks and impressions streaming tables over a given hour and writes a JSON file with aggregations. In fifty lines of code, we can publish higher-level statistics about our streaming tables that can be consumed by business users:
 
 ```typescript
 // Configure batch input table 'aggregates'
@@ -582,7 +582,7 @@ test("WithStreamingInput integrtion test", async () => {
 
 ![Integration Test Output](./IntegrationTest.png)
 
-This test gives us a great deal of confidence that our changes are valid. While it certainly does a lot, it's a little slow. We can run this suite with “npm run test:int & tput bel” to notify us upon completion while we work in the background, but four minutes might not meet the latency bar for core inner dev loop.
+This test gives us a great deal of confidence that our changes are valid. While it certainly does a lot, it's a little slow. We can run this suite with `npm run test:int & tput bel` to notify us upon completion while we work in the background, but four minutes might not meet the latency bar for core inner dev loop.
 
 Here we’ve seen three different ways to use Pulumi to automate and improve the inner dev loop. Simple scripting with stack outputs to get started, automation of that script using Pulumi, and full blow integration testing to bring 100% confidence in tricky changes. All three are tools in our arsenal to be applied appropriately.
 
@@ -590,7 +590,7 @@ Here we’ve seen three different ways to use Pulumi to automate and improve the
 
 ACME re-evaluated their analytics architecture and shipped the next-generation serverless streaming solution that can take them to the next click-stop, and well through the next order of magnitude. Along the way, they learned how to reason about streaming data and examined the underlying assumptions about time and completeness of data in their existing system. ACME developed its streaming architecture using Pulumi and learned how to automate and create reproducible developer environments along the way. The outcome isn’t just an instance of the serverless streaming architecture, but a component library that implements best practices. That investment in time is bundled up and shipped in a format that the next generation of incubators at ACME can pick up and run with.
 
-If you’d like to get started delivering best practices in infrastructure across your organization, [get started with Pulumi free today](docs/get-started). You can find the reference implementation of the Serverless Data Warehouse ready to clone and modify here (TODO link after examples PR merged).
+If you’d like to get started delivering best practices in infrastructure across your organization, [get started with Pulumi free today](/docs/get-started). You can find the reference implementation of the Serverless Data Warehouse ready to clone and modify here (TODO link after examples PR merged).
 
 ## Architectural Caveats
 
