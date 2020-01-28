@@ -1,0 +1,35 @@
+[[events]]
+type = ["workshop","talk"]
+name = "Config Management Camp"
+location = "Ghent, Belgium"
+startDate = "2020-02-03"
+endDate = "2020-02-05"
+description = "Configuration Management Camp is the event for technologists interested Open Source Infrastructure automation and related topics."
+registrationUrl = "#"
+
+[[events]]
+type = ["workshop","booth"]
+name = "DevOpsDays Charlotte"
+location = "Charlotte, NC"
+startDate = "2020-02-27"
+endDate = "2020-02-28"
+description = "Devopsdays is a worldwide series of technical conferences covering topics of software development, IT infrastructure operations, and the intersection between them."
+registrationUrl = "#"
+
+[[events]]
+type = ["booth"]
+name = "SCALE 18X"
+location = "Pasadena, CA"
+startDate = "2020-03-05"
+endDate = "2020-03-08"
+description = "The Southern California Linux Expo (SCALE) is an annual Linux, open source and free software conference held in Los Angeles, California, since 2002."
+registrationUrl = "#"
+
+[[events]]
+type = ["talk"]
+name = "DevOpsDays Los Angeles"
+location = "Los Angeles, CA"
+startDate = "2020-03-06"
+endDate = "2020-03-06"
+description = "Devopsdays is a worldwide series of technical conferences covering topics of software development, IT infrastructure operations, and the intersection between them."
+registrationUrl = "#"

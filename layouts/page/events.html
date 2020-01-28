@@ -1,0 +1,65 @@
+{{ define "hero" }}
+    <header class="header-hero">
+        <div class="container mx-auto">
+            <div class="mx-auto text-center">
+                <h1>Events</h1>
+            </div>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    <div class="flex py-10 px-20">
+        <div class="w-3/12">
+            <div id="eventFilter" class="px-5">
+                <p class="my-0 border-b text-2xl mb-3">Filter</p>
+            </div>
+        </div>
+        <div class="w-6/12">
+            <ul id="eventList" class="list-none md:flex md:flex-wrap">
+                {{ range $.Site.Data.events.events }}
+                    <li class="w-full border border-gray-400 rounded my-0 px-5 py-5 mb-10" data-event-type='{{ delimit .type "," }}'>
+                        <div>
+                            <a class="text-2xl" href="#">{{ .name }}</a>
+                            <p class="my-3">{{ .description }}</p>
+                            <div class="flex mt-2">
+                                <div class="w-8/12">
+                                    <div>
+                                        <i class="far fa-calendar inline-block"></i>
+                                        <p class="inline-block my-0">
+                                            {{ dateFormat "Mon, Jan 2" .startDate }} - {{ dateFormat "Mon, Jan 2" .endDate }}
+                                        </p>
+                                    </div>
+                                    <div class="mt-2 event-tags">
+                                        {{ if in .type "workshop" }}
+                                            <span class="inline-block bg-orange-500 text-white rounded-full px-2">Workshop</span>
+                                        {{ end }}
+                                        {{ if in .type "talk" }}
+                                            <span class="inline-block bg-orange-500 text-white rounded-full px-2">Talk</span>
+                                        {{ end }}
+                                        {{ if in .type "booth" }}
+                                            <span class="inline-block bg-orange-500 text-white rounded-full px-2">Booth</span>
+                                        {{ end }}
+                                        {{ if in .type "meetup" }}
+                                            <span class="inline-block bg-orange-500 text-white rounded-full px-2">MeetUp</span>
+                                        {{ end }}
+                                    </div>
+                                </div>
+                                <div class="w-4/12 relative">
+                                    <a class="btn btn-purple absolute bottom-0 right-0" href="#">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+        <div class="w-3/12 px-5">
+            <div class="border border-gray-400 rounded bg-black pb-8">
+                <p class="text-xl text-white leading-snug my-0 mx-5 mt-2"><b>Create</b> modern applications</p>
+                <img class="w-full mb-5" src="/images/docs/k8s-the-prod-way/app.png" />
+                <a href="#" class="btn mx-5">Get Started Today</a>
+            </div>
+        </div>
+    </div>
+{{ end }}
