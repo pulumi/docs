@@ -2,7 +2,7 @@
 title: "AWS Serverless Analytics"
 authors: ["evan-boyle"]
 tags: ["AWS-Serverless", "Analytics", "Architecture-as-Code", "Data-Warehouse"]
-date: "2020-01-28"
+date: "2020-01-30"
 meta_desc: "Building a serverless data warehouse on AWS using architecture as code."
 meta_image: "ServerlessArchitecture.png"
 ---
@@ -15,7 +15,7 @@ Whether it’s an IoT installation, a website, or a mobile app, modern software 
 3. How to implement this architecture as code in a reusable library with Pulumi.
 4. How to automate the development loop when writing Pulumi libraries.
 
-If you’d like to follow along, you can clone and run the reference implementation (TODO add link once examples PR is merged). If you’re new to Pulumi, you can follow [this guide to get started](/docs/get-started/).
+If you’d like to follow along, you can clone and run [the reference implementation](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-datawarehouse). If you’re new to Pulumi, you can follow [this guide to get started]({{< relref "/docs/get-started/_index.md" >}}).
 
 ## ACME E-Commerce
 
@@ -69,7 +69,7 @@ The team understands how to keep the analytics stack limping along at this point
 
 ![Serverless Data Warehouse](./ServerlessArchitecture.png)
 
-JSON events are queued in Kinesis, consumed by a Firehose that validates their schema against the definition in Glue, then converted into [parquet](https://parquet.apache.org/), and finally stored in S3 in hourly folders based on arrival time. Structured data in S3 and a Glue metastore are flexible primitives that end-users and production systems can build on. Both production systems and ad-hoc users can bring their own compute or take advantage of serverless solutions like Athena (the AWS serverless version of [Presto](https://prestodb.io/)) to query over the data with isolation. The operator overhead is low because it relies almost entirely on serverless offerings. This architecture brings some additional benefits:
+JSON events are queued in [Kinesis](https://aws.amazon.com/kinesis/data-streams/), consumed by a [Firehose](https://aws.amazon.com/kinesis/data-firehose/) that validates their schema against the definition in [Glue](https://aws.amazon.com/glue/), then converted into [parquet](https://parquet.apache.org/), and finally stored in S3 in hourly folders based on arrival time. Structured data in S3 and a Glue metastore are flexible primitives that end-users and production systems can build on. Both production systems and ad-hoc users can bring their own compute or take advantage of serverless solutions like Athena (the AWS serverless version of [Presto](https://prestodb.io/)) to query over the data with isolation. The operator overhead is low because it relies almost entirely on serverless offerings. This architecture brings some additional benefits:
 
 1. Scale the read and write workloads independently. Redshift was overprovisioned to handle the mismatch of a continuous write workload at peak hours. A decrease in operating cost was the result of adopting this architecture.
 2. Pay as you go. Firehose, S3, Lambda, and Athena are all billed based on usage. Kinesis is the exception charging per shard hour, which for most deployments would be provisioned for peak load.
@@ -82,7 +82,7 @@ While our new serverless streaming architecture brings a slew of benefits that e
 
 We want repeatable infrastructure that we can reliably develop, test, and deploy. Creating a single Redshift instance through the console was manageable, but our serverless architecture utilizes multiple instances of five AWS services. Serverless solutions frequently require many more granular resources, and thus the complexity of the infrastructure as code increases, and we need more robust tools to manage this complexity - just like we manage software complexity.
 
-Pulumi takes care of the complexity by bringing software development best practices like abstraction, encapsulation, and modularity to infrastructure. You can use design patterns in your favorite programming language to provision modern cloud infrastructure. [Component Resources](https://www.pulumi.com/blog/creating-and-reusing-cloud-components-using-package-managers/) are our tools for encapsulating low-level cloud infrastructure into Architecture as Code that is shareable across teams.
+Pulumi takes care of the complexity by bringing software development best practices like abstraction, encapsulation, and modularity to infrastructure. You can use design patterns in your favorite programming language to provision modern cloud infrastructure. [Component Resources]({{< relref "/blog/creating-and-reusing-cloud-components-using-package-managers/index.md" >}}) are our tools for encapsulating low-level cloud infrastructure into Architecture as Code that is shareable across teams.
 
 With Pulumi the code we write looks very similar to our architecture diagram:
 
@@ -126,9 +126,9 @@ export const impressionInputStream = impressionsInputStream.name;
 export const clickInputStream = clicksInputStream.name;
 ```
 
-In a dozen lines of code, we’ve provisioned two of our desired tables, “clicks” and “impressions”, using our serverless streaming input architecture. It takes care of everything, including implicitly creating an arrival time [partition scheme](https://docs.aws.amazon.com/athena/latest/ug/partitions.html) with the key “inserted_at”. We export our Kinesis input streams as [stack outputs](/docs/intro/concepts/stack/#outputs) that can be referenced in other projects, such as the instrumentation within our ad server or consumer-facing web app.
+In a dozen lines of code, we’ve provisioned two of our desired tables, “clicks” and “impressions”, using our serverless streaming input architecture. It takes care of everything, including implicitly creating an arrival time [partition scheme](https://docs.aws.amazon.com/athena/latest/ug/partitions.html) with the key “inserted_at”. We export our Kinesis input streams as [stack outputs]({{< relref "/docs/intro/concepts/stack#outputs" >}}) that can be referenced in other projects, such as the instrumentation within our ad server or consumer-facing web app.
 
-While on the surface this Pulumi component is described imperatively, it produces a declarative output in the form of a [state file](/docs/intro/concepts/state/) that can be managed locally, in an object store like S3, or by the Pulumi Service backend. Running a ‘pulumi up’ shows that we’ve created 45 AWS resources, and lists our stack outputs to the console.
+While on the surface this Pulumi component is described imperatively, it produces a declarative output in the form of a [state file]({{<  relref "docs/intro/concepts/state.md" >}}) that can be managed locally, in an object store like S3, or by the Pulumi Service backend. Running a ‘pulumi up’ shows that we’ve created 45 AWS resources, and lists our stack outputs to the console.
 
 ![Pulumi Up Result](./PulumiUpOutput.png)
 
@@ -173,7 +173,7 @@ export class ServerlessDataWarehouse extends pulumi.ComponentResource {
 }
 ```
 
-The `ServerlessDataWarehouse` class creates a shared S3 data bucket, Athena query results bucket, and glue database. We’ve exposed a fluent method, `.withStreamingInputTable()`, that creates the Glue table, Kinesis input stream, Firehose destination stream, and the Lambda cron that registers the hourly partitions. Many of these pieces themselves are also encapsulated into higher-order components.
+The `ServerlessDataWarehouse` class creates a shared S3 data bucket, Athena query results bucket, and Glue database. We’ve exposed a fluent method, `.withStreamingInputTable()`, that creates the Glue table, Kinesis input stream, Firehose destination stream, and the Lambda cron that registers the hourly partitions. Many of these pieces themselves are also encapsulated into higher-order components.
 
 ```typescript
 public withStreamingInputTable(name: string, args: StreamingInputTableArgs):
@@ -224,7 +224,7 @@ ServerlessDataWarehouse {
 }
 ```
 
-Our withStreamingInputTable call makes use of another fluent API, `.withTable()`, that encapsulates the logic around various storage and SerDe details required for storing different formats in glue (Parquet vs. JSON) in a way that Athena can understand:
+Our `withStreamingInputTable` call makes use of another fluent API, `.withTable()`, that encapsulates the logic around various storage and SerDe details required for storing different formats in glue (Parquet vs. JSON) in a way that Athena can understand:
 
 ```typescript
 public withTable(name: string, args: TableArgs): ServerlessDataWarehouse {
@@ -450,13 +450,13 @@ dataWarehouse.withBatchInputTable(aggregateTableName, aggregateTableArgs);
 
 ![Athena Aggregate Table Query Results](./AggregatesExample.png)
 
-While Lambda’s limits restrict the utility of this method, the concept is powerful. Pulumi gives you the building blocks to define your abstractions. Rather than Lambda, the execution plane could be ECS, Kubernetes, or EMR.
+While Lambda’s limits restrict the utility of this method, the concept is powerful. Pulumi gives you the building blocks to define your abstractions. Instead of Lambda, the execution plane could be ECS, Kubernetes, or EMR.
 
 ## Automating the Dev Environment
 
 Developing software is an activity in seeking a specific state. For functions with simple inputs and outputs, this is a matter of well-factored code and unit test coverage. You can and should write this sort of test in your Pulumi applications. But often, the state that you’re seeking can’t be validated in unit tests. It raises many questions such as, “Am I stitching these cloud services together in a valid way? Will data flow from input service through to output destination? If I try to tighten down this IAM role, will everything still work?”
 
-Our workflow is to make a change, run a pulumi up, and then verify that data ingested into Kinesis is read out the other end by Athena. A simple shell script using [stack outputs](https://www.pulumi.com/docs/intro/concepts/stack/#outputs) and a query in the AWS console are enough to get started here:
+Our workflow is to make a change, run a pulumi up, and then verify that data ingested into Kinesis is read out the other end by Athena. A simple shell script using [stack outputs]({{< relref "/docs/intro/concepts/stack#outputs" >}}) and a query in the AWS console are enough to get started here:
 
 ```bash
 #/bin/sh
@@ -590,7 +590,7 @@ Here we’ve seen three different ways to use Pulumi to automate and improve the
 
 ACME re-evaluated their analytics architecture and shipped the next-generation serverless streaming solution that can take them to the next click-stop, and well through the next order of magnitude. Along the way, they learned how to reason about streaming data and examined the underlying assumptions about time and completeness of data in their existing system. ACME developed its streaming architecture using Pulumi and learned how to automate and create reproducible developer environments along the way. The outcome isn’t just an instance of the serverless streaming architecture, but a component library that implements best practices. That investment in time is bundled up and shipped in a format that the next generation of incubators at ACME can pick up and run with.
 
-If you’d like to get started delivering best practices in infrastructure across your organization, [get started with Pulumi free today](/docs/get-started). You can find the reference implementation of the Serverless Data Warehouse ready to clone and modify here (TODO link after examples PR merged).
+If you’d like to get started delivering best practices in infrastructure across your organization, [get started with Pulumi free today]({{< relref "/docs/get-started/_index.md" >}}). Clone and run [the reference implementation](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-datawarehouse) of the Serverless Data Warehouse to build your own serverless analytics stack.
 
 ## Architectural Caveats
 
