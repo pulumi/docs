@@ -27,4 +27,8 @@ cd ..
 echo "Synchronizing to $site_bucket..."
 aws s3 sync site_contents "$site_bucket" --acl public-read --delete
 
+# Set the content-type of latest-version explicitly. (Otherwise, it'll be set as binary/octet-stream.)
+aws s3 cp "site_contents/latest-version" "$site_bucket/latest-version" \
+    --content-type "text/plain" --acl public-read --metadata-directive REPLACE
+
 echo "Done!"
