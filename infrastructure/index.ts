@@ -62,10 +62,7 @@ const archiveHandler = new awsx.ecs.FargateTaskDefinition("archiveHandler", {
 // and synchronizes its contents with S3.
 archiveBucket.onObjectCreated("onArchiveUploaded", new aws.lambda.CallbackFunction<aws.s3.BucketEvent, void>("onUploadHandler", {
     runtime: "nodejs10.x",
-    policies: [
-        aws.iam.ManagedPolicies.AWSLambdaFullAccess,
-        aws.iam.ManagedPolicies.AmazonEC2ContainerServiceFullAccess,
-    ],
+    policies: awsx.ecs.TaskDefinition.defaultTaskRolePolicyARNs(),
     callback: async bucketArgs => {
         if (!bucketArgs.Records) {
             return;
@@ -304,8 +301,9 @@ function translateRedirect(filePath: string, redirect: string): string {
     throw new Error(`The redirect "${redirect}" in "${filePath}" is not in an expected format.`);
 }
 
-// Find all Hugo-generated meta-refresh redirects and convert them to proper
-// (Pulumi-managed) AWS web-page redirects.
+// Find all Hugo-generated redirects and convert them to proper (Pulumi-managed) AWS
+// website redirects. We allow Pulumi to manage these, rather than the AWS CLI, because
+// the AWS CLI doesn't offer a way to bulk-update them.
 // https://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html
 const redirectPaths = new Set<string>();
 glob.sync(`${webContentsRootPath}/**/*.html`).map(filePath => {
@@ -354,7 +352,7 @@ if (!pulumi.runtime.isDryRun()) {
         );
 
         // Upload the archive.
-        const result = s3.putObject({
+        const result = await s3.putObject({
             Bucket: archiveBucketId,
             Key: path.basename(archivePath),
             Body: fs.readFileSync(archivePath),
@@ -411,7 +409,6 @@ async function createAliasRecord(
 
 const aRecord = createAliasRecord(config.targetDomain, cdn);
 
-export const contentBucketName = contentBucket.bucket;
 export const contentBucketUri = contentBucket.bucket.apply(b => `s3://${b}`);
 export const archiveBucketUri = archiveBucket.bucket.apply(b => `s3://${b}`);
 export const contentBucketWebsiteDomain = contentBucket.websiteDomain;
