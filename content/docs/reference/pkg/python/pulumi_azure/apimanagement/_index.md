@@ -1372,6 +1372,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.apimanagement.AwaitableGetApiVersionSetResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">AwaitableGetApiVersionSetResult</code><span class="sig-paren">(</span><em class="sig-param">api_management_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">version_header_name=None</em>, <em class="sig-param">version_query_name=None</em>, <em class="sig-param">versioning_scheme=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.AwaitableGetApiVersionSetResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.apimanagement.AwaitableGetGroupResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">AwaitableGetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">api_management_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.AwaitableGetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1973,6 +1978,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.apimanagement.GetApiResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.GetApiResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.apimanagement.GetApiVersionSetResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">GetApiVersionSetResult</code><span class="sig-paren">(</span><em class="sig-param">api_management_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">version_header_name=None</em>, <em class="sig-param">version_query_name=None</em>, <em class="sig-param">versioning_scheme=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.GetApiVersionSetResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getApiVersionSet.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.GetApiVersionSetResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.GetApiVersionSetResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of API Version Set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.GetApiVersionSetResult.display_name">
+<code class="sig-name descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.GetApiVersionSetResult.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The display name of this API Version Set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.GetApiVersionSetResult.version_header_name">
+<code class="sig-name descname">version_header_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.GetApiVersionSetResult.version_header_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Header which should be read from Inbound Requests which defines the API Version.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.GetApiVersionSetResult.version_query_name">
+<code class="sig-name descname">version_query_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.GetApiVersionSetResult.version_query_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Query String which should be read from Inbound Requests which defines the API Version.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.GetApiVersionSetResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.GetApiVersionSetResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -4701,6 +4742,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/api_management_api.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/api_management_api.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.apimanagement.get_api_version_set">
+<code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">get_api_version_set</code><span class="sig-paren">(</span><em class="sig-param">api_management_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.get_api_version_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uses this data source to access information about an API Version Set within an API Management Service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>api_management_name</strong> (<em>str</em>) – The name of the API Management Service where the API Version Set exists.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the API Version Set.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The name of the Resource Group in which the parent API Management Service exists.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/api_management_api_version_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/api_management_api_version_set.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
