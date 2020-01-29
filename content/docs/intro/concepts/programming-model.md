@@ -509,7 +509,7 @@ db = Database('db',
 
 ```csharp
 var db = new Database("new-name-for-db", new DatabaseArgs(),
-    new ResourceOptions { Aliases = { new Alias { Name = "old-name-for-db"} } });
+    new CustomResourceOptions { Aliases = { new Alias { Name = "old-name-for-db"} } });
 ```
 
 The `aliases` option accepts a list of old identifiers. If a resource has been renamed multiple times, it may contain many. This list may contain old `Alias` objects and/or old [resource URNs](#urns).
@@ -541,7 +541,7 @@ db = Database('db',
 
 ```csharp
 var db = new Database("new-name-for-db", new DatabaseArgs(),
-    new ResourceOptions { Aliases = { new Alias {
+    new CustomResourceOptions { Aliases = { new Alias {
         Urn = "urn:pulumi:stackname::projectname::aws:rds/database:Database::old-name-for-db" } } });
 ```
 
@@ -577,7 +577,7 @@ db, _ := Database(ctx, "db", &DatabaseArgs{/*...*/},
 
 ```csharp
 var db = new Database("db", new DatabaseArgs(),
-    new ResourceOptions { CustomTimeouts = new CustomTimeouts { Create = TimeSpan.FromMinutes(30) } });
+    new CustomResourceOptions { CustomTimeouts = new CustomTimeouts { Create = TimeSpan.FromMinutes(30) } });
 ```
 
 ###### `deleteBeforeReplace`
@@ -648,7 +648,7 @@ res2, _ := MyResource(ctx, "res2", pulumi.ResourceOpt{DependsOn: []Resource{res1
 
 ```csharp
 var res1 = new MyResource("res1", new MyResourceArgs());
-var res2 = new MyResource("res2", new MyResourceArgs(), new ResourceOptions { DependsOn = { res1 } });
+var res2 = new MyResource("res2", new MyResourceArgs(), new CustomResourceOptions { DependsOn = { res1 } });
 ```
 
 ###### `ignoreChanges`
@@ -684,7 +684,7 @@ res = MyResource("res",
 ```csharp
 var res = new MyResource("res",
     new MyResourceArgs { prop = "new-value" },
-    new ResourceOptions { IgnoreChanges = { "prop" } });
+    new CustomResourceOptions { IgnoreChanges = { "prop" } });
 ```
 
 You would use the `ignoreChanges` option to avoid changes in properties leading to diffs or to change defaults for a property without forcing all existing deployed stacks to update or replace the affected resource. This is common after you've imported existing infrastructure provisioned by another method into Pulumi, where there may be historical drift that you'd prefer to retain than have to replace and reconstruct some critical parts of your infrastructure.
@@ -852,7 +852,7 @@ child, _ := MyResource(ctx, "child", pulumi.ResourceOpt{Parent: parent});
 ```csharp
 var parent = new MyResource("parent", new MyResourceArgs());
 var child = new MyResource("child", new MyResourceArgs(),
-    new ResourceOptions { Parent = parent });
+    new CustomResourceOptions { Parent = parent });
 ```
 
 Using parents can help to understand causality; that is, why a given resource was created in the first place. For example, this `pulumi up` output shows that we have an AWS Virtual Private Cloud (VPC) with two subnets attached to it, and that this VPC directly belongs to the implicit `pulumi:pulumi:Stack` resource:
@@ -890,7 +890,7 @@ db, _ := Database(ctx, "db", &DatabaseArgs{}, pulumi.ResourceOpt{Protect: true})
 ```
 
 ```csharp
-var db = new Database("db", new DatabaseArgs(), new ResourceOptions { Protect = true });
+var db = new Database("db", new DatabaseArgs(), new CustomResourceOptions { Protect = true });
 ```
 
 ###### `provider`
@@ -921,7 +921,7 @@ vpc, _ := ec2.Vpc(ctx, "vpc", &VpcArgs{}, pulumi.ResourceOpt{Provider: provider}
 
 ```csharp
 var provider = new Aws.Provider("provider", new Aws.ProviderArgs { Region = "us-west-2" });
-var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(), new ResourceOptions { Provider = provider });
+var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(), new CustomResourceOptions { Provider = provider });
 ```
 
 ###### `transformations`
@@ -995,7 +995,7 @@ var vpc = new MyVpcComponent("vpc", new ResourceOptions
                     Args: args.Args,
                     Options: ResourceOptions.Merge(
                         args.Options,
-                        new ResourceOptions { IgnoreChanges =  { "tags" } }),
+                        new CustomResourceOptions { IgnoreChanges =  { "tags" } }),
                 };
             }
 
@@ -1199,7 +1199,7 @@ bucket := s3.Bucket(ctx, fmt.Sprintf("%s-bucket", name),
 
 ```csharp
 var bucket = new Aws.S3.Bucket($"{name}-bucket",
-    new Aws.S3.BucketArgs(/*...*/), new ResourceOptions { Parent = this });
+    new Aws.S3.BucketArgs(/*...*/), new CustomResourceOptions { Parent = this });
 ```
 
 ##### Registering Component Outputs
@@ -2328,8 +2328,8 @@ class MyResource : pulumi.ComponentResource
     public MyResource(string name, ComponentResourceOptions opts)
         : base(name, opts)
     {
-        var instance = new Aws.Ec2.Instance("instance", new Aws.Ec2.InstanceArgs { ... }, new ResourceOptions { Parent = this });
-        var pod = new Kubernetes.Core.V1.Pod("pod", new Kubernetes.Core.V1.PodArgs { ... }, new ResourceOptions { Parent = this });
+        var instance = new Aws.Ec2.Instance("instance", new Aws.Ec2.InstanceArgs { ... }, new CustomResourceOptions { Parent = this });
+        var pod = new Kubernetes.Core.V1.Pod("pod", new Kubernetes.Core.V1.PodArgs { ... }, new CustomResourceOptions { Parent = this });
     }
 }
 
