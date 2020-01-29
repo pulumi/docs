@@ -98,7 +98,7 @@ Each Cloud Run service automatically gets a run.app subdomain. You can export th
 export const helloUrl = helloService.status.url;
 ```
 
-Run pulumi up to deploy all the resources.
+Run `pulumi up` to deploy all the resources.
 
 ```
 $ pulumi up
