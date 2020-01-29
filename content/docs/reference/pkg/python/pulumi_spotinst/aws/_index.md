@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_spotinst.aws"></span><dl class="class">
 <dt id="pulumi_spotinst.aws.Beanstalk">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.aws.</code><code class="sig-name descname">Beanstalk</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">beanstalk_environment_id=None</em>, <em class="sig-param">beanstalk_environment_name=None</em>, <em class="sig-param">deployment_preferences=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">instance_types_spots=None</em>, <em class="sig-param">maintenance=None</em>, <em class="sig-param">managed_actions=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">product=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.Beanstalk" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.aws.</code><code class="sig-name descname">Beanstalk</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">beanstalk_environment_id=None</em>, <em class="sig-param">beanstalk_environment_name=None</em>, <em class="sig-param">deployment_preferences=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">instance_types_spots=None</em>, <em class="sig-param">maintenance=None</em>, <em class="sig-param">managed_actions=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">product=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">scheduled_tasks=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.Beanstalk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst AWS group resource using Elastic Beanstalk.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -41,7 +41,7 @@ For EC2 Classic instances:  <code class="docutils literal notranslate"><span cla
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">automaticRoll</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should roll perform automatically</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">batchSizePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Percent size of each batch</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gracePeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Amount of time to wait between batches</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grace_period</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Amount of time to wait between batches</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">strategies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Strategy parameters</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Action to take</p></li>
@@ -58,6 +58,24 @@ For EC2 Classic instances:  <code class="docutils literal notranslate"><span cla
 <li><p><code class="docutils literal notranslate"><span class="pre">updateLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Level to update</p></li>
 </ul>
 </li>
+</ul>
+<p>The <strong>scheduled_tasks</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adjustment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adjustmentPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">batchSizePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Percent size of each batch</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cronExpression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grace_period</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amount of time to wait between batches</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleMaxCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleMinCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleTargetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws_beanstalk.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws_beanstalk.html.markdown</a>.</p>
@@ -81,7 +99,7 @@ For EC2 Classic instances:  <code class="docutils literal notranslate"><span cla
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">automaticRoll</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should roll perform automatically</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">batchSizePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Percent size of each batch</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gracePeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Amount of time to wait between batches</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grace_period</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Amount of time to wait between batches</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">strategies</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Strategy parameters</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Action to take</p></li>
@@ -151,7 +169,7 @@ For EC2 Classic instances:  <code class="docutils literal notranslate"><span cla
 
 <dl class="method">
 <dt id="pulumi_spotinst.aws.Beanstalk.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">beanstalk_environment_id=None</em>, <em class="sig-param">beanstalk_environment_name=None</em>, <em class="sig-param">deployment_preferences=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">instance_types_spots=None</em>, <em class="sig-param">maintenance=None</em>, <em class="sig-param">managed_actions=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">product=None</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.Beanstalk.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">beanstalk_environment_id=None</em>, <em class="sig-param">beanstalk_environment_name=None</em>, <em class="sig-param">deployment_preferences=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">instance_types_spots=None</em>, <em class="sig-param">maintenance=None</em>, <em class="sig-param">managed_actions=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">product=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">scheduled_tasks=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.Beanstalk.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Beanstalk resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -179,7 +197,7 @@ For EC2 Classic instances:  <code class="docutils literal notranslate"><span cla
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">automaticRoll</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should roll perform automatically</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">batchSizePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Percent size of each batch</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gracePeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Amount of time to wait between batches</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grace_period</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Amount of time to wait between batches</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">strategies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Strategy parameters</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Action to take</p></li>
@@ -196,6 +214,24 @@ For EC2 Classic instances:  <code class="docutils literal notranslate"><span cla
 <li><p><code class="docutils literal notranslate"><span class="pre">updateLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Level to update</p></li>
 </ul>
 </li>
+</ul>
+<p>The <strong>scheduled_tasks</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adjustment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adjustmentPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">batchSizePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Percent size of each batch</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cronExpression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grace_period</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amount of time to wait between batches</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleMaxCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleMinCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleTargetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws_beanstalk.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws_beanstalk.html.markdown</a>.</p>
@@ -325,7 +361,7 @@ Note: When this parameter is set, <code class="docutils literal notranslate"><sp
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">automaticRoll</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">batchSizePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gracePeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grace_period</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -603,7 +639,7 @@ Note: When this parameter is set, <code class="docutils literal notranslate"><sp
 <li><p><code class="docutils literal notranslate"><span class="pre">batchSizePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cronExpression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gracePeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grace_period</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -637,7 +673,7 @@ Note: When this parameter is set, <code class="docutils literal notranslate"><sp
 <li><p><code class="docutils literal notranslate"><span class="pre">rollConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">batchSizePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gracePeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grace_period</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">health_check_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service that will perform health checks for the instance. Valid values: <code class="docutils literal notranslate"><span class="pre">&quot;ELB&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;HCS&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;TARGET_GROUP&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;MLB&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;EC2&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;MULTAI_TARGET_SET&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;MLB_RUNTIME&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;K8S_NODE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;NOMAD_NODE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ECS_CLUSTER_INSTANCE&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
@@ -1007,7 +1043,7 @@ Note: When this parameter is set, <code class="docutils literal notranslate"><sp
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">automaticRoll</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">batchSizePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gracePeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grace_period</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -1285,7 +1321,7 @@ Note: When this parameter is set, <code class="docutils literal notranslate"><sp
 <li><p><code class="docutils literal notranslate"><span class="pre">batchSizePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cronExpression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gracePeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grace_period</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -1319,7 +1355,7 @@ Note: When this parameter is set, <code class="docutils literal notranslate"><sp
 <li><p><code class="docutils literal notranslate"><span class="pre">rollConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">batchSizePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gracePeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grace_period</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">health_check_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service that will perform health checks for the instance. Valid values: <code class="docutils literal notranslate"><span class="pre">&quot;ELB&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;HCS&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;TARGET_GROUP&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;MLB&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;EC2&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;MULTAI_TARGET_SET&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;MLB_RUNTIME&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;K8S_NODE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;NOMAD_NODE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ECS_CLUSTER_INSTANCE&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
@@ -1361,6 +1397,502 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_spotinst.aws.Elastigroup.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.Elastigroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_spotinst.aws.ManagedInstance">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.aws.</code><code class="sig-name descname">ManagedInstance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">block_devices_mode=None</em>, <em class="sig-param">cpu_credits=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">draining_timeout=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">elastic_ip=None</em>, <em class="sig-param">enable_monitoring=None</em>, <em class="sig-param">fall_back_to_od=None</em>, <em class="sig-param">grace_period=None</em>, <em class="sig-param">health_check_type=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_types=None</em>, <em class="sig-param">integration_route53=None</em>, <em class="sig-param">key_pair=None</em>, <em class="sig-param">life_cycle=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">optimization_windows=None</em>, <em class="sig-param">orientation=None</em>, <em class="sig-param">persist_block_devices=None</em>, <em class="sig-param">persist_private_ip=None</em>, <em class="sig-param">persist_root_device=None</em>, <em class="sig-param">placement_tenancy=None</em>, <em class="sig-param">preferred_type=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">product=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">revert_to_spot=None</em>, <em class="sig-param">scheduled_tasks=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">shutdown_script=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unhealthy_duration=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">utilize_reserved_instances=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Spotinst AWS ManagedInstance resource.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancersConfig</span></code> - (Optional) LB integration object.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">load_balancers</span></code> - (Optional) List of load balancers configs.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - The AWS resource name. Required for Classic Load Balancer. Optional for Application Load Balancer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">arn</span></code> - The AWS resource ARN (Required only for ALB target groups).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">balancer_id</span></code> - The Multai load balancer ID.
+Default: lb-123456</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_set_id</span></code> - The Multai load target set ID.
+Default: ts-123456</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto_weight</span></code> - “Auto Weight” will automatically provide a higher weight for instances that are larger as appropriate. For example, if you have configured your Elastigroup with m4.large and m4.xlarge instances the m4.large will have half the weight of an m4.xlarge. This ensures that larger instances receive a higher number of MLB requests.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zone_awareness</span></code> - “AZ Awareness” will ensure that instances within the same AZ are using the corresponding MLB runtime instance in the same AZ. This feature reduces multi-zone data transfer fees.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Usage:</p>
+<div class="highlight-hcl notranslate"><div class="highlight"><pre><span></span>load_balancers {
+    arn  = &quot;arn&quot;
+    type = &quot;CLASSIC&quot;
+    balancer_id   = &quot;lb-123&quot;
+    target_set_id = &quot;ts-123&quot;
+    auto_weight   = &quot;true&quot;
+    az_awareness = &quot;true&quot;
+  }
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="route53"></a></span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable the auto healing which auto replaces the instance in case the health check fails, default: <code class="docutils literal notranslate"><span class="pre">“true”</span></code>.</p></li>
+<li><p><strong>block_devices_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Determine the way we attach the data volumes to the data devices. Valid values: <code class="docutils literal notranslate"><span class="pre">&quot;reattach&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;onLaunch&quot;</span></code>.
+Default: <code class="docutils literal notranslate"><span class="pre">&quot;onLaunch&quot;</span></code>.</p></li>
+<li><p><strong>cpu_credits</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – cpuCredits can have one of two values: “unlimited”, “standard”.
+Default: unlimited</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ManagedInstance description.</p></li>
+<li><p><strong>draining_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in seconds to allow the instance be drained from incoming TCP connections and detached from ELB before terminating it, during a scale down operation.</p></li>
+<li><p><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
+Default: false</p></li>
+<li><p><strong>elastic_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Elastic IP Allocation Id to associate to the instance.</p></li>
+<li><p><strong>enable_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Describes whether instance Enhanced Monitoring is enabled.
+Default: false</p></li>
+<li><p><strong>grace_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time, in seconds, after the instance has launched to starts and check its health, default <code class="docutils literal notranslate"><span class="pre">“120&quot;</span></code>.</p></li>
+<li><p><strong>health_check_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service to use for the health check. Valid values: <code class="docutils literal notranslate"><span class="pre">“EC2”</span></code>, <code class="docutils literal notranslate"><span class="pre">“ELB”</span></code>, <code class="docutils literal notranslate"><span class="pre">“TARGET_GROUP”</span></code>, <code class="docutils literal notranslate"><span class="pre">“MULTAI_TARGET_SET”</span></code>.
+Default: <code class="docutils literal notranslate"><span class="pre">“EC2”</span></code>.</p></li>
+<li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set IAM profile to instance. Set only one of ARN or Name.</p></li>
+<li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the image used to launch the instance.</p></li>
+<li><p><strong>instance_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Comma separated list of available instance types for instance.</p></li>
+<li><p><strong>key_pair</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify a Key Pair to attach to the instances.</p></li>
+<li><p><strong>life_cycle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set lifecycle, valid values: <code class="docutils literal notranslate"><span class="pre">“spot”</span></code>, <code class="docutils literal notranslate"><span class="pre">“on_demand”</span></code>.
+Default <code class="docutils literal notranslate"><span class="pre">&quot;spot&quot;</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ManagedInstance name.</p></li>
+<li><p><strong>optimization_windows</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – When performAt is ‘timeWindow’: must specify a list of ‘timeWindows’ with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.</p></li>
+<li><p><strong>orientation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Select a prediction strategy. Valid values: <code class="docutils literal notranslate"><span class="pre">&quot;balanced&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;costOriented&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;availabilityOriented&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;cheapest&quot;</span></code>.
+Default: <code class="docutils literal notranslate"><span class="pre">&quot;availabilityOriented&quot;</span></code>.</p></li>
+<li><p><strong>persist_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the instance maintain its Data volumes.</p></li>
+<li><p><strong>persist_private_ip</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the instance maintain its private IP.<span class="raw-html-m2r"><br></span></p></li>
+<li><p><strong>persist_root_device</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the instance maintain its root device volumes.</p></li>
+<li><p><strong>placement_tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid values: “default”, “dedicated”
+Default: default</p></li>
+<li><p><strong>preferred_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Preferred instance types for the instance. We will automatically select optional similar instance types to ensure optimized cost efficiency</p></li>
+<li><p><strong>private_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Private IP Allocation Id to associate to the instance.</p></li>
+<li><p><strong>product</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Operation system type. Valid values: <code class="docutils literal notranslate"><span class="pre">&quot;Linux/UNIX&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;SUSE</span> <span class="pre">Linux&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Windows&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Red</span> <span class="pre">Hat</span> <span class="pre">Enterprise</span> <span class="pre">Linux&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Linux/UNIX</span> <span class="pre">(Amazon</span> <span class="pre">VPC)&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;SUSE</span> <span class="pre">Linux</span> <span class="pre">(Amazon</span> <span class="pre">VPC)&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Windows</span> <span class="pre">(Amazon</span> <span class="pre">VPC)&quot;</span></code>,  <code class="docutils literal notranslate"><span class="pre">&quot;Red</span> <span class="pre">Hat</span> <span class="pre">Enterprise</span> <span class="pre">Linux</span> <span class="pre">(Amazon</span> <span class="pre">VPC)&quot;</span></code>.<span class="raw-html-m2r"><br></span></p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS region your group will be created in.</p></li>
+<li><p><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more security group IDs.</p></li>
+<li><p><strong>shutdown_script</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-encoded shutdown script to execute prior to instance termination.</p></li>
+<li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A comma-separated list of subnet identifiers for your instance.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set tags for the instance. Items should be unique.</p></li>
+<li><p><strong>unhealthy_duration</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default <code class="docutils literal notranslate"><span class="pre">“120&quot;</span></code>.</p></li>
+<li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-encoded MIME user data to make available to the instances.</p></li>
+<li><p><strong>utilize_reserved_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
+Default: <code class="docutils literal notranslate"><span class="pre">&quot;false&quot;</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>integration_route53</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">domains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostedZoneId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordSets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ManagedInstance name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spotinstAcctId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>load_balancers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">azAwareness</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">balancerId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ManagedInstance name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>network_interfaces</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">associateIpv6Address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>revert_to_spot</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">performAt</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Valid values: “always”, “never”, “timeWindow”.
+Default <code class="docutils literal notranslate"><span class="pre">&quot;never&quot;</span></code>.</p></li>
+</ul>
+<p>The <strong>scheduled_tasks</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cronExpression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>tags</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Tag’s key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Tag’s name.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/managed_instance_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/managed_instance_aws.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.auto_healing">
+<code class="sig-name descname">auto_healing</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.auto_healing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable the auto healing which auto replaces the instance in case the health check fails, default: <code class="docutils literal notranslate"><span class="pre">“true”</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.block_devices_mode">
+<code class="sig-name descname">block_devices_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.block_devices_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine the way we attach the data volumes to the data devices. Valid values: <code class="docutils literal notranslate"><span class="pre">&quot;reattach&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;onLaunch&quot;</span></code>.
+Default: <code class="docutils literal notranslate"><span class="pre">&quot;onLaunch&quot;</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.cpu_credits">
+<code class="sig-name descname">cpu_credits</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.cpu_credits" title="Permalink to this definition">¶</a></dt>
+<dd><p>cpuCredits can have one of two values: “unlimited”, “standard”.
+Default: unlimited</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ManagedInstance description.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.draining_timeout">
+<code class="sig-name descname">draining_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.draining_timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time in seconds to allow the instance be drained from incoming TCP connections and detached from ELB before terminating it, during a scale down operation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.ebs_optimized">
+<code class="sig-name descname">ebs_optimized</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.ebs_optimized" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
+Default: false</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.elastic_ip">
+<code class="sig-name descname">elastic_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.elastic_ip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Elastic IP Allocation Id to associate to the instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.enable_monitoring">
+<code class="sig-name descname">enable_monitoring</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.enable_monitoring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Describes whether instance Enhanced Monitoring is enabled.
+Default: false</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.grace_period">
+<code class="sig-name descname">grace_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.grace_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of time, in seconds, after the instance has launched to starts and check its health, default <code class="docutils literal notranslate"><span class="pre">“120&quot;</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.health_check_type">
+<code class="sig-name descname">health_check_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.health_check_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The service to use for the health check. Valid values: <code class="docutils literal notranslate"><span class="pre">“EC2”</span></code>, <code class="docutils literal notranslate"><span class="pre">“ELB”</span></code>, <code class="docutils literal notranslate"><span class="pre">“TARGET_GROUP”</span></code>, <code class="docutils literal notranslate"><span class="pre">“MULTAI_TARGET_SET”</span></code>.
+Default: <code class="docutils literal notranslate"><span class="pre">“EC2”</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.iam_instance_profile">
+<code class="sig-name descname">iam_instance_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.iam_instance_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set IAM profile to instance. Set only one of ARN or Name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.image_id">
+<code class="sig-name descname">image_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.image_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the image used to launch the instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.instance_types">
+<code class="sig-name descname">instance_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.instance_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Comma separated list of available instance types for instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.key_pair">
+<code class="sig-name descname">key_pair</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.key_pair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify a Key Pair to attach to the instances.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.life_cycle">
+<code class="sig-name descname">life_cycle</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.life_cycle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set lifecycle, valid values: <code class="docutils literal notranslate"><span class="pre">“spot”</span></code>, <code class="docutils literal notranslate"><span class="pre">“on_demand”</span></code>.
+Default <code class="docutils literal notranslate"><span class="pre">&quot;spot&quot;</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ManagedInstance name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.optimization_windows">
+<code class="sig-name descname">optimization_windows</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.optimization_windows" title="Permalink to this definition">¶</a></dt>
+<dd><p>When performAt is ‘timeWindow’: must specify a list of ‘timeWindows’ with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.orientation">
+<code class="sig-name descname">orientation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.orientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select a prediction strategy. Valid values: <code class="docutils literal notranslate"><span class="pre">&quot;balanced&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;costOriented&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;availabilityOriented&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;cheapest&quot;</span></code>.
+Default: <code class="docutils literal notranslate"><span class="pre">&quot;availabilityOriented&quot;</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.persist_block_devices">
+<code class="sig-name descname">persist_block_devices</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.persist_block_devices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Should the instance maintain its Data volumes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.persist_private_ip">
+<code class="sig-name descname">persist_private_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.persist_private_ip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Should the instance maintain its private IP.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.persist_root_device">
+<code class="sig-name descname">persist_root_device</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.persist_root_device" title="Permalink to this definition">¶</a></dt>
+<dd><p>Should the instance maintain its root device volumes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.placement_tenancy">
+<code class="sig-name descname">placement_tenancy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.placement_tenancy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Valid values: “default”, “dedicated”
+Default: default</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.preferred_type">
+<code class="sig-name descname">preferred_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.preferred_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preferred instance types for the instance. We will automatically select optional similar instance types to ensure optimized cost efficiency</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.private_ip">
+<code class="sig-name descname">private_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.private_ip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Private IP Allocation Id to associate to the instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.product">
+<code class="sig-name descname">product</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.product" title="Permalink to this definition">¶</a></dt>
+<dd><p>Operation system type. Valid values: <code class="docutils literal notranslate"><span class="pre">&quot;Linux/UNIX&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;SUSE</span> <span class="pre">Linux&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Windows&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Red</span> <span class="pre">Hat</span> <span class="pre">Enterprise</span> <span class="pre">Linux&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Linux/UNIX</span> <span class="pre">(Amazon</span> <span class="pre">VPC)&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;SUSE</span> <span class="pre">Linux</span> <span class="pre">(Amazon</span> <span class="pre">VPC)&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Windows</span> <span class="pre">(Amazon</span> <span class="pre">VPC)&quot;</span></code>,  <code class="docutils literal notranslate"><span class="pre">&quot;Red</span> <span class="pre">Hat</span> <span class="pre">Enterprise</span> <span class="pre">Linux</span> <span class="pre">(Amazon</span> <span class="pre">VPC)&quot;</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The AWS region your group will be created in.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.security_group_ids">
+<code class="sig-name descname">security_group_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.security_group_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more security group IDs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.shutdown_script">
+<code class="sig-name descname">shutdown_script</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.shutdown_script" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Base64-encoded shutdown script to execute prior to instance termination.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.subnet_ids">
+<code class="sig-name descname">subnet_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.subnet_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A comma-separated list of subnet identifiers for your instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set tags for the instance. Items should be unique.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Tag’s key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Tag’s name.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.unhealthy_duration">
+<code class="sig-name descname">unhealthy_duration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.unhealthy_duration" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default <code class="docutils literal notranslate"><span class="pre">“120&quot;</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.user_data">
+<code class="sig-name descname">user_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.user_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Base64-encoded MIME user data to make available to the instances.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.ManagedInstance.utilize_reserved_instances">
+<code class="sig-name descname">utilize_reserved_instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.utilize_reserved_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
+Default: <code class="docutils literal notranslate"><span class="pre">&quot;false&quot;</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_spotinst.aws.ManagedInstance.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">block_devices_mode=None</em>, <em class="sig-param">cpu_credits=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">draining_timeout=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">elastic_ip=None</em>, <em class="sig-param">enable_monitoring=None</em>, <em class="sig-param">fall_back_to_od=None</em>, <em class="sig-param">grace_period=None</em>, <em class="sig-param">health_check_type=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_types=None</em>, <em class="sig-param">integration_route53=None</em>, <em class="sig-param">key_pair=None</em>, <em class="sig-param">life_cycle=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">optimization_windows=None</em>, <em class="sig-param">orientation=None</em>, <em class="sig-param">persist_block_devices=None</em>, <em class="sig-param">persist_private_ip=None</em>, <em class="sig-param">persist_root_device=None</em>, <em class="sig-param">placement_tenancy=None</em>, <em class="sig-param">preferred_type=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">product=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">revert_to_spot=None</em>, <em class="sig-param">scheduled_tasks=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">shutdown_script=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unhealthy_duration=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">utilize_reserved_instances=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ManagedInstance resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable the auto healing which auto replaces the instance in case the health check fails, default: <code class="docutils literal notranslate"><span class="pre">“true”</span></code>.</p></li>
+<li><p><strong>block_devices_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Determine the way we attach the data volumes to the data devices. Valid values: <code class="docutils literal notranslate"><span class="pre">&quot;reattach&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;onLaunch&quot;</span></code>.
+Default: <code class="docutils literal notranslate"><span class="pre">&quot;onLaunch&quot;</span></code>.</p></li>
+<li><p><strong>cpu_credits</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – cpuCredits can have one of two values: “unlimited”, “standard”.
+Default: unlimited</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ManagedInstance description.</p></li>
+<li><p><strong>draining_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in seconds to allow the instance be drained from incoming TCP connections and detached from ELB before terminating it, during a scale down operation.</p></li>
+<li><p><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
+Default: false</p></li>
+<li><p><strong>elastic_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Elastic IP Allocation Id to associate to the instance.</p></li>
+<li><p><strong>enable_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Describes whether instance Enhanced Monitoring is enabled.
+Default: false</p></li>
+<li><p><strong>grace_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time, in seconds, after the instance has launched to starts and check its health, default <code class="docutils literal notranslate"><span class="pre">“120&quot;</span></code>.</p></li>
+<li><p><strong>health_check_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service to use for the health check. Valid values: <code class="docutils literal notranslate"><span class="pre">“EC2”</span></code>, <code class="docutils literal notranslate"><span class="pre">“ELB”</span></code>, <code class="docutils literal notranslate"><span class="pre">“TARGET_GROUP”</span></code>, <code class="docutils literal notranslate"><span class="pre">“MULTAI_TARGET_SET”</span></code>.
+Default: <code class="docutils literal notranslate"><span class="pre">“EC2”</span></code>.</p></li>
+<li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set IAM profile to instance. Set only one of ARN or Name.</p></li>
+<li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the image used to launch the instance.</p></li>
+<li><p><strong>instance_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Comma separated list of available instance types for instance.</p></li>
+<li><p><strong>key_pair</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify a Key Pair to attach to the instances.</p></li>
+<li><p><strong>life_cycle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set lifecycle, valid values: <code class="docutils literal notranslate"><span class="pre">“spot”</span></code>, <code class="docutils literal notranslate"><span class="pre">“on_demand”</span></code>.
+Default <code class="docutils literal notranslate"><span class="pre">&quot;spot&quot;</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ManagedInstance name.</p></li>
+<li><p><strong>optimization_windows</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – When performAt is ‘timeWindow’: must specify a list of ‘timeWindows’ with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.</p></li>
+<li><p><strong>orientation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Select a prediction strategy. Valid values: <code class="docutils literal notranslate"><span class="pre">&quot;balanced&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;costOriented&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;availabilityOriented&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;cheapest&quot;</span></code>.
+Default: <code class="docutils literal notranslate"><span class="pre">&quot;availabilityOriented&quot;</span></code>.</p></li>
+<li><p><strong>persist_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the instance maintain its Data volumes.</p></li>
+<li><p><strong>persist_private_ip</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the instance maintain its private IP.<span class="raw-html-m2r"><br></span></p></li>
+<li><p><strong>persist_root_device</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the instance maintain its root device volumes.</p></li>
+<li><p><strong>placement_tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid values: “default”, “dedicated”
+Default: default</p></li>
+<li><p><strong>preferred_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Preferred instance types for the instance. We will automatically select optional similar instance types to ensure optimized cost efficiency</p></li>
+<li><p><strong>private_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Private IP Allocation Id to associate to the instance.</p></li>
+<li><p><strong>product</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Operation system type. Valid values: <code class="docutils literal notranslate"><span class="pre">&quot;Linux/UNIX&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;SUSE</span> <span class="pre">Linux&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Windows&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Red</span> <span class="pre">Hat</span> <span class="pre">Enterprise</span> <span class="pre">Linux&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Linux/UNIX</span> <span class="pre">(Amazon</span> <span class="pre">VPC)&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;SUSE</span> <span class="pre">Linux</span> <span class="pre">(Amazon</span> <span class="pre">VPC)&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Windows</span> <span class="pre">(Amazon</span> <span class="pre">VPC)&quot;</span></code>,  <code class="docutils literal notranslate"><span class="pre">&quot;Red</span> <span class="pre">Hat</span> <span class="pre">Enterprise</span> <span class="pre">Linux</span> <span class="pre">(Amazon</span> <span class="pre">VPC)&quot;</span></code>.<span class="raw-html-m2r"><br></span></p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS region your group will be created in.</p></li>
+<li><p><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more security group IDs.</p></li>
+<li><p><strong>shutdown_script</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-encoded shutdown script to execute prior to instance termination.</p></li>
+<li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A comma-separated list of subnet identifiers for your instance.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set tags for the instance. Items should be unique.</p></li>
+<li><p><strong>unhealthy_duration</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default <code class="docutils literal notranslate"><span class="pre">“120&quot;</span></code>.</p></li>
+<li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-encoded MIME user data to make available to the instances.</p></li>
+<li><p><strong>utilize_reserved_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
+Default: <code class="docutils literal notranslate"><span class="pre">&quot;false&quot;</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>integration_route53</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">domains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostedZoneId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordSets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ManagedInstance name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spotinstAcctId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>load_balancers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">azAwareness</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">balancerId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ManagedInstance name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>network_interfaces</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">associateIpv6Address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>revert_to_spot</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">performAt</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Valid values: “always”, “never”, “timeWindow”.
+Default <code class="docutils literal notranslate"><span class="pre">&quot;never&quot;</span></code>.</p></li>
+</ul>
+<p>The <strong>scheduled_tasks</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cronExpression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>tags</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Tag’s key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Tag’s name.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/managed_instance_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/managed_instance_aws.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_spotinst.aws.ManagedInstance.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_spotinst.aws.ManagedInstance.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -2007,6 +2539,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleDown</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Auto Scaling scale down operations.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">evaluationPeriods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of evaluation periods that should accumulate before a scale down action takes place.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxScaleDownPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Would represent the maximum % to scale-down. Number between 1-100.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleHeadroom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.</p>
@@ -2064,6 +2597,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleDown</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Auto Scaling scale down operations.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">evaluationPeriods</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of evaluation periods that should accumulate before a scale down action takes place.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxScaleDownPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Would represent the maximum % to scale-down. Number between 1-100.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleHeadroom</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.</p>
@@ -2283,6 +2817,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleDown</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Auto Scaling scale down operations.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">evaluationPeriods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of evaluation periods that should accumulate before a scale down action takes place.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxScaleDownPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Would represent the maximum % to scale-down. Number between 1-100.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleHeadroom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.</p>
@@ -2367,22 +2902,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_spotinst.aws.OceanLaunchSpec">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.aws.</code><code class="sig-name descname">OceanLaunchSpec</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">ocean_id=None</em>, <em class="sig-param">taints=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.aws.</code><code class="sig-name descname">OceanLaunchSpec</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscale_headrooms=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">ocean_id=None</em>, <em class="sig-param">root_volume_size=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">taints=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a custom Spotinst Ocean AWS Launch Spec resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>autoscale_headrooms</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set custom headroom per launch spec. provide list of headrooms object.</p></li>
 <li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN or name of an IAM instance profile to associate with launched instances.</p></li>
 <li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the image used to launch the instances.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optionally adds labels to instances launched in an Ocean cluster.</p></li>
 <li><p><strong>ocean_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ocean cluster you wish to</p></li>
+<li><p><strong>root_volume_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Set root volume size (in GB).</p></li>
+<li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optionally adds security group IDs.</p></li>
+<li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set subnets in launchSpec. Each element in array should be subnet ID.</p></li>
 <li><p><strong>taints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optionally adds labels to instances launched in an Ocean cluster.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64-encoded MIME user data to make available to the instances.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>autoscale_headrooms</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Optionally configure the number of CPUs to allocate for each headroom unit. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpuPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Optionally configure the number of GPUS to allocate for each headroom unit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memoryPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Optionally configure the amount of memory (MiB) to allocate for each headroom unit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numOfUnits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of units to retain as headroom, where each unit has the defined headroom CPU, memory and GPU.</p></li>
+</ul>
 <p>The <strong>labels</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag key.</p></li>
@@ -2397,6 +2943,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws_launch_spec.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws_launch_spec.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.OceanLaunchSpec.autoscale_headrooms">
+<code class="sig-name descname">autoscale_headrooms</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec.autoscale_headrooms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set custom headroom per launch spec. provide list of headrooms object.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Optionally configure the number of CPUs to allocate for each headroom unit. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpuPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Optionally configure the number of GPUS to allocate for each headroom unit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memoryPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Optionally configure the amount of memory (MiB) to allocate for each headroom unit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numOfUnits</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of units to retain as headroom, where each unit has the defined headroom CPU, memory and GPU.</p></li>
+</ul>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_spotinst.aws.OceanLaunchSpec.iam_instance_profile">
 <code class="sig-name descname">iam_instance_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec.iam_instance_profile" title="Permalink to this definition">¶</a></dt>
@@ -2426,6 +2984,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_spotinst.aws.OceanLaunchSpec.root_volume_size">
+<code class="sig-name descname">root_volume_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec.root_volume_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set root volume size (in GB).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.OceanLaunchSpec.security_groups">
+<code class="sig-name descname">security_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec.security_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optionally adds security group IDs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.OceanLaunchSpec.subnet_ids">
+<code class="sig-name descname">subnet_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec.subnet_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set subnets in launchSpec. Each element in array should be subnet ID.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_spotinst.aws.OceanLaunchSpec.taints">
 <code class="sig-name descname">taints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec.taints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Optionally adds labels to instances launched in an Ocean cluster.</p>
@@ -2444,7 +3020,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_spotinst.aws.OceanLaunchSpec.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">ocean_id=None</em>, <em class="sig-param">taints=None</em>, <em class="sig-param">user_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscale_headrooms=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">ocean_id=None</em>, <em class="sig-param">root_volume_size=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">taints=None</em>, <em class="sig-param">user_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing OceanLaunchSpec resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2453,15 +3029,26 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>autoscale_headrooms</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set custom headroom per launch spec. provide list of headrooms object.</p></li>
 <li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN or name of an IAM instance profile to associate with launched instances.</p></li>
 <li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the image used to launch the instances.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optionally adds labels to instances launched in an Ocean cluster.</p></li>
 <li><p><strong>ocean_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ocean cluster you wish to</p></li>
+<li><p><strong>root_volume_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Set root volume size (in GB).</p></li>
+<li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optionally adds security group IDs.</p></li>
+<li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set subnets in launchSpec. Each element in array should be subnet ID.</p></li>
 <li><p><strong>taints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optionally adds labels to instances launched in an Ocean cluster.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64-encoded MIME user data to make available to the instances.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>autoscale_headrooms</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Optionally configure the number of CPUs to allocate for each headroom unit. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpuPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Optionally configure the number of GPUS to allocate for each headroom unit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memoryPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Optionally configure the amount of memory (MiB) to allocate for each headroom unit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numOfUnits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of units to retain as headroom, where each unit has the defined headroom CPU, memory and GPU.</p></li>
+</ul>
 <p>The <strong>labels</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag key.</p></li>
