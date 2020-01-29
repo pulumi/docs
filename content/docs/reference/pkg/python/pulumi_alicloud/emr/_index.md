@@ -25,7 +25,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_alicloud.emr.AwaitableGetMainVersionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">AwaitableGetMainVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">emr_version=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">main_versions=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.AwaitableGetMainVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">AwaitableGetMainVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_types=None</em>, <em class="sig-param">emr_version=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">main_versions=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.AwaitableGetMainVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -309,7 +309,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.emr.GetMainVersionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">GetMainVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">emr_version=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">main_versions=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.GetMainVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">GetMainVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_types=None</em>, <em class="sig-param">emr_version=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">main_versions=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.GetMainVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getMainVersions.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.emr.GetMainVersionsResult.emr_version">
@@ -389,7 +389,7 @@ Possible values may be any one or combination of these: [“MASTER”, “CORE�
 
 <dl class="function">
 <dt id="pulumi_alicloud.emr.get_main_versions">
-<code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">get_main_versions</code><span class="sig-paren">(</span><em class="sig-param">emr_version=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.get_main_versions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">get_main_versions</code><span class="sig-paren">(</span><em class="sig-param">cluster_types=None</em>, <em class="sig-param">emr_version=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.get_main_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">emr.getMainVersions</span></code> data source provides a collection of emr 
 main versions available in Alibaba Cloud account when create a emr cluster.</p>
 <blockquote>
@@ -397,7 +397,11 @@ main versions available in Alibaba Cloud account when create a emr cluster.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>emr_version</strong> (<em>str</em>) – The version of the emr cluster instance. Possible values: <code class="docutils literal notranslate"><span class="pre">EMR-4.0.0</span></code>, <code class="docutils literal notranslate"><span class="pre">EMR-3.23.0</span></code>, <code class="docutils literal notranslate"><span class="pre">EMR-3.22.0</span></code>.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cluster_types</strong> (<em>list</em>) – The supported clusterType of this emr version.
+Possible values may be any one or combination of these: [“HADOOP”, “DRUID”, “KAFKA”, “ZOOKEEPER”, “FLINK”, “CLICKHOUSE”]</p></li>
+<li><p><strong>emr_version</strong> (<em>str</em>) – The version of the emr cluster instance. Possible values: <code class="docutils literal notranslate"><span class="pre">EMR-4.0.0</span></code>, <code class="docutils literal notranslate"><span class="pre">EMR-3.23.0</span></code>, <code class="docutils literal notranslate"><span class="pre">EMR-3.22.0</span></code>.</p></li>
+</ul>
 </dd>
 </dl>
 <blockquote>

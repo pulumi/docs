@@ -421,6 +421,7 @@ Maximum number of hosts allowed in the cluster: 256. Refer to <a class="referenc
 It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p></li>
 <li><p><strong>slb_internet_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create internet load balancer for API Server. Default to true.</p></li>
 <li><p><strong>user_ca</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Force new resource) The vswitch where new kubernetes cluster will be located. If it is not specified, a new VPC and VSwicth will be built. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p></li>
 <li><p><strong>vswitch_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The vswitch where new kubernetes cluster will be located. Specify one or more vswitch’s id. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p></li>
 <li><p><strong>worker_auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable worker payment auto-renew, defaults to false.</p></li>
@@ -675,6 +676,12 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_alicloud.cs.Kubernetes.version">
+<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_alicloud.cs.Kubernetes.vpc_id">
 <code class="sig-name descname">vpc_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.vpc_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of VPC where the current cluster is located.</p>
@@ -821,6 +828,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <li><p><strong>slb_internet_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create internet load balancer for API Server. Default to true.</p></li>
 <li><p><strong>slb_intranet</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of private load balancer where the current cluster master node is located.</p></li>
 <li><p><strong>user_ca</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of VPC where the current cluster is located.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Force new resource) The vswitch where new kubernetes cluster will be located. If it is not specified, a new VPC and VSwicth will be built. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p></li>
 <li><p><strong>vswitch_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The vswitch where new kubernetes cluster will be located. Specify one or more vswitch’s id. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p></li>
@@ -1097,6 +1105,7 @@ Maximum number of hosts allowed in the cluster: 256. Refer to <a class="referenc
 <li><p><strong>service_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the service network.<span class="raw-html-m2r"><br></span>
 It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p></li>
 <li><p><strong>slb_internet_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create internet load balancer for API Server. Default to false.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.</p></li>
 <li><p><strong>vswitch_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The vswitch where new kubernetes cluster will be located. Specify one or more vswitch’s id. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p></li>
 <li><p><strong>worker_auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable worker payment auto-renew, defaults to false.</p></li>
 <li><p><strong>worker_auto_renew_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Worker payment auto-renew period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”}.</p></li>
@@ -1248,6 +1257,12 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_alicloud.cs.ManagedKubernetes.version">
+<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.vpc_id">
 <code class="sig-name descname">vpc_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.vpc_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of VPC where the current cluster is located.</p>
@@ -1372,6 +1387,7 @@ Maximum number of hosts allowed in the cluster: 256. Refer to <a class="referenc
 <li><p><strong>service_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the service network.<span class="raw-html-m2r"><br></span>
 It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p></li>
 <li><p><strong>slb_internet_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create internet load balancer for API Server. Default to false.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of VPC where the current cluster is located.</p></li>
 <li><p><strong>vswitch_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The vswitch where new kubernetes cluster will be located. Specify one or more vswitch’s id. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p></li>
 <li><p><strong>worker_auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable worker payment auto-renew, defaults to false.</p></li>
