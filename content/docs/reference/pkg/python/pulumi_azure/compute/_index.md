@@ -160,6 +160,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.compute.AwaitableGetDedicatedHostResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetDedicatedHostResult</code><span class="sig-paren">(</span><em class="sig-param">dedicated_host_group_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetDedicatedHostResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.compute.AwaitableGetDiskEncryptionSetResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetDiskEncryptionSetResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetDiskEncryptionSetResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -469,6 +474,142 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.compute.DedicatedHost">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">DedicatedHost</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_replace_on_failure=None</em>, <em class="sig-param">dedicated_host_group_id=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.DedicatedHost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manage a Dedicated Host within a Dedicated Host Group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_replace_on_failure</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Dedicated Host automatically be replaced in case of a Hardware Failure? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>dedicated_host_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Dedicated Host Group where the Dedicated Host should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the software license type that will be applied to the VMs deployed on the Dedicated Host. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows_Server_Hybrid</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows_Server_Perpetual</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of this Dedicated Host. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>platform_fault_domain</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specify the fault domain of the Dedicated Host Group in which to create the Dedicated Host. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the sku name of the Dedicated Host. Possible values are <code class="docutils literal notranslate"><span class="pre">DSv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">ESv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">FSv2-Type2</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.compute.DedicatedHost.auto_replace_on_failure">
+<code class="sig-name descname">auto_replace_on_failure</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.DedicatedHost.auto_replace_on_failure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Should the Dedicated Host automatically be replaced in case of a Hardware Failure? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.DedicatedHost.dedicated_host_group_id">
+<code class="sig-name descname">dedicated_host_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.DedicatedHost.dedicated_host_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the ID of the Dedicated Host Group where the Dedicated Host should exist. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.DedicatedHost.license_type">
+<code class="sig-name descname">license_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.DedicatedHost.license_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the software license type that will be applied to the VMs deployed on the Dedicated Host. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows_Server_Hybrid</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows_Server_Perpetual</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.DedicatedHost.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.DedicatedHost.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.DedicatedHost.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.DedicatedHost.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of this Dedicated Host. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.DedicatedHost.platform_fault_domain">
+<code class="sig-name descname">platform_fault_domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.DedicatedHost.platform_fault_domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify the fault domain of the Dedicated Host Group in which to create the Dedicated Host. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.DedicatedHost.sku_name">
+<code class="sig-name descname">sku_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.DedicatedHost.sku_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify the sku name of the Dedicated Host. Possible values are <code class="docutils literal notranslate"><span class="pre">DSv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">ESv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">FSv2-Type2</span></code>. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.DedicatedHost.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.DedicatedHost.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.compute.DedicatedHost.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_replace_on_failure=None</em>, <em class="sig-param">dedicated_host_group_id=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.DedicatedHost.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DedicatedHost resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_replace_on_failure</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Dedicated Host automatically be replaced in case of a Hardware Failure? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>dedicated_host_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Dedicated Host Group where the Dedicated Host should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the software license type that will be applied to the VMs deployed on the Dedicated Host. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows_Server_Hybrid</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows_Server_Perpetual</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of this Dedicated Host. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>platform_fault_domain</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specify the fault domain of the Dedicated Host Group in which to create the Dedicated Host. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the sku name of the Dedicated Host. Possible values are <code class="docutils literal notranslate"><span class="pre">DSv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">ESv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">FSv2-Type2</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.compute.DedicatedHost.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.DedicatedHost.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.compute.DedicatedHost.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.DedicatedHost.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.compute.DedicatedHostGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">DedicatedHostGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain_count=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.DedicatedHostGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Dedicated Host Group.</p>
@@ -727,7 +868,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.Extension">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">Extension</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_upgrade_minor_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protected_settings=None</em>, <em class="sig-param">publisher=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">type_handler_version=None</em>, <em class="sig-param">virtual_machine_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Extension" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">Extension</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_upgrade_minor_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protected_settings=None</em>, <em class="sig-param">publisher=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">type_handler_version=None</em>, <em class="sig-param">virtual_machine_id=None</em>, <em class="sig-param">virtual_machine_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Extension" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Virtual Machine Extension to provide post deployment configuration
 and run automated tasks.</p>
 <blockquote>
@@ -759,6 +900,9 @@ specified as a JSON object in a string.</p></li>
 be found using the Azure CLI.</p></li>
 <li><p><strong>type_handler_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of the extension to
 use, available versions can be found using the Azure CLI.</p></li>
+<li><p><strong>virtual_machine_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource ID of the virtual machine. This value replaces 
+<code class="docutils literal notranslate"><span class="pre">location</span></code>, <code class="docutils literal notranslate"><span class="pre">resource_group_name</span></code> and <code class="docutils literal notranslate"><span class="pre">virtual_machine_name</span></code>. Changing this forces a new
+resource to be created</p></li>
 <li><p><strong>virtual_machine_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the virtual machine. Changing
 this forces a new resource to be created.</p></li>
 </ul>
@@ -838,6 +982,14 @@ use, available versions can be found using the Azure CLI.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.compute.Extension.virtual_machine_id">
+<code class="sig-name descname">virtual_machine_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.Extension.virtual_machine_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource ID of the virtual machine. This value replaces 
+<code class="docutils literal notranslate"><span class="pre">location</span></code>, <code class="docutils literal notranslate"><span class="pre">resource_group_name</span></code> and <code class="docutils literal notranslate"><span class="pre">virtual_machine_name</span></code>. Changing this forces a new
+resource to be created</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.compute.Extension.virtual_machine_name">
 <code class="sig-name descname">virtual_machine_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.Extension.virtual_machine_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the virtual machine. Changing
@@ -846,7 +998,7 @@ this forces a new resource to be created.</p>
 
 <dl class="method">
 <dt id="pulumi_azure.compute.Extension.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_upgrade_minor_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protected_settings=None</em>, <em class="sig-param">publisher=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">type_handler_version=None</em>, <em class="sig-param">virtual_machine_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Extension.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_upgrade_minor_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protected_settings=None</em>, <em class="sig-param">publisher=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">type_handler_version=None</em>, <em class="sig-param">virtual_machine_id=None</em>, <em class="sig-param">virtual_machine_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Extension.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Extension resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -875,6 +1027,9 @@ specified as a JSON object in a string.</p></li>
 be found using the Azure CLI.</p></li>
 <li><p><strong>type_handler_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of the extension to
 use, available versions can be found using the Azure CLI.</p></li>
+<li><p><strong>virtual_machine_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource ID of the virtual machine. This value replaces 
+<code class="docutils literal notranslate"><span class="pre">location</span></code>, <code class="docutils literal notranslate"><span class="pre">resource_group_name</span></code> and <code class="docutils literal notranslate"><span class="pre">virtual_machine_name</span></code>. Changing this forces a new
+resource to be created</p></li>
 <li><p><strong>virtual_machine_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the virtual machine. Changing
 this forces a new resource to be created.</p></li>
 </ul>
@@ -996,6 +1151,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetDedicatedHostGroupResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostGroupResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.compute.GetDedicatedHostResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetDedicatedHostResult</code><span class="sig-paren">(</span><em class="sig-param">dedicated_host_group_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDedicatedHost.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetDedicatedHostResult.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location where the Dedicated Host exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetDedicatedHostResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the Dedicated Host.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetDedicatedHostResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -3727,6 +3906,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/availability_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/availability_set.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.compute.get_dedicated_host">
+<code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_dedicated_host</code><span class="sig-paren">(</span><em class="sig-param">dedicated_host_group_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_dedicated_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Dedicated Host.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dedicated_host_group_name</strong> (<em>str</em>) – Specifies the name of the Dedicated Host Group the Dedicated Host is located in.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the Dedicated Host.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the resource group the Dedicated Host is located in.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dedicated_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dedicated_host.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

@@ -431,7 +431,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.AwaitableGetKeyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">AwaitableGetKeyResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.AwaitableGetKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">AwaitableGetKeyResult</code><span class="sig-paren">(</span><em class="sig-param">created_date=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">last_updated_date=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.AwaitableGetKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1299,8 +1299,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.GetKeyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">GetKeyResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">GetKeyResult</code><span class="sig-paren">(</span><em class="sig-param">created_date=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">last_updated_date=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKey.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetKeyResult.created_date">
+<code class="sig-name descname">created_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetKeyResult.created_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time when the API Key was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetKeyResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetKeyResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the API Key.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetKeyResult.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetKeyResult.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether the API Key is enabled.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.GetKeyResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetKeyResult.id" title="Permalink to this definition">¶</a></dt>
@@ -1308,9 +1326,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetKeyResult.last_updated_date">
+<code class="sig-name descname">last_updated_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetKeyResult.last_updated_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time when the API Key was last updated.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.apigateway.GetKeyResult.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetKeyResult.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set to the name of the API Key.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetKeyResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetKeyResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags for the resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2637,6 +2667,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>endpoint_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">types</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A list of endpoint types. This resource currently only supports managing a single value. Valid values: <code class="docutils literal notranslate"><span class="pre">EDGE</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE</span></code>. If unspecified, defaults to <code class="docutils literal notranslate"><span class="pre">EDGE</span></code>. Must be declared as <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code> in non-Commercial partitions. Refer to the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html">documentation</a> for more information on the difference between edge-optimized and regional APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpcEndpointIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of VPC Endpoint Ids. It is only supported for PRIVATE endpoint type.</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_rest_api.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_rest_api.html.markdown</a>.</p>
@@ -2683,6 +2714,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Nested argument defining API endpoint configuration including endpoint type. Defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">types</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A list of endpoint types. This resource currently only supports managing a single value. Valid values: <code class="docutils literal notranslate"><span class="pre">EDGE</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE</span></code>. If unspecified, defaults to <code class="docutils literal notranslate"><span class="pre">EDGE</span></code>. Must be declared as <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code> in non-Commercial partitions. Refer to the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html">documentation</a> for more information on the difference between edge-optimized and regional APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpcEndpointIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of VPC Endpoint Ids. It is only supported for PRIVATE endpoint type.</p></li>
 </ul>
 </dd></dl>
 
@@ -2749,6 +2781,7 @@ e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:execut
 <p>The <strong>endpoint_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">types</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A list of endpoint types. This resource currently only supports managing a single value. Valid values: <code class="docutils literal notranslate"><span class="pre">EDGE</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE</span></code>. If unspecified, defaults to <code class="docutils literal notranslate"><span class="pre">EDGE</span></code>. Must be declared as <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code> in non-Commercial partitions. Refer to the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html">documentation</a> for more information on the difference between edge-optimized and regional APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpcEndpointIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of VPC Endpoint Ids. It is only supported for PRIVATE endpoint type.</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_rest_api.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_rest_api.html.markdown</a>.</p>
@@ -3404,7 +3437,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.apigateway.get_key">
-<code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">get_key</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_key" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">get_key</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the name and value of a pre-existing API Key, for
 example to supply credentials for a dependency microservice.</p>
 <dl class="field-list simple">

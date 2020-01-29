@@ -617,7 +617,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>workflow_schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Schema to use for this Logic App Workflow. Defaults to <code class="docutils literal notranslate"><span class="pre">https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>workflow_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of the Schema used for this Logic App Workflow. Defaults to <code class="docutils literal notranslate"><span class="pre">1.0.0.0</span></code>. Changing this forces a new resource to be create.d</p></li>
+<li><p><strong>workflow_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of the Schema used for this Logic App Workflow. Defaults to <code class="docutils literal notranslate"><span class="pre">1.0.0.0</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -669,7 +669,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.logicapps.Workflow.workflow_version">
 <code class="sig-name descname">workflow_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.workflow_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the version of the Schema used for this Logic App Workflow. Defaults to <code class="docutils literal notranslate"><span class="pre">1.0.0.0</span></code>. Changing this forces a new resource to be create.d</p>
+<dd><p>Specifies the version of the Schema used for this Logic App Workflow. Defaults to <code class="docutils literal notranslate"><span class="pre">1.0.0.0</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="method">
@@ -690,7 +690,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>workflow_schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Schema to use for this Logic App Workflow. Defaults to <code class="docutils literal notranslate"><span class="pre">https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>workflow_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of the Schema used for this Logic App Workflow. Defaults to <code class="docutils literal notranslate"><span class="pre">1.0.0.0</span></code>. Changing this forces a new resource to be create.d</p></li>
+<li><p><strong>workflow_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of the Schema used for this Logic App Workflow. Defaults to <code class="docutils literal notranslate"><span class="pre">1.0.0.0</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
