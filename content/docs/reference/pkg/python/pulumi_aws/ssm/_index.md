@@ -23,7 +23,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the resource that you want to register.</p></li>
-<li><p><strong>expiration_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A timestamp in <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 format</a> by which this activation request should expire. The default value is 24 hours from resource creation time.</p></li>
 <li><p><strong>iam_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM Role to attach to the managed instance.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default name of the registered managed instance.</p></li>
 <li><p><strong>registration_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of managed instances you want to register. The default value is 1 instance.</p></li>
@@ -44,12 +43,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.ssm.Activation.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Activation.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The description of the resource that you want to register.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.ssm.Activation.expiration_date">
-<code class="sig-name descname">expiration_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Activation.expiration_date" title="Permalink to this definition">¶</a></dt>
-<dd><p>A timestamp in <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 format</a> by which this activation request should expire. The default value is 24 hours from resource creation time.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -101,8 +94,6 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>activation_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The code the system generates when it processes the activation.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the resource that you want to register.</p></li>
-<li><p><strong>expiration_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A timestamp in <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 format</a> by which this activation request should expire. The default value is 24 hours from resource creation time.</p>
-</p></li>
 <li><p><strong>expired</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If the current activation has expired.</p></li>
 <li><p><strong>iam_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM Role to attach to the managed instance.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default name of the registered managed instance.</p></li>
@@ -362,13 +353,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.Document">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">Document</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">document_format=None</em>, <em class="sig-param">document_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Document" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">Document</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attachments_sources=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">document_format=None</em>, <em class="sig-param">document_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Document" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Document resource</p>
 <blockquote>
 <div><p><strong>NOTE on updating SSM documents:</strong> Only documents with a schema version of 2.0
 or greater can update their content once created, see [SSM Schema Features][1]. To update a document with an older
 schema version you must recreate the resource.</p>
 </div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">attachments_source</span></code> block supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> - (Required) The key describing the location of an attachment to a document. Valid key types include: <code class="docutils literal notranslate"><span class="pre">SourceUrl</span></code> and <code class="docutils literal notranslate"><span class="pre">S3FileUrl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> - (Required) The value describing the location of an attachment to a document</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Optional) The name of the document attachment file</p></li>
+</ul>
 <p>The permissions attribute specifies how you want to share the document. If you share a document privately,
 you must specify the AWS user account IDs for those people who can use the document. If you share a document
 publicly, you must specify All as the account ID.</p>
@@ -382,15 +379,22 @@ publicly, you must specify All as the account ID.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>attachments_sources</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more configuration blocks describing attachments sources to a version of a document. Defined below.</p></li>
 <li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The JSON or YAML content of the document.</p></li>
 <li><p><strong>document_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The format of the document. Valid document types include: <code class="docutils literal notranslate"><span class="pre">JSON</span></code> and <code class="docutils literal notranslate"><span class="pre">YAML</span></code></p></li>
-<li><p><strong>document_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the document. Valid document types include: <code class="docutils literal notranslate"><span class="pre">Command</span></code>, <code class="docutils literal notranslate"><span class="pre">Policy</span></code>, <code class="docutils literal notranslate"><span class="pre">Automation</span></code> and <code class="docutils literal notranslate"><span class="pre">Session</span></code></p></li>
+<li><p><strong>document_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the document. Valid document types include: <code class="docutils literal notranslate"><span class="pre">Automation</span></code>, <code class="docutils literal notranslate"><span class="pre">Command</span></code>, <code class="docutils literal notranslate"><span class="pre">Package</span></code>, <code class="docutils literal notranslate"><span class="pre">Policy</span></code>, and <code class="docutils literal notranslate"><span class="pre">Session</span></code></p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the document.</p></li>
 <li><p><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Additional Permissions to attach to the document. See Permissions below for details.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>attachments_sources</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the document.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
 <p>The <strong>permissions</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">account_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -399,6 +403,17 @@ publicly, you must specify All as the account ID.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_document.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_document.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.ssm.Document.attachments_sources">
+<code class="sig-name descname">attachments_sources</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Document.attachments_sources" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more configuration blocks describing attachments sources to a version of a document. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the document.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.Document.content">
 <code class="sig-name descname">content</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Document.content" title="Permalink to this definition">¶</a></dt>
@@ -432,7 +447,7 @@ publicly, you must specify All as the account ID.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.Document.document_type">
 <code class="sig-name descname">document_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Document.document_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of the document. Valid document types include: <code class="docutils literal notranslate"><span class="pre">Command</span></code>, <code class="docutils literal notranslate"><span class="pre">Policy</span></code>, <code class="docutils literal notranslate"><span class="pre">Automation</span></code> and <code class="docutils literal notranslate"><span class="pre">Session</span></code></p>
+<dd><p>The type of the document. Valid document types include: <code class="docutils literal notranslate"><span class="pre">Automation</span></code>, <code class="docutils literal notranslate"><span class="pre">Command</span></code>, <code class="docutils literal notranslate"><span class="pre">Package</span></code>, <code class="docutils literal notranslate"><span class="pre">Policy</span></code>, and <code class="docutils literal notranslate"><span class="pre">Session</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -513,7 +528,7 @@ publicly, you must specify All as the account ID.</p>
 
 <dl class="method">
 <dt id="pulumi_aws.ssm.Document.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">created_date=None</em>, <em class="sig-param">default_version=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">document_format=None</em>, <em class="sig-param">document_type=None</em>, <em class="sig-param">hash=None</em>, <em class="sig-param">hash_type=None</em>, <em class="sig-param">latest_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">platform_types=None</em>, <em class="sig-param">schema_version=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Document.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">attachments_sources=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">created_date=None</em>, <em class="sig-param">default_version=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">document_format=None</em>, <em class="sig-param">document_type=None</em>, <em class="sig-param">hash=None</em>, <em class="sig-param">hash_type=None</em>, <em class="sig-param">latest_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">platform_types=None</em>, <em class="sig-param">schema_version=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Document.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Document resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -522,12 +537,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>attachments_sources</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more configuration blocks describing attachments sources to a version of a document. Defined below.</p></li>
 <li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The JSON or YAML content of the document.</p></li>
 <li><p><strong>created_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the document was created.</p></li>
 <li><p><strong>default_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default version of the document.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the document.</p></li>
 <li><p><strong>document_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The format of the document. Valid document types include: <code class="docutils literal notranslate"><span class="pre">JSON</span></code> and <code class="docutils literal notranslate"><span class="pre">YAML</span></code></p></li>
-<li><p><strong>document_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the document. Valid document types include: <code class="docutils literal notranslate"><span class="pre">Command</span></code>, <code class="docutils literal notranslate"><span class="pre">Policy</span></code>, <code class="docutils literal notranslate"><span class="pre">Automation</span></code> and <code class="docutils literal notranslate"><span class="pre">Session</span></code></p></li>
+<li><p><strong>document_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the document. Valid document types include: <code class="docutils literal notranslate"><span class="pre">Automation</span></code>, <code class="docutils literal notranslate"><span class="pre">Command</span></code>, <code class="docutils literal notranslate"><span class="pre">Package</span></code>, <code class="docutils literal notranslate"><span class="pre">Policy</span></code>, and <code class="docutils literal notranslate"><span class="pre">Session</span></code></p></li>
 <li><p><strong>hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The sha1 or sha256 of the document content</p></li>
 <li><p><strong>hash_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – “Sha1” “Sha256”. The hashing algorithm used when hashing the content.</p></li>
 <li><p><strong>latest_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The latest version of the document.</p></li>
@@ -542,6 +558,12 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>attachments_sources</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the document.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
 <p>The <strong>parameters</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">default_value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>

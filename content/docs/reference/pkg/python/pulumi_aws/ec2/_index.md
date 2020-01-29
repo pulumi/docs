@@ -2154,7 +2154,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.</p>
 <code class="sig-name descname">main_route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpc.main_route_table_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the main route table associated with
 this VPC. Note that you can change a VPC’s main route table by using an
-<cite>``ec2.MainRouteTableAssociation`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html">https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html</a>&gt;`_</p>
+<cite>``ec2.MainRouteTableAssociation`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html">https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html</a>&gt;`_</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2197,7 +2197,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.</p>
 <li><p><strong>ipv6_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv6 CIDR block of the VPC</p></li>
 <li><p><strong>main_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the main route table associated with
 this VPC. Note that you can change a VPC’s main route table by using an
-<cite>``ec2.MainRouteTableAssociation`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html">https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html</a>&gt;`_</p></li>
+<cite>``ec2.MainRouteTableAssociation`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html">https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html</a>&gt;`_</p></li>
 <li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the VPC.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
@@ -5064,7 +5064,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.KeyPair">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">KeyPair</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">key_name_prefix=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.KeyPair" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">KeyPair</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">key_name_prefix=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.KeyPair" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">EC2 key pair</a> resource. A key pair is used to control login access to EC2 instances.</p>
 <p>Currently this resource requires an existing user-supplied key pair. This key pair’s public key will be registered with AWS to allow logging-in to EC2 instances.</p>
 <p>When importing an existing key pair the public key material may be in any format supported by AWS. Supported formats (per the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#how-to-generate-your-own-key-and-import-it-to-aws">AWS documentation</a>) are:</p>
@@ -5081,6 +5081,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the key pair.</p></li>
 <li><p><strong>key_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.</p></li>
 <li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key material.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -5106,14 +5107,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ec2.KeyPair.key_pair_id">
+<code class="sig-name descname">key_pair_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.KeyPair.key_pair_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The key pair ID.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ec2.KeyPair.public_key">
 <code class="sig-name descname">public_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.KeyPair.public_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The public key material.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.KeyPair.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.KeyPair.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.ec2.KeyPair.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fingerprint=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">key_name_prefix=None</em>, <em class="sig-param">public_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.KeyPair.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fingerprint=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">key_name_prefix=None</em>, <em class="sig-param">key_pair_id=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.KeyPair.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing KeyPair resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -5125,7 +5138,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MD5 public key fingerprint as specified in section 4 of RFC 4716.</p></li>
 <li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the key pair.</p></li>
 <li><p><strong>key_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.</p></li>
+<li><p><strong>key_pair_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key pair ID.</p></li>
 <li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key material.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -6813,6 +6828,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ec2.NetworkInterface.mac_address">
+<code class="sig-name descname">mac_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface.mac_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The MAC address of the network interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.NetworkInterface.private_dns_name">
+<code class="sig-name descname">private_dns_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface.private_dns_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The private DNS name of the network interface (IPv4).</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkInterface.private_ips">
 <code class="sig-name descname">private_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface.private_ips" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of private IPs to assign to the ENI.</p>
@@ -6850,7 +6877,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.ec2.NetworkInterface.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attachments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">private_dns_name=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">private_ips=None</em>, <em class="sig-param">private_ips_count=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">source_dest_check=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attachments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">mac_address=None</em>, <em class="sig-param">private_dns_name=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">private_ips=None</em>, <em class="sig-param">private_ips_count=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">source_dest_check=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NetworkInterface resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -6861,6 +6888,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>attachments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Block to define the attachment of the ENI. Documented below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the network interface.</p></li>
+<li><p><strong>mac_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MAC address of the network interface.</p></li>
+<li><p><strong>private_dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private DNS name of the network interface (IPv4).</p></li>
 <li><p><strong>private_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of private IPs to assign to the ENI.</p></li>
 <li><p><strong>private_ips_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of secondary private IPs to assign to the ENI. The total number of private IPs will be 1 + private_ips_count, as a primary private IP will be assiged to an ENI by default.</p></li>
 <li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of security group IDs to assign to the ENI.</p></li>
@@ -7314,7 +7343,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.PlacementGroup">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">PlacementGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">strategy=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.PlacementGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">PlacementGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">strategy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.PlacementGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 placement group. Read more about placement groups
 in <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">AWS Docs</a>.</p>
 <dl class="field-list simple">
@@ -7324,6 +7353,7 @@ in <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the placement group.</p></li>
 <li><p><strong>strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The placement strategy.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
 </ul>
 </dd>
 </dl>
@@ -7337,14 +7367,26 @@ in <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ec2.PlacementGroup.placement_group_id">
+<code class="sig-name descname">placement_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.PlacementGroup.placement_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the placement group.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ec2.PlacementGroup.strategy">
 <code class="sig-name descname">strategy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.PlacementGroup.strategy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The placement strategy.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.PlacementGroup.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.PlacementGroup.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.ec2.PlacementGroup.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">strategy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.PlacementGroup.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">placement_group_id=None</em>, <em class="sig-param">strategy=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.PlacementGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PlacementGroup resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -7354,7 +7396,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the placement group.</p></li>
+<li><p><strong>placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the placement group.</p></li>
 <li><p><strong>strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The placement strategy.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
 </ul>
 </dd>
 </dl>
@@ -8226,10 +8270,11 @@ a conflict of rule settings and will overwrite rules.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cidr_blocks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of CIDR blocks. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">source_security_group_id</span></code>.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the rule.</p></li>
-<li><p><strong>from_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The start port (or ICMP type number if protocol is “icmp”).</p></li>
+<li><p><strong>from_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The start port (or ICMP type number if protocol is “icmp” or “icmpv6”).</p></li>
 <li><p><strong>ipv6_cidr_blocks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IPv6 CIDR blocks.</p></li>
-<li><p><strong>prefix_list_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of prefix list IDs (for allowing access to VPC endpoints).</p></li>
-<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol. If not icmp, tcp, udp, or all use the <a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">protocol number</a></p></li>
+<li><p><strong>prefix_list_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of prefix list IDs (for allowing access to VPC endpoints).
+Only valid with <code class="docutils literal notranslate"><span class="pre">egress</span></code>.</p></li>
+<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol. If not icmp, icmpv6, tcp, udp, or all use the <a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">protocol number</a></p></li>
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group to apply this rule to.</p></li>
 <li><p><strong>self</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">source_security_group_id</span></code>.</p></li>
@@ -8259,7 +8304,7 @@ or <code class="docutils literal notranslate"><span class="pre">egress</span></c
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SecurityGroupRule.from_port">
 <code class="sig-name descname">from_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule.from_port" title="Permalink to this definition">¶</a></dt>
-<dd><p>The start port (or ICMP type number if protocol is “icmp”).</p>
+<dd><p>The start port (or ICMP type number if protocol is “icmp” or “icmpv6”).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8271,13 +8316,14 @@ or <code class="docutils literal notranslate"><span class="pre">egress</span></c
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SecurityGroupRule.prefix_list_ids">
 <code class="sig-name descname">prefix_list_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule.prefix_list_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of prefix list IDs (for allowing access to VPC endpoints).</p>
+<dd><p>List of prefix list IDs (for allowing access to VPC endpoints).
+Only valid with <code class="docutils literal notranslate"><span class="pre">egress</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SecurityGroupRule.protocol">
 <code class="sig-name descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule.protocol" title="Permalink to this definition">¶</a></dt>
-<dd><p>The protocol. If not icmp, tcp, udp, or all use the <a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">protocol number</a></p>
+<dd><p>The protocol. If not icmp, icmpv6, tcp, udp, or all use the <a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">protocol number</a></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8326,10 +8372,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cidr_blocks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of CIDR blocks. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">source_security_group_id</span></code>.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the rule.</p></li>
-<li><p><strong>from_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The start port (or ICMP type number if protocol is “icmp”).</p></li>
+<li><p><strong>from_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The start port (or ICMP type number if protocol is “icmp” or “icmpv6”).</p></li>
 <li><p><strong>ipv6_cidr_blocks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IPv6 CIDR blocks.</p></li>
-<li><p><strong>prefix_list_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of prefix list IDs (for allowing access to VPC endpoints).</p></li>
-<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The protocol. If not icmp, tcp, udp, or all use the <a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">protocol number</a></p>
+<li><p><strong>prefix_list_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of prefix list IDs (for allowing access to VPC endpoints).
+Only valid with <code class="docutils literal notranslate"><span class="pre">egress</span></code>.</p></li>
+<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The protocol. If not icmp, icmpv6, tcp, udp, or all use the <a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">protocol number</a></p>
 </p></li>
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group to apply this rule to.</p></li>
 <li><p><strong>self</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the security group itself will be added as
@@ -10133,7 +10180,7 @@ Only valid in regions and accounts that support EC2 Classic.</p>
 <code class="sig-name descname">main_route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Vpc.main_route_table_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the main route table associated with
 this VPC. Note that you can change a VPC’s main route table by using an
-<cite>``ec2.MainRouteTableAssociation`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html">https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html</a>&gt;`_.</p>
+<cite>``ec2.MainRouteTableAssociation`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html">https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html</a>&gt;`_.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -10179,7 +10226,7 @@ Only valid in regions and accounts that support EC2 Classic.</p></li>
 <li><p><strong>ipv6_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv6 CIDR block.</p></li>
 <li><p><strong>main_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the main route table associated with
 this VPC. Note that you can change a VPC’s main route table by using an
-<cite>``ec2.MainRouteTableAssociation`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html">https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html</a>&gt;`_.</p></li>
+<cite>``ec2.MainRouteTableAssociation`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html">https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html</a>&gt;`_.</p></li>
 <li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the VPC.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
@@ -12837,7 +12884,7 @@ A subnet will be selected if any one of the given values matches.</p></li>
 <dt id="pulumi_aws.ec2.get_subnet_ids">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_subnet_ids</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_subnet_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ec2.getSubnetIds</span></code> provides a list of ids for a vpc_id</p>
-<p>This resource can be useful for getting back a list of subnet ids for a vpc.</p>
+<p>This resource can be useful for getting back a set of subnet ids for a vpc.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
