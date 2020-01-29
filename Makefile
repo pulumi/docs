@@ -63,7 +63,8 @@ travis_push::
 	$(MAKE) ensure
 ifeq ($(TRAVIS_BRANCH),master)
 	HUGO_ENVIRONMENT=production $(MAKE) build
-	./scripts/run-pulumi.sh update production
+	# Skip the deployment while we manage the transition to the new method.
+	# ./scripts/run-pulumi.sh update production
 else
 	$(MAKE) build
 endif
