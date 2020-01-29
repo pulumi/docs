@@ -271,7 +271,7 @@ res, err := NewResource(ctx, name, args, opt1, opt2)
 var res = new Resource(name, args, options);
 ```
 
-All resources have a [`name`](#names), which must be unique across your entire Pulumi program. This _logical name_ influences the _physical name_ assigned by your infrastructure's cloud provider, although [Pulumi auto-names resources](#autonaming) by default, so they may differ.
+All resources have a required [`name`](#names) argument, which must be unique across resources of the same kind in a [stack]({{< relref "stack" >}}). This _logical name_ influences the _physical name_ assigned by your infrastructure's cloud provider, although [Pulumi auto-names resources](#autonaming) by default, so they may differ.
 
 The `args` argument is an object with a set of named property input values that are used to initialize the resource. These can be normal raw values---such as strings, integers, lists, and maps---or [outputs from other resources](#outputs).
 
