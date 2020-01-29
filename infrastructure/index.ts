@@ -47,9 +47,10 @@ const contentBucket = new aws.s3.Bucket(
     },
 );
 
-// Create a bucket for handling uploads of website archive files.
-const cluster = awsx.ecs.Cluster.getDefault();
+// Create a bucket for receiving uploaded tarballs of website builds.
 const archiveBucket = new aws.s3.Bucket("archive-bucket");
+
+// Create a container task for handling tarball uploads.
 const archiveHandler = new awsx.ecs.FargateTaskDefinition("archiveHandler", {
     container: {
         image: awsx.ecs.Image.fromPath("archiveHandlerImage", "./"),
@@ -58,8 +59,9 @@ const archiveHandler = new awsx.ecs.FargateTaskDefinition("archiveHandler", {
     },
 });
 
-// Handle archive uploads by running container task that downloads and unpacks the file
-// and synchronizes its contents with S3.
+// Handle tarball uploads by running the container task, which downloads the file, unpacks
+// it, and synchronizes its contents with S3.
+const cluster = awsx.ecs.Cluster.getDefault();
 archiveBucket.onObjectCreated("onArchiveUploaded", new aws.lambda.CallbackFunction<aws.s3.BucketEvent, void>("onUploadHandler", {
     runtime: "nodejs10.x",
     policies: awsx.ecs.TaskDefinition.defaultTaskRolePolicyARNs(),
@@ -80,6 +82,9 @@ archiveBucket.onObjectCreated("onArchiveUploaded", new aws.lambda.CallbackFuncti
                     containerOverrides: [
                         {
                             name: "container",
+
+                            // Pass the S3 URL of the uploaded tarball and destination
+                            // bucket to the container task.
                             command: [
                                 source,
                                 dest,
@@ -302,8 +307,8 @@ function translateRedirect(filePath: string, redirect: string): string {
 }
 
 // Find all Hugo-generated redirects and convert them to proper (Pulumi-managed) AWS
-// website redirects. We allow Pulumi to manage these, rather than the AWS CLI, because
-// the AWS CLI doesn't offer a way to bulk-update them.
+// website redirects. We manage these with Pulumi (rather than the AWS CLI) because `aws s3api`
+// does not support bulk submissions.
 // https://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html
 const redirectPaths = new Set<string>();
 glob.sync(`${webContentsRootPath}/**/*.html`).map(filePath => {
@@ -342,7 +347,7 @@ if (!pulumi.runtime.isDryRun()) {
             {
                 gzip: true,
                 sync: true,
-                // Include only files not flagged as redirects.
+                // Exclude redirects.
                 filter: (filePath, stat) => !redirectPaths.has(filePath),
                 file: archivePath,
                 C: config.pathToWebsiteContents,

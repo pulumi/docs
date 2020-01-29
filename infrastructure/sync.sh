@@ -1,6 +1,9 @@
 #!/bin/sh
 
+# S3 URL of the website tarball.
 site_archive="$1"
+
+# S3 URL of the destination website bucket (e.g., the one hosting www.pulumi.com).
 site_bucket="$2"
 
 # Download the archive from the archive bucket and unpack it into a local folder.
@@ -13,11 +16,11 @@ tar -xzvf $(basename "$site_archive") -C site_contents
 cd site_contents
 
 for file in $(find css -name "styles.*.css") ; do
-    aws s3 cp "$file" "$site_bucket/$file"
+    aws s3 cp "$file" "$site_bucket/$file" --acl public-read
 done
 
 for file in $(find js -name "bundle.min.*.js") ; do
-    aws s3 cp "$file" "$site_bucket/$file"
+    aws s3 cp "$file" "$site_bucket/$file"  --acl public-read
 done
 
 cd ..
