@@ -45,9 +45,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The name of this integration</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_signalfx.aws.ExternalIntegration.signalfx_aws_account">
+<code class="sig-name descname">signalfx_aws_account</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.signalfx_aws_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>The AWS Account ARN to use with your policies/roles, provided by SignalFx.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_signalfx.aws.ExternalIntegration.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">signalfx_aws_account=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ExternalIntegration resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -58,6 +64,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>external_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The external ID to use with your IAM role and with <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this integration</p></li>
+<li><p><strong>signalfx_aws_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Account ARN to use with your policies/roles, provided by SignalFx.</p></li>
 </ul>
 </dd>
 </dl>
@@ -351,9 +358,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The name of this integration</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_signalfx.aws.TokenIntegration.signalfx_aws_account">
+<code class="sig-name descname">signalfx_aws_account</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.signalfx_aws_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>The AWS Account ARN to use with your policies/roles, provided by SignalFx.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_signalfx.aws.TokenIntegration.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">token_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">signalfx_aws_account=None</em>, <em class="sig-param">token_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TokenIntegration resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -363,6 +376,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this integration</p></li>
+<li><p><strong>signalfx_aws_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Account ARN to use with your policies/roles, provided by SignalFx.</p></li>
 </ul>
 </dd>
 </dl>

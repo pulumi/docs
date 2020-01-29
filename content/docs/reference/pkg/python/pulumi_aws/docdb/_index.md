@@ -45,7 +45,7 @@ instances in the DB cluster can be created in.</p></li>
 <li><p><strong>db_cluster_parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A cluster parameter group to associate with the cluster.</p></li>
 <li><p><strong>db_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A DB subnet group to associate with this DB instance.</p></li>
 <li><p><strong>enabled_cloudwatch_logs_exports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of log types to export to cloudwatch. If omitted, no logs will be exported.
-The following log types are supported: <code class="docutils literal notranslate"><span class="pre">audit</span></code>.</p></li>
+The following log types are supported: <code class="docutils literal notranslate"><span class="pre">audit</span></code>, <code class="docutils literal notranslate"><span class="pre">profiler</span></code>.</p></li>
 <li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for this DB cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">docdb</span></code>. Valid Values: <code class="docutils literal notranslate"><span class="pre">docdb</span></code></p></li>
 <li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database engine version. Updating this argument results in an outage.</p></li>
 <li><p><strong>final_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of your final DB snapshot
@@ -137,7 +137,7 @@ instances in the DB cluster can be created in.</p>
 <dt id="pulumi_aws.docdb.Cluster.enabled_cloudwatch_logs_exports">
 <code class="sig-name descname">enabled_cloudwatch_logs_exports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.Cluster.enabled_cloudwatch_logs_exports" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of log types to export to cloudwatch. If omitted, no logs will be exported.
-The following log types are supported: <code class="docutils literal notranslate"><span class="pre">audit</span></code>.</p>
+The following log types are supported: <code class="docutils literal notranslate"><span class="pre">audit</span></code>, <code class="docutils literal notranslate"><span class="pre">profiler</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -266,7 +266,7 @@ instances in the DB cluster can be created in.</p></li>
 <li><p><strong>db_cluster_parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A cluster parameter group to associate with the cluster.</p></li>
 <li><p><strong>db_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A DB subnet group to associate with this DB instance.</p></li>
 <li><p><strong>enabled_cloudwatch_logs_exports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of log types to export to cloudwatch. If omitted, no logs will be exported.
-The following log types are supported: <code class="docutils literal notranslate"><span class="pre">audit</span></code>.</p></li>
+The following log types are supported: <code class="docutils literal notranslate"><span class="pre">audit</span></code>, <code class="docutils literal notranslate"><span class="pre">profiler</span></code>.</p></li>
 <li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS address of the DocDB instance</p></li>
 <li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for this DB cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">docdb</span></code>. Valid Values: <code class="docutils literal notranslate"><span class="pre">docdb</span></code></p></li>
 <li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database engine version. Updating this argument results in an outage.</p></li>

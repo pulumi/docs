@@ -245,13 +245,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.inspector.ResourceGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.inspector.</code><code class="sig-name descname">ResourceGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.ResourceGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Inspector resource group</p>
+<dd><p>Provides an Amazon Inspector resource group resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The tags on your EC2 Instance.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of tags that are used to select the EC2 instances to be included in an <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/inspector_assessment_target.html">Amazon Inspector assessment target</a>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -267,7 +267,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.inspector.ResourceGroup.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.inspector.ResourceGroup.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>The tags on your EC2 Instance.</p>
+<dd><p>Key-value map of tags that are used to select the EC2 instances to be included in an <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/inspector_assessment_target.html">Amazon Inspector assessment target</a>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -282,7 +282,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource group ARN.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The tags on your EC2 Instance.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Key-value map of tags that are used to select the EC2 instances to be included in an <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/inspector_assessment_target.html">Amazon Inspector assessment target</a>.</p>
+</p></li>
 </ul>
 </dd>
 </dl>
