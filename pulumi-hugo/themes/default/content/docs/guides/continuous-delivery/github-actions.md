@@ -66,10 +66,9 @@ jobs:
     name: Preview
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - run: scripts/build
       - uses: docker://pulumi/actions
         with:
           args: preview
@@ -110,10 +109,9 @@ jobs:
     name: Update
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - run: scripts/build
       - uses: docker://pulumi/actions
         with:
           args: up
@@ -223,6 +221,7 @@ jobs:
         env:
           ...
           PULUMI_CI: pr
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMENT_ON_PR: 1
 ```
 
