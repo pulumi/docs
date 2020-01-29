@@ -25,7 +25,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the integration is enabled.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the integration.</p></li>
-<li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – GCP integration poll rate in milliseconds. Can be set to either 60000 or 300000 (1 minute or 5 minutes).</p></li>
+<li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute or 5 minutes).</p></li>
 <li><p><strong>project_service_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP projects to add.</p></li>
 <li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’.</p></li>
 </ul>
@@ -54,7 +54,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_signalfx.gcp.Integration.poll_rate">
 <code class="sig-name descname">poll_rate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.gcp.Integration.poll_rate" title="Permalink to this definition">¶</a></dt>
-<dd><p>GCP integration poll rate in milliseconds. Can be set to either 60000 or 300000 (1 minute or 5 minutes).</p>
+<dd><p>GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute or 5 minutes).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -86,7 +86,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the integration is enabled.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the integration.</p></li>
-<li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – GCP integration poll rate in milliseconds. Can be set to either 60000 or 300000 (1 minute or 5 minutes).</p></li>
+<li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute or 5 minutes).</p></li>
 <li><p><strong>project_service_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP projects to add.</p></li>
 <li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’.</p></li>
 </ul>
