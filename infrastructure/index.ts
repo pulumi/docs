@@ -537,6 +537,7 @@ if (!pulumi.runtime.isDryRun()) {
 }
 
 const aRecord = createAliasRecord(config.targetDomain, cdn);
+const aliasRecord = createAliasRecord(config.websiteDomain, cdn);
 
 export const contentBucketUri = contentBucket.bucket.apply(b => `s3://${b}`);
 export const contentBucketWebsiteDomain = contentBucket.websiteDomain;
