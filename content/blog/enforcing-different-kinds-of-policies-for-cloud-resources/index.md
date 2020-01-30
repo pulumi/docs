@@ -31,7 +31,7 @@ Let's take a closer look at these and why you would use one over the other.
 
 Pulumi CrossGuard calls `ResourceValidationPolicy` type policies for each resource in a stack. These policies are run _before_ a resource is registered and thus block an out-of-compliance resource from ever being created or modified.
 
-A resource validation function is passed `args` with more information about the resource (such as the resource's type, _input_ properties, name, and URN) and a `reportViolation` for reporting a policy violation. In most cases, you can use the helper function `validateTypedResource` to filter the resource type you want to validate and provide stronger typing of the resource's input properties.
+A resource validation function is passed `args` with more information about the resource (such as the resource's type, _input_ properties, name, and URN) and a `reportViolation` for reporting a policy violation. In most cases, you can use the helper function `validateResourceOfType` to filter the resource type you want to validate and provide stronger typing of the resource's input properties.
 
 The following is an example of a resource validation policy:
 
@@ -40,7 +40,7 @@ const ec2DetailedMonitoring: ResourceValidationPolicy = {
     name: "ec2-detailed-monitoring",
     description: "Detailed monitoring should be enabled for all EC2 instances.",
     enforcementLevel: "mandatory",
-    validateResource: validateTypedResource(aws.ec2.Instance, (instance, args, reportViolation) => {
+    validateResource: validateResourceOfType(aws.ec2.Instance, (instance, args, reportViolation) => {
         if (instance.monitoring !== true) {
             reportViolation("EC2 Instance should have monitoring enabled.");
         }
@@ -56,17 +56,17 @@ const elbLoggingEnabled: ResourceValidationPolicy = {
     description: "Checks whether the Application Load Balancers and the Classic Load Balancers have logging enabled.",
     enforcementLevel: "mandatory",
     validateResource: [
-        validateTypedResource(aws.elasticloadbalancing.LoadBalancer, (loadBalancer, args, reportViolation) => {
+        validateResourceOfType(aws.elasticloadbalancing.LoadBalancer, (loadBalancer, args, reportViolation) => {
             if (loadBalancer.accessLogs === undefined || !loadBalancer.accessLogs.enabled) {
                 reportViolation("Elastic Load Balancer must have access logs enabled.");
             }
         }),
-        validateTypedResource(aws.elasticloadbalancingv2.LoadBalancer, (loadBalancer, args, reportViolation) => {
+        validateResourceOfType(aws.elasticloadbalancingv2.LoadBalancer, (loadBalancer, args, reportViolation) => {
             if (loadBalancer.accessLogs === undefined || !loadBalancer.accessLogs.enabled) {
                 reportViolation("Elastic Load Balancer must have access logs enabled.");
             }
         }),
-        validateTypedResource(aws.applicationloadbalancing.LoadBalancer, (loadBalancer, args, reportViolation) => {
+        validateResourceOfType(aws.applicationloadbalancing.LoadBalancer, (loadBalancer, args, reportViolation) => {
             if (loadBalancer.accessLogs === undefined || !loadBalancer.accessLogs.enabled) {
                 reportViolation("Application Load Balancer must have access logs enabled.");
             }
@@ -99,7 +99,7 @@ const s3BucketLoggingEnabled: StackValidationPolicy = {
     name: "s3-bucket-logging-enabled",
     description: "Checks whether logging is enabled for your S3 buckets.",
     enforcementLevel: "mandatory",
-    validateStack: validateTypedResources(aws.s3.Bucket, (buckets, args, reportViolation) => {
+    validateStack: validateStackResourcesOfType(aws.s3.Bucket, (buckets, args, reportViolation) => {
         // First, save any bucket IDs that are being used as logging targets.
         const logBucketIDs: Set<string> = new Set();
         for (const bucket of buckets) {
@@ -129,31 +129,9 @@ const s3BucketLoggingEnabled: StackValidationPolicy = {
         }
     }),
 };
-
-// Utility method for defining a new StackValidation that returns the resources matching the provided type.
-function validateTypedResources<TResource extends Resource>(
-    resourceClass: { new(...rest: any[]): TResource },
-    validate: (
-        resources: q.Resolved<TResource>[],
-        args: StackValidationArgs,
-        reportViolation: ReportViolation) => Promise<void> | void,
-): StackValidation {
-    return (args: StackValidationArgs, reportViolation: ReportViolation) => {
-        const isInstance = (<any>resourceClass).isInstance;
-        if (!isInstance || typeof isInstance !== "function") {
-            return;
-        }
-        const resources = args.resources
-            .filter(r => isInstance({ __pulumiType: r.type }) === true)
-            .map(r => ({ ...r.props, urn: r.urn } as q.Resolved<TResource>));
-        validate(resources, args, reportViolation);
-    };
-}
 ```
 
 The example above checks whether logging is enabled on S3 buckets. If a bucket does not have a `loggings` property defined, it violates the policy unless the bucket is a logging `targetBucket` of another bucket. The policy check skips the check if the bucket's `id` isn't available, meaning this policy only runs during updates when the resource `id`s are available.
-
-At the time of writing, there is no built-in helper for stack validation policies similar to `validateTypedResource` for resource validation policies, so we've included our own helper until a [built-in helper](https://github.com/pulumi/pulumi-policy/issues/158) is available.
 
 ## Resource Validation vs. Stack Validation
 
