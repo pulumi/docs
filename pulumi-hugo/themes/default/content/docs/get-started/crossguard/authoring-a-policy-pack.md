@@ -80,7 +80,7 @@ pulumi policy new aws-typescript
 {{% /md %}}
     </div>
 
-1. Tweak the Policy Pack in the `index.ts` file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled. Each Policy must have a unique name, an enforcement level, and a validation function. Here we use `validateTypedResource` that allows us to validate S3 Bucket resources.
+1. Tweak the Policy Pack in the `index.ts` file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled. Each Policy must have a unique name, an enforcement level, and a validation function. Here we use `validateResourceOfType` that allows us to validate S3 Bucket resources.
 
     ```typescript
     // Create a new Policy Pack.
@@ -97,9 +97,9 @@ pulumi policy new aws-typescript
             // simply prints a warning for users, while a "mandatory" policy will block an update from proceeding.
             enforcementLevel: "mandatory",
 
-            // The validateTypedResource function allows you to filter resources. In this case, the rule only
+            // The validateResourceOfType function allows you to filter resources. In this case, the rule only
             // applies to S3 buckets and reports a violation if the acl is "public-read" or "public-read-write".
-            validateResource: validateTypedResource(aws.s3.Bucket, (bucket, args, reportViolation) => {
+            validateResource: validateResourceOfType(aws.s3.Bucket, (bucket, args, reportViolation) => {
                 if (bucket.acl === "public-read" || bucket.acl === "public-read-write") {
                     reportViolation(
                         "You cannot set public-read or public-read-write on an S3 bucket. " +
