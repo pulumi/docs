@@ -494,7 +494,7 @@ if (!pulumi.runtime.isDryRun()) {
 
         fs.writeFileSync(
             `${webContentsRootPath}/redirects.txt`,
-            Array.from(redirectPaths, ([k, v]) => `${k}|${v}`).join("\n"),
+            Array.from(redirectPaths, ([k, v]) => `${k}|${v}`).join("\n") + "\n",
         );
 
         // Tar up the files in the `public` directory.
