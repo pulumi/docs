@@ -1,0 +1,30 @@
+.section-landing-pages {
+    nav {
+        @apply hidden;
+    }
+
+    .landing-page-hero {
+        @apply pt-0;
+
+        #get-started {
+            @apply p-0 bg-transparent;
+
+            div:first-child {
+                @apply mt-0;
+                p {
+                    @apply hidden;
+                }
+            }
+
+            div:nth-child(2) {
+                a {
+                    @apply bg-gray-200;
+                }
+            }
+
+            h2 {
+                @apply text-white;
+            }
+        }
+    }
+}
