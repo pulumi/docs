@@ -30,6 +30,14 @@ cd ..
 echo "Synchronizing to $site_bucket..."
 aws s3 sync site_contents "$site_bucket" --acl public-read --delete
 
+# Create an S3 object for each of the items in the redirect list so it returns a 301
+# redirect (instead of serving the HTML with a meta-redirect). This ensures the right HTTP
+# code response is returned for search engines and enables better support for URL anchors.
+IFS="|"
+while read key location; do
+    aws s3api put-object --key "$key" --website-redirect-location "$location" --bucket "${site_bucket:5}" --acl public-read
+done < redirects.txt
+
 # Set the content-type of latest-version explicitly. (Otherwise, it'll be set as binary/octet-stream.)
 aws s3 cp "site_contents/latest-version" "$site_bucket/latest-version" \
     --content-type "text/plain" --acl public-read --metadata-directive REPLACE
