@@ -35,6 +35,7 @@ aws s3 sync site_contents "$site_bucket" --acl public-read --delete
 # code response is returned for search engines and enables better support for URL anchors.
 IFS="|"
 while read key location; do
+    echo "Redirect $key to $location (${site_bucket:5})"
     aws s3api put-object --key "$key" --website-redirect-location "$location" --bucket "${site_bucket:5}" --acl public-read
 done < site_contents/redirects.txt
 
