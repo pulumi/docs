@@ -473,41 +473,29 @@ async function createAliasRecord(
         });
 }
 
-// Create a stubbed out S3 object with the right metadata for each Hugo-generated redirect
-// so they return a 301 redirect (instead of serving the HTML with a meta-redirect). This
-// ensures the right HTTP code response is returned for search engines, as well as enables
-// better support for URL anchors.
-// https://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html
-const redirectPaths = new Set<string>();
-glob.sync(`${webContentsRootPath}/**/*.html`).map(filePath => {
-    const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
-    const redirect = getMetaRefreshRedirect(filePath);
-
-    if (redirect) {
-        redirectPaths.add(relativeFilePath);
-
-        const redirectObject = new aws.s3.BucketObject(
-            `redirect-${relativeFilePath}`,
-            {
-                acl: "public-read",
-                key: relativeFilePath,
-                bucket: websiteBucket,
-                source: new pulumi.asset.FileAsset("/dev/null"), // Empty file.
-                websiteRedirect: translateRedirect(filePath, redirect),
-            },
-            {
-                parent: websiteBucket,
-            },
-        );
-    }
-});
-
 // If the current run is an update (i.e., not a preview), zip up the contents of the
 // website directory and upload the archive to S3.
 if (!pulumi.runtime.isDryRun()) {
 
     pulumi.all([ archiveBucket.id, websiteBucket.id ]).apply(async ([ archiveBucketId, websiteBucketId ]) => {
         const s3 = new aws.sdk.S3();
+
+        // For each Hugo-generated redirect, write the relative path and destination URL
+        // to a text file to be processed later in the sync step.
+        const redirectPaths = new Map<string, string>();
+        glob.sync(`${webContentsRootPath}/**/*.html`).map(filePath => {
+            const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
+            const redirect = getMetaRefreshRedirect(filePath);
+
+            if (redirect) {
+                redirectPaths.set(relativeFilePath, translateRedirect(filePath, redirect));
+            }
+        });
+
+        fs.writeFileSync(
+            `${webContentsRootPath}/redirects.txt`,
+            Array.from(redirectPaths, ([k, v]) => `${k}|${v}`).join("\n"),
+        );
 
         // Tar up the files in the `public` directory.
         const archivePath = tmp.fileSync({ postfix: ".tgz" }).name;
