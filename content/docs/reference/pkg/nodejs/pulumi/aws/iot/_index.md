@@ -970,6 +970,7 @@ const role = new aws.iam.Role("role", {
 `,
 });
 const rule = new aws.iot.TopicRule("rule", {
+    name: "rule",
     description: "Example rule",
     enabled: true,
     sns: {
