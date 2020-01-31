@@ -104,14 +104,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.sql.DatabaseInstance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.sql.</code><code class="sig-name descname">DatabaseInstance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database_version=None</em>, <em class="sig-param">master_instance_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">replica_configuration=None</em>, <em class="sig-param">root_password=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a new Google SQL Database Instance. For more information, see the <a class="reference external" href="https://cloud.google.com/sql/">official documentation</a>,
-or the <a class="reference external" href="https://cloud.google.com/sql/docs/admin-api/v1beta4/instances">JSON API</a>.</p>
-<blockquote>
-<div><p><strong>NOTE on ``sql.DatabaseInstance``:</strong> - Second-generation instances include a
-default ‘root’&#64;’%’ user with no password. This user will be deleted by this provider on
-instance creation. You should use <code class="docutils literal notranslate"><span class="pre">sql.User</span></code> to define a custom user with
-a restricted host and strong password.</p>
-</div></blockquote>
+<dd><p>Create a DatabaseInstance resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -122,8 +115,7 @@ SQL Server (beta) version to use. Supported values include <code class="docutils
 <code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code>,<code class="docutils literal notranslate"><span class="pre">POSTGRES_11</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_STANDARD</span></code>,
 <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_ENTERPRISE</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_EXPRESS</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_WEB</span></code>.
 <a class="reference external" href="https://cloud.google.com/sql/docs/sqlserver/db-versions">Database Version Policies</a>
-includes an up-to-date reference of supported versions. First-generation
-instances support <code class="docutils literal notranslate"><span class="pre">MYSQL_5_5</span></code> or <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>.</p></li>
+includes an up-to-date reference of supported versions.</p></li>
 <li><p><strong>master_instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance that will act as
 the master in the replication setup. Note, this requires the master to have
 <code class="docutils literal notranslate"><span class="pre">binary_log_enabled</span></code> set, as well as existing backups.</p></li>
@@ -133,13 +125,12 @@ created. This is done because after a name is used, it cannot be reused for
 up to <a class="reference external" href="https://cloud.google.com/sql/docs/delete-instance">one week</a>.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region the instance will sit in. Note, first-generation Cloud SQL instance
-regions do not line up with the Google Compute Engine (GCE) regions, and Cloud SQL is not
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region the instance will sit in. Note, Cloud SQL is not
 available in all regions - choose from one of the options listed <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/instance-locations">here</a>.
 A valid region must be provided to use this resource. If a region is not provided in the resource definition,
-the provider region will be used instead, but this will be an apply-time error for all first-generation
-instances <em>and</em> for second-generation instances if the provider region is not supported with Cloud SQL.
-If you choose not to provide the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument for this resource, make sure you understand this.</p></li>
+the provider region will be used instead, but this will be an apply-time error for instances if the provider
+region is not supported with Cloud SQL. If you choose not to provide the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument for this resource,
+make sure you understand this.</p></li>
 <li><p><strong>replica_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The configuration for replication. The
 configuration is detailed below.</p></li>
 <li><p><strong>root_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ) Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.</p></li>
@@ -242,8 +233,7 @@ SQL Server (beta) version to use. Supported values include <code class="docutils
 <code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code>,<code class="docutils literal notranslate"><span class="pre">POSTGRES_11</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_STANDARD</span></code>,
 <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_ENTERPRISE</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_EXPRESS</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_WEB</span></code>.
 <a class="reference external" href="https://cloud.google.com/sql/docs/sqlserver/db-versions">Database Version Policies</a>
-includes an up-to-date reference of supported versions. First-generation
-instances support <code class="docutils literal notranslate"><span class="pre">MYSQL_5_5</span></code> or <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>.</p>
+includes an up-to-date reference of supported versions.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -287,13 +277,12 @@ performing filtering.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.DatabaseInstance.region">
 <code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>The region the instance will sit in. Note, first-generation Cloud SQL instance
-regions do not line up with the Google Compute Engine (GCE) regions, and Cloud SQL is not
+<dd><p>The region the instance will sit in. Note, Cloud SQL is not
 available in all regions - choose from one of the options listed <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/instance-locations">here</a>.
 A valid region must be provided to use this resource. If a region is not provided in the resource definition,
-the provider region will be used instead, but this will be an apply-time error for all first-generation
-instances <em>and</em> for second-generation instances if the provider region is not supported with Cloud SQL.
-If you choose not to provide the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument for this resource, make sure you understand this.</p>
+the provider region will be used instead, but this will be an apply-time error for instances if the provider
+region is not supported with Cloud SQL. If you choose not to provide the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument for this resource,
+make sure you understand this.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -332,7 +321,7 @@ configuration is detailed below.</p>
 <dt id="pulumi_gcp.sql.DatabaseInstance.service_account_email_address">
 <code class="sig-name descname">service_account_email_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.service_account_email_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>The service account email address assigned to the
-instance. This property is applicable only to Second Generation instances.</p>
+instance.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -422,8 +411,7 @@ SQL Server (beta) version to use. Supported values include <code class="docutils
 <code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code>,<code class="docutils literal notranslate"><span class="pre">POSTGRES_11</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_STANDARD</span></code>,
 <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_ENTERPRISE</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_EXPRESS</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_WEB</span></code>.
 <a class="reference external" href="https://cloud.google.com/sql/docs/sqlserver/db-versions">Database Version Policies</a>
-includes an up-to-date reference of supported versions. First-generation
-instances support <code class="docutils literal notranslate"><span class="pre">MYSQL_5_5</span></code> or <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>.</p>
+includes an up-to-date reference of supported versions.</p>
 </p></li>
 <li><p><strong>master_instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance that will act as
 the master in the replication setup. Note, this requires the master to have
@@ -439,20 +427,19 @@ performing filtering.</p></li>
 is not provided, the provider project is used.</p></li>
 <li><p><strong>public_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The first public (<code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code>) IPv4 address assigned. This provides a convenient way to access an IP of a specific type without
 performing filtering.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The region the instance will sit in. Note, first-generation Cloud SQL instance
-regions do not line up with the Google Compute Engine (GCE) regions, and Cloud SQL is not
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The region the instance will sit in. Note, Cloud SQL is not
 available in all regions - choose from one of the options listed <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/instance-locations">here</a>.
 A valid region must be provided to use this resource. If a region is not provided in the resource definition,
-the provider region will be used instead, but this will be an apply-time error for all first-generation
-instances <em>and</em> for second-generation instances if the provider region is not supported with Cloud SQL.
-If you choose not to provide the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument for this resource, make sure you understand this.</p>
+the provider region will be used instead, but this will be an apply-time error for instances if the provider
+region is not supported with Cloud SQL. If you choose not to provide the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument for this resource,
+make sure you understand this.</p>
 </p></li>
 <li><p><strong>replica_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The configuration for replication. The
 configuration is detailed below.</p></li>
 <li><p><strong>root_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ) Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
 <li><p><strong>service_account_email_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service account email address assigned to the
-instance. This property is applicable only to Second Generation instances.</p></li>
+instance.</p></li>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The settings to use for the database. The
 configuration is detailed below.</p></li>
 </ul>
