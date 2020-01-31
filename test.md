@@ -1,3 +1,12 @@
+
+---
+title: Event 1
+url: /events/workshop-seattle-2020-01-01
+type: page
+layout: event-single
+---
+	
+
 # Infrastructure as Code Workshop
 
 This workshop teaches you Infrastructure as Code concepts through a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them.
