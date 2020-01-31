@@ -72,7 +72,7 @@ per node in this cluster. This doesn’t work on “routes-based” clusters, cl
 that don’t have IP Aliasing enabled. See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr">official documentation</a>
 for more information.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the cluster.</p></li>
-<li><p><strong>enable_binary_authorization</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – ) Enable Binary Authorization for this cluster.
+<li><p><strong>enable_binary_authorization</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.</p></li>
 <li><p><strong>enable_intranode_visibility</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>)
 Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.</p>
@@ -582,7 +582,7 @@ for more information.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.enable_binary_authorization">
 <code class="sig-name descname">enable_binary_authorization</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_binary_authorization" title="Permalink to this definition">¶</a></dt>
-<dd><p>) Enable Binary Authorization for this cluster.
+<dd><p>Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.</p>
 </dd></dl>
 
@@ -1126,7 +1126,7 @@ that don’t have IP Aliasing enabled. See the <a class="reference external" hre
 for more information.</p>
 </p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the cluster.</p></li>
-<li><p><strong>enable_binary_authorization</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – ) Enable Binary Authorization for this cluster.
+<li><p><strong>enable_binary_authorization</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.</p></li>
 <li><p><strong>enable_intranode_visibility</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>)
 Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.</p>

@@ -279,7 +279,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.gamelift.Fleet">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.gamelift.</code><code class="sig-name descname">Fleet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">build_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ec2_inbound_permissions=None</em>, <em class="sig-param">ec2_instance_type=None</em>, <em class="sig-param">instance_role_arn=None</em>, <em class="sig-param">metric_groups=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">new_game_session_protection_policy=None</em>, <em class="sig-param">resource_creation_limit_policy=None</em>, <em class="sig-param">runtime_configuration=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.gamelift.</code><code class="sig-name descname">Fleet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">build_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ec2_inbound_permissions=None</em>, <em class="sig-param">ec2_instance_type=None</em>, <em class="sig-param">fleet_type=None</em>, <em class="sig-param">instance_role_arn=None</em>, <em class="sig-param">metric_groups=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">new_game_session_protection_policy=None</em>, <em class="sig-param">resource_creation_limit_policy=None</em>, <em class="sig-param">runtime_configuration=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Gamelift Fleet resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -290,6 +290,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description of the fleet.</p></li>
 <li><p><strong>ec2_inbound_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.</p></li>
 <li><p><strong>ec2_instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an EC2 instance type. e.g. <code class="docutils literal notranslate"><span class="pre">t2.micro</span></code></p></li>
+<li><p><strong>fleet_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of fleet. This value must be <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code> or <code class="docutils literal notranslate"><span class="pre">SPOT</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code>.</p></li>
 <li><p><strong>instance_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of an IAM role that instances in the fleet can assume.</p></li>
 <li><p><strong>metric_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to <code class="docutils literal notranslate"><span class="pre">default</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the fleet.</p></li>
@@ -363,6 +364,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.gamelift.Fleet.fleet_type">
+<code class="sig-name descname">fleet_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.fleet_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of fleet. This value must be <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code> or <code class="docutils literal notranslate"><span class="pre">SPOT</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.gamelift.Fleet.instance_role_arn">
 <code class="sig-name descname">instance_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.instance_role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>ARN of an IAM role that instances in the fleet can assume.</p>
@@ -421,7 +428,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.gamelift.Fleet.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">build_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ec2_inbound_permissions=None</em>, <em class="sig-param">ec2_instance_type=None</em>, <em class="sig-param">instance_role_arn=None</em>, <em class="sig-param">log_paths=None</em>, <em class="sig-param">metric_groups=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">new_game_session_protection_policy=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">resource_creation_limit_policy=None</em>, <em class="sig-param">runtime_configuration=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">build_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ec2_inbound_permissions=None</em>, <em class="sig-param">ec2_instance_type=None</em>, <em class="sig-param">fleet_type=None</em>, <em class="sig-param">instance_role_arn=None</em>, <em class="sig-param">log_paths=None</em>, <em class="sig-param">metric_groups=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">new_game_session_protection_policy=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">resource_creation_limit_policy=None</em>, <em class="sig-param">runtime_configuration=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Fleet resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -435,6 +442,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description of the fleet.</p></li>
 <li><p><strong>ec2_inbound_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.</p></li>
 <li><p><strong>ec2_instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an EC2 instance type. e.g. <code class="docutils literal notranslate"><span class="pre">t2.micro</span></code></p></li>
+<li><p><strong>fleet_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of fleet. This value must be <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code> or <code class="docutils literal notranslate"><span class="pre">SPOT</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code>.</p></li>
 <li><p><strong>instance_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of an IAM role that instances in the fleet can assume.</p></li>
 <li><p><strong>metric_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to <code class="docutils literal notranslate"><span class="pre">default</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the fleet.</p></li>
