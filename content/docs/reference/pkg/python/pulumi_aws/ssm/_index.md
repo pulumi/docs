@@ -148,7 +148,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.Association">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">Association</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">association_name=None</em>, <em class="sig-param">compliance_severity=None</em>, <em class="sig-param">document_version=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">max_concurrency=None</em>, <em class="sig-param">max_errors=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">output_location=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">schedule_expression=None</em>, <em class="sig-param">targets=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Association" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">Association</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">association_name=None</em>, <em class="sig-param">automation_target_parameter_name=None</em>, <em class="sig-param">compliance_severity=None</em>, <em class="sig-param">document_version=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">max_concurrency=None</em>, <em class="sig-param">max_errors=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">output_location=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">schedule_expression=None</em>, <em class="sig-param">targets=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Association" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associates an SSM Document to an instance or EC2 tag.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -156,6 +156,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>association_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The descriptive name for the association.</p></li>
+<li><p><strong>automation_target_parameter_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the target for the association. This target is required for associations that use an <code class="docutils literal notranslate"><span class="pre">Automation</span></code> document and target resources by using rate controls.</p></li>
 <li><p><strong>compliance_severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compliance severity for the association. Can be one of the following: <code class="docutils literal notranslate"><span class="pre">UNSPECIFIED</span></code>, <code class="docutils literal notranslate"><span class="pre">LOW</span></code>, <code class="docutils literal notranslate"><span class="pre">MEDIUM</span></code>, <code class="docutils literal notranslate"><span class="pre">HIGH</span></code> or <code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code></p></li>
 <li><p><strong>document_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The document version you want to associate with the target(s). Can be a specific version or the default version.</p></li>
 <li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance ID to apply an SSM document to. Use <code class="docutils literal notranslate"><span class="pre">targets</span></code> with key <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code> for document schema versions 2.0 and above.</p></li>
@@ -192,6 +193,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.Association.association_name">
 <code class="sig-name descname">association_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Association.association_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The descriptive name for the association.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ssm.Association.automation_target_parameter_name">
+<code class="sig-name descname">automation_target_parameter_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Association.automation_target_parameter_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify the target for the association. This target is required for associations that use an <code class="docutils literal notranslate"><span class="pre">Automation</span></code> document and target resources by using rate controls.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -264,7 +271,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.ssm.Association.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">association_id=None</em>, <em class="sig-param">association_name=None</em>, <em class="sig-param">compliance_severity=None</em>, <em class="sig-param">document_version=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">max_concurrency=None</em>, <em class="sig-param">max_errors=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">output_location=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">schedule_expression=None</em>, <em class="sig-param">targets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Association.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">association_id=None</em>, <em class="sig-param">association_name=None</em>, <em class="sig-param">automation_target_parameter_name=None</em>, <em class="sig-param">compliance_severity=None</em>, <em class="sig-param">document_version=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">max_concurrency=None</em>, <em class="sig-param">max_errors=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">output_location=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">schedule_expression=None</em>, <em class="sig-param">targets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Association.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Association resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -275,6 +282,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>association_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the SSM association.</p></li>
 <li><p><strong>association_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The descriptive name for the association.</p></li>
+<li><p><strong>automation_target_parameter_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the target for the association. This target is required for associations that use an <code class="docutils literal notranslate"><span class="pre">Automation</span></code> document and target resources by using rate controls.</p></li>
 <li><p><strong>compliance_severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compliance severity for the association. Can be one of the following: <code class="docutils literal notranslate"><span class="pre">UNSPECIFIED</span></code>, <code class="docutils literal notranslate"><span class="pre">LOW</span></code>, <code class="docutils literal notranslate"><span class="pre">MEDIUM</span></code>, <code class="docutils literal notranslate"><span class="pre">HIGH</span></code> or <code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code></p></li>
 <li><p><strong>document_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The document version you want to associate with the target(s). Can be a specific version or the default version.</p></li>
 <li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance ID to apply an SSM document to. Use <code class="docutils literal notranslate"><span class="pre">targets</span></code> with key <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code> for document schema versions 2.0 and above.</p></li>
@@ -353,7 +361,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.Document">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">Document</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attachments_sources=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">document_format=None</em>, <em class="sig-param">document_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Document" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">Document</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attachments_sources=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">document_format=None</em>, <em class="sig-param">document_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Document" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Document resource</p>
 <blockquote>
 <div><p><strong>NOTE on updating SSM documents:</strong> Only documents with a schema version of 2.0
@@ -386,6 +394,7 @@ publicly, you must specify All as the account ID.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the document.</p></li>
 <li><p><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Additional Permissions to attach to the document. See Permissions below for details.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
+<li><p><strong>target_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)</p></li>
 </ul>
 </dd>
 </dl>
@@ -526,9 +535,15 @@ publicly, you must specify All as the account ID.</p>
 <dd><p>A mapping of tags to assign to the object.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.ssm.Document.target_type">
+<code class="sig-name descname">target_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Document.target_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.ssm.Document.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">attachments_sources=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">created_date=None</em>, <em class="sig-param">default_version=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">document_format=None</em>, <em class="sig-param">document_type=None</em>, <em class="sig-param">hash=None</em>, <em class="sig-param">hash_type=None</em>, <em class="sig-param">latest_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">platform_types=None</em>, <em class="sig-param">schema_version=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Document.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">attachments_sources=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">created_date=None</em>, <em class="sig-param">default_version=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">document_format=None</em>, <em class="sig-param">document_type=None</em>, <em class="sig-param">hash=None</em>, <em class="sig-param">hash_type=None</em>, <em class="sig-param">latest_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">platform_types=None</em>, <em class="sig-param">schema_version=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Document.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Document resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -555,6 +570,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>schema_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The schema version of the document.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – “Creating”, “Active” or “Deleting”. The current status of the document.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
+<li><p><strong>target_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)</p></li>
 </ul>
 </dd>
 </dl>
@@ -663,7 +679,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.MaintenanceWindow">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">MaintenanceWindow</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_unassociated_targets=None</em>, <em class="sig-param">cutoff=None</em>, <em class="sig-param">duration=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">end_date=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">schedule_timezone=None</em>, <em class="sig-param">start_date=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindow" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">MaintenanceWindow</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_unassociated_targets=None</em>, <em class="sig-param">cutoff=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">duration=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">end_date=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">schedule_timezone=None</em>, <em class="sig-param">start_date=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Maintenance Window resource</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -672,6 +688,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>allow_unassociated_targets</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.</p></li>
 <li><p><strong>cutoff</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the maintenance window.</p></li>
 <li><p><strong>duration</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration of the Maintenance Window in hours.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the maintenance window is enabled. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Timestamp in <a class="reference external" href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO-8601 extended format</a> when to no longer run the maintenance window.</p></li>
@@ -697,6 +714,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.MaintenanceWindow.cutoff">
 <code class="sig-name descname">cutoff</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindow.cutoff" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ssm.MaintenanceWindow.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindow.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A description for the maintenance window.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -749,7 +772,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.ssm.MaintenanceWindow.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_unassociated_targets=None</em>, <em class="sig-param">cutoff=None</em>, <em class="sig-param">duration=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">end_date=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">schedule_timezone=None</em>, <em class="sig-param">start_date=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindow.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_unassociated_targets=None</em>, <em class="sig-param">cutoff=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">duration=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">end_date=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">schedule_timezone=None</em>, <em class="sig-param">start_date=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindow.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MaintenanceWindow resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -760,6 +783,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>allow_unassociated_targets</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.</p></li>
 <li><p><strong>cutoff</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the maintenance window.</p></li>
 <li><p><strong>duration</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration of the Maintenance Window in hours.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the maintenance window is enabled. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Timestamp in <a class="reference external" href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO-8601 extended format</a> when to no longer run the maintenance window.</p>

@@ -35,7 +35,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.Bucket">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">Bucket</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket_policy_only=None</em>, <em class="sig-param">cors=None</em>, <em class="sig-param">encryption=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">lifecycle_rules=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">logging=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">requester_pays=None</em>, <em class="sig-param">retention_policy=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">versioning=None</em>, <em class="sig-param">website=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.Bucket" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">Bucket</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket_policy_only=None</em>, <em class="sig-param">cors=None</em>, <em class="sig-param">default_event_based_hold=None</em>, <em class="sig-param">encryption=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">lifecycle_rules=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">logging=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">requester_pays=None</em>, <em class="sig-param">retention_policy=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">versioning=None</em>, <em class="sig-param">website=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.Bucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new bucket in Google cloud storage service (GCS).
 Once a bucket has been created, its location can’t be changed.
 <a class="reference external" href="https://cloud.google.com/storage/docs/access-control/lists">ACLs</a> can be applied
@@ -271,7 +271,7 @@ is not provided, the provider project is used.</p>
 
 <dl class="method">
 <dt id="pulumi_gcp.storage.Bucket.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket_policy_only=None</em>, <em class="sig-param">cors=None</em>, <em class="sig-param">encryption=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">lifecycle_rules=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">logging=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">requester_pays=None</em>, <em class="sig-param">retention_policy=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">versioning=None</em>, <em class="sig-param">website=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.Bucket.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket_policy_only=None</em>, <em class="sig-param">cors=None</em>, <em class="sig-param">default_event_based_hold=None</em>, <em class="sig-param">encryption=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">lifecycle_rules=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">logging=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">requester_pays=None</em>, <em class="sig-param">retention_policy=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">versioning=None</em>, <em class="sig-param">website=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.Bucket.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Bucket resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -405,10 +405,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.storage.BucketACL">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">BucketACL</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">default_acl=None</em>, <em class="sig-param">predefined_acl=None</em>, <em class="sig-param">role_entities=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketACL" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a new bucket ACL in Google cloud storage service (GCS). For more information see 
-<a class="reference external" href="https://cloud.google.com/storage/docs/access-control/lists">the official documentation</a> 
-and 
-<a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/bucketAccessControls">API</a>.</p>
+<dd><p>Create a BucketACL resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -514,17 +511,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.storage.BucketAccessControl">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">BucketAccessControl</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">entity=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketAccessControl" title="Permalink to this definition">¶</a></dt>
-<dd><p>The BucketAccessControls resource represents the Access Control Lists
-(ACLs) for buckets within Google Cloud Storage. ACLs let you specify who
-has access to your data and to what extent.</p>
-<p>There are three roles that can be assigned to an entity:</p>
-<p>READERs can get the bucket, though no acl property will be returned, and
-list the bucket’s objects.  WRITERs are READERs, and they can insert
-objects into the bucket and delete the bucket’s objects.  OWNERs are
-WRITERs, and they can get the acl property of a bucket, update a bucket,
-and call all BucketAccessControls methods on the bucket.  For more
-information, see Access Control, with the caveat that this API uses
-READER, WRITER, and OWNER instead of READ, WRITE, and FULL_CONTROL.</p>
+<dd><p>Create a BucketAccessControl resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1515,7 +1502,8 @@ for an example of enabling notifications by granting the correct IAM permission.
 <li><p><strong>payload_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The desired content of the Payload. One of <code class="docutils literal notranslate"><span class="pre">&quot;JSON_API_V1&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;NONE&quot;</span></code>.</p></li>
 <li><p><strong>topic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Cloud PubSub topic to which this subscription publishes. Expects either the 
 topic name, assumed to belong to the default GCP provider project, or the project-level name,
-i.e. <code class="docutils literal notranslate"><span class="pre">projects/my-gcp-project/topics/my-topic</span></code> or <code class="docutils literal notranslate"><span class="pre">my-topic</span></code>.</p></li>
+i.e. <code class="docutils literal notranslate"><span class="pre">projects/my-gcp-project/topics/my-topic</span></code> or <code class="docutils literal notranslate"><span class="pre">my-topic</span></code>. If the project is not set in the provider,
+you will need to use the project-level name.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1569,7 +1557,8 @@ i.e. <code class="docutils literal notranslate"><span class="pre">projects/my-gc
 <code class="sig-name descname">topic</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.Notification.topic" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Cloud PubSub topic to which this subscription publishes. Expects either the 
 topic name, assumed to belong to the default GCP provider project, or the project-level name,
-i.e. <code class="docutils literal notranslate"><span class="pre">projects/my-gcp-project/topics/my-topic</span></code> or <code class="docutils literal notranslate"><span class="pre">my-topic</span></code>.</p>
+i.e. <code class="docutils literal notranslate"><span class="pre">projects/my-gcp-project/topics/my-topic</span></code> or <code class="docutils literal notranslate"><span class="pre">my-topic</span></code>. If the project is not set in the provider,
+you will need to use the project-level name.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1592,7 +1581,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
 <li><p><strong>topic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Cloud PubSub topic to which this subscription publishes. Expects either the 
 topic name, assumed to belong to the default GCP provider project, or the project-level name,
-i.e. <code class="docutils literal notranslate"><span class="pre">projects/my-gcp-project/topics/my-topic</span></code> or <code class="docutils literal notranslate"><span class="pre">my-topic</span></code>.</p></li>
+i.e. <code class="docutils literal notranslate"><span class="pre">projects/my-gcp-project/topics/my-topic</span></code> or <code class="docutils literal notranslate"><span class="pre">my-topic</span></code>. If the project is not set in the provider,
+you will need to use the project-level name.</p></li>
 </ul>
 </dd>
 </dl>

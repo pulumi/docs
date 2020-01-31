@@ -216,6 +216,8 @@ parameter.</p></li>
 <p>The <strong>server_side_encryption</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the CMK that should be used for the AWS KMS encryption.
+This attribute should only be specified if the key is different from the default DynamoDB CMK, <code class="docutils literal notranslate"><span class="pre">alias/aws/dynamodb</span></code>.</p></li>
 </ul>
 <p>The <strong>ttl</strong> object supports the following:</p>
 <ul class="simple">
@@ -331,6 +333,8 @@ parameter.</p></li>
 <dd><p>Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn’t specified.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the CMK that should be used for the AWS KMS encryption.
+This attribute should only be specified if the key is different from the default DynamoDB CMK, <code class="docutils literal notranslate"><span class="pre">alias/aws/dynamodb</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -465,6 +469,8 @@ parameter.</p></li>
 <p>The <strong>server_side_encryption</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the CMK that should be used for the AWS KMS encryption.
+This attribute should only be specified if the key is different from the default DynamoDB CMK, <code class="docutils literal notranslate"><span class="pre">alias/aws/dynamodb</span></code>.</p></li>
 </ul>
 <p>The <strong>ttl</strong> object supports the following:</p>
 <ul class="simple">
@@ -639,6 +645,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>server_side_encryption</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/dynamodb_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/dynamodb_table.html.markdown</a>.</p>

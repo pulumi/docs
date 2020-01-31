@@ -140,7 +140,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kms.AwaitableGetKeyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">AwaitableGetKeyResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">aws_account_id=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">deletion_date=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">expiration_model=None</em>, <em class="sig-param">grant_tokens=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">key_manager=None</em>, <em class="sig-param">key_state=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">origin=None</em>, <em class="sig-param">valid_to=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.AwaitableGetKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">AwaitableGetKeyResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">aws_account_id=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">customer_master_key_spec=None</em>, <em class="sig-param">deletion_date=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">expiration_model=None</em>, <em class="sig-param">grant_tokens=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">key_manager=None</em>, <em class="sig-param">key_state=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">origin=None</em>, <em class="sig-param">valid_to=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.AwaitableGetKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -473,7 +473,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kms.GetKeyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">GetKeyResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">aws_account_id=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">deletion_date=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">expiration_model=None</em>, <em class="sig-param">grant_tokens=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">key_manager=None</em>, <em class="sig-param">key_state=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">origin=None</em>, <em class="sig-param">valid_to=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">GetKeyResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">aws_account_id=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">customer_master_key_spec=None</em>, <em class="sig-param">deletion_date=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">expiration_model=None</em>, <em class="sig-param">grant_tokens=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">key_manager=None</em>, <em class="sig-param">key_state=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">origin=None</em>, <em class="sig-param">valid_to=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKey.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetKeyResult.id">
@@ -698,21 +698,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kms.Key">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">Key</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">deletion_window_in_days=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_key_rotation=None</em>, <em class="sig-param">is_enabled=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Key" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">Key</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">customer_master_key_spec=None</em>, <em class="sig-param">deletion_window_in_days=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_key_rotation=None</em>, <em class="sig-param">is_enabled=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a KMS customer master key.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>customer_master_key_spec</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether the key contains a symmetric key or an asymmetric key pair and the encryption algorithms or signing algorithms that the key supports.
+Valid values: <code class="docutils literal notranslate"><span class="pre">SYMMETRIC_DEFAULT</span></code>,  <code class="docutils literal notranslate"><span class="pre">RSA_2048</span></code>, <code class="docutils literal notranslate"><span class="pre">RSA_3072</span></code>, <code class="docutils literal notranslate"><span class="pre">RSA_4096</span></code>, <code class="docutils literal notranslate"><span class="pre">ECC_NIST_P256</span></code>, <code class="docutils literal notranslate"><span class="pre">ECC_NIST_P384</span></code>, <code class="docutils literal notranslate"><span class="pre">ECC_NIST_P521</span></code>, or <code class="docutils literal notranslate"><span class="pre">ECC_SECG_P256K1</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">SYMMETRIC_DEFAULT</span></code>. For help with choosing a key spec, see the <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-choose.html">AWS KMS Developer Guide</a>.</p></li>
 <li><p><strong>deletion_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in days after which the key is deleted
 after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the key as viewed in AWS console.</p></li>
 <li><p><strong>enable_key_rotation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">key rotation</a>
 is enabled. Defaults to false.</p></li>
 <li><p><strong>is_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the key is enabled. Defaults to true.</p></li>
-<li><p><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the intended use of the key.
-Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are supported.</p></li>
+<li><p><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the intended use of the key. Valid values: <code class="docutils literal notranslate"><span class="pre">ENCRYPT_DECRYPT</span></code> or <code class="docutils literal notranslate"><span class="pre">SIGN_VERIFY</span></code>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">ENCRYPT_DECRYPT</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
 </ul>
 </dd>
@@ -724,6 +726,13 @@ Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are su
 <dt id="pulumi_aws.kms.Key.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Key.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Resource Name (ARN) of the key.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kms.Key.customer_master_key_spec">
+<code class="sig-name descname">customer_master_key_spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Key.customer_master_key_spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether the key contains a symmetric key or an asymmetric key pair and the encryption algorithms or signing algorithms that the key supports.
+Valid values: <code class="docutils literal notranslate"><span class="pre">SYMMETRIC_DEFAULT</span></code>,  <code class="docutils literal notranslate"><span class="pre">RSA_2048</span></code>, <code class="docutils literal notranslate"><span class="pre">RSA_3072</span></code>, <code class="docutils literal notranslate"><span class="pre">RSA_4096</span></code>, <code class="docutils literal notranslate"><span class="pre">ECC_NIST_P256</span></code>, <code class="docutils literal notranslate"><span class="pre">ECC_NIST_P384</span></code>, <code class="docutils literal notranslate"><span class="pre">ECC_NIST_P521</span></code>, or <code class="docutils literal notranslate"><span class="pre">ECC_SECG_P256K1</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">SYMMETRIC_DEFAULT</span></code>. For help with choosing a key spec, see the <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-choose.html">AWS KMS Developer Guide</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -761,8 +770,8 @@ is enabled. Defaults to false.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Key.key_usage">
 <code class="sig-name descname">key_usage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Key.key_usage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the intended use of the key.
-Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are supported.</p>
+<dd><p>Specifies the intended use of the key. Valid values: <code class="docutils literal notranslate"><span class="pre">ENCRYPT_DECRYPT</span></code> or <code class="docutils literal notranslate"><span class="pre">SIGN_VERIFY</span></code>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">ENCRYPT_DECRYPT</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -773,7 +782,7 @@ Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are su
 
 <dl class="method">
 <dt id="pulumi_aws.kms.Key.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">deletion_window_in_days=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_key_rotation=None</em>, <em class="sig-param">is_enabled=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Key.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">customer_master_key_spec=None</em>, <em class="sig-param">deletion_window_in_days=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_key_rotation=None</em>, <em class="sig-param">is_enabled=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Key.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Key resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -783,6 +792,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the key.</p></li>
+<li><p><strong>customer_master_key_spec</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies whether the key contains a symmetric key or an asymmetric key pair and the encryption algorithms or signing algorithms that the key supports.
+Valid values: <code class="docutils literal notranslate"><span class="pre">SYMMETRIC_DEFAULT</span></code>,  <code class="docutils literal notranslate"><span class="pre">RSA_2048</span></code>, <code class="docutils literal notranslate"><span class="pre">RSA_3072</span></code>, <code class="docutils literal notranslate"><span class="pre">RSA_4096</span></code>, <code class="docutils literal notranslate"><span class="pre">ECC_NIST_P256</span></code>, <code class="docutils literal notranslate"><span class="pre">ECC_NIST_P384</span></code>, <code class="docutils literal notranslate"><span class="pre">ECC_NIST_P521</span></code>, or <code class="docutils literal notranslate"><span class="pre">ECC_SECG_P256K1</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">SYMMETRIC_DEFAULT</span></code>. For help with choosing a key spec, see the <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-choose.html">AWS KMS Developer Guide</a>.</p>
+</p></li>
 <li><p><strong>deletion_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in days after which the key is deleted
 after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the key as viewed in AWS console.</p></li>
@@ -791,8 +803,8 @@ is enabled. Defaults to false.</p>
 </p></li>
 <li><p><strong>is_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the key is enabled. Defaults to true.</p></li>
 <li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The globally unique identifier for the key.</p></li>
-<li><p><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the intended use of the key.
-Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are supported.</p></li>
+<li><p><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the intended use of the key. Valid values: <code class="docutils literal notranslate"><span class="pre">ENCRYPT_DECRYPT</span></code> or <code class="docutils literal notranslate"><span class="pre">SIGN_VERIFY</span></code>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">ENCRYPT_DECRYPT</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
 </ul>
 </dd>
@@ -884,9 +896,9 @@ resource &lt;<a class="reference external" href="https://www.terraform.io/docs/p
 <dl class="function">
 <dt id="pulumi_aws.kms.get_key">
 <code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">get_key</code><span class="sig-paren">(</span><em class="sig-param">grant_tokens=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to get detailed information about 
-the specified KMS Key with flexible key id input. 
-This can be useful to reference key alias 
+<dd><p>Use this data source to get detailed information about
+the specified KMS Key with flexible key id input.
+This can be useful to reference key alias
 without having to hard code the ARN as input.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
