@@ -47,7 +47,7 @@ const container = new docker.Container("ubuntu", {
 ```
 
 ```python
-import pulumi_docker as do
+import pulumi_docker as docker
 
 image = docker.RemoteImage("ubuntu",
   name='ubuntu:precise'
