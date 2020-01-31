@@ -312,6 +312,11 @@ const cdn = new aws.cloudfront.Distribution(
     {
         protect: true,
         dependsOn: [ websiteBucket, websiteLogsBucket ],
+        aliases:  [
+            config.websiteDomain,
+            config.targetDomain,
+            config.redirectDomain || "",    // redirectDomain may be undefined.
+        ].filter(domain => domain !== ""),
     });
 
 // crawlDirectory recursive crawls the provided directory, applying the provided function
