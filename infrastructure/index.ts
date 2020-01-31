@@ -187,12 +187,27 @@ const baseCacheBehavior = {
     maxTtl: fiveMinutes,
 };
 
+// domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
+// domain name to be used to access the website must be listed here.
+const domainAliases = [];
+// websiteDomain is the A record for the website bucket associated with the website.
+domainAliases.push(config.websiteDomain);
+// targetDomain is the A record associated with the bucket populated by Pulumi. It may be
+// removed once that bucket is removed.
+domainAliases.push(config.targetDomain);
+// redirectDomain is the domain to use for fully-qualified 301 redirects.
+if (config.redirectDomain) {
+     domainAliases.push(config.redirectDomain);
+}
+
 // distributionArgs configures the CloudFront distribution. Relevant documentation:
 // https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html
 // https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_cloudfront
 const distributionArgs: aws.cloudfront.DistributionArgs = {
     enabled: true,
+
+    aliases: domainAliases,
 
     // We only specify one origin for this distribution: the S3 content bucket.
     origins: [
@@ -312,7 +327,8 @@ const cdn = new aws.cloudfront.Distribution(
     {
         protect: true,
         dependsOn: [ websiteBucket, websiteLogsBucket ],
-    });
+    }
+);
 
 // crawlDirectory recursive crawls the provided directory, applying the provided function
 // to every file it contains. Doesn't handle cycles from symlinks.
