@@ -29,7 +29,7 @@ const config = {
 };
 
 // redirectDomain is the domain to use when redirecting.
-const redirectDomain = config.redirectDomain || config.targetDomain;
+const redirectDomain = config.redirectDomain || config.websiteDomain;
 
 // contentBucket stores the static content to be served via the CDN.
 const contentBucket = new aws.s3.Bucket(
@@ -166,7 +166,7 @@ const oneHour = fiveMinutes * 12;
 const oneWeek = oneHour * 24 * 7;
 
 const baseCacheBehavior = {
-    targetOriginId: contentBucket.arn,
+    targetOriginId: websiteBucket.arn,
     compress: true,
 
     viewerProtocolPolicy: "redirect-to-https",
@@ -197,8 +197,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     // We only specify one origin for this distribution: the S3 content bucket.
     origins: [
         {
-            originId: contentBucket.arn,
-            domainName: contentBucket.websiteEndpoint,
+            originId: websiteBucket.arn,
+            domainName: websiteBucket.websiteEndpoint,
             customOriginConfig: {
                 // > If your Amazon S3 bucket is configured as a website endpoint, [like we have here] you must specify
                 // > HTTP Only. Amazon S3 doesn't support HTTPS connections in that configuration.
@@ -294,9 +294,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     },
 
     loggingConfig: {
-        bucket: logsBucket.bucketDomainName,
+        bucket: websiteLogsBucket.bucketDomainName,
         includeCookies: false,
-        prefix: `${config.targetDomain}/`,
+        prefix: `${config.websiteDomain}/`,
     },
 };
 
@@ -311,7 +311,7 @@ const cdn = new aws.cloudfront.Distribution(
     distributionArgs,
     {
         protect: true,
-        dependsOn: [ contentBucket, logsBucket ],
+        dependsOn: [ websiteBucket, websiteLogsBucket ],
     });
 
 // crawlDirectory recursive crawls the provided directory, applying the provided function
