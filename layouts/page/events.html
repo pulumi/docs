@@ -20,14 +20,24 @@
                 {{ range $.Site.Data.events.events }}
                     <li class="w-full border border-gray-400 rounded my-0 px-5 py-5 mb-10" data-event-type='{{ delimit .type "," }}'>
                         <div>
-                            <a class="text-2xl" href="#">{{ .name }}</a>
+                            <a class="text-2xl" href="/events/{{ .urlSlug }}/">{{ .name }}</a>
                             <p class="my-3">{{ .description }}</p>
                             <div class="flex mt-2">
                                 <div class="w-8/12">
                                     <div>
+                                        <i class="fas fa-globe-americas inline-block"></i>
+                                        <p class="inline-block my-0">
+                                            {{ .location }}
+                                        </p>
+                                    </div>
+                                    <div>
                                         <i class="far fa-calendar inline-block"></i>
                                         <p class="inline-block my-0">
-                                            {{ dateFormat "Mon, Jan 2" .startDate }} - {{ dateFormat "Mon, Jan 2" .endDate }}
+                                            {{ if eq .startDate .endDate }}
+                                                {{ dateFormat "Mon, Jan 2" .startDate }}
+                                            {{ else }}
+                                                {{ dateFormat "Mon, Jan 2" .startDate }} - {{ dateFormat "Mon, Jan 2" .endDate }}
+                                            {{ end }}
                                         </p>
                                     </div>
                                     <div class="mt-2 event-tags">

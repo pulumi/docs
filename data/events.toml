@@ -1,35 +1,99 @@
 [[events]]
-type = ["workshop","talk"]
-name = "Config Management Camp"
-location = "Ghent, Belgium"
-startDate = "2020-02-03"
-endDate = "2020-02-05"
-description = "Configuration Management Camp is the event for technologists interested Open Source Infrastructure automation and related topics."
+type = ["workshop"]
+name = "Cloud Infrastructure Workshop | Redmond, WA"
+location = "Redmond, WA"
+startDate = "2020-02-15"
+endDate = "2020-02-15"
+description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
 registrationUrl = "#"
+urlSlug = "workshop-redmond-2020-02-15"
 
 [[events]]
-type = ["workshop","booth"]
-name = "DevOpsDays Charlotte"
-location = "Charlotte, NC"
-startDate = "2020-02-27"
-endDate = "2020-02-28"
-description = "Devopsdays is a worldwide series of technical conferences covering topics of software development, IT infrastructure operations, and the intersection between them."
+type = ["workshop"]
+name = "Cloud Infrastructure Workshop | Amsterdam, NL"
+location = "Amsterdam, NL"
+startDate = "2020-03-30"
+endDate = "2020-03-30"
+description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
 registrationUrl = "#"
+urlSlug = "workshop-amsterdam-2020-03-30"
 
 [[events]]
-type = ["booth"]
-name = "SCALE 18X"
-location = "Pasadena, CA"
-startDate = "2020-03-05"
-endDate = "2020-03-08"
-description = "The Southern California Linux Expo (SCALE) is an annual Linux, open source and free software conference held in Los Angeles, California, since 2002."
+type = ["workshop"]
+name = "Cloud Infrastructure Workshop | San Francisco, CA"
+location = "San Francisco, CA"
+startDate = "2020-04-09"
+endDate = "2020-04-09"
+description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
 registrationUrl = "#"
+urlSlug = "workshop-san-francisco-2020-04-09"
 
 [[events]]
-type = ["talk"]
-name = "DevOpsDays Los Angeles"
-location = "Los Angeles, CA"
-startDate = "2020-03-06"
-endDate = "2020-03-06"
-description = "Devopsdays is a worldwide series of technical conferences covering topics of software development, IT infrastructure operations, and the intersection between them."
+type = ["workshop"]
+name = "Cloud Infrastructure Workshop | Seattle, WA"
+location = "Seattle, WA"
+startDate = "2020-04-13"
+endDate = "2020-04-13"
+description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
 registrationUrl = "#"
+urlSlug = "workshop-seattle-2020-04-13"
+
+[[events]]
+type = ["workshop"]
+name = "Cloud Infrastructure Workshop | Redmond, WA"
+location = "Redmond, WA"
+startDate = "2020-05-18"
+endDate = "2020-05-18"
+description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
+registrationUrl = "#"
+urlSlug = "workshop-redmond-2020-05-18"
+
+[[events]]
+type = ["workshop"]
+name = "Cloud Infrastructure Workshop | New York, NY"
+location = "New York, NY"
+startDate = "2020-07-08"
+endDate = "2020-07-08"
+description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
+registrationUrl = "#"
+urlSlug = "workshop-new-york-2020-07-08"
+
+[[events]]
+type = ["workshop"]
+name = "Cloud Infrastructure Workshop | Minneapolis, MN"
+location = "Minneapolis, MN"
+startDate = "2020-08-03"
+endDate = "2020-08-03"
+description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
+registrationUrl = "#"
+urlSlug = "workshop-minneapolis-2020-08-03"
+
+[[events]]
+type = ["workshop"]
+name = "Cloud Infrastructure Workshop | London, GB"
+location = "London, GB"
+startDate = "2020-09-23"
+endDate = "2020-09-23"
+description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
+registrationUrl = "#"
+urlSlug = "workshop-london-2020-09-23"
+
+[[events]]
+type = ["workshop"]
+name = "Cloud Infrastructure Workshop | Boston, MA"
+location = "Boston, MA"
+startDate = "2020-11-16"
+endDate = "2020-11-16"
+description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
+registrationUrl = "#"
+urlSlug = "workshop-boston-2020-11-16"
+
+[[events]]
+type = ["workshop"]
+name = "Cloud Infrastructure Workshop | Las Vegas, NV"
+location = "Las Vegas, NV"
+startDate = "2020-11-29"
+endDate = "2020-11-29"
+description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
+registrationUrl = "#"
+urlSlug = "workshop-las-vegas-2020-11-29"

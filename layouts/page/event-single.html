@@ -1,0 +1,17 @@
+{{ define "hero" }}
+    <header class="header-hero">
+        <div class="container mx-auto">
+            <div class="mx-auto text-center">
+                <h1>{{ .Title }}</h1>
+            </div>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    <div class="flex py-10 px-20">
+        <div class="w-8/12 mx-auto">
+            {{ .Content }}
+        </div>
+    </div>
+{{ end }}
