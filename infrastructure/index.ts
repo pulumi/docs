@@ -330,22 +330,6 @@ const cdn = new aws.cloudfront.Distribution(
     }
 );
 
-// crawlDirectory recursive crawls the provided directory, applying the provided function
-// to every file it contains. Doesn't handle cycles from symlinks.
-function crawlDirectory(dir: string, f: (_: string) => void) {
-    const files = fs.readdirSync(dir);
-    for (const file of files) {
-        const filePath = `${dir}/${file}`;
-        const stat = fs.statSync(filePath);
-        if (stat.isDirectory()) {
-            crawlDirectory(filePath, f);
-        }
-        if (stat.isFile()) {
-            f(filePath);
-        }
-    }
-}
-
 // Some files do not get the correct mime/type inferred from the mime package, and we
 // need to set our own.
 function getMimeType(filePath: string): string | undefined {
@@ -361,47 +345,6 @@ function getMimeType(filePath: string): string | undefined {
 // Sync the contents of the source directory with the S3 bucket, which will in-turn show up on the CDN.
 const webContentsRootPath = path.join(process.cwd(), config.pathToWebsiteContents);
 console.log("Syncing contents from local disk at", webContentsRootPath);
-crawlDirectory(
-    webContentsRootPath,
-    (filePath: string) => {
-        const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
-
-        const baseArgs = {
-            acl: "public-read",
-            key: relativeFilePath,
-            bucket: contentBucket,
-        };
-
-        // Create a new S3 object for most files, but HTML files that contain a redirect
-        // just create a stubbed out S3 object with the right metadata so they return a
-        // 301 redirect (instead of serving the HTML with a meta-redirect). This ensures
-        // the right HTTP code response is returned for search engines, as well as
-        // enables better support for URL anchors.
-        const redirect = getMetaRefreshRedirect(filePath);
-        if (!redirect) {
-            const contentFile = new aws.s3.BucketObject(
-                relativeFilePath,
-                {
-                    ...baseArgs,
-                    source: new pulumi.asset.FileAsset(filePath),
-                    contentType: getMimeType(filePath) || undefined,
-                },
-                {
-                    parent: contentBucket,
-                });
-        } else {
-            const s3Redirect = new aws.s3.BucketObject(
-                relativeFilePath,
-                {
-                    ...baseArgs,
-                    source: new pulumi.asset.FileAsset("/dev/null"), // Empty file.
-                    websiteRedirect: translateRedirect(filePath, redirect),
-                },
-                {
-                    parent: contentBucket,
-                });
-        }
-    });
 
 // Returns the redirect URL if filePath is an HTML file that contains a meta refresh tag, otherwise undefined.
 function getMetaRefreshRedirect(filePath: string): string | undefined {
