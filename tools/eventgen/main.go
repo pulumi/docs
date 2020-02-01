@@ -4,7 +4,6 @@ import(
 	"fmt"
 	"io/ioutil"
 	"os"
-
 	"github.com/BurntSushi/toml"
 )
 
@@ -43,7 +42,7 @@ func getPageContent(contentType string) string {
 	return text
 }
 
-func writeEventFile(contentType string, title string, urlSlug string) int {
+func writeEventFile(contentType string, title string, urlSlug string) {
 	filePath := fmt.Sprintf("./content/events/%s.md", urlSlug);
 	eventFile, err := os.Create(filePath)
 	checkError(err)
@@ -54,10 +53,9 @@ func writeEventFile(contentType string, title string, urlSlug string) int {
 	pageContent := getPageContent(contentType)
 	fileContent := fmt.Sprintf("%s\n\n%s", frontMatterContent, pageContent)
 
-	r, err := eventFile.WriteString(fileContent)
-	checkError(err)
-
-	return r
+	if _, err := eventFile.WriteString(fileContent); err != nil {
+		panic(err)
+	}
 }
 
 type Event struct {
@@ -69,6 +67,7 @@ type Event struct {
 	Description string
 	RegistrationURL string
 	URLSlug string
+	ContentType string
 }
 
 type Events struct {
@@ -86,9 +85,21 @@ func getEventData() []Event {
 	return eventData.Events
 }
 
+func writeEventFiles(events []Event) string {
+	event := events[0]
+	writeEventFile(event.ContentType, event.Name, event.URLSlug)
+	remainingEvents := events[1:]
+	if len(remainingEvents) > 0 {
+		return writeEventFiles(remainingEvents)
+	}
+
+	return "Event pages have been generated."
+}
+
 func main() {
 
-	test := getEventData()
+	events := getEventData()
+	result := writeEventFiles(events)
 
-	fmt.Printf("%v\n", test)
+	fmt.Printf("%v\n", result)
 }

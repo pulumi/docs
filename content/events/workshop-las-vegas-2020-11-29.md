@@ -1,18 +1,17 @@
 
 ---
 title: Cloud Infrastructure Workshop | Las Vegas, NV
-url: /events/workshop-las-vegas-2020-11-29
+url: workshop-las-vegas-2020-11-29
 type: page
 layout: event-single
 ---
+	
 
 # Infrastructure as Code Workshop
 
 This workshop teaches you Infrastructure as Code concepts through a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them.
 
 **Slides are available at: [InfrastructureAsCodeWorkshop.pdf](./slides/InfrastructureAsCodeWorkshop.pdf)**
-
-<a class="btn" href="#">Register Here</a>
 
 ## Course Outline
 
@@ -51,4 +50,3 @@ After completing these labs, there are several topics you may want to explore.
 * [Test-driven infrastructure](https://www.pulumi.com/blog/unit-testing-infrastructure-in-nodejs-and-mocha/)
 
 Thank you for checking out the Infrastructure as Code Workshop! More labs are on their way. Please [file an issue](https://github.com/pulumi/infrastructure-as-code-workshop/issues/new) if there are topics you'd like to see covered in the future.
-        
