@@ -446,7 +446,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.AwaitableGetVpcLinkResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">AwaitableGetVpcLinkResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.AwaitableGetVpcLinkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">AwaitableGetVpcLinkResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">status_message=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_arns=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.AwaitableGetVpcLinkResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1395,12 +1395,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.GetVpcLinkResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">GetVpcLinkResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetVpcLinkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">GetVpcLinkResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">status_message=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_arns=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetVpcLinkResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpcLink.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetVpcLinkResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetVpcLinkResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the VPC link.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.GetVpcLinkResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetVpcLinkResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set to the ID of the found API Gateway VPC Link.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetVpcLinkResult.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetVpcLinkResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The status of the VPC link.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetVpcLinkResult.status_message">
+<code class="sig-name descname">status_message</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetVpcLinkResult.status_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>The status message of the VPC link.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetVpcLinkResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetVpcLinkResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetVpcLinkResult.target_arns">
+<code class="sig-name descname">target_arns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetVpcLinkResult.target_arns" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of network load balancer arns in the VPC targeted by the VPC link. Currently AWS only supports 1 target.</p>
 </dd></dl>
 
 </dd></dl>
@@ -3488,7 +3518,7 @@ If multiple REST APIs are found with this name, an error will be returned.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.apigateway.get_vpc_link">
-<code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">get_vpc_link</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_vpc_link" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">get_vpc_link</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_vpc_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the id of a VPC Link in
 API Gateway. To fetch the VPC Link you must provide a name to match against. 
 As there is no unique name constraint on API Gateway VPC Links this data source will 

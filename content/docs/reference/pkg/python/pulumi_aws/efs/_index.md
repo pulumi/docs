@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.efs"></span><dl class="class">
 <dt id="pulumi_aws.efs.AwaitableGetFileSystemResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">AwaitableGetFileSystemResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_token=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">performance_mode=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.AwaitableGetFileSystemResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">AwaitableGetFileSystemResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_token=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">lifecycle_policy=None</em>, <em class="sig-param">performance_mode=None</em>, <em class="sig-param">provisioned_throughput_in_mibps=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">throughput_mode=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.AwaitableGetFileSystemResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -197,7 +197,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.efs.GetFileSystemResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">GetFileSystemResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_token=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">performance_mode=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">GetFileSystemResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_token=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">lifecycle_policy=None</em>, <em class="sig-param">performance_mode=None</em>, <em class="sig-param">provisioned_throughput_in_mibps=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">throughput_mode=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFileSystem.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetFileSystemResult.arn">
@@ -224,15 +224,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_aws.efs.GetFileSystemResult.performance_mode">
-<code class="sig-name descname">performance_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.performance_mode" title="Permalink to this definition">¶</a></dt>
-<dd><p>The PerformanceMode of the file system.</p>
+<dt id="pulumi_aws.efs.GetFileSystemResult.lifecycle_policy">
+<code class="sig-name descname">lifecycle_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.lifecycle_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A file system <a class="reference external" href="https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html">lifecycle policy</a> object.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_aws.efs.GetFileSystemResult.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of tags assigned to the file system.</p>
+<dt id="pulumi_aws.efs.GetFileSystemResult.performance_mode">
+<code class="sig-name descname">performance_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.performance_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The file system performance mode.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.efs.GetFileSystemResult.provisioned_throughput_in_mibps">
+<code class="sig-name descname">provisioned_throughput_in_mibps</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.provisioned_throughput_in_mibps" title="Permalink to this definition">¶</a></dt>
+<dd><p>The throughput, measured in MiB/s, that you want to provision for the file system.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> -A mapping of tags to assign to the file system.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.efs.GetFileSystemResult.throughput_mode">
+<code class="sig-name descname">throughput_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.throughput_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Throughput mode for the file system.</p>
 </dd></dl>
 
 <dl class="attribute">

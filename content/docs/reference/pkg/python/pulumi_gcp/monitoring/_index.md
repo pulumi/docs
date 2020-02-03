@@ -213,6 +213,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gcp.monitoring.AwaitableGetNotificationChannelResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">AwaitableGetNotificationChannelResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">verification_status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AwaitableGetNotificationChannelResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.monitoring.GetNotificationChannelResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">GetNotificationChannelResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">verification_status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.GetNotificationChannelResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getNotificationChannel.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.GetNotificationChannelResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.GetNotificationChannelResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.monitoring.Group">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">is_cluster=None</em>, <em class="sig-param">parent_name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Group resource with the given unique name, props, and options.</p>
@@ -525,6 +542,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_gcp.monitoring.get_notification_channel">
+<code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">get_notification_channel</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.get_notification_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
 </dd></dl>
 
 </div>
