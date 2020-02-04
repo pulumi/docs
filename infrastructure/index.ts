@@ -26,8 +26,6 @@ const config = {
     certificateArn: stackConfig.require("certificateArn"),
     // redirectDomain is the domain to use for any redirects.
     redirectDomain: stackConfig.get("redirectDomain") || undefined,
-    // principalAccount is the AWS account used for managing this stack.
-    principalAccount: stackConfig.require("principalAccount"),
 };
 
 // redirectDomain is the domain to use when redirecting.
@@ -67,7 +65,7 @@ const policy = new aws.s3.BucketPolicy("website-bucket-policy", {
                 Resource: arn,
                 Condition: {
                     StringNotEquals: {
-                        "aws:PrincipalAccount": config.principalAccount,
+                        "aws:PrincipalAccount": aws.getCallerIdentity().accountId,
                     },
                 },
             },
