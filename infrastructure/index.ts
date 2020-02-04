@@ -52,7 +52,7 @@ const websiteBucket = new aws.s3.Bucket(
     },
 );
 
-// The website bucket needs to have the "public-read" ACL so their contents can be read by
+// The website bucket needs to have the "public-read" ACL so its contents can be read by
 // CloudFront and served. But we deny the s3:ListBucket permission to anyone but account
 // users to prevent unintended disclosure of the bucket's contents.
 const policy = new aws.s3.BucketPolicy("website-bucket-policy", {
