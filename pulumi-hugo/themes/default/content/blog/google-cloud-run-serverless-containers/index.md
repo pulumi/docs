@@ -1,8 +1,7 @@
 ---
 title: "Google Cloud Run: Serverless Containers"
-date: 2020-01-29
-draft: false
-meta_desc: "TODO"
+date: 2020-02-04
+meta_desc: "Running serverless containers in Google Cloud Run with TypeScript and Pulumi"
 meta_image: "meta.png"
 authors:
     - mikhail-shilkov
