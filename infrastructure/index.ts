@@ -26,48 +26,12 @@ const config = {
     certificateArn: stackConfig.require("certificateArn"),
     // redirectDomain is the domain to use for any redirects.
     redirectDomain: stackConfig.get("redirectDomain") || undefined,
+    // principalAccount is the AWS account used for managing this stack.
+    principalAccount: stackConfig.require("principalAccount"),
 };
 
 // redirectDomain is the domain to use when redirecting.
 const redirectDomain = config.redirectDomain || config.websiteDomain;
-
-// contentBucket stores the static content to be served via the CDN.
-const contentBucket = new aws.s3.Bucket(
-    "contentBucket",
-    {
-        bucket: config.targetDomain,
-        acl: "public-read",
-
-        // Have S3 serve its contents as if it were a website. This is how we get the right behavior
-        // for routes like "foo/", which S3 will automatically translate to "foo/index.html".
-        website: {
-            indexDocument: "index.html",
-            errorDocument: "404.html",
-        },
-    },
-    {
-        protect: false,
-    },
-);
-
-// contentBucket needs to have the "public-read" ACL so its contents can be ready by CloudFront and
-// served. But we deny the s3:ListBucket permission to prevent unintended disclosure of the bucket's
-// contents.
-const denyListPolicyState: aws.s3.BucketPolicyArgs = {
-    bucket: contentBucket.bucket,
-    policy: contentBucket.arn.apply((arn: string) => JSON.stringify({
-        Version: "2008-10-17",
-        Statement: [
-            {
-                Effect: "Deny",
-                Principal: "*",
-                Action: "s3:ListBucket",
-                Resource: arn,
-            },
-        ],
-    })),
-};
-const denyListPolicy = new aws.s3.BucketPolicy("deny-list", denyListPolicyState);
 
 // websiteBucket stores the static content to be served via the CDN.
 const websiteBucket = new aws.s3.Bucket(
@@ -87,6 +51,29 @@ const websiteBucket = new aws.s3.Bucket(
         protect: false,
     },
 );
+
+// The website bucket needs to have the "public-read" ACL so their contents can be read by
+// CloudFront and served. But we deny the s3:ListBucket permission to anyone but account
+// users to prevent unintended disclosure of the bucket's contents.
+const policy = new aws.s3.BucketPolicy("website-bucket-policy", {
+    bucket: websiteBucket.bucket,
+    policy: websiteBucket.arn.apply(arn => JSON.stringify({
+        Version: "2008-10-17",
+        Statement: [
+            {
+                Effect: "Deny",
+                Principal: "*",
+                Action: "s3:ListBucket",
+                Resource: arn,
+                Condition: {
+                    StringNotEquals: {
+                        "aws:PrincipalAccount": config.principalAccount,
+                    },
+                },
+            },
+        ],
+    })),
+});
 
 // archiveBucket receives uploaded tarballs of website builds.
 const archiveBucket = new aws.s3.Bucket("archive-bucket");
@@ -486,9 +473,6 @@ if (!pulumi.runtime.isDryRun()) {
 const aRecord = createAliasRecord(config.targetDomain, cdn);
 const aliasRecord = createAliasRecord(config.websiteDomain, cdn);
 
-export const contentBucketUri = contentBucket.bucket.apply(b => `s3://${b}`);
-export const contentBucketWebsiteDomain = contentBucket.websiteDomain;
-export const contentBucketWebsiteEndpoint = contentBucket.websiteEndpoint;
 export const websiteBucketUri = websiteBucket.bucket.apply(b => `s3://${b}`);
 export const websiteBucketWebsiteDomain = websiteBucket.websiteDomain;
 export const websiteBucketWebsiteEndpoint = websiteBucket.websiteEndpoint;
