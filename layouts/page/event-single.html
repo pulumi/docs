@@ -1,9 +1,9 @@
 {{ define "hero" }}
-    <header class="header-hero">
+    <header class="header-hero header-hero-glow-bottom">
         <div class="container mx-auto">
             <div class="mx-auto text-center">
                 <h1>{{ .Title }}</h1>
-
+                <p class="text-2xl">Infrastructure As Code With Pulumi</p>
             </div>
         </div>
     </header>
@@ -17,7 +17,7 @@
         <div class="w-full md:w-6/12 lg:w-4/12 mx-auto">
             <!-- Calendly inline widget begin -->
 
-            <div class="calendly-inline-widget" data-url="{{ .Params.calendly_url }}" style="min-width:320px;height:750px;"></div>
+            <div id="calendly-widget" class="calendly-inline-widget" data-url="{{ .Params.calendly_url }}&hide_event_type_details=1&primary_color=512668"></div>
 
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
 

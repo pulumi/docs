@@ -1,5 +1,7 @@
 Note: The registration fee includes lunch, the workshop and happy hour afterwards.
 
+**About the Workshop**
+
 The hardest part of Kubernetes is setting up the infrastructure: clusters, DNS, firewalls, load balancers, IAM, storage, logging, and performance monitoring, often spanning private, public, and hybrid cloud architectures.
 
 In this workshop, the Pulumi team will show you how to tackle these challenges using Infrastructure as Code (IaC) through a series of hands-on labs. The techniques work for any cloud - AWS, Azure, and GCP. You'll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
@@ -16,9 +18,12 @@ After completing this workshop, you'll be up and running with IaC fundamentals, 
 
 **Instructors**
 
-Joe Duffy - CEO, Pulumi <a href="https://twitter.com/@funcofjoe" target="_blank">@funcofjoe</a>
+Joe Duffy - CEO, Pulumi <a href="https://twitter.com/funcofjoe" target="_blank">@funcofjoe</a>
 
-Paul Stack - Software Engineer, Pulumi <a href="https://twitter.com/@stack72" target="_blank">@stack72</a>
-
+Paul Stack - Software Engineer, Pulumi <a href="https://twitter.com/stack72" target="_blank">@stack72</a>
 
 For questions contact, <a href="mailto:inquiries@pulumi.com">inquiries@pulumi.com</a>.
+
+**Location**
+
+The workshop will be held at the Hotel nhow Amsterdam RAI which is located next to the RAI Amsterdam Convention Center.
