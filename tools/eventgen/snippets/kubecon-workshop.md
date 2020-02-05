@@ -6,7 +6,7 @@ In this workshop, the Pulumi team will show you how to tackle these challenges u
 
 After completing this workshop, you'll be up and running with IaC fundamentals, modern application architectures across many clouds, and Kubernetes best-practices that are ready for production environments. You'll also be ready to empower your development teams to be more productive - continuously deploying both their applications and infrastructure.
 
-Agenda
+**Agenda**
 
 11:30am - Lunch will be served in the meeting room.
 
@@ -14,7 +14,7 @@ Agenda
 
 3:00-4:00pm - Happy hour with drinks/snacks.
 
-Instructors
+**Instructors**
 
 Joe Duffy - CEO, Pulumi <a href="https://twitter.com/@funcofjoe" target="_blank">@funcofjoe</a>
 

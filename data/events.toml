@@ -17,7 +17,7 @@ name = "DevOpsDays Los Angeles"
 location = "300 East Green Street, Pasadena, CA 91101"
 startDate = "2020-03-06"
 endDate = "2020-03-06"
-description = "The Devopsdays Los Angeles is a single day volunteer organized conference which is dedicated to the DevOps community, and professionals who wish to improve the interaction and integration between the traditional silos of Development and Operations."
+description = "Devopsdays Los Angeles is a single day volunteer organized conference which is dedicated to the DevOps community, and professionals who wish to improve the interaction and integration between the traditional silos of Development and Operations."
 registrationUrl = "https://devopsdays.org/events/2019-los-angeles/registration"
 
 [[events]]
@@ -36,7 +36,7 @@ cost = "€99"
 [[events]]
 type = ["booth"]
 name = "KubeCon EU"
-location = "Europaplein 24, 1078 GZ Amsterdam, Netherlands"
+location = "Booth SU17 Europaplein 24, 1078 GZ Amsterdam, Netherlands"
 startDate = "2020-03-31"
 endDate = "2020-04-03"
 description = "The Cloud Native Computing Foundation’s flagship conference gathers adopters and technologists from leading open source and cloud native communities in Amsterdam, The Netherlands from March 30 – April 2, 2020."
