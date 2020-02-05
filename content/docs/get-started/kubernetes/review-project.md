@@ -153,19 +153,24 @@ For Python, before we deploy the stack, the following commands need to be run to
 Create a virtual environment:
 
 ```bash
-$ python -m venv k-env
+$ python3 -m venv venv
 ```
 
-Activate the environment in Linux and MacOS:
+Activate the environment in Linux and macOS:
 
 ```bash
-$ source k-env/bin/activate
+$ source venv/bin/activate
 ```
+
+Create a virtual environment in Windows:
+
+```bat
+$ python -m venv venv
 
 Activate the environment in Windows:
 
 ```bat
-> k-env\Scripts\activate.bat
+> venv\Scripts\activate.bat
 ```
 
 Install dependencies:
