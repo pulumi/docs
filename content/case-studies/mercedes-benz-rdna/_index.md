@@ -8,7 +8,7 @@ meta_desc: |
     application and infrastructure teams closer together.
 
 exec_summary: |
-    We need one.
+Mercedes-Benz Research and Development North America (MBRDNA) chose Pulumi to help them fully leverage modern cloud capabilities, enabling their organization to push the frontiers of innovative automatic research and development. By using technologies like multi-cloud and Kubernetes, and Pulumi's approach to infrastructure as code, their developers and infrastructure engineers are able to work closely to work more productively, and deliver results faster, than ever before.
 
 sections:
     - label: Exec Summary
