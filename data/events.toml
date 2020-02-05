@@ -1,109 +1,56 @@
 [[events]]
 type = ["workshop"]
-name = "Cloud Infrastructure Workshop | Redmond, WA"
-location = "Redmond, WA"
-startDate = "2020-02-15"
-endDate = "2020-02-15"
+name = "Infrastructure As Code Workshop | Redmond, WA"
+location = "3709 Microsoft Way, Redmond, WA 98052"
+startDate = "2020-03-12"
+endDate = "2020-03-12"
+time = "5:30PM - 8:30PM (PT)"
 description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
-registrationUrl = "#"
 urlSlug = "workshop-redmond-2020-02-15"
-contentType = "workshop"
+contentType = "workshop-microsoft"
+calendlyUrl = "https://calendly.com/pulumi/redmond?month=2020-03&hide_event_type_details=1&primary_color=512668"
+cost = "Free"
+
+[[events]]
+type = ["booth"]
+name = "DevOpsDays Los Angeles"
+location = "300 East Green Street, Pasadena, CA 91101"
+startDate = "2020-03-06"
+endDate = "2020-03-06"
+description = "The Devopsdays Los Angeles is a single day volunteer organized conference which is dedicated to the DevOps community, and professionals who wish to improve the interaction and integration between the traditional silos of Development and Operations."
+registrationUrl = "https://devopsdays.org/events/2019-los-angeles/registration"
 
 [[events]]
 type = ["workshop"]
-name = "Cloud Infrastructure Workshop | Amsterdam, NL"
-location = "Amsterdam, NL"
+name = "KubeCon EU  Pre-day Workshop"
+location = "Europaboulevard 2b, 1078 RV Amsterdam, Netherlands"
 startDate = "2020-03-30"
 endDate = "2020-03-30"
+time = "11:30AM - 4:00pm (CET)"
 description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
-registrationUrl = "#"
 urlSlug = "workshop-amsterdam-2020-03-30"
-contentType = "workshop"
+contentType = "kubecon-workshop"
+calendlyUrl = "https://calendly.com/pulumi/kubecon?month=2020-03&hide_event_type_details=1&primary_color=512668"
+cost = "€99"
+
+[[events]]
+type = ["booth"]
+name = "KubeCon EU"
+location = "Europaplein 24, 1078 GZ Amsterdam, Netherlands"
+startDate = "2020-03-31"
+endDate = "2020-04-03"
+description = "The Cloud Native Computing Foundation’s flagship conference gathers adopters and technologists from leading open source and cloud native communities in Amsterdam, The Netherlands from March 30 – April 2, 2020."
+registrationUrl = "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/register/"
 
 [[events]]
 type = ["workshop"]
-name = "Cloud Infrastructure Workshop | San Francisco, CA"
-location = "San Francisco, CA"
+name = "Infrastructure As Code Workshop | San Francisco, CA"
+location = "680 Folsom St #145, San Francisco, CA 94107"
 startDate = "2020-04-09"
 endDate = "2020-04-09"
+time = "5:30PM - 8:30PM (PT)"
 description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
-registrationUrl = "#"
 urlSlug = "workshop-san-francisco-2020-04-09"
-contentType = "workshop"
-
-[[events]]
-type = ["workshop"]
-name = "Cloud Infrastructure Workshop | Seattle, WA"
-location = "Seattle, WA"
-startDate = "2020-04-13"
-endDate = "2020-04-13"
-description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
-registrationUrl = "#"
-urlSlug = "workshop-seattle-2020-04-13"
-contentType = "workshop"
-
-[[events]]
-type = ["workshop"]
-name = "Cloud Infrastructure Workshop | Redmond, WA"
-location = "Redmond, WA"
-startDate = "2020-05-18"
-endDate = "2020-05-18"
-description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
-registrationUrl = "#"
-urlSlug = "workshop-redmond-2020-05-18"
-contentType = "workshop"
-
-[[events]]
-type = ["workshop"]
-name = "Cloud Infrastructure Workshop | New York, NY"
-location = "New York, NY"
-startDate = "2020-07-08"
-endDate = "2020-07-08"
-description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
-registrationUrl = "#"
-urlSlug = "workshop-new-york-2020-07-08"
-contentType = "workshop"
-
-[[events]]
-type = ["workshop"]
-name = "Cloud Infrastructure Workshop | Minneapolis, MN"
-location = "Minneapolis, MN"
-startDate = "2020-08-03"
-endDate = "2020-08-03"
-description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
-registrationUrl = "#"
-urlSlug = "workshop-minneapolis-2020-08-03"
-contentType = "workshop"
-
-[[events]]
-type = ["workshop"]
-name = "Cloud Infrastructure Workshop | London, GB"
-location = "London, GB"
-startDate = "2020-09-23"
-endDate = "2020-09-23"
-description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
-registrationUrl = "#"
-urlSlug = "workshop-london-2020-09-23"
-contentType = "workshop"
-
-[[events]]
-type = ["workshop"]
-name = "Cloud Infrastructure Workshop | Boston, MA"
-location = "Boston, MA"
-startDate = "2020-11-16"
-endDate = "2020-11-16"
-description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
-registrationUrl = "#"
-urlSlug = "workshop-boston-2020-11-16"
-contentType = "workshop"
-
-[[events]]
-type = ["workshop"]
-name = "Cloud Infrastructure Workshop | Las Vegas, NV"
-location = "Las Vegas, NV"
-startDate = "2020-11-29"
-endDate = "2020-11-29"
-description = "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
-registrationUrl = "#"
-urlSlug = "workshop-las-vegas-2020-11-29"
-contentType = "workshop"
+contentType = "workshop-microsoft"
+calendlyUrl = "https://calendly.com/pulumi/san-francisco?month=2020-04&hide_event_type_details=1&primary_color=512668"
+cost = "Free"

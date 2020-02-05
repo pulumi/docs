@@ -1,52 +1,38 @@
-
 ---
-title: Cloud Infrastructure Workshop | Redmond, WA
-url: workshop-redmond-2020-02-15
+title: Infrastructure As Code Workshop | Redmond, WA
+url: /events/workshop-redmond-2020-02-15
 type: page
 layout: event-single
+calendly_url: "https://calendly.com/pulumi/redmond?month=2020-03&hide_event_type_details=1&primary_color=512668"
 ---
-	
+## Details
 
-# Infrastructure as Code Workshop
+<div>
+	<i class="fas fa-globe-americas inline-block text-xl"></i>
+	<span class="my-0 text-xl">
+	    <a href="https://maps.google.com/?q=3709 Microsoft Way, Redmond, WA 98052" class="text-blue-500">3709 Microsoft Way, Redmond, WA 98052</a>
+	</span>
+</div>
 
-This workshop teaches you Infrastructure as Code concepts through a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them.
+<div>
+	<i class="fas fa-calendar inline-block text-xl"></i>
+	<span class="my-0 text-xl">March 12, 2020</span>
+</div>
 
-**Slides are available at: [InfrastructureAsCodeWorkshop.pdf](./slides/InfrastructureAsCodeWorkshop.pdf)**
+<div>
+	<i class="fas fa-clock inline-block text-xl"></i>
+	<span class="my-0 text-xl">5:30PM - 8:30PM (PT)</span>
+</div>
 
-## Course Outline
+<div>
+	<i class="fas fa-ticket-alt inline-block text-xl"></i>
+	<span class="my-0 text-xl">Free</span>
+</div>
 
-Before proceeding, ensure your machine is ready to go:
+The hardest part of Kubernetes is setting up the infrastructure: clusters, DNS, firewalls, load balancers, IAM, storage, logging, and performance monitoring, often spanning private, public, and hybrid cloud architectures.
 
-* [Installing Prerequisites](./labs/00-installing-prerequisites.md)
+In this workshop, the Pulumi team will show you how to tackle these challenges using Infrastructure as Code (IaC) through a series of hands-on labs. The techniques work for any cloud - Azure, AWS, and GCP. You'll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
 
-### Lab 1 — Modern Infrastructure as Code
+After completing this workshop, you'll be up and running with IaC fundamentals, modern application architectures across many clouds, and Kubernetes best-practices that are ready for production environments. You'll also be ready to empower your development teams to be more productive - continuously deploying both their applications and infrastructure.
 
-The first lab takes you on a tour of infrastructure as code concepts:
-
-1. [Creating a New Project](./labs/01-iac/01-creating-a-new-project.md)
-2. [Configuring](./labs/01-iac/02-configuring-aws.md)
-3. [Provisioning Infrastructure](./labs/01-iac/03-provisioning-infrastructure.md)
-4. [Updating your Infrastructure](./labs/01-iac/04-updating-your-infrastructure.md)
-5. [Making Your Stack Configurable](./labs/01-iac/05-making-your-stack-configurable.md)
-6. [Creating a Second Stack](./labs/01-iac/06-creating-a-second-stack.md)
-7. [Destroying Your Infrastructure](./labs/01-iac/07-destroying-your-infrastructure.md)
-
-### Lab 2 — Modern Application Architectures
-
-The second lab takes you on a tour of cloud architectures, including VMs, containers, and serverless:
-
-1. [Provisioning EC2 Virtual Machines](./labs/02-app-arch/01-provisioning-vms.md)
-3. [Deploying Containers to Elastic Container Service (ECS) "Fargate"](./labs/02-app-arch/02-containers-on-ecs.md)
-4. [Deploying Containers to a Kubernetes Cluster](./labs/02-app-arch/03-containers-on-kubernetes.md)
-5. [Using Serverless Application Patterns](./labs/02-app-arch/04-lambda-serverless.md)
-
-## Next Steps
-
-After completing these labs, there are several topics you may want to explore.
-
-* [Additional tutorials](https://www.pulumi.com/docs/tutorials/azure/)
-* [Continuous delivery](https://www.pulumi.com/docs/guides/continuous-delivery/)
-* [Secrets management](https://www.pulumi.com/blog/managing-secrets-with-pulumi/)
-* [Test-driven infrastructure](https://www.pulumi.com/blog/unit-testing-infrastructure-in-nodejs-and-mocha/)
-
-Thank you for checking out the Infrastructure as Code Workshop! More labs are on their way. Please [file an issue](https://github.com/pulumi/infrastructure-as-code-workshop/issues/new) if there are topics you'd like to see covered in the future.
+Pizza will be provided. This event is free thanks to sponsorship from Microsoft.

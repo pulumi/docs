@@ -4,37 +4,94 @@ import(
 	"fmt"
 	"io/ioutil"
 	"os"
+	"time"
+
 	"github.com/BurntSushi/toml"
 )
 
-func checkError(e error) {
-	if e != nil {
-		panic(e)
-	}
-}
+// Function for generating the front matter of an event file
+// and the details of the event before the description.
+func generateFrontMatter(event Event) string {
+	// Create the internal URL slug.
+	url := fmt.Sprintf("/events/%s", event.URLSlug)
 
-func generateFrontMatter(title string, urlSlug string) string {
-	frontMatter := fmt.Sprintf(`
----
+	// Parse the start and end dates, then format them.
+	startDate, _ := time.Parse("2006-01-02", event.StartDate)
+	endDate, _ := time.Parse("2006-01-02", event.EndDate)
+	formattedStartDate := startDate.Format("January 02")
+	formattedEndDate := endDate.Format("January 02")
+
+	// Grab the year of both the start and end dates to determine
+	// if the dates are in different years.
+	startYear := startDate.Format("2006")
+	endYear := endDate.Format("2006")
+
+	// Assign the date variable. If it is a one day event just show the start date. If the start
+	// date is not equal to the end date, display both years with the dates. Otherwise display
+	// the start and end date with the end year at the end of the string.
+	var date string
+	if formattedStartDate == formattedEndDate {
+		date = fmt.Sprintf("%s, %s", formattedStartDate, startYear)
+	} else if startYear != endYear {
+		date = fmt.Sprintf("%s, %s - %s, %s", formattedStartDate, startYear, formattedEndDate, endYear)
+	} else {
+		date = fmt.Sprintf("%s - %s, %s", formattedStartDate, formattedEndDate, endYear)
+	}
+
+	frontMatter := fmt.Sprintf(`---
 title: %s
 url: %s
 type: page
 layout: event-single
+calendly_url: "%s"
 ---
-	`, title, urlSlug)
+## Details
+
+<div>
+	<i class="fas fa-globe-americas inline-block text-xl"></i>
+	<span class="my-0 text-xl">
+	    <a href="https://maps.google.com/?q=%s" class="text-blue-500">%s</a>
+	</span>
+</div>
+
+<div>
+	<i class="fas fa-calendar inline-block text-xl"></i>
+	<span class="my-0 text-xl">%s</span>
+</div>
+
+<div>
+	<i class="fas fa-clock inline-block text-xl"></i>
+	<span class="my-0 text-xl">%s</span>
+</div>
+
+<div>
+	<i class="fas fa-ticket-alt inline-block text-xl"></i>
+	<span class="my-0 text-xl">%s</span>
+</div>`, event.Name, url, event.CalendlyURL, event.Location, event.Location, date, event.Time, event.Cost)
 
 	return frontMatter
 }
 
+// Funcation for getting the pre-defined page content.
 func getPageContent(contentType string) string {
 	var text string
 	switch contentType {
-	case "workshop":
-		content, err := ioutil.ReadFile("./tools/eventgen/snippets/workshop.md")
-		checkError(err)
+	case "workshop-microsoft":
+		content, err := ioutil.ReadFile("./tools/eventgen/snippets/workshop-microsoft.md")
+		if err != nil {
+			panic(err.Error())
+		}
+
+		text = string(content)
+	case "kubecon-workshop":
+		content, err := ioutil.ReadFile("./tools/eventgen/snippets/kubecon-workshop.md")
+		if err != nil {
+			panic(err.Error())
+		}
 
 		text = string(content)
 	default:
+		// If the page content doesn't exist panic.
 		errMsg := fmt.Sprintf("Content Type %s is not supported", contentType)
 		panic(errMsg)
 	}
@@ -42,15 +99,17 @@ func getPageContent(contentType string) string {
 	return text
 }
 
-func writeEventFile(contentType string, title string, urlSlug string) {
-	filePath := fmt.Sprintf("./content/events/%s.md", urlSlug);
+func writeEventFile(event Event) {
+	filePath := fmt.Sprintf("./content/events/%s.md", event.URLSlug);
 	eventFile, err := os.Create(filePath)
-	checkError(err)
+	if err != nil {
+		panic(err.Error())
+	}
 
 	defer eventFile.Close()
 
-	frontMatterContent := generateFrontMatter(title, urlSlug)
-	pageContent := getPageContent(contentType)
+	frontMatterContent := generateFrontMatter(event)
+	pageContent := getPageContent(event.ContentType)
 	fileContent := fmt.Sprintf("%s\n\n%s", frontMatterContent, pageContent)
 
 	if _, err := eventFile.WriteString(fileContent); err != nil {
@@ -68,6 +127,9 @@ type Event struct {
 	RegistrationURL string
 	URLSlug string
 	ContentType string
+	CalendlyURL string
+	Time string
+	Cost string
 }
 
 type Events struct {
@@ -82,12 +144,19 @@ func getEventData() []Event {
 		panic(err)
 	}
 
-	return eventData.Events
+	var filteredEvents []Event
+	for _, event := range eventData.Events {
+		if event.ContentType != "" {
+			filteredEvents = append(filteredEvents, event)
+		}
+	}
+
+	return filteredEvents
 }
 
 func writeEventFiles(events []Event) string {
 	event := events[0]
-	writeEventFile(event.ContentType, event.Name, event.URLSlug)
+	writeEventFile(event)
 	remainingEvents := events[1:]
 	if len(remainingEvents) > 0 {
 		return writeEventFiles(remainingEvents)

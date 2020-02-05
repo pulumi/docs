@@ -1,34 +1,3 @@
----
-title: KubeCon EU  Pre-day Workshop
-url: /events/workshop-amsterdam-2020-03-30
-type: page
-layout: event-single
-calendly_url: "https://calendly.com/pulumi/kubecon?month=2020-03&hide_event_type_details=1&primary_color=512668"
----
-## Details
-
-<div>
-	<i class="fas fa-globe-americas inline-block text-xl"></i>
-	<span class="my-0 text-xl">
-	    <a href="https://maps.google.com/?q=Europaboulevard 2b, 1078 RV Amsterdam, Netherlands" class="text-blue-500">Europaboulevard 2b, 1078 RV Amsterdam, Netherlands</a>
-	</span>
-</div>
-
-<div>
-	<i class="fas fa-calendar inline-block text-xl"></i>
-	<span class="my-0 text-xl">March 30, 2020</span>
-</div>
-
-<div>
-	<i class="fas fa-clock inline-block text-xl"></i>
-	<span class="my-0 text-xl">11:30AM - 4:00pm (CET)</span>
-</div>
-
-<div>
-	<i class="fas fa-ticket-alt inline-block text-xl"></i>
-	<span class="my-0 text-xl">€99</span>
-</div>
-
 Note: The registration fee includes lunch, the workshop and happy hour afterwards.
 
 The hardest part of Kubernetes is setting up the infrastructure: clusters, DNS, firewalls, load balancers, IAM, storage, logging, and performance monitoring, often spanning private, public, and hybrid cloud architectures.

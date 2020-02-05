@@ -1,34 +1,3 @@
----
-title: Infrastructure As Code Workshop | San Francisco, CA
-url: /events/workshop-san-francisco-2020-04-09
-type: page
-layout: event-single
-calendly_url: "https://calendly.com/pulumi/san-francisco?month=2020-04&hide_event_type_details=1&primary_color=512668"
----
-## Details
-
-<div>
-	<i class="fas fa-globe-americas inline-block text-xl"></i>
-	<span class="my-0 text-xl">
-	    <a href="https://maps.google.com/?q=680 Folsom St #145, San Francisco, CA 94107" class="text-blue-500">680 Folsom St #145, San Francisco, CA 94107</a>
-	</span>
-</div>
-
-<div>
-	<i class="fas fa-calendar inline-block text-xl"></i>
-	<span class="my-0 text-xl">April 09, 2020</span>
-</div>
-
-<div>
-	<i class="fas fa-clock inline-block text-xl"></i>
-	<span class="my-0 text-xl">5:30PM - 8:30PM (PT)</span>
-</div>
-
-<div>
-	<i class="fas fa-ticket-alt inline-block text-xl"></i>
-	<span class="my-0 text-xl">Free</span>
-</div>
-
 The hardest part of Kubernetes is setting up the infrastructure: clusters, DNS, firewalls, load balancers, IAM, storage, logging, and performance monitoring, often spanning private, public, and hybrid cloud architectures.
 
 In this workshop, the Pulumi team will show you how to tackle these challenges using Infrastructure as Code (IaC) through a series of hands-on labs. The techniques work for any cloud - Azure, AWS, and GCP. You'll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.

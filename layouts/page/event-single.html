@@ -3,15 +3,25 @@
         <div class="container mx-auto">
             <div class="mx-auto text-center">
                 <h1>{{ .Title }}</h1>
+
             </div>
         </div>
     </header>
 {{ end }}
 
 {{ define "main" }}
-    <div class="flex py-10 px-20">
-        <div class="w-8/12 mx-auto">
+    <div class="flex flex-col md:flex-row p-10 md:px-20">
+        <div class="w-full md:w-6/12 lg:w-8/12 mx-auto md:py-12">
             {{ .Content }}
+        </div>
+        <div class="w-full md:w-6/12 lg:w-4/12 mx-auto">
+            <!-- Calendly inline widget begin -->
+
+            <div class="calendly-inline-widget" data-url="{{ .Params.calendly_url }}" style="min-width:320px;height:750px;"></div>
+
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+
+            <!-- Calendly inline widget end -->
         </div>
     </div>
 {{ end }}

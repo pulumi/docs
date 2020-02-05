@@ -2,25 +2,29 @@
     <header class="header-hero">
         <div class="container mx-auto">
             <div class="mx-auto text-center">
-                <h1>Events</h1>
+                <h1>{{ .Title }}</h1>
             </div>
         </div>
     </header>
 {{ end }}
 
 {{ define "main" }}
-    <div class="flex py-10 px-20">
-        <div class="w-3/12">
+    <div class="flex py-10 md:py-24 px-5 md:px-20">
+        <div class="hidden md:inline-block w-3/12">
             <div id="eventFilter" class="px-5">
                 <p class="my-0 border-b text-2xl mb-3">Filter</p>
             </div>
         </div>
-        <div class="w-6/12">
-            <ul id="eventList" class="list-none md:flex md:flex-wrap">
+        <div class="w-full md:w-9/12 lg:w-6/12">
+            <ul id="eventList" class="list-none md:flex md:flex-wrap pl-0">
                 {{ range $.Site.Data.events.events }}
                     <li class="w-full border border-gray-400 rounded my-0 px-5 py-5 mb-10" data-event-type='{{ delimit .type "," }}'>
                         <div>
-                            <a class="text-2xl" href="/events/{{ .urlSlug }}/">{{ .name }}</a>
+                            {{ if .urlSlug }}
+                                <a class="text-2xl" href="/events/{{ .urlSlug }}/">{{ .name }}</a>
+                            {{ else }}
+                                <a class="text-2xl" href="{{ .registrationUrl }}" target="_blank">{{ .name }}</a>
+                            {{ end }}
                             <p class="my-3">{{ .description }}</p>
                             <div class="flex mt-2">
                                 <div class="w-8/12">
@@ -56,7 +60,9 @@
                                     </div>
                                 </div>
                                 <div class="w-4/12 relative">
-                                    <a class="btn btn-purple absolute bottom-0 right-0" href="#">Register</a>
+                                    {{ if .urlSlug }}
+                                        <a class="btn btn-purple absolute bottom-0 right-0" href="{{ .urlSlug }}">Register</a>
+                                    {{ end }}
                                 </div>
                             </div>
                         </div>
@@ -64,7 +70,7 @@
                 {{ end }}
             </ul>
         </div>
-        <div class="w-3/12 px-5">
+        <div class="hidden lg:inline-block w-3/12 px-5">
             <div class="border border-gray-400 rounded bg-black pb-8">
                 <p class="text-xl text-white leading-snug my-0 mx-5 mt-2"><b>Create</b> modern applications</p>
                 <img class="w-full mb-5" src="/images/docs/k8s-the-prod-way/app.png" />
