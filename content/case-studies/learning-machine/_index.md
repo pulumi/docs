@@ -66,7 +66,7 @@ geographies while keeping their SaaS costs under control. He huddled with his CO
 Hughes, and CTO, Kim Hamilton, to brainstorm about how to solve the dilemma they were
 facing.
 
-## Moving From Complicated to Simple
+## Moving from Complicated to Simple
 
 The team realized that in order to grow they needed to transition away from their
 first-generation tooling to an offering that more team members could understand and
@@ -92,7 +92,7 @@ their containers without having to manage servers or clusters. As part of this n
 removing additional complexity from their service architecture while making it easier to
 scale.
 
-<img class="block mx-auto max-w-4xl my-8" src="/images/case-studies/learning-machine-architecture.png" alt="Learning machine architecture">
+<img class="block mx-auto md:max-w-4xl my-8" src="/images/case-studies/learning-machine-architecture.png" alt="Learning machine architecture">
 
 ## Results
 
@@ -119,7 +119,7 @@ said Hughes. The entire DevOps process was streamlined and in addition to realiz
 productivity and higher quality, the team has new insight into their SaaS offering that
 they never thought possible.
 
-<img class="block mx-auto max-w-2xl my-8" src="/images/case-studies/learning-machine-loc.png">
+<img class="block mx-auto md:max-w-2xl my-8" src="/images/case-studies/learning-machine-loc.png">
 
 ## New Opportunities
 
