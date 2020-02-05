@@ -4,7 +4,7 @@ type: page
 layout: case-study
 
 meta_desc: |
-    Learn how Learning Machine used Pulumi and TypeScript to streamline its devops processes
+    Learn how Learning Machine used Pulumi and TypeScript to streamline its DevOps processes
     and eliminate several hundred thousand lines of configuration code.
 
 exec_summary: |
