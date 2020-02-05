@@ -28,32 +28,20 @@ Python 3 and pip3 are required by Pulumi.
 
 The fastest way to get started with Pulumi Python is by using a template.  From an empty directory in which you'd like to create a new project:
 
-```
+```bash
 $ mkdir myproject && cd myproject
 $ pulumi new python
 ```
 
-This will leave behind a `Pulumi.yaml` file, containing some minimal metadata about your project (including a name and description which you may wish to change), a `requirements.txt` file, where you will specify your dependencies (see #pypi-packages below), and a `__main__.py` file, containing your program.
+This creates a `Pulumi.yaml` file, containing minimal metadata about your project (including a name and description, which you may wish to change), a `requirements.txt` file, where you will specify your dependencies (see #pypi-packages below), and a `__main__.py` file, containing your program.
 
 > **Note:** Although the template uses a very simple package structure, by placing `__main__.py` in the root directory, Pulumi fully supports [properly modularized Python programs](http://docs.python-guide.org/en/latest/writing/structure/) and `setup.py` files.  This is important if you ever decide to turn your Pulumi program into a library.
-<br />
-> **Note:** Pulumi currently expects the `python` executable to refer to a Python of version 3.6 or above. This is
-> usually not the case when running outside of a virtual environment. To work around around this and explicitly ask
-> Pulumi to run your program using `python3` you can set the `PULUMI_PYTHON_CMD` environment variable to `python3`. This
-> will be addressed in future versions of Pulumi.
+
+> **Note:** Pulumi expects the `python` executable to refer to a Python 3.6 or above. This is usually not the case when running outside of a virtual environment. To work around around this and explicitly ask Pulumi to run your program using `python3`, you can set the `PULUMI_PYTHON_CMD` environment variable to `python3`. This will be addressed in future versions of Pulumi.
 
 ## Using Pulumi PyPI Packages {#pypi-packages}
 
-It is not required, but we recommend using virtual environments such as [`venv`](https://docs.python.org/3/library/venv.html) of [`pipenv`](https://pipenv.readthedocs.io/en/latest/) for repeatable installations that work no matter your operating system.
-
-```
-$ pipenv --python 3
-$ pipenv install
-$ pipenv shell
-```
-
-`pipenv shell` launches a subshell with your virtual environment already activated. We highly recommend using virtual
-environments to isolate the dependencies of your projects and ensure reproducibility between machines.
+It is not required, but we recommend using a virtual environment such as [`venv`](https://docs.python.org/3/library/venv.html) to isolate the dependencies of your projects and ensure reproducibility between machines.
 
 ### Adding a new dependency {#packages}
 
