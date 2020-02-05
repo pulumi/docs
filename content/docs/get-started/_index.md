@@ -23,6 +23,9 @@ aliases:
 ## Choose Your Cloud
 
 <div class="flex flex-col max-w-full md:max-w-lg">
+    <a class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center" href="{{< relref "alicloud" >}}">
+        <img class="h-10" src="/logos/tech/alicloud.png" alt="Alibaba Cloud">
+    </a>
     <a class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center" href="{{< relref "aws" >}}">
         <img class="h-10" src="/logos/tech/aws.svg" alt="AWS">
     </a>
