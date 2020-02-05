@@ -23,21 +23,50 @@ function generateOnThisPage() {
     var $ul = $(".on-this-page > ul");
     if ($ul) {
         var found = false;
+        var headings = [];
+
         $("h2, h3").each(function () {
             var $el = $(this);
             var id = $el.attr("id");
             var text = $el.text();
             var linkTitle = $el.data("link-title");
             var tag = $el.prop("tagName").toLowerCase();
+
             if (id && text) {
                 found = true;
-                $ul.append("<li class='" + tag + "'><a href='#" + id + "'>" + (linkTitle || text) + "</a></li>");
+                var li = $("<li class='" + tag + "'><a href='#" + id + "'>" + (linkTitle || text) + "</a></li>");
+                $ul.append(li);
+
+                // Capture associated heading and list-item elements, so we can mark list
+                // items active when they become visible.
+                headings.push({
+                    element: $el,
+                    listItem: li,
+                });
             }
         });
 
         // It's hidden by default. If we added links to the list, show it.
         if (found) {
             $(".on-this-page").show();
+
+            // Highlight the first heading whose offset from top is greater than the current scroll
+            // position, to best indicate your location within the page hierarchy.
+            function setActiveItem() {
+                var active;
+                for (var heading of headings) {
+                    if (!active && heading.element.offset().top >= window.scrollY) {
+                        active = heading;
+                    }
+                    heading.listItem.toggleClass("font-bold", heading === active);
+                }
+            }
+
+            $(window).on("scroll", function() {
+                setActiveItem();
+            });
+
+            setActiveItem();
         }
     }
 }
