@@ -36,7 +36,7 @@ $ pulumi new python
 This creates a `Pulumi.yaml` file, containing minimal metadata about your project (including a name and description, which you may wish to change), a `requirements.txt` file, where you will specify your dependencies (see #pypi-packages below), and a `__main__.py` file, containing your program.
 
 > **Note:** Although the template uses a very simple package structure, by placing `__main__.py` in the root directory, Pulumi fully supports [properly modularized Python programs](http://docs.python-guide.org/en/latest/writing/structure/) and `setup.py` files.  This is important if you ever decide to turn your Pulumi program into a library.
-
+</BR>
 > **Note:** Pulumi expects the `python` executable to refer to a Python 3.6 or above. This is usually not the case when running outside of a virtual environment. To work around around this and explicitly ask Pulumi to run your program using `python3`, you can set the `PULUMI_PYTHON_CMD` environment variable to `python3`. This will be addressed in future versions of Pulumi.
 
 ## Using Pulumi PyPI Packages {#pypi-packages}
