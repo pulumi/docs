@@ -37,6 +37,7 @@ func generateFrontMatter(event Event) string {
 
 	frontMatter := fmt.Sprintf(`---
 title: %s
+meta_desc: Join Pulumi at %s and learn more about cloud programming, infrastructure as code, and many other topics.
 type: page
 layout: event-single
 calendly_url: "%s"
@@ -66,7 +67,7 @@ calendly_url: "%s"
 <div>
 	<i class="fas fa-ticket-alt inline-block text-xl"></i>
 	<span class="my-0 text-xl">%s</span>
-</div>`, event.Name, event.CalendlyURL, event.Location, event.Location, date, event.Time, event.Cost)
+</div>`, event.Name, event.Name, event.CalendlyURL, event.Location, event.Location, date, event.Time, event.Cost)
 
 	return frontMatter
 }

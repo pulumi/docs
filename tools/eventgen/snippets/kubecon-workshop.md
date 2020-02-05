@@ -1,6 +1,6 @@
 Note: The registration fee includes lunch, the workshop and happy hour afterwards.
 
-**About the Workshop**
+### About the Workshop
 
 The hardest part of Kubernetes is setting up the infrastructure: clusters, DNS, firewalls, load balancers, IAM, storage, logging, and performance monitoring, often spanning private, public, and hybrid cloud architectures.
 
@@ -8,7 +8,9 @@ In this workshop, the Pulumi team will show you how to tackle these challenges u
 
 After completing this workshop, you'll be up and running with IaC fundamentals, modern application architectures across many clouds, and Kubernetes best-practices that are ready for production environments. You'll also be ready to empower your development teams to be more productive - continuously deploying both their applications and infrastructure.
 
-**Agenda**
+[**Course Outline and Materials**](https://github.com/pulumi/infrastructure-as-code-workshop)
+
+### Agenda
 
 11:30am - Lunch will be served in the meeting room.
 
@@ -16,7 +18,7 @@ After completing this workshop, you'll be up and running with IaC fundamentals, 
 
 3:00-4:00pm - Happy hour with drinks/snacks.
 
-**Instructors**
+### Instructors
 
 Joe Duffy - CEO, Pulumi <a href="https://twitter.com/funcofjoe" target="_blank">@funcofjoe</a>
 
@@ -24,6 +26,6 @@ Paul Stack - Software Engineer, Pulumi <a href="https://twitter.com/stack72" tar
 
 For questions contact, <a href="mailto:inquiries@pulumi.com">inquiries@pulumi.com</a>.
 
-**Location**
+### Location
 
 The workshop will be held at the Hotel nhow Amsterdam RAI which is located next to the RAI Amsterdam Convention Center.

@@ -1,5 +1,6 @@
 ---
 title: Infrastructure As Code Workshop | San Francisco, CA
+meta_desc: Join Pulumi at Infrastructure As Code Workshop | San Francisco, CA and learn more about cloud programming, infrastructure as code, and many other topics.
 type: page
 layout: event-single
 calendly_url: "https://calendly.com/pulumi/san-francisco?month=2020-04"
@@ -31,7 +32,7 @@ calendly_url: "https://calendly.com/pulumi/san-francisco?month=2020-04"
 	<span class="my-0 text-xl">Free</span>
 </div>
 
-**About the Workshop**
+### About the Workshop
 
 The hardest part of Kubernetes is setting up the infrastructure: clusters, DNS, firewalls, load balancers, IAM, storage, logging, and performance monitoring, often spanning private, public, and hybrid cloud architectures.
 
@@ -39,9 +40,8 @@ In this workshop, the Pulumi team will show you how to tackle these challenges u
 
 After completing this workshop, you'll be up and running with IaC fundamentals, modern application architectures across many clouds, and Kubernetes best-practices that are ready for production environments. You'll also be ready to empower your development teams to be more productive - continuously deploying both their applications and infrastructure.
 
-**Instructors**
+### Instructors
 
 Luke Hoban - CTO, Pulumi <a href="https://twitter.com/lukehoban" target="_blank">@lukehoban</a>
-
 
 **Pizza will be provided.** This event is free thanks to sponsorship from Microsoft.
