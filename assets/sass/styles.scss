@@ -187,4 +187,13 @@ main {
     }
 }
 
+.sticky-sidebar {
+
+    @screen lg {
+        @apply sticky self-start overflow-y-scroll;
+        max-height: 90vh;
+        top: 112px;
+    }
+}
+
 @tailwind utilities;
