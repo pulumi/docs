@@ -7,8 +7,16 @@ meta_desc: |
     Learn more about how Mercedes-Benz Research and Development used Pulumi to bring their
     application and infrastructure teams closer together.
 
+customer_name: Mercedes-Benz Research and Development
+customer_logo: /logos/customers/mercedes-benz-RDNA_logo.png
+
 exec_summary: |
-Mercedes-Benz Research and Development North America (MBRDNA) chose Pulumi to help them fully leverage modern cloud capabilities, enabling their organization to push the frontiers of innovative automatic research and development. By using technologies like multi-cloud and Kubernetes, and Pulumi's approach to infrastructure as code, their developers and infrastructure engineers are able to work closely to work more productively, and deliver results faster, than ever before.
+    Mercedes-Benz Research and Development North America (MBRDNA) chose Pulumi to help
+    them fully leverage modern cloud capabilities, enabling their organization to push the
+    frontiers of innovative automatic research and development. By using technologies like
+    multi-cloud and Kubernetes, and Pulumi's approach to infrastructure as code, their
+    developers and infrastructure engineers are able to work closely to work more
+    productively, and deliver results faster, than ever before.
 
 sections:
     - label: Exec Summary
@@ -21,8 +29,10 @@ sections:
       anchor: the-road-ahead
 ---
 
+## About MBRDNA
+
 Embedded in a worldwide network, Mercedes-Benz Research & Development North America
-(MBRDNA) continuously strives to remain at the forefront of successful automotive research
+continuously strives to remain at the forefront of successful automotive research
 and development. MBRDNA is headquartered in Silicon Valley, California, with key areas of
 Autonomous Driving, Advanced Interaction Design, Digital User Experience, Machine
 Learning, Customer Research, and Open Innovation. In Redford, Michigan, the focus is on
