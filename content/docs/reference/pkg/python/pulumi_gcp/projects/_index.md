@@ -358,7 +358,7 @@ by this provider, and new roles cannot share that name.</p>
 <li><p><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project that the service account will be created in.
 Defaults to the provider project configuration.</p></li>
-<li><p><strong>role_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role id to use for this role.</p></li>
+<li><p><strong>role_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The camel case role id to use for this role. Cannot contain <code class="docutils literal notranslate"><span class="pre">-</span></code> characters.</p></li>
 <li><p><strong>stage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current launch stage of the role.
 Defaults to <code class="docutils literal notranslate"><span class="pre">GA</span></code>.
 List of possible stages is <a class="reference external" href="https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage">here</a>.</p></li>
@@ -397,7 +397,7 @@ Defaults to the provider project configuration.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.IAMCustomRole.role_id">
 <code class="sig-name descname">role_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMCustomRole.role_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The role id to use for this role.</p>
+<dd><p>The camel case role id to use for this role. Cannot contain <code class="docutils literal notranslate"><span class="pre">-</span></code> characters.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -430,7 +430,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project that the service account will be created in.
 Defaults to the provider project configuration.</p></li>
-<li><p><strong>role_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role id to use for this role.</p></li>
+<li><p><strong>role_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The camel case role id to use for this role. Cannot contain <code class="docutils literal notranslate"><span class="pre">-</span></code> characters.</p></li>
 <li><p><strong>stage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The current launch stage of the role.
 Defaults to <code class="docutils literal notranslate"><span class="pre">GA</span></code>.
 List of possible stages is <a class="reference external" href="https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage">here</a>.</p>
