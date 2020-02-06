@@ -12,14 +12,23 @@
     {{ errorf "invalid number of components for param 'date': %s" .Position }}
 {{ end }}
 
+{{ $exclude := split (.Get "exclude") "," }}
+
 <tr>
     <td><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#{{ $flatVersion }}-{{ $date }}">{{ $version }}</a></td>
     <td>{{ $date }}</td>
     <td>
-        <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-linux-x64.tar.gz">Linux</a>
-        |
-        <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-darwin-x64.tar.gz">macOS</a>
-        |
-        <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-windows-x64.zip">Windows</a>
+        <table class="w-full border-collapse">
+            <tbody>
+                <tr>
+                    <td class="w-1/3 border-r-2 last:border-r-0"><a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-linux-x64.tar.gz">Linux</a></td>
+                    <td class="w-1/3 border-r-2 last:border-r-0"><a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-darwin-x64.tar.gz">macOS</a></td>
+                    <td class="w-1/3 border-r-2 last:border-r-0"><a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-windows-x64.zip">Windows</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <a class="btn btn-sm" href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-linux-x64.tar.gz"><i class="fas fa-download"></i> Linux</a>
+        <a class="btn btn-sm" href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-darwin-x64.tar.gz"><i class="fas fa-download"></i> macOS</a>
+        <a class="btn btn-sm" href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-windows-x64.zip"><i class="fas fa-download"></i> Windows</a> -->
     </td>
 </tr>
