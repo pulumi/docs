@@ -149,6 +149,7 @@ const websiteLogsBucket = new aws.s3.Bucket(
 const fiveMinutes = 60 * 5;
 const oneHour = fiveMinutes * 12;
 const oneWeek = oneHour * 24 * 7;
+const oneYear = oneWeek * 52;
 
 const baseCacheBehavior = {
     targetOriginId: websiteBucket.arn,
@@ -224,20 +225,20 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/css/styles.*.css",
-            defaultTtl: oneWeek,
-            maxTtl: oneWeek,
+            defaultTtl: oneYear,
+            maxTtl: oneYear,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/js/bundle.min.*.js",
-            defaultTtl: oneWeek,
-            maxTtl: oneWeek,
+            defaultTtl: oneYear,
+            maxTtl: oneYear,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/js/search.min.*.js",
-            defaultTtl: oneWeek,
-            maxTtl: oneWeek,
+            defaultTtl: oneYear,
+            maxTtl: oneYear,
         },
         {
             ...baseCacheBehavior,
