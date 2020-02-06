@@ -29,7 +29,7 @@ check_links() {
         --exclude "https://www.latlong.net/" \
         --exclude "https://media.amazonwebservices.com/architecturecenter/AWS_ac_ra_web_01.pdf" \
         --exclude "https://www.packet.com/" \
-		--exclude "https://get.pulumi.com/releases/sdk/pulumi-v1.10.0-windows-x64.zip"
+        --exclude "https://get.pulumi.com/releases/sdk/pulumi-v1.10.0-windows-x64.zip"
 }
 
 retry() {
