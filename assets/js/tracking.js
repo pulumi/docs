@@ -69,7 +69,7 @@ $(document).ready(function() {
         // Remove the event listeners when we navigate to a new page.
         $(window).on("unload", function() {
             for (var i = 0; i < links.length; i++) {
-                $(link[i]).off("click");
+                $(links[i]).off("click");
             }
         });
     }
