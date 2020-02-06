@@ -90,7 +90,6 @@ go get -u github.com/cbroglie/mustache
 go get -u github.com/gobuffalo/packr
 go get -u github.com/pkg/errors
 go get -u gopkg.in/russross/blackfriday.v2
-go get -u github.com/BurntSushi/toml
 ```
 
 ### Makefile
