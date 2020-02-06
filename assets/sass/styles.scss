@@ -173,8 +173,13 @@ main {
 
 // Custom css for the Calendly iframe we use on the event registration pages.
 #calendly-widget {
-    min-width: 320px;
-    height: 750px;
+    min-width: 270px;
+    height: 600px;
+
+    @screen md {
+        min-width: 320px;
+        height: 750px;
+    }
 
     .booking-container {
         background-color: green;
