@@ -105,8 +105,8 @@ single cluster master. If you specify a region (such as <code class="docutils li
 cluster will be a regional cluster with multiple masters spread across zones in
 the region, and with default node locations in those zones as well</p></li>
 <li><p><strong>logging_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The logging service that the cluster should
-write logs to. Available options include <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com</span></code>,
-<code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code></p></li>
+write logs to. Available options include <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com</span></code>(Legacy Stackdriver),
+<code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code>(Stackdriver Kubernetes Engine Logging), and <code class="docutils literal notranslate"><span class="pre">none</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code></p></li>
 <li><p><strong>maintenance_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The maintenance policy to use for the cluster. Structure is
 documented below.</p></li>
 <li><p><strong>master_auth</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The authentication information for accessing the
@@ -132,7 +132,7 @@ should write metrics to.
 Automatically send metrics from pods in the cluster to the Google Cloud Monitoring API.
 VM metrics will be collected by Google Compute Engine regardless of this setting
 Available options include
-<code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com</span></code>, <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com/kubernetes</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>.
+<code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com</span></code>(Legacy Stackdriver), <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com/kubernetes</span></code>(Stackdriver Kubernetes Engine Monitoring), and <code class="docutils literal notranslate"><span class="pre">none</span></code>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com/kubernetes</span></code></p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cluster, unique within the project and
 location.</p></li>
@@ -677,8 +677,8 @@ the region, and with default node locations in those zones as well</p>
 <dt id="pulumi_gcp.container.Cluster.logging_service">
 <code class="sig-name descname">logging_service</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.logging_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The logging service that the cluster should
-write logs to. Available options include <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com</span></code>,
-<code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code></p>
+write logs to. Available options include <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com</span></code>(Legacy Stackdriver),
+<code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code>(Stackdriver Kubernetes Engine Logging), and <code class="docutils literal notranslate"><span class="pre">none</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -772,7 +772,7 @@ should write metrics to.
 Automatically send metrics from pods in the cluster to the Google Cloud Monitoring API.
 VM metrics will be collected by Google Compute Engine regardless of this setting
 Available options include
-<code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com</span></code>, <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com/kubernetes</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>.
+<code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com</span></code>(Legacy Stackdriver), <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com/kubernetes</span></code>(Stackdriver Kubernetes Engine Monitoring), and <code class="docutils literal notranslate"><span class="pre">none</span></code>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com/kubernetes</span></code></p>
 </dd></dl>
 
@@ -1163,8 +1163,8 @@ single cluster master. If you specify a region (such as <code class="docutils li
 cluster will be a regional cluster with multiple masters spread across zones in
 the region, and with default node locations in those zones as well</p></li>
 <li><p><strong>logging_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The logging service that the cluster should
-write logs to. Available options include <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com</span></code>,
-<code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code></p></li>
+write logs to. Available options include <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com</span></code>(Legacy Stackdriver),
+<code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code>(Stackdriver Kubernetes Engine Logging), and <code class="docutils literal notranslate"><span class="pre">none</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code></p></li>
 <li><p><strong>maintenance_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The maintenance policy to use for the cluster. Structure is
 documented below.</p></li>
 <li><p><strong>master_auth</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The authentication information for accessing the
@@ -1194,7 +1194,7 @@ should write metrics to.
 Automatically send metrics from pods in the cluster to the Google Cloud Monitoring API.
 VM metrics will be collected by Google Compute Engine regardless of this setting
 Available options include
-<code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com</span></code>, <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com/kubernetes</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>.
+<code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com</span></code>(Legacy Stackdriver), <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com/kubernetes</span></code>(Stackdriver Kubernetes Engine Monitoring), and <code class="docutils literal notranslate"><span class="pre">none</span></code>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com/kubernetes</span></code></p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cluster, unique within the project and
 location.</p></li>
@@ -1689,6 +1689,8 @@ for more information.</p>
 </p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the node pool. If left blank, this provider will
 auto-generate a unique name.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name for the node pool beginning
+with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
 <li><p><strong>node_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The node configuration of the pool. See
 container.Cluster for schema.</p></li>
 <li><p><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes per instance group. This field can be used to
@@ -1798,6 +1800,12 @@ this will force recreation of the resource.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.container.NodePool.instance_group_urls">
+<code class="sig-name descname">instance_group_urls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.instance_group_urls" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource URLs of the managed instance groups associated with this node pool.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.container.NodePool.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The location (region or zone) of the cluster.</p>
@@ -1829,6 +1837,13 @@ for more information.</p>
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the node pool. If left blank, this provider will
 auto-generate a unique name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.container.NodePool.name_prefix">
+<code class="sig-name descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.name_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a unique name for the node pool beginning
+with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1933,6 +1948,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
 <li><p><strong>initial_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The initial number of nodes for the pool. In
 regional or multi-zonal clusters, this is the number of nodes per zone. Changing
 this will force recreation of the resource.</p></li>
+<li><p><strong>instance_group_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The resource URLs of the managed instance groups associated with this node pool.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location (region or zone) of the cluster.</p></li>
 <li><p><strong>management</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.</p></li>
@@ -1944,6 +1960,8 @@ for more information.</p>
 </p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the node pool. If left blank, this provider will
 auto-generate a unique name.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name for the node pool beginning
+with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
 <li><p><strong>node_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The node configuration of the pool. See
 container.Cluster for schema.</p></li>
 <li><p><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes per instance group. This field can be used to

@@ -546,7 +546,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_gcp.monitoring.get_notification_channel">
-<code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">get_notification_channel</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.get_notification_channel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">get_notification_channel</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.get_notification_channel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
 </dd></dl>
 
