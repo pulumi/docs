@@ -13,6 +13,9 @@
 {{ end }}
 
 {{ $exclude := split (.Get "exclude") "," }}
+{{ if not (in $exclude "linux") }}{{ .Scratch.Add "platforms" (slice (slice "linux" "Linux")) }}{{ end }}
+{{ if not (in $exclude "mac") }}{{ .Scratch.Add "platforms" (slice (slice "darwin" "macOS")) }}{{ end }}
+{{ if not (in $exclude "windows") }}{{ .Scratch.Add "platforms" (slice (slice "windows" "Windows")) }}{{ end }}
 
 <tr>
     <td><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#{{ $flatVersion }}-{{ $date }}">{{ $version }}</a></td>
@@ -21,14 +24,15 @@
         <table class="w-full border-collapse">
             <tbody>
                 <tr>
-                    <td class="w-1/3 border-r-2 last:border-r-0"><a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-linux-x64.tar.gz">Linux</a></td>
-                    <td class="w-1/3 border-r-2 last:border-r-0"><a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-darwin-x64.tar.gz">macOS</a></td>
-                    <td class="w-1/3 border-r-2 last:border-r-0"><a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-windows-x64.zip">Windows</a></td>
+                    {{ $platforms := .Scratch.Get "platforms" }}
+                    {{ $lastIndex := sub (len $platforms) 1 }}
+                    {{ range $i := $platforms }}
+                        <td class="w-1/3{{ if ne $i $lastIndex }} border-l-2{{ end }}">
+                            <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-{{ index . 0 }}-x64.tar.gz">{{ index . 1 }}</a>
+                        </td>
+                    {{ end }}
                 </tr>
             </tbody>
         </table>
-        <!-- <a class="btn btn-sm" href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-linux-x64.tar.gz"><i class="fas fa-download"></i> Linux</a>
-        <a class="btn btn-sm" href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-darwin-x64.tar.gz"><i class="fas fa-download"></i> macOS</a>
-        <a class="btn btn-sm" href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-windows-x64.zip"><i class="fas fa-download"></i> Windows</a> -->
     </td>
 </tr>
