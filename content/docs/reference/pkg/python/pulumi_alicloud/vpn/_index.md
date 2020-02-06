@@ -334,10 +334,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the VPN instance.</p></li>
 <li><p><strong>enable_ipsec</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or Disable IPSec VPN. At least one type of VPN should be enabled.</p></li>
 <li><p><strong>enable_ssl</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or Disable SSL VPN.  At least one type of VPN should be enabled.</p></li>
-<li><p><strong>instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The charge type for instance. Valid value: PostPaid, PrePaid. Default to PostPaid.</p></li>
+<li><p><strong>instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The charge type for instance. If it is an international site account, the valid value is PostPaid, otherwise PrePaid. 
+Default to PostPaid.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the VPN. Defaults to null.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The filed is only required while the InstanceChargeType is PrePaid. Valid values: [1-9, 12, 24, 36]. Default to 1.</p></li>
-<li><p><strong>ssl_connections</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The max connections of SSL VPN. Default to 5. This field is ignored when enable_ssl is false.</p></li>
+<li><p><strong>ssl_connections</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The max connections of SSL VPN. Default to 5. The number of connections supported by each account is different. 
+This field is ignored when enable_ssl is false.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPN belongs the vpc_id, the field can’t be changed.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPN belongs the vswitch_id, the field can’t be changed.</p></li>
 </ul>
@@ -373,7 +375,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpn.Gateway.instance_charge_type">
 <code class="sig-name descname">instance_charge_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.instance_charge_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The charge type for instance. Valid value: PostPaid, PrePaid. Default to PostPaid.</p>
+<dd><p>The charge type for instance. If it is an international site account, the valid value is PostPaid, otherwise PrePaid. 
+Default to PostPaid.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -397,7 +400,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpn.Gateway.ssl_connections">
 <code class="sig-name descname">ssl_connections</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.ssl_connections" title="Permalink to this definition">¶</a></dt>
-<dd><p>The max connections of SSL VPN. Default to 5. This field is ignored when enable_ssl is false.</p>
+<dd><p>The max connections of SSL VPN. Default to 5. The number of connections supported by each account is different. 
+This field is ignored when enable_ssl is false.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -433,11 +437,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the VPN instance.</p></li>
 <li><p><strong>enable_ipsec</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or Disable IPSec VPN. At least one type of VPN should be enabled.</p></li>
 <li><p><strong>enable_ssl</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or Disable SSL VPN.  At least one type of VPN should be enabled.</p></li>
-<li><p><strong>instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The charge type for instance. Valid value: PostPaid, PrePaid. Default to PostPaid.</p></li>
+<li><p><strong>instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The charge type for instance. If it is an international site account, the valid value is PostPaid, otherwise PrePaid. 
+Default to PostPaid.</p></li>
 <li><p><strong>internet_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The internet ip of the VPN.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the VPN. Defaults to null.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The filed is only required while the InstanceChargeType is PrePaid. Valid values: [1-9, 12, 24, 36]. Default to 1.</p></li>
-<li><p><strong>ssl_connections</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The max connections of SSL VPN. Default to 5. This field is ignored when enable_ssl is false.</p></li>
+<li><p><strong>ssl_connections</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The max connections of SSL VPN. Default to 5. The number of connections supported by each account is different. 
+This field is ignored when enable_ssl is false.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the VPN gateway.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPN belongs the vpc_id, the field can’t be changed.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPN belongs the vswitch_id, the field can’t be changed.</p></li>
@@ -791,7 +797,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>cipher</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encryption algorithm used by the SSL-VPN server. Valid value: AES-128-CBC (default)| AES-192-CBC | AES-256-CBC | none</p></li>
 <li><p><strong>client_ip_pool</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block from which access addresses are allocated to the virtual network interface card of the client.</p></li>
 <li><p><strong>compress</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specify whether to compress the communication. Valid value: true (default) | false</p></li>
-<li><p><strong>local_subnet</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block to be accessed by the client through the SSL-VPN connection.</p></li>
+<li><p><strong>local_subnet</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block to be accessed by the client through the SSL-VPN connection. It supports to set multi CIDRs by comma join ways, like <code class="docutils literal notranslate"><span class="pre">10.0.1.0/24,10.0.2.0/24,10.0.3.0/24</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSL-VPN server.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port used by the SSL-VPN server. The default value is 1194.The following ports cannot be used: [22, 2222, 22222, 9000, 9001, 9002, 7505, 80, 443, 53, 68, 123, 4510, 4560, 500, 4500].</p></li>
 <li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol used by the SSL-VPN server. Valid value: UDP(default) <a href="#id13"><span class="problematic" id="id14">|</span></a>TCP</p></li>
@@ -835,7 +841,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpn.SslVpnServer.local_subnet">
 <code class="sig-name descname">local_subnet</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.local_subnet" title="Permalink to this definition">¶</a></dt>
-<dd><p>The CIDR block to be accessed by the client through the SSL-VPN connection.</p>
+<dd><p>The CIDR block to be accessed by the client through the SSL-VPN connection. It supports to set multi CIDRs by comma join ways, like <code class="docutils literal notranslate"><span class="pre">10.0.1.0/24,10.0.2.0/24,10.0.3.0/24</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -884,7 +890,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>compress</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specify whether to compress the communication. Valid value: true (default) | false</p></li>
 <li><p><strong>connections</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of current connections.</p></li>
 <li><p><strong>internet_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The internet IP of the SSL-VPN server.</p></li>
-<li><p><strong>local_subnet</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block to be accessed by the client through the SSL-VPN connection.</p></li>
+<li><p><strong>local_subnet</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block to be accessed by the client through the SSL-VPN connection. It supports to set multi CIDRs by comma join ways, like <code class="docutils literal notranslate"><span class="pre">10.0.1.0/24,10.0.2.0/24,10.0.3.0/24</span></code>.</p></li>
 <li><p><strong>max_connections</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of connections.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSL-VPN server.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port used by the SSL-VPN server. The default value is 1194.The following ports cannot be used: [22, 2222, 22222, 9000, 9001, 9002, 7505, 80, 443, 53, 68, 123, 4510, 4560, 500, 4500].</p></li>
