@@ -9,6 +9,7 @@ meta_desc: |
 
 customer_name: Learning Machine
 customer_logo: /logos/customers/learning-machine_logo.svg
+customer_url: https://www.learningmachine.com
 
 exec_summary: |
     [Learning Machine](https://www.learningmachine.com/) provides a secure platform, using the

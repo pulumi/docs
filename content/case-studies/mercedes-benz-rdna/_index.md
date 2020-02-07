@@ -9,6 +9,7 @@ meta_desc: |
 
 customer_name: Mercedes-Benz Research and Development
 customer_logo: /logos/customers/mercedes-benz-RDNA_logo.png
+customer_url: https://mbrdna.com/
 
 exec_summary: |
     [Mercedes-Benz Research & Development North America](https://mbrdna.com/) (MBRDNA)
@@ -18,7 +19,6 @@ exec_summary: |
     applications they deploy were a priority. With Pulumi, the MBRDNA team found the ideal
     toolset to tame the complexity of many teams and many clouds while making their
     platform for the future of automotive transportation a reality.
-
 
 sections:
     - label: Exec Summary

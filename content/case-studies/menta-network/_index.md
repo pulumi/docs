@@ -9,6 +9,7 @@ meta_desc: |
 
 customer_name: Menta Network
 customer_logo: /logos/customers/menta_logo.svg
+customer_url: https://www.menta.com.mx/
 
 exec_summary: |
     [Menta Network](https://www.menta.com.mx/) was looking for the right tools to build a
