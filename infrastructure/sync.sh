@@ -22,14 +22,13 @@ aws s3 cp $site_archive .
 mkdir site_contents
 tar -xzvf $(basename "$site_archive") -C site_contents
 
-# Perform a couple of sanity checks to make sure the unpacked archive looks like a proper
-# website docroot (e.g., one composed of at least a thousand index.html files, including
-# one at the root).
-if [ -z "$(ls -al site_contents/index.html)" ]; then
+# Verify index.html exists in the root.
+if [ ! -f "site_contents/index.html" ]; then
     echo "Missing root index.html. See the archive extraction log above for details."
     exit 1
 fi
 
+# Verify we have at least 1000 index.html files in total across the site.
 if [ ! "$(find site_contents -type f | grep index.html | wc -l)" -ge 1000 ]; then
     echo "Page-count check failed. See the archive extraction log above for details."
     exit 1
