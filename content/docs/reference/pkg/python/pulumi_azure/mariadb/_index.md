@@ -14,6 +14,11 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.mariadb"></span><dl class="class">
+<dt id="pulumi_azure.mariadb.AwaitableGetMariaDbServerResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mariadb.</code><code class="sig-name descname">AwaitableGetMariaDbServerResult</code><span class="sig-paren">(</span><em class="sig-param">administrator_login=None</em>, <em class="sig-param">administrator_login_password=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">ssl_enforcement=None</em>, <em class="sig-param">storage_profiles=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mariadb.AwaitableGetMariaDbServerResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.mariadb.Configuration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mariadb.</code><code class="sig-name descname">Configuration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mariadb.Configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets a MariaDB Configuration value on a MariaDB Server.</p>
@@ -349,6 +354,71 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.mariadb.GetMariaDbServerResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mariadb.</code><code class="sig-name descname">GetMariaDbServerResult</code><span class="sig-paren">(</span><em class="sig-param">administrator_login=None</em>, <em class="sig-param">administrator_login_password=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">ssl_enforcement=None</em>, <em class="sig-param">storage_profiles=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mariadb.GetMariaDbServerResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getMariaDbServer.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.mariadb.GetMariaDbServerResult.administrator_login">
+<code class="sig-name descname">administrator_login</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mariadb.GetMariaDbServerResult.administrator_login" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Administrator Login for the MariaDB Server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.mariadb.GetMariaDbServerResult.administrator_login_password">
+<code class="sig-name descname">administrator_login_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mariadb.GetMariaDbServerResult.administrator_login_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>The password associated with the <code class="docutils literal notranslate"><span class="pre">administrator_login</span></code> for the MariaDB Server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.mariadb.GetMariaDbServerResult.fqdn">
+<code class="sig-name descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mariadb.GetMariaDbServerResult.fqdn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The FQDN of the MariaDB Server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.mariadb.GetMariaDbServerResult.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mariadb.GetMariaDbServerResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Azure location where the resource exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.mariadb.GetMariaDbServerResult.sku_name">
+<code class="sig-name descname">sku_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mariadb.GetMariaDbServerResult.sku_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The SKU Name for this MariaDB Server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.mariadb.GetMariaDbServerResult.ssl_enforcement">
+<code class="sig-name descname">ssl_enforcement</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mariadb.GetMariaDbServerResult.ssl_enforcement" title="Permalink to this definition">¶</a></dt>
+<dd><p>The SSL being enforced on connections.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.mariadb.GetMariaDbServerResult.storage_profiles">
+<code class="sig-name descname">storage_profiles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mariadb.GetMariaDbServerResult.storage_profiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">storage_profile</span></code> block as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.mariadb.GetMariaDbServerResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mariadb.GetMariaDbServerResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.mariadb.GetMariaDbServerResult.version">
+<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mariadb.GetMariaDbServerResult.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version of MariaDB being used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.mariadb.GetMariaDbServerResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mariadb.GetMariaDbServerResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.mariadb.Server">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mariadb.</code><code class="sig-name descname">Server</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">administrator_login=None</em>, <em class="sig-param">administrator_login_password=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">ssl_enforcement=None</em>, <em class="sig-param">storage_profile=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mariadb.Server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a MariaDB Server.</p>
@@ -647,6 +717,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.mariadb.get_maria_db_server">
+<code class="sig-prename descclassname">pulumi_azure.mariadb.</code><code class="sig-name descname">get_maria_db_server</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mariadb.get_maria_db_server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing MariaDB Server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the MariaDB Server to retrieve information about.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The name of the resource group where the MariaDB Server exists.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/mariadb_server.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/mariadb_server.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

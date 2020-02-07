@@ -1538,12 +1538,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vault.aws.AwaitableGetAccessCredentialsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">AwaitableGetAccessCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">access_key=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">lease_duration=None</em>, <em class="sig-param">lease_id=None</em>, <em class="sig-param">lease_renewable=None</em>, <em class="sig-param">lease_start_time=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">secret_key=None</em>, <em class="sig-param">security_token=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.AwaitableGetAccessCredentialsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">AwaitableGetAccessCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">access_key=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">lease_duration=None</em>, <em class="sig-param">lease_id=None</em>, <em class="sig-param">lease_renewable=None</em>, <em class="sig-param">lease_start_time=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">secret_key=None</em>, <em class="sig-param">security_token=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.AwaitableGetAccessCredentialsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vault.aws.GetAccessCredentialsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">GetAccessCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">access_key=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">lease_duration=None</em>, <em class="sig-param">lease_id=None</em>, <em class="sig-param">lease_renewable=None</em>, <em class="sig-param">lease_start_time=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">secret_key=None</em>, <em class="sig-param">security_token=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.GetAccessCredentialsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">GetAccessCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">access_key=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">lease_duration=None</em>, <em class="sig-param">lease_id=None</em>, <em class="sig-param">lease_renewable=None</em>, <em class="sig-param">lease_start_time=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">secret_key=None</em>, <em class="sig-param">security_token=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.GetAccessCredentialsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAccessCredentials.</p>
 <dl class="attribute">
 <dt id="pulumi_vault.aws.GetAccessCredentialsResult.access_key">
@@ -1908,7 +1908,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_vault.aws.get_access_credentials">
-<code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">get_access_credentials</code><span class="sig-paren">(</span><em class="sig-param">backend=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.get_access_credentials" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">get_access_credentials</code><span class="sig-paren">(</span><em class="sig-param">backend=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.get_access_credentials" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1917,6 +1917,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 read credentials from, with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p></li>
 <li><p><strong>role</strong> (<em>str</em>) – The name of the AWS secret backend role to read
 credentials from, with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p></li>
+<li><p><strong>role_arn</strong> (<em>str</em>) – The specific AWS ARN to use
+from the configured role. If the role does not have multiple ARNs, this does
+not need to be specified.</p></li>
 <li><p><strong>type</strong> (<em>str</em>) – The type of credentials to read. Defaults
 to <code class="docutils literal notranslate"><span class="pre">&quot;creds&quot;</span></code>, which just returns an AWS Access Key ID and Secret
 Key. Can also be set to <code class="docutils literal notranslate"><span class="pre">&quot;sts&quot;</span></code>, which will return a security token

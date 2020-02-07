@@ -339,7 +339,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.trafficmanager.Profile">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.trafficmanager.</code><code class="sig-name descname">Profile</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dns_config=None</em>, <em class="sig-param">monitor_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">profile_status=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">traffic_routing_method=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.trafficmanager.Profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Traffic Manager Profile to which multiple endpoints can be attached.</p>
-<p>The Traffic Manager is created with the location <code class="docutils literal notranslate"><span class="pre">global</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -79,6 +79,12 @@ use.</p></li>
 the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
+a connection alive for.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIdleConnections</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of idle connections to
+maintain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxOpenConnections</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of open connections to
+use.</p></li>
 </ul>
 <p>The <strong>mssql</strong> object supports the following:</p>
 <ul class="simple">
@@ -242,6 +248,12 @@ use.</p></li>
 the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of seconds to keep
+a connection alive for.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIdleConnections</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of idle connections to
+maintain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxOpenConnections</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of open connections to
+use.</p></li>
 </ul>
 </dd></dl>
 
@@ -458,6 +470,12 @@ use.</p></li>
 the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
+a connection alive for.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIdleConnections</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of idle connections to
+maintain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxOpenConnections</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of open connections to
+use.</p></li>
 </ul>
 <p>The <strong>mssql</strong> object supports the following:</p>
 <ul class="simple">
