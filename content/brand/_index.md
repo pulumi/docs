@@ -1,5 +1,5 @@
 ---
-title: Pulumi Brand
+title: Brand Resources
 type: page
 layout: brand
 
