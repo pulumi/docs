@@ -5,7 +5,6 @@ meta_desc: "Join Pulumi at our Infrastructure As Code Workshop in Redmond, WA an
 
 # The layout of the landing page.
 type: events
-layout: event-single
 
 # The url slug for the even landing page.
 url_slug: "workshop-redmond-2020-03-12"

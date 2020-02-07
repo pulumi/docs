@@ -5,7 +5,6 @@ meta_desc: ""
 
 # The layout of the landing page.
 type: events
-layout: event-single
 
 # The url slug for the even landing page.
 url_slug: "{{ .Name }}"

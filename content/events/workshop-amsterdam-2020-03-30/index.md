@@ -5,7 +5,6 @@ meta_desc: "Join Pulumi at our Infrastructure As Code Workshop at KubeCon EU and
 
 # The layout of the landing page.
 type: events
-layout: event-single
 
 # The url slug for the even landing page.
 url_slug: "workshop-amsterdam-2020-03-30"
