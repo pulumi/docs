@@ -40,7 +40,7 @@ const vpc = new alicloud.vpc.Network("my-vpc", {
 ```python
 import pulumi_alicloud as alicloud
 
-vpc = alicloud.vpc.Instance("my-vpc",
+vpc = alicloud.vpc.Network("my-vpc",
     cidr_block="10.0.0.0/16"
 )
 ```
