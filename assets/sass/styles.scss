@@ -171,6 +171,22 @@ main {
     }
 }
 
+// Custom css for the Calendly iframe we use on the event registration pages.
+#calendly-widget {
+    min-width: 270px;
+    height: 600px;
+
+    @screen md {
+        min-width: 320px;
+        height: 750px;
+    }
+
+    .booking-container {
+        background-color: green;
+        max-width: initial !important;
+    }
+}
+
 // This little trick prepends anchor targets with a pseudoelement that the browser picks
 // up as the anchor target, allowing us to position the actual target below the fixed
 // navbar. Only necessary at medium and up.
