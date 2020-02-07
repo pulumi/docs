@@ -454,7 +454,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.datalake.</code><code class="sig-name descname">StoreFile</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_name=None</em>, <em class="sig-param">local_file_path=None</em>, <em class="sig-param">remote_file_path=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.StoreFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Azure Data Lake Store File.</p>
 <blockquote>
-<div><p><strong>Note:</strong> If you want to change the data in the remote file without changing the <code class="docutils literal notranslate"><span class="pre">local_file_path</span></code>, then 
+<div><p><strong>Note:</strong> If you want to change the data in the remote file without changing the <code class="docutils literal notranslate"><span class="pre">local_file_path</span></code>, then
 taint the resource so the <code class="docutils literal notranslate"><span class="pre">datalake.StoreFile</span></code> gets recreated with the new data.</p>
 </div></blockquote>
 <dl class="field-list simple">
