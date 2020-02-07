@@ -35,7 +35,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_digitalocean.AwaitableGetDropletResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetDropletResult</code><span class="sig-paren">(</span><em class="sig-param">backups=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">disk=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">ipv4_address_private=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">ipv6_address=None</em>, <em class="sig-param">ipv6_address_private=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">price_hourly=None</em>, <em class="sig-param">price_monthly=None</em>, <em class="sig-param">private_networking=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">vcpus=None</em>, <em class="sig-param">volume_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetDropletResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetDropletResult</code><span class="sig-paren">(</span><em class="sig-param">backups=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">disk=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">ipv4_address_private=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">ipv6_address=None</em>, <em class="sig-param">ipv6_address_private=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">price_hourly=None</em>, <em class="sig-param">price_monthly=None</em>, <em class="sig-param">private_networking=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">vcpus=None</em>, <em class="sig-param">volume_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetDropletResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -2533,7 +2533,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.GetDropletResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetDropletResult</code><span class="sig-paren">(</span><em class="sig-param">backups=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">disk=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">ipv4_address_private=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">ipv6_address=None</em>, <em class="sig-param">ipv6_address_private=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">price_hourly=None</em>, <em class="sig-param">price_monthly=None</em>, <em class="sig-param">private_networking=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">vcpus=None</em>, <em class="sig-param">volume_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetDropletResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetDropletResult</code><span class="sig-paren">(</span><em class="sig-param">backups=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">disk=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">ipv4_address_private=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">ipv6_address=None</em>, <em class="sig-param">ipv6_address_private=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">price_hourly=None</em>, <em class="sig-param">price_monthly=None</em>, <em class="sig-param">private_networking=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">vcpus=None</em>, <em class="sig-param">volume_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetDropletResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDroplet.</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetDropletResult.backups">
@@ -2659,12 +2659,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.GetDropletResult.volume_ids">
 <code class="sig-name descname">volume_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDropletResult.volume_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of the IDs of each volumes attached to the Droplet.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_digitalocean.GetDropletResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDropletResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -3091,6 +3085,7 @@ snapshots and backups and are only available within your account.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date and time when the Kubernetes cluster was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">droplet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique ID that can be used to identify and reference a Kubernetes cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for the Kubernetes cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.</p></li>
@@ -3167,6 +3162,7 @@ snapshots and backups and are only available within your account.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The date and time when the Kubernetes cluster was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">droplet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A unique ID that can be used to identify and reference a Kubernetes cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A name for the Kubernetes cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.</p></li>
@@ -3315,6 +3311,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date and time when the Kubernetes cluster was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">droplet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique ID that can be used to identify and reference a Kubernetes cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for the Kubernetes cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.</p></li>
@@ -3451,10 +3448,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> -  A unique ID that can be used to identify and reference the node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - The auto-generated name for the node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> -  A string indicating the current status of the individual node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">droplet_id</span></code> - The id of the node’s droplet</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> - The date and time when the node was created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> - The date and time when the node was last updated.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">droplet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A unique ID that can be used to identify and reference the node pool.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A name for the node pool.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -3501,6 +3500,7 @@ properties used to qualify the lookup.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- `id` -  A unique ID that can be used to identify and reference the node.
 - `name` - The auto-generated name for the node.
 - `status` -  A string indicating the current status of the individual node.
+- `droplet_id` - The id of the node&#39;s droplet
 - `created_at` - The date and time when the node was created.
 - `updated_at` - The date and time when the node was last updated.
 </pre></div>
@@ -3516,6 +3516,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>nodes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">droplet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique ID that can be used to identify and reference the node pool.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for the node pool.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -4805,12 +4806,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_digitalocean.get_droplet">
-<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_droplet</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_droplet" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_droplet</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_droplet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>) – The name of Droplet.</p></li>
+<li><p><strong>id</strong> (<em>float</em>) – The ID of the Droplet</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Droplet.</p></li>
 <li><p><strong>tag</strong> (<em>str</em>) – A tag applied to the Droplet.</p></li>
 </ul>
 </dd>

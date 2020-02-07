@@ -1500,7 +1500,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.DdosProtectionPlan.virtual_network_ids">
 <code class="sig-name descname">virtual_network_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.DdosProtectionPlan.virtual_network_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Resource ID list of the Virtual Networks associated with DDoS Protection Plan.</p>
+<dd><p>A list of Virtual Network ID’s associated with the DDoS Protection Plan.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1518,7 +1518,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Network DDoS Protection Plan. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the resource. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-<li><p><strong>virtual_network_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The Resource ID list of the Virtual Networks associated with DDoS Protection Plan.</p></li>
+<li><p><strong>virtual_network_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Virtual Network ID’s associated with the DDoS Protection Plan.</p></li>
 </ul>
 </dd>
 </dl>
@@ -5779,7 +5779,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.network.Profile">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">Profile</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">container_network_interface=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Profile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages an Azure Network Profile.</p>
+<dd><p>Manages a Network Profile.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5824,7 +5824,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.Profile.container_network_interface_ids">
 <code class="sig-name descname">container_network_interface_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Profile.container_network_interface_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more Resource IDs of Azure Container Network Interfaces.</p>
+<dd><p>A list of Container Network Interface ID’s.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5863,7 +5863,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>container_network_interface</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">container_network_interface</span></code> block as documented below.</p></li>
-<li><p><strong>container_network_interface_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more Resource IDs of Azure Container Network Interfaces.</p></li>
+<li><p><strong>container_network_interface_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Container Network Interface ID’s.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Network Profile. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the resource. Changing this forces a new resource to be created.</p></li>
@@ -6724,8 +6724,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>nat_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure resource ID of the NAT Gateway which should be associated with the Subnet. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure resource ID of the Subnet. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>nat_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the NAT Gateway which should be associated with the Subnet. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Subnet. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -6735,13 +6735,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.SubnetNatGatewayAssociation.nat_gateway_id">
 <code class="sig-name descname">nat_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.SubnetNatGatewayAssociation.nat_gateway_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Azure resource ID of the NAT Gateway which should be associated with the Subnet. Changing this forces a new resource to be created.</p>
+<dd><p>The ID of the NAT Gateway which should be associated with the Subnet. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.SubnetNatGatewayAssociation.subnet_id">
 <code class="sig-name descname">subnet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.SubnetNatGatewayAssociation.subnet_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Azure resource ID of the Subnet. Changing this forces a new resource to be created.</p>
+<dd><p>The ID of the Subnet. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="method">
@@ -6755,8 +6755,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>nat_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure resource ID of the NAT Gateway which should be associated with the Subnet. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure resource ID of the Subnet. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>nat_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the NAT Gateway which should be associated with the Subnet. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Subnet. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -7294,7 +7294,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.network.TrafficManagerProfile">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">TrafficManagerProfile</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dns_config=None</em>, <em class="sig-param">monitor_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">profile_status=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">traffic_routing_method=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.TrafficManagerProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Traffic Manager Profile to which multiple endpoints can be attached.</p>
-<p>The Traffic Manager is created with the location <code class="docutils literal notranslate"><span class="pre">global</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

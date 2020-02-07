@@ -323,13 +323,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.core.TemplateDeployment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">TemplateDeployment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">deployment_mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">parameters_body=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">template_body=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.TemplateDeployment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a template deployment of resources</p>
-<blockquote>
-<div><p><strong>Note on ARM Template Deployments:</strong> Due to the way the underlying Azure API is designed, this provider can only manage the deployment of the ARM Template - and not any resources which are created by it.
-This means that when deleting the <code class="docutils literal notranslate"><span class="pre">core.TemplateDeployment</span></code> resource, this provider will only remove the reference to the deployment, whilst leaving any resources created by that ARM Template Deployment.
-One workaround for this is to use a unique Resource Group for each ARM Template Deployment, which means deleting the Resource Group would contain any resources created within it - however this isn’t ideal. <a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/resources/deployments#Deployments_Delete">More information</a>.</p>
-</div></blockquote>
-<p>This provider does not know about the individual resources created by Azure using a deployment template and therefore cannot delete these resources during a destroy. Destroying a template deployment removes the associated deployment operations, but will not delete the Azure resources created by the deployment. In order to delete these resources, the containing resource group must also be destroyed. <a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/resources/deployments#Deployments_Delete">More information</a>.</p>
+<dd><p>Create a TemplateDeployment resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
