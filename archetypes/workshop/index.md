@@ -25,7 +25,7 @@ event:
     time: ""
     # The event description shown on the event list page.
     description: ""
-    # The calendly registrtion url for event specific pages.
+    # The Calendly registrtion url for event specific pages.
     calendly_url: ""
     # The cost of an event.
     cost: ""
