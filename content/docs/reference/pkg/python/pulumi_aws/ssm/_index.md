@@ -360,6 +360,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.ssm.AwaitableGetPatchBaselineResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">AwaitableGetPatchBaselineResult</code><span class="sig-paren">(</span><em class="sig-param">default_baseline=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.AwaitableGetPatchBaselineResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.ssm.Document">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">Document</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attachments_sources=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">document_format=None</em>, <em class="sig-param">document_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Document" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Document resource</p>
@@ -672,6 +677,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.GetParameterResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.GetParameterResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ssm.GetPatchBaselineResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">GetPatchBaselineResult</code><span class="sig-paren">(</span><em class="sig-param">default_baseline=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.GetPatchBaselineResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getPatchBaseline.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.ssm.GetPatchBaselineResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.GetPatchBaselineResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the baseline.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ssm.GetPatchBaselineResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.GetPatchBaselineResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the baseline.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ssm.GetPatchBaselineResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.GetPatchBaselineResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -1939,6 +1968,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ssm_parameter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ssm_parameter.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.ssm.get_patch_baseline">
+<code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">get_patch_baseline</code><span class="sig-paren">(</span><em class="sig-param">default_baseline=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.get_patch_baseline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an SSM Patch Baseline data source. Useful if you wish to reuse the default baselines provided.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>default_baseline</strong> (<em>bool</em>) – Filters the results against the baselines default_baseline field.</p></li>
+<li><p><strong>name_prefix</strong> (<em>str</em>) – Filter results by the baseline name prefix.</p></li>
+<li><p><strong>operating_system</strong> (<em>str</em>) – The specified OS for the baseline.</p></li>
+<li><p><strong>owner</strong> (<em>str</em>) – The owner of the baseline. Valid values: <code class="docutils literal notranslate"><span class="pre">All</span></code>, <code class="docutils literal notranslate"><span class="pre">AWS</span></code>, <code class="docutils literal notranslate"><span class="pre">Self</span></code> (the current account).</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ssm_patch_baseline.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ssm_patch_baseline.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

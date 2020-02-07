@@ -256,6 +256,163 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.datasync.LocationSmb">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.datasync.</code><code class="sig-name descname">LocationSmb</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">agent_arns=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">mount_options=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">server_hostname=None</em>, <em class="sig-param">subdirectory=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.LocationSmb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a SMB Location within AWS DataSync.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> The DataSync Agents must be available before creating this resource.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>agent_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of DataSync Agent ARNs with which this location will be associated.</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Windows domain the SMB server belongs to.</p></li>
+<li><p><strong>mount_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing mount options used by DataSync to access the SMB Server. Can be <code class="docutils literal notranslate"><span class="pre">AUTOMATIC</span></code>, <code class="docutils literal notranslate"><span class="pre">SMB2</span></code>, or <code class="docutils literal notranslate"><span class="pre">SMB3</span></code>.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password of the user who can mount the share and has file permissions in the SMB.</p></li>
+<li><p><strong>server_hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.</p></li>
+<li><p><strong>subdirectory</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subdirectory to perform actions as source or destination. Should be exported by the NFS server.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value pairs of resource tags to assign to the DataSync Location.</p></li>
+<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user who can mount the share and has file and folder permissions in the SMB share.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>mount_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The specific SMB version that you want DataSync to use for mounting your SMB share. Valid values: <code class="docutils literal notranslate"><span class="pre">AUTOMATIC</span></code>, <code class="docutils literal notranslate"><span class="pre">SMB2</span></code>, and <code class="docutils literal notranslate"><span class="pre">SMB3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">AUTOMATIC</span></code></p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_smb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_smb.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.datasync.LocationSmb.agent_arns">
+<code class="sig-name descname">agent_arns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.LocationSmb.agent_arns" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of DataSync Agent ARNs with which this location will be associated.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.datasync.LocationSmb.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.LocationSmb.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of the DataSync Location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.datasync.LocationSmb.domain">
+<code class="sig-name descname">domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.LocationSmb.domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Windows domain the SMB server belongs to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.datasync.LocationSmb.mount_options">
+<code class="sig-name descname">mount_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.LocationSmb.mount_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block containing mount options used by DataSync to access the SMB Server. Can be <code class="docutils literal notranslate"><span class="pre">AUTOMATIC</span></code>, <code class="docutils literal notranslate"><span class="pre">SMB2</span></code>, or <code class="docutils literal notranslate"><span class="pre">SMB3</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The specific SMB version that you want DataSync to use for mounting your SMB share. Valid values: <code class="docutils literal notranslate"><span class="pre">AUTOMATIC</span></code>, <code class="docutils literal notranslate"><span class="pre">SMB2</span></code>, and <code class="docutils literal notranslate"><span class="pre">SMB3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">AUTOMATIC</span></code></p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.datasync.LocationSmb.password">
+<code class="sig-name descname">password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.LocationSmb.password" title="Permalink to this definition">¶</a></dt>
+<dd><p>The password of the user who can mount the share and has file permissions in the SMB.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.datasync.LocationSmb.server_hostname">
+<code class="sig-name descname">server_hostname</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.LocationSmb.server_hostname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.datasync.LocationSmb.subdirectory">
+<code class="sig-name descname">subdirectory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.LocationSmb.subdirectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subdirectory to perform actions as source or destination. Should be exported by the NFS server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.datasync.LocationSmb.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.LocationSmb.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value pairs of resource tags to assign to the DataSync Location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.datasync.LocationSmb.user">
+<code class="sig-name descname">user</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.LocationSmb.user" title="Permalink to this definition">¶</a></dt>
+<dd><p>The user who can mount the share and has file and folder permissions in the SMB share.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.datasync.LocationSmb.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">agent_arns=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">mount_options=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">server_hostname=None</em>, <em class="sig-param">subdirectory=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.LocationSmb.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing LocationSmb resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>agent_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of DataSync Agent ARNs with which this location will be associated.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the DataSync Location.</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Windows domain the SMB server belongs to.</p></li>
+<li><p><strong>mount_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing mount options used by DataSync to access the SMB Server. Can be <code class="docutils literal notranslate"><span class="pre">AUTOMATIC</span></code>, <code class="docutils literal notranslate"><span class="pre">SMB2</span></code>, or <code class="docutils literal notranslate"><span class="pre">SMB3</span></code>.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password of the user who can mount the share and has file permissions in the SMB.</p></li>
+<li><p><strong>server_hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.</p></li>
+<li><p><strong>subdirectory</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subdirectory to perform actions as source or destination. Should be exported by the NFS server.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value pairs of resource tags to assign to the DataSync Location.</p></li>
+<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user who can mount the share and has file and folder permissions in the SMB share.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>mount_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The specific SMB version that you want DataSync to use for mounting your SMB share. Valid values: <code class="docutils literal notranslate"><span class="pre">AUTOMATIC</span></code>, <code class="docutils literal notranslate"><span class="pre">SMB2</span></code>, and <code class="docutils literal notranslate"><span class="pre">SMB3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">AUTOMATIC</span></code></p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_smb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_smb.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.datasync.LocationSmb.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.LocationSmb.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.datasync.LocationSmb.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.LocationSmb.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.datasync.NfsLocation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.datasync.</code><code class="sig-name descname">NfsLocation</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">on_prem_config=None</em>, <em class="sig-param">server_hostname=None</em>, <em class="sig-param">subdirectory=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.NfsLocation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an NFS Location within AWS DataSync.</p>
@@ -276,7 +433,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>on_prem_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">agentArns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">agent_arns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown</a>.</p>
@@ -292,7 +449,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">on_prem_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.NfsLocation.on_prem_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block containing information for connecting to the NFS File System.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">agentArns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">agent_arns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.</p></li>
 </ul>
 </dd></dl>
 
@@ -335,7 +492,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>on_prem_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">agentArns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">agent_arns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown</a>.</p>
