@@ -41,7 +41,7 @@ $(function() {
         return container;
     }
 
-    // Loop through the tags and creat a unique array of tag names and
+    // Loop through the tags and create a unique array of tag names and
     // append a checkbox to the event filter for each unique tag.
     for (var i = 0; i < eventsElements.length; i++) {
         var elem = eventsElements[i];
