@@ -259,6 +259,8 @@ const opts = {
         MD024: false,
         // Allow headings to be indendented.
         MD023: false,
+        // Allow blank lines in blockquotes.
+        MD028: false,
     },
 };
 
