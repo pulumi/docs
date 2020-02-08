@@ -109,8 +109,8 @@ Windows 8 and 10 are supported.
 
 To install, run our installation script from a `cmd.exe` window:
 
-```batch
-@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
+```bat
+> @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
 ```
 
 This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it to your path.
@@ -120,7 +120,7 @@ This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it
 You can install Pulumi through the [Chocolatey package manager](https://chocolatey.org):
 
 ```powershell
-choco install pulumi
+> choco install pulumi
 ```
 
 This will install the `pulumi` CLI to the usual place (often `$($env:ChocolateyInstall)\lib\pulumi`), will generate [shims](https://chocolatey.org/docs/features-shim) (usually `$($env:ChocolateyInstall)\bin`) that is added to your path.
@@ -128,7 +128,7 @@ This will install the `pulumi` CLI to the usual place (often `$($env:ChocolateyI
 Subsequent updates can be installed in the usual way:
 
 ```powershell
-choco upgrade pulumi
+> choco upgrade pulumi
 ```
 
 ### Manual Installation

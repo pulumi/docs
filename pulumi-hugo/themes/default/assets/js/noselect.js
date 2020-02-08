@@ -1,8 +1,17 @@
 $(function() {
-    // Make "$ " inside bash and shell code snippets unselectable.
-    var pattern = /([ |\t]*\$ )/mig;
-    var replaceWith = '<span class="no-select">$1</span>';
-    $(".highlight .chroma .language-bash, .highlight .chroma .language-shell, .highlight .chroma .language-sh").each(function() {
-        $(this).html($(this).html().replace(pattern, replaceWith));
-    });
+    // Make the prompt inside command line code snippets unselectable.
+    function noselect(langs, pattern) {
+        var replaceWith = '<span class="no-select">$1</span>';
+        var selector = langs.map(function(lang) {
+            return ".highlight .chroma .language-" + lang;
+        }).join(", ");
+
+        $(selector).each(function() {
+            var $el = $(this);
+            $el.html($el.html().replace(pattern, replaceWith));
+        });
+    }
+
+    noselect(["bash", "sh", "shell", "zsh"], /([ |\t]*\$ )/mig);
+    noselect(["bat", "batch", "batchfile", "powershell", "posh", "pwsh"], /([ |\t]*<span class="p">&gt;<\/span> )/mig);
 });
