@@ -1,24 +1,24 @@
 ---
 # Name of the event.
-title: "Name of the Event"
+title: "DevOops"
 
 # Events with external registrations should not be indexed
 # and have redirect to the external registration page.
 block_from_external_search: true
-redirect_to: "/"
+redirect_to: "https://devoops-moscow.ru/en/"
 
 # Event information
 event:
     # The type of activities we will be doing at the event.
-    type: ["talk", "booth"]
+    type: ["talk"]
     # The event address
-    location: "123 Main St Jacksonville, FL"
+    location: "Square of Europe, 2, Moscow, Russia, 121059"
     # The start date of an event. Format YYYY-MM-DD
-    start_date: "2020-01-01"
+    start_date: "2020-04-29"
     # The end date of an event. Format YYYY-MM-DD
-    end_date: "2020-01-01"
+    end_date: "2020-04-30"
     # The event description shown on the event list page.
-    description: "This the event description."
+    description: "The conference is about processes and culture, SRE and Cloud Native and, of course, this conference is absolutely not for DevOps engineers!"
     # The external registration url for the event list page.
-    registration_url: "/"
+    registration_url: "https://devoops-moscow.ru/en/"
 ---
