@@ -190,5 +190,5 @@ pulumi stack select product-catalog-service
 # program needs.
 # Learn more about pulumi configuration at: {{< absurl "/reference/config/" >}}
 pulumi config set mysetting:myvalue
-pulumi up
+pulumi up --yes
 ```
