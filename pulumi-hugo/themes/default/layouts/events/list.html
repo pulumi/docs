@@ -29,16 +29,16 @@
                                 {{ end }}
                                 <p class="my-3">{{ .Params.event.description }}</p>
                                 <div class="flex mt-2">
-                                    <div class="w-8/12">
+                                    <div class="w-full">
                                         <div>
                                             <i class="fas fa-globe-americas inline-block"></i>
-                                            <span class="inline-block my-0">
+                                            <span class="my-0">
                                                 {{ .Params.event.location }}
                                             </span>
                                         </div>
                                         <div>
                                             <i class="far fa-calendar inline-block"></i>
-                                            <span class="inline-block my-0">
+                                            <span class="my-0">
                                                 {{ if eq .Params.event.start_date .Params.event.end_date }}
                                                     {{ dateFormat "Mon, Jan 2" .Params.event.start_date }}
                                                 {{ else }}
@@ -61,7 +61,7 @@
                                             {{ end }}
                                         </div>
                                     </div>
-                                    <div class="w-4/12 relative">
+                                    <div class="relative">
                                         {{ if .Params.url_slug }}
                                             <a class="btn btn-purple absolute bottom-0 right-0" href="/events/{{ .Params.url_slug }}">Register</a>
                                         {{ end }}
