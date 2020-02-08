@@ -10,7 +10,7 @@ redirect_to: "https://basta.net/"
 # Event information
 event:
     # The type of activities we will be doing at the event.
-    type: ["talk", "booth"]
+    type: ["talk"]
     # The event address
     location: "Hamburger Allee 260486 Frankfurt am Main, Germany"
     # The start date of an event. Format YYYY-MM-DD
