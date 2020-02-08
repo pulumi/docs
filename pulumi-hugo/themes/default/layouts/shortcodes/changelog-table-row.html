@@ -12,14 +12,20 @@
     {{ errorf "invalid number of components for param 'date': %s" .Position }}
 {{ end }}
 
+{{ $exclude := split (.Get "exclude") "," }}
+
 <tr>
     <td><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#{{ $flatVersion }}-{{ $date }}">{{ $version }}</a></td>
     <td>{{ $date }}</td>
-    <td>
-        <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-linux-x64.tar.gz">Linux</a>
-        |
-        <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-darwin-x64.tar.gz">macOS</a>
-        |
-        <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-windows-x64.zip">Windows</a>
-    </td>
+    <td>{{ template "dl" (dict "exclude" $exclude "version" $version "platform" "linux" "ext" "tar.gz" "display" "Linux") }}</td>
+    <td>{{ template "dl" (dict "exclude" $exclude "version" $version "platform" "darwin" "ext" "tar.gz" "display" "macOS") }}</td>
+    <td>{{ template "dl" (dict "exclude" $exclude "version" $version "platform" "windows" "ext" "zip" "display" "Windows") }}</td>
 </tr>
+
+{{ define "dl" }}
+    {{ if in .exclude .platform }}
+        <span class="text-sm text-gray-500">unavailable</span>
+    {{ else }}
+        <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ .version }}-{{ .platform }}-x64.{{ .ext }}">{{ .display }}</a>
+    {{ end }}
+{{ end }}
