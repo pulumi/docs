@@ -69,7 +69,7 @@ none of Tiller’s server-side validity testing is executed.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>release_name</strong> (<em>str</em>) – Name of the Chart (e.g., nginx-ingress).</p></li>
-<li><p><strong>LocalChartOpts</strong><strong>] </strong><strong>config</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../v2/#pulumi_kubernetes.helm.v2.ChartOpts" title="pulumi_kubernetes.helm.v2.ChartOpts"><em>ChartOpts</em></a><em>,</em>) – Configuration options for the Chart.</p></li>
+<li><p><strong>LocalChartOpts</strong><strong>] </strong><strong>config</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../v3/#pulumi_kubernetes.helm.v3.ChartOpts" title="pulumi_kubernetes.helm.v3.ChartOpts"><em>ChartOpts</em></a><em>,</em>) – Configuration options for the Chart.</p></li>
 <li><p><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a><em>]</em>) – A bag of options that control this
 resource’s behavior.</p></li>
 </ul>
