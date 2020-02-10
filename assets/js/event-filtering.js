@@ -103,6 +103,7 @@ $(function() {
      */
     function filterEventList(tags) {
         var events = $("#eventList li");
+        var visibleEvents = 0;
 
         for (var i = 0; i < events.length; i++) {
             var event = $(events[i]);
@@ -110,10 +111,16 @@ $(function() {
             var shouldBeVisible = tags.length === 0 ? true : checkForIntersection(tags, dataEventType);
 
             if (shouldBeVisible) {
+                visibleEvents += 1;
                 event.removeClass("hidden");
             } else {
                 event.addClass("hidden");
             }
+        }
+        if (visibleEvents === events.length) {
+            $("#eventListHeading").text("All Upcoming Events")
+        } else {
+            $("#eventListHeading").text(visibleEvents + " Upcoming Events");
         }
     }
 });

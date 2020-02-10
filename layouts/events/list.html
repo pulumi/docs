@@ -14,6 +14,7 @@
             <div class="hidden lg:inline-block w-1/12 px-5">
             </div>
             <div class="w-full md:w-8/12">
+                <h3 id="eventListHeading" class="mb-5">All Upcoming Events</h3>
                 <ul id="eventList" class="list-none md:flex md:flex-wrap pl-0">
                     {{ $events := (where $.Pages "Type" "events") }}
                     {{ range (sort $events ".Params.event.start_date") }}
