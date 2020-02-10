@@ -11,12 +11,9 @@
 {{ define "main" }}
     <div class="container mx-auto">
         <div class="flex py-10 md:py-24 px-5 md:px-20">
-            <div class="hidden md:inline-block w-3/12">
-                <div id="eventFilter" class="px-5">
-                    <p class="my-0 border-b text-2xl mb-3">Filter</p>
-                </div>
+            <div class="hidden lg:inline-block w-1/12 px-5">
             </div>
-            <div class="w-full md:w-9/12 lg:w-6/12">
+            <div class="w-full md:w-8/12">
                 <ul id="eventList" class="list-none md:flex md:flex-wrap pl-0">
                     {{ $events := (where $.Pages "Type" "events") }}
                     {{ range (sort $events ".Params.event.start_date") }}
@@ -73,7 +70,10 @@
                 </ul>
             </div>
             <div class="hidden lg:inline-block w-3/12 px-5">
-                <div class="border border-gray-400 rounded bg-black pb-8">
+                <div id="eventFilter" class="px-5 mb-5">
+                    <p class="my-0 border-b text-2xl mb-3">Filter</p>
+                </div>
+                <div class="border border-gray-400 rounded bg-black pb-8 ml-5">
                     <p class="text-xl text-white leading-snug my-0 mx-5 mt-2"><b>Create</b> modern applications</p>
                     <img class="w-full mb-5" src="/images/docs/k8s-the-prod-way/app.png" />
                     <a href="#" class="btn mx-5">Get Started Today</a>
