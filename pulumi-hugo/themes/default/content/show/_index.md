@@ -6,18 +6,12 @@ layout: show
 block_external_search_index: true
 
 hero:
-    title: Meet the Pulumi team for tech talks and beer on Wednesday 1/22
+    title: See how Learning Machine used Pulumi and Amazon ECS to lower their costs by 67%
     body: >
-        Join us at Create33 for talks that focus on the development process on K8s.
-        From 5:00pm to 6:00pm we will be hosting a happy hour with the Meetup starting at 6:30pm.
-
-        The happy hour and Meetup are at Create33, which is located on the 33rd floor of the Wells Fargo
-        Center at <a class="underline text-blue-500" href="https://www.google.com/maps/place/Create33/@47.6050632,-122.3339756,15z/data=!4m2!3m1!1s0x0:0xdfce9739a948e539?sa=X&ved=2ahUKEwj5n43yxobnAhWUFzQIHaqaAbYQ_BIwDHoECA0QCA" target="_blank">999 3rd Ave Seattle, WA</a>.
-        The entry doors may be locked when you arrive but we’ll have somebody
-        nearby to let you in. Once inside, please take the elevator to the 33rd floor.
+      Learning Machine provides a secure platform, using the blockchain, to issue records in a format that is tamperproof, recipient owned, and independently verifiable. They are witnessing opportunities in several key industries — Public Sector, Healthcare and Education — and need to maximize their resources in order to quickly capitalize on the explosive growth opportunities in front of them. Pulumi offered them a solution which would both simplify existing cloud configurations and help Learning Machine to easily adopt AWS serverless technologies such as AWS Lambda and Amazon ECS and AWS Fargate. This enabled Learning Machine to expedite customer deployments and scale at lower cost.
     cta:
-        url: https://www.meetup.com/Seattle-Kubernetes-Meetup/events/267073230/
-        label: Register Here
+        url: /case-studies/learning-machine/
+        label: Learn More
 
 carousel:
     - heading: Create
