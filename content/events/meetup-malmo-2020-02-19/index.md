@@ -1,6 +1,6 @@
 ---
 # Name of the event.
-title: "Skane Azure UG"
+title: "Skåne Azure User Group"
 
 # Events with external registrations should not be indexed
 # and have redirect to the external registration page.
