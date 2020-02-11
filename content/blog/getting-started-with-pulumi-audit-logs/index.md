@@ -9,9 +9,10 @@ tags: []
 
 We are excited to announce the release of Audit Logs on
 [Pulumi](https://app.pulumi.com) for enterprise organizations.
-Audit logs enable the tracking of activity of users within an
+Audit logs enable you to track the activity of users within an
 organization. Audit logs attempt to answer who did what, when
-they did it and where. Having audit logs can deter malicious
+they did it and where. Pulumi audit logs attempt to answer these questions
+by recording entries for activities invoked by users. Having audit logs can deter malicious
 activity before it starts. They are also great to playback events
 that occured during something like an incident review.
 
