@@ -104,6 +104,12 @@
       "terraform_provider_name": ""
     },
     {
+      "name": "Pulumi Keycloak",
+      "package_name": "pulumi_keycloak",
+      "pulumi_provider_name": "keycloak",
+      "terraform_provider_name": ""
+    },
+    {
       "name": "Pulumi vSphere",
       "package_name": "pulumi_vsphere",
       "pulumi_provider_name": "vsphere",
