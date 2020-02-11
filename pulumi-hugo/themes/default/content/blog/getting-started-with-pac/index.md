@@ -1,5 +1,5 @@
 ---
-title: "Getting Started With Pac"
+title: "Getting Started With PaC"
 date: 2020-02-11
 meta_desc: "Pulumi CrossGuard validates infrastructure before deployment to prevent data breaches caused by misconfigured services, "
 meta_image: crossguard.svg
