@@ -52,9 +52,9 @@ After completing this workshop, you'll be up and running with IaC fundamentals, 
 
 ### Instructors
 
-Joe Duffy - CEO, Pulumi <a href="https://twitter.com/funcofjoe" target="_blank">@funcofjoe</a>
+* Joe Duffy - CEO, Pulumi <a href="https://twitter.com/funcofjoe" target="_blank">@funcofjoe</a>
 
-Paul Stack - Software Engineer, Pulumi <a href="https://twitter.com/stack72" target="_blank">@stack72</a>
+* Paul Stack - Software Engineer, Pulumi <a href="https://twitter.com/stack72" target="_blank">@stack72</a>
 
 For questions contact, <a href="mailto:inquiries@pulumi.com">inquiries@pulumi.com</a>.
 

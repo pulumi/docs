@@ -41,6 +41,6 @@ After completing this workshop, you'll be up and running with IaC fundamentals, 
 
 ### Instructors
 
-Luke Hoban - CTO, Pulumi <a href="https://twitter.com/lukehoban" target="_blank">@lukehoban</a>
+* Luke Hoban - CTO, Pulumi <a href="https://twitter.com/lukehoban" target="_blank">@lukehoban</a>
 
 **Pizza will be provided.** This event is free thanks to sponsorship from Microsoft.
