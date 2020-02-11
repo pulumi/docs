@@ -3,6 +3,9 @@
         <div class="container mx-auto">
             <div class="mx-auto text-center">
                 <h1>{{ .Title }}</h1>
+                <p>
+                    {{ .Description }}
+                </p>
             </div>
         </div>
     </header>
@@ -10,75 +13,73 @@
 
 {{ define "main" }}
     <div class="container mx-auto">
-        <div class="flex py-10 md:py-24 px-5 md:px-20">
-            <div class="hidden lg:inline-block w-1/12 px-5">
-            </div>
+        <div class="flex justify-between py-10 md:py-24 px-5 md:px-20">
             <div class="w-full md:w-8/12">
-                <h3 id="eventListHeading" class="mb-5">All Upcoming Events</h3>
-                <ul id="eventList" class="list-none md:flex md:flex-wrap pl-0">
+                <h2 id="event-list-heading" class="mb-8">All Upcoming Events</h2>
+                <ul id="event-list" class="list-none md:flex md:flex-wrap pl-0">
                     {{ $events := (where $.Pages "Type" "events") }}
                     {{ range (sort $events ".Params.event.start_date") }}
-                        <li class="w-full border border-gray-400 rounded my-0 px-5 py-5 mb-10" data-event-type='{{ delimit .Params.event.type "," }}'>
-                            <div>
-                                {{ if .Params.url_slug }}
-                                    <a class="text-2xl" href="/events/{{ .Params.url_slug }}/">{{ .Params.title }}</a>
-                                {{ else }}
-                                    <a class="text-2xl" href="{{ .Params.event.registration_url }}" target="_blank">{{ .Params.title }}</a>
-                                {{ end }}
-                                <p class="my-3">{{ .Params.event.description }}</p>
+                        <li class="w-full m-0 p-0" data-event-type='{{ delimit .Params.event.type "," }}'>
+                            <article class="pb-16 mb-12 border-b border-gray-300">
+                                <h3>
+                                    {{ if .Params.url_slug }}
+                                        <a class="text-2xl" href="/events/{{ .Params.url_slug }}/">
+                                            {{ .Params.title }}
+                                        </a>
+                                    {{ else }}
+                                        <a class="text-2xl flex items-center" href="{{ .Params.event.registration_url }}" target="_blank">
+                                            {{ .Params.title }}
+                                            <i class="text-sm ml-2 fas fa-external-link-alt"></i>
+                                        </a>
+                                    {{ end }}
+                                </h3>
+                                <div>
+                                    <i class="text-gray-800 far fa-calendar inline-block"></i>
+                                    <span class="ml-1 text-sm uppercase">
+                                        {{ if eq .Params.event.start_date .Params.event.end_date }}
+                                            {{ dateFormat "Monday, Jan 2" .Params.event.start_date }}
+                                        {{ else }}
+                                            {{ dateFormat "Monday, Jan 2" .Params.event.start_date }} - {{ dateFormat "Mon, Jan 2" .Params.event.end_date }}
+                                        {{ end }}
+                                    </span>
+                                </div>
+                                <div>
+                                    <i class="text-gray-800 fas fa-map-marker-alt"></i>
+                                    <span class="ml-1 text-sm uppercase">
+                                        {{ .Params.event.location }}
+                                    </span>
+                                </div>
+                                <p class="my-4">
+                                    {{ .Params.event.description }}
+                                </p>
                                 <div class="flex mt-2">
                                     <div class="w-full">
-                                        <div>
-                                            <i class="fas fa-globe-americas inline-block"></i>
-                                            <span class="my-0">
-                                                {{ .Params.event.location }}
-                                            </span>
-                                        </div>
-                                        <div>
-                                            <i class="far fa-calendar inline-block"></i>
-                                            <span class="my-0">
-                                                {{ if eq .Params.event.start_date .Params.event.end_date }}
-                                                    {{ dateFormat "Mon, Jan 2" .Params.event.start_date }}
-                                                {{ else }}
-                                                    {{ dateFormat "Mon, Jan 2" .Params.event.start_date }} - {{ dateFormat "Mon, Jan 2" .Params.event.end_date }}
-                                                {{ end }}
-                                            </span>
-                                        </div>
-                                        <div class="mt-2 event-tags">
+                                        <div class="event-tags">
                                             {{ if in .Params.event.type "workshop" }}
-                                                <span class="inline-block bg-orange-500 text-white rounded-full px-2">Workshop</span>
+                                                <span class="badge bg-orange-400 text-white">Workshop</span>
                                             {{ end }}
                                             {{ if in .Params.event.type "talk" }}
-                                                <span class="inline-block bg-orange-500 text-white rounded-full px-2">Talk</span>
+                                                <span class="badge bg-orange-400 text-white">Talk</span>
                                             {{ end }}
                                             {{ if in .Params.event.type "booth" }}
-                                                <span class="inline-block bg-orange-500 text-white rounded-full px-2">Booth</span>
+                                                <span class="badge bg-orange-400 text-white">Booth</span>
                                             {{ end }}
                                             {{ if in .Params.event.type "meetup" }}
-                                                <span class="inline-block bg-orange-500 text-white rounded-full px-2">MeetUp</span>
+                                                <span class="badge bg-orange-400 text-white">MeetUp</span>
                                             {{ end }}
                                         </div>
                                     </div>
-                                    <div class="relative">
-                                        {{ if .Params.url_slug }}
-                                            <a class="btn btn-purple absolute bottom-0 right-0" href="/events/{{ .Params.url_slug }}">Register</a>
-                                        {{ end }}
-                                    </div>
                                 </div>
-                            </div>
+                            </article>
                         </li>
                     {{ end }}
                 </ul>
             </div>
             <div class="hidden lg:inline-block w-3/12 px-5">
-                <div id="eventFilter" class="px-5 mb-5">
-                    <p class="my-0 border-b text-2xl mb-3">Filter</p>
+                <div id="eventFilter" class="p-4 text-sm border border-gray-300 rounded">
+                    <h5>Filter</h5>
                 </div>
-                <div class="border border-gray-400 rounded bg-black pb-8 ml-5">
-                    <p class="text-xl text-white leading-snug my-0 mx-5 mt-2"><b>Create</b> modern applications</p>
-                    <img class="w-full mb-5" src="/images/docs/k8s-the-prod-way/app.png" />
-                    <a href="#" class="btn mx-5">Get Started Today</a>
-                </div>
+                {{ partial "sidebar-cta" . }}
             </div>
         </div>
     </div>

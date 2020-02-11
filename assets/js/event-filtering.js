@@ -22,16 +22,17 @@ $(function() {
      */
     function createCheckbox(text) {
         var container = document.createElement("div");
-        container.className = "my-2";
+        container.className = "my-2 uppercase flex items-center";
 
         var checkbox = document.createElement("input");
         checkbox.id = "checkbox-" + text;
         checkbox.type = "checkbox";
-        checkbox.className = "mx-2 cursor-pointer";
+        checkbox.setAttribute("checked", true);
+        checkbox.className = "mr-2 cursor-pointer";
         checkbox.value = text;
 
         var label = document.createElement("label");
-        label.innerText = text;
+        label.innerText = text + "s";
         label.className = "cursor-pointer";
         label.setAttribute("for", checkbox.id);
 
@@ -102,7 +103,7 @@ $(function() {
      * @param {string[]} tags An array of tags that should appear in the event list.
      */
     function filterEventList(tags) {
-        var events = $("#eventList li");
+        var events = $("#event-list li");
         var visibleEvents = 0;
 
         for (var i = 0; i < events.length; i++) {
@@ -118,9 +119,9 @@ $(function() {
             }
         }
         if (visibleEvents === events.length) {
-            $("#eventListHeading").text("All Upcoming Events")
+            $("#event-list-heading").text("All Upcoming Events")
         } else {
-            $("#eventListHeading").text(visibleEvents + " Upcoming Events");
+            $("#event-list-heading").text(visibleEvents + " Upcoming Events");
         }
     }
 });
