@@ -196,6 +196,7 @@ main {
 #terraformCompareCodeBlock {
     .lntable {
         border-radius: 0;
+        background-color: #1a202c;
     }
     pre {
         margin-top: 0;
@@ -206,28 +207,38 @@ main {
     }
 
     #terraformComparePython, #terraformCompareGo, #terraformCompareCSharp {
-        @apply hidden;
+        .compare-code-block {
+            @apply hidden;
+        }
         &:target {
-            @apply block;
+            .code-file-nav--item {
+                @apply font-semibold;
+                background-color: #1a202c;
+            }
+            .compare-code-block {
+                @apply block;
+            }
 
             ~ #terraformCompareTypeScript {
-                @apply hidden;
+                .code-file-nav--item {
+                    background-color: #11151e;
+                    @apply font-normal;
+                }
+                .compare-code-block {
+                    @apply hidden;
+                }
             }
         }
     }
 }
 
-.code-file-nav {
-    @apply flex bg-gray-800 rounded-t;
+.code-file-nav--item {
+    @apply inline-block rounded-t py-2 px-4 text-blue-700 text-white font-semibold;
+    background-color: #1a202c;
 
-    &--item {
-        @apply inline-block rounded-t py-2 px-4 text-blue-700 text-white font-semibold;
-        background-color: #1a202c;
-
-        &.file-not-active {
-            background-color: #11151e;
-            @apply font-normal;
-        }
+    &.file-not-active {
+        background-color: #11151e;
+        @apply font-normal;
     }
 }
 

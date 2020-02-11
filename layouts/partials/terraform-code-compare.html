@@ -77,15 +77,87 @@ for (let file of files) {
 
 export const bucketname = bucket.id;` }}
 
-{{ $pythonCodeBlock := ``}}
+{{ $pythonCodeBlock := `import os
 
-{{ $goCodeBlock := ``}}
+from pulumi import export, FileAsset
+from pulumi_aws import s3
 
-{{ $cSharpCodeBlock := ``}}
+bucket = s3.Bucket('my-bucket')
+
+for file in os.listdir('files'):
+    filepath = os.path.join(content_dir, file)
+    mime_type, _ = mimetypes.guess_type(filepath)
+    s3.BucketObject(file,
+        bucket=bucket.id,
+        source=FileAsset(filepath),
+        content_type=mime_type)
+
+pulumi.export('bucket_name',  bucket.id)`}}
+
+{{ $goCodeBlock := `package main
+
+import (
+    "io/ioutil"
+    "github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+    "github.com/pulumi/pulumi/sdk/go/pulumi"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        bucket, err := s3.NewBucket(ctx, "my-bucket", nil)
+        if err != nil {
+            return err
+        }
+
+        files, err := ioutil.ReadDir("./")
+        if err != nil {
+            return err
+        }
+
+        for _, item := range files {
+            name := item.Name()
+            if _, err := s3.NewBucketObject(ctx, name, &s3.BucketObjectArgs{
+                Bucket:      siteBucket.ID(),
+                Source:      pulumi.NewFileAsset(filepath.Join(siteDir, name)),
+                ContentType: pulumi.String(mime.TypeByExtension(path.Ext(name))),
+            }); err != nil {
+                return err
+            }
+        }
+
+        ctx.Export("bucketName", bucket.ID())
+        return nil
+    })
+}`}}
+
+{{ $cSharpCodeBlock := `using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Aws.S3;
+
+class Program
+{
+    static Task Main()
+    {
+        return Deployment.RunAsync(() => {
+            var bucket = new Bucket("my-bucket");
+
+            string[] files = Directory.GetFiles("./files");
+            foreach (string fileName in fileEntries)
+            {
+                // ...upload the files to the bucket
+            }
+
+            return new Dictionary<string, object> {
+                { "bucket_name" , bucket.Id },
+            };
+        });
+    }
+}`}}
 
 <div id="terraformCompareCodeBlock" class="flex mt-10">
     <div class="w-5/12">
-        <ul class="code-file-nav">
+        <ul class="bg-gray-800 pt-3 rounded-t">
             <li class="-mb-px mr-1 mt-1">
                 <span class="code-file-nav--item">main.tf</span>
             </li>
@@ -95,34 +167,31 @@ export const bucketname = bucket.id;` }}
     <div class="w-1/12 text-center">
         <i class="fas fa-arrow-right text-6xl block mb-20 mt-10"></i>
         <i class="fas fa-arrow-right text-6xl block mb-20"></i>
-        <i class="fas fa-arrow-right text-6xl block mb-20"></i>
     </div>
-    <div class="w-6/12">
-        <ul class="code-file-nav">
-            <li class="-mb-px mr-1 mt-1">
-                <a class="code-file-nav--item" href="#terraformCompareTypeScript">index.ts</a>
-            </li>
-            <li class="-mb-px mr-1 mt-1">
-                <a class="code-file-nav--item file-not-active" href="#terraformComparePython">__main__.py</a>
-            </li>
-            <li class="-mb-px mr-1 mt-1">
-                <a class="code-file-nav--item file-not-active" href="#terraformCompareGo">main.go</a>
-            </li>
-            <li class="-mb-px mr-1 mt-1">
-                <a class="code-file-nav--item file-not-active" href="#terraformCompareCSharp">Program.cs</a>
-            </li>
-        </ul>
+    <div class="flex w-6/12 relative bg-gray-800 pt-3 rounded-t h-32">
         <div id="terraformComparePython">
-            {{ partial "code" (dict "code" $pythonCodeBlock "lang" "ts" "mode" "dark" "opts" "linenos=true") }}
+            <a class="code-file-nav--item file-not-active" href="#terraformComparePython">__main__.py</a>
+            <div class="compare-code-block w-full absolute left-0">
+                {{ partial "code" (dict "code" $pythonCodeBlock "lang" "python" "mode" "dark" "opts" "linenos=true") }}
+            </div>
         </div>
         <div id="terraformCompareGo">
-            {{ partial "code" (dict "code" $goCodeBlock "lang" "ts" "mode" "dark" "opts" "linenos=true") }}
+            <a class="code-file-nav--item file-not-active" href="#terraformCompareGo">main.go</a>
+            <div class="compare-code-block w-full absolute left-0">
+                {{ partial "code" (dict "code" $goCodeBlock "lang" "go" "mode" "dark" "opts" "linenos=true") }}
+            </div>
         </div>
         <div id="terraformCompareCSharp">
-            {{ partial "code" (dict "code" $cSharpCodeBlock "lang" "ts" "mode" "dark" "opts" "linenos=true") }}
+            <a class="code-file-nav--item file-not-active" href="#terraformCompareCSharp">Program.cs</a>
+            <div class="compare-code-block w-full absolute left-0">
+                {{ partial "code" (dict "code" $cSharpCodeBlock "lang" "csharp" "mode" "dark" "opts" "linenos=true") }}
+            </div>
         </div>
-        <div id="terraformCompareTypeScript">
-            {{ partial "code" (dict "code" $typeScriptCodeBlock "lang" "ts" "mode" "dark" "opts" "linenos=true") }}
+        <div id="terraformCompareTypeScript" class="order-first">
+            <a class="code-file-nav--item" href="#terraformCompareTypeScript">index.ts</a>
+            <div class="compare-code-block w-full absolute">
+                {{ partial "code" (dict "code" $typeScriptCodeBlock "lang" "typescript" "mode" "dark" "opts" "linenos=true") }}
+            </div>
         </div>
     </div>
 </div>
