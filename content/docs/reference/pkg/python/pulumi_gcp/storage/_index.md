@@ -39,7 +39,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Creates a new bucket in Google cloud storage service (GCS).
 Once a bucket has been created, its location can’t be changed.
 <a class="reference external" href="https://cloud.google.com/storage/docs/access-control/lists">ACLs</a> can be applied
-using the <cite>``storage.BucketACL`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html">https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html</a>&gt;`_.</p>
+using the <cite>``storage.BucketACL`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html">https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html</a>&gt;`_ resource.</p>
 <p>For more information see
 <a class="reference external" href="https://cloud.google.com/storage/docs/overview">the official documentation</a>
 and
