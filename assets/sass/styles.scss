@@ -188,6 +188,44 @@ main {
     }
 }
 
+#terraformCompareCodeBlock {
+    .lntable {
+        border-radius: 0;
+    }
+    pre {
+        margin-top: 0;
+        margin-bottom: 0;
+        border-radius: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    #terraformComparePython, #terraformCompareGo, #terraformCompareCSharp {
+        @apply hidden;
+        &:target {
+            @apply block;
+
+            ~ #terraformCompareTypeScript {
+                @apply hidden;
+            }
+        }
+    }
+}
+
+.code-file-nav {
+    @apply flex bg-gray-800 rounded-t;
+
+    &--item {
+        @apply inline-block rounded-t py-2 px-4 text-blue-700 text-white font-semibold;
+        background-color: #1a202c;
+
+        &.file-not-active {
+            background-color: #11151e;
+            @apply font-normal;
+        }
+    }
+}
+
 // This little trick prepends anchor targets with a pseudoelement that the browser picks
 // up as the anchor target, allowing us to position the actual target below the fixed
 // navbar. Only necessary at medium and up.

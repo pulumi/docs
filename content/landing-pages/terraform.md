@@ -6,8 +6,8 @@ type: page
 layout: ppc-landing
 
 hero:
-    title: Modern Languages. Modern Infrastructure.
-    body: |
+    title: Modern Languages. Modern Infrastructures.
+    body: >
         Terraform uses a proprietary DSL called HCL to describe and provision infrastructure resources.
 
         In Pulumi, you describe infrastructure using familiar languages and tools, providing productivity gains,

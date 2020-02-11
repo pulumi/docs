@@ -3,139 +3,19 @@
         <div class="w-full mb-5 p-10">
             <img src="/images/logo/logo-inv.svg" alt="Pulumi Logo" class="h-16 block" />
         </div>
-        <div class="header-hero-items container mx-auto">
-            <div class="header-hero-item">
+        <div class="container mx-auto">
+            <div class="block w-full">
                 <h1>{{ .Params.hero.title }}</h1>
                 {{ .Params.hero.body | markdownify }}
             </div>
-            <div class="header-hero-item">
-                    {{ partial "get-started.html" . }}
-
+            <div>
+                    {{ partial "terraform-code-compare.html" . }}
             </div>
         </div>
     </header>
 {{ end }}
 
 {{ define "main" }}
-
-    <!-- Customer logos -->
-    <section class="mb-16 px-4">
-        <div class="container mx-auto">
-            <div class="lg:flex items-center justify-center my-4">
-                <a data-track="customer-logo" href="https://www.tableau.com/" target="_blank">
-                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
-                </a>
-                <a data-track="customer-logo" href="https://mbrdna.com/" target="_blank">
-                    <img class="mx-auto lg:mx-8 mt-8 mb-4 lg:my-0 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
-                </a>
-                <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank">
-                    <img class="mx-auto lg:mx-8 h-16 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
-                </a>
-                <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank">
-                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
-                </a>
-            </div>
-            <div class="lg:flex items-center justify-center my-4">
-                <a data-track="customer-logo" href="https://www.linio.com/" target="_blank">
-                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-8 mx-8" src="/logos/customers/linio_logo.png" alt="Linio" title="Linio">
-                </a>
-                <a data-track="customer-logo" href="https://www.cockroachlabs.com/" target="_blank">
-                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-8 mx-8" src="/logos/customers/cockroach-labs_logo.png" alt="Cockroach Labs" title="Cockroach Labs">
-                </a>
-                <a data-track="customer-logo" href="https://www.sourcegraph.com/" target="_blank">
-                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-6 mx-8" src="/logos/customers/sourcegraph_logo.png" alt="Sourcegraph" title="Sourcegraph">
-                </a>
-                <a data-track="customer-logo" href="https://www.snopes.com/" target="_blank">
-                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-10 mx-8" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
-                </a>
-                <a data-track="customer-logo" href="https://www.lemonade.com/" target="_blank">
-                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-8 mx-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade">
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="code" class="bg-gray-200 py-16 px-4">
-        <div class="container mx-auto">
-            <div class="md:flex my-8">
-                <div class="md:w-1/2 md:mr-4">
-                    <h2>Take advantage of real coding features with Pulumi</h2>
-                    <p>
-                        Pulumi provides a more expressive and efficient way to define cloud resources:
-                    </p>
-                    <ul>
-                        <li>Use variable loops, not copy/paste</li>
-                        <li>Use any Node libaries (or Python/Go)</li>
-                        <li>On-the-fly error checking</li>
-                        <li>Freeform code instead of complex interpolations</li>
-                    </ul>
-                    <p>
-                        <a href="https://github.com/pulumi/examples">Find many other examples here</a>.
-                    </p>
-                </div>
-                <div class="md:w-1/2 md:ml:4">
-
-                    <!-- Example 1 -->
-                    {{ $code := `import * as aws from "@pulumi/aws";
-import { readFileSync, readdirSync } from "fs";
-import { join as pathjoin } from "path";
-
-const bucket = new aws.s3.Bucket("mybucket");
-
-const folder = "./files";
-let files = readdirSync(folder);
-for (let file of files) {
-    const object = new aws.s3.BucketObject(file, {
-        bucket: bucket,
-        content: readFileSync(pathjoin(folder, file)).toString("utf8")
-    });
-}
-
-export const bucketname = bucket.id;` }}
-
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
-
-                    <!-- Example 2 -->
-                    {{ $code := `resource "aws_s3_bucket" "mybucket" {
-    bucket_prefix = "mybucket"
-}
-
-resource "aws_s3_bucket_object" "data_txt" {
-    key        = "data.txt"
-    bucket     = "${aws_s3_bucket.mybucket.id}"
-    source     = "./files/data.txt"
-}
-
-resource "aws_s3_bucket_object" "index_html" {
-    key        = "index.html"
-    bucket     = "${aws_s3_bucket.mybucket.id}"
-    source     = "./files/index.html"
-}
-
-resource "aws_s3_bucket_object" "index_js" {
-    key        = "index.js"
-    bucket     = "${aws_s3_bucket.mybucket.id}"
-    source     = "./files/index.js"
-}
-
-resource "aws_s3_bucket_object" "main.css" {
-    key        = "main.css"
-    bucket     = "${aws_s3_bucket.mybucket.id}"
-    source     = "./files/main.css"
-}
-
-resource "aws_s3_bucket_object" "favicon.ico" {
-    key        = "favicon.ico"
-    bucket     = "${aws_s3_bucket.mybucket.id}"
-    source     = "./files/favicon.ico"
-}` }}
-
-                        {{ partial "code" (dict "code" $code "lang" "plain" "mode" "dark") }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Testimonials -->
     <section class="py-16 px-4" style="background: url(/images/home/waves-blue.svg) repeat-x; background-position: top left;">
@@ -190,6 +70,43 @@ resource "aws_s3_bucket_object" "favicon.ico" {
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer logos -->
+    <section class="mb-16 px-4">
+        <div class="container mx-auto">
+            <div class="lg:flex items-center justify-center my-4">
+                <a data-track="customer-logo" href="https://www.tableau.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
+                </a>
+                <a data-track="customer-logo" href="https://mbrdna.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 mt-8 mb-4 lg:my-0 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
+                </a>
+                <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 h-16 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
+                </a>
+                <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank">
+                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
+                </a>
+            </div>
+            <div class="lg:flex items-center justify-center my-4">
+                <a data-track="customer-logo" href="https://www.linio.com/" target="_blank">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-8 mx-8" src="/logos/customers/linio_logo.png" alt="Linio" title="Linio">
+                </a>
+                <a data-track="customer-logo" href="https://www.cockroachlabs.com/" target="_blank">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-8 mx-8" src="/logos/customers/cockroach-labs_logo.png" alt="Cockroach Labs" title="Cockroach Labs">
+                </a>
+                <a data-track="customer-logo" href="https://www.sourcegraph.com/" target="_blank">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-6 mx-8" src="/logos/customers/sourcegraph_logo.png" alt="Sourcegraph" title="Sourcegraph">
+                </a>
+                <a data-track="customer-logo" href="https://www.snopes.com/" target="_blank">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-10 mx-8" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
+                </a>
+                <a data-track="customer-logo" href="https://www.lemonade.com/" target="_blank">
+                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-8 mx-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade">
+                </a>
             </div>
         </div>
     </section>
