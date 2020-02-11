@@ -14,7 +14,7 @@ aliases: ["/docs/quickstart/gcp/modify-program/"]
 
 Now that we have an instance of our Pulumi program deployed, let's update it to use our own encryption key instead of the default Google-managed one.
 
-> You must enable the Google KMS API for your project on the GCP console before proceeding. You can enable the API by following this link: `https://console.cloud.google.com/security/kms/noaccess?project={your_project_id}`. Be sure to replace the `{your_project_id}` with your actual Google project ID.
+> You must enable the Google KMS API on the GCP console before proceeding. You can enable the API by going to the [KMS API Library](https://console.cloud.google.com/apis/library/cloudkms.googleapis.com) page and clicking 'ENABLE'.
 
 Replace the entire contents of {{< langfile >}} with the following:
 
