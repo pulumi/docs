@@ -16,15 +16,15 @@ Modern applications have brought many benefits and improvements, including the a
 
 <!--more-->
 
-## Leaky  Buckets
+## Leaky Buckets
 
 What do many of the most innovative companies in the modern cloud era have in common? They’ve all had massive data breaches from leaky AWS S3 Buckets.  One of the most common reasons for data breaches is misconfigured AWS S3 Buckets. Both security professionals and bad actors use tools such as slurp to find open S3 buckets by just entering a domain, keyword, or even AWS credentials with the slurp CLI. Ideally, we want to proactively prevent public access to our S3 buckets before they are created.
 
 ![S3 buckets open to public](Slurp-Amazon-AWS-S3-Bucket-Enumerator.png)
 
-Pulumi's CrossGuard helps customers adhere to security best practices by checking the final state of a deployment against a set of policies and revealing any non-compliant services. CrossGuard is an SDK for writing policies for services, and it includes best practices playbooks for cloud providers such as AWS, Azure, and Google Cloud Platform. The [Getting Started with PaC]({{< ref "/docs/get-started/crossguard" >}}) covers the case of leaking S3 buckets, but let’s do a quick review with an example showing how we can detect a leaky bucket before it gets deployed.
+Pulumi's CrossGuard helps customers adhere to security best practices by checking the final state of a deployment against a set of policies and revealing any non-compliant services. CrossGuard is an SDK for writing policies for services, and it includes best practices playbooks for cloud providers such as AWS, Azure, and Google Cloud Platform. The [Getting Started with PaC]({{< relref "/docs/get-started/crossguard" >}}) covers the case of leaking S3 buckets, but let’s do a quick review with an example showing how we can detect a leaky bucket before it gets deployed.
 
->Note: If you haven’t installed Pulumi, follow the [Pulumi Getting Started]({{< ref "/docs/get-started/install" >}})
+> Note: If you haven’t installed Pulumi, follow the [Pulumi Getting Started]({{< relref "/docs/get-started/install" >}})
 Start by creating an S3 bucket with Pulumi.
 
 ```bash
@@ -59,7 +59,7 @@ new PolicyPack("aws-typescript", {
         name: "s3-no-public-read",
         description: "Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.",
         enforcementLevel: "mandatory",
-        validateResource: validateTypedResource(aws.s3.Bucket, (bucket, args, reportViolation) => {
+        validateResource: validateResourceOfType(aws.s3.Bucket, (bucket, args, reportViolation) => {
             if (bucket.acl === "public-read" || bucket.acl === "public-read-write") {
                 reportViolation(
                     "You cannot set public-read or public-read-write on an S3 bucket. " +
@@ -70,7 +70,7 @@ new PolicyPack("aws-typescript", {
 });
 ```
 
-A policy consists of a name; a description that is displayed when the policy is triggered; an enforcement level of either `advisory` or `mandatory`; and `validateResource` which specifies the type of resource, the resource, any arguments, and the message to report the violation.
+A policy consists of a name; a description that is displayed when the policy is violated; an enforcement level of either `advisory` or `mandatory`; and `validateResource` which specifies the type of resource, the resource, any arguments, and the message to report the violation.
 
 We can test this locally using `pulumi preview`
 
@@ -122,14 +122,14 @@ const example = new aws.elasticsearch.Domain("example", {
 });
 ```
 
-In this example, we’ll use [AWSGuard]({{< ref "/docs/guides/crossguard/awsguard.md" >}}), which is a set of best practice policies for AWS. First, create a directory, change into it, and create a new policy.
+In this example, we’ll use [AWSGuard]({{< relref "/docs/guides/crossguard/awsguard" >}}), which is a set of best practice policies for AWS. First, create a directory, change into it, and create a new policy.
 
 ```bash
 $ mkdir awsguard && cd awsguard
 $ PULUMI_EXPERIMENTAL=true pulumi policy new awsguard-typescript
 ```
 
-The default policy enforcement level is`advisory,` but given the frequency of misconfigured Elasticsearch deployments, we’ll set to `mandatory`.
+The default policy enforcement level is `advisory,` but given the frequency of misconfigured Elasticsearch deployments, we’ll set to `mandatory`.
 
 ```ts
 new AwsGuard({ all: "mandatory" });
