@@ -1,6 +1,6 @@
 ---
 # Name of the event.
-title: "Copenhagen .NET UG"
+title: "Copenhagen .NET User Group"
 
 # Events with external registrations should not be indexed
 # and have redirect to the external registration page.
