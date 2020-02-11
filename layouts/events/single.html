@@ -12,7 +12,7 @@
 {{ define "main" }}
     <div class="container mx-auto">
         <div class="flex flex-col md:flex-row p-10 md:px-20">
-            <div class="w-full order-last md:order-first md:w-6/12 lg:w-8/12 mx-auto">
+            <div class="w-full order-last md:order-first mx-auto">
                 <h3>Details</h3>
 
                 <div>
@@ -42,17 +42,20 @@
                     <i class="fas fa-ticket-alt inline-block text-xl"></i>
                     <span class="my-0 text-xl">{{ .Params.event.cost }}</span>
                 </div>
+
+                <div class="mt-5">
+                    <!-- Calendly link widget begin -->
+
+                    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+                    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+
+                    <a href="" class="btn" onclick="Calendly.initPopupWidget({url: '{{ .Params.event.calendly_url }}&hide_event_type_details=1&primary_color=512668'});return false;">Register Today</a>
+
+                    <!-- Calendly link widget end -->
+                </div>
+
                 {{ .Content }}
-            </div>
-            <div class="w-full order-first md:order-last md:w-6/12 lg:w-4/12 mx-auto">
-                <h3 class="text-center">Registration</h3>
-                <!-- Calendly inline widget begin -->
-
-                <div id="calendly-widget" class="calendly-inline-widget" data-url="{{ .Params.event.calendly_url }}&hide_event_type_details=1&primary_color=512668"></div>
-
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-
-                <!-- Calendly inline widget end -->
             </div>
         </div>
     </div>
