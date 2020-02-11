@@ -50,7 +50,7 @@ You can see other details such as who applied the update and when, as well as co
 
 ##### Stack tags
 
-Custom stack tags can be managed within the Stack tab. Click the **NEW** button to create a new tag, the pencil to edit an existing tag, or the trash can to permanently delete a tag.
+Custom [stack tags]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}) can be managed within the Stack tab. Click the **NEW** button to create a new tag, the pencil to edit an existing tag, or the trash can to permanently delete a tag.
 
 <img class="lg:max-w-xl" src="/images/docs/reference/service/stack-tags.png" alt="Stack Tags">
 
