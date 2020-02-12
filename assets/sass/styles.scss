@@ -205,31 +205,6 @@ main {
         padding-left: 5px;
         padding-right: 5px;
     }
-
-    #terraformComparePython, #terraformCompareGo, #terraformCompareCSharp {
-        .compare-code-block {
-            @apply hidden;
-        }
-        &:target {
-            .code-file-nav--item {
-                @apply font-semibold;
-                background-color: #1a202c;
-            }
-            .compare-code-block {
-                @apply block;
-            }
-
-            ~ #terraformCompareTypeScript {
-                .code-file-nav--item {
-                    background-color: #11151e;
-                    @apply font-normal;
-                }
-                .compare-code-block {
-                    @apply hidden;
-                }
-            }
-        }
-    }
 }
 
 .code-file-nav--item {
