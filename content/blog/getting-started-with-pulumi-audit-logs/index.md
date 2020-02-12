@@ -39,4 +39,4 @@ also filter logs by a particular user by clicking on the user's avatar. This wil
 filter out the events performed by the user you selected.
 
 We are excited to make this feature available to our users. 
-Get started with [Pulumi](https://app.pulumi.com) audit logs today.
+Get started with audit logs on [Pulumi](https://app.pulumi.com) today.
