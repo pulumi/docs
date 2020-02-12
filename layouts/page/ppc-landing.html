@@ -1,5 +1,5 @@
 {{ define "hero" }}
-    <header class="header-hero header-hero-glow landing-page-hero">
+    <header class="header-hero header-hero-glow landing-page-hero pt-0">
         <div class="w-full mb-5 p-10">
             <img src="/images/logo/logo-inv.svg" alt="Pulumi Logo" class="h-16 block" />
         </div>
@@ -8,6 +8,7 @@
                 <h1>{{ .Params.hero.title }}</h1>
                 <p>{{ .Params.hero.body | markdownify }}</p>
                 <a href="#contact" class="btn">REQUEST DEMO</a>
+                <a href="{{ relref . "/docs/get-started" }}" class="btn btn-orange">GET STARTED</a>
             </div>
             <div>
                 {{ partial "terraform-code-compare.html" . }}
