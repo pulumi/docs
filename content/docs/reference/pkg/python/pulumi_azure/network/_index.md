@@ -2793,7 +2793,7 @@ is <code class="docutils literal notranslate"><span class="pre">Vnet2Vnet</span>
 <dl class="attribute">
 <dt id="pulumi_azure.network.GetGatewayConnectionResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetGatewayConnectionResult.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Optional) A mapping of tags to assign to the resource.</p>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3337,7 +3337,7 @@ in which the connection is created.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.network.GetVirtualNetworkGatewayResult.active_active">
 <code class="sig-name descname">active_active</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetVirtualNetworkGatewayResult.active_active" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Optional) Is this an Active-Active Gateway?</p>
+<dd><p>Is this an Active-Active Gateway?</p>
 </dd></dl>
 
 <dl class="attribute">

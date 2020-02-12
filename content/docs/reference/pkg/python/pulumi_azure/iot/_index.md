@@ -19,6 +19,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.iot.AwaitableGetDpsSharedAccessPolicyResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">AwaitableGetDpsSharedAccessPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">iothub_dps_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">primary_key=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">secondary_key=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.AwaitableGetDpsSharedAccessPolicyResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.iot.AwaitableGetSharedAccessPolicyResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">AwaitableGetSharedAccessPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">iothub_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">primary_key=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">secondary_key=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.AwaitableGetSharedAccessPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1136,6 +1141,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.iot.GetDpsSharedAccessPolicyResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">GetDpsSharedAccessPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">iothub_dps_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">primary_key=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">secondary_key=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.GetDpsSharedAccessPolicyResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDpsSharedAccessPolicy.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.iot.GetDpsSharedAccessPolicyResult.primary_connection_string">
+<code class="sig-name descname">primary_connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.GetDpsSharedAccessPolicyResult.primary_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primary connection string of the Shared Access Policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.GetDpsSharedAccessPolicyResult.primary_key">
+<code class="sig-name descname">primary_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.GetDpsSharedAccessPolicyResult.primary_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primary key used to create the authentication token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.GetDpsSharedAccessPolicyResult.secondary_connection_string">
+<code class="sig-name descname">secondary_connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.GetDpsSharedAccessPolicyResult.secondary_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secondary connection string of the Shared Access Policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.GetDpsSharedAccessPolicyResult.secondary_key">
+<code class="sig-name descname">secondary_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.GetDpsSharedAccessPolicyResult.secondary_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secondary key used to create the authentication token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.GetDpsSharedAccessPolicyResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.GetDpsSharedAccessPolicyResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.iot.GetSharedAccessPolicyResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">GetSharedAccessPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">iothub_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">primary_key=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">secondary_key=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.GetSharedAccessPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSharedAccessPolicy.</p>
@@ -2130,6 +2171,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/iothub_dps.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/iothub_dps.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.iot.get_dps_shared_access_policy">
+<code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">get_dps_shared_access_policy</code><span class="sig-paren">(</span><em class="sig-param">iothub_dps_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.get_dps_shared_access_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing IotHub Device Provisioning Service Shared Access Policy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iothub_dps_name</strong> (<em>str</em>) – Specifies the name of the IoT Hub Device Provisioning service to which the Shared Access Policy belongs.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the IotHub Shared Access Policy.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the resource group under which the IotHub Shared Access Policy resource exists.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/iothub_dps_shared_access_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/iothub_dps_shared_access_policy.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
