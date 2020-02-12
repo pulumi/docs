@@ -25,7 +25,7 @@ of the call being made.
 
 ## Using Pulumi Audit Logs
 
-Audit logs are available to organizations with an "Enterprise" level subscription
+Audit logs are available to organizations with an Enterprise level subscription
 only. You can view the audit logs for your organization if you
 are an organization admin, by selecting your organization from the
 organization drop down. Then click on the settings tab. On the left nav-bar 
