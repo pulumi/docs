@@ -36,5 +36,4 @@ organization.
 
 It will show the most recent events in decending order. You can
 also filter logs by a particular user by clicking on the user's avatar. This will
-filter out the events by the user you selected. You can also filter by user by
-adding a query param to the url with the user's login name.
+filter out the events by the user you selected.
