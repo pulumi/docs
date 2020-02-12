@@ -170,6 +170,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.eventhub.AwaitableGetConsumeGroupResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">AwaitableGetConsumeGroupResult</code><span class="sig-paren">(</span><em class="sig-param">eventhub_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">user_metadata=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.AwaitableGetConsumeGroupResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.eventhub.AwaitableGetEventhubNamespaceResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">AwaitableGetEventhubNamespaceResult</code><span class="sig-paren">(</span><em class="sig-param">auto_inflate_enabled=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">kafka_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">maximum_throughput_units=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.AwaitableGetEventhubNamespaceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1818,6 +1823,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.eventhub.GetConsumeGroupResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">GetConsumeGroupResult</code><span class="sig-paren">(</span><em class="sig-param">eventhub_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">user_metadata=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.GetConsumeGroupResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getConsumeGroup.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.GetConsumeGroupResult.user_metadata">
+<code class="sig-name descname">user_metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetConsumeGroupResult.user_metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the user metadata.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.GetConsumeGroupResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetConsumeGroupResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -3618,6 +3641,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.eventhub.get_consume_group">
+<code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">get_consume_group</code><span class="sig-paren">(</span><em class="sig-param">eventhub_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.get_consume_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Event Hubs Consumer Group within an Event Hub.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>eventhub_name</strong> (<em>str</em>) – Specifies the name of the EventHub.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the EventHub Consumer Group resource.</p></li>
+<li><p><strong>namespace_name</strong> (<em>str</em>) – Specifies the name of the grandparent EventHub Namespace.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The name of the resource group in which the EventHub Consumer Group’s grandparent Namespace exists.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/eventhub_consumer_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/eventhub_consumer_group.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">
