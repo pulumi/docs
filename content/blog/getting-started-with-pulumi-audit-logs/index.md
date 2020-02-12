@@ -2,9 +2,9 @@
 title: "Getting Started with Pulumi Audit Logs"
 date: "2020-02-10"
 meta_desc: "Pulumi now supports Audit Logs. Learn how to access audit logs for your organization."
-meta_image: "pulumi-webhooks.png"
+meta_image: "auditlogs.png"
 authors: ["sean-holung"]
-tags: []
+tags: ["New-Features", "AuditLogs"]
 ---
 
 We are excited to announce the release of Audit Logs on
