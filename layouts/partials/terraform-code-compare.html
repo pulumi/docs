@@ -157,8 +157,9 @@ class Program
 
 <div id="terraformCompareCodeBlock" class="flex mt-10">
     <div class="w-5/12">
-        <ul class="bg-gray-800 pt-3 rounded-t">
-            <li class="-mb-px mr-1 mt-1">
+        {{ partial "chrome.html" . }}
+        <ul class="bg-gray-800">
+            <li class="-mb-px mr-1">
                 <span class="code-file-nav--item">main.tf</span>
             </li>
         </ul>
@@ -168,29 +169,32 @@ class Program
         <i class="fas fa-arrow-right text-6xl block mb-20 mt-10"></i>
         <i class="fas fa-arrow-right text-6xl block mb-20"></i>
     </div>
-    <div class="flex w-6/12 relative bg-gray-800 pt-3 rounded-t h-32">
-        <div id="terraformComparePython">
-            <a class="code-file-nav--item file-not-active" href="#terraformComparePython">__main__.py</a>
-            <div class="compare-code-block w-full absolute left-0">
-                {{ partial "code" (dict "code" $pythonCodeBlock "lang" "python" "mode" "dark" "opts" "linenos=true") }}
+    <div class="w-6/12">
+        {{ partial "chrome.html" . }}
+        <div class="flex relative bg-gray-800 h-32">
+            <div id="terraformComparePython">
+                <a class="code-file-nav--item file-not-active" href="#">__main__.py</a>
+                <div class="compare-code-block w-full absolute left-0 hidden">
+                    {{ partial "code" (dict "code" $pythonCodeBlock "lang" "python" "mode" "dark" "opts" "linenos=true") }}
+                </div>
             </div>
-        </div>
-        <div id="terraformCompareGo">
-            <a class="code-file-nav--item file-not-active" href="#terraformCompareGo">main.go</a>
-            <div class="compare-code-block w-full absolute left-0">
-                {{ partial "code" (dict "code" $goCodeBlock "lang" "go" "mode" "dark" "opts" "linenos=true") }}
+            <div id="terraformCompareGo">
+                <a class="code-file-nav--item file-not-active" href="#">main.go</a>
+                <div class="compare-code-block w-full absolute left-0 hidden">
+                    {{ partial "code" (dict "code" $goCodeBlock "lang" "go" "mode" "dark" "opts" "linenos=true") }}
+                </div>
             </div>
-        </div>
-        <div id="terraformCompareCSharp">
-            <a class="code-file-nav--item file-not-active" href="#terraformCompareCSharp">Program.cs</a>
-            <div class="compare-code-block w-full absolute left-0">
-                {{ partial "code" (dict "code" $cSharpCodeBlock "lang" "csharp" "mode" "dark" "opts" "linenos=true") }}
+            <div id="terraformCompareCSharp">
+                <a class="code-file-nav--item file-not-active" href="#">Program.cs</a>
+                <div class="compare-code-block w-full absolute left-0 hidden">
+                    {{ partial "code" (dict "code" $cSharpCodeBlock "lang" "csharp" "mode" "dark" "opts" "linenos=true") }}
+                </div>
             </div>
-        </div>
-        <div id="terraformCompareTypeScript" class="order-first">
-            <a class="code-file-nav--item" href="#terraformCompareTypeScript">index.ts</a>
-            <div class="compare-code-block w-full absolute">
-                {{ partial "code" (dict "code" $typeScriptCodeBlock "lang" "typescript" "mode" "dark" "opts" "linenos=true") }}
+            <div id="terraformCompareTypeScript" class="order-first">
+                <a class="code-file-nav--item" href="#">index.ts</a>
+                <div class="compare-code-block w-full absolute">
+                    {{ partial "code" (dict "code" $typeScriptCodeBlock "lang" "typescript" "mode" "dark" "opts" "linenos=true") }}
+                </div>
             </div>
         </div>
     </div>

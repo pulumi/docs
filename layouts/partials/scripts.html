@@ -14,6 +14,7 @@
 {{ $s = $s | append (resources.Get "js/tracking.js") }}
 {{ $s = $s | append (resources.Get "js/docs-feedback.js") }}
 {{ $s = $s | append (resources.Get "js/event-filtering.js") }}
+{{ $s = $s | append (resources.Get "js/mock-ide-file-selector.js") }}
 
 <!-- We use the `clipboard-polyfill` npm package. If it hasn't been installed, show a friendlier error message. -->
 {{ $clipboardFile := "node_modules/clipboard-polyfill/build/clipboard-polyfill.promise.js" }}
