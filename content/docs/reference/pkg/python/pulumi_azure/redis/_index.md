@@ -21,7 +21,64 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="class">
 <dt id="pulumi_azure.redis.Cache">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.redis.</code><code class="sig-name descname">Cache</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">enable_non_ssl_port=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">minimum_tls_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">patch_schedules=None</em>, <em class="sig-param">private_static_ip_address=None</em>, <em class="sig-param">redis_configuration=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">shard_count=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.Cache" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Cache resource with the given unique name, props, and options.</p>
+<dd><p>Manages a Redis Cache.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Redis Value</p></th>
+<th class="head"><p>Basic</p></th>
+<th class="head"><p>Standard</p></th>
+<th class="head"><p>Premium</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>enable_authentication</p></td>
+<td><p>true</p></td>
+<td><p>true</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>maxmemory_reserved</p></td>
+<td><p>2</p></td>
+<td><p>50</p></td>
+<td><p>200</p></td>
+</tr>
+<tr class="row-even"><td><p>maxfragmentationmemory_reserved</p></td>
+<td><p>2</p></td>
+<td><p>50</p></td>
+<td><p>200</p></td>
+</tr>
+<tr class="row-odd"><td><p>maxmemory_delta</p></td>
+<td><p>2</p></td>
+<td><p>50</p></td>
+<td><p>200</p></td>
+</tr>
+<tr class="row-even"><td><p>maxmemory_policy</p></td>
+<td><p>volatile-lru</p></td>
+<td><p>volatile-lru</p></td>
+<td><p>volatile-lru</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p><strong>NOTE:</strong> The <code class="docutils literal notranslate"><span class="pre">maxmemory_reserved</span></code>, <code class="docutils literal notranslate"><span class="pre">maxmemory_delta</span></code> and <code class="docutils literal notranslate"><span class="pre">maxfragmentationmemory-reserved</span></code> settings are only available for Standard and Premium caches. More details are available in the Relevant Links section below._</p>
+</div></blockquote>
+<p>A <code class="docutils literal notranslate"><span class="pre">patch_schedule</span></code> block supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">day_of_week</span></code> (Required) the Weekday name - possible values include <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code> etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start_hour_utc</span></code> - (Optional) the Start Hour for maintenance in UTC - possible values range from <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">-</span> <span class="pre">23</span></code>.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Note:</strong> The Patch Window lasts for <code class="docutils literal notranslate"><span class="pre">5</span></code> hours from the <code class="docutils literal notranslate"><span class="pre">start_hour_utc</span></code>.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><a class="reference external" href="https://azure.microsoft.com/en-us/documentation/articles/cache-configure/#advanced-settings">Azure Redis Cache: SKU specific configuration limitations</a></p></li>
+<li><p><a class="reference external" href="http://redis.io/topics/config">Redis: Available Configuration Settings</a></p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

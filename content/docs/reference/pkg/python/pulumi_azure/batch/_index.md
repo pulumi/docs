@@ -1110,12 +1110,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>network_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">endpointConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - (Optional) The inbound NAT pools that are used to address specific ports on the individual compute node externally.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">endpointConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The inbound NAT pools that are used to address specific ports on the individual compute node externally.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">backendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port number on the compute node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">frontendPortRange</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The range of external ports that are used to provide inbound access to the backendPort on the individual compute nodes in the format of <code class="docutils literal notranslate"><span class="pre">1000-1100</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the endpoint.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkSecurityGroupRules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - (Optional) The list of network security group rules that are applied to the endpoint.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkSecurityGroupRules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of network security group rules that are applied to the endpoint.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">access</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The action that should be taken for a specified IP address, subnet range or tag.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The priority for this rule.</p></li>
@@ -1125,14 +1125,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol of the endpoint.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - (Optional) The ARM resource identifier of the virtual network subnet which the compute nodes of the pool are joined too.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARM resource identifier of the virtual network subnet which the compute nodes of the pool are joined too.</p></li>
 </ul>
 <p>The <strong>start_task</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">commandLine</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The command line executed by the start task.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">environment</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map of strings (key,value) that represents the environment variables to set in the start task.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxTaskRetryCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of retry count.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceFiles</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - (Optional) One or more <code class="docutils literal notranslate"><span class="pre">resource_file</span></code> blocks that describe the files to be downloaded to a compute node.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceFiles</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">resource_file</span></code> blocks that describe the files to be downloaded to a compute node.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoStorageContainerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The storage container name in the auto storage account.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">blobPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The blob prefix used when downloading blobs from an Azure Storage container.</p></li>
