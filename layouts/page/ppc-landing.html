@@ -6,16 +6,140 @@
         <div class="container mx-auto">
             <div class="block w-full">
                 <h1>{{ .Params.hero.title }}</h1>
-                {{ .Params.hero.body | markdownify }}
+                <p>{{ .Params.hero.body | markdownify }}</p>
+                <a href="#contact" class="btn">REQUEST DEMO</a>
             </div>
             <div>
-                    {{ partial "terraform-code-compare.html" . }}
+                {{ partial "terraform-code-compare.html" . }}
             </div>
         </div>
     </header>
 {{ end }}
 
 {{ define "main" }}
+
+    <!-- Customer logos -->
+    <section class="mb-16 px-4">
+        <div class="container mx-auto">
+            <div class="lg:flex items-center justify-center my-4">
+                <a data-track="customer-logo" href="https://www.tableau.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
+                </a>
+                <a data-track="customer-logo" href="https://mbrdna.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 mt-8 mb-4 lg:my-0 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
+                </a>
+                <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 h-16 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
+                </a>
+                <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank">
+                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
+                </a>
+            </div>
+            <div class="lg:flex items-center justify-center my-4">
+                <a data-track="customer-logo" href="https://www.linio.com/" target="_blank">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-8 mx-8" src="/logos/customers/linio_logo.png" alt="Linio" title="Linio">
+                </a>
+                <a data-track="customer-logo" href="https://www.cockroachlabs.com/" target="_blank">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-8 mx-8" src="/logos/customers/cockroach-labs_logo.png" alt="Cockroach Labs" title="Cockroach Labs">
+                </a>
+                <a data-track="customer-logo" href="https://www.sourcegraph.com/" target="_blank">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-6 mx-8" src="/logos/customers/sourcegraph_logo.png" alt="Sourcegraph" title="Sourcegraph">
+                </a>
+                <a data-track="customer-logo" href="https://www.snopes.com/" target="_blank">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-10 mx-8" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
+                </a>
+                <a data-track="customer-logo" href="https://www.lemonade.com/" target="_blank">
+                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-8 mx-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programming Model -->
+    <section>
+        <div class="flex container mx-auto py-10">
+            <div class="w-6/12 px-10">
+                <p class="text-3xl font-bold">Programs</p>
+                <p>Pulumi programs are written in general-purpose programming languages, including JavaScript,
+                    TypeScript, Python, Go or any .NET language such as C#, F#, or VB. You use the language’s
+                    native tools and libraries, including Pulumi’s own packages containing infrastructure resource types.
+                    Although you use general-purpose languages, Pulumi is still a declarative infrastructure as code tool.
+                </p>
+                <p>
+                    After writing a program, you run the Pulumi CLI command pulumi up, which executes the program and determines
+                    the desired infrastructure state for all resources declared. The CLI will show you a preview of changes to be made,
+                    including all new resources to be created and existing resources to update or destroy. After confirming, Pulumi will
+                    carry out the changes.
+                </p>
+            </div>
+            <div class="w-6/12 px-10">
+                <img src="/images/docs/reference/engine-block-diagram.png" alt="Pulumi engine and providers" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Terraform Backend -->
+    {{ $terraformBackendCode := `import * as pulumi from "@pulumi/pulumi";
+import * as terraform from "@pulumi/terraform";
+
+const config = new pulumi.Config();
+const tfeToken = config.requireSecret("tfeToken");
+
+const networkState = new terraform.state.RemoteStateReference("network", {
+    backendType: "remote",
+    token: tfeToken,
+    organization: "acme",
+    workspaces: {
+        name: "production-network"
+    },
+});` }}
+    <section>
+        <div class="flex container mx-auto py-10">
+            <div class="w-6/12 px-10">
+                {{ partial "code" (dict "code" $terraformBackendCode "lang" "typescript" "mode" "dark") }}
+            </div>
+            <div class="w-6/12 px-10">
+                <p class="text-3xl font-bold">Using Pulumi and Terraform Side-by-Side</p>
+                <p>
+                    Pulumi supports consuming local or remote Terraform state from your Pulumi programs.
+                    This helps with incremental adoption, whereby you continue managing a subset of your
+                    infrastructure with Terraform, while you incrementally move to Pulumi.
+                </p>
+                <p>
+                    For instance, say you would like to keep your VPC and low level network definitions written in
+                    Terraform so as to avoid any disruption, or maybe because some of the team would like to stay on
+                    Terraform for now. Using the state reference support described above, you can author higher level
+                    infrastructure in Pulumi that consumes the Terraform-provisioned VPC information (like the VPC ID, Subnet IDs, etc),
+                    making co-existence easy to automate.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programming Model -->
+    <section>
+        <div class="flex container mx-auto py-10">
+            <div class="w-6/12 px-10">
+                <p class="text-3xl font-bold">Less Code. More Productivity.</p>
+                <p>
+                    By simplifying configuration with Pulumi, Amazon ECS, AWS Fargate and AWS Lambda,
+                    Learning Machine not only realized a 50x reduction in the amount of configuration that
+                    they had to manage but were also able to add new customers faster. Before the project,
+                    provisioning a new customer could take up to 3 weeks due to the complexity of configuration
+                    while their new approach reduced provisioning time to one hour.
+                </p>
+                <p>
+                    The impact of serverless capabilities was also transformative for the Learning Machine business.
+                    Pulumi enabled a rapid shift to Amazon ECS, AWS Fargate and AWS Lambda — the net effect of which
+                    was a 67% reduction in AWS charges. This enabled the team to spend less time focused on maintaining
+                    existing infrastructure and more time deploying new applications on AWS and adding new customers.
+                </p>
+            </div>
+            <div class="w-6/12 px-10">
+                <img src="/images/whitepaper/cloud-native-infrastructure/graph5.png" alt="Pulumi productivity" />
+            </div>
+        </div>
+    </section>
 
     <!-- Testimonials -->
     <section class="py-16 px-4" style="background: url(/images/home/waves-blue.svg) repeat-x; background-position: top left;">
@@ -70,43 +194,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Customer logos -->
-    <section class="mb-16 px-4">
-        <div class="container mx-auto">
-            <div class="lg:flex items-center justify-center my-4">
-                <a data-track="customer-logo" href="https://www.tableau.com/" target="_blank">
-                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
-                </a>
-                <a data-track="customer-logo" href="https://mbrdna.com/" target="_blank">
-                    <img class="mx-auto lg:mx-8 mt-8 mb-4 lg:my-0 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
-                </a>
-                <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank">
-                    <img class="mx-auto lg:mx-8 h-16 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
-                </a>
-                <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank">
-                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
-                </a>
-            </div>
-            <div class="lg:flex items-center justify-center my-4">
-                <a data-track="customer-logo" href="https://www.linio.com/" target="_blank">
-                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-8 mx-8" src="/logos/customers/linio_logo.png" alt="Linio" title="Linio">
-                </a>
-                <a data-track="customer-logo" href="https://www.cockroachlabs.com/" target="_blank">
-                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-8 mx-8" src="/logos/customers/cockroach-labs_logo.png" alt="Cockroach Labs" title="Cockroach Labs">
-                </a>
-                <a data-track="customer-logo" href="https://www.sourcegraph.com/" target="_blank">
-                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-6 mx-8" src="/logos/customers/sourcegraph_logo.png" alt="Sourcegraph" title="Sourcegraph">
-                </a>
-                <a data-track="customer-logo" href="https://www.snopes.com/" target="_blank">
-                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-10 mx-8" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
-                </a>
-                <a data-track="customer-logo" href="https://www.lemonade.com/" target="_blank">
-                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-8 mx-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade">
-                </a>
             </div>
         </div>
     </section>
