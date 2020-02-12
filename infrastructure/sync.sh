@@ -34,15 +34,16 @@ if [ ! "$(find site_contents -type f | grep index.html | wc -l)" -ge 1000 ]; the
     exit 1
 fi
 
-# Upload the JS and CSS bundles first.
+# Upload the JS and CSS bundles first, applying cache-control headers that match our
+# CloudFront settings (to cache these objects for one year).
 cd site_contents
 
 for file in $(find css -name "styles.*.css") ; do
-    aws s3 cp "$file" "$site_bucket/$file" --acl public-read
+    aws s3 cp "$file" "$site_bucket/$file" --acl public-read --cache-control "public, max-age=31536000" --metadata-directive REPLACE
 done
 
 for file in $(find js -name "bundle.min.*.js") ; do
-    aws s3 cp "$file" "$site_bucket/$file"  --acl public-read
+    aws s3 cp "$file" "$site_bucket/$file"  --acl public-read --cache-control "public, max-age=31536000" --metadata-directive REPLACE
 done
 
 cd ..
