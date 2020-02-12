@@ -12,16 +12,14 @@ We are excited to announce the release of Audit Logs on
 Audit logs enable you to track the activity of users within an
 organization. Audit logs attempt to answer who did what, when
 they did it and where. Pulumi audit logs help answer these questions
-by recording entries for activities invoked by users. 
+by recording entries for activities invoked by users.
 
 Pulumi's audit logs allow you to account for the activity your
-users are taking within your organization. Having audit logs can deter malicious
-activity before it starts. They are also great to playback events
-that occured during something like an incident review. These logs are available to organizations
-with an Enterprise level subscription. Pulumi audit logs are 
-recorded whenever a user invokes an action. This allows the acitvity
+users are taking within your organization. These logs are available to
+organizations with an Enterprise level subscription. Pulumi audit logs are
+recorded whenever a user invokes an action. This allows the activity
 of members in an organization to be traced. Our Audit logs are immutable.
-They are recorded with the UNIX timestamp of the event, the user 
+They are recorded with the UNIX timestamp of the event, the user
 who invoked the action, the event, and the source IP of the call being made.
 
 ## Using Pulumi Audit Logs
@@ -32,8 +30,11 @@ are an organization admin, by selecting your organization from the
 organization drop down in the organization settings menu. Then clicking on
 the settings tab. On the left nav-bar you should see a tab called Audit Logs.
 Clicking here will allow you to view the most recent audit logs for your
-organization. It will show the most recent events in decending order. You can
+organization.
+
+![auditlogs](./auditlogs.png)
+
+It will show the most recent events in decending order. You can
 also filter logs by a particular user by clicking on the user's avatar. This will
 filter out the events by the user you selected. You can also filter by user by
-adding a query param to the url with the user's login name. 
-
+adding a query param to the url with the user's login name.
