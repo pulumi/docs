@@ -211,7 +211,7 @@ let pulumi = require("@pulumi/pulumi");
 ```
 
 ```typescript
-import * as aws from "@pulumi/pulumi";
+import * as pulumi from "@pulumi/pulumi";
 ```
 
 ```python
@@ -1960,16 +1960,16 @@ In this example, the name is required, and a lucky number is optional:
 {{< langchoose csharp >}}
 
 ```javascript
-let config = new pulumi.Config();
-let name = config.require("name");
-let lucky = config.getNumber("lucky") || 42;
+const config = new pulumi.Config();
+const name = config.require("name");
+const lucky = config.getNumber("lucky") || 42;
 console.log(`Hello, ${name} -- I see your lucky number is ${lucky}!`);
 ```
 
 ```typescript
-let config = new pulumi.Config();
-let name = config.require("name");
-let lucky = config.getNumber("lucky");
+const config = new pulumi.Config();
+const name = config.require("name");
+const lucky = config.getNumber("lucky");
 console.log(`Hello, ${name} -- I see your lucky number is ${lucky}!`);
 ```
 
@@ -2023,8 +2023,8 @@ A program can read the `data` config into a rich object with:
 {{< langchoose csharp >}}
 
 ```javascript
-let config = new pulumi.Config();
-let data = config.requireObject("data");
+const config = new pulumi.Config();
+const data = config.requireObject("data");
 console.log(`Active: ${data.active}`);
 ```
 
@@ -2034,8 +2034,8 @@ interface Data {
     nums: number[];
 }
 
-let config = new pulumi.Config();
-let data = config.requireObject<Data>("data");
+const config = new pulumi.Config();
+const data = config.requireObject<Data>("data");
 console.log(`Active: ${data.active}`);
 ```
 
@@ -2104,7 +2104,7 @@ let instance = new aws.ec2.Instance("myInstance", {
 ```
 
 ```typescript
-let aws = require("@pulumi/aws");
+import * as aws from "@pulumi/aws";
 
 let instance = new aws.ec2.Instance("myInstance", {
     instanceType: "t2.micro",
@@ -2169,8 +2169,8 @@ let listener = new aws.lb.Listener("listener", {
 ```
 
 ```typescript
-let pulumi = require("@pulumi/pulumi");
-let aws = require("@pulumi/aws");
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
 
 // Create an AWS provider for the us-east-1 region.
 let useast1 = new aws.Provider("useast1", { region: "us-east-1" });

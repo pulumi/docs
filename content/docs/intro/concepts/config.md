@@ -88,8 +88,8 @@ Similarly, if our program attempts to print the value of `dbPassword` to the con
 {{< langchoose csharp >}}
 
 ```javascript
-var pulumi = require("@pulumi/pulumi");
-var config = new pulumi.Config();
+const pulumi = require("@pulumi/pulumi");
+const config = new pulumi.Config();
 console.log("Password: " + config.require("dbPassword"));
 ```
 
@@ -151,12 +151,12 @@ Use the following code to access these configuration values in your Pulumi progr
 {{< langchoose csharp >}}
 
 ```javascript
-var pulumi = require("@pulumi/pulumi");
+const pulumi = require("@pulumi/pulumi");
 
-var config = new pulumi.Config();
+const config = new pulumi.Config();
 
-var name = config.require("name");
-var dbPassword = config.requireSecret("dbPassword");
+const name = config.require("name");
+const dbPassword = config.requireSecret("dbPassword");
 ```
 
 ```typescript
@@ -238,13 +238,13 @@ config:
 
 For structured config, `true` and `false` values are persisted as boolean values, and values convertible to integers are persisted as integers.
 
-The `data` config can be accessed in your Pulumi program using:
+The `data` config can be accessed in your Pulumi program using `getObject` or `requireObject`:
 
 {{< langchoose csharp >}}
 
 ```javascript
-let config = new pulumi.Config();
-let data = config.requireObject("data");
+const config = new pulumi.Config();
+const data = config.requireObject("data");
 console.log(`Active: ${data.active}`);
 ```
 
@@ -254,8 +254,8 @@ interface Data {
     nums: number[];
 }
 
-let config = new pulumi.Config();
-let data = config.requireObject<Data>("data");
+const config = new pulumi.Config();
+const data = config.requireObject<Data>("data");
 console.log(`Active: ${data.active}`);
 ```
 
@@ -283,9 +283,16 @@ func main() {
 ```
 
 ```csharp
+class Data {
+    [JsonPropertyName("active")]
+    public bool Active { get; set; }
+    [JsonPropertyName("nums")]
+    public int[]? Nums { get; set; }
+}
+
 var config = new Pulumi.Config();
-var data = config.RequireObject<JsonElement>("data");
-Console.WriteLine($"Active: {data.GetProperty("active")}");
+var data = config.RequireObject<Data>("data");
+Console.WriteLine($"Active: {data.Active}");
 ```
 
 Secrets within structured config are also supported. Consider a list of endpoints, each having a `url` and `token` property. The `token` value could be stored as a secret:
@@ -293,6 +300,48 @@ Secrets within structured config are also supported. Consider a list of endpoint
 ```bash
 $ pulumi config set --path endpoints[0].url https://example.com
 $ pulumi config set --path --secret endpoints[0].token accesstokenvalue
+```
+
+Since the structure contains secrets, instead of using the non-secret `getObject` or `requireObject` APIs, you almost certainly want to use the secret variants (`getSecretObject` or `requireSecretObject`), which will read the whole object as a secret, ensuring that all transitive uses in the Pulumi program are themselves also marked as secrets:
+
+{{< langchoose nogo csharp >}}
+
+```javascript
+const config = new pulumi.Config();
+const endpoints = config.requireSecretObject("endpoints");
+const firstToken = endpoints.apply(e => e[0].token);
+```
+
+```typescript
+interface Endpoint {
+    url: string;
+    token: string;
+}
+
+const config = new pulumi.Config();
+const endpoints = config.requireSecretObject<Endpoint[]>("endpoints");
+const firstToken = endpoints.apply(e => e[0].token);
+```
+
+```python
+config = pulumi.Config()
+endpoints = config.require_secret_object("endpoints")
+first_token = endpoints.apply(
+    lambda e: e[0].token
+)
+```
+
+```csharp
+class Endpoint {
+    [JsonPropertyName("url")]
+    public string? URL { get; set; }
+    [JsonPropertyName("token")]
+    public string? Token { get; set; }
+}
+
+var config = new Pulumi.Config();
+var endpoints = config.RequireSecretObject<Endpoint[]>("endpoints");
+var firstToken = endpoints.Apply(e => e[0].Token);
 ```
 
 ## Configuring Secrets Encryption
