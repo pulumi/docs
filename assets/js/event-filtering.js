@@ -21,7 +21,7 @@ $(function() {
         // what checkboxes should initially be checked. If the query param
         // is not set, check all the boxes.
         if (filterValue !== undefined) {
-            var shouldBeChecked = filterValue.split(",").indexOf(checkbox.value) > -1;
+            var shouldBeChecked = filterValue.toLowerCase().split(",").indexOf(checkbox.value) > -1;
             if (shouldBeChecked) {
                 checkbox.setAttribute("checked", true);
             }
