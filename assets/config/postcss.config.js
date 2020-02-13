@@ -16,6 +16,18 @@ module.exports = {
             ]
         }),
 
+        // PurgeCSS to remove unused classes for better page speed.
+        require("@fullhuman/postcss-purgecss")({
+            // Specify the paths to all of the template files in your project
+            content: [ "./layouts/**/*.html" ],
+            // Whitelist HubSpot specific classes so they don't get removed.
+            whitelist: ["supported-cicd-platforms"],
+            whitelistPatterns: [/^hs-/, /^highlight$/],
+            whitelistPatternsChildren: [/^hs-/, /^highlight$/],
+            // Extract the default tailwind classes.
+            defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+        }),
+
         // Minify the CSS even further. (It works!)
         require('cssnano')({
             preset: 'default',
