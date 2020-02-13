@@ -3,7 +3,7 @@
         <div class="container mx-auto">
             <div class="mx-auto text-center">
                 <h1>{{ .Title }}</h1>
-                <p class="text-2xl">Infrastructure As Code With Pulumi</p>
+                <p class="text-2xl">Infrastructure as code with Pulumi</p>
             </div>
         </div>
     </header>
@@ -12,47 +12,42 @@
 {{ define "main" }}
     <div class="container mx-auto">
         <div class="flex flex-col md:flex-row p-10 md:px-20">
-            <div class="w-full order-last md:order-first md:w-6/12 lg:w-8/12 mx-auto">
-                <h3>Details</h3>
-
-                <div>
-                    <i class="fas fa-globe-americas inline-block text-xl"></i>
-                    <span class="my-0 text-xl">
-                        <a href="https://maps.google.com/?q={{ .Params.event.location }}" target="_blank" class="text-blue-500">{{ .Params.event.location }}</a>
-                    </span>
-                </div>
-
-                <div>
-                    <i class="fas fa-calendar inline-block text-xl"></i>
-                    <span class="my-0 text-xl">
-                        {{ if eq .Params.event.start_date .Params.event.end_date }}
-                            {{ dateFormat "Mon, Jan 2" .Params.event.start_date }}
-                        {{ else }}
-                            {{ dateFormat "Mon, Jan 2" .Params.event.start_date }} - {{ dateFormat "Mon, Jan 2" .Params.event.end_date }}
-                        {{ end }}
-                    </span>
-                </div>
-
-                <div>
-                    <i class="fas fa-clock inline-block text-xl"></i>
-                    <span class="my-0 text-xl">{{ .Params.event.time }}</span>
-                </div>
-
-                <div>
-                    <i class="fas fa-ticket-alt inline-block text-xl"></i>
-                    <span class="my-0 text-xl">{{ .Params.event.cost }}</span>
+            <div class="w-full order-last md:order-first mx-auto">
+                <h3>Event Details</h3>
+                <div class="text-sm uppercase md:text-base">
+                    <div class="my-1">
+                        <i class="text-gray-800 fas fa-calendar w-8 mr-1 text-center"></i>
+                        <span>
+                            {{ if eq .Params.event.start_date .Params.event.end_date }}
+                                {{ dateFormat "Mon, Jan 2" .Params.event.start_date }}
+                            {{ else }}
+                                {{ dateFormat "Mon, Jan 2" .Params.event.start_date }} - {{ dateFormat "Mon, Jan 2" .Params.event.end_date }}
+                            {{ end }}
+                        </span>
+                    </div>
+                    <div class="my-1">
+                        <i class="text-gray-800 fas fa-clock w-8 mr-1 text-center"></i>
+                        <span>{{ .Params.event.time }}</span>
+                    </div>
+                    <div class="my-1">
+                        <i class="text-gray-800 fas fa-map-marker-alt w-8 mr-1 text-center"></i>
+                        <span>
+                            <a href="https://maps.google.com/?q={{ .Params.event.location }}" target="_blank" class="text-blue-500">{{ .Params.event.location }}</a>
+                        </span>
+                    </div>
+                    <div class="my-1">
+                        <i class="text-gray-800 fas fa-ticket-alt w-8 mr-1 text-center"></i>
+                        <span>{{ .Params.event.cost }}</span>
+                    </div>
+                    <div class="my-8">
+                        <!-- Calendly link widget begin -->
+                        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+                        <a href="#" class="btn bg-orange-500 border-2 border-orange-600 hover:bg-orange-600 hover:border-orange-600" onclick="Calendly.initPopupWidget({url: '{{ .Params.event.calendly_url }}&hide_event_type_details=1'});return false;">Register Now</a>
+                        <!-- Calendly link widget end -->
+                    </div>
                 </div>
                 {{ .Content }}
-            </div>
-            <div class="w-full order-first md:order-last md:w-6/12 lg:w-4/12 mx-auto">
-                <h3 class="text-center">Registration</h3>
-                <!-- Calendly inline widget begin -->
-
-                <div id="calendly-widget" class="calendly-inline-widget" data-url="{{ .Params.event.calendly_url }}&hide_event_type_details=1&primary_color=512668"></div>
-
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-
-                <!-- Calendly inline widget end -->
             </div>
         </div>
     </div>
