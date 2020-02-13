@@ -146,7 +146,6 @@ $(function() {
     // This click handler will determine which checkboxes are selected
     // and then provide them to the filter event function to filter the events.
     $("#eventFilter input[type='checkbox']").click(function() {
-        console.log("handling change");
         getFilterValuesAndFilterList();
     });
 });
