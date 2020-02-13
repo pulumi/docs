@@ -1,0 +1,15 @@
+{
+    "name": "pulumify",
+    "devDependencies": {
+        "@types/node": "^12.7.2",
+        "@types/tar": "^4.0.3",
+        "@types/tmp": "^0.1.0"
+    },
+    "dependencies": {
+        "@pulumi/aws": "^0.18.27",
+        "@pulumi/awsx": "^0.19.1",
+        "@pulumi/pulumi": "^0.17.28",
+        "tar": "^6.0.1",
+        "tmp": "^0.1.0"
+    }
+}

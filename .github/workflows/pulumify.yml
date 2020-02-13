@@ -1,0 +1,28 @@
+name: Pulumify
+on: [pull_request, delete]
+jobs:
+  updateLivePreview:
+    name: Update Live Preview
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 10
+    - run: |
+        curl -L https://github.com/gohugoio/hugo/releases/download/v0.55.4/hugo_extended_0.55.4_Linux-64bit.deb -o hugo.deb
+        sudo dpkg -i hugo.deb
+        curl -fsSL https://get.pulumi.com | sh
+        export PATH="$PATH:$HOME/.pulumi/bin"
+        make ensure
+        hugo --buildFuture -e $GITHUB_SHA
+        cd pulumify
+        yarn install
+        ./pulumify.sh
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+        PULUMIFY_ROOT: public
+        PULUMIFY_ORGANIZATION: pulumi
