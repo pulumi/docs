@@ -1,6 +1,6 @@
 ---
 # Name of the event.
-title: "DevOpsDays Madrid"
+title: "Devopsdays Madrid"
 
 # Events with external registrations should not be indexed
 # and have redirect to the external registration page.
