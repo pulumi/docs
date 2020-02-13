@@ -10,7 +10,7 @@ tags:
     - "step functions"
 ---
 
-AWS Step Functions let you build applications by connecting AWS services. We'll go into the details of creating a lambda function, IAM roles and policies, and creating a workflow. Once we have the example deployed, we'll walk through the process of adding another function and step to the workflow. Included in the walkthrough is a discussion of one of the aspects of the Pulumi programming model. The goal of this article is to provide a foundation for building your application using serverless workflows.
+[AWS Step Functions](https://aws.amazon.com/step-functions/) lets you build applications by connecting AWS services. Daisy-chaining steps into a workflow simplifies application development by creating a state machine diagram which shows how services are connected to each other in your application. We'll go into the details of creating a lambda function, IAM roles and policies, and creating a workflow. Once we have the example deployed, we'll walk through the process of adding another function and step to the workflow. Included in the walkthrough is a discussion of one of the aspects of the Pulumi programming model. The goal of this article is to provide a foundation for building your application using serverless workflows.
 
 <!--more-->
 
@@ -24,7 +24,7 @@ $ source venv/bin/activate
 $ pip3 install -r requirements.txt
 ```
 
-Before we run the example, let’s look at the code. A step function is made up of a lambda function and a state machine that runs the function. Both the lambda and the state machine require an [IAM execution role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) and [policy](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) to access AWS services and resources. The `iam.py` module establishes the roles and policies and the AWS region, which are imported in `__main__,py`.
+Before we run the example, let’s look at the code. A step function is made up of a lambda function and a state machine that runs the function. We first need to define the permissions for the code. Both the lambda and the state machine require an [IAM execution role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) and [IAM access policy](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) to access AWS services and resources. The `iam.py` module establishes the roles and policies and the AWS region, which are imported in `__main__,py`.
 
 The lambda returns “Hello world!”  when called.  Note that the handler is the name of the module, `hello`, and the name of the function, `handler`.
 
@@ -87,7 +87,7 @@ Do you want to perform this update?
   details
 ```
 
-Select `yes` to run the example, but note that the function doesn’t specify where to return `Hello world!`. We can execute the function from the AWS cli,  but to see how it works, we’ll need to launch the  [AWS Conslole](https://console.aws.amazon.com/states/home#/statemachines/).
+Select `yes` to run the example, but note that the function doesn’t specify where to return `Hello world!`. We can execute the function from the AWS cli,  but to see how it works, we’ll need to launch the  [AWS Console](https://console.aws.amazon.com/states/home#/statemachines/).
 
 Call the function first.
 
@@ -121,7 +121,7 @@ We will also need to import `Output` from pulumi along with the other imports. W
 from pulumi import Output
 ```
 
-Next, add the new lambda function. Note that we can reuse the same IAM role and policy we use in the `hello_world_fn` function.
+Next, add the new lambda function, `nice_fn`. Note that we can reuse the same IAM role and policy we use in the `hello_world_fn` function.
 
 ```python
 nice_fn = lambda_.Function('niceFunction',
