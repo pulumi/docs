@@ -21,9 +21,9 @@ module.exports = {
             // Specify the paths to all of the template files in your project
             content: [ "./layouts/**/*.html" ],
             // Whitelist HubSpot specific classes so they don't get removed.
-            whitelist: ["supported-cicd-platforms"],
-            whitelistPatterns: [/^hs-/, /^highlight$/],
-            whitelistPatternsChildren: [/^hs-/, /^highlight$/],
+            whitelist: ["supported-cicd-platforms", ":not"],
+            whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/,  /^copy-/],
+            whitelistPatternsChildren: [/^hs-/, /^highlight$/, /^pagination$/, /^code-/,  /^copy-/],
             // Extract the default tailwind classes.
             defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
         }),
