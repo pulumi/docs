@@ -1,36 +1,4 @@
 $(function() {
-    var queryParams = window.location;
-
-    /**
-     * This function returns an object of the query params key/value
-     * from the current URL.
-     *
-     */
-    function getQueryParams() {
-        var url = window.location.href;
-        var query = url.split("?")[1];
-
-        // If there are no query params return an empty object.
-        if (query === undefined) {
-            return {};
-        }
-
-        // Split the params into an array.
-        var queryParts = query.split("&");
-
-        // Assign the query parts to a new object.
-        var queryObject = {};
-        for (let i = 0; i < queryParts.length; i++) {
-            var part = queryParts[i].split("=");
-            var key = part[0];
-            var value = part[1].toLowerCase();
-
-            queryObject[key] = value;
-        }
-
-        return queryObject;
-    }
-
     /**
      * This function creates a checkbox from a given text string.
      * It will set the label and the value to whatever the input string is.
@@ -38,7 +6,7 @@ $(function() {
      * @param {string} text The label and value of the checkbox
      */
     function createCheckbox(text) {
-        var queryParameters = getQueryParams();
+        var filterValue = getQueryVariable("filter");
 
         var container = document.createElement("div");
         container.className = "my-2 uppercase flex items-center";
@@ -52,8 +20,8 @@ $(function() {
         // If the filter query parameter is available use it to determine
         // what checkboxes should initially be checked. If the query param
         // is not set, check all the boxes.
-        if (queryParameters.filter !== undefined) {
-            var shouldBeChecked = queryParameters.filter.split(",").indexOf(checkbox.value) > -1;
+        if (filterValue !== undefined) {
+            var shouldBeChecked = filterValue.split(",").indexOf(checkbox.value) > -1;
             if (shouldBeChecked) {
                 checkbox.setAttribute("checked", true);
             }
@@ -73,7 +41,7 @@ $(function() {
     }
 
     // This function grabs the filter checkboxes, loops through them to
-    // determin what is checked, and then filters the events.
+    // determine what is checked, and then filters the events.
     function getFilterValuesAndFilterList() {
         var inputs = $("input[type='checkbox']");
         var chosenInputs = [];
@@ -88,10 +56,6 @@ $(function() {
 
         filterEventList(chosenInputs);
     }
-
-    // This click handler will determine which checkboxes are selected
-    // and then provide them to the filter event function to filter the events.
-    $("#eventFilter input[type='checkbox']").on("change", getFilterValuesAndFilterList);
 
     /**
      * This function checks to see if two arrays have any value in common. This
@@ -176,5 +140,13 @@ $(function() {
 
     }
 
+    // Filter the events based on the filter query parameter.
     getFilterValuesAndFilterList();
+
+    // This click handler will determine which checkboxes are selected
+    // and then provide them to the filter event function to filter the events.
+    $("#eventFilter input[type='checkbox']").click(function() {
+        console.log("handling change");
+        getFilterValuesAndFilterList();
+    });
 });
