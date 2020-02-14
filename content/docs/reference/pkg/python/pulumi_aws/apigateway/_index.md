@@ -441,7 +441,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.AwaitableGetRestApiResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">AwaitableGetRestApiResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">root_resource_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.AwaitableGetRestApiResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">AwaitableGetRestApiResult</code><span class="sig-paren">(</span><em class="sig-param">api_key_source=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">binary_media_types=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">endpoint_configurations=None</em>, <em class="sig-param">execution_arn=None</em>, <em class="sig-param">minimum_compression_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">root_resource_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.AwaitableGetRestApiResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1377,12 +1377,66 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.GetRestApiResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">GetRestApiResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">root_resource_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">GetRestApiResult</code><span class="sig-paren">(</span><em class="sig-param">api_key_source=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">binary_media_types=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">endpoint_configurations=None</em>, <em class="sig-param">execution_arn=None</em>, <em class="sig-param">minimum_compression_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">root_resource_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRestApi.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetRestApiResult.api_key_source">
+<code class="sig-name descname">api_key_source</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult.api_key_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>The source of the API key for requests.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetRestApiResult.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the REST API.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetRestApiResult.binary_media_types">
+<code class="sig-name descname">binary_media_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult.binary_media_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of binary media types supported by the REST API.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetRestApiResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the REST API.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetRestApiResult.endpoint_configurations">
+<code class="sig-name descname">endpoint_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult.endpoint_configurations" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint configuration of this RestApi showing the endpoint types of the API.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetRestApiResult.execution_arn">
+<code class="sig-name descname">execution_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult.execution_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The execution ARN part to be used in <cite>``lambda_permission`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code> when allowing API Gateway to invoke a Lambda function, e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j</span></code>, which can be concatenated with allowed stage, method and resource path.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetRestApiResult.minimum_compression_size">
+<code class="sig-name descname">minimum_compression_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult.minimum_compression_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum response size to compress for the REST API.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetRestApiResult.policy">
+<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult.policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>JSON formatted policy document that controls access to the API Gateway.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.GetRestApiResult.root_resource_id">
 <code class="sig-name descname">root_resource_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult.root_resource_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set to the ID of the API Gateway Resource on the found REST API where the route matches ‘/’.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetRestApiResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3500,15 +3554,14 @@ To fetch the Resource, you must provide the REST API id as well as the full path
 
 <dl class="function">
 <dt id="pulumi_aws.apigateway.get_rest_api">
-<code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">get_rest_api</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_rest_api" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">get_rest_api</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_rest_api" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the id and root_resource_id of a REST API in
 API Gateway. To fetch the REST API you must provide a name to match against. 
 As there is no unique name constraint on REST APIs this data source will 
 error if there is more than one match.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the REST API to look up. If no REST API is found with this name, an error will be returned. 
-If multiple REST APIs are found with this name, an error will be returned.</p>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the REST API to look up. If no REST API is found with this name, an error will be returned. If multiple REST APIs are found with this name, an error will be returned.</p>
 </dd>
 </dl>
 <blockquote>
