@@ -103,7 +103,7 @@ Clicking on the `Name` displays the step details, which include the input and ou
 
 ![AWS Severless Console  with 1 step function](sf-console-2.png)
 
-The AWS console provides a graph of your workflow and the details of each step. Clicking on `Output` shows “Hello world” meaning that that the call to the lambda function was successful.
+The AWS console provides a graph of your workflow and the details of each step. Clicking on `Output` shows “Hello world” meaning that the call to the lambda function was successful.
 
 ## Add another step
 
