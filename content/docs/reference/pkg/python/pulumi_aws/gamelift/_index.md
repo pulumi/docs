@@ -279,7 +279,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.gamelift.Fleet">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.gamelift.</code><code class="sig-name descname">Fleet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">build_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ec2_inbound_permissions=None</em>, <em class="sig-param">ec2_instance_type=None</em>, <em class="sig-param">fleet_type=None</em>, <em class="sig-param">instance_role_arn=None</em>, <em class="sig-param">metric_groups=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">new_game_session_protection_policy=None</em>, <em class="sig-param">resource_creation_limit_policy=None</em>, <em class="sig-param">runtime_configuration=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.gamelift.</code><code class="sig-name descname">Fleet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">build_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ec2_inbound_permissions=None</em>, <em class="sig-param">ec2_instance_type=None</em>, <em class="sig-param">fleet_type=None</em>, <em class="sig-param">instance_role_arn=None</em>, <em class="sig-param">metric_groups=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">new_game_session_protection_policy=None</em>, <em class="sig-param">resource_creation_limit_policy=None</em>, <em class="sig-param">runtime_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Gamelift Fleet resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -297,6 +297,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>new_game_session_protection_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Game session protection policy to apply to all instances in this fleet. e.g. <code class="docutils literal notranslate"><span class="pre">FullProtection</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">NoProtection</span></code>.</p></li>
 <li><p><strong>resource_creation_limit_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.</p></li>
 <li><p><strong>runtime_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Instructions for launching server processes on each instance in the fleet. See below.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -426,9 +427,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.gamelift.Fleet.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.gamelift.Fleet.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">build_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ec2_inbound_permissions=None</em>, <em class="sig-param">ec2_instance_type=None</em>, <em class="sig-param">fleet_type=None</em>, <em class="sig-param">instance_role_arn=None</em>, <em class="sig-param">log_paths=None</em>, <em class="sig-param">metric_groups=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">new_game_session_protection_policy=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">resource_creation_limit_policy=None</em>, <em class="sig-param">runtime_configuration=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">build_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ec2_inbound_permissions=None</em>, <em class="sig-param">ec2_instance_type=None</em>, <em class="sig-param">fleet_type=None</em>, <em class="sig-param">instance_role_arn=None</em>, <em class="sig-param">log_paths=None</em>, <em class="sig-param">metric_groups=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">new_game_session_protection_policy=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">resource_creation_limit_policy=None</em>, <em class="sig-param">runtime_configuration=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Fleet resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -450,6 +457,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Operating system of the fleet’s computing resources.</p></li>
 <li><p><strong>resource_creation_limit_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.</p></li>
 <li><p><strong>runtime_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Instructions for launching server processes on each instance in the fleet. See below.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 </ul>
 </dd>
 </dl>
