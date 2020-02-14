@@ -1,6 +1,6 @@
 ---
-title: Azure
-meta_desc: This page provides an overview of the Azure Provider for Pulumi.
+title: Azure Provider
+meta_desc: The Azure provider for Pulumi can be used to provision any of the cloud resources available in Azure via Azure Resource Manager (ARM).
 menu:
   intro:
     parent: cloud-providers
@@ -45,7 +45,7 @@ const resourceGroupName = new azure.core.ResourceGroup("my-group", {
 });
 ```
 
-You can find additional examples of using Azure in [the Pulumi examples repo](https://github.com/pulumi/examples).
+Above is one example of an Azure resource group using Pulumi. You can find additional examples in [the Pulumi examples repo](https://github.com/pulumi/examples).
 
 ## Libraries
 
@@ -72,3 +72,5 @@ The Azure provider accepts the following configuration settings.  These can be p
 * `subscriptionId`: (Optional) The subscription ID to use. It can also be sourced from the `ARM_SUBSCRIPTION_ID` environment variable.
 * `tenantId`: (Optional) The tenant ID to use. It can also be sourced from the `ARM_TENANT_ID` environment variable.
 * `useMsi`: (Optional) Set to true to authenticate using managed service identity. It can also be sourced from the `ARM_USE_MSI` environment variable.
+
+For Pulumi Azure support and troubleshooting, click the links in the sidebar on the left of the page.
