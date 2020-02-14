@@ -17,14 +17,18 @@ module.exports = {
         }),
 
         // PurgeCSS to remove unused classes for better page speed.
+        // Docs: https://purgecss.com/plugins/postcss.html
         require("@fullhuman/postcss-purgecss")({
             // Specify the paths to all of the template files in your project
             content: [ "./layouts/**/*.html" ],
             // Whitelist HubSpot specific classes so they don't get removed.
-            whitelist: ["supported-cicd-platforms", ":not"],
-            whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/,  /^copy-/],
-            whitelistPatternsChildren: [/^hs-/, /^highlight$/, /^pagination$/, /^code-/,  /^copy-/],
-            // Extract the default tailwind classes.
+            whitelist: ["supported-cicd-platforms", ":not", "md:max-w-lg", "blink", "typing", "char"],
+            whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/],
+            whitelistPatternsChildren: [/^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/],
+            // We need to extract the Tailwind screen size selectors (e.g. sm, md, lg)
+            // so that we do not strip them out. As long as a class name appears in the HTML
+            // in its entirety, Purgecss will not remove it.
+            // Ex. https://tailwindcss.com/docs/controlling-file-size/#writing-purgeable-html
             defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
         }),
 
