@@ -20,7 +20,19 @@ module.exports = {
         // Docs: https://purgecss.com/plugins/postcss.html
         require("@fullhuman/postcss-purgecss")({
             // Specify the paths to all of the template files in your project
-            content: [ "./layouts/**/*.html" ],
+            content: [
+                "./layouts/**/*.html",
+                // Some of our scripts reference CSS classes.
+                "./assets/js/**/*.js",
+                // Look for CSS classes in our markdown content. We use `glob` explicitly here so we can ignore the
+                // files for the API docs in ./content/docs/reference/pkg/**/* because it includes a large number of
+                // files that significantly impacts build time (~25 seconds vs. many minutes). Instead, we'll only look
+                // for CSS classes in a single package (the Pulumi SDK package) for nodejs and python, which should
+                // include all classes used in the docs for any other package.
+                ...require("glob").sync("./content/**/*.md", { ignore: "./content/docs/reference/pkg/**/*" }),
+                "./content/docs/reference/pkg/nodejs/pulumi/pulumi/**/*.md",
+                "./content/docs/reference/pkg/python/pulumi/**/*.md",
+            ],
             // Whitelist HubSpot specific classes so they don't get removed.
             whitelist: ["supported-cicd-platforms", ":not", "md:max-w-lg", "blink", "typing", "char"],
             whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/],
@@ -29,7 +41,7 @@ module.exports = {
             // so that we do not strip them out. As long as a class name appears in the HTML
             // in its entirety, Purgecss will not remove it.
             // Ex. https://tailwindcss.com/docs/controlling-file-size/#writing-purgeable-html
-            defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+            defaultExtractor: content => content.match(/[\w-/:]*[\w-/:]/g) || [],
         }),
 
         // Minify the CSS even further. (It works!)
