@@ -18,9 +18,9 @@
                 <h2 id="event-list-heading" class="mb-8">All Upcoming Events</h2>
                 <ul id="event-list" class="list-none md:flex md:flex-wrap pl-0">
                     {{ $events := (where $.Pages "Type" "events") }}
-                    {{ range (sort $events ".Params.event.start_date") }}
+                    {{ range $index, $event := (sort $events ".Params.event.start_date") }}
                         <li class="w-full m-0 p-0" data-event-type='{{ delimit .Params.event.type "," }}'>
-                            <article class="pb-16 mb-12 border-b border-gray-300">
+                            <article class="{{ if lt (add $index 1) (len $events) }} pb-16 mb-12 border-b border-gray-300 {{ end }}">
                                 <h3>
                                     {{ if .Params.url_slug }}
                                         <a class="text-2xl" href="/events/{{ .Params.url_slug }}/">
@@ -83,4 +83,6 @@
             </div>
         </div>
     </div>
+
+    {{ partial "learnmore-contactus.html" . }}
 {{ end }}
