@@ -83,7 +83,7 @@ configurations and environments."
 
 > --- Ernesto Mendoza, CTO
 
-Menta Network has also standardized on [GitLab](https://gitlab.com/) for managing their
+Menta Network has also standardized on [GitLab](https://about.gitlab.com/) for managing their
 entire development lifecycle, container registry and continuous integration / continuous
 deployment (CI/CD) process. Pulumi provided a unique alternative that allowed engineers to
 define both their load testing application and associated infrastructure in the same
