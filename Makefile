@@ -40,7 +40,7 @@ generate:
 build:
 	@echo -e "\033[0;32mBUILD ($(HUGO_ENVIRONMENT)):\033[0m"
 	yarn lint-markdown
-	hugo
+	hugo --minify
 	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
 	rm -rf ./public/docs/search-data
 
