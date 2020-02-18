@@ -56,7 +56,7 @@ new PolicyPack("aws", {
                 instances.forEach(instance => {
                     totalMonthlyAmount += getMonthlyOnDemandPrice(instance.instanceType);
                 });
- 
+
                 if (totalMonthlyAmount > maxMonthlyCost) {
                     reportViolation(`Estimated monthly cost [${formatAmount(totalMonthlyAmount)}] exceeds [${formatAmount(maxMonthlyCost)}].`);
                 }
@@ -65,21 +65,21 @@ new PolicyPack("aws", {
     ],
 });
 ```
- 
+
 Setting the maximum amount and calculating the monthly on-demand price for all `ec2` instances is aided by two helper classes `config` and `utils`. You can set variables such as `maxMonthlyCost` in `config.ts`. The utils can calculate costs from either a static file of prices, as demonstrated in the example, or through the Amazon Pricing API. Because we’re using a modern programming language, we can go beyond what a policy encoded in YAML or JSON can do.
- 
+
 config.ts
- 
+
 ```ts
 export const maxMonthlyCost = 500;
 ```
- 
+
 utils.ts
- 
+
 ```ts
 import * as fs from "fs";
 import * as zlib from "zlib";
- 
+
 /**
 * Cost-related helpers
 */
@@ -93,12 +93,12 @@ export const getPricingData = function (): (any) {
    const localPricingData = zlib.gunzipSync(localPricingDataGz);
    return JSON.parse(localPricingData.toString());
 }
- 
+
 export const getMonthlyOnDemandPrice = function (instanceType: string): (number) {
    const pricingData: any = getPricingData();
    const pricingDataProducts: any = pricingData["products"];
    const pricingDataTermsOnDemand: any = pricingData["terms"]["OnDemand"];
- 
+
    const arrValues = Array.from(Object.values(pricingDataProducts));
    const skus: any[] = arrValues.filter((it: any) =>
        it["attributes"]["instanceType"] === instanceType
@@ -110,10 +110,10 @@ export const getMonthlyOnDemandPrice = function (instanceType: string): (number)
        console.log("Shouldn't find more than one sku. Continuing with first...");
    }
    const sku = skus[0]["sku"];
- 
+
    const skuCode = `${sku}.JRTCKXETXF`; // JRTCKXETXF = On demand offer term code
    const skuPricing: any = pricingDataTermsOnDemand[sku][skuCode];
- 
+
    const priceRateCode = `${skuCode}.6YS6EN2CT7`; // 6YS6EN2CT7 = Price per hour rate code
    const priceDimension: any = skuPricing["priceDimensions"][priceRateCode];
  
@@ -121,7 +121,7 @@ export const getMonthlyOnDemandPrice = function (instanceType: string): (number)
    const costPerMonth = pricePerHour * 24 * 30;
    return costPerMonth;
 }
- 
+
 export const formatAmount = function (amount: number): (string) {
    return '$' + amount.toFixed(2);
 }
