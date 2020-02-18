@@ -2,18 +2,18 @@
 title: "Manage Any Infrastructure with Policy as Code"
 date: 2020-02-18
 meta_desc: "Manage AWS, Azure, GCP, and Kubernetes with Policy as Code"
-meta_image: meta.png
+meta_image: crossguard.png
 authors:
-    - sophia-parafina
+   - sophia-parafina
 tags:
-    - "Policy as Code"
-    - "AWS"
-    - "Azure"
-    - "GCP"
-    - "Kubernetes"
+   - "Policy as Code"
+   - "AWS"
+   - "Azure"
+   - "GCP"
+   - "Kubernetes"
 ---
-
-In an  [earlier article]({{< relref "/blog/getting-started-with-pac" >}}), we introduced examples of Policy as Code to prevent two of the most common causes of data breaches. Policies are the guardrails of infrastructure. They control access, set limits, and manage how infrastructure operates. In many systems, policies are created by clicking on a GUI, making it difficult to replicate or version. Pulumi implements policy by writing it in a Typescript, which ensures that you can write policies using software development practices such as automated testing, deployment, and version control.
+ 
+In an  [earlier article]({{< relref "/blog/getting-started-with-pac" >}}), we introduced examples of Policy as Code to prevent two of the most common causes of data breaches. Policies are the guardrails of infrastructure. They control access, set limits, and manage how infrastructure operates. In many systems, policies are created by clicking on a GUI, making it difficult to replicate or version. Pulumi implements policy by writing it in Typescript, which ensures that you can write policies using software development practices such as automated testing, deployment, and version control.
 
 <!--more-->
 
@@ -21,14 +21,14 @@ In an  [earlier article]({{< relref "/blog/getting-started-with-pac" >}}), we in
 
 > “My policy kit doesn’t need to just be about bits on disk and packages, and files, and my SSH config, and my firewall rules, and my network rules. It can be about my cloud instances and how they’re actually configured and set up at the API level. Ultimately, there’s an API somewhere, and I have a bunch of resources, and I want to set some policies about them.”
 
-Pulumi released the CrossGuard preview last fall. CrossGuard lets you verify, enforce, and apply custom policies on resources in your infrastructure. You can run policies against any Pulumi stack, which means that you can apply policies written in Typescript to stacks written in any language supported by Pulumi such as Python. Policy Packs are bundles of policies, and when you run `pulumi up`, CrossGuard evaluates every resource in the stack against the Policy Pack. CrossGuard works in AWS, Azure, Google Cloud Platform, and Kubernetes.
+Pulumi released the CrossGuard preview last fall. CrossGuard lets you verify, enforce, and apply custom policies on resources in your infrastructure. You can run policies against any Pulumi stack, which means that you can apply policies written in TypeScript to stacks written in any language supported by Pulumi such as Python, Go, and .NET languages. Policy Packs are bundles of policies, and when you run `pulumi up`, CrossGuard evaluates every resource in the stack against the Policy Pack. CrossGuard works in AWS, Azure, Google Cloud Platform, and Kubernetes.
 
 The CrossGuard preview provides the following key features:
 
- 1. [Policy SDK](https://github.com/pulumi/pulumi-policy) for coding custom policies using TypeScript or Javascript
- 2. [Running a Policy Pack locally](https://www.pulumi.com/docs/get-started/crossguard/authoring-a-policy-pack/#testing-the-policy-pack-locally) to speed up development and testing of policies. Validate infrastructure before deployment.
- 3. [AWSGuard](https://github.com/pulumi/pulumi-policy-aws) is a ready-to-apply playbook for enforcing AWS best practices for security, reliability, and cost
- 4. [Apply a Policy Pack](https://www.pulumi.com/docs/get-started/crossguard/enforcing-a-policy-pack/) across an organization to validate all the infrastructure deployed
+1. [Policy SDK](https://github.com/pulumi/pulumi-policy) for coding custom policies using TypeScript or Javascript
+2. [Running a Policy Pack locally]({{< relref "docs/get-started/crossguard/authoring-a-policy-pack#testing-the-policy-pack-locally" >}}) to speed up development and testing of policies. Validate infrastructure before deployment.
+3. [AWSGuard](https://github.com/pulumi/pulumi-policy-aws) is a ready-to-apply playbook for enforcing AWS best practices for security, reliability, and cost
+4. [Apply a Policy Pack]({{ < relref “docs/get-started/crossguard/enforcing-a-policy-pack” >}}) across an organization to validate all the infrastructure deployed
 
 CrossGuard ensures that you can enforce best practices for cost, compliance, security, and team practices for a single project or across your organization. Let’s look at how we can apply policies to infrastructure deployed across cloud providers and Kubernetes.
 
@@ -40,105 +40,90 @@ The example below shows how the policy finds all the instances and validates the
 
 ```ts
 import * as aws from "@pulumi/aws";
-import { validateTypedResource, Policies, } from "@pulumi/policy";
-import { isType, requireTags, getMonthlyOnDemandPrice, formatAmount, } from "./utils";
-import { maxSubnetPrefixLength, maxMonthlyCost } from "./config";
+import { PolicyPack, validateStackResourcesOfType } from "@pulumi/policy";
+import { getMonthlyOnDemandPrice, formatAmount } from "./utils";
+import { maxMonthlyCost } from "./config";
 
-export const computePolicies: Policies = [
-    {
-        name: "instance-cost-estimate",
-        description: `Limit instance costs to $${maxMonthlyCost}.`,
-        enforcementLevel: "mandatory",
-        validateStack: (args, reportViolation) => {
-            // Find _all_ instances
-            const instances = args.resources.filter(it => isType(it.type, aws.ec2.Instance));
-
-            // Aggregate costs
-            let totalMonthlyAmount = 0;
-            instances.forEach(it => {
-                totalMonthlyAmount += getMonthlyOnDemandPrice(it.props.instanceType);
-            });
-
-            if (totalMonthlyAmount > maxMonthlyCost) {
-                reportViolation(`Estimated monthly cost [${formatAmount(totalMonthlyAmount)}] exceeds [${formatAmount(maxMonthlyCost)}].`);
-            }
-        },
-    },
-];
-
+new PolicyPack("aws", {
+    policies: [
+        {
+            name: "instance-cost-estimate",
+            description: `Limit instance costs to $${maxMonthlyCost}.`,
+            enforcementLevel: "mandatory",
+            validateStack: validateStackResourcesOfType(aws.ec2.Instance, (instances, args, reportViolation) => {
+                // Aggregate costs.
+                let totalMonthlyAmount = 0;
+                instances.forEach(instance => {
+                    totalMonthlyAmount += getMonthlyOnDemandPrice(instance.instanceType);
+                });
+ 
+                if (totalMonthlyAmount > maxMonthlyCost) {
+                    reportViolation(`Estimated monthly cost [${formatAmount(totalMonthlyAmount)}] exceeds [${formatAmount(maxMonthlyCost)}].`);
+                }
+            }),
+        }
+    ],
+});
 ```
-
+ 
 Setting the maximum amount and calculating the monthly on-demand price for all `ec2` instances is aided by two helper classes `config` and `utils`. You can set variables such as `maxMonthlyCost` in `config.ts`. The utils can calculate costs from either a static file of prices, as demonstrated in the example, or through the Amazon Pricing API. Because we’re using a modern programming language, we can go beyond what a policy encoded in YAML or JSON can do.
-
+ 
 config.ts
-
+ 
 ```ts
 export const maxMonthlyCost = 500;
 ```
-
+ 
 utils.ts
-
+ 
 ```ts
-import { ReportViolation, } from "@pulumi/policy";
 import * as fs from "fs";
 import * as zlib from "zlib";
-
-export const requireTags = function (tags: any, tagsToCheck: string[], reportViolation: ReportViolation) {
-    for (let tagName of tagsToCheck) {
-        if ((tags || {})[tagName] === undefined) {
-            reportViolation(`Tag [${tagName}] must be defined.`);
-        }
-    }
-};
-
-export const isType = function (actual: string, expected: any): boolean {
-    return actual === (<any>expected)["__pulumiType"];
-}
-
+ 
 /**
- * Cost-related helpers
- */
+* Cost-related helpers
+*/
 export const getPricingData = function (): (any) {
-    const localFilePath = "./offers-ec2-us-east-1.json.gz";
-    if (!fs.existsSync(localFilePath)) {
-        console.log("Local pricing file is missing - run `make bootstrap` and try again. Exiting...");
-        throw new Error();
-    }
-    const localPricingDataGz = fs.readFileSync(localFilePath);
-    const localPricingData = zlib.gunzipSync(localPricingDataGz);
-    return JSON.parse(localPricingData.toString());
+   const localFilePath = "./offers-ec2-us-east-1.json.gz";
+   if (!fs.existsSync(localFilePath)) {
+       console.log("Local pricing file is missing - run `make bootstrap` and try again. Exiting...");
+       throw new Error();
+   }
+   const localPricingDataGz = fs.readFileSync(localFilePath);
+   const localPricingData = zlib.gunzipSync(localPricingDataGz);
+   return JSON.parse(localPricingData.toString());
 }
-
+ 
 export const getMonthlyOnDemandPrice = function (instanceType: string): (number) {
-    const pricingData: any = getPricingData();
-    const pricingDataProducts: any = pricingData["products"];
-    const pricingDataTermsOnDemand: any = pricingData["terms"]["OnDemand"];
-
-    const arrValues = Array.from(Object.values(pricingDataProducts));
-    const skus: any[] = arrValues.filter((it: any) =>
-        it["attributes"]["instanceType"] === instanceType
-        && it["attributes"]["operatingSystem"] === "Linux"  // TODO: use AMI to determine this
-        && it["attributes"]["preInstalledSw"] === "NA"
-        && it["attributes"]["usagetype"] === `BoxUsage:${instanceType}`
-    );
-    if (skus.length > 1) {
-        console.log("Shouldn't find more than one sku. Continuing with first...");
-    }
-    const sku = skus[0]["sku"];
-
-    const skuCode = `${sku}.JRTCKXETXF`; // JRTCKXETXF = On demand offer term code
-    const skuPricing: any = pricingDataTermsOnDemand[sku][skuCode];
-
-    const priceRateCode = `${skuCode}.6YS6EN2CT7`; // 6YS6EN2CT7 = Price per hour rate code
-    const priceDimension: any = skuPricing["priceDimensions"][priceRateCode];
-
-    const pricePerHour = Number(priceDimension["pricePerUnit"]["USD"]);
-    const costPerMonth = pricePerHour * 24 * 30;
-    return costPerMonth;
+   const pricingData: any = getPricingData();
+   const pricingDataProducts: any = pricingData["products"];
+   const pricingDataTermsOnDemand: any = pricingData["terms"]["OnDemand"];
+ 
+   const arrValues = Array.from(Object.values(pricingDataProducts));
+   const skus: any[] = arrValues.filter((it: any) =>
+       it["attributes"]["instanceType"] === instanceType
+       && it["attributes"]["operatingSystem"] === "Linux"  // TODO: use AMI to determine this
+       && it["attributes"]["preInstalledSw"] === "NA"
+       && it["attributes"]["usagetype"] === `BoxUsage:${instanceType}`
+   );
+   if (skus.length > 1) {
+       console.log("Shouldn't find more than one sku. Continuing with first...");
+   }
+   const sku = skus[0]["sku"];
+ 
+   const skuCode = `${sku}.JRTCKXETXF`; // JRTCKXETXF = On demand offer term code
+   const skuPricing: any = pricingDataTermsOnDemand[sku][skuCode];
+ 
+   const priceRateCode = `${skuCode}.6YS6EN2CT7`; // 6YS6EN2CT7 = Price per hour rate code
+   const priceDimension: any = skuPricing["priceDimensions"][priceRateCode];
+ 
+   const pricePerHour = Number(priceDimension["pricePerUnit"]["USD"]);
+   const costPerMonth = pricePerHour * 24 * 30;
+   return costPerMonth;
 }
-
+ 
 export const formatAmount = function (amount: number): (string) {
-    return '$' + amount.toFixed(2);
+   return '$' + amount.toFixed(2);
 }
 
 ```
@@ -152,21 +137,21 @@ Azure Cloud Computing Services provides a list of services such as blockchain, m
 ```ts
 import * as azure from "@pulumi/azure";
 import * as pulumi from "@pulumi/pulumi";
-import { validateTypedResource, PolicyPack, ReportViolation, ResourceValidationArgs, } from "@pulumi/policy";
+import { PolicyPack, ReportViolation, ResourceValidationArgs, } from "@pulumi/policy";
 
 const policies = new PolicyPack("azure", {
-    policies: [
-        {
-            name: "prohibited-iot",
-            description: "Use of IOT services is prohibited.",
-            enforcementLevel: "mandatory",
-            validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
-                if (args.type.startsWith("azure:iot")) {
-                    reportViolation(`Use of [${args.type}] is prohibited.`);
-                }
-            },
-        },
-    ],
+   policies: [
+       {
+           name: "prohibited-iot",
+           description: "Use of IOT services is prohibited.",
+           enforcementLevel: "mandatory",
+           validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
+               if (args.type.startsWith("azure:iot")) {
+                   reportViolation(`Use of [${args.type}] is prohibited.`);
+               }
+           },
+       },
+   ],
 });
 ```
 
@@ -178,37 +163,36 @@ It’s a best practice to control ingress and egress of resources and not expose
 
 ```ts
 import * as gcp from "@pulumi/gcp";
-import { validateTypedResource, PolicyPack, ReportViolation, ResourceValidationArgs, } from "@pulumi/policy";
+import { validateResourceofType, PolicyPack, } from "@pulumi/policy";
 
 const policies = new PolicyPack("gcp", {
-    policies: [
-        {
-            name: "discouraged-gcp-public-ip-address",
-            description: "Associating public IP addresses is discouraged.",
-            enforcementLevel: "advisory",
-            validateResource: validateTypedResource(gcp.compute.Instance, (it, _, reportViolation) => {
-                const publicIps = it.networkInterfaces.find(net => net.accessConfigs !== undefined);
-                if (publicIps !== undefined) {
-                    reportViolation("`accessConfigs` should be undefined in most cases.");
-                }
-            }),
-        },
-        {
-            name: "prohibited-public-internet",
-            description: "Ingress rules with public internet access are prohibited.",
-            enforcementLevel: "mandatory",
-            validateResource: validateTypedResource(gcp.compute.Firewall, (it, _, reportViolation) => {
-                const publicInternetRules = (it.sourceRanges || []).find(ranges =>
-                    ranges === "0.0.0.0/0"
-                );
-                if (publicInternetRules !== undefined) {
-                    reportViolation("`sourceRanges` should not be '0.0.0.0/0'");
-                }
-            }),
-        },
-    ],
+   policies: [
+       {
+           name: "discouraged-gcp-public-ip-address",
+           description: "Associating public IP addresses is discouraged.",
+           enforcementLevel: "advisory",
+           validateResource: validateResourceOfType(gcp.compute.Instance, (instance, _, reportViolation) => {
+               const publicIps = it.networkInterfaces.find(net => net.accessConfigs !== undefined);
+               if (publicIps !== undefined) {
+                   reportViolation("`accessConfigs` should be undefined in most cases.");
+               }
+           }),
+       },
+       {
+           name: "prohibited-public-internet",
+           description: "Ingress rules with public internet access are prohibited.",
+           enforcementLevel: "mandatory",
+           validateResource: validateResourceOfType(gcp.compute.Firewall, (firewall, _, reportViolation) => {
+               const publicInternetRules = (it.sourceRanges || []).find(ranges =>
+                   ranges === "0.0.0.0/0"
+               );
+               if (publicInternetRules !== undefined) {
+                   reportViolation("`sourceRanges` should not be '0.0.0.0/0'");
+               }
+           }),
+       },
+   ],
 });
-
 
 ```
 
@@ -220,33 +204,30 @@ During development, an application may use containers tagged `latest`. Given the
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
-import { PolicyPack, validateTypedResource } from "@pulumi/policy";
+import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
 
-// tslint:disable-next-line: no-unused-expression
-new PolicyPack("eks", {
+new PolicyPack("k8s", {
     policies: [
         {
             name: "pin-image-versions",
             description: "Images should be pinned to a specific version",
             enforcementLevel: "advisory",
-            validateResource: validateTypedResource(k8s.apps.v1.Deployment, (it, _, reportViolation) => {
-                if (it.spec === undefined || it.spec.template === undefined || it.spec.template.spec === undefined) { return; }
-                it.spec.template.spec.containers.forEach(it => {
-                    if (it.image !== undefined && it.image.endsWith(":latest")) {
+            validateResource: validateResourceOfType(k8s.apps.v1.Deployment, (deployment, _, reportViolation) => {
+                (deployment?.spec?.template?.spec?.containers || []).forEach(container => {
+                    if (container.image && container.image.endsWith(":latest")) {
                         reportViolation("Image version should not be 'latest'.");
                     }
-                });
+                })
             }),
         },
     ],
 });
-
 ```
 
 ## Conclusion
 
 Whether you deploy your infrastructure on AWS, Azure, GCP, or Kubernetes, Pulumi’s CrossGuard can help manage your infrastructure. We’ve shown four policies for controlling cost on AWS, ensuring that Azure infrastructure is compliant by allowing only approved resources, controlled access to and from VMs in Google Cloud Platform, and enforced best practices on Kubernetes by pinning container versions by tag. These policies work across many different resources because they use a real programming language that provides the ability to create policies that can use external data sources to determine costs, reuse the same policy on different providers, and allow us to see any violations, advisory or mandatory, before deployment. Learn more about policy as code:
 
-- [Running AWS IAM Access Analyzer at Deployment Time]({{< ref "/blog/aws-iam-access-analyzer-and-crossguard/index.md" >}})
-- [Enforcing Different Kinds of Policies for Cloud Resources]({{< ref "/blog/enforcing-different-kinds-of-policies-for-cloud-resources/index.md" >}})
-- [Getting Started With PaC]({{ ref "/blog/getting-started-with-pac/index.md" >}})
+- [Running AWS IAM Access Analyzer at Deployment Time]({{< relref "/blog/aws-iam-access-analyzer-and-crossguard" >}})
+- [Enforcing Different Kinds of Policies for Cloud Resources]({{< relref "/blog/enforcing-different-kinds-of-policies-for-cloud-resources" >}})
+- [Getting Started With PaC]({{< relref "/blog/getting-started-with-pac" >}})
