@@ -1,8 +1,8 @@
 ---
 title: Mercedes-Benz Research and Development
-type: page
-layout: case-study
-
+description: |
+    Learn more about how Mercedes-Benz Research and Development used Pulumi to bring their
+    application and infrastructure teams closer together.
 meta_desc: |
     Learn more about how Mercedes-Benz Research and Development used Pulumi to bring their
     application and infrastructure teams closer together.
