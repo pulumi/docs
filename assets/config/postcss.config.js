@@ -22,8 +22,10 @@ module.exports = {
             // Specify the paths to all of the template files in your project
             content: [
                 "./layouts/**/*.html",
+
                 // Some of our scripts reference CSS classes.
                 "./assets/js/**/*.js",
+
                 // Look for CSS classes in our markdown content. We use `glob` explicitly here so we can ignore the
                 // files for the API docs in ./content/docs/reference/pkg/**/* because it includes a large number of
                 // files that significantly impacts build time (~25 seconds vs. many minutes). Instead, we'll only look
@@ -33,10 +35,14 @@ module.exports = {
                 "./content/docs/reference/pkg/nodejs/pulumi/pulumi/**/*.md",
                 "./content/docs/reference/pkg/python/pulumi/**/*.md",
             ],
-            // Whitelist HubSpot specific classes so they don't get removed.
+
+            // Whitelist specific classes that were being removed.
             whitelist: ["supported-cicd-platforms", ":not", "md:max-w-lg", "blink", "typing", "char"],
+
+            // Whitelist custom parent selectors and their children.
             whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/],
             whitelistPatternsChildren: [/^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/],
+
             // We need to extract the Tailwind screen size selectors (e.g. sm, md, lg)
             // so that we do not strip them out. As long as a class name appears in the HTML
             // in its entirety, Purgecss will not remove it.
