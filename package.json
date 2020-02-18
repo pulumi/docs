@@ -11,6 +11,7 @@
     "typedoc": "^0.15.3"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.0.6",
     "autoprefixer": "^9.6.0",
     "cssnano": "^4.1.10",
     "js-yaml": "^3.13.1",
