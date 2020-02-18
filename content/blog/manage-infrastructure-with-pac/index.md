@@ -116,7 +116,7 @@ export const getMonthlyOnDemandPrice = function (instanceType: string): (number)
 
    const priceRateCode = `${skuCode}.6YS6EN2CT7`; // 6YS6EN2CT7 = Price per hour rate code
    const priceDimension: any = skuPricing["priceDimensions"][priceRateCode];
- 
+
    const pricePerHour = Number(priceDimension["pricePerUnit"]["USD"]);
    const costPerMonth = pricePerHour * 24 * 30;
    return costPerMonth;
