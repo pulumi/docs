@@ -13,7 +13,7 @@ tags:
    - "Kubernetes"
 ---
  
-In an  [earlier article]({{< relref "/blog/getting-started-with-pac" >}}), we introduced examples of Policy as Code to prevent two of the most common causes of data breaches. Policies are the guardrails of infrastructure. They control access, set limits, and manage how infrastructure operates. In many systems, policies are created by clicking on a GUI, making it difficult to replicate or version. Pulumi implements policy by writing it in Typescript, which ensures that you can write policies using software development practices such as automated testing, deployment, and version control.
+In an [earlier article]({{< relref "/blog/getting-started-with-pac" >}}), we introduced examples of Policy as Code to prevent two of the most common causes of data breaches. Policies are the guardrails of infrastructure. They control access, set limits, and manage how infrastructure operates. In many systems, policies are created by clicking on a GUI, making it difficult to replicate or version. Pulumi implements policy by writing it in Typescript, which ensures that you can write policies using software development practices such as automated testing, deployment, and version control.
 
 <!--more-->
 
@@ -26,9 +26,9 @@ Pulumi released the CrossGuard preview last fall. CrossGuard lets you verify, en
 The CrossGuard preview provides the following key features:
 
 1. [Policy SDK](https://github.com/pulumi/pulumi-policy) for coding custom policies using TypeScript or Javascript
-2. [Running a Policy Pack locally]({{< relref "docs/get-started/crossguard/authoring-a-policy-pack#testing-the-policy-pack-locally" >}}) to speed up development and testing of policies. Validate infrastructure before deployment.
+2. [Running a Policy Pack locally]({{< relref "/docs/get-started/crossguard/authoring-a-policy-pack#testing-the-policy-pack-locally" >}}) to speed up development and testing of policies. Validate infrastructure before deployment.
 3. [AWSGuard](https://github.com/pulumi/pulumi-policy-aws) is a ready-to-apply playbook for enforcing AWS best practices for security, reliability, and cost
-4. [Apply a Policy Pack]({{ < relref “docs/get-started/crossguard/enforcing-a-policy-pack” >}}) across an organization to validate all the infrastructure deployed
+4. [Apply a Policy Pack]({{ < relref “/docs/get-started/crossguard/enforcing-a-policy-pack” >}}) across an organization to validate all the infrastructure deployed
 
 CrossGuard ensures that you can enforce best practices for cost, compliance, security, and team practices for a single project or across your organization. Let’s look at how we can apply policies to infrastructure deployed across cloud providers and Kubernetes.
 
@@ -66,7 +66,7 @@ new PolicyPack("aws", {
 });
 ```
 
-Setting the maximum amount and calculating the monthly on-demand price for all `ec2` instances is aided by two helper classes `config` and `utils`. You can set variables such as `maxMonthlyCost` in `config.ts`. The utils can calculate costs from either a static file of prices, as demonstrated in the example, or through the Amazon Pricing API. Because we’re using a modern programming language, we can go beyond what a policy encoded in YAML or JSON can do.
+Setting the maximum amount and calculating the monthly on-demand price for all `ec2` instances is aided by two helper classes `config` and `utils`. You can set variables such as `maxMonthlyCost` in `config.ts`. The utils can calculate costs from either a static file of prices, as demonstrated in the example, or through the [Amazon Pricing API](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html). Because we’re using a modern programming language, we can go beyond what a policy encoded in YAML or JSON can do.
 
 config.ts
 
@@ -86,7 +86,6 @@ import * as zlib from "zlib";
 export const getPricingData = function (): (any) {
    const localFilePath = "./offers-ec2-us-east-1.json.gz";
    if (!fs.existsSync(localFilePath)) {
-       console.log("Local pricing file is missing - run `make bootstrap` and try again. Exiting...");
        throw new Error();
    }
    const localPricingDataGz = fs.readFileSync(localFilePath);
@@ -183,7 +182,7 @@ const policies = new PolicyPack("gcp", {
            description: "Ingress rules with public internet access are prohibited.",
            enforcementLevel: "mandatory",
            validateResource: validateResourceOfType(gcp.compute.Firewall, (firewall, _, reportViolation) => {
-               const publicInternetRules = (it.sourceRanges || []).find(ranges =>
+               const publicInternetRules = (firewall.sourceRanges || []).find(ranges =>
                    ranges === "0.0.0.0/0"
                );
                if (publicInternetRules !== undefined) {
