@@ -26,7 +26,7 @@ event:
     # The event description shown on the event list page.
     description: "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
     # The Calendly registrtion url for event specific pages.
-    calendly_url: "Registration URL"
+    calendly_url: "https://calendly.com/pulumi/london?month=2020-09"
     # The cost of an event.
     cost: "Free"
 ---
