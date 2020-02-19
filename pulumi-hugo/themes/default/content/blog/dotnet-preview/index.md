@@ -18,7 +18,7 @@ You can create cloud resources by writing Microsoft .NET Core programs to build 
 
 ## What Does Pulumi Enable?
 
-With Pulumi, .NET developers can create, deploy and manage cloud infrastructure using C#, F#, or Visual Basic .NET. This results in increased productivity for developers because they can use the features of their IDEs such as auto-completion, error checking with red markers, build error messages, refactoring tools, and package managers. Developers can reference any NuGet library compatible with .NET Core 3.0.
+With Pulumi, .NET developers can create, deploy and manage cloud infrastructure using C#, F#, or Visual Basic .NET. This results in increased productivity for developers because they can use the features of their IDEs such as auto-completion, error checking with red markers, build error messages, refactoring tools, and package managers. Developers can reference any NuGet library compatible with .NET Core 3.1.
 
 Operators can use the `pulumi` CLI or CI/CD integrations to maintain and version infrastructure in a repository resulting in predictable and reliable deployments. Regardless of your cloud architecture, whether it includes containers, serverless function or static websites, Pulumi lets you build modern, reliable, and scalable applications. Your pipeline is part of your product.
 
@@ -34,7 +34,7 @@ A Pulumi project uses a .NET Core console application to build infrastructure. T
 
 1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
 
-1. [Install .NET Core SDK 3.0+](https://dotnet.microsoft.com/download)
+1. [Install .NET Core SDK 3.1+](https://dotnet.microsoft.com/download)
 
 1. [Configure a Microsoft Azure account](https://azure.microsoft.com/en-us/free/)
 
