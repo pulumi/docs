@@ -1,5 +1,5 @@
 ---
-title: Upcoming Events
+title: Events
 type: events
 layout: events
 description: Talks, workshops, and other gatherings to help you connect with the Pulumi community.
