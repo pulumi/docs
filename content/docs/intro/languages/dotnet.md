@@ -39,10 +39,10 @@ The fastest way to get up and running is to choose from one of the following Get
 
 ## Prerequisites
 
-Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core SDK 3.0 or later. If you follow the Getting Started guides above, they will walk you through doing this.
+Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core SDK 3.1 or later. If you follow the Getting Started guides above, they will walk you through doing this.
 
 1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-1. [Install .NET Core SDK 3.0](https://dotnet.microsoft.com/download)
+1. [Install .NET Core SDK 3.1](https://dotnet.microsoft.com/download)
 
 ## Example
 
@@ -155,7 +155,7 @@ End Module
 
 ## C\#, F\#, and VB Templates
 
-As of version 1.5, Pulumi supports .NET Core 3.0. You can write Pulumi programs in your favorite .NET language to get additional verification and tooling benefits. The fastest way to get started is to use a template. The template will autogenerate a set of files and initialize a Pulumi project. The getting started guides shown above will help do this on your cloud of choice, but this section describes doing so independently.
+As of version 1.5, Pulumi supports .NET Core 3.1. You can write Pulumi programs in your favorite .NET language to get additional verification and tooling benefits. The fastest way to get started is to use a template. The template will autogenerate a set of files and initialize a Pulumi project. The getting started guides shown above will help do this on your cloud of choice, but this section describes doing so independently.
 
 {{< langchoose dotnetonly >}}
 

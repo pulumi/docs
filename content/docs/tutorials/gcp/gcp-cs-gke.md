@@ -28,7 +28,7 @@ To deploy your infrastructure, follow the below steps.
 ### Prerequisites
 
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
-1. [Install .NET Core 3.0+](https://dotnet.microsoft.com/download)
+1. [Install .NET Core 3.1+](https://dotnet.microsoft.com/download)
 1. [Install Google Cloud SDK (`gcloud`)](https://cloud.google.com/sdk/docs/downloads-interactive)
 1. Configure GCP Auth
 
