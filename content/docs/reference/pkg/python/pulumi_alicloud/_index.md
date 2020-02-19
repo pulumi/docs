@@ -16,6 +16,7 @@ anything, please consult the source <a class="reference external" href="https://
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="actiontrail/">actiontrail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adb/">adb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="alikafka/">alikafka</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apigateway/">apigateway</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cas/">cas</a></li>
