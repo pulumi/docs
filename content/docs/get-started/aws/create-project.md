@@ -40,6 +40,7 @@ $ pulumi new aws-python
 <div class="language-prologue-go"></div>
 
 ```bash
+# from within your $GOPATH
 $ mkdir quickstart && cd quickstart
 $ pulumi new aws-go
 ```
