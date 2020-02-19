@@ -8,6 +8,318 @@ notitle: true
 <div class="section" id="module-pulumi_aiven">
 <span id="pulumi-aiven"></span><h1>Pulumi Aiven<a class="headerlink" href="#module-pulumi_aiven" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
+<dt id="pulumi_aiven.Account">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Account</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_team_id=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">update_time=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Account" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Account resource with the given unique name, props, and options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/r/account.html.markdown">https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/r/account.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pulumi_aiven.Account.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_team_id=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">update_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Account.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Account resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/r/account.html.markdown">https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/r/account.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aiven.Account.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Account.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aiven.Account.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Account.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aiven.AccountTeam">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AccountTeam</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">update_time=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a AccountTeam resource with the given unique name, props, and options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/r/account_team.html.markdown">https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/r/account_team.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pulumi_aiven.AccountTeam.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">update_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeam.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AccountTeam resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/r/account_team.html.markdown">https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/r/account_team.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aiven.AccountTeam.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeam.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aiven.AccountTeam.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeam.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aiven.AccountTeamMember">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AccountTeamMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accepted=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">invited_by_user_email=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">user_email=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeamMember" title="Permalink to this definition">¶</a></dt>
+<dd><p>During the creation of <code class="docutils literal notranslate"><span class="pre">.AccountTeamMember</span></code> resource, an email invitation will be sent
+to a user using <code class="docutils literal notranslate"><span class="pre">user_email</span></code> address. If the user accepts an invitation, he or she will become a member of the account team. 
+The deletion of <code class="docutils literal notranslate"><span class="pre">.AccountTeamMember</span></code> will not only delete invitation if one was sent but not yet accepted by the 
+user, and it will also eliminate an account team member if one has accepted an invitation previously.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/r/account_team_member.html.markdown">https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/r/account_team_member.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pulumi_aiven.AccountTeamMember.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accepted=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">invited_by_user_email=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">user_email=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeamMember.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AccountTeamMember resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/r/account_team_member.html.markdown">https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/r/account_team_member.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aiven.AccountTeamMember.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeamMember.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aiven.AccountTeamMember.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeamMember.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aiven.AccountTeamProject">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AccountTeamProject</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">team_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeamProject" title="Permalink to this definition">¶</a></dt>
+<dd><p>The account team project is intended to link and existing project to the existing account team. It is important to note 
+that the project should have an <code class="docutils literal notranslate"><span class="pre">account_id</span></code> property set and equal to account team you are trying to link this project.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/r/account_team_project.html.markdown">https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/r/account_team_project.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pulumi_aiven.AccountTeamProject.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">team_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeamProject.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AccountTeamProject resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/r/account_team_project.html.markdown">https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/r/account_team_project.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aiven.AccountTeamProject.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeamProject.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aiven.AccountTeamProject.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeamProject.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aiven.AwaitableGetAccountResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetAccountResult</code><span class="sig-paren">(</span><em class="sig-param">account_id=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_team_id=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">update_time=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetAccountResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aiven.AwaitableGetAccountTeamMemberResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetAccountTeamMemberResult</code><span class="sig-paren">(</span><em class="sig-param">accepted=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">invited_by_user_email=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">user_email=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetAccountTeamMemberResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aiven.AwaitableGetAccountTeamProjectResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetAccountTeamProjectResult</code><span class="sig-paren">(</span><em class="sig-param">account_id=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">team_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetAccountTeamProjectResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aiven.AwaitableGetAccountTeamResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetAccountTeamResult</code><span class="sig-paren">(</span><em class="sig-param">account_id=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">update_time=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetAccountTeamResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aiven.AwaitableGetConnectionPoolResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetConnectionPoolResult</code><span class="sig-paren">(</span><em class="sig-param">connection_uri=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">pool_mode=None</em>, <em class="sig-param">pool_name=None</em>, <em class="sig-param">pool_size=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetConnectionPoolResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -49,7 +361,7 @@ notitle: true
 
 <dl class="class">
 <dt id="pulumi_aiven.AwaitableGetProjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">billing_address=None</em>, <em class="sig-param">billing_emails=None</em>, <em class="sig-param">ca_cert=None</em>, <em class="sig-param">card_id=None</em>, <em class="sig-param">copy_from_project=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">technical_emails=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">account_id=None</em>, <em class="sig-param">billing_address=None</em>, <em class="sig-param">billing_emails=None</em>, <em class="sig-param">ca_cert=None</em>, <em class="sig-param">card_id=None</em>, <em class="sig-param">copy_from_project=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">technical_emails=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -313,6 +625,54 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aiven.GetAccountResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetAccountResult</code><span class="sig-paren">(</span><em class="sig-param">account_id=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_team_id=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">update_time=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetAccountResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAccount.</p>
+<dl class="attribute">
+<dt id="pulumi_aiven.GetAccountResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetAccountResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aiven.GetAccountTeamMemberResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetAccountTeamMemberResult</code><span class="sig-paren">(</span><em class="sig-param">accepted=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">invited_by_user_email=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">user_email=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetAccountTeamMemberResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAccountTeamMember.</p>
+<dl class="attribute">
+<dt id="pulumi_aiven.GetAccountTeamMemberResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetAccountTeamMemberResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aiven.GetAccountTeamProjectResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetAccountTeamProjectResult</code><span class="sig-paren">(</span><em class="sig-param">account_id=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">team_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetAccountTeamProjectResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAccountTeamProject.</p>
+<dl class="attribute">
+<dt id="pulumi_aiven.GetAccountTeamProjectResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetAccountTeamProjectResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aiven.GetAccountTeamResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetAccountTeamResult</code><span class="sig-paren">(</span><em class="sig-param">account_id=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">update_time=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetAccountTeamResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAccountTeam.</p>
+<dl class="attribute">
+<dt id="pulumi_aiven.GetAccountTeamResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetAccountTeamResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aiven.GetConnectionPoolResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetConnectionPoolResult</code><span class="sig-paren">(</span><em class="sig-param">connection_uri=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">pool_mode=None</em>, <em class="sig-param">pool_name=None</em>, <em class="sig-param">pool_size=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetConnectionPoolResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getConnectionPool.</p>
@@ -410,7 +770,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aiven.GetProjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">billing_address=None</em>, <em class="sig-param">billing_emails=None</em>, <em class="sig-param">ca_cert=None</em>, <em class="sig-param">card_id=None</em>, <em class="sig-param">copy_from_project=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">technical_emails=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">account_id=None</em>, <em class="sig-param">billing_address=None</em>, <em class="sig-param">billing_emails=None</em>, <em class="sig-param">ca_cert=None</em>, <em class="sig-param">card_id=None</em>, <em class="sig-param">copy_from_project=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">technical_emails=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProject.</p>
 <dl class="attribute">
 <dt id="pulumi_aiven.GetProjectResult.id">
@@ -841,7 +1201,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aiven.Project">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">billing_address=None</em>, <em class="sig-param">billing_emails=None</em>, <em class="sig-param">ca_cert=None</em>, <em class="sig-param">card_id=None</em>, <em class="sig-param">copy_from_project=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">technical_emails=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Project" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">billing_address=None</em>, <em class="sig-param">billing_emails=None</em>, <em class="sig-param">ca_cert=None</em>, <em class="sig-param">card_id=None</em>, <em class="sig-param">copy_from_project=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">technical_emails=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Project resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -856,7 +1216,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div></blockquote>
 <dl class="method">
 <dt id="pulumi_aiven.Project.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">billing_address=None</em>, <em class="sig-param">billing_emails=None</em>, <em class="sig-param">ca_cert=None</em>, <em class="sig-param">card_id=None</em>, <em class="sig-param">copy_from_project=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">technical_emails=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Project.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">billing_address=None</em>, <em class="sig-param">billing_emails=None</em>, <em class="sig-param">ca_cert=None</em>, <em class="sig-param">card_id=None</em>, <em class="sig-param">copy_from_project=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">technical_emails=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Project.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Project resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2453,6 +2813,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_aiven.get_account">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_account</code><span class="sig-paren">(</span><em class="sig-param">account_id=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_team_id=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">update_time=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/d/account.html.markdown">https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/d/account.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aiven.get_account_team">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_account_team</code><span class="sig-paren">(</span><em class="sig-param">account_id=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">update_time=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_account_team" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/d/account_team.html.markdown">https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/d/account_team.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aiven.get_account_team_member">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_account_team_member</code><span class="sig-paren">(</span><em class="sig-param">accepted=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">invited_by_user_email=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">user_email=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_account_team_member" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/d/account_team_member.html.markdown">https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/d/account_team_member.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aiven.get_account_team_project">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_account_team_project</code><span class="sig-paren">(</span><em class="sig-param">account_id=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">team_type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_account_team_project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/d/account_team_project.html.markdown">https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/d/account_team_project.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_aiven.get_connection_pool">
 <code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_connection_pool</code><span class="sig-paren">(</span><em class="sig-param">connection_uri=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">pool_mode=None</em>, <em class="sig-param">pool_name=None</em>, <em class="sig-param">pool_size=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_connection_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
@@ -2529,7 +2925,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aiven.get_project">
-<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param">billing_address=None</em>, <em class="sig-param">billing_emails=None</em>, <em class="sig-param">ca_cert=None</em>, <em class="sig-param">card_id=None</em>, <em class="sig-param">copy_from_project=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">technical_emails=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param">account_id=None</em>, <em class="sig-param">billing_address=None</em>, <em class="sig-param">billing_emails=None</em>, <em class="sig-param">ca_cert=None</em>, <em class="sig-param">card_id=None</em>, <em class="sig-param">copy_from_project=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">technical_emails=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/d/project.html.markdown">https://github.com/aiven/terraform-provider-aiven/blob/master/website/docs/d/project.html.markdown</a>.</p>
