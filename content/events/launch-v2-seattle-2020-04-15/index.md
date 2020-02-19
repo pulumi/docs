@@ -12,7 +12,7 @@ url_slug: "launch-v2-seattle-2020-04-15"
 # Event information
 event:
     # The type of activities we will be doing at the event.
-    type: ["workshop"]
+    type: ["meetup"]
     # The event address
     location: "1810 6th Ave, Seattle, WA 98101"
     # The start date of an event. Format YYYY-MM-DD
