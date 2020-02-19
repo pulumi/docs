@@ -162,7 +162,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.slb.Attachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">Attachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend_servers=None</em>, <em class="sig-param">delete_protection_validation=None</em>, <em class="sig-param">instance_ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">server_type=None</em>, <em class="sig-param">weight=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.Attachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a group of backend servers (ECS instance) to the Server Load Balancer or remove them from it.</p>
+<dd><p>Create a Attachment resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -337,7 +337,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.slb.BackendServer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">BackendServer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend_servers=None</em>, <em class="sig-param">delete_protection_validation=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.BackendServer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a group of backend servers (ECS instance) to the Server Load Balancer or remove them from it.</p>
+<dd><p>Add a group of backend servers (ECS or ENI instance) to the Server Load Balancer or remove them from it.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.53.0+</p>
 </div></blockquote>
