@@ -127,6 +127,7 @@ For Go, before we can deploy the stack, you will need to initialize your project
 ```bash
 $ dep ensure
 ```
+{{% /lang %}}
 
 Next, we'll deploy the stack.
 
