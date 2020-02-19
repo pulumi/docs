@@ -24,7 +24,7 @@ event:
     # This is only displayed on event specific pages.
     time: "5:30PM - 8:30PM (PT)"
     # The event description shown on the event list page.
-    description: "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
+    description: "Join us as we walk through Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
     # The calendly registrtion url for event specific pages.
     calendly_url: "https://calendly.com/pulumi/redmond?month=2020-03"
     # The cost of an event.
