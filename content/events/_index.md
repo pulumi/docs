@@ -6,9 +6,4 @@ description: Talks, workshops, and other gatherings to help you connect with the
 meta_desc: |
     Pulumi events, both online and in-person, bringing the cloud computing community together
     to connect, collaborate, and learn new techniques and best practices.
-
-menu:
-    header:
-        weight: 3
-        identifier: events
 ---
