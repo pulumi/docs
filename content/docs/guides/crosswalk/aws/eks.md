@@ -645,7 +645,7 @@ depending on this, however, as it is an implementation detail of the chart and w
 
 > Note that Pulumi support for Helm does not use Tiller. There are known problems, particularly around security,
 > with Tiller, and so the Helm project is discouraging its use and
-> [deprecating it as part of Helm](https://github.com/helm/helm/wiki/Roadmap). As a result of this, certain
+> [deprecating it as part of Helm](https://helm.sh/docs/faq/#removal-of-tiller). As a result of this, certain
 > charts that depend on Tiller being present will not work with Pulumi. This is by design, affects only a
 > small number of charts, and given Helm's direction, this should be considered a bug in the chart itself.
 
