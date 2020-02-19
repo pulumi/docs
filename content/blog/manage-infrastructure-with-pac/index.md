@@ -171,7 +171,7 @@ const policies = new PolicyPack("gcp", {
            description: "Associating public IP addresses is discouraged.",
            enforcementLevel: "advisory",
            validateResource: validateResourceOfType(gcp.compute.Instance, (instance, _, reportViolation) => {
-               const publicIps = it.networkInterfaces.find(net => net.accessConfigs !== undefined);
+               const publicIps = instance.networkInterfaces.find(net => net.accessConfigs !== undefined);
                if (publicIps !== undefined) {
                    reportViolation("`accessConfigs` should be undefined in most cases.");
                }
