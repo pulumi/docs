@@ -1,7 +1,7 @@
 ---
 title: "Managing AWS Containers with Pulumi"
 date: 2020-01-06
-meta_desc: "Deploying containers on AWS, ECS and EKS with Pulumi's infrastructure as code approach."
+meta_desc: "Deploying containers on AWS, ECS, and EKS with Pulumi's infrastructure as code approach."
 meta_image: meta.png
 authors:
     - sophia-parafina
