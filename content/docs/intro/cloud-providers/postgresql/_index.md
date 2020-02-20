@@ -17,7 +17,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/p
 
 ## Setup
 
-The PostgreSQL provider supports several options for providing access to PostgreSQL credentials.  See the [MySQL setup page]({{< relref "setup" >}}) for details.
+The PostgreSQL provider supports several options for providing access to PostgreSQL credentials.  See the [PostgreSQL setup page]({{< relref "setup" >}}) for details.
 
 ## Example
 
