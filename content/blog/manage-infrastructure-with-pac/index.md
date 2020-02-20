@@ -12,7 +12,7 @@ tags:
    - "GCP"
    - "Kubernetes"
 ---
- 
+
 In an [earlier article]({{< relref "/blog/getting-started-with-pac" >}}), we introduced examples of Policy as Code to prevent two of the most common causes of data breaches. Policies are the guardrails of infrastructure. They control access, set limits, and manage how infrastructure operates. In many systems, policies are created by clicking on a GUI, making it difficult to replicate or version. Pulumi implements policy by writing it in Typescript, which ensures that you can write policies using software development practices such as automated testing, deployment, and version control.
 
 <!--more-->
@@ -28,7 +28,7 @@ The CrossGuard preview provides the following key features:
 1. [Policy SDK](https://github.com/pulumi/pulumi-policy) for coding custom policies using TypeScript or Javascript
 2. [Running a Policy Pack locally]({{< relref "/docs/get-started/crossguard/authoring-a-policy-pack#testing-the-policy-pack-locally" >}}) to speed up development and testing of policies. Validate infrastructure before deployment.
 3. [AWSGuard](https://github.com/pulumi/pulumi-policy-aws) is a ready-to-apply playbook for enforcing AWS best practices for security, reliability, and cost
-4. [Apply a Policy Pack]({{ < relref “/docs/get-started/crossguard/enforcing-a-policy-pack” >}}) across an organization to validate all the infrastructure deployed
+4. [Apply a Policy Pack]({{< relref "/docs/get-started/crossguard/enforcing-a-policy-pack" >}}) across an organization to validate all the infrastructure deployed
 
 CrossGuard ensures that you can enforce best practices for cost, compliance, security, and team practices for a single project or across your organization. Let’s look at how we can apply policies to infrastructure deployed across cloud providers and Kubernetes.
 
