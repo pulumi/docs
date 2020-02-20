@@ -42,7 +42,7 @@ $ pulumi new aws-python
 ```bash
 # install the pulumi aws plugin
 # check for the release version here https://github.com/pulumi/pulumi-aws/releases
-$ pulumi plugin install resource aws 1.22.0 
+$ pulumi plugin install resource aws 1.22.0
 # from within your $GOPATH
 $ mkdir quickstart && cd quickstart
 $ pulumi new aws-go
