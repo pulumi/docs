@@ -93,38 +93,38 @@ pulumi.export('bucket_name',  bucket.id)
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/go/aws/kms"
-    "github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
-    "github.com/pulumi/pulumi/sdk/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/go/aws/kms"
+	"github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
 func main() {
-    pulumi.Run(func(ctx *pulumi.Context) error {
-        // Create a KMS Key for S3 server-side encryption
-        key, err := kms.NewKey(ctx, "my-key", nil)
-        if err != nil {
-            return err
-        }
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Create a KMS Key for S3 server-side encryption
+		key, err := kms.NewKey(ctx, "my-key", nil)
+		if err != nil {
+			return err
+		}
 
-        // Create an AWS resource (S3 Bucket)
-        bucket, err := s3.NewBucket(ctx, "my-bucket", &s3.BucketArgs{
-            ServerSideEncryptionConfiguration: map[string]interface{}{
-                "rule": map[string]interface{}{
-                    "applyServerSideEncryptionByDefault": map[string]interface{}{
-                        "sseAlgorithm":   "aws:kms",
-                        "kmsMasterKeyId": key.ID(),
-                    },
-                },
-            },
-        })
-        if err != nil {
-            return err
-        }
+		// Create an AWS resource (S3 Bucket)
+		bucket, err := s3.NewBucket(ctx, "my-bucket", &s3.BucketArgs{
+			ServerSideEncryptionConfiguration: s3.BucketServerSideEncryptionConfigurationArgs{
+				Rule: s3.BucketServerSideEncryptionConfigurationRuleArgs{
+					ApplyServerSideEncryptionByDefault: s3.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs{
+						SseAlgorithm:   pulumi.StringInput(pulumi.String("aws:kms")),
+						KmsMasterKeyId: key.ID(),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
 
-        // Export the name of the bucket
-        ctx.Export("bucketName", bucket.ID())
-        return nil
-    })
+		// Export the name of the bucket
+		ctx.Export("bucketName", bucket.ID())
+		return nil
+	})
 }
 ```
 
@@ -171,10 +171,10 @@ class Program
 Our program now creates a KMS key and enables server-side encryption on the S3 bucket using the KMS key.
 
 {{% lang go %}}
-Recompile your project so the changes are picked up:
+We'll need to run `dep ensure` to pick up the new dependencies:
 
 ```bash
-$ go build $(basename $(pwd))
+$ dep ensure
 ```
 
 {{% /lang %}}
