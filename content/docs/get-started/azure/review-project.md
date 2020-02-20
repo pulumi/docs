@@ -78,35 +78,35 @@ pulumi.export('connection_string', account.primary_connection_string)
 package main
 
 import (
-    "github.com/pulumi/pulumi-azure/sdk/go/azure/core"
-    "github.com/pulumi/pulumi-azure/sdk/go/azure/storage"
-    "github.com/pulumi/pulumi/sdk/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
 func main() {
-    pulumi.Run(func(ctx *pulumi.Context) error {
-        // Create an Azure Resource Group
-        resourceGroup, err := core.NewResourceGroup(ctx, "resourceGroup", &core.ResourceGroupArgs{
-            Location: "WestUS",
-        })
-        if err != nil {
-            return err
-        }
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Create an Azure Resource Group
+		resourceGroup, err := core.NewResourceGroup(ctx, "resourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("WestUS"),
+		})
+		if err != nil {
+			return err
+		}
 
-        // Create an Azure resource (Storage Account)
-        account, err := storage.NewAccount(ctx, "storage", &storage.AccountArgs{
-            ResourceGroupName:      resourceGroup.Name(),
-            AccountTier:            "Standard",
-            AccountReplicationType: "LRS",
-        })
-        if err != nil {
-            return err
-        }
+		// Create an Azure resource (Storage Account)
+		account, err := storage.NewAccount(ctx, "storage", &storage.AccountArgs{
+			ResourceGroupName:      resourceGroup.Name,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
 
-        // Export the connection string for the storage account
-        ctx.Export("connectionString", account.PrimaryConnectionString())
-        return nil
-    })
+		// Export the connection string for the storage account
+		ctx.Export("connectionString", account.PrimaryConnectionString)
+		return nil
+	})
 }
 ```
 
@@ -163,19 +163,12 @@ $ pip3 install -r requirements.txt
 {{% /lang %}}
 
 {{% lang go %}}
-For Go, before we can deploy the stack, you will need to initialize your project's dependencies. Any dependency manager can be used, including Go's built-in module system:
+For Go, before we can deploy the stack, you will need to initialize your project's dependencies. Pulumi templates currently use `dep`:
 
 ```bash
-$ go mod init
+$ dep ensure
 ```
 
-Because Go is a compiled language, you first need to compile it:
-
-```bash
-$ go build $(basename $(pwd))
-```
-
-This instructs Go to create a binary whose name is the same as your directory. It needs to match your project name.
 {{% /lang %}}
 
 Next, we'll deploy the stack.
