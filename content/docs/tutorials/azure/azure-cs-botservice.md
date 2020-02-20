@@ -33,7 +33,7 @@ To deploy your infrastructure, follow the below steps.
 ### Prerequisites
 
 * [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
-* [Install .NET Core 3.0+](https://dotnet.microsoft.com/download)
+* [Install .NET Core 3.1+](https://dotnet.microsoft.com/download)
 
 ### Publish Bot Steps
 

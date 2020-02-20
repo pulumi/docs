@@ -30,7 +30,7 @@ To deploy your infrastructure, follow the below steps.
 
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
 1. [Configure Pulumi for AWS](https://www.pulumi.com/docs/intro/cloud-providers/aws/setup/)
-1. [Install .NET Core 3.0+](https://dotnet.microsoft.com/download)
+1. [Install .NET Core 3.1+](https://dotnet.microsoft.com/download)
 
 ## Deploying and running the program
 
