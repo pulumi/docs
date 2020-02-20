@@ -981,7 +981,7 @@ vpc = MyVpcComponent("vpc", opts=ResourceOptions(transformations=[transformation
 ```
 
 ```csharp
-var vpc = new MyVpcComponent("vpc", new ResourceOptions
+var vpc = new MyVpcComponent("vpc", new ComponentResourceOptions
 {
     Transformations =
     {
