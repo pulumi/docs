@@ -122,19 +122,12 @@ $ pip3 install -r requirements.txt
 {{% /lang %}}
 
 {{% lang go %}}
-For Go, before we can deploy the stack, you will need to initialize your project's dependencies. Any dependency manager can be used, including Go's built-in module system:
+For Go, before we can deploy the stack, you will need to initialize your project's dependencies. Pulumi templates currently use `dep`:
 
 ```bash
-$ go mod init
+$ dep ensure
 ```
 
-Because Go is a compiled language, you also need to compile it:
-
-```bash
-$ go build $(basename $(pwd))
-```
-
-This instructs Go to create a binary whose name is the same as your directory. It needs to match your project name.
 {{% /lang %}}
 
 Next, we'll deploy the stack.
