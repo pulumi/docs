@@ -29,10 +29,10 @@ module.exports = {
                 // Look for CSS classes in our markdown content. We use `glob` explicitly here so we can ignore the
                 // files for the API docs in ./content/docs/reference/pkg/**/* because it includes a large number of
                 // files that significantly impacts build time (~25 seconds vs. many minutes). Instead, we'll only look
-                // for CSS classes in a single package (the Pulumi SDK package) for nodejs and python, which should
-                // include all classes used in the docs for any other package.
+                // for CSS classes in a subset of packages for NodeJS and Python, which should be representative of all
+                // the other packages.
                 ...require("glob").sync("./content/**/*.md", { ignore: "./content/docs/reference/pkg/**/*" }),
-                "./content/docs/reference/pkg/nodejs/pulumi/pulumi/**/*.md",
+                "./content/docs/reference/pkg/nodejs/pulumi/aws/**/*.md",
                 "./content/docs/reference/pkg/python/pulumi/**/*.md",
             ],
 
