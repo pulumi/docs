@@ -47,6 +47,10 @@ $ pulumi new azure-csharp
 <div class="language-prologue-go"></div>
 
 ```bash
+# install the pulumi azure plugin
+# check for the release version here https://github.com/pulumi/pulumi-azure/releases
+$ pulumi plugin install resource azure 1.14.0
+# from within your $GOPATH
 $ mkdir quickstart && cd quickstart
 $ pulumi new azure-go
 ```
