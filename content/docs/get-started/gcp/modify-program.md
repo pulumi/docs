@@ -18,7 +18,7 @@ Now that we have an instance of our Pulumi program deployed, let's update it to 
 
 Replace the entire contents of {{< langfile >}} with the following:
 
-{{< langchoose nogo csharp >}}
+{{< langchoose csharp >}}
 
 ```javascript
 "use strict";
@@ -93,42 +93,42 @@ pulumi.export('bucket_name',  bucket.url)
 package main
 
 import (
-    "github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms"
-    "github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage"
-    "github.com/pulumi/pulumi/sdk/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms"
+	"github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
 func main() {
-    pulumi.Run(func(ctx *pulumi.Context) error {
-        // Create a KMS KeyRing and CryptoKey to use with the Bucket
-        keyRing, err := kms.NewKeyRing(ctx, "my-keyring", &kms.KeyRingArgs{
-            Location: "global",
-        })
-        if err != nil {
-            return err
-        }
-        cryptoKey, err := kms.NewCryptoKey(ctx, "my-cryptokey", &kms.CryptoKeyArgs{
-            KeyRing:        keyRing.SelfLink(),
-            RotationPeriod: "100000s",
-        })
-        if err != nil {
-            return err
-        }
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Create a KMS KeyRing and CryptoKey to use with the Bucket
+		keyRing, err := kms.NewKeyRing(ctx, "my-keyring", &kms.KeyRingArgs{
+			Location: pulumi.String("global"),
+		})
+		if err != nil {
+			return err
+		}
+		cryptoKey, err := kms.NewCryptoKey(ctx, "my-cryptokey", &kms.CryptoKeyArgs{
+			KeyRing:        keyRing.SelfLink,
+			RotationPeriod: pulumi.String("100000s"),
+		})
+		if err != nil {
+			return err
+		}
 
-        // Create a GCP resource (Storage Bucket) with customer-managed encryption key
-        bucket, err := storage.NewBucket(ctx, "my-bucket", &storage.BucketArgs{
-            Encryption: map[string]interface{}{
-                "defaultKmsKeyName": cryptoKey.SelfLink(),
-            },
-        })
-        if err != nil {
-            return err
-        }
+		// Create a GCP resource (Storage Bucket) with customer-managed encryption key
+		bucket, err := storage.NewBucket(ctx, "my-bucket", &storage.BucketArgs{
+			Encryption: storage.BucketEncryptionArgs{
+				DefaultKmsKeyName: cryptoKey.SelfLink,
+			},
+		})
+		if err != nil {
+			return err
+		}
 
-        // Export the DNS name of the bucket
-        ctx.Export("bucketName", bucket.Url())
-        return nil
-    })
+		// Export the DNS name of the bucket
+		ctx.Export("bucketName", bucket.Url)
+		return nil
+	})
 }
 ```
 
@@ -176,10 +176,10 @@ class Program
 ```
 
 {{% lang go %}}
-Recompile your project so the changes are picked up:
+We'll need to run `dep ensure` to pick up the new dependencies:
 
 ```bash
-$ go build $(basename $(pwd))
+$ dep ensure
 ```
 
 {{% /lang %}}
