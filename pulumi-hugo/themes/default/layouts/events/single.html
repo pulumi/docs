@@ -55,7 +55,7 @@
                             <button id="eventbrite-widget-modal-trigger-{{ .Params.event.eventbrite_id }}" type="button" class="btn bg-orange-500 border-2 border-orange-600 hover:bg-orange-600 hover:border-orange-600">Buy Tickets</button>
                             <noscript></a>Buy Tickets on Eventbrite</noscript>
                             <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-                            <script type="text/javascript">
+                            <script>
                                 if (window && window.EBWidgets && (typeof window.EBWidgets.createWidget === "function")) {
                                     window.EBWidgets.createWidget({
                                         widgetType: "checkout",
