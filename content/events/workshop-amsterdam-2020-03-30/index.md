@@ -25,8 +25,9 @@ event:
     time: "11:30AM - 4:00pm (CET)"
     # The event description shown on the event list page.
     description: "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
-    # The calendly registrtion url for event specific pages.
-    calendly_url: "https://calendly.com/pulumi/kubecon?month=2020-03"
+    # The eventbrite registrtion url for event specific pages.
+    eventbrite_url: "https://www.eventbrite.com/e/infrastructure-as-code-with-pulumi-tickets-95941386269"
+    eventbrite_id: "95941386269"
     # The cost of an event.
     cost: "€99"
 ---
