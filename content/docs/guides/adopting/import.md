@@ -28,7 +28,7 @@ For referencing existing resources, Pulumi offers several options:
 
 * [**Stack references**]({{< relref "/docs/intro/concepts/organizing-stacks-projects#inter-stack-dependencies" >}}) let you reference outputs of another Pulumi stack for use as inputs to a stack, which is very useful for [organizing projects and stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}).
 
-* **State references** let you reference outputs from a non-Pulumi stack for use as inputs to a Pulumi stack, including [Terraform workspaces]({{< relref "terraform" >}}), [AWS CloudFormation stacks]({{< relref "aws" >}}), and [Azure Resource Manager (ARM) deployments]({{< relref "azure" >}}).
+* **State references** let you reference outputs from a non-Pulumi stack for use as inputs to a Pulumi stack, including [Terraform workspaces]({{< relref "from_terraform" >}}), [AWS CloudFormation stacks]({{< relref "from_aws" >}}), and [Azure Resource Manager (ARM) deployments]({{< relref "from_azure" >}}).
 
 Together, these make it easy to reference existing infrastructure regardless of how it was provisioned, without Pulumi taking over control of its ongoing management.
 

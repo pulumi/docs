@@ -14,10 +14,10 @@ This user guide offers a tour of tried-and-true tools and techniques that can be
 Below we will review some basic concepts, but feel free to jump straight to a specific guide:
 
 * [**Importing Infrastructure**]({{< relref "import" >}}): for any cloud, no matter how it's provisioned
-* [**From Terraform**]({{< relref "terraform" >}}): coexist with existing workspaces or convert your HCL
-* [**From AWS CloudFormation**]({{< relref "aws" >}}): coexist with, deploy, or convert your templates and stacks
-* [**From Azure Resource Manager (ARM)**]({{< relref "azure" >}}): coexist with, deploy, or convert your templates and deployments
-* [**From Kubernetes or Helm YAML**]({{< relref "kubernetes" >}}): coexist with, deploy, or convert your configuration
+* [**From Terraform**]({{< relref "from_terraform" >}}): coexist with existing workspaces or convert your HCL
+* [**From AWS CloudFormation**]({{< relref "from_aws" >}}): coexist with, deploy, or convert your templates and stacks
+* [**From Azure Resource Manager (ARM)**]({{< relref "from_azure" >}}): coexist with, deploy, or convert your templates and deployments
+* [**From Kubernetes or Helm YAML**]({{< relref "from_kubernetes" >}}): coexist with, deploy, or convert your configuration
 
 ## Concepts
 
