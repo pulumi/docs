@@ -39,8 +39,7 @@ Valid values are <code class="docutils literal notranslate"><span class="pre">Ac
 <code class="sig-name descname">encrypted_secret</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.AccessKey.encrypted_secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>The encrypted secret, base64 encoded, if <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> was specified.</p>
 <blockquote>
-<div><p><strong>NOTE:</strong> The encrypted secret may be decrypted using the command line,
-for example: <code class="docutils literal notranslate"><span class="pre">...</span> <span class="pre">|</span> <span class="pre">base64</span> <span class="pre">--decode</span> <span class="pre">|</span> <span class="pre">keybase</span> <span class="pre">pgp</span> <span class="pre">decrypt</span></code>.</p>
+<div><p><strong>NOTE:</strong> The encrypted secret may be decrypted using the command line,</p>
 </div></blockquote>
 </dd></dl>
 
@@ -72,9 +71,17 @@ the use of the secret key in automation.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.AccessKey.ses_smtp_password">
 <code class="sig-name descname">ses_smtp_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.AccessKey.ses_smtp_password" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>DEPRECATED</strong> The secret access key converted into an SES SMTP
+password by applying [AWS’s documented conversion</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.iam.AccessKey.ses_smtp_password_v4">
+<code class="sig-name descname">ses_smtp_password_v4</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.AccessKey.ses_smtp_password_v4" title="Permalink to this definition">¶</a></dt>
 <dd><p>The secret access key converted into an SES SMTP
-password by applying <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert">AWS’s documented conversion
-algorithm</a>.</p>
+password by applying <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert">AWS’s documented Sigv4 conversion
+algorithm</a>.
+As SigV4 is region specific, valid Provider regions are <code class="docutils literal notranslate"><span class="pre">ap-south-1</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-2</span></code>, <code class="docutils literal notranslate"><span class="pre">eu-central-1</span></code>, <code class="docutils literal notranslate"><span class="pre">eu-west-1</span></code>, <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code> and <code class="docutils literal notranslate"><span class="pre">us-west-2</span></code>. See current <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region">AWS SES regions</a></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -92,7 +99,7 @@ Valid values are <code class="docutils literal notranslate"><span class="pre">Ac
 
 <dl class="method">
 <dt id="pulumi_aws.iam.AccessKey.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">encrypted_secret=None</em>, <em class="sig-param">key_fingerprint=None</em>, <em class="sig-param">pgp_key=None</em>, <em class="sig-param">secret=None</em>, <em class="sig-param">ses_smtp_password=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.AccessKey.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">encrypted_secret=None</em>, <em class="sig-param">key_fingerprint=None</em>, <em class="sig-param">pgp_key=None</em>, <em class="sig-param">secret=None</em>, <em class="sig-param">ses_smtp_password=None</em>, <em class="sig-param">ses_smtp_password_v4=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.AccessKey.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AccessKey resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -105,8 +112,7 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; **NOTE:** The encrypted secret may be decrypted using the command line,
-for example: `... | base64 --decode | keybase pgp decrypt`.
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="o">**</span><span class="n">NOTE</span><span class="p">:</span><span class="o">**</span> <span class="n">The</span> <span class="n">encrypted</span> <span class="n">secret</span> <span class="n">may</span> <span class="n">be</span> <span class="n">decrypted</span> <span class="n">using</span> <span class="n">the</span> <span class="n">command</span> <span class="n">line</span><span class="p">,</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -122,9 +128,12 @@ to the state file. If you use this, please protect your backend state file
 judiciously. Alternatively, you may supply a <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> instead, which will
 prevent the secret from being stored in plaintext, at the cost of preventing
 the use of the secret key in automation.</p></li>
-<li><p><strong>ses_smtp_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The secret access key converted into an SES SMTP
-password by applying <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert">AWS’s documented conversion
-algorithm</a>.</p>
+<li><p><strong>ses_smtp_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <strong>DEPRECATED</strong> The secret access key converted into an SES SMTP
+password by applying [AWS’s documented conversion</p></li>
+<li><p><strong>ses_smtp_password_v4</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The secret access key converted into an SES SMTP
+password by applying <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert">AWS’s documented Sigv4 conversion
+algorithm</a>.
+As SigV4 is region specific, valid Provider regions are <code class="docutils literal notranslate"><span class="pre">ap-south-1</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-2</span></code>, <code class="docutils literal notranslate"><span class="pre">eu-central-1</span></code>, <code class="docutils literal notranslate"><span class="pre">eu-west-1</span></code>, <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code> and <code class="docutils literal notranslate"><span class="pre">us-west-2</span></code>. See current <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region">AWS SES regions</a></p>
 </p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access key status to apply. Defaults to <code class="docutils literal notranslate"><span class="pre">Active</span></code>.
 Valid values are <code class="docutils literal notranslate"><span class="pre">Active</span></code> and <code class="docutils literal notranslate"><span class="pre">Inactive</span></code>.</p></li>

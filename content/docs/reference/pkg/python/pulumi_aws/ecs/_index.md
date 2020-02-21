@@ -186,7 +186,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <code class="docutils literal notranslate"><span class="pre">default_capacity_provider_strategy</span></code> configuration block supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">capacity_provider</span></code> - (Required) The short name of the capacity provider.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Required) The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Optional) The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> - (Optional) The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
 </ul>
 <dl class="field-list simple">

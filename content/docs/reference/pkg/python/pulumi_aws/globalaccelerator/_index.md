@@ -160,6 +160,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>endpoint_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of endpoint objects. Fields documented below.</p></li>
+<li><p><strong>endpoint_group_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the AWS Region where the endpoint group is located.</p></li>
 <li><p><strong>health_check_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.</p></li>
 <li><p><strong>health_check_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).</p></li>
 <li><p><strong>health_check_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.</p></li>
@@ -186,6 +187,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">endpoint_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An ID for the endpoint. If the endpoint is a Network Load Balancer or Application Load Balancer, this is the Amazon Resource Name (ARN) of the resource. If the endpoint is an Elastic IP address, this is the Elastic IP address allocation ID.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The weight associated with the endpoint. When you add weights to endpoints, you configure AWS Global Accelerator to route traffic based on proportions that you specify.</p></li>
 </ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.globalaccelerator.EndpointGroup.endpoint_group_region">
+<code class="sig-name descname">endpoint_group_region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.endpoint_group_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the AWS Region where the endpoint group is located.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -242,6 +249,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>endpoint_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of endpoint objects. Fields documented below.</p></li>
+<li><p><strong>endpoint_group_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the AWS Region where the endpoint group is located.</p></li>
 <li><p><strong>health_check_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.</p></li>
 <li><p><strong>health_check_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).</p></li>
 <li><p><strong>health_check_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.</p></li>
