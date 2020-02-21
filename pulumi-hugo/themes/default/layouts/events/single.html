@@ -63,7 +63,7 @@
                                         modal: true,
                                         modalTriggerElementId: "eventbrite-widget-modal-trigger-{{ .Params.event.eventbrite_id }}",
                                         onOrderComplete: function() {
-                                            window.location = "/confirmation/workshop/"
+                                            window.location = "{{ relref . "/confirmation/workshop" }}";
                                         }
                                     });
                                 }
