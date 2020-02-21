@@ -55,6 +55,7 @@ database endpoints, object storage, etc.), all in the same program.
 ## Rendering YAML from TypeScript
 
 First, choose a directory for the rendered manifests, and specify that path on a `Provider`.
+
 ```typescript
 // Instantiate a Kubernetes Provider and specify the render directory.
 const provider = new k8s.Provider("render-yaml", {
@@ -63,6 +64,7 @@ const provider = new k8s.Provider("render-yaml", {
 ```
 
 Next, use that `Provider` for any Kubernetes resources you want to render as YAML.
+
 ```typescript
 // Create a Kubernetes PersistentVolumeClaim.
 const pvc = new kx.PersistentVolumeClaim("data", {
@@ -123,9 +125,10 @@ kubectl apply -f "${RENDER_DIRECTORY}/0-crd"
 kubectl apply -f "${RENDER_DIRECTORY}/1-manifest"
 ```
 
-Voilà! From 33 (44 with whitespace and comments) lines of TypeScript code to 102 lines of YAML! 
+Voilà! From 33 (44 with whitespace and comments) lines of TypeScript code to 102 lines of YAML!
 
 Here's the rendered `Deployment` resource.
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
