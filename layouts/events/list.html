@@ -18,8 +18,7 @@
                 <h2 id="event-list-heading" class="mb-8">All Upcoming Events</h2>
                 <ul id="event-list" class="list-none md:flex md:flex-wrap pl-0">
                     {{ $events := (where $.Pages "Type" "events") }}
-                    {{ $currentEvents := (where $events "{{ (time .Params.event.start_date).After (now.AddDate 0 0 -1) }}" "ne" true ) }}
-                    {{ range $index, $event := (sort $currentEvents ".Params.event.start_date") }}
+                    {{ range $index, $event := (sort $events ".Params.event.start_date") }}
                         {{ if eq ((time .Params.event.end_date).After (now.AddDate 0 0 -1)) true}}
                             <li class="w-full m-0 p-0" data-event-type='{{ delimit .Params.event.type "," }}'>
                                 <article class="{{ if lt (add $index 1) (len $events) }} pb-16 mb-12 border-b border-gray-300 {{ end }}">
