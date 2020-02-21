@@ -3214,8 +3214,6 @@ This defaults to false.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A brief description of this resource.</p></li>
 <li><p><strong>enable_display</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable <a class="reference external" href="https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver">Virtual Displays</a> on this instance.
 <strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">allow_stopping_for_update</span></code> must be set to true in order to update this field.</p></li>
-<li><p><strong>guest_accelerators</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of the type and count of accelerator cards attached to the instance. Structure documented below.
-<strong>Note:</strong> GPU accelerators can only be used with <code class="docutils literal notranslate"><span class="pre">on_host_maintenance</span></code> option set to TERMINATE.</p></li>
 <li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid.
 Valid format is a series of labels 1-63 characters long matching the regular expression <code class="docutils literal notranslate"><span class="pre">a-z</span></code>, concatenated with periods.
 The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.</p></li>
@@ -3420,9 +3418,7 @@ This defaults to false.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Instance.guest_accelerators">
 <code class="sig-name descname">guest_accelerators</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Instance.guest_accelerators" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of the type and count of accelerator cards attached to the instance. Structure documented below.
-<strong>Note:</strong> GPU accelerators can only be used with <code class="docutils literal notranslate"><span class="pre">on_host_maintenance</span></code> option set to TERMINATE.</p>
-<ul class="simple">
+<dd><elided><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
@@ -3637,8 +3633,6 @@ This defaults to false.</p></li>
 <li><p><strong>enable_display</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Enable <a class="reference external" href="https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver">Virtual Displays</a> on this instance.
 <strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">allow_stopping_for_update</span></code> must be set to true in order to update this field.</p>
 </p></li>
-<li><p><strong>guest_accelerators</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of the type and count of accelerator cards attached to the instance. Structure documented below.
-<strong>Note:</strong> GPU accelerators can only be used with <code class="docutils literal notranslate"><span class="pre">on_host_maintenance</span></code> option set to TERMINATE.</p></li>
 <li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid.
 Valid format is a series of labels 1-63 characters long matching the regular expression <code class="docutils literal notranslate"><span class="pre">a-z</span></code>, concatenated with periods.
 The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.</p></li>
