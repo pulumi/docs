@@ -52,21 +52,21 @@
 
                             <!-- Noscript content for added SEO -->
                             <noscript><a href="{{ .Params.event.eventbrite_url }}" rel="noopener noreferrer" target="_blank"></noscript>
-                            <!-- You can customize this button any way you like -->
                             <button id="eventbrite-widget-modal-trigger-{{ .Params.event.eventbrite_id }}" type="button" class="btn bg-orange-500 border-2 border-orange-600 hover:bg-orange-600 hover:border-orange-600">Buy Tickets</button>
                             <noscript></a>Buy Tickets on Eventbrite</noscript>
                             <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
                             <script type="text/javascript">
-                                var goToThankYouPage = function() {
-                                    window.location = "/confirmation/workshop/"
-                                };
-                                window.EBWidgets.createWidget({
-                                    widgetType: "checkout",
-                                    eventId: "{{ .Params.event.eventbrite_id }}",
-                                    modal: true,
-                                    modalTriggerElementId: "eventbrite-widget-modal-trigger-{{ .Params.event.eventbrite_id }}",
-                                    onOrderComplete: goToThankYouPage
-                                });
+                                if (window && window.EBWidgets && (typeof window.EBWidgets.createWidget === "function")) {
+                                    window.EBWidgets.createWidget({
+                                        widgetType: "checkout",
+                                        eventId: "{{ .Params.event.eventbrite_id }}",
+                                        modal: true,
+                                        modalTriggerElementId: "eventbrite-widget-modal-trigger-{{ .Params.event.eventbrite_id }}",
+                                        onOrderComplete: function() {
+                                            window.location = "/confirmation/workshop/"
+                                        }
+                                    });
+                                }
                             </script>
 
                         {{ end }}
