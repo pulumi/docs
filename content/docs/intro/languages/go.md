@@ -16,6 +16,10 @@ Pulumi supports writing your infrastructure as code using the Go language.
 
 <a class="btn" href="https://golang.org/doc/install" target="_blank" title="Install Go">INSTALL GO</a>
 
+## Documentation
+
+Pulumi Go documentation is available at [godoc](https://godoc.org/github.com/pulumi/pulumi).
+
 ## Getting Started
 
 The fastest way to get up and running is to choose from one of the following Getting Started guides:

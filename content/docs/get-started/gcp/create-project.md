@@ -39,13 +39,19 @@ $ pulumi new gcp-python
 
 <div class="language-prologue-go"></div>
 
+Set your GOPATH
+* [Unix systems](https://github.com/golang/go/wiki/SettingGOPATH#unix-systems)
+* [Windows](https://github.com/golang/go/wiki/SettingGOPATH#windows)
+
+[Create your workspace](https://golang.org/doc/gopath_code.html) in the GOPATH.
+
 ```bash
-# install the pulumi gcp plugin
-# check for the release version here https://github.com/pulumi/pulumi-gcp/releases
-$ pulumi plugin install resource gcp 2.6.0
-# from within your $GOPATH
+# install the pulumi aws plugin
+# check for the release version here https://github.com/pulumi/pulumi-aws/releases
+$ pulumi plugin install resource aws 1.22.0
+# from within your $GOPATH workspace
 $ mkdir quickstart && cd quickstart
-$ pulumi new gcp-go
+$ pulumi new aws-go
 ```
 
 <div class="language-prologue-csharp"></div>
