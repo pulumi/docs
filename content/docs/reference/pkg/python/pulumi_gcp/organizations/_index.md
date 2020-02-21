@@ -805,9 +805,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.organizations.IAMPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">IAMPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of the entire IAM policy for an existing Google Cloud Platform Organization.</p>
-<blockquote>
-<div><dl class="simple">
-<dt><strong>Warning:</strong> New organizations have several default policies which will,</dt><dd><p>without extreme caution, be <strong>overwritten</strong> by use of this resource.
+<dl class="simple">
+<dt>!&gt; <strong>Warning:</strong> New organizations have several default policies which will,</dt><dd><p>without extreme caution, be <strong>overwritten</strong> by use of this resource.
 The safest alternative is to use multiple <code class="docutils literal notranslate"><span class="pre">organizations.IAMBinding</span></code>
 resources.  It is easy to use this resource to remove your own access to
 an organization, which will require a call to Google Support to have
@@ -815,6 +814,9 @@ fixed, and can take multiple days to resolve.  If you do use this resource,
 the best way to be sure that you are not making dangerous changes is to start
 by importing your existing policy, and examining the diff very closely.</p>
 </dd>
+</dl>
+<blockquote>
+<div><dl class="simple">
 <dt><strong>Note:</strong> This resource <strong>must not</strong> be used in conjunction with</dt><dd><p><code class="docutils literal notranslate"><span class="pre">organizations.IAMMember</span></code> or <code class="docutils literal notranslate"><span class="pre">organizations.IAMBinding</span></code>
 or they will fight over what your policy should be.</p>
 </dd>
@@ -1533,12 +1535,12 @@ receive an error otherwise.</p>
 <code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_iam_policy</code><span class="sig-paren">(</span><em class="sig-param">audit_configs=None</em>, <em class="sig-param">bindings=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_iam_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates an IAM policy document that may be referenced by and applied to
 other Google Cloud Platform resources, such as the <code class="docutils literal notranslate"><span class="pre">organizations.Project</span></code> resource.</p>
-<p>This data source is used to define IAM policies to apply to other resources.
-Currently, defining a policy through a datasource and referencing that policy
-from another resource is the only way to apply an IAM policy to a resource.</p>
 <p><strong>Note:</strong> Several restrictions apply when setting IAM policies through this API.
 See the <a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v1/projects/setIamPolicy">setIamPolicy docs</a>
 for a list of these restrictions.</p>
+<p>This data source is used to define IAM policies to apply to other resources.
+Currently, defining a policy through a datasource and referencing that policy
+from another resource is the only way to apply an IAM policy to a resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
