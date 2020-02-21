@@ -3,7 +3,11 @@
         <div class="container mx-auto">
             <div class="mx-auto text-center">
                 <h1>{{ .Title }}</h1>
-                <p class="text-2xl">Infrastructure as code with Pulumi</p>
+                {{ if .Params.subtitle }}
+                    <p class="text-2xl">{{ .Params.subtitle }}</p>
+                {{ else }}
+                    <p class="text-2xl">Infrastructure as code with Pulumi</p>
+                {{ end }}
             </div>
         </div>
     </header>

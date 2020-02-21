@@ -1,6 +1,7 @@
 ---
 # Name of the event.
 title: "Infrastructure As Code Workshop | Redmond, WA"
+subtitle: "Azure Infrastructure as Code using C#"
 meta_desc: "Join Pulumi at our Infrastructure As Code Workshop in Redmond, WA and learn more about cloud programming, infrastructure as code, and many other topics."
 
 # The layout of the landing page.
