@@ -154,6 +154,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.lambda_.AwaitableGetAliasResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.lambda_.</code><code class="sig-name descname">AwaitableGetAliasResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">function_name=None</em>, <em class="sig-param">function_version=None</em>, <em class="sig-param">invoke_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.AwaitableGetAliasResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.lambda_.AwaitableGetFunctionResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.lambda_.</code><code class="sig-name descname">AwaitableGetFunctionResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">dead_letter_config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">function_name=None</em>, <em class="sig-param">handler=None</em>, <em class="sig-param">invoke_arn=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">layers=None</em>, <em class="sig-param">memory_size=None</em>, <em class="sig-param">qualified_arn=None</em>, <em class="sig-param">qualifier=None</em>, <em class="sig-param">reserved_concurrent_executions=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">source_code_hash=None</em>, <em class="sig-param">source_code_size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">tracing_config=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_config=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.AwaitableGetFunctionResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -829,6 +834,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.lambda_.GetAliasResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.lambda_.</code><code class="sig-name descname">GetAliasResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">function_name=None</em>, <em class="sig-param">function_version=None</em>, <em class="sig-param">invoke_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.GetAliasResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAlias.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.GetAliasResult.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetAliasResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) identifying the Lambda function alias.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.GetAliasResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetAliasResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of alias.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.GetAliasResult.function_version">
+<code class="sig-name descname">function_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetAliasResult.function_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lambda function version which the alias uses.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.GetAliasResult.invoke_arn">
+<code class="sig-name descname">invoke_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetAliasResult.invoke_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN to be used for invoking Lambda Function from API Gateway - to be used in aws_api_gateway_integration’s <code class="docutils literal notranslate"><span class="pre">uri</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.GetAliasResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetAliasResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1511,6 +1552,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.lambda_.get_alias">
+<code class="sig-prename descclassname">pulumi_aws.lambda_.</code><code class="sig-name descname">get_alias</code><span class="sig-paren">(</span><em class="sig-param">function_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.get_alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides information about a Lambda Alias.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>function_name</strong> (<em>str</em>) – Name of the aliased Lambda function.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Name of the Lambda alias.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lambda_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lambda_alias.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">

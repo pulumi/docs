@@ -35,8 +35,8 @@ the infrastructure that runs those applications.</p>
 <p>The <strong>appversion_lifecycle</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteSourceFromS3</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to delete a version’s source bundle from S3 when the application version is deleted.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days to retain an application version.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of application versions to retain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days to retain an application version (‘max_age_in_days’ and ‘max_count’ cannot be enabled simultaneously.).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of application versions to retain (‘max_age_in_days’ and ‘max_count’ cannot be enabled simultaneously.).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service_role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an IAM service role under which the application version is deleted.  Elastic Beanstalk must have permission to assume this role.</p></li>
 </ul>
 <blockquote>
@@ -87,8 +87,8 @@ properties used to qualify the lookup.</p>
 <p>The <strong>appversion_lifecycle</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteSourceFromS3</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to delete a version’s source bundle from S3 when the application version is deleted.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days to retain an application version.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of application versions to retain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days to retain an application version (‘max_age_in_days’ and ‘max_count’ cannot be enabled simultaneously.).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of application versions to retain (‘max_age_in_days’ and ‘max_count’ cannot be enabled simultaneously.).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service_role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an IAM service role under which the application version is deleted.  Elastic Beanstalk must have permission to assume this role.</p></li>
 </ul>
 <blockquote>

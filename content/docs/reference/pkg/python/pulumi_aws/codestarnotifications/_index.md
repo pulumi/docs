@@ -27,7 +27,7 @@ anything, please consult the source <a class="reference external" href="https://
 For list of allowed events see <a class="reference external" href="https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api">here</a>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of notification rule.</p></li>
 <li><p><strong>resource</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the resource to associate with the notification rule.</p></li>
-<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the notification rule. Possible balues are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, default is <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the notification rule. Possible values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, default is <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.</p></li>
 </ul>
@@ -36,7 +36,7 @@ For list of allowed events see <a class="reference external" href="https://docs.
 <p>The <strong>targets</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The status of the notification rule. Possible balues are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, default is <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The status of the notification rule. Possible values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, default is <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
@@ -76,7 +76,7 @@ For list of allowed events see <a class="reference external" href="https://docs.
 <dl class="attribute">
 <dt id="pulumi_aws.codestarnotifications.NotificationRule.status">
 <code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codestarnotifications.NotificationRule.status" title="Permalink to this definition">¶</a></dt>
-<dd><p>The status of the notification rule. Possible balues are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, default is <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p>
+<dd><p>The status of the notification rule. Possible values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, default is <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -91,7 +91,7 @@ For list of allowed events see <a class="reference external" href="https://docs.
 <dd><p>Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The status of the notification rule. Possible balues are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, default is <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The status of the notification rule. Possible values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, default is <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -114,7 +114,7 @@ For list of allowed events see <a class="reference external" href="https://docs.
 </p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of notification rule.</p></li>
 <li><p><strong>resource</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the resource to associate with the notification rule.</p></li>
-<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the notification rule. Possible balues are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, default is <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the notification rule. Possible values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, default is <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.</p></li>
 </ul>
@@ -123,7 +123,7 @@ For list of allowed events see <a class="reference external" href="https://docs.
 <p>The <strong>targets</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The status of the notification rule. Possible balues are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, default is <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The status of the notification rule. Possible values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, default is <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>

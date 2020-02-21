@@ -380,7 +380,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ram.ResourceShareAccepter.sender_account_id">
 <code class="sig-name descname">sender_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ram.ResourceShareAccepter.sender_account_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The account ID of the sender account which extends the invitation.</p>
+<dd><p>The account ID of the sender account which submits the invitation.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -404,7 +404,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ram.ResourceShareAccepter.status">
 <code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ram.ResourceShareAccepter.status" title="Permalink to this definition">¶</a></dt>
-<dd><p>The status of the invitation (e.g., ACCEPTED, REJECTED).</p>
+<dd><p>The status of the resource share (ACTIVE, PENDING, FAILED, DELETING, DELETED).</p>
 </dd></dl>
 
 <dl class="method">
@@ -421,11 +421,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>invitation_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the resource share invitation.</p></li>
 <li><p><strong>receiver_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The account ID of the receiver account which accepts the invitation.</p></li>
 <li><p><strong>resources</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the resource ARNs shared via the resource share.</p></li>
-<li><p><strong>sender_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The account ID of the sender account which extends the invitation.</p></li>
+<li><p><strong>sender_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The account ID of the sender account which submits the invitation.</p></li>
 <li><p><strong>share_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the resource share.</p></li>
 <li><p><strong>share_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the resource share as displayed in the console.</p></li>
 <li><p><strong>share_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource share.</p></li>
-<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the invitation (e.g., ACCEPTED, REJECTED).</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the resource share (ACTIVE, PENDING, FAILED, DELETING, DELETED).</p></li>
 </ul>
 </dd>
 </dl>
