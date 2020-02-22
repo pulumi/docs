@@ -3,7 +3,11 @@
         <div class="container mx-auto">
             <div class="mx-auto text-center">
                 <h1>{{ .Title }}</h1>
-                <p class="text-2xl">Infrastructure as code with Pulumi</p>
+                {{ if .Params.subtitle }}
+                    <p class="text-2xl">{{ .Params.subtitle }}</p>
+                {{ else }}
+                    <p class="text-2xl">Infrastructure as code with Pulumi</p>
+                {{ end }}
             </div>
         </div>
     </header>
@@ -40,11 +44,36 @@
                         <span>{{ .Params.event.cost }}</span>
                     </div>
                     <div class="my-8">
-                        <!-- Calendly link widget begin -->
-                        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-                        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-                        <a href="#" class="btn bg-orange-500 border-2 border-orange-600 hover:bg-orange-600 hover:border-orange-600" onclick="Calendly.initPopupWidget({url: '{{ .Params.event.calendly_url }}&hide_event_type_details=1'});return false;">Register Now</a>
-                        <!-- Calendly link widget end -->
+                        {{ if .Params.event.calendly_url }}
+
+                            <!-- Calendly link widget begin -->
+                            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                            <script src="https://assets.calendly.com/assets/external/widget.js"></script>
+                            <a href="#" class="btn bg-orange-500 border-2 border-orange-600 hover:bg-orange-600 hover:border-orange-600" onclick="Calendly.initPopupWidget({url: '{{ .Params.event.calendly_url }}&hide_event_type_details=1'});return false;">Register Now</a>
+                            <!-- Calendly link widget end -->
+
+                        {{ else if .Params.event.eventbrite_url }}
+
+                            <!-- Noscript content for added SEO -->
+                            <noscript><a href="{{ .Params.event.eventbrite_url }}" rel="noopener noreferrer" target="_blank"></noscript>
+                            <button id="eventbrite-widget-modal-trigger-{{ .Params.event.eventbrite_id }}" type="button" class="btn bg-orange-500 border-2 border-orange-600 hover:bg-orange-600 hover:border-orange-600">Buy Tickets</button>
+                            <noscript></a>Buy Tickets on Eventbrite</noscript>
+                            <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+                            <script>
+                                if (window && window.EBWidgets && (typeof window.EBWidgets.createWidget === "function")) {
+                                    window.EBWidgets.createWidget({
+                                        widgetType: "checkout",
+                                        eventId: "{{ .Params.event.eventbrite_id }}",
+                                        modal: true,
+                                        modalTriggerElementId: "eventbrite-widget-modal-trigger-{{ .Params.event.eventbrite_id }}",
+                                        onOrderComplete: function() {
+                                            window.location = "{{ relref . "/confirmation/workshop" }}";
+                                        }
+                                    });
+                                }
+                            </script>
+
+                        {{ end }}
                     </div>
                 </div>
                 {{ .Content }}
