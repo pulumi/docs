@@ -155,7 +155,7 @@ from pulumi_kubernetes import Provider, core
 
 env = get_stack()
 infra = StackReference(f"acmecorp/infra/{env}")
-provider = Provider("k8s", { "kubeconfig": infra.get_output("kubeConfig") })
+provider = Provider("k8s", kubeconfig=infra.get_output("kubeConfig"))
 service = core.v1.Service(..., ResourceOptions(provider=provider))
 ```
 
