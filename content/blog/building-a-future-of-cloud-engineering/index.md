@@ -19,7 +19,7 @@ were still 1998 with virtual machines and XML configuration. At Pulumi,
 we believe instead that the cloud is a first class application
 architecture concern. We still use thankless tools, markup languages,
 and brittle, homegrown delivery platforms. At Pulumi, we believe instead
-in a lovable and productive development experiences, with excellent
+in a lovable and productive development experience, with excellent
 collaboration and reuse.
 
 Since getting started just over a year and a half ago, we've stood on
@@ -54,12 +54,12 @@ At the same time, "DevOps" as an approach to organizing teams and
 developing software has matured greatly, and is now the default for many
 organizations. New practices such as infrastructure-as-code, immutable
 infrastructure, and Site Reliability Engineering have modernized these
-roles, giving us approaches that can leverage more rigorous software
-engineering practices to tasks that used to be more ad-hoc, manual, and
+roles, giving us approaches that can leverage a more rigorous software
+engineering experience to tasks that used to be more ad-hoc, manual, and
 error prone.
 
 But despite these fundamental changes, the way we engineer the cloud
-hasn't fundamentally changed. We still think of configuration as an
+hasn't fundamentally changed. As cloud engineers, we still think of configuration as an
 afterthought and a task best suited for JSON, YAML, or DSLs. Each
 individual resource we provision -- even fine-grained ones like
 serverless functions -- requires often an equal amount of configuration
@@ -83,18 +83,18 @@ approach.
 We believe in a future where developers and operators alike can meet on
 common ground to work together. We like to call this combined discipline
 **cloud engineering**. It's not Dev, it's not DevOps, and it's not
-SRE; it's the best of all of them. In this new future, our teams will
+SRE; cloud engineering is the best of all of them. In this new future, our teams will
 experience more joy, collaboration, and productivity than ever before.
 
 Enter Pulumi.
 
 Using your favorite general purpose programming language -- whether it
 is JavaScript, TypeScript, Python, Go, or something else -- you can
-express the entirety of your cloud software. You can develop it in your
+express the entirety of your cloud software. As a cloud engineer, you can develop it in your
 favorite editor, with statement completion, built-in documentation, and
-interactive feedback when you've got something wrong. You can test
+interactive feedback when you've got something wrong. As a cloud engineer, you can test
 things and benefit from static analysis and linters that enforce best
-practices. You can reuse packages, publish your own, and refactor your
+practices. As a cloud engineer, you can reuse packages, publish your own, and refactor your
 code just like with application code. In fact, after living in this
 world for long enough, the boundary between infrastructure and
 application code begins to blur.
@@ -112,8 +112,8 @@ deployment statuses and to organize and find information more easily.
 It's never been such a breeze to go from idea to production.
 
 We've become enamored by this new approach to creating software that is
-truly born in the cloud. But it's not just our own belief -- it is
-working terrifically in practice. We have worked with organizations of
+truly born in the cloud. But it's not just our own belief -- this new age of cloud engineering is
+working terrifically in practice. We have worked with training and coaching in organizations of
 all sizes -- small ISVs to Fortune 500 Enterprises -- to vastly
 improve their team efficiency and velocity. We almost always reduce
 configuration sprawl by an order of magnitude thanks to Pulumi, leading
@@ -130,7 +130,7 @@ favorite CI systems. Expect to see continued growth in all of these
 areas, in addition to new clouds, languages, and integrations.
 
 Today we launched [the Team Edition]({{< relref "/pricing" >}}) for our
-SaaS delivery platform. This includes many features that you, the
+SaaS delivery platform. This includes many features that you, the cloud engineering
 community, told us you need to better operationalize Pulumi within your
 teams. We already have many happy customers using these features
 successfully for organizations big and small. Expect to see a steady
