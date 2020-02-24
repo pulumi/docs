@@ -14,7 +14,7 @@ Scheduling events has long been an essential part of automation; many tasks need
 
 <!--more-->
 
-## Scheduling Serverless Functions
+## Taking out the trash
 
 Let's assume we have an S3 Bucket similar to the Recycle Bin on your desktop. It contains discarded items that we might not be ready to delete yet, but because we are paying for storage, we want to empty this bucket every Friday at 6:00 pm EST.
 
@@ -60,10 +60,10 @@ const emptyTrash: aws.cloudwatch.EventRuleEventHandler = async (
 
 Now that we have our handler function, we can create a CloudWatch event that fires based on the specified schedule, which is every Friday at 6:00 pm EST. We’ll need to represent that as a Schedule Expression. CloudWatch events support cron and rate expressions. If we wanted our function to run on a set interval (i.e., every 20 minutes), we would choose a rate expression. Since we want fine-grained schedule control, we’ll be using a cron expression. You can learn more at the [Schedule Expressions documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html). Because time for cron jobs uses UTC, we’ll need to schedule our event to fire on Friday at 11:00 pm UTC.
 
+```typescript
 // Schedule the function to run every Friday at 11:00pm UTC (6:00pm EST)
 // More info on Schedule Expressions at
 // https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html
-```typescript
 const emptyTrashSchedule: aws.cloudwatch.EventRuleEventSubscription = aws.cloudwatch.onSchedule(
   "emptyTrash",
   "cron(0 23 ? * FRI *)",
