@@ -15,17 +15,17 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.marketplace"></span><dl class="class">
 <dt id="pulumi_alicloud.marketplace.AwaitableGetProductResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">AwaitableGetProductResult</code><span class="sig-paren">(</span><em class="sig-param">products=None</em>, <em class="sig-param">product_code=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.AwaitableGetProductResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">AwaitableGetProductResult</code><span class="sig-paren">(</span><em class="sig-param">available_region=None</em>, <em class="sig-param">products=None</em>, <em class="sig-param">product_code=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.AwaitableGetProductResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.marketplace.AwaitableGetProductsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">AwaitableGetProductsResult</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">product_type=None</em>, <em class="sig-param">products=None</em>, <em class="sig-param">search_term=None</em>, <em class="sig-param">sort=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.AwaitableGetProductsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">AwaitableGetProductsResult</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">product_type=None</em>, <em class="sig-param">products=None</em>, <em class="sig-param">search_term=None</em>, <em class="sig-param">sort=None</em>, <em class="sig-param">suggested_price=None</em>, <em class="sig-param">supplier_id=None</em>, <em class="sig-param">supplier_name_keyword=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.AwaitableGetProductsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.marketplace.GetProductResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">GetProductResult</code><span class="sig-paren">(</span><em class="sig-param">products=None</em>, <em class="sig-param">product_code=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">GetProductResult</code><span class="sig-paren">(</span><em class="sig-param">available_region=None</em>, <em class="sig-param">products=None</em>, <em class="sig-param">product_code=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProduct.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.marketplace.GetProductResult.products">
@@ -43,7 +43,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_alicloud.marketplace.GetProductsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">GetProductsResult</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">product_type=None</em>, <em class="sig-param">products=None</em>, <em class="sig-param">search_term=None</em>, <em class="sig-param">sort=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">GetProductsResult</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">product_type=None</em>, <em class="sig-param">products=None</em>, <em class="sig-param">search_term=None</em>, <em class="sig-param">sort=None</em>, <em class="sig-param">suggested_price=None</em>, <em class="sig-param">supplier_id=None</em>, <em class="sig-param">supplier_name_keyword=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProducts.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.marketplace.GetProductsResult.category_id">
@@ -61,6 +61,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_alicloud.marketplace.GetProductsResult.products">
 <code class="sig-name descname">products</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductsResult.products" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of products. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.marketplace.GetProductsResult.suggested_price">
+<code class="sig-name descname">suggested_price</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductsResult.suggested_price" title="Permalink to this definition">¶</a></dt>
+<dd><p>The suggested price of the product.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.marketplace.GetProductsResult.supplier_id">
+<code class="sig-name descname">supplier_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductsResult.supplier_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The supplier id of the product.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -209,14 +221,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_alicloud.marketplace.get_product">
-<code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">get_product</code><span class="sig-paren">(</span><em class="sig-param">product_code=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.get_product" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">get_product</code><span class="sig-paren">(</span><em class="sig-param">available_region=None</em>, <em class="sig-param">product_code=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.get_product" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the Market product item details of Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.69.0+</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>product_code</strong> (<em>str</em>) – The product code of the market product.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>available_region</strong> (<em>str</em>) – A available region id used to filter market place Ecs images.</p></li>
+<li><p><strong>product_code</strong> (<em>str</em>) – The product code of the market product.</p></li>
+</ul>
 </dd>
 </dl>
 <blockquote>
@@ -226,7 +241,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_alicloud.marketplace.get_products">
-<code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">get_products</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">product_type=None</em>, <em class="sig-param">search_term=None</em>, <em class="sig-param">sort=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.get_products" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">get_products</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">product_type=None</em>, <em class="sig-param">search_term=None</em>, <em class="sig-param">sort=None</em>, <em class="sig-param">suggested_price=None</em>, <em class="sig-param">supplier_id=None</em>, <em class="sig-param">supplier_name_keyword=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.get_products" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the Market product items of Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.64.0+</p>
@@ -240,6 +255,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>product_type</strong> (<em>str</em>) – The type of products, Valid values: <code class="docutils literal notranslate"><span class="pre">APP</span></code>, <code class="docutils literal notranslate"><span class="pre">SERVICE</span></code>, <code class="docutils literal notranslate"><span class="pre">MIRROR</span></code>, <code class="docutils literal notranslate"><span class="pre">DOWNLOAD</span></code> and <code class="docutils literal notranslate"><span class="pre">API_SERVICE</span></code>.</p></li>
 <li><p><strong>search_term</strong> (<em>str</em>) – Search term in this query.</p></li>
 <li><p><strong>sort</strong> (<em>str</em>) – This field determines how to sort the filtered results, Valid values: <code class="docutils literal notranslate"><span class="pre">user_count-desc</span></code>, <code class="docutils literal notranslate"><span class="pre">created_on-desc</span></code>, <code class="docutils literal notranslate"><span class="pre">price-desc</span></code> and <code class="docutils literal notranslate"><span class="pre">score-desc</span></code>.</p></li>
+<li><p><strong>suggested_price</strong> (<em>float</em>) – The suggested price of the product.</p></li>
+<li><p><strong>supplier_id</strong> (<em>str</em>) – The supplier id of the product.</p></li>
+<li><p><strong>supplier_name_keyword</strong> (<em>str</em>) – The supplier name keyword of the product.</p></li>
 </ul>
 </dd>
 </dl>
