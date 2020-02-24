@@ -73,4 +73,4 @@ The Azure provider accepts the following configuration settings.  These can be p
 * `tenantId`: (Optional) The tenant ID to use. It can also be sourced from the `ARM_TENANT_ID` environment variable.
 * `useMsi`: (Optional) Set to true to authenticate using managed service identity. It can also be sourced from the `ARM_USE_MSI` environment variable.
 
-For Pulumi Azure support and troubleshooting, click the links in the sidebar on the left of the page.
+For Pulumi support and troubleshooting, click the links in the sidebar on the left of the page.
