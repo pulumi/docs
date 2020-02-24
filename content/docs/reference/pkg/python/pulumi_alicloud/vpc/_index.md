@@ -554,6 +554,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_alicloud.vpc.GetNetworksResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetNetworksResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map of tags assigned to the VPC.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_alicloud.vpc.GetNetworksResult.vpcs">
 <code class="sig-name descname">vpcs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetNetworksResult.vpcs" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of VPCs. Each element contains the following attributes:</p>
@@ -2642,7 +2648,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.SnatEntry">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">SnatEntry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">snat_ip=None</em>, <em class="sig-param">snat_table_id=None</em>, <em class="sig-param">source_vswitch_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.SnatEntry" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">SnatEntry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">snat_ip=None</em>, <em class="sig-param">snat_table_id=None</em>, <em class="sig-param">source_cidr=None</em>, <em class="sig-param">source_vswitch_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.SnatEntry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a snat resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2651,6 +2657,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>snat_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SNAT ip address, the ip must along bandwidth package public ip which <code class="docutils literal notranslate"><span class="pre">vpc.NatGateway</span></code> argument <code class="docutils literal notranslate"><span class="pre">bandwidth_packages</span></code>.</p></li>
 <li><p><strong>snat_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value can get from <code class="docutils literal notranslate"><span class="pre">vpc.NatGateway</span></code> Attributes “snat_table_ids”.</p></li>
+<li><p><strong>source_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private network segment of Ecs. This parameter and the <code class="docutils literal notranslate"><span class="pre">source_vswitch_id</span></code> parameter are mutually exclusive and cannot appear at the same time.</p></li>
 <li><p><strong>source_vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The vswitch ID.</p></li>
 </ul>
 </dd>
@@ -2677,6 +2684,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_alicloud.vpc.SnatEntry.source_cidr">
+<code class="sig-name descname">source_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.SnatEntry.source_cidr" title="Permalink to this definition">¶</a></dt>
+<dd><p>The private network segment of Ecs. This parameter and the <code class="docutils literal notranslate"><span class="pre">source_vswitch_id</span></code> parameter are mutually exclusive and cannot appear at the same time.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_alicloud.vpc.SnatEntry.source_vswitch_id">
 <code class="sig-name descname">source_vswitch_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.SnatEntry.source_vswitch_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The vswitch ID.</p>
@@ -2684,7 +2697,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_alicloud.vpc.SnatEntry.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">snat_entry_id=None</em>, <em class="sig-param">snat_ip=None</em>, <em class="sig-param">snat_table_id=None</em>, <em class="sig-param">source_vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.SnatEntry.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">snat_entry_id=None</em>, <em class="sig-param">snat_ip=None</em>, <em class="sig-param">snat_table_id=None</em>, <em class="sig-param">source_cidr=None</em>, <em class="sig-param">source_vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.SnatEntry.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SnatEntry resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2696,6 +2709,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>snat_entry_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the snat entry on the server.</p></li>
 <li><p><strong>snat_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SNAT ip address, the ip must along bandwidth package public ip which <code class="docutils literal notranslate"><span class="pre">vpc.NatGateway</span></code> argument <code class="docutils literal notranslate"><span class="pre">bandwidth_packages</span></code>.</p></li>
 <li><p><strong>snat_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value can get from <code class="docutils literal notranslate"><span class="pre">vpc.NatGateway</span></code> Attributes “snat_table_ids”.</p></li>
+<li><p><strong>source_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private network segment of Ecs. This parameter and the <code class="docutils literal notranslate"><span class="pre">source_vswitch_id</span></code> parameter are mutually exclusive and cannot appear at the same time.</p></li>
 <li><p><strong>source_vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The vswitch ID.</p></li>
 </ul>
 </dd>
