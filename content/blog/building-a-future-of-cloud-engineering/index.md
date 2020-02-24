@@ -55,7 +55,7 @@ developing software has matured greatly, and is now the default for many
 organizations. New practices such as infrastructure-as-code, immutable
 infrastructure, and Site Reliability Engineering have modernized these
 roles, giving us approaches that can leverage a more rigorous software
-engineering experience to tasks that used to be more ad-hoc, manual, and
+engineering practices to tasks that used to be more ad-hoc, manual, and
 error prone.
 
 But despite these fundamental changes, the way we engineer the cloud
@@ -92,9 +92,9 @@ Using your favorite general purpose programming language -- whether it
 is JavaScript, TypeScript, Python, Go, or something else -- you can
 express the entirety of your cloud software. As a cloud engineer, you can develop it in your
 favorite editor, with statement completion, built-in documentation, and
-interactive feedback when you've got something wrong. As a cloud engineer, you can test
+interactive feedback when you've got something wrong. You can test
 things and benefit from static analysis and linters that enforce best
-practices. As a cloud engineer, you can reuse packages, publish your own, and refactor your
+practices. You can reuse packages, publish your own, and refactor your
 code just like with application code. In fact, after living in this
 world for long enough, the boundary between infrastructure and
 application code begins to blur.
@@ -113,7 +113,7 @@ It's never been such a breeze to go from idea to production.
 
 We've become enamored by this new approach to creating software that is
 truly born in the cloud. But it's not just our own belief -- this new age of cloud engineering is
-working terrifically in practice. We have worked with training and coaching in organizations of
+working terrifically in practice. We have worked with organizations of
 all sizes -- small ISVs to Fortune 500 Enterprises -- to vastly
 improve their team efficiency and velocity. We almost always reduce
 configuration sprawl by an order of magnitude thanks to Pulumi, leading
