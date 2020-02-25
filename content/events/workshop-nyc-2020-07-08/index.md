@@ -1,6 +1,7 @@
 ---
 # Name of the event.
 title: "Infrastructure As Code Workshop | New York City, NY"
+subtitle: "Managing your cloud with Pulumi"
 meta_desc: "Join Pulumi at our Infrastructure As Code Workshop in New York City and learn more about cloud programming, infrastructure as code, and many other topics."
 
 # The layout of the landing page.
