@@ -7,7 +7,6 @@ menu:
     parent: languages
     weight: 2
 
-aliases: ["/dotnet/"]
 ---
 
 <img src="/logos/tech/logo-golang.png" align="right" width="150" style="padding:8px; margin-top: -64px">
