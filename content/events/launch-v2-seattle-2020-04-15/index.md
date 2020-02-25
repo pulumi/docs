@@ -1,7 +1,7 @@
 ---
 # Name of the event.
 title: "Pulumi 2.0 Launch Party"
-subtitle: "Join us for tech talks, snacks and drinks in Seattle"
+subtitle: "Join us for tech talks, snacks, and drinks in Seattle"
 meta_desc: "Join us in celebration of our 2.0 launch! Meet new Infrastructure as Code enthusiasts and enjoy some drinks and snacks on us."
 
 # The layout of the landing page.
@@ -32,6 +32,18 @@ event:
     cost: "Free"
 ---
 
-## Details
+## About the Event
 
-Join us in celebration of our 1.0 launch! Meet new Infrastructure as Code enthusiasts and enjoy some drinks and snacks on us.
+We are very excited to deliver this release to our customers and community and want to invited everyone to come celebrate with us! Meet new Infrastructure as Code enthusiasts and enjoy some drinks and snacks on us.
+
+Our 2.0 release aligns with two general themes:
+
+* **Best in class productivity**. Pulumi’s foundation of general-purpose languages has already enabled great productivity gains thanks to ecosystems of tools, sharing and reuse, and familiarity. But we have ideas for more. This includes more languages, features that bring deployments closer to the inner development loop like watch mode, more libraries of off-the-shelf patterns and practices, and the ability to test your infrastructure more easily.
+
+* **Belts and suspenders for teams and enterprises**. As we work with more teams and enterprises to deliver demanding many-cloud workloads to public, private, and hybrid clouds — increasingly involving Kubernetes, and often spanning developers and operations teams — we have heard about many features that would maximize Pulumi’s effectiveness and utility. This includes advanced security and compliance capabilities, more organization-wide controls and policies, and more flexible self- and on-premises hosting of the Pulumi service.
+
+## Speakers
+
+Speakers to be announced at a later date.
+
+**Food and drinks provided**.
