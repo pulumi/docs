@@ -204,8 +204,12 @@ main {
 }
 
 .code-file-nav--item {
-    @apply inline-block rounded-t py-2 px-4 text-blue-700 text-white font-semibold;
+    @apply inline-block rounded-t py-2 px-2 text-blue-700 text-white font-semibold text-sm;
     background-color: #1a202c;
+
+    @screen lg {
+        @apply text-base px-4;
+    }
 
     &.file-not-active {
         background-color: #11151e;
