@@ -2,8 +2,8 @@
 title: Modern Infrastructure as Code | Real Languages, Any Cloud
 meta_desc: Stop using a proprietary DSL to describe infrastructure and start describing infrastructure using real programming languages and familiar tools.
 url: /terraform/real-code
-type: page
-layout: ppc-landing
+type: paid
+layout: ppc-terraform-landing
 
 hero:
     title: Modern Languages. Modern Infrastructures.
