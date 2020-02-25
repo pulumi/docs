@@ -48,9 +48,9 @@ the option to render YAML that they can integrate into existing workflows. The `
 adds the `renderYamlToDirectory` option, which enables this behavior.
 
 This option is available in every Pulumi-supported language, including TypeScript/JavaScript, Python, and .NET
-(Go support is coming soon!). Aside from easily templating configuration across resources, using a real programming
-language allows you to write and consume libraries, and easily mix in infrastructure configuration (e.g., managed
-database endpoints, object storage, etc.), all in the same program.
+([Go support is coming soon!](https://github.com/pulumi/pulumi-kubernetes/issues/70)). Aside from easily templating
+configuration across resources, using a real programming language allows you to write and consume libraries, and easily
+mix in infrastructure configuration (e.g., managed database endpoints, object storage, etc.), all in the same program.
 
 ## Rendering YAML from TypeScript
 
