@@ -594,7 +594,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_postgresql.Role">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">Role</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bypass_row_level_security=None</em>, <em class="sig-param">connection_limit=None</em>, <em class="sig-param">create_database=None</em>, <em class="sig-param">create_role=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">encrypted_password=None</em>, <em class="sig-param">inherit=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">replication=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">search_paths=None</em>, <em class="sig-param">skip_drop_role=None</em>, <em class="sig-param">skip_reassign_owned=None</em>, <em class="sig-param">superuser=None</em>, <em class="sig-param">valid_until=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Role" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">Role</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bypass_row_level_security=None</em>, <em class="sig-param">connection_limit=None</em>, <em class="sig-param">create_database=None</em>, <em class="sig-param">create_role=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">encrypted_password=None</em>, <em class="sig-param">inherit=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">replication=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">search_paths=None</em>, <em class="sig-param">skip_drop_role=None</em>, <em class="sig-param">skip_reassign_owned=None</em>, <em class="sig-param">statement_timeout=None</em>, <em class="sig-param">superuser=None</em>, <em class="sig-param">valid_until=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Role" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Role</span></code> resource creates and manages a role on a PostgreSQL
 server.</p>
 <p>When a <code class="docutils literal notranslate"><span class="pre">.Role</span></code> resource is removed, the PostgreSQL ROLE will
@@ -661,6 +661,7 @@ can be executed to dropped the ROLE from the catalog.  This is the first and
 second steps taken when removing a ROLE from a database (the second step being
 an implicit
 <cite>``DROP OWNED`</cite> &lt;<a class="reference external" href="https://www.postgresql.org/docs/current/static/sql-drop-owned.html">https://www.postgresql.org/docs/current/static/sql-drop-owned.html</a>&gt;`_).</p></li>
+<li><p><strong>statement_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Defines <cite>``statement_timeout`</cite> &lt;<a class="reference external" href="https://www.postgresql.org/docs/current/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT">https://www.postgresql.org/docs/current/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT</a>&gt;`_ setting for this role which allows to abort any statement that takes more than the specified amount of time.</p></li>
 <li><p><strong>superuser</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Defines whether the role is a “superuser”, and
 therefore can override all access restrictions within the database.  Default
 value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -792,6 +793,12 @@ an implicit
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_postgresql.Role.statement_timeout">
+<code class="sig-name descname">statement_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Role.statement_timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines <cite>``statement_timeout`</cite> &lt;<a class="reference external" href="https://www.postgresql.org/docs/current/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT">https://www.postgresql.org/docs/current/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT</a>&gt;`_ setting for this role which allows to abort any statement that takes more than the specified amount of time.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_postgresql.Role.superuser">
 <code class="sig-name descname">superuser</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Role.superuser" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines whether the role is a “superuser”, and
@@ -811,7 +818,7 @@ set to <code class="docutils literal notranslate"><span class="pre">infinity</sp
 
 <dl class="method">
 <dt id="pulumi_postgresql.Role.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bypass_row_level_security=None</em>, <em class="sig-param">connection_limit=None</em>, <em class="sig-param">create_database=None</em>, <em class="sig-param">create_role=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">encrypted_password=None</em>, <em class="sig-param">inherit=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">replication=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">search_paths=None</em>, <em class="sig-param">skip_drop_role=None</em>, <em class="sig-param">skip_reassign_owned=None</em>, <em class="sig-param">superuser=None</em>, <em class="sig-param">valid_until=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Role.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bypass_row_level_security=None</em>, <em class="sig-param">connection_limit=None</em>, <em class="sig-param">create_database=None</em>, <em class="sig-param">create_role=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">encrypted_password=None</em>, <em class="sig-param">inherit=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">replication=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">search_paths=None</em>, <em class="sig-param">skip_drop_role=None</em>, <em class="sig-param">skip_reassign_owned=None</em>, <em class="sig-param">statement_timeout=None</em>, <em class="sig-param">superuser=None</em>, <em class="sig-param">valid_until=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Role.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Role resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -867,6 +874,7 @@ can be executed to dropped the ROLE from the catalog.  This is the first and
 second steps taken when removing a ROLE from a database (the second step being
 an implicit
 <cite>``DROP OWNED`</cite> &lt;<a class="reference external" href="https://www.postgresql.org/docs/current/static/sql-drop-owned.html">https://www.postgresql.org/docs/current/static/sql-drop-owned.html</a>&gt;`_).</p></li>
+<li><p><strong>statement_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Defines <cite>``statement_timeout`</cite> &lt;<a class="reference external" href="https://www.postgresql.org/docs/current/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT">https://www.postgresql.org/docs/current/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT</a>&gt;`_ setting for this role which allows to abort any statement that takes more than the specified amount of time.</p></li>
 <li><p><strong>superuser</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Defines whether the role is a “superuser”, and
 therefore can override all access restrictions within the database.  Default
 value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -932,6 +940,7 @@ a PostgreSQL database.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DATABASE in which where this schema will be created. (Default: The database used by your <code class="docutils literal notranslate"><span class="pre">provider</span></code> configuration)</p></li>
 <li><p><strong>drop_cascade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true, will also drop all the objects that are contained in the schema. (Default: false)</p></li>
 <li><p><strong>if_not_exists</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true, use the existing schema if it exists. (Default: true)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the schema. Must be unique in the PostgreSQL
@@ -953,6 +962,12 @@ policy block supports fields documented below.</p></li>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/schema.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/schema.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_postgresql.Schema.database">
+<code class="sig-name descname">database</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Schema.database" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DATABASE in which where this schema will be created. (Default: The database used by your <code class="docutils literal notranslate"><span class="pre">provider</span></code> configuration)</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_postgresql.Schema.drop_cascade">
 <code class="sig-name descname">drop_cascade</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Schema.drop_cascade" title="Permalink to this definition">¶</a></dt>
@@ -1003,6 +1018,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DATABASE in which where this schema will be created. (Default: The database used by your <code class="docutils literal notranslate"><span class="pre">provider</span></code> configuration)</p></li>
 <li><p><strong>drop_cascade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true, will also drop all the objects that are contained in the schema. (Default: false)</p></li>
 <li><p><strong>if_not_exists</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true, use the existing schema if it exists. (Default: true)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the schema. Must be unique in the PostgreSQL
