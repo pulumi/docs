@@ -468,7 +468,7 @@ db = Database('db',
 ```
 
 ```go
-db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ }, 
+db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
     pulumi.AdditionalSecretOutputs([]string{"password"}))
 ```
 
@@ -534,7 +534,7 @@ db = Database('db',
 ```
 
 ```go
-db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ }, 
+db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
     pulumi.Aliases([]pulumi.Alias{pulumi.Alias{
         URN: pulumi.URN("urn:pulumi:stackname::projectname::aws:rds/database:Database::old-name-for-db"),
     }})
