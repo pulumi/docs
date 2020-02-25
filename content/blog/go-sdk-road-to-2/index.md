@@ -7,7 +7,7 @@ meta_desc: "Pulumi + Go is a powerful combo for your cloud-native infrastructure
 meta_image: "pulumigo.png"
 ---
 
-Here at Pulumi, everyone on our engineering team is a Gopher. We build our open-source [pulumi/pulumi engine](https://github.com/pulumi/pulumi) and our SaaS with Go. Pulumi has supported Go in preview for more than a year, but we've recently invested in making Go support for Pulumi great as part of [Pulumi 2.0]({{< relref "/blog/pulumi-2-0-roadmap#better-language-support" >}}).
+Here at Pulumi, everyone on our engineering team is a Gopher. Go has quickly become the "language of the cloud," and so when we chose to build our open-source [pulumi/pulumi engine](https://github.com/pulumi/pulumi) and SaaS backend, we chose Go. As such, we are very excited to welcome Go to the family of supported infrastructure as code languages as part of [Pulumi 2.0]({{< relref "/blog/pulumi-2-0-roadmap#better-language-support" >}}).
 
 ## What is Pulumi?
 
