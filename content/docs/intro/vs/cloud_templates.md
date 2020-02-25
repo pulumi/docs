@@ -10,20 +10,13 @@ menu:
 aliases: ["/docs/reference/vs/cloud_templates/"]
 ---
 
-## What is CloudFormation?
-
 All major cloud providers offer their own form of infrastructure-as-"code" solution, typically by way of JSON or
 YAML-based templating solutions. This includes AWS CloudFormation and Azure Resource Manager (ARM) templates.
 
 These markup-based configuration files are often uploaded to a hosted service in the target cloud, where a hosted
 service will then process the files to create, update, or delete resources as necessary.
 
-## The Pulumi Difference
-
-Pulumi offers a multi-cloud alternative to more restrictive infrastructure-as-code template solutions, such as AWS CloudFormation. Pulumi allows you to streamline processes through managing resources from different platforms all in one place, using real code, in your favorite language.
-
-Pulumi's model shares a lot with these systems. Although Pulumi programs are written in imperative, familiar languages,
-they are ultimately evaluated to produce a similar set of create, update, or delete operations for your cloud resources. This is where Pulumi begins to diverge from these other solutions such as AWS CloudFormation, however.
+Pulumi offers a multi-cloud alternative to more restrictive infrastructure-as-code template solutions, like AWS CloudFormation. Pulumi allows you to streamline processes by managing resources from different platforms all in one place, using real code, in your favorite language.
 
 Pulumi lets you use your favorite languages, instead of bespoke templating solutions such as CloudFormation. These
 typically use syntaxes that are awkward, hard to learn, and even harder to remember. Pulumi programs are just real
