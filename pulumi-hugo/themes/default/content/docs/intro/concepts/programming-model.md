@@ -1750,7 +1750,7 @@ There are two ways to programmatically create secret values:
 <div class="language-prologue-go"></div>
 
 * Using `config.GetSecret(key)` or `config.RequireSecret(key)` when reading a value from config.
-* Calling `pulumi.SecretT(value)` to construct a secret from an existing value.
+* Calling `pulumi.ToSecret(value)` to construct a secret from an existing value.
 
 <div class="language-prologue-csharp"></div>
 
