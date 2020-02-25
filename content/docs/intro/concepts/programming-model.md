@@ -90,36 +90,36 @@ server = aws.ec2.Instance('web-server',
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/go/pulumi"
+    "github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+    "github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		group, err := ec2.NewSecurityGroup(ctx, "web-sg", &ec2.SecurityGroupArgs{
-			Description: pulumi.String("Enable HTTP access"),
-			Ingress: ec2.SecurityGroupIngressArray{
-				ec2.SecurityGroupIngressArgs{
-					Protocol:   pulumi.String("tcp"),
-					FromPort:   pulumi.Int(80),
-					ToPort:     pulumi.Int(80),
-					CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		server, err := ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
-			Ami:            pulumi.String("ami-6869aa05"),
-			InstanceType:   pulumi.String("t2.micro"),
-			SecurityGroups: pulumi.StringArray{group.Name},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        group, err := ec2.NewSecurityGroup(ctx, "web-sg", &ec2.SecurityGroupArgs{
+            Description: pulumi.String("Enable HTTP access"),
+            Ingress: ec2.SecurityGroupIngressArray{
+                ec2.SecurityGroupIngressArgs{
+                    Protocol:   pulumi.String("tcp"),
+                    FromPort:   pulumi.Int(80),
+                    ToPort:     pulumi.Int(80),
+                    CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
+                },
+            },
+        })
+        if err != nil {
+            return err
+        }
+        server, err := ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
+            Ami:            pulumi.String("ami-6869aa05"),
+            InstanceType:   pulumi.String("t2.micro"),
+            SecurityGroups: pulumi.StringArray{group.Name},
+        })
+        if err != nil {
+            return err
+        }
+        return nil
+    })
 }
 ```
 
@@ -183,8 +183,8 @@ pulumi.export('public_dns', server.public_dns)
 ```go
 // ...
         ctx.Export("publicIp", server.PublicIp)
-		ctx.Export("publicHostName", server.PublicDns)
-		return nil
+        ctx.Export("publicHostName", server.PublicDns)
+        return nil
     })
 }
 ```
@@ -1062,19 +1062,19 @@ import (
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
+    pulumi.Run(func(ctx *pulumi.Context) error {
         group, err := ec2.GetSecurityGroup(ctx, "group", pulumi.ID("sg-0dfd33cdac25b1ec9"), nil)
-		if err != nil {
-			return err
-		}
-		server, err := ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
-			Ami:            pulumi.String("ami-6869aa05"),
-			InstanceType:   pulumi.String("t2.micro"),
-			SecurityGroups: pulumi.StringArray{group.Name},
-		})
-		if err != nil {
-			return err
-		}
+        if err != nil {
+            return err
+        }
+        server, err := ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
+            Ami:            pulumi.String("ami-6869aa05"),
+            InstanceType:   pulumi.String("t2.micro"),
+            SecurityGroups: pulumi.StringArray{group.Name},
+        })
+        if err != nil {
+            return err
+        }
         return nil
     })
 }
@@ -1148,17 +1148,17 @@ class MyComponent(pulumi.ComponentResource):
 
 ```go
 type MyComponent struct {
-	pulumi.ResourceState
+    pulumi.ResourceState
 }
 
 func NewMyComponent(ctx *pulumi.Context, name string, opts ...pulumi.ResourceOption) (*MyComponent, error) {
-	myComponent := &MyComponent{}
-	err := ctx.RegisterComponentResource("pkg:index:MyComponent", name, myComponent, opts...)
-	if err != nil {
-		return nil, err
-	}
+    myComponent := &MyComponent{}
+    err := ctx.RegisterComponentResource("pkg:index:MyComponent", name, myComponent, opts...)
+    if err != nil {
+        return nil, err
+    }
 
-	return myComponent, nil
+    return myComponent, nil
 }
 ```
 
@@ -1691,9 +1691,9 @@ def split(input):
 
 ```go
 func split(input pulumi.StringInput) pulumi.StringArrayOutput {
-	return input.ToStringOutput().ApplyStringArray(func(s string) []string {
-		return strings.Split(s, ",")
-	})
+    return input.ToStringOutput().ApplyStringArray(func(s string) []string {
+        return strings.Split(s, ",")
+    })
 }
 ```
 
@@ -2074,18 +2074,18 @@ print(f"Active: ${data.active}")
 
 ```go
 type Data struct {
-	Active bool
-	Nums   []int
+    Active bool
+    Nums   []int
 }
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		var d Data
-		cfg := config.New(ctx, "")
-		cfg.RequireObject("data", &d)
-		fmt.Printf("Active: %v\n", d.Active)
-		return nil
-	})
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        var d Data
+        cfg := config.New(ctx, "")
+        cfg.RequireObject("data", &d)
+        fmt.Printf("Active: %v\n", d.Active)
+        return nil
+    })
 }
 ```
 
