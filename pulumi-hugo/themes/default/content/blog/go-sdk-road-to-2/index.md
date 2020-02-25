@@ -2,7 +2,7 @@
 title: "Modern Cloud Infrastructure in Go - The Road to 2.0"
 authors: ["evan-boyle"]
 tags: ["go", "aws", "gcp", "azure"]
-date: "2020-02-25"
+date: "2020-02-27"
 meta_desc: "Pulumi + Go is a powerful combo for your cloud-native infrastructure."
 meta_image: "pulumigo.png"
 ---
@@ -11,17 +11,19 @@ Here at Pulumi, everyone on our engineering team is a Gopher. Go has quickly bec
 
 ## What is Pulumi?
 
+Go has become the lingua franca of cloud-native infrastructure development. From projects like Docker, to Kubernetes, the community has embraced Go. The result is an ecosystem rich in tooling and packages designed for systems and cloud engineering.
+
 Pulumi lets you use real languages to express your application’s infrastructure needs, using a powerful technique called “infrastructure as code.” Using infrastructure as code, you declare desired infrastructure, and an engine provisions it for you so that it’s automated, easy to replicate, and robust enough for demanding production requirements. Pulumi improves this process by leveraging real languages and making modern cloud infrastructure patterns, such as containers and serverless programs, first-class and easy.
 
-Automatically create, update, or delete cloud resources using Pulumi’s infrastructure as code engine, removing manual point-and-clicking in the cloud provider consoles, UIs, and ad-hoc scripts.
-Use your favorite IDEs and tools, including Visual Studio Code, taking advantage of features like auto-completion, refactoring, and interactive documentation.
-Catch mistakes early on with standard compiler errors, and an infrastructure-specific policy engine for enforcing security, compliance, and best practices.
-Reuse any existing go packages, or distribute your own, whether that’s for infrastructure best practices, productivity, or just general programming patterns.
-Build scalable cloud applications using classic infrastructure cloud-native technologies. including serverless functions, and highly scalable databases such as AWS Aurora, into your core development experience, bringing them closer to your application code.
+- Automatically create, update, or delete cloud resources using Pulumi’s infrastructure as code engine, removing manual point-and-clicking in the cloud provider consoles, UIs, and ad-hoc scripts.
+- Use your favorite IDEs and tools, including Visual Studio Code, taking advantage of features like auto-completion, refactoring, and interactive documentation.
+- Catch mistakes early on with standard compiler errors, and an infrastructure-specific policy engine for enforcing security, compliance, and best practices.
+- Reuse any existing go packages, or distribute your own, whether that’s for infrastructure best practices, productivity, or just general programming patterns.
+- Build scalable cloud applications using classic infrastructure cloud-native technologies. including serverless functions, and highly scalable databases such as AWS Aurora, into your core development experience, bringing them closer to your application code.
 
 Pulumi’s free open source SDK, which includes a CLI and assortment of libraries, enables these capabilities.
 
-Creating an AWS S3 Bucket is familiar and simple:
+Creating an AWS S3 Bucket is a familiar and simple example that demonstrates these advantages:
 
 ```go
 package main
@@ -56,7 +58,7 @@ Inputs, Outputs, and functions that operate over them ([All]({{< relref "/docs/i
 
 ## Try Pulumi + Go Today
 
-Although Pulumi for Go is in “preview” status, it supports all of the essential Pulumi programming model features (and the rest is on its way). Our goal is to gather feedback and over the next few weeks, and work hard to improve the Go experience across the board, including more examples and better documentation. To get started check out:
+Although Pulumi for Go is in “preview” status until 2.0 is released, it supports all of the essential Pulumi programming model features (and the rest is on its way). Our goal is to gather feedback and over the next few weeks, and work hard to improve the Go experience across the board, including more examples and better documentation. To get started check out:
 
 - Getting started with Go and [AWS]({{< relref "/docs/get-started/aws" >}}), [Azure]({{< relref "/docs/get-started/azure" >}}), or [Google Cloud]({{< relref "/docs/get-started/gcp" >}}).
 - Author and deploy serverless functions in Go on [AWS Lambda](https://github.com/pulumi/examples/tree/master/aws-go-lambda) and [GCP Cloud Functions](https://github.com/pulumi/examples/tree/master/gcp-go-functions).
