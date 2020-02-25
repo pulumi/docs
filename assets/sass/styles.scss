@@ -201,6 +201,24 @@ main {
         padding-left: 5px;
         padding-right: 5px;
     }
+
+    .lnt:before {
+        content: "+ ";
+    }
+
+    .code-diff-addition-overlay {
+        background-color: #3beb3b36;
+        z-index: 1;
+    }
+
+    .code-diff-subtraction-overlay {
+        background-color: rgba(235, 59, 59, 0.21);
+        z-index: 1;
+    }
+
+    .copy-button-container {
+        display: none;
+    }
 }
 
 .code-file-nav--item {
