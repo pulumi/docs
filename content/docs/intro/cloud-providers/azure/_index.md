@@ -1,5 +1,5 @@
 ---
-title: Azure Provider
+title: Azure
 meta_desc: The Azure provider for Pulumi can be used to provision any of the cloud resources available in Azure via Azure Resource Manager (ARM).
 menu:
   intro:
