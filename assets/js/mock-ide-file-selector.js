@@ -1,5 +1,4 @@
 $(function() {
-    console.log("file selector starting...");
     var codeBlockIds = ["terraformComparePython","terraformCompareGo","terraformCompareCSharp","terraformCompareTypeScript"];
 
     /**
@@ -12,23 +11,27 @@ $(function() {
 
             if (codeBlockId === blockId) {
                 $("#" + codeBlockId + " .compare-code-block").removeClass("hidden");
-                $("#" + codeBlockId + " a").removeClass("file-not-active");
+                $("#" + codeBlockId + "Selector").removeClass("file-not-active");
             } else {
                 $("#" + codeBlockId + " .compare-code-block").addClass("hidden");
-                $("#" + codeBlockId + " a").addClass("file-not-active");
+                $("#" + codeBlockId + "Selector").addClass("file-not-active");
             }
+        }
+    }
+
+    function handleFileSelectorClick(blockId) {
+        return function(e) {
+            e.preventDefault();
+            displayCodeBlock(blockId);
         }
     }
 
     function registerClickHandlers() {
         for(var i = 0; i < codeBlockIds.length; i ++) {
-            var clickId = "#" + codeBlockIds[i] + " a";
+            var clickId = "#" + codeBlockIds[i] + "Selector";
+            var blockId = codeBlockIds[i];
 
-            $(clickId).on("click", function(e) {
-                e.preventDefault();
-                console.log(this.parentElement.id);
-                displayCodeBlock(this.parentElement.id);
-            });
+            $(clickId).on("click", handleFileSelectorClick(blockId));
         }
     }
 

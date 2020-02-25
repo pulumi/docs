@@ -1,64 +1,64 @@
-{{ $terraformCodeBlock := `- resource "aws_s3_bucket" "mybucket" {
--     bucket_prefix = "mybucket"
-- }
+{{ $terraformCodeBlock := `resource "aws_s3_bucket" "mybucket" {
+    bucket_prefix = "mybucket"
+}
 
-- data "archive_file" "lambda_zip" {
--     type        = "zip"
--     output_path = "lambda.zip"
+data "archive_file" "lambda_zip" {
+    type        = "zip"
+    output_path = "lambda.zip"
 
--     source {
--     filename = "index.js"
--     content = < {
--     console.log(JSON.stringify(ev))
-- }
-- EOF
--     }
-- }
+    source {
+    filename = "index.js"
+    content = < {
+    console.log(JSON.stringify(ev))
+}
+EOF
+    }
+}
 
-- data "aws_iam_policy_document" "lambda-assume-role-policy" {
--     statement {
--         actions = ["sts:AssumeRole"]
+data "aws_iam_policy_document" "lambda-assume-role-policy" {
+    statement {
+        actions = ["sts:AssumeRole"]
 
--         principals {
--             type        = "Service"
--             identifiers = ["lambda.amazonaws.com"]
--         }
--     }
-- }
+        principals {
+            type        = "Service"
+            identifiers = ["lambda.amazonaws.com"]
+        }
+    }
+}
 
-- resource "aws_iam_role" "lambda" {
--     assume_role_policy = "${data.aws_iam_policy_document.lambda-assume-role-policy.json}"
-- }
+resource "aws_iam_role" "lambda" {
+    assume_role_policy = "${data.aws_iam_policy_document.lambda-assume-role-policy.json}"
+}
 
-- resource "aws_lambda_function" "my_lambda" {
--     filename = "${data.archive_file.lambda_zip.output_path}"
--     source_code_hash = "${data.archive_file.lambda_zip.output_base64sha256}"
--     function_name = "my_lambda"
--     role = "${aws_iam_role.lambda.arn}"
--     handler = "index.handler"
--     runtime = "nodejs8.10"
-- }
+resource "aws_lambda_function" "my_lambda" {
+    filename = "${data.archive_file.lambda_zip.output_path}"
+    source_code_hash = "${data.archive_file.lambda_zip.output_base64sha256}"
+    function_name = "my_lambda"
+    role = "${aws_iam_role.lambda.arn}"
+    handler = "index.handler"
+    runtime = "nodejs8.10"
+}
 
-- resource "aws_lambda_permission" "allow_bucket" {
--     statement_id  = "AllowExecutionFromS3Bucket"
--     action        = "lambda:InvokeFunction"
--     function_name = "${aws_lambda_function.my_lambda.arn}"
--     principal     = "s3.amazonaws.com"
--     source_arn    = "${aws_s3_bucket.mybucket.arn}"
-- }
+resource "aws_lambda_permission" "allow_bucket" {
+    statement_id  = "AllowExecutionFromS3Bucket"
+    action        = "lambda:InvokeFunction"
+    function_name = "${aws_lambda_function.my_lambda.arn}"
+    principal     = "s3.amazonaws.com"
+    source_arn    = "${aws_s3_bucket.mybucket.arn}"
+}
 
-- resource "aws_s3_bucket_notification" "bucket_notification" {
--     bucket = "${aws_s3_bucket.mybucket.id}"
+resource "aws_s3_bucket_notification" "bucket_notification" {
+    bucket = "${aws_s3_bucket.mybucket.id}"
 
--     lambda_function {
--         lambda_function_arn = "${aws_lambda_function.my_lambda.arn}"
--         events              = ["s3:ObjectCreated:*"]
--     }
-- }
+    lambda_function {
+        lambda_function_arn = "${aws_lambda_function.my_lambda.arn}"
+        events              = ["s3:ObjectCreated:*"]
+    }
+}
 
-- output "bucket_name" {
--     value = "${aws_s3_bucket.mybucket.id}"
-- }`}}
+output "bucket_name" {
+    value = "${aws_s3_bucket.mybucket.id}"
+}`}}
 
 {{ $typeScriptCodeBlock := `import * as aws from "@pulumi/aws";
 import { readFileSync, readdirSync } from "fs";
@@ -77,22 +77,22 @@ for (let file of files) {
 
 export const bucketname = bucket.id;` }}
 
-{{ $pythonCodeBlock := `+ import os
+{{ $pythonCodeBlock := `import os
 
-+ from pulumi import export, FileAsset
-+ from pulumi_aws import s3
+from pulumi import export, FileAsset
+from pulumi_aws import s3
 
-+ bucket = s3.Bucket('my-bucket')
+bucket = s3.Bucket('my-bucket')
 
-+ for file in os.listdir('files'):
-+     filepath = os.path.join(content_dir, file)
-+     mime_type, _ = mimetypes.guess_type(filepath)
-+     s3.BucketObject(file,
-+         bucket=bucket.id,
-+         source=FileAsset(filepath),
-+         content_type=mime_type)
+for file in os.listdir('files'):
+    filepath = os.path.join(content_dir, file)
+    mime_type, _ = mimetypes.guess_type(filepath)
+    s3.BucketObject(file,
+        bucket=bucket.id,
+        source=FileAsset(filepath),
+        content_type=mime_type)
 
-+ pulumi.export('bucket_name',  bucket.id)`}}
+pulumi.export('bucket_name',  bucket.id)`}}
 
 {{ $goCodeBlock := `package main
 
@@ -155,20 +155,66 @@ class Program
     }
 }`}}
 
-<div id="terraformCompareCodeBlock" class="container mx-auto">
+<!-- Split diff -->
+<div id="terraformCompareCodeBlock" class="container mx-auto  mt-10">
     {{ partial "chrome.html" . }}
     <div class="flex w-full">
-        <div class="w-6/12 relative">
+        <div class="w-6/12">
+            <ul class="bg-gray-800">
+                <li class="-mb-px mr-1">
+                    <span class="code-file-nav--item">main.tf</span>
+                </li>
+            </ul>
+        </div>
+        <div class="w-6/12">
+            <ul class="flex bg-gray-800">
+                <li class="-mb-px">
+                    <a id="terraformComparePythonSelector" class="code-file-nav--item" href="#">__main__.py</a>
+                </li>
+                <li class="-mb-px">
+                    <a id="terraformCompareTypeScriptSelector" class="code-file-nav--item file-not-active" href="#">index.ts</a>
+                </li>
+                <li class="-mb-px">
+                    <a id="terraformCompareGoSelector" class="code-file-nav--item file-not-active" href="#">main.go</a>
+                </li>
+                <li class="-mb-px">
+                    <a id="terraformCompareCSharpSelector" class="code-file-nav--item file-not-active" href="#">Program.cs</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="flex w-full">
+        <div class="w-6/12 relative terraform-code-block">
             <div class="absolute inset-0 code-diff-subtraction-overlay"></div>
             {{ partial "code" (dict "code" $terraformCodeBlock "lang" "plain" "mode" "dark" "opts" "linenos=true") }}
         </div>
-        <div class="w-6/12 relative table">
-            <!-- <div class="absolute inset-0 code-diff-addition-overlay"></div> -->
-            {{ partial "code" (dict "code" $pythonCodeBlock "lang" "python" "mode" "dark" "opts" "linenos=true") }}
+        <div class="w-6/12 relative table pulumi-code-block">
+            <div class="absolute inset-0 code-diff-addition-overlay"></div>
+            <div id="terraformComparePython">
+                <div class="compare-code-block">
+                    {{ partial "code" (dict "code" $pythonCodeBlock "lang" "python" "mode" "dark" "opts" "linenos=true") }}
+                </div>
+            </div>
+            <div id="terraformCompareTypeScript">
+                <div class="compare-code-block hidden">
+                    {{ partial "code" (dict "code" $typeScriptCodeBlock "lang" "typescript" "mode" "dark" "opts" "linenos=true") }}
+                </div>
+            </div>
+            <div id="terraformCompareGo">
+                <div class="compare-code-block hidden">
+                    {{ partial "code" (dict "code" $goCodeBlock "lang" "go" "mode" "dark" "opts" "linenos=true") }}
+                </div>
+            </div>
+            <div id="terraformCompareCSharp">
+                <div class="compare-code-block hidden">
+                    {{ partial "code" (dict "code" $cSharpCodeBlock "lang" "csharp" "mode" "dark" "opts" "linenos=true") }}
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
+<!-- Side by side comparison -->
 <!-- <div id="terraformCompareCodeBlock" class="flex mt-10">
     <div class="w-5/12">
         {{ partial "chrome.html" . }}

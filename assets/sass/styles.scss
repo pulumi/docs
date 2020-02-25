@@ -202,8 +202,16 @@ main {
         padding-right: 5px;
     }
 
-    .lnt:before {
-        content: "+ ";
+    .terraform-code-block {
+        .lnt:before {
+            content: "- ";
+        }
+    }
+
+    .pulumi-code-block {
+        .lnt:before {
+            content: "+ ";
+        }
     }
 
     .code-diff-addition-overlay {
