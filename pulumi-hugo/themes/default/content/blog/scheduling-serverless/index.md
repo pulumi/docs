@@ -109,6 +109,6 @@ Test it out by adding some items to your bucket and see if they’re deleted. Yo
 
 This simple example demonstrates what you can do with serverless functions, such as AWS Lambda, without having to set up your infrastructure. Check out more serverless examples in the [Pulumi Examples](https://github.com/pulumi/examples) to see what you can build.
 
-- [Serverless URL Shortener on Azure](https://github.com/pulumi/examples/tree/aws-ts-scheduled-function/azure-ts-serverless-url-shortener-global)
-- [GCP function to SMS friends](https://github.com/pulumi/examples/tree/aws-ts-scheduled-function/gcp-py-functions)
-- [Serverless App to Copy and Zip S3 Objects Between Buckets](https://github.com/pulumi/examples/tree/aws-ts-scheduled-function/aws-ts-s3-lambda-copyzip)
+- [Serverless URL Shortener on Azure](https://github.com/pulumi/examples/tree/master/azure-ts-serverless-url-shortener-global)
+- [GCP function to SMS friends](https://github.com/pulumi/examples/tree/master/gcp-py-functions)
+- [Serverless App to Copy and Zip S3 Objects Between Buckets](https://github.com/pulumi/examples/tree/master/aws-ts-s3-lambda-copyzip)
