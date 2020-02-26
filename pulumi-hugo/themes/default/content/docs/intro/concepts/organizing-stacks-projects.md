@@ -12,7 +12,7 @@ aliases: ["/docs/reference/organizing-stacks-projects/"]
 [Projects]({{< relref "project" >}}) and [stacks]({{< relref "stack" >}}) are intentionally flexible so that they can accommodate
 diverse needs across a spectrum of team, application, and infrastructure scenarios. This is very much like how Git
 repos work and, much like Git repos, there are varying approaches to organizing your code within them. That said,
-there are some clear best practices that, when followed, will ensure Pulumi works seamless for your situation. This
+there are some clear best practices that, when followed, will ensure Pulumi works seamlessly for your situation. This
 article describes some of the most common approaches and when to choose one over another.
 
 ## Tradeoffs
