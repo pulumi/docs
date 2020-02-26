@@ -34,13 +34,12 @@ event:
 
 ## About the Event
 
-We are very excited to deliver this release to our customers and community and want to invited everyone to come celebrate with us! Meet new Infrastructure as Code enthusiasts and enjoy some drinks and snacks on us.
+The Pulumi team is excited to announce our version 2.0 release for our customers and community and want you to celebrate with us! Meet other DevOps enthusiasts, learn about all of our new features and enjoy some drinks and snacks on us.
 
-Our 2.0 release aligns with two general themes:
+### What’s new in Pulumi 2.0?
 
-* **Best in class productivity**. Pulumi’s foundation of general-purpose languages has already enabled great productivity gains thanks to ecosystems of tools, sharing and reuse, and familiarity. But we have ideas for more. This includes more languages, features that bring deployments closer to the inner development loop like watch mode, more libraries of off-the-shelf patterns and practices, and the ability to test your infrastructure more easily.
-
-* **Belts and suspenders for teams and enterprises**. As we work with more teams and enterprises to deliver demanding many-cloud workloads to public, private, and hybrid clouds — increasingly involving Kubernetes, and often spanning developers and operations teams — we have heard about many features that would maximize Pulumi’s effectiveness and utility. This includes advanced security and compliance capabilities, more organization-wide controls and policies, and more flexible self- and on-premises hosting of the Pulumi service.
+Pulumi 2.0 gives you infrastructure superpowers! This includes best-in-class productivity — now with support for both .NET and Go, multi-language libraries, and testing support.  We're also introducing our new policy as code framework, CrossGuard, which enables you to enforce security rules, compliance guidelines, and cost controls by writing policies in your favorite language.
+You don't have to wait to enjoy many of the new features!  We've already added strong typing to our Python and Go SDKs and made significant improvements to the .NET SDK. Many of you will also notice improved performance of common tasks.
 
 ## Speakers
 
