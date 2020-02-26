@@ -20,7 +20,7 @@ to private registries.
 
 ### Choose Your Language
 
-{{< langchoose nogo >}}
+{{< langchoose >}}
 
 ### General Purpose Packages
 
@@ -38,6 +38,11 @@ directly. Additional general purpose packages can be used across all cloud platf
 * [**Pulumi SDK** (`pulumi`)]({{< relref "python/pulumi" >}})
 * [**Docker** (`pulumi_docker`)]({{< relref "python/pulumi_docker" >}})
 * [**Random** (`pulumi_random`)]({{< relref "python/pulumi_random" >}})
+{{% /lang %}}
+
+{{% lang go %}}
+* [**Pulumi SDK** (`pulumi`)](https://godoc.org/github.com/pulumi/pulumi/sdk/go/pulumi)
+* [**Random** (`random`)](https://godoc.org/github.com/pulumi/pulumi-random/sdk/go/random)
 {{% /lang %}}
 
 ### Cloud Providers
@@ -123,6 +128,43 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**vSphere** (`pulumi_vsphere`)]({{< relref "python/pulumi_vsphere" >}})
 {{% /lang %}}
 
+{{% lang go %}}
+* [**AWS** (`aws`)](https://godoc.org/github.com/pulumi/pulumi-aws/sdk/go/aws)
+* [**Azure** (`azure`)](https://godoc.org/github.com/pulumi/pulumi-azure/sdk/go/azure)
+    * [**Azure Active Directory** (`pulumi_azuread`)](https://godoc.org/github.com/pulumi/pulumi-azuread/sdk/go/azuread)
+* [**Google Cloud** (`gcp`)](https://godoc.org/github.com/pulumi/pulumi-gcp/sdk/go/gcp)
+* **Kubernetes** (`kubernetes`): Coming soon!
+* [**Aiven** (`aiven`)](https://godoc.org/github.com/pulumi/pulumi-aiven/sdk/go/aiven)
+* [**Alibaba Cloud** (`alicloud`)](https://godoc.org/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud)
+* [**CloudAMQP** (`cloudamqp`)](https://godoc.org/github.com/pulumi/pulumi-cloudamqp/sdk/go/cloudamqp)
+* [**Cloudflare** (`cloudflare`)](https://godoc.org/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare)
+* [**HashiCorp Consul** (`consul`)](https://godoc.org/github.com/pulumi/pulumi-consul/sdk/go/consul)
+* [**Datadog** (`datadog`)](https://godoc.org/github.com/pulumi/pulumi-datadog/sdk/go/datadog)
+* [**DigitalOcean** (`digitalocean`)](https://godoc.org/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean)
+* [**DNSimple** (`dnsimple`)](https://godoc.org/github.com/pulumi/pulumi-dnsimple/sdk/go/dnsimple)
+* [**Fastly** (`fastly`)](https://godoc.org/github.com/pulumi/pulumi-fastly/sdk/go/fastly)
+* [**F5 BigIP** (`f5bigip`)](https://godoc.org/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip)
+* [**GitLab** (`gitlab`)](https://godoc.org/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab)
+* [**Kafka** (`kafka`)](https://godoc.org/github.com/pulumi/pulumi-kafka/sdk/go/kafka)
+* [**Keycloak** (`keycloak`)](https://godoc.org/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak)
+* [**Linode** (`linode`)](https://godoc.org/github.com/pulumi/pulumi-linode/sdk/go/linode)
+* [**Mailgun** (`mailgun`)](https://godoc.org/github.com/pulumi/pulumi-mailgun/sdk/go/mailgun)
+* [**MySQL** (`mysql`)](https://godoc.org/github.com/pulumi/pulumi-mysql/sdk/go/mysql)
+* [**New Relic** (`newrelic`)](https://godoc.org/github.com/pulumi/pulumi-newrelic/sdk/go/newrelic)
+* [**Okta** (`okta`)](https://godoc.org/github.com/pulumi/pulumi-okta/sdk/go/okta)
+* [**OpenStack** (`openstack`)](https://godoc.org/github.com/pulumi/pulumi-openstack/sdk/go/openstack)
+* [**Packet** (`packet`)](https://godoc.org/github.com/pulumi/pulumi-packet/sdk/go/packet)
+* [**PostgreSQL** (`postgresql`)](https://godoc.org/github.com/pulumi/pulumi-postgresql/sdk/go/postgresql)
+* [**RabbitMQ** (`rabbitmq`)](https://godoc.org/github.com/pulumi/pulumi-rabbitmq/sdk/go/rabbitmq)
+* [**Rancher2** (`rancher2`)](https://godoc.org/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2)
+* [**SignalFX** (`signalfx`)](https://godoc.org/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx)
+* [**SpotInst** (`spotinst`)](https://godoc.org/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst)
+* [**Terraform** (`terraform`)](https://godoc.org/github.com/pulumi/pulumi-terraform/sdk/go/terraform)
+* [**TLS** (`tls`)](https://godoc.org/github.com/pulumi/pulumi-tls/sdk/go/tls)
+* [**Hashicorp Vault** (`vault`)](https://godoc.org/github.com/pulumi/pulumi-vault/sdk/go/vault)
+* [**vSphere** (`vsphere`)](https://godoc.org/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere)
+{{% /lang %}}
+
 ### Cloud-Agnostic Packages
 
 {{% lang nodejs %}}
@@ -133,5 +175,9 @@ Pulumi offers a highly productive, cloud-agnostic package for container and serv
 {{% /lang %}}
 
 {{% lang python %}}
+Coming soon!
+{{% /lang %}}
+
+{{% lang go %}}
 Coming soon!
 {{% /lang %}}
