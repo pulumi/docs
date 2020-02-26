@@ -119,9 +119,17 @@ pulumi.export("kubeConfig", ... a cluster's output property ...)
 ```
 
 ```csharp
-// StackReference is not supported in .NET currently.
-//
-// See https://github.com/pulumi/pulumi/issues/3406.
+class ClusterStack : Stack
+{
+    [Output] public Output<string> KubeConfig { get; set; }
+
+    public ClusterStack()
+    {
+        // ... a cluster is created ...
+
+        this.KubeConfig = ... a cluster's output property ...
+    }
+}
 ```
 
 The challenge here is that our services project needs to ingest this output during deployment so that it can
@@ -166,9 +174,20 @@ service = core.v1.Service(..., ResourceOptions(provider=provider))
 ```
 
 ```csharp
-// StackReference is not supported in .NET currently.
-//
-// See https://github.com/pulumi/pulumi/issues/3406.
+using Pulumi;
+using Pulumi.Kubernetes.Core.V1;
+
+class AppStack : Stack
+{
+    public AppStack()
+    {
+        var cluster = new StackReference($"acmecorp/infra/{Deployment.Instance.StackName}");
+        var kubeConfig = cluster.RequireOutput("KubeConfig").Apply(v => v.ToString());
+        var provider = new Provider("k8s", new ProviderArgs { KubeConfig = kubeConfig });
+        var options = new ComponentResourceOptions { Provider = provider };
+        var service = new Service(..., ..., options);
+    }
+}
 ```
 
 The `StackReference` constructor takes as input a string of the form `<organization>/<project>/<stack>`, and lets
