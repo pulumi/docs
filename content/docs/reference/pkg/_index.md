@@ -155,7 +155,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**OpenStack** (`openstack`)](https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack)
 * [**Packet** (`packet`)](https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet)
 * [**PostgreSQL** (`postgresql`)](https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/go/postgresql)
-* [**RabbitMQ** (`rabbitmq`)](https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/go/rabbitmq)
+* **RabbitMQ** (`rabbitmq`): Coming soon!
 * [**Rancher2** (`rancher2`)](https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2)
 * [**SignalFX** (`signalfx`)](https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx)
 * [**SpotInst** (`spotinst`)](https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst)
