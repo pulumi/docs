@@ -38,7 +38,7 @@ The Pulumi team is excited to announce our version 2.0 release for our customers
 
 ### What’s new in Pulumi 2.0?
 
-Pulumi 2.0 gives you infrastructure superpowers! This includes best-in-class productivity — now with support for both .NET and Go, multi-language libraries, and testing support.  We're also introducing our new policy as code framework, CrossGuard, which enables you to enforce security rules, compliance guidelines, and cost controls by writing policies in your favorite language.
+Pulumi 2.0 gives you infrastructure superpowers! This includes best-in-class productivity — now with support for both .NET and Go, multi-language libraries, and testing support.  We're also introducing our new policy-as-code framework, CrossGuard, which enables you to enforce security rules, compliance guidelines, and cost controls by writing policies in your language of choice.
 You don't have to wait to enjoy many of the new features!  We've already added strong typing to our Python and Go SDKs and made significant improvements to the .NET SDK. Many of you will also notice improved performance of common tasks.
 
 ## Speakers
