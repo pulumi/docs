@@ -147,7 +147,7 @@ $ mkdir quickstart && cd quickstart
 $ pulumi new aws-typescript
 ```
 
-In this example, we build the application in code using the ECR repository class `buildAndPushImage`. This class uses Docker to build the image locally and push it to our repository. Make sure that you have [Docker installed and running](https://docs.docker.com/v17.09/engine/installation/#supported-platforms).
+In this example, we build the application in code using the ECR repository class `buildAndPushImage`. This class uses Docker to build the image locally and push it to our repository. Make sure that you have [Docker installed and running](https://docs.docker.com/install/#supported-platforms).
 
 The container application for this example is an HTML page in NGINX. Make a `./app` directory in your Pulumi project and add the Dockerfile below.
 
