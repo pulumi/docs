@@ -43,20 +43,25 @@ generate Kubernetes manifests that can be easily integrated into existing CI/CD 
 
 <!--more-->
 
-While Pulumi has great support for deploying and updating Kubernetes resources on a cluster, many users have asked for
-the option to render YAML that they can integrate into existing workflows. The `v1.5.4` release of `pulumi-kubernetes`
-adds the `renderYamlToDirectory` option, which enables this behavior.
+While Pulumi has [great support](https://www.pulumi.com/docs/get-started/kubernetes/) for deploying and updating
+Kubernetes resources on a cluster, many users have asked for the option to render YAML that they can integrate into
+existing workflows. The [v1.5.4](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v1.5.4) release of
+`pulumi-kubernetes` adds the [renderYamlToDirectory](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/kubernetes/#ProviderArgs-renderYamlToDirectory)
+option, which enables this behavior. This option is available in every Pulumi-supported language, including
+TypeScript/JavaScript, Python, and .NET ([Go support is coming soon!](https://github.com/pulumi/pulumi-kubernetes/issues/70)).
 
-This option is available in every Pulumi-supported language, including TypeScript/JavaScript, Python, and .NET
-([Go support is coming soon!](https://github.com/pulumi/pulumi-kubernetes/issues/70)). Aside from easily templating
-configuration across resources, using a real programming language allows you to write and consume libraries, and easily
-mix in infrastructure configuration (e.g., managed database endpoints, object storage, etc.), all in the same program.
+Aside from easily templating configuration across resources, using a real programming language allows you to write and
+consume libraries, and easily mix in infrastructure configuration (e.g., managed database endpoints, object storage,
+etc.), all in the same program.
 
 ## Rendering YAML from TypeScript
 
 First, choose a directory for the rendered manifests, and specify that path on a `Provider`.
 
 ```typescript
+import * as k8s from "@pulumi/kubernetes";
+import * as kx from "@pulumi/kubernetesx";
+
 // Instantiate a Kubernetes Provider and specify the render directory.
 const provider = new k8s.Provider("render-yaml", {
     renderYamlToDirectory: "rendered"
@@ -109,16 +114,17 @@ const deployment = new kx.Deployment("nginx", {
 const service = deployment.createService({type: kx.types.ServiceType.LoadBalancer});
 ```
 
-Now, run `pulumi update`, and Pulumi renders these resources to YAML. The update process resolves outputs as usual,
-so the manifests can include other infrastructure configuration specified in your program. The rendered manifests are
-kept in sync with changes to the program on each update.
+Now, run `pulumi update`, and Pulumi renders these resources to YAML. The update process resolves [Outputs](https://www.pulumi.com/docs/intro/concepts/programming-model/#outputs)
+as usual, so the manifests can include other infrastructure configuration specified in your program. The rendered
+manifests are kept in sync with changes to the program on each update.
 
 Here's what the resulting directory looks like:
 
 ![Rendered Manifests](render-directory.png)
 
-Note that `CustomResourceDefinitions` need to be applied first, so they are rendered in a separate subdirectory. You
-could deploy these with `kubectl` like this:
+Note that `CustomResourceDefinition` resources need to be applied first, so they are rendered in a separate
+subdirectory. (This example doesn't include any CRDs, so the directory is empty). You could deploy the rendered
+manifests with `kubectl` like this:
 
 ```shell script
 kubectl apply -f "${RENDER_DIRECTORY}/0-crd"
@@ -183,7 +189,7 @@ See [this gist](https://gist.github.com/lblackstone/686935edf7fdcd23d916f34d35bb
 
 There are two important caveats to note about YAML rendering support:
 
-1. The YAML-rendered resources are not created on a Kubernetes cluster, so information that is computed server-side
+1. The YAML-rendered resources are **not created** on a Kubernetes cluster, so information that is computed server-side
 will not be available in your program. For example, a `Service` will not have IP assignments, so attempting to export
 these values will not work as usual (the value will be `undefined`).
 1. **Any Secret values will appear in plaintext in the rendered manifests.** This includes any values marked as
