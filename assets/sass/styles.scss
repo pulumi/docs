@@ -211,4 +211,13 @@ main {
     }
 }
 
+.container {
+    // Allow wider containers for screens that have room for them.
+    &.container-wide {
+        @media (min-width: 1600px) {
+            max-width: 1600px;
+        }
+    }
+}
+
 @tailwind utilities;
