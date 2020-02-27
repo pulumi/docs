@@ -1,8 +1,8 @@
 {{ define "main" }}
-    <div class="container mx-auto px-4 py-8 mt-2">
+    <div class="container container-wide mx-auto px-4 py-8 mt-2">
         <div class="md:flex">
 
-            <div class="md:w-7/12">
+            <div class="md:w-6/12 md:px-4">
                 {{ partial "docs/breadcrumb.html" . }}
 
                 {{ if and (.Params.h1) (not .Params.notitle) }}
@@ -14,7 +14,7 @@
                 {{ .Content }}
             </div>
 
-            <div class="md:w-2/12 md:pl-8 mt-2">
+            <div class="md:w-3/12 md:pl-8">
                 <div class="sticky-sidebar">
                     <div class="mt-10 pt-8 border-t-2 border-gray-400 md:border-none md:block md:mb-4 md:pt-0 md:mt-0">
                         {{ partial "docs/search.html" . }}
