@@ -48,6 +48,8 @@ func main() {
 }
 ```
 
+Although this code looks remarkably similar to using your cloud's Go SDK to imperatively change infrastructure, there is a major and important difference: this is declarative infrastructure as code. This code declares to Pulumi a goal state for our infrastructure which Pulumi can then carry out. That means we can preview changes with full diffs before they are made, that we always have a history of changes we've made to our infrastructure, and that it works both for the initial provisioning of a new environment as well as revisions to an existing one.
+
 ## An Expressive and Idiomatic Type System
 
 Making Go a first-class citizen is a goal for the Pulumi 2.0 release. We especially wanted Go to have more idiomatic and stronger typing than `interface{}`.
