@@ -70,3 +70,10 @@ Although Pulumi for Go is in “preview” status until 2.0 is released, it supp
 - Deploy a Kubernetes cluster using [Azure Kubernetes Service](https://github.com/pulumi/examples/tree/master/azure-go-aks).
 
 To keep up with our progress, follow our [Go project on Github](https://github.com/orgs/pulumi/projects/7), and feel free to [open a new issue](https://github.com/pulumi/pulumi/issues/new) with ideas, feedback, and bugs. [Join the community in Slack](https://slack.pulumi.com/) to discuss your scenarios, and to get any needed assistance from the team and other end users.
+
+### Coming Soon
+
+Some exciting things to keep an eye out for:
+
+- [Kubernetes Support](https://github.com/pulumi/pulumi-kubernetes/issues/70)
+- [Retiring Dep in favor of Go Modules](https://github.com/pulumi/pulumi/issues/3817)
