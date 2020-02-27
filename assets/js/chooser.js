@@ -16,7 +16,7 @@ function selectChoice(kind, choice, extra) {
         choiceTabs++;
 
         var $e = $(e);
-        var currentTabChoice = $e.attr("data-choice") || e.innerText.toLowerCase();
+        var currentTabChoice = $e.attr("data-choice") || e.textContent.toLowerCase();
         if (currentTabChoice === choice) {
             $e.addClass("is-active");
         } else {
@@ -115,7 +115,7 @@ function selectK8sLang(syntax) {
 function hideShowChoices(kind, selector, defaultChoice) {
     var tabsOnPage = {};
     $("a." + kind + "-tab").each(function (i, e) {
-        var choice = $(e).attr("data-choice") || e.innerText.toLowerCase();
+        var choice = $(e).attr("data-choice") || e.textContent.toLowerCase();
 
         // Save the languages we've seen.
         tabsOnPage[choice] = true;
@@ -159,7 +159,7 @@ function hideShowChoices(kind, selector, defaultChoice) {
 }
 
 // The first time the DOM is finished loading, select the right language and OS.
-$(function() {
+$(document).on("rendered", function() {
 
     // If a query param's been provided for a tab category, honor that.
     ["language", "os", "cloud", "k8s-language"].forEach(function(kind) {

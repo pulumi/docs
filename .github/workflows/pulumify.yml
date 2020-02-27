@@ -12,7 +12,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
         NODE_ENV: production
-        PULUMIFY_BUILD: NODE_ENV=production make ensure && NODE_ENV=production hugo --minify --buildFuture -e $GITHUB_SHA
+        PULUMIFY_BUILD: NODE_ENV=production make ensure && NODE_ENV=production yarn --cwd components run build && NODE_ENV=production hugo --minify --buildFuture -e $GITHUB_SHA
         PULUMIFY_SYNC_STRATEGY: server-ecstask
         PULUMIFY_ROOT: public
         PULUMIFY_ORGANIZATION: pulumi
