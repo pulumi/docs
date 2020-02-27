@@ -12,6 +12,8 @@
 {{ range .Params }}
     {{ if eq . "nopreview" }}
         {{ $nopreview = true }}
+    {{ else if eq . "nojavascript" }}
+        {{ $javascript = false }}
     {{ else if eq . "nogo" }}
         {{ $go = false }}
     {{ else if eq . "nodeonly" }}
