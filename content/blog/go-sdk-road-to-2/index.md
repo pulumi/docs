@@ -76,4 +76,4 @@ To keep up with our progress, follow our [Go project on Github](https://github.c
 Some exciting things to keep an eye out for:
 
 - [Kubernetes Support](https://github.com/pulumi/pulumi-kubernetes/issues/70)
-- [Go Modules Migration](https://github.com/pulumi/pulumi/issues/3817)
+- [Retiring Dep in favor of Go Modules](https://github.com/pulumi/pulumi/issues/3817)
