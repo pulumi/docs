@@ -1,9 +1,10 @@
 ---
-title: "Simple Serverless programming with Google Cloud Functions and Pulumi"
+title: Simple Serverless programming with Google Cloud Functions
+h1: "Simple Serverless programming with Google Cloud Functions and Pulumi"
 authors: ["cyrus-najmabadi"]
 tags: ["Serverless","GCP"]
 date: "2019-04-10"
-meta_desc: "Pulumi lets you create, deploy, and manage Google Cloud applications and infrastructure in familiar languages like JavaScript, TypeScript, and Python, and without needing to learn new DSLs or YAML templating solutions. Use Pulumi and Google Cloud Functions to create a complete SlackBot application running on GCP. The Pulumi CLI makes it easy to tweak your serverless application with a single update."
+meta_desc: "Pulumi lets you create, deploy, and manage Google Cloud applications and infrastructure in familiar languages without needing DSLs or YAML templating solutions."
 
 ---
 
@@ -25,12 +26,12 @@ hiding any YAML here:
 
 ```typescript
 import * as gcp from "@pulumi/gcp";
- 
+
 let greeting = new gcp.cloudfunctions.HttpCallbackFunction("greeting", (req, res) => {
     // Change this code to fit your needs!
     res.send(`Greetings from ${req.body.name || 'Google Cloud Functions'}!`);
 });
- 
+
 export let url = greeting.httpsTriggerUrl;
 ```
 
@@ -83,10 +84,10 @@ Functions:
 const config = new pulumi.Config("mentionbot");
 const slackToken = config.get("slackToken");
 const verificationToken = config.get("verificationToken");
- 
+
 // A topic that we can enqueue slack events to so they can be processed in batch later on
 const messageTopic = new gcp.pubsub.Topic("messages");
- 
+
 // Create an http endpoint that slack will use to push events to us.
 const endpoint = new gcp.cloudfunctions.HttpCallbackFunction("bot", {
     callbackFactory: () => {
@@ -94,29 +95,29 @@ const endpoint = new gcp.cloudfunctions.HttpCallbackFunction("bot", {
         app.use(bodyParser.json());
         app.post("/events", (req, res) => {
             // Importantly: This is the code that will run in your serverless GCP cloud function!
- 
+
             const body = req.body;
- 
+
             // Process the body as appropriate. If it's something we need to respond to immediately
             // (like a verification request), then do so. Otherwise, add the message to our pubsub
             // topic to be processed later:
             const pubSub = new PubSub();
             const topic = pubSub.topic(messageTopic.name.get());
             topic.publish(Buffer.from(JSON.stringify(body)));
- 
+
             // Quickly respond with success so that slack doesn't retry.
             res.status(200).end();
         });
- 
+
         return app;
     }
 });
- 
+
 messageTopic.onMessagePublished("processTopicMessage", async (data) => {
     // Actually handle the 'data' in the pubsub message.
     // Importantly: This is the code that will run in your serverless GCP cloud function!
 });
- 
+
 // Give this url to slack to let them know where to post their events to.
 export const url = endpoint.httpsTriggerUrl;
 ```
@@ -136,33 +137,33 @@ messages.
 Although it's a simple example, there are a lot of moving parts this
 takes care of that you would normally be responsible for. This includes:
 
-1.  Figuring out the shape (the input/output-types) for your Cloud
+1. Figuring out the shape (the input/output-types) for your Cloud
     Functions, and then creating an appropriate program that exports the
     right entrypoint that matches. In this case, because we've exposed
     the right abstractions (like `HttpCallbackFunction` and
     `Topic.onMessagePublished`), the arrow-functions you pass in will
     all have the right types, and your program will be typechecked by
     TypeScript.
-2.  Creating separate Cloud Functions for each serverless callback. One
+2. Creating separate Cloud Functions for each serverless callback. One
     for listening and responding to the initial Slack events and the
     second for processing the messages in the Topic. Here, you can write
     a single Pulumi App where all the code can be placed how you like it
     (in this case in a single file).
-3.  [Packaging](https://cloud.google.com/functions/docs/writing/) each
+3. [Packaging](https://cloud.google.com/functions/docs/writing/) each
     callback up in the appropriate structure Cloud Functions expects,
     including how to get all your dependencies in place.
-4.  Creating a [Storage
+4. Creating a [Storage
     Bucket](https://cloud.google.com/storage/docs/creating-buckets) for
     all of your packaged programs to live in.
-5.  Uploading each packaged program to a [Bucket
+5. Uploading each packaged program to a [Bucket
     Object](https://cloud.google.com/storage/docs/uploading-objects) in
     that bucket.
-6.  Configuring the appropriate triggers on your Cloud Functions stating
+6. Configuring the appropriate triggers on your Cloud Functions stating
     how they should be triggered (for example, in response to an [HTTP
     trigger](https://cloud.google.com/functions/docs/calling/http) or a
     [Pub/Sub
     trigger](https://cloud.google.com/functions/docs/calling/pubsub)).
-7.  Including the right information in the function so you can interact
+7. Including the right information in the function so you can interact
     with your other cloud resources in the Pulumi App. Without this, you
     would need to find a way to include that data in each Cloud
     Function's [environment
@@ -173,13 +174,13 @@ takes care of that you would normally be responsible for. This includes:
     *directly* from your Cloud Function callback. Pulumi makes sure this
     all works, and that the data you use is available in that Cloud
     Function when it finally is triggered.
-8.  Figuring out a safe and secure way to encode and access secrets for
+8. Figuring out a safe and secure way to encode and access secrets for
     your Cloud Function. Here, we can use Pulumi's
-    [Config Secrets]({{< ref "/docs/intro/concepts/config#secrets" >}}) to safely
+    [Config Secrets]({{< relref "/docs/intro/concepts/config#secrets" >}}) to safely
     encrypt and manage secrets for your Cloud Function code.
 
 Not to mention that by doing all of that, you can achieve continuous deployment
-[Pulumi and Google Cloud Build]({{< ref "/docs/guides/continuous-delivery/google-cloud-build" >}}).
+[Pulumi and Google Cloud Build]({{< relref "/docs/guides/continuous-delivery/google-cloud-build" >}}).
 
 ## Updating Your Google Functions Code
 
@@ -226,7 +227,7 @@ create, update, and maintain.
 
 To check things out, get started today:
 
-- [Get Started with Pulumi on GCP]({{< ref "/docs/get-started/gcp" >}})
+- [Get Started with Pulumi on GCP]({{< relref "/docs/get-started/gcp" >}})
 - [Deploy a Minimal Google Cloud Function Application](https://github.com/pulumi/examples/tree/master/gcp-ts-functions)
 
 PS: If you're interested in how Pulumi manages to take a

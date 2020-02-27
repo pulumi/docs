@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_desc: An overview of Product Editions, Accounts, and Organizations within
+           the Pulumi Cloud Service.
 linktitle: Accounts & Organizations
 menu:
     intro:
@@ -28,6 +30,4 @@ including one from your [SAML 2.0 provider]({{< relref "/docs/guides/saml" >}}).
 When you create an account, an organization that is subscribed to [the Community
 Edition]({{< relref "editions#community-edition" >}}) gets created with it. Start creating and
 managing your stacks with it, or create a new
-[Pulumi Organization]({{< relref "organizations" >}}) to collaborate with your team. 
-
-
+[Pulumi Organization]({{< relref "organizations" >}}) to collaborate with your team.

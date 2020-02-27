@@ -322,6 +322,12 @@ Example: A resource created with resource_prefix=”foo” would produce a resou
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_kubernetes.helm.v2.get_version">
+<code class="sig-prename descclassname">pulumi_kubernetes.helm.v2.</code><code class="sig-name descname">get_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.get_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Semver-formatted version of the package containing this file.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_kubernetes.helm.v2.mkdtemp">
 <code class="sig-prename descclassname">pulumi_kubernetes.helm.v2.</code><code class="sig-name descname">mkdtemp</code><span class="sig-paren">(</span><em class="sig-param">suffix=None</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">dir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.mkdtemp" title="Permalink to this definition">¶</a></dt>
 <dd><p>User-callable function to create and return a unique temporary

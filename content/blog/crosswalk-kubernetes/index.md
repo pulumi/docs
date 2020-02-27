@@ -1,15 +1,16 @@
 ---
-title: A Year of Helping Customers Build Production-Ready Kubernetes Infrastructure
+title: A Year of Helping Build Production-Ready Kubernetes
+h1: A Year of Helping Customers Build Production-Ready Kubernetes Infrastructure
 authors: ["joe-duffy"]
 tags: ["Pulumi-News", "Kubernetes"]
-meta_desc: "Today we announced Pulumi Crosswalk for Kubernetes, a collection of open source technologies to help developers and operators bring Kubernetes into their organizations."
+meta_desc: "Pulumi Crosswalk for Kubernetes, a collection of open source technologies to help developers and operators bring Kubernetes into their organizations."
 date: "2019-11-14"
 meta_image: "pulumi-crosswalk-k8s.png"
 ---
 
-Today we announced [Pulumi Crosswalk for Kubernetes](/crosswalk/kubernetes/), a collection of open source tools, libraries, and playbooks to help developers and operators work together to bring Kubernetes into their organizations. They capture the lessons we learned this past year working with organizations to go from zero to Kubernetes in production for their infrastructure and application workloads. By releasing these as open source, we hope to help everybody be more successful with their Kubernetes projects &mdash; as we have learned through experience, it isn't easy going!
+Today we announced [Pulumi Crosswalk for Kubernetes]({{< relref "/crosswalk/kubernetes" >}}), a collection of open source tools, libraries, and playbooks to help developers and operators work together to bring Kubernetes into their organizations. They capture the lessons we learned this past year working with organizations to go from zero to Kubernetes in production for their infrastructure and application workloads. By releasing these as open source, we hope to help everybody be more successful with their Kubernetes projects &mdash; as we have learned through experience, it isn't easy going!
 
-If you want to dive straight in, [browse to the documentation](/docs/guides/crosswalk/kubernetes/). Below is the backstory and why we’re so excited about this release.
+If you want to dive straight in, [browse to the documentation]({{< relref "/docs/guides/crosswalk/kubernetes" >}}). Below is the backstory and why we’re so excited about this release.
 
 ## Applying infrastructure as code to Kubernetes
 
@@ -53,7 +54,7 @@ These playbooks cover a lot of ground, including topics like:
 
 * **Control planes.** Each Kubernetes cluster has a control plane comprised of controllers, state management, and other centralized services. Each provider offers a distinct and unique way of creating, deploying, and managing the control plane.
 * **Worker nodes.** Each cluster also requires worker nodes to actually run compute. Depending on your compute, storage, and security needs, the provisioning and management of these nodes &mdash; often using multiple node pools &mdash; differs greatly. Getting this right is essential to attaining a good tradeoff between cost and performance.
-* **Identity.** All of the above also needs to integrate with your team’s security policies, including Identity and Access Management (IAM) and Role Based Access Controls (RBAC). If you’re in AWS, you undoubtedly want to connect to AWS IAM; if you’re in Azure, you want to leverage existing ActiveDirectory settings; if you’re in GCP, you’ll want to use GCP IAM; and if you’re using a custom configuration, it can be even more complicated. This is an essential part of deploying Kubernetes within an organization. 
+* **Identity.** All of the above also needs to integrate with your team’s security policies, including Identity and Access Management (IAM) and Role Based Access Controls (RBAC). If you’re in AWS, you undoubtedly want to connect to AWS IAM; if you’re in Azure, you want to leverage existing ActiveDirectory settings; if you’re in GCP, you’ll want to use GCP IAM; and if you’re using a custom configuration, it can be even more complicated. This is an essential part of deploying Kubernetes within an organization.
 * **Cluster services.** Each cluster needs cluster-wide services deployed into the cluster, including performance and monitoring services (AWS CloudWatch, Azure Log Analytics and Monitoring, Datadog, Prometheus, etc.), service meshes, container registries, CRDs, and operators.
 * **Application delivery.** Applications need to be Dockerized, packaged up and deployed to private container registries, and rolled out to the cluster, often continuously.
 * **Application services.** In addition to the applications themselves, often cloud native applications require additional services to come along for the ride. This includes ingress controllers, DNS and certificate management services, and more.
@@ -233,6 +234,6 @@ CQL also supports live streaming queries, which the CLI will display results fro
 
 Everything above is [open source](https://github.com/pulumi) and has been battle-tested with many end users and organizations over the last year &mdash; all the way from startups to ISVs to the largest enterprises in the world. We are excited to share these best practices in reusable forms, leveraging the foundation uniquely provided by Pulumi’s infrastructure as code platform using real languages.
 
-To get started, check out the [documentation](/docs/guides/crosswalk/kubernetes/), or [get started with the open source SDK now](/docs/get-started/kubernetes/).
+To get started, check out the [documentation]({{< relref "/docs/guides/crosswalk/kubernetes" >}}), or [get started with the open source SDK now]({{< relref "/docs/get-started/kubernetes" >}}).
 
-We sincerely hope that your team can be successful in your Kubernetes journey as a result of these lessons learned from others. Additionally, Pulumi offers training and services, so if we can help in any way, please [join our entire team and thousands of practitioners on our Community Slack](https://slack.pulumi.com) &mdash; or simply [contact us](/contact) and we’ll be in touch.
+We sincerely hope that your team can be successful in your Kubernetes journey as a result of these lessons learned from others. Additionally, Pulumi offers training and services, so if we can help in any way, please [join our entire team and thousands of practitioners on our Community Slack](https://slack.pulumi.com) &mdash; or simply [contact us]({{< relref "/contact" >}}) and we’ll be in touch.

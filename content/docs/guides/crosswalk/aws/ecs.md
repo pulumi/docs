@@ -1,5 +1,7 @@
 ---
 title: "AWS Elastic Container Service (ECS)"
+meta_desc: Pulumi Crosswalk for AWS ECS simplifies deploying containerized applications into ECS and managing all of the
+           associated resources.
 linktitle: Elastic Container Service (ECS)
 menu:
   userguides:
@@ -9,7 +11,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/ecs/"]
 ---
 
-<a href="{{< relref "_index.md" >}}">
+<a href="{{< relref "./" >}}">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -30,7 +32,7 @@ providing full control over the underlying EC2 machine resources that power your
 > containerized applications in a cluster. EKS tends to be more complex to provision and manage, but has
 > the added advantage of using the industry standard container orchestrator, Kubernetes, and therefore can help
 > with portability between clouds and self-hosted configurations. See
-> [Pulumi Crosswalk for AWS EKS]({{< relref "eks.md" >}}) for more information about using EKS.
+> [Pulumi Crosswalk for AWS EKS]({{< relref "eks" >}}) for more information about using EKS.
 
 ## Creating a Load Balanced ECS Service
 
@@ -67,7 +69,7 @@ $ curl http://$(pulumi stack output url)
 
 `$(pulumi stack output url)` evaluates to the load balancer's URL.
 
-**Output**
+### **Output**
 
 ```
 <!DOCTYPE html>
@@ -80,7 +82,7 @@ $ curl http://$(pulumi stack output url)
 
 We have chosen to create an [Elastic Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing) so that we
 can access our services over the Internet at a stable address, spread evenly across two instances. Any of the ELB
-options described in the [Pulumi Crosswalk for ELB documentation]({{< relref "elb.md" >}}) can be used with our ECS service.
+options described in the [Pulumi Crosswalk for ELB documentation]({{< relref "elb" >}}) can be used with our ECS service.
 
 Behind the scenes, our program also creates an ECS cluster in the default VPC to run the compute. This is something
 [we can configure](#creating-an-ecs-cluster-in-a-vpc) if we want to use a different VPC.
@@ -127,7 +129,7 @@ In this example, we simply specified the tags for our cluster. We will see other
 ## Creating an ECS Cluster in a VPC
 
 To create an ECS cluster inside of a VPC, we will first create or use an existing VPC using any of the techniques
-described in [Pulumi Crosswalk for AWS VPC]({{< relref "vpc.md" >}}). Then we simply pass that
+described in [Pulumi Crosswalk for AWS VPC]({{< relref "vpc" >}}). Then we simply pass that
 as the `vpc` argument for our cluster's constructor:
 
 ```typescript
@@ -189,7 +191,7 @@ const nginx = new awsx.ecs.FargateService("nginx", {
 });
 ```
 
-Notice that we are using a method from a different package, [`aws.ecs.Cluster.get`](/docs/reference/pkg/nodejs/pulumi/aws/ecs/#Cluster-get), to look up our existing cluster by its ID and then creating an `awsx.ecs.Cluster` out of it. The former is the raw resource description, while the latter is the object type required to work with the Pulumi Crosswalk for AWS ECS APIs.
+Notice that we are using a method from a different package, [`aws.ecs.Cluster.get`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/ecs#Cluster-get" >}}), to look up our existing cluster by its ID and then creating an `awsx.ecs.Cluster` out of it. The former is the raw resource description, while the latter is the object type required to work with the Pulumi Crosswalk for AWS ECS APIs.
 
 ## ECS Tasks, Containers, and Services
 
@@ -213,12 +215,12 @@ https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html).
 A task definition is required to run Docker containers in Amazon ECS. We saw above that each Service takes a
 `taskDefinitionArgs` object. Some of the parameters you can specify this task definition include:
 
-   * `image`: The Docker image to use with each container in your task.
-   * `cpu` and `memory`: How much CPU and memory to use with each task or each container within a task.
-   * `networkMode`: The Docker networking mode to use for the containers (`none`, `bridge`, `awsvpc`, or `host`).
-   * `logGroup`: The logging configuration to use for your tasks (by default, a new group with 1 day retention).
-   * `volumes`: Any data volumes that should be used with the containers in the task.
-   * `executionRole`: The IAM role that your tasks should assume while running.
+* `image`: The Docker image to use with each container in your task.
+* `cpu` and `memory`: How much CPU and memory to use with each task or each container within a task.
+* `networkMode`: The Docker networking mode to use for the containers (`none`, `bridge`, `awsvpc`, or `host`).
+* `logGroup`: The logging configuration to use for your tasks (by default, a new group with 1 day retention).
+* `volumes`: Any data volumes that should be used with the containers in the task.
+* `executionRole`: The IAM role that your tasks should assume while running.
 
 Of course, the most important part of a task definition is the `containers` map, which specifies one or many
 containers to run as part of your task.
@@ -308,7 +310,7 @@ Containers with Pulumi Crosswalk for AWS ECS are far more flexible than just acc
 and can even refer to a `Dockerfile` on disk so you do not need to build and publish
 it separately ahead of time. This makes it very easy to use private registrations for your ECS workloads.
 
-For example, [`fromPath`](/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Image-fromPath") will run a `docker build` in that path, push the result up to the ECR repository that specified in the first argument, and then pass
+For example, [`fromPath`]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/ecs#Image-fromPath" >}}) will run a `docker build` in that path, push the result up to the ECR repository that specified in the first argument, and then pass
 the private ECR repostory path to the container:
 
 ```typescript
@@ -322,7 +324,7 @@ const task = new awsx.ecs.FargateTaskDefinition("task", {
 });
 ```
 
-For more control over how the Docker image is built and published, you can use [`fromDockerBuild`](/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Image-fromDockerBuild). This allows you
+For more control over how the Docker image is built and published, you can use [`fromDockerBuild`]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/ecs#Image-fromDockerBuild" >}}). This allows you
 to control the build context, whether to cache multi-stage builds, and so on:
 
 ```typescript
@@ -341,7 +343,7 @@ const task = new awsx.ecs.FargateTaskDefinition("task", {
 ```
 
 Finally, you can create a container image from a callback function. This allows you to author the same code that
-runs in the container within your Pulumi application directly, much like [magic functions for Lambda]({{< relref "lambda.md" >}}):
+runs in the container within your Pulumi application directly, much like [magic functions for Lambda]({{< relref "lambda" >}}):
 
 ```typescript
 const listener =
@@ -371,7 +373,7 @@ const service = new awsx.ecs.EC2Service("custom", {
 
 This example runs an anonymous web server inside of an image built and published automatically to ECR.
 
-For more information about using ECR, refer to [Pulumi Crosswalk for AWS ECR]({{< relref "ecr.md" >}}).
+For more information about using ECR, refer to [Pulumi Crosswalk for AWS ECR]({{< relref "ecr" >}}).
 
 ## Running Fire and Forget Tasks
 

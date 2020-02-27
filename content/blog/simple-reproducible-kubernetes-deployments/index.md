@@ -3,7 +3,7 @@ title: "Simple, Reproducible Kubernetes Deployments"
 authors: ["alex-clemmer"]
 tags: ["Infrastructure","Kubernetes","TypeScript"]
 date: "2018-08-24"
-meta_desc: "Pulumi is an open-source cloud native development platform that lets you express Kubernetes programs in real programming languages like TypeScript, instead of endless YAML templates. It also helps you deliver simple yet powerful and robust Kubernetes deployment workflows."
+meta_desc: "Pulumi is an open-source cloud native development platform that lets you express Kubernetes programs in real programming languages, instead of YAML templates."
 meta_image: "diff.gif"
 ---
 
@@ -153,7 +153,7 @@ Internet.
 
 Right away, we notice:
 
--   Pulumi does not define a new API for Kubernetes; it simply uses the
+- Pulumi does not define a new API for Kubernetes; it simply uses the
     same schema as the upstream
     [Deployment](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/#deployment-v1-apps)
     and
@@ -161,7 +161,7 @@ Right away, we notice:
     APIs. In fact, it is generated from the
     [Kubernetes OpenAPI specification](https://github.com/kubernetes/kubernetes/tree/master/api/openapi-spec),
     so it is always up-to-date and complete.
--   By using TypeScript, we have the ability to eliminate repetition and
+- By using TypeScript, we have the ability to eliminate repetition and
     boilerplate with familiar programming language constructs, like we
     did with our `appLabels` variable that is reused multiple times.
     Another example is the use of a function to capture common patterns,
@@ -189,27 +189,27 @@ something like the following:
 
 Compared to `kubectl apply`, many things are happening:
 
--   We see that `pulumi up` blocks until all Kubernetes resources have
+- We see that `pulumi up` blocks until all Kubernetes resources have
     completed initialization. In this case, that includes a Deployment
     and a Service.
 
--   We see intermediate status messages as Kubernetes resources make
+- We see intermediate status messages as Kubernetes resources make
     progress towards initialization. For example the Service called
     `nginx` alerts us when (1) it successfully found application
     containers to direct traffic to, and (2) that an IP address has been
     allocated to it. If things fail, we will see that too.
 
--   All deployment is coordinated with a state manager so that
+- All deployment is coordinated with a state manager so that
     concurrent updates are handled correctly in a team setting, rather
     than potentially clobbering one another.
 
--   If you look closely, at the end of the gif loop, you'll notice some
+- If you look closely, at the end of the gif loop, you'll notice some
     green text that looks like this:
 
         ---outputs:---
         frontendIp: "35.226.79.25"
 
--   This is the IP that was allocated to the Service, which in turn
+- This is the IP that was allocated to the Service, which in turn
     directs traffic to our nginx containers. If you run `pulumi up`
     yourself and open that IP address in your browser, easily available
     with the `pulumi stack output frontendIp` command, you will actually
@@ -291,7 +291,7 @@ actually making any changes. And because Pulumi is always tracking old
 states, rollback afterwards is easy also.
 
 This CLI workflow is great for the dev inner loop, however
-[the Pulumi GitHub App]({{< ref "/docs/guides/continuous-delivery/github-app" >}}) also integrates
+[the Pulumi GitHub App]({{< relref "/docs/guides/continuous-delivery/github-app" >}}) also integrates
 these previews and diffs with your CI/CD system, by enlightening your
 GitHub Pull Requests with potential update impacts, while your team
 still has a chance to discuss changes inside the usual PR workflow,
@@ -304,7 +304,7 @@ real code, instead of YAML, and you've gotten a taste of the `pulumi up`
 deployment workflow, especially compared to `kubectl`.
 
 **Try it out now** by heading over to our
-[Getting Started page]({{< ref "/docs/get-started" >}}).
+[Getting Started page]({{< relref "/docs/get-started" >}}).
 
 We are just getting started. In the coming weeks we will be sharing more
 around other deployment scenarios, including A/B traffic splitting,

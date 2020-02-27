@@ -33,6 +33,8 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="dataflow/">dataflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datafusion/">datafusion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataproc/">dataproc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploymentmanager/">deploymentmanager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagflow/">diagflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dns/">dns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="endpoints/">endpoints</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filestore/">filestore</a></li>
@@ -41,6 +43,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="healthcare/">healthcare</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iam/">iam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iap/">iap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="identityplatform/">identityplatform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kms/">kms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logging/">logging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml/">ml</a></li>
@@ -51,6 +54,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="redis/">redis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resourcemanager/">resourcemanager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="runtimeconfig/">runtimeconfig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="secretmanager/">secretmanager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="securitycenter/">securitycenter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="service_account/">service_account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="servicenetworking/">servicenetworking</a></li>

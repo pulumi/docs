@@ -1,5 +1,8 @@
 ---
-title: Create a New Project
+title: Create a New Project | AWS
+h1: Create a New Project
+linktitle: Create a New Project
+meta_desc: This page provides an overview of how to create a new AWS + Pulumi project.
 weight: 5
 menu:
   getstarted:
@@ -11,7 +14,7 @@ aliases: ["/docs/quickstart/aws/create-project/"]
 
 Let's get started with a new project in a new directory.
 
-{{< langchoose nogo csharp >}}
+{{< langchoose csharp >}}
 
 <div class="language-prologue-javascript"></div>
 
@@ -34,12 +37,24 @@ $ mkdir quickstart && cd quickstart
 $ pulumi new aws-python
 ```
 
+<div class="language-prologue-go"></div>
+
+```bash
+# install the pulumi aws plugin
+# check for the release version here https://github.com/pulumi/pulumi-aws/releases
+$ pulumi plugin install resource aws 1.22.0
+# from within your $GOPATH
+$ mkdir quickstart && cd quickstart
+$ pulumi new aws-go
+```
+
 <div class="language-prologue-csharp"></div>
 
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new aws-csharp
 ```
+
 {{< cli-note >}}
 
 After logging in, the CLI will proceed with walking you through creating a new project.
@@ -76,6 +91,10 @@ After some dependency installations from `npm`, the project and stack will be re
 {{% /lang %}}
 
 {{% lang python %}}
+After the command completes, the project and stack will be ready.
+{{% /lang %}}
+
+{{% lang go %}}
 After the command completes, the project and stack will be ready.
 {{% /lang %}}
 

@@ -1,7 +1,7 @@
 ---
 title: "Cloud Native Infrastructure with Kubernetes and Pulumi"
 date: "2018-09-12"
-meta_desc: "Pulumi for Kubernetes is a way to create, deploy, and manage Kubernetes applications using your favorite programming language and across AWS, Azure, Google Cloud, and native environments."
+meta_desc: "Pulumi for Kubernetes is a way to create, deploy, and manage Kubernetes apps using a real programming language across AWS, Azure, GCP, and native environments."
 meta_image: "diff.gif"
 authors: ["joe-duffy"]
 tags: ["Kubernetes"]
@@ -20,13 +20,12 @@ a way to create, deploy, and manage Kubernetes applications using your
 favorite programming languages.
 that works across AWS, Azure, Google Cloud, OpenStack, and other clouds,
 now to Kubernetes and cloud native architectures. You can
-[dive right in here]({{< ref "/docs/get-started/kubernetes" >}}) and
+[dive right in here]({{< relref "/docs/get-started/kubernetes" >}}) and
 look at some
 [powerful things Pulumi enables here]({{< relref "program-kubernetes-with-11-cloud-native-pulumi-pearls" >}}).
 <!--more-->
 
 ## Why Pulumi?
-
 
 Kubernetes is essentially the "POSIX" for the cloud and unlocks the
 potential for a true cloud native development platform to be built on
@@ -102,11 +101,11 @@ different environments.
 Programs are just code, unlocking sophisticated cloud native scenarios;
 e.g.
 
--   Deploy a canary, wait for Prometheus health checks to pass, and then
+- Deploy a canary, wait for Prometheus health checks to pass, and then
     promote
--   Create a base class that injects Envoy sidecars automatically for
+- Create a base class that injects Envoy sidecars automatically for
     any pod in your org
--   Manage your Envoy config as code, and version it alongside your
+- Manage your Envoy config as code, and version it alongside your
     Kubernetes config
 
 The Pulumi Delivery Platform works in tandem with the CLI to ensure
@@ -127,23 +126,22 @@ entry for using Kubernetes with real components and reuse.
 We can't wait to hear what you think. To learn more or give it a try,
 please check out these resources:
 
-- [EKS Quickstart]({{< ref "/docs/tutorials/kubernetes/eks" >}})
-- [GKE Quickstart]({{< ref "/docs/tutorials/kubernetes/gke" >}})
-- [AKS Quickstart]({{< ref "/docs/tutorials/kubernetes/aks" >}})
+- [EKS Quickstart]({{< relref "/docs/tutorials/kubernetes/eks" >}})
+- [GKE Quickstart]({{< relref "/docs/tutorials/kubernetes/gke" >}})
+- [AKS Quickstart]({{< relref "/docs/tutorials/kubernetes/aks" >}})
 
 These two tutorials will walk you through your first Pulumi for Kubernetes project:
 
--   [Tutorial: Deploy a Stateless Nginx Application]({{< ref "/docs/tutorials/kubernetes/stateless-app" >}})
--   [Tutorial: Deploy a Load-Balanced Guestbook App with Redis and Nginx]({{< ref "/docs/tutorials/kubernetes/guestbook" >}})
+- [Tutorial: Deploy a Stateless Nginx Application]({{< relref "/docs/tutorials/kubernetes/stateless-app" >}})
+- [Tutorial: Deploy a Load-Balanced Guestbook App with Redis and Nginx]({{< relref "/docs/tutorials/kubernetes/guestbook" >}})
 
 [Program Kubernetes with 11 Pearls]({{< relref "program-kubernetes-with-11-cloud-native-pulumi-pearls" >}}):
 a companion blog post with 11 exciting examples.
 
 [Pulumi: A Better Way to Kubernetes]({{< relref "pulumi-a-better-way-to-kubernetes" >}}): A walkthrough on how Pulumi can make Kubernetes more accessible, using your favorite languages and tools.
 
-
 If you have any questions or comments, we'd love to hear from you in our
 [Community Slack](https://slack.pulumi.com) or over on
 [GitHub](https://github.com/pulumi).
 
-Happy cloud native hacking! 
+Happy cloud native hacking!

@@ -251,7 +251,7 @@ of <code class="docutils literal notranslate"><span class="pre">allow-all</span>
 <li><p><code class="docutils literal notranslate"><span class="pre">statusCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of HTTP status codes for the origin group</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. Minimum 2.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">originId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier of the member origin</p></li>
 </ul>
@@ -324,7 +324,8 @@ distribution. Specify this, <code class="docutils literal notranslate"><span cla
 certificate for this distribution if you are using a custom domain. Specify
 this, <code class="docutils literal notranslate"><span class="pre">acm_certificate_arn</span></code>, or <code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minimumProtocolVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The minimum version of the SSL protocol that
-you want CloudFront to use for HTTPS connections. One of <code class="docutils literal notranslate"><span class="pre">SSLv3</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>,
+you want CloudFront to use for HTTPS connections. Can only be set if
+<code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span> <span class="pre">=</span> <span class="pre">false</span></code>. One of <code class="docutils literal notranslate"><span class="pre">SSLv3</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>,
 <code class="docutils literal notranslate"><span class="pre">TLSv1_2016</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1.1_2016</span></code> or <code class="docutils literal notranslate"><span class="pre">TLSv1.2_2018</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>. <strong>NOTE</strong>:
 If you are using a custom certificate (specified with <code class="docutils literal notranslate"><span class="pre">acm_certificate_arn</span></code>
 or <code class="docutils literal notranslate"><span class="pre">iam_certificate_id</span></code>), and have specified <code class="docutils literal notranslate"><span class="pre">sni-only</span></code> in
@@ -682,7 +683,7 @@ distribution (multiples allowed).</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">statusCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of HTTP status codes for the origin group</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. Minimum 2.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">originId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier of the member origin</p></li>
 </ul>
@@ -757,7 +758,8 @@ distribution. Specify this, <code class="docutils literal notranslate"><span cla
 certificate for this distribution if you are using a custom domain. Specify
 this, <code class="docutils literal notranslate"><span class="pre">acm_certificate_arn</span></code>, or <code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minimumProtocolVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The minimum version of the SSL protocol that
-you want CloudFront to use for HTTPS connections. One of <code class="docutils literal notranslate"><span class="pre">SSLv3</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>,
+you want CloudFront to use for HTTPS connections. Can only be set if
+<code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span> <span class="pre">=</span> <span class="pre">false</span></code>. One of <code class="docutils literal notranslate"><span class="pre">SSLv3</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>,
 <code class="docutils literal notranslate"><span class="pre">TLSv1_2016</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1.1_2016</span></code> or <code class="docutils literal notranslate"><span class="pre">TLSv1.2_2018</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>. <strong>NOTE</strong>:
 If you are using a custom certificate (specified with <code class="docutils literal notranslate"><span class="pre">acm_certificate_arn</span></code>
 or <code class="docutils literal notranslate"><span class="pre">iam_certificate_id</span></code>), and have specified <code class="docutils literal notranslate"><span class="pre">sni-only</span></code> in
@@ -1036,7 +1038,7 @@ of <code class="docutils literal notranslate"><span class="pre">allow-all</span>
 <li><p><code class="docutils literal notranslate"><span class="pre">statusCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of HTTP status codes for the origin group</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. Minimum 2.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">originId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier of the member origin</p></li>
 </ul>
@@ -1109,7 +1111,8 @@ distribution. Specify this, <code class="docutils literal notranslate"><span cla
 certificate for this distribution if you are using a custom domain. Specify
 this, <code class="docutils literal notranslate"><span class="pre">acm_certificate_arn</span></code>, or <code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minimumProtocolVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The minimum version of the SSL protocol that
-you want CloudFront to use for HTTPS connections. One of <code class="docutils literal notranslate"><span class="pre">SSLv3</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>,
+you want CloudFront to use for HTTPS connections. Can only be set if
+<code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span> <span class="pre">=</span> <span class="pre">false</span></code>. One of <code class="docutils literal notranslate"><span class="pre">SSLv3</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>,
 <code class="docutils literal notranslate"><span class="pre">TLSv1_2016</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1.1_2016</span></code> or <code class="docutils literal notranslate"><span class="pre">TLSv1.2_2018</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>. <strong>NOTE</strong>:
 If you are using a custom certificate (specified with <code class="docutils literal notranslate"><span class="pre">acm_certificate_arn</span></code>
 or <code class="docutils literal notranslate"><span class="pre">iam_certificate_id</span></code>), and have specified <code class="docutils literal notranslate"><span class="pre">sni-only</span></code> in

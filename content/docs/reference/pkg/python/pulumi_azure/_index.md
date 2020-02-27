@@ -18,11 +18,13 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="ad/">ad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="analysisservices/">analysisservices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apimanagement/">apimanagement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appconfiguration/">appconfiguration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appinsights/">appinsights</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appservice/">appservice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="authorization/">authorization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="automation/">automation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="autoscale/">autoscale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backup/">backup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="batch/">batch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bot/">bot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdn/">cdn</a></li>
@@ -80,6 +82,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="servicebus/">servicebus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="servicefabric/">servicefabric</a></li>
 <li class="toctree-l1"><a class="reference internal" href="signalr/">signalr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="siterecovery/">siterecovery</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sql/">sql</a></li>
 <li class="toctree-l1"><a class="reference internal" href="storage/">storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="streamanalytics/">streamanalytics</a></li>

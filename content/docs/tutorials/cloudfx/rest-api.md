@@ -1,10 +1,11 @@
 ---
-title: "Serverless REST APIs with DynamoDB"
-
+title: Serverless REST APIs with DynamoDB
+meta_desc: This tutorial will teach you to build and deploy a Serverless REST API with DynamoDB
+           on AWS.
 aliases: ["/docs/quickstart/cloudfx/tutorial-rest-api/"]
 ---
 
-With Pulumi, you can combine infrastructure definitions and application code in one program. The [@pulumi/cloud] library is a set of Pulumi [components]({{< relref "/docs/intro/concepts/programming-model.md#components" >}}) that provide a higher-level abstraction over AWS. So, instead of provisioning an API Gateway instance, Lambda functions, and setting up IAM roles, you can use [cloud.API] and define application code at the same time as the infrastructure it depends on.
+With Pulumi, you can combine infrastructure definitions and application code in one program. The [@pulumi/cloud] library is a set of Pulumi [components]({{< relref "/docs/intro/concepts/programming-model#components" >}}) that provide a higher-level abstraction over AWS. So, instead of provisioning an API Gateway instance, Lambda functions, and setting up IAM roles, you can use [cloud.API] and define application code at the same time as the infrastructure it depends on.
 
 In this tutorial, we'll show how to create a simple REST API that counts the number of times a route has been hit. To implement this API, we need a key-value store, an API endpoint, and a Lambda function.
 
@@ -12,14 +13,14 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
 
 ## Create a simple REST API
 
-1.  Run `pulumi new`:
+1. Run `pulumi new`:
 
     ```bash
     $ mkdir hello-http && cd hello-http
     $ pulumi new aws-javascript
     ```
 
-1.  Replace the contents of `index.js` with the following:
+1. Replace the contents of `index.js` with the following:
 
     ```javascript
     const cloud = require("@pulumi/cloud-aws");
@@ -52,13 +53,13 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
 
     The function passed to `get` is the interesting part: this becomes the body of a new AWS Lambda function that is called on a GET request to the API Gateway. The body of this function can use variables defined in the main program, such as `counterTable`. This is translated to a lookup on the provisioned DynamoDB instance; there is no need to store its ARN in an environment variable.
 
-1.  Add and install the NPM dependencies:
+1. Add and install the NPM dependencies:
 
     ```bash
     $ npm install --save @pulumi/cloud @pulumi/cloud-aws
     ```
 
-1.  Preview and deploy changes via `pulumi up`:
+1. Preview and deploy changes via `pulumi up`:
 
     ```
     $ pulumi up
@@ -72,7 +73,7 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
         + 14 resources created
     ```
 
-1.  View the endpoint URL and curl a few routes:
+1. View the endpoint URL and curl a few routes:
 
     ```bash
     $ pulumi stack output
@@ -86,7 +87,7 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
     {"route":"woohoo","count":1}
     ```
 
-1.  To view the runtime logs of the Lambda function, use the `pulumi logs` command. To get a log stream, use `pulumi logs --follow`.
+1. To view the runtime logs of the Lambda function, use the `pulumi logs` command. To get a log stream, use `pulumi logs --follow`.
 
     ```
     $ pulumi logs --follow

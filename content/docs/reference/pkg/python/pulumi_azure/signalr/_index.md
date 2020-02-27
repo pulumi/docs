@@ -14,6 +14,77 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.signalr"></span><dl class="class">
+<dt id="pulumi_azure.signalr.AwaitableGetServiceResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.signalr.</code><code class="sig-name descname">AwaitableGetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">hostname=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">public_port=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">server_port=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.signalr.AwaitableGetServiceResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.signalr.GetServiceResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.signalr.</code><code class="sig-name descname">GetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">hostname=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">public_port=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">server_port=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.signalr.GetServiceResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getService.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.signalr.GetServiceResult.hostname">
+<code class="sig-name descname">hostname</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.signalr.GetServiceResult.hostname" title="Permalink to this definition">¶</a></dt>
+<dd><p>The FQDN of the SignalR service.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.signalr.GetServiceResult.ip_address">
+<code class="sig-name descname">ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.signalr.GetServiceResult.ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The publicly accessible IP of the SignalR service.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.signalr.GetServiceResult.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.signalr.GetServiceResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the supported Azure location where the SignalR service exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.signalr.GetServiceResult.primary_access_key">
+<code class="sig-name descname">primary_access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.signalr.GetServiceResult.primary_access_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primary access key of the SignalR service.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.signalr.GetServiceResult.primary_connection_string">
+<code class="sig-name descname">primary_connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.signalr.GetServiceResult.primary_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primary connection string of the SignalR service.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.signalr.GetServiceResult.public_port">
+<code class="sig-name descname">public_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.signalr.GetServiceResult.public_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>The publicly accessible port of the SignalR service which is designed for browser/client use.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.signalr.GetServiceResult.secondary_access_key">
+<code class="sig-name descname">secondary_access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.signalr.GetServiceResult.secondary_access_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secondary access key of the SignalR service.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.signalr.GetServiceResult.secondary_connection_string">
+<code class="sig-name descname">secondary_connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.signalr.GetServiceResult.secondary_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secondary connection string of the SignalR service.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.signalr.GetServiceResult.server_port">
+<code class="sig-name descname">server_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.signalr.GetServiceResult.server_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>The publicly accessible port of the SignalR service which is designed for customer server side use.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.signalr.GetServiceResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.signalr.GetServiceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.signalr.Service">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.signalr.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cors=None</em>, <em class="sig-param">features=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.signalr.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure SignalR service.</p>
@@ -234,6 +305,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.signalr.get_service">
+<code class="sig-prename descclassname">pulumi_azure.signalr.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.signalr.get_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Azure SignalR service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the SignalR service.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the resource group the SignalR service is located in.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/signalr_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/signalr_service.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

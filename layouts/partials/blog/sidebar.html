@@ -8,28 +8,28 @@
         <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">
             <i class="fas fa-bars"></i>
         </button>
-        <a href="{{relref . "/blog" }}">🍹 Pulumi Blog</a>
+        <a data-track="sidebar" href="{{ relref . "/blog" }}">🍹 Pulumi Blog</a>
     </div>
 
-    <h1 class="no-anchor hidden md:flex mt-4 text">
-        <a class="text-2xl" href="{{relref . "/blog" }}">🍹 Pulumi Blog</a>
-    </h1>
+    {{ if eq .Page.Title "Blog" }}
+        <h1 class="no-anchor hidden md:flex mt-4 text">
+            <a data-track="sidebar" class="text-2xl" href="{{ relref . "/blog" }}">🍹 Pulumi Blog</a>
+        </h1>
+    {{ else }}
+        <h2 class="no-anchor hidden md:flex mt-4 text">
+            <a data-track="sidebar" class="text-2xl" href="{{ relref . "/blog" }}">🍹 Pulumi Blog</a>
+        </h2>
+    {{ end }}
 
     <!-- Sidebar content. Hidden on smaller displays unless toggled. -->
     <div class="blog-sidebar-content hidden md:block">
-        <div class="bg-gray-100 rounded-lg p-4 my-6 text-gray-700">
-            <h5 class="no-anchor text-gray-700">Program the Cloud</h5>
-            <p class="text-sm my-0">
-                Create, deploy, and manage cloud infrastructure using your favorite language.
-                <a id="cta-blog-sidebar" href="{{ relref . "/docs/get-started" }}" track-click>Get started &rarr;</a>
-            </p>
-        </div>
+        {{ partial "sidebar-cta" . }}
 
         <ul class="list-none p-0 mb-4 inline-flex flex-wrap text-xs">
             {{ range $tag, $_ := .Site.Taxonomies.tags }}
                 {{ if $tag }}
                     <li>
-                        <a class="tag tag-blog text-xs {{ if eq (lower $tag) (urlize ((lower $.Title))) }} active {{ end }}" href="{{ .Page.Permalink }}">
+                        <a data-track="blog-tag-{{ $tag | urlize }}" class="tag tag-blog text-xs {{ if eq (lower $tag) (urlize ((lower $.Title))) }} active {{ end }}" href="{{ .Page.Permalink }}">
                             {{ $tag | urlize }}
                         </a>
                     </li>
@@ -45,7 +45,7 @@
                         {{/* The /blog/_index.md file unfortunately shows up in the list, so we skip it. */}}
                     {{ else }}
                         <li class="my-4 leading-snug">
-                            <a class="text-sm" href="{{ $post.Permalink }}">{{ $post.Title }}</a>
+                            <a data-track="recent-post" class="text-sm" href="{{ $post.Permalink }}">{{ $post.Title }}</a>
                         </li>
                     {{ end }}
                 {{ end }}

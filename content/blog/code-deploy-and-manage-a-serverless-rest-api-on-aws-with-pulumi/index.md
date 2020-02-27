@@ -1,7 +1,8 @@
 ---
-title: "Code, Deploy, and Manage a Serverless REST API on AWS with Pulumi"
+title: Code, Deploy, and Manage a Serverless REST API on AWS
+h1: "Code, Deploy, and Manage a Serverless REST API on AWS with Pulumi"
 date: "2018-06-22"
-meta_desc: "In this post, we'll use Pulumi to create a simple serverless REST API that counts the number of times a route has been hit, using JavaScript to define both the infrastructure and application code."
+meta_desc: "In this post, we'll use Pulumi to create a simple serverless REST API using JavaScript to define both the infrastructure and application code."
 meta_image: "counter-arch.png"
 authors: ["donna-malayeri"]
 tags: ["JavaScript","Serverless","AWS"]
@@ -53,7 +54,7 @@ If you're on Windows, run this:
     SET "PATH=%PATH%;%USERPROFILE%.pulumiin"
 
 You'll deploy this app to your own AWS account, so follow the steps to
-[configure your AWS account]({{< ref "/docs/get-started/aws" >}}).
+[configure your AWS account]({{< relref "/docs/get-started/aws" >}}).
 
 Make sure you have [Node.js](https://nodejs.org/en/download/) installed,
 with a version of 6.10.x or later.
@@ -63,56 +64,56 @@ with a version of 6.10.x or later.
 First we'll create a Pulumi project and add code for both the
 infrastructure definitions and application code.
 
-1.  To create a new Pulumi project, run the following commands:
+1. To create a new Pulumi project, run the following commands:
 
-``` {style="padding-left: 30px;"}
-mkdir hello-http && cd hello-http
-pulumi new aws-javascript
-```
+    ``` {style="padding-left: 30px;"}
+    mkdir hello-http && cd hello-http
+    pulumi new aws-javascript
+    ```
 
-This creates a new project in the directory `hello-http`.
+    This creates a new project in the directory `hello-http`.
 
 2. Replace the contents of `index.js` with the following:
 
-``` {style="padding-left: 30px;"}
-const cloud = require("@pulumi/cloud-aws");
+    ``` {style="padding-left: 30px;"}
+    const cloud = require("@pulumi/cloud-aws");
 
-/* Create a mapping from 'route' to a count */
-let counterTable = new cloud.Table("counterTable", "route");
+    /* Create a mapping from 'route' to a count */
+    let counterTable = new cloud.Table("counterTable", "route");
 
-/* Create an REST API endpoint */
-let endpoint = new cloud.API("hello-world");
+    /* Create an REST API endpoint */
+    let endpoint = new cloud.API("hello-world");
 
-endpoint.get("/{route+}", (req, res) => {
-    let route = req.params["route"];
-    console.log(`Getting count for '${route}'`);
+    endpoint.get("/{route+}", (req, res) => {
+        let route = req.params["route"];
+        console.log(`Getting count for '${route}'`);
 
-    /* get previous value and increment */
-    /* reference outer counterTable object */
-    counterTable.get({ route }).then(value => {
-        let count = (value && value.count) || 0;
-        counterTable.insert({ route, count: ++count }).then(() => {
-            res.status(200).json({ route, count });
-            console.log(`Got count ${count} for '${route}'`);
+        /* get previous value and increment */
+        /* reference outer counterTable object */
+        counterTable.get({ route }).then(value => {
+            let count = (value && value.count) || 0;
+            counterTable.insert({ route, count: ++count }).then(() => {
+                res.status(200).json({ route, count });
+                console.log(`Got count ${count} for '${route}'`);
+            });
         });
     });
-});
 
-exports.endpoint = endpoint.publish().url;
-```
+    exports.endpoint = endpoint.publish().url;
+    ```
 
-The definition for `counterTable` stores a counter for each route, using
-`cloud.Table`. On AWS, this provisions a DynamoDB instance. To create a
-new API Gateway instance, we create an instance of `cloud.API`. New
-routes can be added to this endpoint using functions such as `get`,
-`post`, `put` etc.
+    The definition for `counterTable` stores a counter for each route, using
+    `cloud.Table`. On AWS, this provisions a DynamoDB instance. To create a
+    new API Gateway instance, we create an instance of `cloud.API`. New
+    routes can be added to this endpoint using functions such as `get`,
+    `post`, `put` etc.
 
-The function passed to `get` is the interesting part: this becomes the
-body of a new AWS Lambda function that is called on a GET request to the
-API Gateway. The body of this function can use variables defined in the
-main program, such as `counterTable`. This is translated to a lookup on
-the provisioned DynamoDB instance; there is no need to store the table
-name in an environment variable.
+    The function passed to `get` is the interesting part: this becomes the
+    body of a new AWS Lambda function that is called on a GET request to the
+    API Gateway. The body of this function can use variables defined in the
+    main program, such as `counterTable`. This is translated to a lookup on
+    the provisioned DynamoDB instance; there is no need to store the table
+    name in an environment variable.
 
 3. Finally, add `@pulumi/cloud-aws` NPM package:
 

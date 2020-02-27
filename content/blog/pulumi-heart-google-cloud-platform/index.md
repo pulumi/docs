@@ -3,7 +3,7 @@ title: "Getting Started on Google Cloud Platform with Pulumi"
 authors: ["luke-hoban"]
 tags: ["Serverless","Kubernetes","Features","CI/CD","GCP"]
 date: "2019-04-09"
-meta_desc: "Pulumi offers tooling that works with GCP and enables collaboration, sharing, and reuse. Pulumi gives you full access to the full Google Cloud Platform, including Kubernetes and GKE, super simple serverless with Google Cloud Functions, continuous delivery with Google Cloud Build, and managing deployments with the Pulumi Console."
+meta_desc: "Pulumi offers tooling that works with GCP and enables collaboration, sharing, and reuse. Pulumi gives you full access to the full Google Cloud Platform."
 meta_image: "pulumi_console.png"
 ---
 
@@ -29,8 +29,6 @@ make it a joy to work with Pulumi + Google Cloud:
 - Continuous Delivery with Google Cloud Build
 - Managing Deployment with the Pulumi Console
 
-
-
 ## Infrastructure as Code for the Full Google Cloud Platform
 
 Pulumi lets you define and deploy infrastructure as code using your
@@ -47,15 +45,15 @@ instance, using Python:
 ```typescript
 import pulumi
 from pulumi_gcp import compute
- 
+
 disk = {
     'initializeParams': {
         'image': "centos-cloud/centos-7-v20190116"
     }
 }
- 
+
 addr = compute.address.Address(resource_name='poc')
- 
+
 network = compute.Network("network")
 network_interface = [
     {
@@ -63,15 +61,15 @@ network_interface = [
         'accessConfigs': [{'nat_ip': addr.address}],
     }
 ]
- 
+
 firewall = compute.Firewall("firewall", network=network.self_link, allows=[{
     'protocol': "tcp",
     'ports': ["22", "80"]
 }])
- 
+
 instance = compute.Instance('poc', name='poc', boot_disk=disk, machine_type="f1-micro",
                             network_interfaces=network_interface)
- 
+
 pulumi.export('external_ip', addr.address)
 ```
 
@@ -85,7 +83,7 @@ will it proceed (with a full audit history):
     Previewing update (luke):
      
          Type                     Name                     Plan        Info
-         pulumi:pulumi:Stack      gcp-instance-nginx-luke              
+         pulumi:pulumi:Stack      gcp-instance-nginx-luke
      ~   ├─ gcp:compute:Firewall  firewall                 update      [diff: ~allows]
      +-  └─ gcp:compute:Instance  poc                      replace     [diff: ~bootDisk,name]
      
@@ -98,7 +96,7 @@ will it proceed (with a full audit history):
     ...
 
 Learn more about working with Pulumi and Google Cloud infrastructure in
-this [GCE Web Server]({{< ref "/docs/tutorials/gcp/gce-webserver" >}})
+this [GCE Web Server]({{< relref "/docs/tutorials/gcp/gce-webserver" >}})
 tutorial.
 
 ## Working with Kubernetes and Google Container Engine (GKE)
@@ -129,10 +127,10 @@ system for easy parameterization:
 ```python
 from pulumi import Config
 from pulumi_gcp.container import Cluster
- 
+
 # Read in some configurable settings for our cluster:
 config = Config(None)
- 
+
 # nodeCount is the number of cluster nodes to provision. Defaults to 3 if unspecified.
 NODE_COUNT = config.get('node_count') or 3
 # nodeMachineType is the machine type to use for cluster nodes. Defaults to n1-standard-1 if unspecified.
@@ -142,7 +140,7 @@ NODE_MACHINE_TYPE = config.get('node_machine_type') or 'n1-standard-1'
 USERNAME = config.get('username') or 'admin'
 # password is the password for the admin user in the cluster.
 PASSWORD = config.require('password')
- 
+
 # Now, actually create the GKE cluster.
 k8s_cluster = Cluster('gke-cluster',
     initial_node_count=NODE_COUNT,
@@ -162,7 +160,7 @@ k8s_cluster = Cluster('gke-cluster',
 ```
 
 Learn more about using Pulumi with Kubernetes and GKE in this
-[Hello GKE]({{< ref "/docs/tutorials/kubernetes/gke" >}}) tutorial.
+[Hello GKE]({{< relref "/docs/tutorials/kubernetes/gke" >}}) tutorial.
 
 ## Super Simple Serverless with Google Cloud Functions
 
@@ -177,11 +175,11 @@ just a few lines of code:
 
 ```typescript
 import * as gcp from "@pulumi/gcp";
- 
+
 let greeting = new gcp.cloudfunctions.HttpCallbackFunction("greeting", (req, res) => {
     res.send(`Greetings from ${req.body.name || 'Google Cloud Functions'}!`);
 });
- 
+
 export let url = greeting.httpsTriggerUrl;
 ```
 
@@ -232,7 +230,7 @@ you can see and approve infrastructure changes before they happen:
 ![Pulumi in a Pull Request](./pulumi_pr.png)
 
 Learn more about integrating Pulumi with CI/CD in our
-[continuous delivery]({{< ref "/docs/guides/continuous-delivery" >}}) documentation.
+[continuous delivery]({{< relref "/docs/guides/continuous-delivery" >}}) documentation.
 
 ## Managing Deployment with the Pulumi Console
 
@@ -265,9 +263,9 @@ Pulumi is free and open source. You can get started with Pulumi today.
 Here are a few resources to learn more about working with Pulumi and
 GCP:
 
-- [Google Cloud Platform Getting Started Guide]({{< ref "/docs/get-started/gcp" >}})
-- [GKE Tutorial]({{< ref "/docs/tutorials/kubernetes/gke" >}})
-- [GCE Tutorial]({{< ref "/docs/tutorials/gcp/gce-webserver" >}})
+- [Google Cloud Platform Getting Started Guide]({{< relref "/docs/get-started/gcp" >}})
+- [GKE Tutorial]({{< relref "/docs/tutorials/kubernetes/gke" >}})
+- [GCE Tutorial]({{< relref "/docs/tutorials/gcp/gce-webserver" >}})
 - Example: [Serverless Slackbot with Cloud Functions in JavaScript](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot)
 - Example: [GKE + Kubernetes Pod Deployment in Python](https://github.com/pulumi/examples/tree/master/gcp-py-gke)
 - [Pulumi Community Slack](https://slack.pulumi.com/)

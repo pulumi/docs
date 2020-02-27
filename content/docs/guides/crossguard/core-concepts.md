@@ -1,5 +1,7 @@
 ---
-title: Core Concepts
+title: CrossGuard Core Concepts
+meta_desc: This page contains an overview of core concepts when interacting with Pulumi CrossGuard and
+           Policy Pack.
 linktitle: Core Concepts
 weight: 1
 
@@ -27,7 +29,7 @@ There are two types of policies: `ResourceValidationPolicy` validate a particula
 
 Policies of `ResourceValidationPolicy` validate against a particular resource in a stack. These policies are run before a resource is registered and thus block an out-of-compliance resource from ever being created.
 
-A resource validation is passed `args` with more information about the resource and a `reportViolation` callback that can be used to report a policy violation. In most cases, you will just use the helper function `validateTypedResource` to filter the resource type you want to validate.
+A resource validation is passed `args` with more information about the resource and a `reportViolation` callback that can be used to report a policy violation. In most cases, you will just use the helper function `validateResourceOfType` to filter the resource type you want to validate.
 
 An example resource validation policy is shown below:
 
@@ -36,7 +38,7 @@ const s3AclPolicy: ResourceValidationPolicy = {
     name: "s3-no-public-read",
     description: "Prohibits setting the public-read or public-read-write permission on AWS S3 buckets.",
     enforcementLevel: "mandatory",
-    validateResource: validateTypedResource(aws.s3.Bucket, (bucket, args, reportViolation) => {
+    validateResource: validateResourceOfType(aws.s3.Bucket, (bucket, args, reportViolation) => {
         if (bucket.acl === "public-read" || bucket.acl === "public-read-write") {
             reportViolation("S3 buckets cannot have an ACL set as public-read or public-read-write.");
         }
@@ -52,17 +54,17 @@ const elbLoggingPolicy: ResourceValidationPolicy = {
     description: "Checks whether the Application Load Balancers and the Classic Load Balancers have logging enabled.",
     enforcementLevel: "mandatory",
     validateResource: [
-        validateTypedResource(aws.elasticloadbalancing.LoadBalancer, (loadBalancer, args, reportViolation) => {
+        validateResourceOfType(aws.elasticloadbalancing.LoadBalancer, (loadBalancer, args, reportViolation) => {
             if (loadBalancer.accessLogs === undefined || !loadBalancer.accessLogs.enabled) {
                 reportViolation("Elastic Load Balancer must have access logs enabled.");
             }
         }),
-        validateTypedResource(aws.elasticloadbalancingv2.LoadBalancer, (loadBalancer, args, reportViolation) => {
+        validateResourceOfType(aws.elasticloadbalancingv2.LoadBalancer, (loadBalancer, args, reportViolation) => {
             if (loadBalancer.accessLogs === undefined || !loadBalancer.accessLogs.enabled) {
                 reportViolation("Elastic Load Balancer must have access logs enabled.");
             }
         }),
-        validateTypedResource(aws.applicationloadbalancing.LoadBalancer, (loadBalancer, args, reportViolation) => {
+        validateResourceOfType(aws.applicationloadbalancing.LoadBalancer, (loadBalancer, args, reportViolation) => {
             if (loadBalancer.accessLogs === undefined || !loadBalancer.accessLogs.enabled) {
                 reportViolation("Application Load Balancer must have access logs enabled.");
             }
@@ -83,8 +85,8 @@ const dynamodbTableAutoscalingRequired: StackValidationPolicy = {
     description: "Requires a dynamoDB table to have an associated App Autoscaling policy.",
     enforcementLevel: enforcementLevel,
     validateStack: (args: StackValidationArgs, reportViolation: ReportViolation) => {
-        const dynamodbTables = getResolvedResources(aws.dynamodb.Table.isInstance, args);
-        const appScalingPolicies = getResolvedResources(aws.appautoscaling.Policy.isInstance, args);
+        const dynamodbTables = args.resources.map(r => r.asType(aws.dynamodb.Table)).filter(r => r);
+        const appScalingPolicies = args.resources.map(r => r.asType(aws.appautoscaling.Policy)).filter(r => r);
 
         const policyResourceIDMap: Record<string, q.ResolvedResource<aws.appautoscaling.Policy>> = {};
         for (const policy of appScalingPolicies) {
@@ -97,18 +99,6 @@ const dynamodbTableAutoscalingRequired: StackValidationPolicy = {
             }
         }
     },
-}
-
-// Utility method for returning all resources matching the provided type.
-// Pulumi-policy will soon provide similar utility methods. For the meantime, you can
-// use this utility method as an example for creating your own.
-function getResolvedResources<TResource extends Resource>(
-    typeFilter: (o: any) => o is TResource,
-    args: StackValidationArgs,
-): q.ResolvedResource<TResource>[] {
-    return args.resources
-        .map(r => (<unknown>{ ...r.props, __pulumiType: r.type } as q.ResolvedResource<TResource>))
-        .filter(typeFilter);
 }
 ```
 

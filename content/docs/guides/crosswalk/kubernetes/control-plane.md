@@ -1,5 +1,7 @@
 ---
-title: Create the Control Plane
+title: Create a Kubernetes Control Plane
+meta_desc: This page will walk you through how to create on a Kubernetes Control Pane
+           on AWS, Azure, and GCP.
 menu:
   userguides:
     parent: crosswalk-kubernetes
@@ -20,9 +22,13 @@ easier way to get up and running.
 See the [official Kubernetes docs][k8s-docs] for more details.
 
 The full code for this stack is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [eks]: https://aws.amazon.com/eks/
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
 [k8s-docs]: https://kubernetes.io/docs/reference/
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -37,9 +43,13 @@ easier way to get up and running.
 See the [official Kubernetes docs][k8s-docs] for more details.
 
 The full code for this stack is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [aks]: https://azure.microsoft.com/en-us/services/kubernetes-service/
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/03-cluster-configuration
 [k8s-docs]: https://kubernetes.io/docs/reference/
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -54,9 +64,13 @@ easier way to get up and running.
 See the [official Kubernetes docs][k8s-docs] for more details.
 
 The full code for this stack is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gke]: https://cloud.google.com/kubernetes-engine/
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration
 [k8s-docs]: https://kubernetes.io/docs/reference/
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -69,14 +83,14 @@ the worker nodes run.
 
 We'll configure and deploy:
 
-  * [Identity](#identity): For authentication and authorization of
-  cluster users and worker nodes.
-  * [Managed Infrastructure](#managed-infrastructure): To provide managed services for the cluster.
-  At a minimum, this includes a virtual network for the cluster.
-  * [Storage](#storage): To provide data stores for the cluster and its
-    workloads.
-  * [Recommended Settings](#recommended-settings): To apply helpful features
-  and best-practices, such as version pinning, resource tags, and control plane logging.
+* [Identity](#identity): For authentication and authorization of
+cluster users and worker nodes.
+* [Managed Infrastructure](#managed-infrastructure): To provide managed services for the cluster.
+At a minimum, this includes a virtual network for the cluster.
+* [Storage](#storage): To provide data stores for the cluster and its
+  workloads.
+* [Recommended Settings](#recommended-settings): To apply helpful features
+and best-practices, such as version pinning, resource tags, and control plane logging.
 
 ## Identity
 
@@ -100,7 +114,7 @@ We configure applications and service principals using the `@pulumi/azuread` pac
 {{% /md %}}
 </div>
 
-#### Users
+### Users
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -143,10 +157,13 @@ const cluster = new eks.Cluster(`${projectName}`, {
 }
 ```
 
+<!-- markdownlint-disable url -->
 [crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
 [k8s-rbac-docs]: https://kubernetes.io/docs/reference/access-authn-authz/rbac/
 [role-mapping]: {{< relref "/docs/reference/pkg/nodejs/pulumi/eks#RoleMapping" >}}
 [user-mapping]: {{< relref "/docs/reference/pkg/nodejs/pulumi/eks#UserMapping" >}}
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -226,8 +243,11 @@ const cluster = new eks.Cluster(`${projectName}`, {
 }
 ```
 
+<!-- markdownlint-disable url -->
 [nodegroups]: {{< relref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}
 [aws-instance-profile]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -250,10 +270,10 @@ How you create the network will vary on your permissions and preferences.
 Typical setups will provide Kubernetes with the following resources
 to use for the cluster.
 
-  * Public subnets for provisioning public load balancers.
-  * Private subnets for provisioning private load balancers.
-  * Private subnets for use as the default subnets for workers to run in.
-  * Managed [Pod networking][k8s-pod-networking].
+* Public subnets for provisioning public load balancers.
+* Private subnets for provisioning private load balancers.
+* Private subnets for use as the default subnets for workers to run in.
+* Managed [Pod networking][k8s-pod-networking].
 
 Kubernetes requires that all subnets be [properly tagged][eks-subnet-tagging],
 in order to determine which subnets it can provision load balancers in.
@@ -287,12 +307,15 @@ const cluster = new eks.Cluster(`${projectName}`, {
 }
 ```
 
+<!-- markdownlint-disable url -->
 [eks-subnet-tagging]: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html#vpc-subnet-tagging
 [k8s-pod-networking]: https://kubernetes.io/docs/concepts/cluster-administration/networking/
 [pulumi-eks]: https://github.com/pulumi/pulumi-eks
 [aws-k8s-cni]: https://github.com/aws/amazon-vpc-cni-k8s/
 [k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 [configure-cni]: {{< relref "/docs/reference/pkg/nodejs/pulumi/eks#VpcCniOptions" >}}
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -305,9 +328,9 @@ How you create the network will vary on your permissions and preferences.
 Typical setups will provide Kubernetes with the following resources
 to use for the cluster.
 
-  * Private subnets for provisioning private load balancers.
-  * Private subnets for use as the default subnets for workers to run in.
-  * Managed [Pod networking][k8s-pod-networking].
+* Private subnets for provisioning private load balancers.
+* Private subnets for use as the default subnets for workers to run in.
+* Managed [Pod networking][k8s-pod-networking].
 
 By default, [`pulumi/azure`][pulumi-azure] will deploy workers into the
 private subnets without associating a public IP address. This
@@ -337,10 +360,13 @@ const subnet = new azure.network.Subnet(name, {
 
 ```
 
+<!-- markdownlint-disable url -->
 [pulumi-azure]: https://github.com/pulumi/pulumi-azure
 [aks-k8s-cni]: https://docs.microsoft.com/en-us/azure/aks/configure-azure-cni
 [k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 [k8s-pod-networking]: https://kubernetes.io/docs/concepts/cluster-administration/networking/
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -353,8 +379,8 @@ How you create the network will vary on your permissions and preferences.
 Typical setups will provide Kubernetes with the following resources
 to use for the cluster.
 
-  * Private subnets for use as the default subnets for workers to run in.
-  * Managed [Pod networking][k8s-pod-networking].
+* Private subnets for use as the default subnets for workers to run in.
+* Managed [Pod networking][k8s-pod-networking].
 
 By default, [`pulumi/gcp`][pulumi-gcp] will deploy workers into the
 private subnets without associating an external IP address. This
@@ -472,6 +498,7 @@ EOF
 ```bash
 $ kubectl apply -f pvc.yaml
 ```
+
 {{% /md %}}
 </div>
 
@@ -493,6 +520,7 @@ const cluster = new eks.Cluster(`${projectName}`, {
     ...
 }
 ```
+
 With storage classes created in the cluster, we can now create
 persistent volumes in the cluster.
 
@@ -519,6 +547,7 @@ cluster.core.storageClasses["gp2-encrypted"].apply(sc => {
     });
 });
 ```
+
 {{% /md %}}
 </div>
 
@@ -530,7 +559,10 @@ cluster.core.storageClasses["gp2-encrypted"].apply(sc => {
 {{% md %}}
 
 See the [official AKS docs][aks-storage-classes] for more details.
+
+<!-- markdownlint-disable url -->
 [aks-storage-classes]: https://docs.microsoft.com/en-us/azure/aks/concepts-storage
+<!-- markdownlint-enable url -->
 
 {{< k8s-language nokx >}}
 
@@ -637,7 +669,10 @@ const myPvc = new k8s.core.v1.PersistentVolumeClaim("mypvc", {
 {{% md %}}
 
 See the [official GKE docs][gke-storage-classes] for more details.
+
+<!-- markdownlint-disable url -->
 [gke-storage-classes]: https://cloud.google.com/kubernetes-engine/docs/concepts/persistent-volumes
+<!-- markdownlint-enable url -->
 
 {{< k8s-language nokx >}}
 
@@ -746,11 +781,11 @@ general best-practices and recommendations to configure in the cluster.
 
 **General:**
 
-  * Use a specific version of Kubernetes for the control plane. This pins the
-    cluster to a particular release in a declarative manner rather than
-    implicitly using the latest available version or a smart default
-    that could be updated at any time.
-  * Instead of [using][kube-dash-security] `kube-dashboard`, try [VMware's Octant][octant].
+* Use a specific version of Kubernetes for the control plane. This pins the
+  cluster to a particular release in a declarative manner rather than
+  implicitly using the latest available version or a smart default
+  that could be updated at any time.
+* Instead of [using][kube-dash-security] `kube-dashboard`, try [VMware's Octant][octant].
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -758,17 +793,17 @@ general best-practices and recommendations to configure in the cluster.
 
 **EKS:**
 
-  * Tag resources under management, which makes it easier to manage, search and 
-    filter them.
-  * Skip enabling the default node group in favor of managing them separately from
-    the control plane, as demonstrated in [Create the Worker Nodes][nodegroups].
-  * Enable control plane logging for diagnostics of the control
-    plane's actions, and for use in debugging and auditing.
-  * (Optional) Configure private accessibility of the control plane /
-    API Server endpoint to prevent it from being publicly exposed on the
-    Internet. To enable this feature, additional networking is required,
-    and a [bastion host][aws-bastion] would be needed to access the control
-    plane.
+* Tag resources under management, which makes it easier to manage, search and
+  filter them.
+* Skip enabling the default node group in favor of managing them separately from
+  the control plane, as demonstrated in [Create the Worker Nodes][nodegroups].
+* Enable control plane logging for diagnostics of the control
+  plane's actions, and for use in debugging and auditing.
+* (Optional) Configure private accessibility of the control plane /
+  API Server endpoint to prevent it from being publicly exposed on the
+  Internet. To enable this feature, additional networking is required,
+  and a [bastion host][aws-bastion] would be needed to access the control
+  plane.
 
 ```typescript
 import * as eks from "@pulumi/eks";
@@ -792,7 +827,10 @@ const cluster = new eks.Cluster(`${projectName}`, {
 ```
 
 [nodegroups]: {{< relref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}
+
+<!-- markdownlin-disable url -->
 [aws-bastion]: https://docs.aws.amazon.com/quickstart/latest/linux-bastion/architecture.html
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
@@ -803,10 +841,9 @@ const cluster = new eks.Cluster(`${projectName}`, {
 
 **AKS:**
 
-  * Enable [PodSecurityPolicies][k8s-psp] using `enablePodSecurityPolicy: true`
-  * Set [Node Labels][k8s-labels] to identify nodes by attributes
-  * Enable Log Analytics using the `omsAgent` setting
-
+* Enable [PodSecurityPolicies][k8s-psp] using `enablePodSecurityPolicy: true`
+* Set [Node Labels][k8s-labels] to identify nodes by attributes
+* Enable Log Analytics using the `omsAgent` setting
 
 ```ts
 import * as azure from "@pulumi/azure";
@@ -824,8 +861,11 @@ const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
 });
 ```
 
+<!-- markdownlint-disable url -->
 [k8s-labels]: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
 [k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -835,18 +875,18 @@ const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
 
 **GKE:**
 
-  * Enable [PodSecurityPolicies][k8s-psp] using `podSecurityPolicyConfig: { enabled: true }`
-  * Skip enabling the default node group in favor of managing them separately from
-    the control plane, as demonstrated in [Create the Worker Nodes][nodegroups].
-  * [Disable legacy metadata APIs][gcp-disable-metadata] that are not v1 and do not enforce internal GCP metadata headers
-  * Enable control plane logging and monitoring through `oauthScopes` to have diagnostics of the control
-    plane's actions, and for use in debugging and auditing.
-  * (Optional) Configure private accessibility of the control plane /
-    API Server endpoint to prevent it from being publicly exposed on the
-    Internet. To enable this feature, [additional
-    networking][gke-private-cluster] is required,
-    and a [bastion host][gke-bastion] would be needed to access the control
-    plane.
+* Enable [PodSecurityPolicies][k8s-psp] using `podSecurityPolicyConfig: { enabled: true }`
+* Skip enabling the default node group in favor of managing them separately from
+  the control plane, as demonstrated in [Create the Worker Nodes][nodegroups].
+* [Disable legacy metadata APIs][gcp-disable-metadata] that are not v1 and do not enforce internal GCP metadata headers
+* Enable control plane logging and monitoring through `oauthScopes` to have diagnostics of the control
+  plane's actions, and for use in debugging and auditing.
+* (Optional) Configure private accessibility of the control plane /
+  API Server endpoint to prevent it from being publicly exposed on the
+  Internet. To enable this feature, [additional
+  networking][gke-private-cluster] is required,
+  and a [bastion host][gke-bastion] would be needed to access the control
+  plane.
 
 ```typescript
 import * as gcp from "@pulumi/gcp";
@@ -872,6 +912,7 @@ const cluster = new gcp.container.Cluster("cluster", {
 });
 ```
 
+<!-- markdownlint-disable url -->
 [k8s-labels]: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
 [gcp-disable-metadata]: https://cloud.google.com/kubernetes-engine/docs/how-to/protecting-cluster-metadata#disable-legacy-apis
 [gke-bastion]: https://cloud.google.com/nat/docs/gke-example
@@ -899,3 +940,4 @@ const cluster = new gcp.container.Cluster("cluster", {
 [k8s-pvs]: https://kubernetes.io/docs/concepts/storage/persistent-volumes/
 [k8s-storage-classes]: https://kubernetes.io/docs/concepts/storage/storage-classes/
 [eks-storage-classes]: https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
+<!-- markdownlint-enable url -->

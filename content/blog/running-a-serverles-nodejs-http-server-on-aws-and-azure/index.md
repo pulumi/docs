@@ -3,8 +3,7 @@ title: "Running a Serverless Node.js HTTP Server on AWS and Azure"
 authors: ["cyrus-najmabadi"]
 tags: ["Serverless"]
 date: "2018-10-02"
-meta_desc: "Pulumi introduces the cloud.HttpServer API which makes it easy to serve a standard Node.js HTTP server as a serverless API on any cloud platform. The API is designed to work well with the existing large middleware
-ecosystem and critically, the same HttpServer API can be implemented consistently on AWS, Azure and GCP - so you can write once and deploy to any cloud."
+meta_desc: "Pulumi introduces the cloud.HttpServer API which makes it easy to serve a standard Node.js HTTP server as a serverless API on any cloud platform."
 
 ---
 
@@ -117,7 +116,7 @@ exports.handler = function(event, context, callback) {
 
 Azure follows its own [distinct style](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook)
 as well for processing HTTP messages. These approaches end up working,
-but often feel decidedly un-Node.js-like. They're full of cloud-provider-specific values and behaviors, 
+but often feel decidedly un-Node.js-like. They're full of cloud-provider-specific values and behaviors,
 and they end up making it more difficult
 to work with the existing ecosystem of middleware components out there.
 (Note that Google Cloud [HTTP Functions](https://cloud.google.com/functions/docs/writing/http)
@@ -128,7 +127,7 @@ with a simpler approach for these cloud ecosystems. To further this
 goal, we've created a new API called
 [cloud.HttpServer](https://github.com/pulumi/pulumi-cloud/blob/master/api/httpServer.ts).
 `HttpServer` is a Pulumi
-[Resource]({{< ref "/docs/intro/concepts/programming-model#resources" >}}),
+[Resource]({{< relref "/docs/intro/concepts/programming-model#resources" >}}),
 but is designed to work well with the existing large middleware
 ecosystem out there. And critically, the same HttpServer API can be
 implemented consistently on AWS, Azure and GCP - so you can write once
@@ -243,6 +242,6 @@ the cloud at runtime! That magic, along with powerful components like
 the new HttpServer API can help make cloud applications dramatically
 simpler to write and maintain. Happy coding!
 
-You can dig in to [serverless coding with Pulumi here]({{< ref "/docs/tutorials/cloudfx/rest-api" >}}),
+You can dig in to [serverless coding with Pulumi here]({{< relref "/docs/tutorials/cloudfx/rest-api" >}}),
 and join us on Wednesday 3rd October at 11am PDT to hear more about
-[serverless programming with Pulumi on our YouTube live stream](https://www.youtube.com/watch?v=k8ceyQuJiVM). 
+[serverless programming with Pulumi on our YouTube live stream](https://www.youtube.com/watch?v=k8ceyQuJiVM).

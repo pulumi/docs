@@ -78,7 +78,7 @@ const cluster = new gcp.container.Cluster(name, {
 // Export the Cluster name
 export const clusterName = cluster.name;
 
-// Manufacture a GKE-style kubeconfig. 
+// Manufacture a GKE-style kubeconfig.
 export const kubeconfig = pulumi.
     all([ cluster.name, cluster.endpoint, cluster.masterAuth ]).
     apply(([ name, endpoint, masterAuth ]) => {
@@ -123,7 +123,8 @@ map all running within seconds.
 
 Add the following lines of code in `index.ts` file and run `pulumi up` once again.
 
-{{< highlight typescript >}}/*
+```typescript
+/*
  * STEP 3: Create NGINX Ingress Controller in GKE
  */
 
@@ -132,15 +133,16 @@ const nginxingresscntlr = new k8s.helm.v2.Chart("nginxingresscontroller", {
     chart: "nginx-ingress",
     version: "0.24.1",
     values: {},
-}, { providers: { kubernetes: clusterProvider } }); 
-{{< /highlight >}}
+}, { providers: { kubernetes: clusterProvider } });
+```
 
 ## Step 4: Create a Jupyter Notebook Deployment and Service with Type NodePort
 
 Bringing up Jupyter notebook deployment and service requires adding the following lines of code in
 `index.ts` file and running `pulumi up` to apply the changes.
 
-{{< highlight typescript >}}/*
+```typescript
+/*
  * STEP 4: Create Jupyter notebook deployment and service in the GKE cluster
  */
 
@@ -153,10 +155,10 @@ const jupyterNotebook = new k8s.apps.v1beta1.Deployment(appName, {
           replicas: 1,
           template: {
               metadata: { labels: appLabels },
-              spec: { 
+              spec: {
                   containers: [
-                      { 
-                        name: appName, 
+                      {
+                        name: appName,
                         image: "jupyter/tensorflow-notebook",
                         ports: [{ containerPort: 8888 }],
                         command: ["start-notebook.sh"],
@@ -168,17 +170,17 @@ const jupyterNotebook = new k8s.apps.v1beta1.Deployment(appName, {
 }, { provider: clusterProvider });
 
 const jupyterService = new k8s.core.v1.Service(appName, {
-  metadata: { 
+  metadata: {
       name: appName,
       labels: appLabels
     },
-  spec: { 
-      type: "NodePort", 
-      selector: appLabels, 
-      ports: [{ protocol: "TCP", nodePort: 30040, port: 8888, targetPort: 8888 }], 
+  spec: {
+      type: "NodePort",
+      selector: appLabels,
+      ports: [{ protocol: "TCP", nodePort: 30040, port: 8888, targetPort: 8888 }],
     }
 }, { provider: clusterProvider });
-{{< / highlight >}}
+```
 
 ## Step 5: Create a Secret that is used with your Jupyter Notebook Domain Name
 
@@ -210,35 +212,35 @@ const authContents_base64 = toBase64(authContents);
 const jupyternotebooksecret = new k8s.core.v1.Secret("jupyter-notebook-tls", {
     metadata: { name: "basic-auth", namespace: "default" },
     type: "Opaque",
-    data: { 
+    data: {
         auth: authContents_base64,
     }
-}) 
+})
 
 export const jupyternotebookingress = new k8s.extensions.v1beta1.Ingress(appName, {
-    metadata: { 
+    metadata: {
         name: appName,
         labels: appLabels,
-        annotations: { 
-            "kubernetes.io/tls-acme": "true", 
-            "kubernetes.io/ingress.class": "nginx", 
+        annotations: {
+            "kubernetes.io/tls-acme": "true",
+            "kubernetes.io/ingress.class": "nginx",
             "nginx.ingress.kubernetes.io/auth-type": "basic",
             "nginx.ingress.kubernetes.io/auth-secret": "basic-auth",
             "nginx.ingress.kubernetes.io/auth-realm": "Authentication Required - jupyter"
         },
     },
-    spec: { 
+    spec: {
         rules: [{
-            host: "nishidavidson.com", 
+            host: "nishidavidson.com",
             http: {
                 paths: [{
-                    path: "/", 
+                    path: "/",
                     backend: { serviceName: "jupyter-notebook", servicePort: 8888 }
                 }]
             }
         }],
         tls: [{
-            secretName: "jupyter-notebook-tls", 
+            secretName: "jupyter-notebook-tls",
             hosts: ["nishidavidson.com"]
         }],
     }

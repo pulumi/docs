@@ -1,7 +1,7 @@
 ---
 title: "Lambdas as Lambdas: The magic of simple serverless Functions"
 date: "2018-10-10"
-meta_desc: "Infrastructure as code using real languages instead of YAML or DSLs. See how with Pulumi, serverless programming becomes simpler on AWS Lambda, Azure Functions, and GCP Cloud Functions."
+meta_desc: "Infrastructure as code using real languages instead of YAML or DSLs. See how with Pulumi, serverless programming becomes simpler."
 meta_image: "closure.png"
 authors: ["cyrus-najmabadi"]
 tags: ["Serverless","TypeScript"]
@@ -16,7 +16,7 @@ treat serverless code as part of your application instead of separate
 "infrastructure" that needs to be configured, managed, and versioned
 manually. In this post, we'll examine this capability in JavaScript,
 which is already very function- and callback-oriented, making serverless
-feel like a natural extension of the language we already know and love. 
+feel like a natural extension of the language we already know and love.
 
 While Functions as a Service (FaaS) systems have become more popular,
 getting up and running can still feel overly complex compared to normal
@@ -102,8 +102,8 @@ application code that runs as a function.
 First, we're just defining two simple resources: 1) an `s3.Bucket`,
 where we expect new video files to be uploaded to, and 2) a
 `cloud.Topic` that will inform interested parties when new videos are
-uploaded. (The full surface area of AWS is available in [the aws package]({{< ref "/docs/get-started/aws" >}}), and
-[the cloud package]({{< ref "/docs/tutorials/cloudfx" >}}) offers
+uploaded. (The full surface area of AWS is available in [the aws package]({{< relref "/docs/get-started/aws" >}}), and
+[the cloud package]({{< relref "/docs/tutorials/cloudfx" >}}) offers
 multi-cloud abstractions that work at a higher level of abstraction.)
 Right after defining the resources, we start creating our first FaaS
 resources. `videoBucket` has an `onObjectCreated` event subscription
@@ -226,7 +226,7 @@ Pulumi also understands diffs and dependencies, so updating is a cinch.
 Any changes to the code in the JavaScript function (including anything
 it depends on) is properly tracked and understood by Pulumi, allowing an
 easy development model where FaaS code can be easily modified and
-republished without jumping through extra hoops. 
+republished without jumping through extra hoops.
 
 ## The Result? Simple serverless Functions
 

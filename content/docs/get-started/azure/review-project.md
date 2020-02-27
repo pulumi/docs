@@ -1,5 +1,8 @@
 ---
-title: Review the New Project
+title: Review the New Project | Azure
+h1: Review the New Project
+linktitle: Review the New Project
+meta_desc: This page provides an overview on how to a review a new Azure project.
 weight: 6
 menu:
   getstarted:
@@ -11,11 +14,11 @@ aliases: ["/docs/quickstart/azure/review-project/"]
 
 Let's review some of the generated project files:
 
-- `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project.md" >}}).
-- `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config.md" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack.md" >}}) we initialized.
+- `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
+- `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) we initialized.
 - {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
 
-{{< langchoose nogo csharp >}}
+{{< langchoose csharp >}}
 
 ```javascript
 "use strict";
@@ -71,6 +74,42 @@ account = storage.Account("storage",
 pulumi.export('connection_string', account.primary_connection_string)
 ```
 
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Create an Azure Resource Group
+		resourceGroup, err := core.NewResourceGroup(ctx, "resourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("WestUS"),
+		})
+		if err != nil {
+			return err
+		}
+
+		// Create an Azure resource (Storage Account)
+		account, err := storage.NewAccount(ctx, "storage", &storage.AccountArgs{
+			ResourceGroupName:      resourceGroup.Name,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+
+		// Export the connection string for the storage account
+		ctx.Export("connectionString", account.PrimaryConnectionString)
+		return nil
+	})
+}
+```
+
 ```csharp
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -120,6 +159,16 @@ $ source venv/bin/activate
 ```bash
 $ pip3 install -r requirements.txt
 ```
+
+{{% /lang %}}
+
+{{% lang go %}}
+For Go, before we can deploy the stack, you will need to initialize your project's dependencies. Pulumi templates currently use `dep`:
+
+```bash
+$ dep ensure
+```
+
 {{% /lang %}}
 
 Next, we'll deploy the stack.

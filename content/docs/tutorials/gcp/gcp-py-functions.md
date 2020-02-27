@@ -1,5 +1,7 @@
 ---
-title: "Google Cloud Functions"
+title: "Google Cloud Functions | Python"
+h1: "Google Cloud Functions"
+linktitle: "Google Cloud Functions"
 no_edit_this_page: true
 ---
 

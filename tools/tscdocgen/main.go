@@ -443,7 +443,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, gitSha string, ro
 		Link string
 	}
 	for modname, module := range mod.Modules {
-		if len(module.Exports) == 0 && len(module.Modules) == 0 {
+		if module.IsEmpty() {
 			continue
 		}
 
@@ -537,7 +537,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, gitSha string, ro
 
 	// Next up: generate all submodules underneath this one.
 	for sub, module := range mod.Modules {
-		if len(module.Exports) == 0 && len(module.Modules) == 0 {
+		if module.IsEmpty() {
 			continue
 		}
 		if err = e.emitMarkdownModule(sub, module, gitSha, false); err != nil {
@@ -832,6 +832,20 @@ func newModule(name string) *module {
 	}
 }
 
+// IsEmpty returns true if the module does not have any exports, or all of its
+// submodules are empty.
+func (m *module) IsEmpty() bool {
+	if len(m.Exports) > 0 {
+		return false
+	}
+	for _, module := range m.Modules {
+		if !module.IsEmpty() {
+			return false
+		}
+	}
+	return true
+}
+
 // Merge another module into this one, in place, by mutating it.
 func (m *module) Merge(other *module) error {
 	// Now clone the other module, resolving and merging conflicts, if any arise.
@@ -971,6 +985,7 @@ type typeDocNodeKind string
 
 const (
 	typeDocPackageNode        typeDocNodeKind = ""
+	typeDocAccessorNode       typeDocNodeKind = "Accessor"
 	typeDocCallSigNode        typeDocNodeKind = "Call signature"
 	typeDocClassNode          typeDocNodeKind = "Class"
 	typeDocConstructorNode    typeDocNodeKind = "Constructor"
@@ -993,6 +1008,8 @@ const (
 func (e *moduleEmitter) createLabel(node *typeDocNode, parent *typeDocNode) string {
 	switch node.Kind {
 	// Create node kinds, we simply summarize.
+	case typeDocAccessorNode:
+		return "accessor"
 	case typeDocClassNode:
 		return "class"
 	case typeDocConstructorNode:
@@ -1155,6 +1172,18 @@ func (e *moduleEmitter) createCodeDetails(node *typeDocNode) string {
 			}
 		}
 		return label
+
+	case typeDocAccessorNode:
+		label := createVisibilityLabel(node.Flags)
+		if len(node.GetSignatures) > 0 {
+			label += fmt.Sprintf("<span class='kd'>get</span> %s()", node.Name)
+			if typ := e.createTypeLabel(node.GetSignatures[0].Type, 0); typ != "" {
+				label += ": " + typ
+			}
+		} else {
+			label += node.Name
+		}
+		return label + ";"
 
 	default:
 		return ""
@@ -1530,6 +1559,8 @@ type typeDocNode struct {
 	Comment typeDocComment `json:"comment,omitempty"`
 	// DefaultValue is an optional default value for this entry (or nil if none).
 	DefaultValue *string `json:"defaultValue,omitempty"`
+	// GetSignatures is a list of get signature nodes for this node, when an Accessor.
+	GetSignatures []*typeDocNode `json:"getSignature,omitempty"`
 	// IndexSignature is used to represent indexed types (e.g., `{[key: string]: any}`).
 	IndexSignatures []*typeDocNode `json:"indexSignature,omitempty"`
 	// Children is a list of one or more child members of this node.

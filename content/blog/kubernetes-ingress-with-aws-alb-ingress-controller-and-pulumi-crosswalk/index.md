@@ -1,5 +1,6 @@
 ---
-title: "Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS"
+title: Kubernetes Ingress with AWS ALB Ingress Controller
+h1: "Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS"
 date: "2019-07-09"
 meta_desc: "In this post, we work through a simple example of running ALB based Kubernetes Ingresses with Pulumi EKS, AWS, and AWSX packages."
 meta_image: "featured-img-albingresscontroller.png"
@@ -20,11 +21,8 @@ WebSockets, HTTP/2, AWS WAF (web application firewall) integration,
 integrated access logs, and health checks.
 
 The [AWS ALB Ingress controller](https://github.com/kubernetes-sigs/aws-alb-ingress-controller)
-is a Kubernetes
-[SIG-AWS](https://github.com/kubernetes/community/tree/master/sig-aws)
-subproject - it was the second sub-project added to
-[SIG-AWS](https://github.com/kubernetes/community/tree/master/sig-aws)
-after the [aws-authenticator subproject](https://github.com/kubernetes-sigs/aws-iam-authenticator).
+is a Kubernetes SIG-AWS subproject - it was the second sub-project added to
+SIG-AWS after the [aws-authenticator subproject](https://github.com/kubernetes-sigs/aws-iam-authenticator).
 The ALB Ingress controller triggers the creation of an ALB and the
 necessary supporting AWS resources whenever a Kubernetes user declares
 an Ingress resource on the cluster.
@@ -49,10 +47,10 @@ packages.
 
 ## Step 1: Initialize Pulumi project and stack
 
-[Install pulumi CLI]({{< ref "/docs/get-started" >}})
-and set up your [AWS credentials]({{< ref "/docs/get-started/aws" >}}).
-Initialize a new [Pulumi project]({{< ref "/docs/intro/concepts/project" >}})
-and [Pulumi stack]({{< ref "/docs/reference/cli/pulumi_stack" >}}) from
+[Install pulumi CLI]({{< relref "/docs/get-started" >}})
+and set up your [AWS credentials]({{< relref "/docs/get-started/aws" >}}).
+Initialize a new [Pulumi project]({{< relref "/docs/intro/concepts/project" >}})
+and [Pulumi stack]({{< relref "/docs/reference/cli/pulumi_stack" >}}) from
 available programming [language
 templates](https://github.com/pulumi/templates). We will use the
 `aws-typescript` template here and install all library
@@ -85,9 +83,7 @@ import * as awsx from "@pulumi/awsx";
 import * as eks from "@pulumi/eks";
 import * as k8s from "@pulumi/kubernetes";
 
-const vpc = new awsx.Network("vpc-alb-ingress-eks", {
-  usePrivateSubnets: false
-});
+const vpc = new awsx.ec2.Vpc("vpc-alb-ingress-eks", {});
 const cluster = new eks.Cluster("eks-cluster", {
   vpcId: vpc.id,
   subnetIds: vpc.publicSubnetIds,
@@ -401,4 +397,4 @@ product platform, check out the following resources:
 
 - [Pulumi Crosswalk for AWS Announcement]({{< relref "introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws" >}})
 - [Mapbox IOT-as-Code with Pulumi Crosswalk for AWS]({{< relref "mapbox-iot-as-code-with-pulumi-crosswalk-for-aws" >}})
-- [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more]({{< ref "/docs/guides/crosswalk/aws" >}})
+- [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more]({{< relref "/docs/guides/crosswalk/aws" >}})

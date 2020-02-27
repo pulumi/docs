@@ -1,6 +1,7 @@
 ---
 title: Professional Services Agreement
 url: /professional-services-agreement
+meta_desc: The Professional Services Agreement when working with Pulumi.
 menu:
     legal:
         weight: 5
@@ -25,25 +26,18 @@ This Agreement was last updated on June 27, 2018. It is effective between You an
 
 “Change Order” means any change to an SOW or Order Form, as applicable, as described in the “Change Orders” section below. Change Orders will be deemed incorporated by reference in the applicable SOW or Order Form, as applicable in the absence of an SOW.
 
-
 “Deliverable” means a deliverable under an SOW or Order Form.
 
-
 “Online Services” means any online, web-based services and associated offline components made available by Us (or one or more of Our Affiliates) to You under a separate agreement.
-
 
 “Order Form” means an ordering document specifying the Professional Services to be provided hereunder and that is entered into between You and Us or any of Our Affiliates, including any addenda and supplements thereto. Order Forms governed, in whole or in part, by this Agreement must have a SOW attached thereto or expressly state that the Order Form or certain Professional Services provided thereunder are governed by this Agreement. By entering into an Order Form hereunder, an Affiliate agrees to be bound by the terms of this Agreement as if it were an original party hereto. Notwithstanding  any language to the contrary in the Order Form, all Professional Services purchased under an Order Form are purchased separately from the
 Online Services and all references to “Order Form” herein shall not apply in any way to any Online Services, including without limitation, with respect to payment obligations and termination rights.
 
-
 “Professional Services” means work performed by Us, Our Affiliates, or Our or their respective permitted subcontractors under an SOW or Order Form, including ’Our provision of any Deliverables specified in such SOW or Order Form.
-
 
 “SOW” means a statement of work describing Professional Services to be provided hereunder, that is entered into between You and Us or any of Our Affiliates or which is incorporated into an Order Form that is entered into between You and US or any of Our Affiliates. An Affiliate of Ours that executes an SOW with You will be deemed to be “Us” as such term is used in this Agreement. SOWs or Order Forms will be deemed incorporated herein by reference.
 
-
 “We,” “Us,” “Pulumi” or “Our” means Pulumi Corporation described in Section 13 (Who You Are Contracting With, Notices, Governing Law and Jurisdiction).
-
 
 “You” or “Your” means the company or other legal entity for which you are accepting this Agreement together with Affiliates of that company or entity which have signed SOWs or Order Forms for Professional Services.
 
@@ -140,9 +134,10 @@ AND EACH PARTY SPECIFICALLY DISCLAIMS ALL IMPLIED WARRANTIES, INCLUDING ANY IMPL
 11.4.    Payment upon Termination. Upon any termination of an SOW or Order Form, You will pay, in accordance with the Invoicing and Payment section of this Agreement, any unpaid fees and expenses incurred on or before the termination date (such Professional Services fees to be paid on a time-and-materials or percent-of-completion basis, as appropriate). In the event that You terminate an SOW or Order Form for cause and You have pre-paid any fees for Professional Services not yet received, We will refund such pre-paid fees. In the event that We terminate an SOW or Order Form for cause, any pre-paid fees for Professional Services charged on a fixed-fee basis are non-refundable, unless expressly stated otherwise in an SOW or Order Form.
 
 #### 12.    SURVIVING PROVISIONS
+
 The sections titled “Contract Property,” “Confidentiality,” “Representations, Warranties, Exclusive Remedies and Disclaimers,” “Fees, Invoicing and Taxes,” “Indemnification,” “Limitation of Liability,” “Term and Termination” and “General” will survive any termination or expiration of this Agreement.
 
-#### 13.    WITH WHOM YOU ARE CONTRACTING, NOTICES, GOVERNING LAW AND JURISDICTION.
+#### 13.    WITH WHOM YOU ARE CONTRACTING, NOTICES, GOVERNING LAW AND JURISDICTION
 
 13.1.    General. With whom You are contracting under this Agreement, To whom You should direct notices under this Agreement, what law will apply in any lawsuit arising out of or in connection with this Agreement:
 
@@ -172,10 +167,6 @@ The sections titled “Contract Property,” “Confidentiality,” “Represent
 		</tr>
     </tbody>
 </table>
-
-
-
-
 
 13.2.    Manner of Giving Notice. Except as otherwise specified in this Agreement, all notices, permissions and approvals hereunder shall be in writing and shall be deemed to have been given upon: (i) personal delivery, (ii) the second business day after mailing, (iii) the second business day after sending by confirmed facsimile, or (iv) the first business day after sending by email (provided email shall not be sufficient for notices of termination or an indemnifiable claim).  Billing-related notices to You shall be addressed to the relevant billing contact designated by You. All other notices to You shall be addressed to the relevant Services system administrator designated by You.
 

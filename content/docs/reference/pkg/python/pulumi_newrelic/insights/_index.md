@@ -16,18 +16,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_newrelic.insights"></span><dl class="class">
 <dt id="pulumi_newrelic.insights.Event">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.insights.</code><code class="sig-name descname">Event</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">events=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.insights.Event" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">event</span></code> mapping supports the following arguments:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Required) The event’s name. Can be a combination of alphanumeric characters, underscores, and colons.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timestamp</span></code> - (Optional) Must be a Unix epoch timestamp. You can define timestamps either in seconds or in milliseconds.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">attribute</span></code> - (Required) An attribute to include in your event payload. Multiple attribute blocks can be defined for an event. See Attributes below for details.</p></li>
-</ul>
-<p>The <code class="docutils literal notranslate"><span class="pre">attribute</span></code> mapping supports the following arguments:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> - (Required) The name of the attribute.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> - (Required) The value of the attribute.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Optional) Specify the type for the attribute value. This is useful when passing integer or float values to Insights. Allowed values are <code class="docutils literal notranslate"><span class="pre">string</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, or <code class="docutils literal notranslate"><span class="pre">float</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
-</ul>
+<dd><p>Create a Event resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

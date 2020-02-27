@@ -7,19 +7,19 @@ tags: ["Pulumi-News"]
 ---
 
 Heading to AWS re:Invent? Concerned about how you'll manage to get
-[that much YAML]({{< ref "/cloudformation" >}}) into your carry
+[that much YAML]({{< relref "/cloudformation" >}}) into your carry
 on bag? Or maybe you just like purple.
 
 Whatever the reason, the Pulumi team will be there all week at **Booth
 316, Startup Central, Aria Quad, **and we'd love to chat with you about
-[AWS and Pulumi]({{< ref "/crosswalk/aws" >}}).
+[AWS and Pulumi]({{< relref "/crosswalk/aws" >}}).
 
-Catch up with us on serverless functions, [containers]({{< ref "/containers" >}}) and
+Catch up with us on serverless functions, [containers]({{< relref "/containers" >}}) and
 [Kubernetes]({{< relref "/topics/kubernetes" >}}), managed services and
 any other cloud native infrastructure as code, and see how you can more
 productively manage your AWS cloud resources with general purpose
 programming languages. We can even help you
-[migrate your CloudFormation to Pulumi]({{< ref "/cloudformation" >}}). 
+[migrate your CloudFormation to Pulumi]({{< relref "/cloudformation" >}}).
 
 If you want to grab a specific time to talk through your needs,
 [then use this link](https://info.pulumi.com/meetings/team-pulumi/aws-reinvent-catchup),

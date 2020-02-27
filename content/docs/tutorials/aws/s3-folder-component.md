@@ -1,6 +1,6 @@
 ---
-title: "S3 Folder Pulumi Component"
-
+title: S3 Folder Pulumi Component
+meta_desc: This tutorial will teach you how to create a simple, reusable AWS S3 Folder component.
 aliases: ["/docs/reference/component-tutorial/"]
 ---
 
@@ -10,7 +10,7 @@ In this tutorial, we'll create a simplified version of the example above, that j
 
 ## Create an S3 folder component
 
-1.  In your project directory, create a new file `s3folder.js` with the following contents:
+1. In your project directory, create a new file `s3folder.js` with the following contents:
 
     ```javascript
     const aws = require("@pulumi/aws");
@@ -49,7 +49,7 @@ In this tutorial, we'll create a simplified version of the example above, that j
 
     A component should create output properties to expose any useful properties of the resources it created. In this example, we define a `bucketName` property. Then, this property is registered a component output so that consumers of `S3Folder` can correctly chain dependencies.
 
-1.  Use a component as you would any Node module. Replace `index.js` with the following:
+1. Use a component as you would any Node module. Replace `index.js` with the following:
 
     ```javascript
     const s3folder = require("./s3folder.js");
@@ -63,19 +63,19 @@ In this tutorial, we'll create a simplified version of the example above, that j
 
     Since we want a stack output for `bucketName`, we create a stack output of the component output property `folder.bucketName`.
 
-1.  Run `pulumi up`. The output of `console.log` is printed in the "Diagnostics" section. Note the parent-child relationship between the resources that have been created.
+1. Run `pulumi up`. The output of `console.log` is printed in the "Diagnostics" section. Note the parent-child relationship between the resources that have been created.
 
-1.  Verify the bucket exists by using the AWS Console or CLI:
+1. Verify the bucket exists by using the AWS Console or CLI:
 
     ```bash
     $ aws s3 ls | grep $(pulumi stack output bucketName)
     2018-04-19 18:40:04 s3-website-bucket-82616a0
     ```
 
-<!-- LINKS -->
+<!-- markdownlint-disable url -->
 [pulumi.ComponentResource]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource" >}}
-[Component]: {{< relref "/docs/intro/concepts/programming-model.md#components" >}}
+[Component]: {{< relref "/docs/intro/concepts/programming-model#components" >}}
 [s3-folder]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
 [s3-folder-component]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder-component
 [S3 website example]: {{< relref "/docs/tutorials/aws/s3-website" >}}
-<!-- END LINKS -->
+<!-- markdownlint-enable url -->

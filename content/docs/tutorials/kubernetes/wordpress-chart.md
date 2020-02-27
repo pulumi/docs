@@ -1,6 +1,6 @@
 ---
-title: "Deploying the WordPress Helm Chart"
-
+title: "Kubernetes WordPress Helm Chart"
+meta_desc: Learn how to deploy a Wordpress Helm Chart to a Kubernets cluster.
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-wordpress-chart/"]
 ---
 
@@ -11,7 +11,6 @@ will expand the Helm Chart and submit the expanded YAML to the cluster.
 > **NOTE:** Because Tiller is not used, it is important to be aware that a small number of Charts
 > depend on values that can only be expanded on the server. These variables will get default values
 > instead.
-
 > **NOTE:** This example has a dependency on the `helm` CLI. **Be sure to install that first!** See
 > instructions below.
 
@@ -37,7 +36,7 @@ $ helm init --client-only
 
 If you haven't already, follow the steps in [Pulumi Installation and
 Setup]({{< relref "/docs/get-started/install" >}}) and [Configuring Pulumi
-Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes/setup.md" >}}) to get setup with
+Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}}) to get setup with
 Pulumi and Kubernetes.
 
 Now, install dependencies:

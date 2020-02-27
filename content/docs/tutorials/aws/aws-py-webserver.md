@@ -1,5 +1,7 @@
 ---
-title: "Web Server Using Amazon EC2"
+title: "Web Server Using Amazon EC2 | Python"
+h1: "Web Server Using Amazon EC2"
+linktitle: "Web Server Using Amazon EC2"
 no_edit_this_page: true
 ---
 

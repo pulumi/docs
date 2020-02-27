@@ -120,7 +120,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vault.ssh.SecretBackendRole">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.ssh.</code><code class="sig-name descname">SecretBackendRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_bare_domains=None</em>, <em class="sig-param">allow_host_certificates=None</em>, <em class="sig-param">allow_subdomains=None</em>, <em class="sig-param">allow_user_certificates=None</em>, <em class="sig-param">allow_user_key_ids=None</em>, <em class="sig-param">allowed_critical_options=None</em>, <em class="sig-param">allowed_domains=None</em>, <em class="sig-param">allowed_extensions=None</em>, <em class="sig-param">allowed_users=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">cidr_list=None</em>, <em class="sig-param">default_critical_options=None</em>, <em class="sig-param">default_extensions=None</em>, <em class="sig-param">default_user=None</em>, <em class="sig-param">key_id_format=None</em>, <em class="sig-param">key_type=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.ssh.SecretBackendRole" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.ssh.</code><code class="sig-name descname">SecretBackendRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_bare_domains=None</em>, <em class="sig-param">allow_host_certificates=None</em>, <em class="sig-param">allow_subdomains=None</em>, <em class="sig-param">allow_user_certificates=None</em>, <em class="sig-param">allow_user_key_ids=None</em>, <em class="sig-param">allowed_critical_options=None</em>, <em class="sig-param">allowed_domains=None</em>, <em class="sig-param">allowed_extensions=None</em>, <em class="sig-param">allowed_user_key_lengths=None</em>, <em class="sig-param">allowed_users=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">cidr_list=None</em>, <em class="sig-param">default_critical_options=None</em>, <em class="sig-param">default_extensions=None</em>, <em class="sig-param">default_user=None</em>, <em class="sig-param">key_id_format=None</em>, <em class="sig-param">key_type=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.ssh.SecretBackendRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage roles in an SSH secret backend
 <a class="reference external" href="https://www.vaultproject.io/docs/secrets/ssh/index.html">SSH secret backend within Vault</a>.</p>
 <dl class="field-list simple">
@@ -136,6 +136,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>allowed_critical_options</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a comma-separated list of critical options that certificates can have when signed.</p></li>
 <li><p><strong>allowed_domains</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The list of domains for which a client can request a host certificate.</p></li>
 <li><p><strong>allowed_extensions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a comma-separated list of extensions that certificates can have when signed.</p></li>
+<li><p><strong>allowed_user_key_lengths</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies a map of ssh key types and their expected sizes which are allowed to be signed by the CA type.</p></li>
 <li><p><strong>allowed_users</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a comma-separated list of usernames that are to be allowed, only if certain usernames are to be allowed.</p></li>
 <li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path where the SSH secret backend is mounted.</p></li>
 <li><p><strong>cidr_list</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The comma-separated string of CIDR blocks for which this role is applicable.</p></li>
@@ -144,9 +145,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>default_user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the default username for which a credential will be generated.</p></li>
 <li><p><strong>key_id_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a custom format for the key id of a signed certificate.</p></li>
 <li><p><strong>key_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of credentials generated by this role. This can be either <code class="docutils literal notranslate"><span class="pre">otp</span></code>, <code class="docutils literal notranslate"><span class="pre">dynamic</span></code> or <code class="docutils literal notranslate"><span class="pre">ca</span></code>.</p></li>
-<li><p><strong>max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Time To Live value.</p></li>
+<li><p><strong>max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the maximum Time To Live value.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the role to create.</p></li>
-<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the maximum Time To Live value.</p></li>
+<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Time To Live value.</p></li>
 </ul>
 </dd>
 </dl>
@@ -202,6 +203,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vault.ssh.SecretBackendRole.allowed_user_key_lengths">
+<code class="sig-name descname">allowed_user_key_lengths</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.ssh.SecretBackendRole.allowed_user_key_lengths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies a map of ssh key types and their expected sizes which are allowed to be signed by the CA type.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vault.ssh.SecretBackendRole.allowed_users">
 <code class="sig-name descname">allowed_users</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.ssh.SecretBackendRole.allowed_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a comma-separated list of usernames that are to be allowed, only if certain usernames are to be allowed.</p>
@@ -252,7 +259,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_vault.ssh.SecretBackendRole.max_ttl">
 <code class="sig-name descname">max_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.ssh.SecretBackendRole.max_ttl" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the Time To Live value.</p>
+<dd><p>Specifies the maximum Time To Live value.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -264,12 +271,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_vault.ssh.SecretBackendRole.ttl">
 <code class="sig-name descname">ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.ssh.SecretBackendRole.ttl" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the maximum Time To Live value.</p>
+<dd><p>Specifies the Time To Live value.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_vault.ssh.SecretBackendRole.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_bare_domains=None</em>, <em class="sig-param">allow_host_certificates=None</em>, <em class="sig-param">allow_subdomains=None</em>, <em class="sig-param">allow_user_certificates=None</em>, <em class="sig-param">allow_user_key_ids=None</em>, <em class="sig-param">allowed_critical_options=None</em>, <em class="sig-param">allowed_domains=None</em>, <em class="sig-param">allowed_extensions=None</em>, <em class="sig-param">allowed_users=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">cidr_list=None</em>, <em class="sig-param">default_critical_options=None</em>, <em class="sig-param">default_extensions=None</em>, <em class="sig-param">default_user=None</em>, <em class="sig-param">key_id_format=None</em>, <em class="sig-param">key_type=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ttl=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.ssh.SecretBackendRole.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_bare_domains=None</em>, <em class="sig-param">allow_host_certificates=None</em>, <em class="sig-param">allow_subdomains=None</em>, <em class="sig-param">allow_user_certificates=None</em>, <em class="sig-param">allow_user_key_ids=None</em>, <em class="sig-param">allowed_critical_options=None</em>, <em class="sig-param">allowed_domains=None</em>, <em class="sig-param">allowed_extensions=None</em>, <em class="sig-param">allowed_user_key_lengths=None</em>, <em class="sig-param">allowed_users=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">cidr_list=None</em>, <em class="sig-param">default_critical_options=None</em>, <em class="sig-param">default_extensions=None</em>, <em class="sig-param">default_user=None</em>, <em class="sig-param">key_id_format=None</em>, <em class="sig-param">key_type=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ttl=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.ssh.SecretBackendRole.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SecretBackendRole resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -286,6 +293,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>allowed_critical_options</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a comma-separated list of critical options that certificates can have when signed.</p></li>
 <li><p><strong>allowed_domains</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The list of domains for which a client can request a host certificate.</p></li>
 <li><p><strong>allowed_extensions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a comma-separated list of extensions that certificates can have when signed.</p></li>
+<li><p><strong>allowed_user_key_lengths</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies a map of ssh key types and their expected sizes which are allowed to be signed by the CA type.</p></li>
 <li><p><strong>allowed_users</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a comma-separated list of usernames that are to be allowed, only if certain usernames are to be allowed.</p></li>
 <li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path where the SSH secret backend is mounted.</p></li>
 <li><p><strong>cidr_list</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The comma-separated string of CIDR blocks for which this role is applicable.</p></li>
@@ -294,9 +302,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>default_user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the default username for which a credential will be generated.</p></li>
 <li><p><strong>key_id_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a custom format for the key id of a signed certificate.</p></li>
 <li><p><strong>key_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of credentials generated by this role. This can be either <code class="docutils literal notranslate"><span class="pre">otp</span></code>, <code class="docutils literal notranslate"><span class="pre">dynamic</span></code> or <code class="docutils literal notranslate"><span class="pre">ca</span></code>.</p></li>
-<li><p><strong>max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Time To Live value.</p></li>
+<li><p><strong>max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the maximum Time To Live value.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the role to create.</p></li>
-<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the maximum Time To Live value.</p></li>
+<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Time To Live value.</p></li>
 </ul>
 </dd>
 </dl>

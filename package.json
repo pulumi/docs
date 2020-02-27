@@ -1,15 +1,20 @@
 {
   "name": "docs",
   "version": "0.0.1",
+  "scripts": {
+    "lint-markdown": "node ./scripts/markdown_seo_lint.js",
+    "lint-links": "node ./scripts/link_linter.js"
+  },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.0.6",
+    "autoprefixer": "^9.6.0",
     "broken-link-checker": "^0.7.8",
     "clipboard-polyfill": "^2.8.1",
-    "typedoc": "^0.15.3"
-  },
-  "devDependencies": {
-    "autoprefixer": "^9.6.0",
     "cssnano": "^4.1.10",
+    "js-yaml": "^3.13.1",
+    "markdownlint": "^0.17.2",
     "postcss-cli": "^6.1.3",
-    "tailwindcss": "^1.0.4"
+    "tailwindcss": "^1.0.4",
+    "typedoc": "^0.15.3"
   }
 }

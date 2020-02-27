@@ -1,6 +1,7 @@
 ---
 title: Azure DevOps
-
+meta_desc: This page details how to use Azure DevOps to manage deploying stacks based on
+           commits to specific Git branches, and based on the build reason.
 menu:
     userguides:
         parent: cont_delivery
@@ -24,11 +25,11 @@ the steps outlined in the sample YAML file below to the Visual Designer as well.
 
 ## Prerequisites
 
-- An account on https://app.pulumi.com.
+- An account on [https://app.pulumi.com](https://app.pulumi.com).
 - The latest CLI.
-  - Installation instructions are [here]({{< relref "/docs/get-started/install" >}}).
+    - Installation instructions are [here]({{< relref "/docs/get-started/install" >}}).
 - A git repo with your Azure DevOps project set as the remote URL.
-  - To learn more about how to create a git repo in your DevOps project, click [here](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project?view=vsts&tabs=new-nav).
+    - To learn more about how to create a git repo in your DevOps project, click [here](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project?view=vsts&tabs=new-nav).
 
 ## Stack and Branch Mappings
 
@@ -64,7 +65,7 @@ For this walkthrough, we will assume a `TypeScript`-based `pulumi` program, whic
 ### About The `pulumi` Program
 
 The code inside `infra/index.ts` creates a resource group, a storage account and a blob container in the storage account. It then `exports` three
-values using the syntax `export const <variable_name> = <value>;`. Learn more about stack outputs [here]({{< relref "programming-model.md#stack-outputs" >}}).
+values using the syntax `export const <variable_name> = <value>;`. Learn more about stack outputs [here]({{< relref "programming-model#stack-outputs" >}}).
 
 ## Build Variables
 
@@ -104,7 +105,7 @@ Install the Pulumi task from the [Visual Studio Marketplace](https://marketplace
 
 The task requires the use of a service connection, which allows the pipeline to connect to your Azure Subscription. The task also looks for the build variable `pulumi.access.token`, and automatically maps it to the environment variable `PULUMI_ACCESS_TOKEN`, that is used by the CLI for non-interactive logins. You may still use the `env` directive to map any other environment variables you wish to make available to your Pulumi app.
 
-You can get your Pulumi access token from https://app.pulumi.com/account/tokens. Here's an example snippet of how you can use the task in your pipeline yaml.
+You can get your Pulumi access token from [https://app.pulumi.com/account/tokens](https://app.pulumi.com/account/tokens). Here's an example snippet of how you can use the task in your pipeline yaml.
 
 ```yaml
 # Lines omitted for brevity.
@@ -299,7 +300,7 @@ The following environment variables are set in the build pipeline using the Azur
 
 The above variables are _mapped-in_ to the job using the `env:` directive as described [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#secret-variables).
 
-#### `azure-pipelines.yml`
+### `azure-pipelines.yml`
 
 In your pipeline configuration, you need to then call these scripts when appropriate. Here's an example:
 
@@ -323,7 +324,7 @@ In your pipeline configuration, you need to then call these scripts when appropr
 ...
 ```
 
-#### Sample `setup.sh`
+### Sample `setup.sh`
 
 ```bash
 #!/bin/bash
@@ -346,7 +347,7 @@ apt-get install -y nodejs
 npm i -g yarn
 ```
 
-#### Sample `run-pulumi.sh`
+### Sample `run-pulumi.sh`
 
 ```bash
 #!/bin/bash

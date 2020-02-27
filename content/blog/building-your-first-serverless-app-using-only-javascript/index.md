@@ -28,7 +28,7 @@ need for building cloud applications. Better than that, you can even
 
 ## Our first serverless app in 5 lines of JavaScript
 
-After [installing the Pulumi CLI]({{< ref "/docs/get-started/install" >}}), just run
+After [installing the Pulumi CLI]({{< relref "/docs/get-started/install" >}}), just run
 the following to create a new app:
 
     mkdir firstapp && cd firstapp
@@ -80,17 +80,17 @@ This approach avoided significant amounts of configuration (YAML, or
 point-and-click). Pulumi also supports containers (including
 Kubernetes), managed services, infrastructure and everything else in
 between that you might need for building cloud applications.
-[Get started with Pulumi]({{< ref "/docs/get-started" >}}).
+[Get started with Pulumi]({{< relref "/docs/get-started" >}}).
 
 ## Why JavaScript for serverless programming?
 
 There are many great reasons to use JavaScript for serverless
 programming (and cloud programming generally). Pulumi also supports
-TypeScript, Python, and Go with more languages on the way. 
+TypeScript, Python, and Go with more languages on the way.
 
 Pulumi uses NPM, Express, and supports modern JavaScript features like
 async await, module etc. and so you can bring your JavaScript skills
-directly to cloud programming. 
+directly to cloud programming.
 
 ### Code is the best Config
 
@@ -108,8 +108,8 @@ or GCP - but exposed as simple JavaScript APIs on NPM.
 
 This means that you can write code that contains logic alongside code
 that defines the services and infrastructure needed to run it and Pulumi
-can then deployed the app in seconds and run as a managed, scalable and
-- in the case of serverless apps such as this one - extremely low cost
+can then deployed the app in seconds and run as a managed, scalable and -
+in the case of serverless apps such as this one - extremely low cost
 service on your chosen cloud.
 
 ### Code is more productive, expressive, and... fun
@@ -122,7 +122,7 @@ gains from better tooling support. In particular:
 - **Error checking.** Less worry about correctly indented YAML, more
   real error checking.
 - **Versioning and Packaging.** Much improved versioning and packaging
-  scenarios through Github and NPM workflows. 
+  scenarios through Github and NPM workflows.
 - **Reusable components.** Build on top of base classes, and share for
   easy reuse, standard configurations and so on.
 
@@ -135,11 +135,6 @@ To learn more take a look at more tutorials and example code:
 - Our origin story: [Hello, Pulumi!](http://joeduffyblog.com/2018/06/18/hello-pulumi/)
 - Tutorial: [Deploying Containers with Pulumi]({{< relref "deploying-production-ready-containers-with-pulumi" >}})
 - Tutorial: [Build a video thumbnailer using AWS Lambda, Fargate, and S3 in JavaScript]({{< relref "build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws" >}})
-- [Pulumi Quickstart]({{< ref "/docs/get-started" >}})
+- [Pulumi Quickstart]({{< relref "/docs/get-started" >}})
 - [Pulumi Community Slack](https://slack.pulumi.com)
 - [Pulumi Examples on GitHub](https://github.com/pulumi/examples)
-
- 
-
- 
-

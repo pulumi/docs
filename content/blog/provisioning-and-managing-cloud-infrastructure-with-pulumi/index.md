@@ -1,9 +1,9 @@
 ---
-title: "Provisioning and managing cloud infrastructure with Pulumi"
+title: "Provisioning and Managing Cloud Infrastructure with Pulumi"
 authors: ["donna-malayeri"]
 tags: ["JavaScript","AWS","Infrastructure"]
 date: "2018-07-20"
-meta_desc: "Use Pulumi AWS, Azure, and Google Cloud Platform libraries to provision and manage your cloud infrastructure. Configure alerting, monitoring, and SNS notifications directly in code using Pulumi."
+meta_desc: "Use Pulumi AWS, Azure, and GCP libraries to provision and manage infrastructure. Configure alerting & monitoring directly in code using Pulumi."
 
 ---
 
@@ -15,16 +15,16 @@ But, did you know that you can manage any cloud resource in AWS, Azure, or Googl
 <!--more-->
 
 You can use the
-[@pulumi/aws]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws" >}}),
-[@pulumi/azure]({{< ref "/docs/reference/pkg/nodejs/pulumi/azure" >}}),
-or [@pulumi/gcp]({{< ref "/docs/reference/pkg/nodejs/pulumi/gcp" >}})
+[@pulumi/aws]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}),
+[@pulumi/azure]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure" >}}),
+or [@pulumi/gcp]({{< relref "/docs/reference/pkg/nodejs/pulumi/gcp" >}})
 libraries to manage cloud resources. Using these libraries, you can
 directly manage the properties of any cloud resource.
 
 For example, in just a few lines of code, you can provision a security
 group and an EC2 instance:
 
-    let group = new aws.ec2.SecurityGroup("web-secgrp", { 
+    let group = new aws.ec2.SecurityGroup("web-secgrp", {
         ingress: [
             { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
         ],
@@ -108,11 +108,11 @@ just a few lines of JavaScript:
 
 These are just a few examples of the AWS resources you can manage in
 Pulumi. You can provision
-[Athena databases]({{< ref "/docs/aws/athena" >}}),
-[DynamoDB tables]({{< ref "/docs/aws/dynamodb" >}}),
-[IAM users, roles, groups, and role policies]({{< ref "/docs/aws/iam" >}}),
-[Kinesis streams]({{< ref "/docs/aws/kinesis" >}}), and more.
+[Athena databases]({{< relref "/docs/aws/athena" >}}),
+[DynamoDB tables]({{< relref "/docs/aws/dynamodb" >}}),
+[IAM users, roles, groups, and role policies]({{< relref "/docs/aws/iam" >}}),
+[Kinesis streams]({{< relref "/docs/aws/kinesis" >}}), and more.
 
 To learn more, take a look at the
-[@pulumi/aws reference documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws" >}})
+[@pulumi/aws reference documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}})
 and the [sample code that provisions a variety of infrastructure resources](https://github.com/pulumi/examples/blob/master/aws-ts-resources/index.ts).

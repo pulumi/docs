@@ -152,6 +152,11 @@ main {
     }
 }
 
+.popup-overlay {
+    @apply flex w-full h-full fixed inset-0 z-50;
+    background-color: rgba(44, 44, 44, 0.6);
+}
+
 .transition-all {
     @include transition(all);
 
@@ -163,6 +168,22 @@ main {
 .github-widget {
     > span {
         @apply flex;
+    }
+}
+
+// Custom css for the Calendly iframe we use on the event registration pages.
+#calendly-widget {
+    min-width: 270px;
+    height: 600px;
+
+    @screen md {
+        min-width: 320px;
+        height: 750px;
+    }
+
+    .booking-container {
+        background-color: green;
+        max-width: initial !important;
     }
 }
 
@@ -179,6 +200,14 @@ main {
             height: 106px;
             margin-top: -106px;
         }
+    }
+}
+
+.sticky-sidebar {
+    @screen lg {
+        @apply sticky self-start overflow-y-auto;
+        max-height: 90vh;
+        top: 112px;
     }
 }
 

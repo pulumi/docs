@@ -1,5 +1,7 @@
 ---
-title: Deploy App Services
+title: Deploy Kubernetes App Services
+meta_desc: This page provides an overview of how to deploy Kubernetes App services to different
+           cloud providers.
 menu:
   userguides:
     parent: crosswalk-kubernetes
@@ -19,7 +21,10 @@ usually a mix of cloud provider and custom services.
 {{% md %}}
 
 The full code for the AWS app services stack is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/05-app-services
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
@@ -29,7 +34,10 @@ The full code for the AWS app services stack is on [GitHub][gh-repo-stack].
 {{% md %}}
 
 The full code for the Azure app services stack is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/05-app-services
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
@@ -39,21 +47,26 @@ The full code for the Azure app services stack is on [GitHub][gh-repo-stack].
 {{% md %}}
 
 The full code for the GCP app services stack is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/05-app-services
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
 
 The full code for the general app services is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/general-app-services
 
+<!-- markdownlint-disable url -->
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/general-app-services
+<!-- markdownlint-enable url -->
 
 ## Overview
 
 We'll explore how to setup:
 
-  * [Datastores](#datastores)
-  * [General App Services](#general-app-services)
+* [Datastores](#datastores)
+* [General App Services](#general-app-services)
 
 ## Prerequisites
 
@@ -67,6 +80,7 @@ Authenticate as the `admins` role from the [Identity][aws-admin-identity-stack] 
 $ aws sts assume-role --role-arn `pulumi stack output adminsIamRoleArn` --role-session-name k8s-admin
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
+
 [aws-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-admins" >}}
 {{% /md %}}
 </div>
@@ -79,6 +93,7 @@ Authenticate as the ServicePrincipal from the [Identity][azure-identity-stack] s
 $ az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
+
 [azure-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#prerequisites" >}}
 {{% /md %}}
 </div>
@@ -106,7 +121,7 @@ running and managing their lifecycles.
 <div class="mt">
 {{% md %}}
 
-#### Postgres Database
+### Postgres Database
 
 Create a Postgres database instance in [AWS RDS][aws-rds], and store its
 connection information in a Kubernetes [Secret][k8s-secret] for apps to refer
@@ -154,7 +169,7 @@ const dbConn = new k8s.core.v1.Secret("postgres-db-conn",
 );
 ```
 
-#### Redis Datastore
+### Redis Datastore
 
 Create a Redis datastore instance in [AWS ElastiCache][aws-ec], and store its
 connection information in a Kubernetes [ConfigMap][k8s-cm] for apps to refer
@@ -187,10 +202,13 @@ const cacheConn = new k8s.core.v1.ConfigMap("postgres-db-conn",
 );
 ```
 
+<!-- markdownlint-disable url -->
 [k8s-secret]: https://kubernetes.io/docs/concepts/configuration/secret/
 [k8s-cm]: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/
 [aws-ec]: https://aws.amazon.com/elasticache/
 [aws-rds]: https://aws.amazon.com/rds/
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -198,7 +216,7 @@ const cacheConn = new k8s.core.v1.ConfigMap("postgres-db-conn",
 <div class="mt">
 {{% md %}}
 
-#### MongoDB
+### MongoDB
 
 Create a MongoDB database instance in [Azure CosmosDB][azure-cosmosdb], and store its
 connection information in a Kubernetes [Secret][k8s-secret] for apps to refer
@@ -244,8 +262,11 @@ const mongoConnStrings = new k8s.core.v1.Secret(
 
 ```
 
+<!-- markdownlint-disable url -->
 [azure-cosmosdb]: https://azure.microsoft.com/en-us/services/cosmos-db/
 [k8s-secret]: https://kubernetes.io/docs/concepts/configuration/secret/
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -253,7 +274,7 @@ const mongoConnStrings = new k8s.core.v1.Secret(
 <div class="mt">
 {{% md %}}
 
-#### Postgres Database
+### Postgres Database
 
 Create a Postgres database instance in [CloudSQL][gcp-cloudsql], and store its
 connection information in a Kubernetes [Secret][k8s-secret] for apps to refer
@@ -309,7 +330,7 @@ const dbConn = new k8s.core.v1.Secret(
 );
 ```
 
-#### Redis Datastore
+### Redis Datastore
 
 Create a Redis datastore instance in [GCP Cloud MemoryStore][gcp-redis], and store its
 connection information in a Kubernetes [ConfigMap][k8s-cm] for apps to refer
@@ -338,10 +359,13 @@ const cacheConn = new k8s.core.v1.ConfigMap(
 );
 ```
 
+<!-- markdownlint-disable url -->
 [k8s-cm]: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/
 [k8s-secret]: https://kubernetes.io/docs/concepts/configuration/secret/
 [gcp-redis]: https://cloud.google.com/memorystore/
 [gcp-cloudsql]: https://cloud.google.com/sql/
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -353,10 +377,12 @@ The [NGINX Ingress Controller][nginx] is a custom Kubernetes [Controller][k8s-co
 It manages [L7 network ingress][nginx-l7] / [north-south traffic][ns-traffic]
 between external clients, and the servers in the cluster's apps.
 
+<!-- markdownlint-disable url -->
 [nginx]: https://github.com/kubernetes/ingress-nginx
 [k8s-controller]: https://kubernetes.io/docs/concepts/architecture/controller/
 [nginx-l7]: https://www.nginx.com/resources/glossary/layer-7-load-balancing/
 [ns-traffic]: https://networkengineering.stackexchange.com/a/18877
+<!-- markdownlint-enable url -->
 
 #### Install NGINX
 
@@ -383,9 +409,12 @@ NAME                                        READY   STATUS    RESTARTS   AGE
 nginx-ingress-controller-7dcc95dfbf-k99k6   1/1     Running   0          21s
 ```
 
+<!-- markdownlint-disable url -->
 [nginx-priv-use]: https://github.com/kubernetes/ingress-nginx/blob/master/deploy/static/mandatory.yaml#L229
 [nginx-yaml]: https://github.com/kubernetes/ingress-nginx/blob/master/docs/deploy/index.md#prerequisite-generic-deployment-command
 [k8s-lb-svc]: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -423,10 +452,13 @@ const nginx = new k8s.helm.v2.Chart("nginx",
 );
 ```
 
+<!-- markdownlint-disable url -->
 [nginx-priv-use]: https://github.com/helm/charts/blob/master/stable/nginx-ingress/values.yaml#L12
 [k8s-lb-svc]: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
 [nginx-helm]: https://github.com/helm/charts/tree/master/stable/nginx-ingress
 [crosswalk-k8s-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults#namespaces" >}}
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -577,6 +609,7 @@ be set to the NGINX LoadBalancer Service address.
 ```bash
 $ kubectl describe ingress kuard-<POD_SUFFIX> --namespace=`pulumi stack output appsNamespaceName`
 ```
+
 {{% /md %}}
 </div>
 
@@ -600,6 +633,7 @@ Delete the pod, service, and ingress controller.
 $ kubectl delete pod/kuard svc/kuard ingress/kuard
 $ kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud-generic.yaml
 ```
+
 {{% /md %}}
 </div>
 
@@ -610,5 +644,7 @@ Delete the nginx definition in the Pulumi program, and run a Pulumi update.
 {{% /md %}}
 </div>
 
+<!-- markdownlint-disable url -->
 [k8s-kuard]: https://github.com/kubernetes-up-and-running/kuard
 [k8s-ingress]: https://kubernetes.io/docs/concepts/services-networking/ingress/
+<!-- markdownlint-enable url -->

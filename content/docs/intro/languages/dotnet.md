@@ -1,9 +1,11 @@
 ---
-title: ".NET Core"
+title: ".NET Core (C#, VB, F#)"
+meta_desc: An overview of how to use .NET languages like C# and F# for infrastructure as code
+           on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
 menu:
   intro:
     parent: languages
-    weight: 3
+    weight: 1
 
 aliases: ["/dotnet/"]
 ---
@@ -13,6 +15,36 @@ aliases: ["/dotnet/"]
 Pulumi supports infrastructure as code using any .NET Core language. You can use your favorite .NET tools &mdash; such as editors, package managers, build systems, and test frameworks &mdash; to create, deploy, and manage infrastructure on any cloud, including Azure, AWS, and Google Cloud.
 
 > **Note:** Pulumi for .NET is in preview and is under active development. We would [love your feedback](https://github.com/pulumi/pulumi/issues/new)!
+
+<a class="btn" href="https://dotnet.microsoft.com/download" target="_blank" title="Install .NET Core">INSTALL .NET CORE</a>
+
+## Getting Started
+
+The fastest way to get up and running is to choose from one of the following Getting Started guides:
+
+<div class="flex md:flex-row flex-col my-6">
+    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 mb-4 mr-0 md:mb-0 md:mr-4 flex justify-center" href="{{< relref "../../get-started/aws" >}}">
+        <img class="h-5" src="/logos/tech/aws.svg" alt="AWS">
+    </a>
+    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 mb-4 mr-0 md:mb-0 md:mr-4 flex justify-center" href="{{< relref "../../get-started/azure" >}}">
+        <img class="h-5" src="/logos/tech/azure.svg" alt="Azure">
+    </a>
+    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 flex justify-center" href="{{< relref "../../get-started/gcp" >}}">
+        <img class="h-5" src="/logos/tech/gcp.svg" alt="Google Cloud">
+    </a>
+</div>
+
+> The Getting Started guides currently only demonstrate C#. For F# and Visual Basic, please refer to the
+> documentation below. They will work just fine &mdash; the guides simply aren't ready for them yet.
+
+## Prerequisites
+
+Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core SDK 3.1 or later. If you follow the Getting Started guides above, they will walk you through doing this.
+
+1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
+1. [Install .NET Core SDK 3.1](https://dotnet.microsoft.com/download)
+
+## Example
 
 {{% lang csharp %}}
 For example, this C# program provisions an Azure resource group and storage account:
@@ -50,6 +82,7 @@ class Program
     }
 }
 ```
+
 {{% /lang %}}
 
 {{% lang fsharp %}}
@@ -81,6 +114,7 @@ let infra () =
 let main _ =
   Deployment.run infra
 ```
+
 {{% /lang %}}
 
 {{% lang visualbasic %}}
@@ -116,38 +150,12 @@ Module Program
 
 End Module
 ```
+
 {{% /lang %}}
-
-## Getting Started
-
-The fastest way to get up and running is to choose from one of the following Getting Started guides:
-
-<div class="flex md:flex-row flex-col my-6">
-    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 mb-4 mr-0 md:mb-0 md:mr-4 flex justify-center" href="{{< relref "../../get-started/aws" >}}">
-        <img class="h-5" src="/logos/tech/aws.svg" alt="AWS">
-    </a>
-    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 mb-4 mr-0 md:mb-0 md:mr-4 flex justify-center" href="{{< relref "../../get-started/azure" >}}">
-        <img class="h-5" src="/logos/tech/azure.svg" alt="Azure">
-    </a>
-    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 flex justify-center" href="{{< relref "../../get-started/gcp" >}}">
-        <img class="h-5" src="/logos/tech/gcp.svg" alt="Google Cloud">
-    </a>
-</div>
-
-> The Getting Started guides currently only demonstrate C#. For F# and Visual Basic, please refer to the
-> documentation below. They will work just fine &mdash; the guides simply aren't ready for them yet.
-
-## Prerequisites
-
-Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core SDK 3.0 or later. If you follow the Getting Started guides above, they will walk you through doing this.
-
-1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-1. [Install .NET Core SDK 3.0](https://dotnet.microsoft.com/download)
-
 
 ## C\#, F\#, and VB Templates
 
-As of version 1.5, Pulumi supports .NET Core 3.0. You can write Pulumi programs in your favorite .NET language to get additional verification and tooling benefits. The fastest way to get started is to use a template. The template will autogenerate a set of files and initialize a Pulumi project. The getting started guides shown above will help do this on your cloud of choice, but this section describes doing so independently.
+As of version 1.5, Pulumi supports .NET Core 3.1. You can write Pulumi programs in your favorite .NET language to get additional verification and tooling benefits. The fastest way to get started is to use a template. The template will autogenerate a set of files and initialize a Pulumi project. The getting started guides shown above will help do this on your cloud of choice, but this section describes doing so independently.
 
 {{< langchoose dotnetonly >}}
 
@@ -159,7 +167,7 @@ $ mkdir myproject && cd myproject
 $ pulumi new csharp
 ```
 
-This will create a `Pulumi.yaml` [project file]({{< relref "project.md" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `Infra.csproj` file that holds references used by the project, and a `Program.cs` file, containing your program. The `.csproj` file can be named more appropriately depending upon the project. The name of the directory is used as the project name in `Pulumi.yaml`.
+This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `Infra.csproj` file that holds references used by the project, and a `Program.cs` file, containing your program. The `.csproj` file can be named more appropriately depending upon the project. The name of the directory is used as the project name in `Pulumi.yaml`.
 
 To deploy your infrastructure run `pulumi up` and the Pulumi engine automatically runs `dotnet build` as part of the deployment. Pulumi will perform the operations needed to deploy the infrastructure you have declared.
 
@@ -178,7 +186,7 @@ $ mkdir myproject && cd myproject
 $ pulumi new fsharp
 ```
 
-This will create a `Pulumi.yaml` [project file]({{< relref "project.md" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `Infra.fsproj` file that holds references used by the project, and a `Program.fs` file, containing your program. The `.fsproj` file can be named more appropriately depending upon the project. The name of the directory is used as the project name in `Pulumi.yaml`.
+This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `Infra.fsproj` file that holds references used by the project, and a `Program.fs` file, containing your program. The `.fsproj` file can be named more appropriately depending upon the project. The name of the directory is used as the project name in `Pulumi.yaml`.
 
 To deploy your infrastructure run `pulumi up` and the Pulumi engine automatically runs `dotnet build` as part of the deployment. Pulumi will perform the operations needed to deploy the infrastructure you have declared.
 
@@ -197,7 +205,7 @@ $ mkdir myproject && cd myproject
 $ pulumi new visualbasic
 ```
 
-This will create a `Pulumi.yaml` [project file]({{< relref "project.md" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `Infra.vbproj` file that holds references used by the project, and a `Program.vb` file, containing your program. The `.vbproj` file can be named more appropriately depending upon the project. The name of the directory is used as the project name in `Pulumi.yaml`.
+This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `Infra.vbproj` file that holds references used by the project, and a `Program.vb` file, containing your program. The `.vbproj` file can be named more appropriately depending upon the project. The name of the directory is used as the project name in `Pulumi.yaml`.
 
 To deploy your infrastructure run `pulumi up` and the Pulumi engine automatically runs `dotnet build` as part of the deployment. Pulumi will perform the operations needed to deploy the infrastructure you have declared.
 

@@ -1,6 +1,7 @@
 ---
-title: "Host a Static Website on Amazon S3"
-
+title: "S3 Static Website"
+h1: Host a Static Website on Amazon S3
+meta_desc: This tutorial will teach you to serve a static website hosted in a Amazon S3 bucket.
 aliases: ["/docs/reference/tutorials/aws/tutorial-s3-website/"]
 ---
 
@@ -22,6 +23,7 @@ $ pulumi new javascript --name myproject
 ```
 
 ### Step 2: Create a bucket and upload files
+
 Open up `index.js` using your preferred text editor and add the following code. This creates a new S3 bucket, then iterates over the files in the `www` folder to create an S3 Object for each file.
 
 ```javascript
@@ -37,7 +39,7 @@ let siteDir = "www"; // directory for content files
 // For each file in the directory, create an S3 object stored in `siteBucket`
 for (let item of require("fs").readdirSync(siteDir)) {
     let filePath = require("path").join(siteDir, item);
-    let object = new aws.s3.BucketObject(item, { 
+    let object = new aws.s3.BucketObject(item, {
       bucket: siteBucket,
       source: new pulumi.asset.FileAsset(filePath),     // use FileAsset to point to a file
       contentType: mime.getType(filePath) || undefined, // set the MIME type of the file
@@ -79,13 +81,13 @@ $ npm install --save @pulumi/aws mime
 
 ### Step 5: Set your AWS region
 
-Configure the AWS region to deploy to, such as `us-west-2`. 
+Configure the AWS region to deploy to, such as `us-west-2`.
 
 ```bash
 $ pulumi config set aws:region us-west-2
 ```
 
-Notice how a new file, `Pulumi.website-testing.yaml`, got created in the root directory for your project next to your [Pulumi.yaml project file]({{< relref "/docs/intro/concepts/project.md" >}}). See [Defining and setting stack settings]({{< relref "/docs/intro/concepts/config.md#config-stack" >}}) for more information about this file.
+Notice how a new file, `Pulumi.website-testing.yaml`, got created in the root directory for your project next to your [Pulumi.yaml project file]({{< relref "/docs/intro/concepts/project" >}}). See [Defining and setting stack settings]({{< relref "/docs/intro/concepts/config#config-stack" >}}) for more information about this file.
 
 ### Step 6: Preview and deploy your resources
 
@@ -93,11 +95,11 @@ To preview your Pulumi program, run [`pulumi up`]({{< relref "/docs/reference/cl
 
 ### Step 7: View your stack resources
 
-**Pulumi Console**
+#### **Pulumi Console**
 
 To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser. The **Resources** tab on the Pulumi Console has a link to the AWS console for the provisioned EC2 instance.
 
-**Pulumi CLI**
+#### **Pulumi CLI**
 
 To see the name of the bucket that was created, run `pulumi stack output`. Note that an extra 7-digit identifier is appended to the name. All Pulumi resources add this identifier automatically, so that you don't have to manually create unique names.
 
@@ -164,12 +166,11 @@ let bucketPolicy = new aws.s3.BucketPolicy("bucketPolicy", {
 exports.websiteUrl = siteBucket.websiteEndpoint; // output the endpoint as a stack output
 ```
 
-
 To make [all objects in the bucket publicly readable](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteAccessPermissionsReqd.html), you'll need to create a [BucketPolicy][aws.s3.BucketPolicy] object. The definition of `bucketPolicy` illustrates how Pulumi tracks dependencies between resources. The property [aws.s3.Bucket.bucket] is an output property of type [pulumi.Output]---a marker class that encodes the relationship between resources in a Pulumi program. An object of type `Output` can be passed directly to the inputs of a resource constructor, such as the `bucket` property.
-    
+
 For the `policy` property, the IAM policy must include the target bucket name. Since the value of output properties are not known until the underlying resource is created (such as the generated name for the S3 bucket), you need to use the `apply` method of [pulumi.Output] rather than directly calling `publicReadPolicyForBucket`.
 
-Whenever you need to create a dependency between resources, use the output property of one resource as the input to another one. Pulumi uses this information to create physical resources in the correct order. 
+Whenever you need to create a dependency between resources, use the output property of one resource as the input to another one. Pulumi uses this information to create physical resources in the correct order.
 
 ### Step 9: Run your update
 
@@ -180,10 +181,10 @@ $ pulumi up
 ...
 
     Type                    Name               Status      Info
-    pulumi:pulumi:Stack     s3-website-dev                 
+    pulumi:pulumi:Stack     s3-website-dev
 ~   ├─ aws:s3:Bucket        s3-website-bucket      updated     [diff: +website]
-+   └─ aws:s3:BucketPolicy  bucketPolicy           created     
- 
++   └─ aws:s3:BucketPolicy  bucketPolicy           created
+
 Outputs:
     bucketName: "s3-website-bucket-8533d8b"
   + websiteUrl: "s3-website-bucket-8533d8b.s3-website-us-west-2.amazonaws.com"
@@ -227,7 +228,7 @@ You also learned how to work with the Pulumi CLI. To recap:
 - [Containers on ECS Fargate]({{< relref "/docs/tutorials/aws/ecs-fargate" >}})
 - [API Gateways and Lambda]({{< relref "/docs/tutorials/aws/rest-api" >}})
 
-<!-- Common links -->
+<!-- markdownlint-disable url -->
 [@pulumi/aws]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}
 [aws.s3.Bucket]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket" >}}
 [aws.s3.Bucket.bucket]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket" >}}
@@ -242,4 +243,4 @@ You also learned how to work with the Pulumi CLI. To recap:
 [Component]: {{< relref "/docs/intro/concepts/programming-model#components" >}}
 [Pulumi Cloud]: {{< relref "/docs/tutorials/cloudfx" >}}
 [in Python]: https://github.com/pulumi/examples/tree/master/aws-py-s3-folder
-<!-- End common links -->
+<!-- markdownlint-enable url -->

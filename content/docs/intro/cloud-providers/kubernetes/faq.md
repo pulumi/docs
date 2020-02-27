@@ -1,6 +1,6 @@
 ---
-title: FAQ
-
+title: Kubernetes FAQ
+meta_desc: This page provides Frequently Asked Questions about Kubernetes and Pulumi.
 aliases: ["/docs/reference/clouds/kubernetes/faq/"]
 ---
 
@@ -43,29 +43,29 @@ examining cluster state (_e.g._, `describe`, `explain`, `get`, and so on).
 
 The differences between the two are:
 
- *  The Pulumi CLI presents information-rich status updates, clearly showing progress as resources
-    come online or fail within the cluster. `kubectl` users must manually
-    retreive these updates from the cluster with repeated calls.
+* The Pulumi CLI presents information-rich status updates, clearly showing progress as resources
+   come online or fail within the cluster. `kubectl` users must manually
+   retreive these updates from the cluster with repeated calls.
 
- *  Pulumi allows you to preview the effects
-    a change will have on your resource configuration.
+* Pulumi allows you to preview the effects
+   a change will have on your resource configuration.
 
- *  Pulumi provides full lifecycle management (creation, deletion, replacement) of resources. If we must change an immutable
-    field in an API object, `pulumi preview` alerts the user the object must be replaced.
+* Pulumi provides full lifecycle management (creation, deletion, replacement) of resources. If we must change an immutable
+   field in an API object, `pulumi preview` alerts the user the object must be replaced.
 
- *  The primary interface to `kubectl` is YAML. Pulumi exposes a rich, multi-language SDK to create
-    API resources, and additionally supports execution of Kubernetes YAML manifests and Helm charts.
+* The primary interface to `kubectl` is YAML. Pulumi exposes a rich, multi-language SDK to create
+   API resources, and additionally supports execution of Kubernetes YAML manifests and Helm charts.
 
- *  `kubectl` has a set of commands specifically meant to make it easy to understand what's happening
-    in the cluster. Pulumi _only_ does API resource management.
+* `kubectl` has a set of commands specifically meant to make it easy to understand what's happening
+   in the cluster. Pulumi _only_ does API resource management.
 
- *  Pulumi has a notion of resource initialization completion, allowing resources be configured using
-    values from the live object. For example, a `Deployment` might boot a database, then parse the
-    connection string, then put that in a secret, then reference that secret in a `Pod`. As of
-    Kubernetes v1.12, `kubectl` can also wait for resource initialization, though it only supports
-    applying all resource configuration at one time.
+* Pulumi has a notion of resource initialization completion, allowing resources be configured using
+   values from the live object. For example, a `Deployment` might boot a database, then parse the
+   connection string, then put that in a secret, then reference that secret in a `Pod`. As of
+   Kubernetes v1.12, `kubectl` can also wait for resource initialization, though it only supports
+   applying all resource configuration at one time.
 
- *  Pulumi makes it easy to deploy the same app workload multiple times with default [auto-naming]({{< relref "/docs/intro/concepts/programming-model.md#autonaming" >}}).
+* Pulumi makes it easy to deploy the same app workload multiple times with default [auto-naming]({{< relref "/docs/intro/concepts/programming-model#autonaming" >}}).
 
 ## How does Pulumi compare to Helm?
 
@@ -73,25 +73,25 @@ Helm v2 allows users to easily install pre-packaged application *charts* into a 
 cluster. Charts are parameterized by some number of values, which users can fill in to customize
 their application.
 
- *  By default, Helm 2 Charts are managed by an in-cluster API server, called Tiller. 
-    This makes many things (_e.g._, RBAC) harder, because the API server is run
-    with a single `ServiceAccount`, which typically has global read/write access to the cluster.
+* By default, Helm 2 Charts are managed by an in-cluster API server, called Tiller.
+   This makes many things (_e.g._, RBAC) harder, because the API server is run
+   with a single `ServiceAccount`, which typically has global read/write access to the cluster.
 
-    Pulumi requires no server-side component.
+   Pulumi requires no server-side component.
 
- *  The Pulumi CLI presents information-rich status updates, clearly showing progress as resources
-    come online.
+* The Pulumi CLI presents information-rich status updates, clearly showing progress as resources
+   come online.
 
- *  Pulumi allows you to preview the effects
-    a change will have on your resource configuration.
+* Pulumi allows you to preview the effects
+   a change will have on your resource configuration.
 
- *  Pulumi provides full lifecycle management (creation, deletion, replacement) of resources. If we must change an immutable field in
-    an API object, `pulumi preview` alerts the user the object must be replaced.
+* Pulumi provides full lifecycle management (creation, deletion, replacement) of resources. If we must change an immutable field in
+   an API object, `pulumi preview` alerts the user the object must be replaced.
 
- *  Helm 2 parameterizes YAML templates using Go templates, a textual replacement engine. Go templates
-    are not guaranteed to generate syntactically-correct YAML. Pulumi exposes a rich, multi-language
-    SDK, with strong typing to catch errors, and a pre-deployment validation step to catch errors
-    before you run the program.
+* Helm 2 parameterizes YAML templates using Go templates, a textual replacement engine. Go templates
+   are not guaranteed to generate syntactically-correct YAML. Pulumi exposes a rich, multi-language
+   SDK, with strong typing to catch errors, and a pre-deployment validation step to catch errors
+   before you run the program.
 
 ## Can I use my existing YAML manifests and Helm Charts?
 
@@ -102,7 +102,7 @@ code.
 
 ### Examples
 
-##### YAML Manifest:
+#### YAML Manifest:
 
 ```typescript
 import * as k8s as "@pulumi/kubernetes";
@@ -110,7 +110,8 @@ import * as k8s as "@pulumi/kubernetes";
 const myapp = new k8s.yaml.ConfigFile("app", {file: "app.yaml"});
 ```
 
-##### Helm Chart:
+#### Helm Chart:
+
 ```typescript
 import * as k8s as "@pulumi/kubernetes";
 
@@ -156,10 +157,12 @@ and policies.
 If you do not need these features, then you can have Pulumi store the state file somewhere
 else (_e.g._, in a local file, or in object storage). See documentation for [`pulumi login`][login] and [pulumi #2455](https://github.com/pulumi/pulumi/pull/2455).
 
+<!-- markdownlint-disable url -->
 [kubeconfig]: https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/
 [client-go]: https://github.com/kubernetes/client-go
-[login]: {{< relref "/docs/reference/cli/pulumi_login.md" >}}
+[login]: {{< relref "/docs/reference/cli/pulumi_login" >}}
 [eks]: https://github.com/pulumi/examples/tree/master/aws-ts-eks
 [api-reference]: https://kubernetes.io/docs/reference/
 [openapi]: https://github.com/kubernetes/kubernetes/tree/master/api/openapi-spec
 [examples]: https://github.com/pulumi/examples
+<!-- markdownlint-enable url -->

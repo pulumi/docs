@@ -19,6 +19,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_linode.AwaitableGetDomainRecordResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">AwaitableGetDomainRecordResult</code><span class="sig-paren">(</span><em class="sig-param">domain_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">target=None</em>, <em class="sig-param">ttl_sec=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">weight=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.AwaitableGetDomainRecordResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_linode.AwaitableGetDomainResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">AwaitableGetDomainResult</code><span class="sig-paren">(</span><em class="sig-param">axfr_ips=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">expire_sec=None</em>, <em class="sig-param">group=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">master_ips=None</em>, <em class="sig-param">refresh_sec=None</em>, <em class="sig-param">retry_sec=None</em>, <em class="sig-param">soa_email=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl_sec=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.AwaitableGetDomainResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -59,8 +64,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_linode.AwaitableGetStackScriptResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">AwaitableGetStackScriptResult</code><span class="sig-paren">(</span><em class="sig-param">created=None</em>, <em class="sig-param">deployments_active=None</em>, <em class="sig-param">deployments_total=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">images=None</em>, <em class="sig-param">is_public=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">rev_note=None</em>, <em class="sig-param">script=None</em>, <em class="sig-param">updated=None</em>, <em class="sig-param">user_defined_fields=None</em>, <em class="sig-param">user_gravatar_id=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.AwaitableGetStackScriptResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_linode.AwaitableGetUserResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">AwaitableGetUserResult</code><span class="sig-paren">(</span><em class="sig-param">email=None</em>, <em class="sig-param">restricted=None</em>, <em class="sig-param">ssh_keys=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.AwaitableGetUserResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_linode.AwaitableGetVolumeResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">AwaitableGetVolumeResult</code><span class="sig-paren">(</span><em class="sig-param">created=None</em>, <em class="sig-param">filesystem_path=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">linode_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.AwaitableGetVolumeResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -251,7 +266,7 @@ For more information, see <a class="reference external" href="https://www.linode
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ID of the Domain to access.  <em>Changing ``domain_id`` forces the creation of a new Linode Domain Record.</em>.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this Record. This field’s actual usage depends on the type of record this represents. For A and AAAA records, this is the subdomain being associated with an IP address.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this Record. Required for non-<code class="docutils literal notranslate"><span class="pre">SRV</span></code> records. Setting this is invalid for <code class="docutils literal notranslate"><span class="pre">SRV</span></code> records as it is generated by the API. This field’s actual usage depends on the type of record this represents. For A and AAAA records, this is the subdomain being associated with an IP address.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port this Record points to.</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of the target host. Lower values are preferred.</p></li>
 <li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol this Record’s service communicates with. Only valid for SRV records.</p></li>
@@ -285,7 +300,7 @@ For more information, see <a class="reference external" href="https://www.linode
 <dl class="attribute">
 <dt id="pulumi_linode.DomainRecord.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.DomainRecord.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of this Record. This field’s actual usage depends on the type of record this represents. For A and AAAA records, this is the subdomain being associated with an IP address.</p>
+<dd><p>The name of this Record. Required for non-<code class="docutils literal notranslate"><span class="pre">SRV</span></code> records. Setting this is invalid for <code class="docutils literal notranslate"><span class="pre">SRV</span></code> records as it is generated by the API. This field’s actual usage depends on the type of record this represents. For A and AAAA records, this is the subdomain being associated with an IP address.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -354,7 +369,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ID of the Domain to access.  <em>Changing ``domain_id`` forces the creation of a new Linode Domain Record.</em>.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this Record. This field’s actual usage depends on the type of record this represents. For A and AAAA records, this is the subdomain being associated with an IP address.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this Record. Required for non-<code class="docutils literal notranslate"><span class="pre">SRV</span></code> records. Setting this is invalid for <code class="docutils literal notranslate"><span class="pre">SRV</span></code> records as it is generated by the API. This field’s actual usage depends on the type of record this represents. For A and AAAA records, this is the subdomain being associated with an IP address.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port this Record points to.</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of the target host. Lower values are preferred.</p></li>
 <li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol this Record’s service communicates with. Only valid for SRV records.</p></li>
@@ -432,6 +447,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_linode.GetDomainRecordResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">GetDomainRecordResult</code><span class="sig-paren">(</span><em class="sig-param">domain_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">target=None</em>, <em class="sig-param">ttl_sec=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">weight=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.GetDomainRecordResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDomainRecord.</p>
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_linode.GetDomainResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">GetDomainResult</code><span class="sig-paren">(</span><em class="sig-param">axfr_ips=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">expire_sec=None</em>, <em class="sig-param">group=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">master_ips=None</em>, <em class="sig-param">refresh_sec=None</em>, <em class="sig-param">retry_sec=None</em>, <em class="sig-param">soa_email=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl_sec=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.GetDomainResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDomain.</p>
@@ -498,6 +519,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_linode.GetStackScriptResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">GetStackScriptResult</code><span class="sig-paren">(</span><em class="sig-param">created=None</em>, <em class="sig-param">deployments_active=None</em>, <em class="sig-param">deployments_total=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">images=None</em>, <em class="sig-param">is_public=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">rev_note=None</em>, <em class="sig-param">script=None</em>, <em class="sig-param">updated=None</em>, <em class="sig-param">user_defined_fields=None</em>, <em class="sig-param">user_gravatar_id=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.GetStackScriptResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getStackScript.</p>
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_linode.GetUserResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">GetUserResult</code><span class="sig-paren">(</span><em class="sig-param">email=None</em>, <em class="sig-param">restricted=None</em>, <em class="sig-param">ssh_keys=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.GetUserResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getUser.</p>
@@ -507,6 +534,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_linode.GetVolumeResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">GetVolumeResult</code><span class="sig-paren">(</span><em class="sig-param">created=None</em>, <em class="sig-param">filesystem_path=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">linode_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.GetVolumeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getVolume.</p>
 </dd></dl>
 
 <dl class="class">
@@ -2308,6 +2341,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_linode.get_domain_record">
+<code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_domain_record</code><span class="sig-paren">(</span><em class="sig-param">domain_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_domain_record" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides information about a Linode Domain Record.</p>
+<p>The Linode Volume resource exports the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - The unique ID of the Domain Record.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - The name of the Record.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_id</span></code> - The associated domain’s unique ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - The type of Record this is in the DNS system.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttl_sec</span></code> - The amount of time in seconds that this Domain’s records may be cached by resolvers or other domain servers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> - The target for this Record. This field’s actual usage depends on the type of record this represents. For A and AAAA records, this is the address the named Domain should resolve to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> - The priority of the target host. Lower values are preferred.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - The relative weight of this Record. Higher values are preferred.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> - The port this Record points to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> - The protocol this Record’s service communicates with. Only valid for SRV records.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> - The service this Record identified. Only valid for SRV records.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> - The tag portion of a CAA record.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/domain_record.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/domain_record.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_linode.get_image">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_image</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Linode image</p>
@@ -2452,6 +2509,54 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_linode.get_stack_script">
+<code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_stack_script</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">user_defined_fields=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_stack_script" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides details about a specific Linode StackScript.</p>
+<p>This resource exports the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> - The StackScript’s label is for display purposes only.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">script</span></code> - The script to execute when provisioning a new Linode with this StackScript.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> - A description for the StackScript.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rev_note</span></code> - This field allows you to add notes for the set of revisions made to this StackScript.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">is_public</span></code> - This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">images</span></code> - An array of Image IDs representing the Images that this StackScript is compatible for deploying with.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deployments_active</span></code> - Count of currently active, deployed Linodes created from this StackScript.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_gravatar_id</span></code> - The Gravatar ID for the User who created the StackScript.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deployments_total</span></code> - The total number of times this StackScript has been deployed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> - The User who created the StackScript.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> - The date this StackScript was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updated</span></code> - The date this StackScript was updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_defined_fields</span></code> - This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized parameters during deployment.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> - A human-readable label for the field that will serve as the input prompt for entering the value during deployment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - The name of the field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">example</span></code> - An example value for the field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">one_of</span></code> - A list of acceptable single values for the field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">many_of</span></code> - A list of acceptable values for the field in any quantity, combination or order.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> - The default value. If not specified, this value will be used.</p></li>
+</ul>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>float</em>) – The unique numeric ID of the StackScript to query.</p>
+</dd>
+</dl>
+<p>The <strong>user_defined_fields</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">example</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manyOf</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oneOf</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/stackscript.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/stackscript.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_linode.get_user">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_user</code><span class="sig-paren">(</span><em class="sig-param">username=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Linode user</p>
@@ -2468,6 +2573,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/user.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/user.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_linode.get_volume">
+<code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_volume</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides information about a Linode Volume.</p>
+<p>The Linode Volume resource exports the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - The unique ID of this Volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> - When this Volume was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> - The current status of the Volume. Can be one of “creating”, “active”, “resizing”, or “contact_support”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> - This Volume’s label is for display purposes only.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> - An array of tags applied to this object.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> - The Volume’s size, in GiB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> - The datacenter in which this Volume is located.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updated</span></code> - When this Volume was last updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linode_id</span></code> - If a Volume is attached to a specific Linode, the ID of that Linode will be displayed here. If the Volume is unattached, this value will be null.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filesystem_path</span></code> - The full filesystem path for the Volume based on the Volume’s label. Path is /dev/disk/by-id/scsi-0LinodeVolume + Volume label.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/volume.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

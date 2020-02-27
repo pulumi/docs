@@ -1,5 +1,8 @@
 ---
-title: Create a New Project
+title: Create a New Project | Azure
+h1: Create a New Project
+linktitle: Create a New Project
+meta_desc: This page provides an overview of how to create a new Azure + Pulumi project.
 weight: 5
 menu:
   getstarted:
@@ -11,7 +14,7 @@ aliases: ["/docs/quickstart/azure/create-project/"]
 
 Let's get started with a new project in a new directory.
 
-{{< langchoose nogo csharp >}}
+{{< langchoose csharp >}}
 
 <div class="language-prologue-javascript"></div>
 
@@ -39,6 +42,17 @@ $ pulumi new azure-python
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new azure-csharp
+```
+
+<div class="language-prologue-go"></div>
+
+```bash
+# install the pulumi azure plugin
+# check for the release version here https://github.com/pulumi/pulumi-azure/releases
+$ pulumi plugin install resource azure 1.14.0
+# from within your $GOPATH
+$ mkdir quickstart && cd quickstart
+$ pulumi new azure-go
 ```
 
 {{< cli-note >}}
@@ -77,6 +91,14 @@ After some dependency installations from `npm`, the project and stack will be re
 {{% /lang %}}
 
 {{% lang python %}}
+After the command completes, the project and stack will be ready.
+{{% /lang %}}
+
+{{% lang go %}}
+After the command completes, the project and stack will be ready.
+{{% /lang %}}
+
+{{% lang dotnet %}}
 After the command completes, the project and stack will be ready.
 {{% /lang %}}
 

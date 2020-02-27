@@ -1,6 +1,7 @@
 ---
 title: "Serverless App Using API Gateways and Lambda"
-
+meta_desc: This tutorial will teach you how to create a Serverless App using
+           AWS Api Gateway and AWS Lambda.
 aliases: ["/docs/reference/tutorials/aws/tutorial-rest-api/"]
 ---
 
@@ -31,8 +32,8 @@ After some dependency installations from npm, you'll see the few files that have
 
 Let's review those files:
 
-- `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project.md" >}}).
-- `Pulumi.ahoy-pulumi-dev.yaml` is the [configuration file]({{< relref "/docs/intro/concepts/config.md" >}}) for the stack you initialized in the previous step.
+- `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
+- `Pulumi.ahoy-pulumi-dev.yaml` is the [configuration file]({{< relref "/docs/intro/concepts/config" >}}) for the stack you initialized in the previous step.
 - `www` contains the sample static content for this tutorial.
 - `index.js` is the key file for defining your stack resources (which we will look at in the next step).
 

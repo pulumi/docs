@@ -1,5 +1,7 @@
 ---
 title: Managed Infrastructure
+meta_desc: This page provides an overview of Managed Infrastructure services that
+           support and complement Kubernetes clusters and workloads.
 linktitle: Managed Infrastructure
 ---
 
@@ -21,6 +23,7 @@ Zones][aws-azs] to use, alongwith [Route Tables][aws-rts], [Subnets][aws-subnets
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/02-managed-infra
 [crosswalk-aws]: {{< relref "/docs/guides/crosswalk/aws" >}}
 [aws-managed-svcs]: https://aws.amazon.com/products/
@@ -31,6 +34,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [aws-igw]: https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html
 [aws-ngw]: https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html
 [aws-sgs]: https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html
+<!-- markdownlint-enable url -->
 {{% /md %}}
 </div>
 
@@ -76,6 +80,7 @@ and [Firewall Rules][gcp-fw-rules].
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
+<!-- markdownlint-disable url -->
 [gcp-managed-svcs]: https://cloud.google.com/products/
 [gcp-subnets]: https://cloud.google.com/vpc/docs/vpc#vpc_networks_and_subnets
 [gcp-fwd-rules]: https://cloud.google.com/compute/docs/protocol-forwarding
@@ -83,6 +88,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [gcp-rts]: https://cloud.google.com/vpc/docs/routes
 [gcp-fw-rules]: https://cloud.google.com/vpc/docs/firewalls
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/02-managed-infra
+<!-- markdownlint-enable url -->
 {{% /md %}}
 </div>
 
@@ -90,8 +96,8 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 We'll configure and deploy:
 
-  * [Networking](#networking): To provide a virtual network for the cluster.
-  * [Storage](#storage): To provide data stores for the cluster.
+* [Networking](#networking): To provide a virtual network for the cluster.
+* [Storage](#storage): To provide data stores for the cluster.
 
 ## Networking
 
@@ -101,13 +107,13 @@ We'll configure and deploy:
 
 In [Crosswalk for AWS][crosswalk-aws] we showcase how to define networking:
 
-  - [VPCs][vpc]
-  - [Availability Zones][vpc-azs]
-  - [Subnets][vpc-subnets]
-  - [Internet & NAT Gateways][vpc-gw]
-  - [Security Groups][vpc-sg]
+* [VPCs][vpc]
+* [Availability Zones][vpc-azs]
+* [Subnets][vpc-subnets]
+* [Internet & NAT Gateways][vpc-gw]
+* [Security Groups][vpc-sg]
 
-#### Create a New VPC for Kubernetes
+### Create a New VPC for Kubernetes
 
 Create a new VPC to use with the cluster with custom settings and
 best-practice defaults.
@@ -128,6 +134,7 @@ export const vpcId = vpc.id;
 export const publicSubnetIds = vpc.publicSubnetIds;
 export const privateSubnetIds = vpc.privateSubnetIds;
 ```
+
 [crosswalk-aws]: {{< relref "/docs/guides/crosswalk/aws" >}}
 [vpc]: {{< relref "/docs/guides/crosswalk/aws/vpc#setting-up-a-new-vpc" >}}
 [vpc-azs]: {{< relref "/docs/guides/crosswalk/aws/vpc#configuring-availability-zones-for-an-aws-vpc" >}}
@@ -141,7 +148,7 @@ export const privateSubnetIds = vpc.privateSubnetIds;
 <div class="mt">
 {{% md %}}
 
-#### Create a New Virtual Network for Kubernetes
+### Create a New Virtual Network for Kubernetes
 
 Create a new Virtual Network to use with the cluster with custom settings and
 best-practice defaults.
@@ -168,7 +175,9 @@ const subnet = new azure.network.Subnet(name, {
 <div class="mt">
 {{% md %}}
 
-#### Create a New VPC for Kubernetes
+<!-- markdownlint-disable no-duplicate-heading -->
+### Create a New VPC for Kubernetes
+<!-- markdownlint-enable no-duplicate-heading -->
 
 Create a new network to use with the cluster with custom settings and
 best-practice defaults.
@@ -248,10 +257,11 @@ export const existingVpcId = existingVpc.id;
 export const existingPublicSubnetIds = existingVpc.publicSubnetIds;
 export const existingPrivateSubnetIds = existingVpc.privateSubnetIds;
 ```
+
 {{% /md %}}
 </div>
 
-#### Requirements & Recommendations
+### Requirements & Recommendations
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -305,25 +315,27 @@ needs of your complete architecture.
 <div class="mt">
 {{% md %}}
 
-#### Amazon Simple Storage Service (S3)
+### Amazon Simple Storage Service (S3)
 
 See [Crosswalk AWS S3][pulumi-s3] and the [AWS S3 docs][aws-s3] for more details.
 
-#### Elastic Container Registry (ECR)
+### Elastic Container Registry (ECR)
 
 See [Crosswalk AWS ECR][crosswalk-ecr] and the [AWS ECR docs][aws-ecr] for more details.
 
-#### Amazon Elastic File System (EFS)
+### Amazon Elastic File System (EFS)
 
 See [Persisting Kubernetes Workloads with Amazon EFS][pulumi-efs] and the
 [AWS EFS docs][aws-efs] for more details.
 
+<!-- markdownlint-disable url -->
 [pulumi-efs]: {{< relref "/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks" >}}
 [aws-efs]: https://aws.amazon.com/efs/
 [pulumi-s3]: {{< relref "/docs/aws/s3" >}}
 [crosswalk-ecr]: {{< relref "/docs/guides/crosswalk/aws/ecr" >}}
 [aws-ecr]: https://aws.amazon.com/ecr/
 [aws-s3]: https://aws.amazon.com/s3
+<!-- markdownlint-enable url -->
 {{% /md %}}
 </div>
 
@@ -331,7 +343,7 @@ See [Persisting Kubernetes Workloads with Amazon EFS][pulumi-efs] and the
 <div class="mt">
 {{% md %}}
 
-#### Azure Blob Storage
+### Azure Blob Storage
 
 Create a new blob storage with a data source of a local directory and files.
 
@@ -365,7 +377,7 @@ const storageAccount = new azure.storage.Account("websitesa", {
 );
 ```
 
-#### Azure Container Registry (ACR)
+### Azure Container Registry (ACR)
 
 Create a new registry, build a local Docker image, and push it to the registry.
 
@@ -414,7 +426,7 @@ const appImage = new docker.Image(customImage, {
 <div class="mt">
 {{% md %}}
 
-#### Google Container Registry (GCR)
+### Google Container Registry (GCR)
 
 Fetch the URL to use for the Debian container image.
 
@@ -438,6 +450,7 @@ export const gcrLocation = registry.repositoryUrl;
 ```
 
 Build a local Docker image with a given Dockerfile context, and push it to the registry.
+
 ```ts
 import * as docker from "@pulumi/docker";
 
@@ -450,7 +463,7 @@ const appImage = new docker.Image(customImage, {
 });
 ```
 
-#### GCP Object Storage
+### GCP Object Storage
 
 Create a new bucket with a data source of a local file.
 
@@ -466,6 +479,8 @@ const picture = new gcp.storage.BucketObject("picture", {
 {{% /md %}}
 </div>
 
+<!-- markdownlint-disable url -->
 [crosswalk-cluster-svcs]: {{< relref "/docs/guides/crosswalk/kubernetes/cluster-services" >}}
 [crosswalk-app-svcs]: {{< relref "/docs/guides/crosswalk/kubernetes/app-services" >}}
 [k8s-pvs]: https://kubernetes.io/docs/concepts/storage/persistent-volumes/
+<!-- markdownlint-enable url -->

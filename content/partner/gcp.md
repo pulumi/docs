@@ -1,5 +1,5 @@
 ---
-title: Cloud Native Infrastructure as Code for Google Cloud with Pulumi
+title: Cloud Infrastructure as Code for Google Cloud
 layout: gcp
 url: /gcp
 

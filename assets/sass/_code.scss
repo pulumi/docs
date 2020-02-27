@@ -38,6 +38,10 @@ pre {
     .code-max-h & {
         @apply border-none my-0;
     }
+
+    // For code samples that contain tabs (e.g., Go), limit them to four spaces, to make
+    // better use of horizontal space.
+    tab-size: 4;
 }
 
 .code-max-h {

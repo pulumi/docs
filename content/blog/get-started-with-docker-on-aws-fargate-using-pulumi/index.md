@@ -1,7 +1,7 @@
 ---
 title: "Get Started with Docker on AWS Fargate using Pulumi"
 date: "2019-04-30"
-meta_desc: "Using Pulumi's infrastructure as code solution to build a custom Docker image, publish it to a private AWS container registry, and spin up an AWS Fargate load balanced service running that container."
+meta_desc: "Using Pulumi to build a custom Docker image, publish it to a AWS container registry, and spin up an AWS Fargate load balanced service running that container."
 meta_image: "docker-fargate-history.png"
 authors: ["joe-duffy"]
 tags: ["JavaScript","AWS","Containers","Infrastructure","TypeScript"]
@@ -49,18 +49,18 @@ the post walking through it line by line:
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
- 
+
 // Step 1: Create an ECS Fargate cluster.
 const cluster = new awsx.ecs.Cluster("cluster");
- 
+
 // Step 2: Define the Networking for our service.
 const alb = new awsx.lb.ApplicationLoadBalancer(
     "net-lb", { external: true, securityGroup: cluster.securityGroup });
 const web = alb.createListener("web", { port: 80, external: true });
- 
+
 // Step 3: Build and publish a Docker image to a private ECR registry.
 const img = awsx.ecs.Image.fromPath("app-img", "./app");
- 
+
 // Step 4: Create a Fargate service task that can scale out.
 const appService = new awsx.ecs.FargateService("app-svc", {
     cluster,
@@ -74,7 +74,7 @@ const appService = new awsx.ecs.FargateService("app-svc", {
     },
     desiredCount: 5,
 });
- 
+
 // Step 5: Export the Internet address for the service.
 export const url = web.endpoint.hostname;
 ```
@@ -82,7 +82,7 @@ export const url = web.endpoint.hostname;
 ## Step 1. Create a Cluster
 
 The opening stanza imports Pulumi's
-[open source AWSX NPM package]({{< ref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}), `@pulumi/awsx`. It
+[open source AWSX NPM package]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}), `@pulumi/awsx`. It
 contains high level AWS best practices and patterns, and leverages real
 languages to eliminate boilerplate YAML templating:
 
@@ -233,7 +233,7 @@ Pulumi's "everything is code" approach means deploying everything can be
 done with a CLI command, unlocking the power of the entire Docker
 platform with a great inner development loop, that works from the
 desktop all the way to production. This entire flow can be
-[easily integrated into your favorite CI/CD pipeline]({{< ref "/docs/guides/continuous-delivery" >}}),
+[easily integrated into your favorite CI/CD pipeline]({{< relref "/docs/guides/continuous-delivery" >}}),
 including GitOps workflows.
 
 If we want to augment our service with other AWS resources -- like S3
@@ -247,4 +247,4 @@ but also Azure and GCP cloud providers, in addition to Kubernetes!
 Want to go deeper?
 
 - [Check out this example on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate)
-- [Get Started with your favorite cloud and scenario now]({{< ref "/docs/get-started" >}})
+- [Get Started with your favorite cloud and scenario now]({{< relref "/docs/get-started" >}})

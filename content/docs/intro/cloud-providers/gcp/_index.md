@@ -1,5 +1,6 @@
 ---
-title: Google Cloud
+title: Google Cloud Platform (GCP)
+meta_desc: This page provides on an overview of the Google Cloud Platform (GCP) provider for Pulumi.
 menu:
   intro:
     parent: cloud-providers
@@ -17,7 +18,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/g
 
 ## Setup
 
-The GCP provider supports several options for providing access to Google Cloud credentials.  See [GCP setup page]({{< relref "setup.md" >}}) for details.
+The GCP provider supports several options for providing access to Google Cloud credentials.  See [GCP setup page]({{< relref "setup" >}}) for details.
 
 ## Getting Started
 
@@ -85,6 +86,7 @@ The following packages are available in packager managers:
 * JavaScript/TypeScript: [`@pulumi/gcp`](https://www.npmjs.com/package/@pulumi/gcp)
 * Python: [`pulumi-gcp`](https://pypi.org/project/pulumi-gcp/)
 * Go: [`github.com/pulumi/pulumi-gcp/sdk/go/gcp`](https://github.com/pulumi/pulumi-gcp)
+* .NET: [`Pulumi.Gcp`](https://www.nuget.org/packages/Pulumi.Gcp)
 
 The CGP provider is open source and available in the [pulumi/pulumi-gcp](https://github.com/pulumi/pulumi-gcp) repo.
 

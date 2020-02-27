@@ -1,5 +1,5 @@
 {{ define "main" }}
-    <div class="container mx-auto px-8 py-8 md:px-0">
+    <div class="container mx-auto px-4 py-8">
         <div class="md:flex">
 
             <div class="md:w-2/12 pl-8 mt-2 md:order-last">
@@ -9,6 +9,10 @@
 
                 <div class="ml-2 hidden md:block">
                     {{ partial "docs/right-nav.html" . }}
+                </div>
+
+                <div>
+                    {{ partial "docs/feedback.html" . }}
                 </div>
             </div>
 

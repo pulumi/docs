@@ -1,9 +1,10 @@
 ---
-title: "Serverless as Simple Callbacks with Pulumi and Azure Functions"
+title: Serverless as Simple Callbacks with Azure Functions
+h1: "Serverless as Simple Callbacks with Pulumi and Azure Functions"
 authors: ["mikhail-shilkov"]
 tags: ["Serverless","Azure"]
 date: "2019-05-07"
-meta_desc: "Pulumi's serverless programming model makes it easy to take a Node.js function and deploy it to Azure as an HTTP endpoint. Pulumi leverages general-purpose programming languages like TypeScript for a consistent approach to defining and delivering serverless applications such as asynchronous message passing, ServiceBus topic subscription, and Blob container image upload notification."
+meta_desc: "Pulumi's serverless programming model makes it easy to take a Node.js function and deploy it to Azure as an HTTP endpoint."
 
 ---
 
@@ -27,9 +28,9 @@ to Azure cloud as an HTTP endpoint? How about this little tutorial:
 
 ```typescript
 import * as azure from '@pulumi/azure';
- 
+
 const resourceGroup = new azure.core.ResourceGroup('example', { location: 'West US' });
- 
+
 const greeting = new azure.appservice.HttpEventSubscription('greeting', {
     resourceGroup,
     callback: async (context, req) => {
@@ -39,7 +40,7 @@ const greeting = new azure.appservice.HttpEventSubscription('greeting', {
         };
     }
 });
- 
+
 export const url = greeting.url;
 ```
 
@@ -63,7 +64,7 @@ export const url = greeting.url;
     Resources:
        + 8 created
 
-#### 4. Access your function via HTTP:
+## 4. Access your function via HTTP:
 
     $ curl https://greetingc21a23fe.azurewebsites.net/api/greeting?name=Pulumi
     Hello Pulumi!
@@ -126,12 +127,12 @@ const storageAccount = new azure.storage.Account("storage", {
    accountReplicationType: "LRS",
    accountTier: "Standard",
 });
- 
+
 const queue = new azure.storage.Queue("myqueue", {
   resourceGroupName: resourceGroup.name,
   storageAccountName: storageAccount.name
 });
- 
+
 queue.onEvent("newMessage",  async (context, msg) => {
    // code to process 'msg' however you want here
    console.log("Message received: " + msg.toString());
@@ -143,17 +144,17 @@ the messages:
 
 ```typescript
 import * as servicebus from "@pulumi/azure/eventhub";
- 
+
 const namespace = new servicebus.Namespace("test", {
    resourceGroupName: resourceGroup.name,
    sku: "standard",
 });
- 
+
 const topic = new servicebus.Topic("mytopic", {
    resourceGroupName: resourceGroup.name,
    namespaceName: namespace.name,
 });
- 
+
 export const subscription = topic.onEvent("mysubscription", async (context, msg) => {
    console.log("Received: " + msg.toString());
 });
@@ -168,7 +169,7 @@ const storageContainer = new azure.storage.Container("images-container", {
   storageAccountName: storageAccount.name,
   name: "images",
 });
- 
+
 storageContainer.onBlobEvent("newImage", {
    callback: async (context, blob) => {
        console.log("File size: " + context.bindingData.properties.length);

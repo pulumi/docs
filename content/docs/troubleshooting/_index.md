@@ -1,5 +1,7 @@
 ---
 title: Troubleshooting
+meta_desc: A collection of common troubleshooting techniques when using the Pulumi CLI
+           and Cloud Services.
 menu:
   troubleshooting:
     weight: 1
@@ -32,7 +34,7 @@ of issue reports.
 Verbose logging of the internals of the Pulumi engine and resource providers can be enabled by
 passing the `-v` flag to any `pulumi` CLI command. The `--logtostderr` flag can be added to send
 this verbose logging directly to `stderr` for easier access.  Pulumi emits logs at a variety of log
-levels between `1` and `9`.  
+levels between `1` and `9`.
 
 > These logs may include sensitive information that is provided from your execution environment to
 your cloud provider (and which Pulumi may not even itself be aware of) so be careful to audit before
@@ -74,7 +76,6 @@ $ PULUMI_DEBUG_COMMANDS=1 pulumi view-trace ~/Downloads/up.trace
 Displaying trace at http://localhost:8008
 ```
 
-
 ## Common Problems
 
 This section covers a few problems that can arise when working with Pulumi.
@@ -114,7 +115,6 @@ throughout the course of an update.
 We take great pride in service uptime and work rapidly to fix service interruption and use our [status page](https://status.pulumi.com) to
 communicate information about service incidents.
 
-
 ### post-step event returned an error {#post-step-event}
 
 The Pulumi engine runs a small amount of code after every "step" that it performs. If this code fails for any reason,
@@ -151,13 +151,14 @@ The version information for these providers is stored in the deployment for each
 This error can occur when the deployment state for a stack already contains a newer version of a specific provider, but you are trying
 to run a `pulumi up` (or `preview`) command after downgrading the provider dependency in your pulumi program.
 
-To be more specific, the error occurs because the `pulumi` [plugin cache]({{< relref "/docs/reference/cli/pulumi_plugin_ls.md" >}}) does not have the required version installed.
+To be more specific, the error occurs because the `pulumi` [plugin cache]({{< relref "/docs/reference/cli/pulumi_plugin_ls" >}}) does not have the required version installed.
 This is especially more likely to occur if you are running `pulumi` in a CI/CD environment, since your plugin cache is likely not saved across builds.
 
 Please note that, it is fine to have multiple versions of a provider installed and have stacks depend on different provider version. It is only a problem when you
 downgrade the version of a particular stack that already has been deployed using a newer version.
 
 Here's an example of the full error:
+
 ```
 error: could not load plugin for aws provider 'urn:pulumi:<stack_name>::pulumi-service::pulumi:providers:aws::default': no resource plugin 'aws-v0.16.2' found in the workspace or on your $PATH, install the plugin using \`pulumi plugin install resource aws v0.16.2\`
 ```
@@ -251,7 +252,7 @@ to manually edit the stack's existing state to fix the corruption.
 
 Note that this is an advanced operation and should be an absolute last resort.
 
-If you intend to unprotect or delete a resource, consider using the [`pulumi state`]({{< relref "/docs/reference/cli/pulumi_state.md" >}}) command to
+If you intend to unprotect or delete a resource, consider using the [`pulumi state`]({{< relref "/docs/reference/cli/pulumi_state" >}}) command to
 do so instead of editing your state directly. `pulumi state` also makes surgical fixes to your state but without
 requiring you to edit the JSON representation of your stack's current state.
 
@@ -333,7 +334,7 @@ This section includes detailed troubleshooting information for the [Kubernetes p
 This error is often caused by a misconfigured ingress-controller not updating the `status.loadBalancer`
 field once the Ingress resource is ready to route traffic.
 
-*Traefik*
+###### *Traefik*
 
 For the Traefik controller, verify that the `kubernetes.ingressEndpoint` config
 is [set properly](https://docs.traefik.io/providers/kubernetes-ingress/). This option was
@@ -342,7 +343,7 @@ introduced in Traefik 1.7.0.
 ## Synchronous call made to "X" with an unregistered provider {#synchronous-call}
 
 The warning occurs when invoking a resource function synchronously while also using
-[an explicit provider object](https://www.pulumi.com/docs/intro/concepts/programming-model/#providers) that isn't yet ready to use.
+[an explicit provider object]({{< relref "/docs/intro/concepts/programming-model#providers" >}}) that isn't yet ready to use.
 For example:
 
 ```ts
@@ -382,7 +383,7 @@ const ids = pulumi.output(aws.ec2.getSubnetIds(..., { parent }));
 
 This is the preferred way to solve this issue. In this form all resource function calls will always execute asynchronously,
 returning their result through a `Promise<...>`.  The result of the call is then wrapped into an `Output` so it can easily be
-passed as a resource input and to make it [simple to access properties](https://www.pulumi.com/docs/intro/concepts/programming-model/#lifting) off of it.
+passed as a resource input and to make it [simple to access properties]({{< relref "/docs/intro/concepts/programming-model#lifting" >}}) off of it.
 
 If you do not want to change all calls to be `async` (perhaps because only one is encountering a problem), you can alternatively
 update only specific problematic calls to be asynchronous like so:
@@ -396,7 +397,7 @@ const ids = pulumi.output(aws.ec2.getSubnetIds(..., { parent, async: true }));
 
 In this form, the `async: true` flag is passed in which forces `getSubnetIds` to always execute asynchronously.  The result
 of the call is then wrapped into an `Output` so it can easily be passed as a resource input and to make it
-[simple to access properties](https://www.pulumi.com/docs/intro/concepts/programming-model/#lifting) off of it.
+[simple to access properties]({{< relref "/docs/intro/concepts/programming-model#lifting" >}}) off of it.
 
 Sometimes, however, this approach is not possible because the call to the resource function happens a deeper layer (possibly in a
 component not under your control).  In that case, we recommend the solution in the next section:
@@ -413,7 +414,7 @@ const ids = aws.ec2.getSubnetIds(..., { provider }); // or
 const ids = aws.ec2.getSubnetIds(..., { parent });
 ```
 
-In this form, the ProviderResource is explicitly registered first, allowing it to be safely used *synchronously* in the resource 
+In this form, the ProviderResource is explicitly registered first, allowing it to be safely used *synchronously* in the resource
 function calls. This registration should generally be done immediately after creating the provider. With this form the resource function
 results can be used immediately, without needing to operate on them as promises (i.e. no need for `await` or `.then(...)`).
 
@@ -448,7 +449,7 @@ const val = stackReference.getOutput("outputName");
 ```
 
 In this form the result of the call is an `Output` (which internally asynchronously retrieves the stack output value).  This can
-easily be passed as a resource input and supports [simple to access properties](https://www.pulumi.com/docs/intro/concepts/programming-model/#lifting) off of it.
+easily be passed as a resource input and supports [simple to access properties]({{< relref "/docs/intro/concepts/programming-model#lifting" >}}) off of it.
 
 However, because the value is not known synchronously, it is not possible to have the value affect the flow of your application.
 For example if the output value is an array, there is no way to know the length of the array in order to make specific resources
@@ -466,5 +467,5 @@ for (const e of values) {
 This approach requires you to pass in the name as a string either explicitly as a literal like above, or just as some string
 value defined elsewhere in your application. If the value is known, it can be copied into your application and used directly.
 
-If the stack-reference-name truly is dynamic and cannot be known ahead of time to supply directly into the app, then this 
+If the stack-reference-name truly is dynamic and cannot be known ahead of time to supply directly into the app, then this
 approach will not work, and the only way to workaround the issue is to follow the steps in [Use getOutput/requireOutput](#use-getoutput).

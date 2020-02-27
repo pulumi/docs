@@ -25,7 +25,7 @@ everyone to use.
 
 With great power comes great complexity. The sheer number of Kubernetes configuration
 options can be overwhelming to users. YAML was not designed for programming, yet
-Kubernetes users often joke about being “YAML architects.” 
+Kubernetes users often joke about being “YAML architects.”
 
 Kubernetes YAML has been compared to an assembly language. We find this analogy to
 be particularly apt: it gives users complete control over the system, although it is
@@ -75,7 +75,7 @@ let us know what you think!
 
 If you'd like to learn about Pulumi and how to manage your
 infrastructure and Kubernetes through code,
-[click here to get started today]({{< ref "/docs/get-started" >}}). Pulumi is open
+[click here to get started today]({{< relref "/docs/get-started" >}}). Pulumi is open
 source and free to use.
 
 As always, you can check out our code on
@@ -85,5 +85,7 @@ As always, you can check out our code on
 join our [Community Slack](https://slack.pulumi.com/) channel if you have
 any questions, need support, or just want to say hello.
 
-[crosswalk-announce-blog]: https://www.pulumi.com/blog/crosswalk-kubernetes/ 
+<!-- markdownlint-disable url -->
+[crosswalk-announce-blog]: {{< relref "/blog/crosswalk-kubernetes" >}}
 [kx-repo]: https://github.com/pulumi/pulumi-kubernetesx
+<!-- markdownlint-enable url -->

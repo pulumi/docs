@@ -3,7 +3,7 @@ title: "7 Ways to Deal with Application Secrets in Azure"
 authors: ["mikhail-shilkov"]
 tags: ["Azure", "Security"]
 date: "2019-07-26"
-
+meta_desc: In this post, we will look at 7 ways to deal with application secrects in Azure.
 meta_image: "feature.jpg"
 ---
 
@@ -122,7 +122,7 @@ const app = new azure.appservice.AppService("app", {
 
 The Storage connection string is produced by the Pulumi program directly, so it doesn't have to be placed anywhere outside the program itself.
 
-The payment service key is provided by a third party, so its encrypted value is stored in Pulumi configuration. Read [Managing Secrets with Pulumi](https://www.pulumi.com/blog/managing-secrets-with-pulumi/) to learn about security options available for secrets in Pulumi config.
+The payment service key is provided by a third party, so its encrypted value is stored in Pulumi configuration. Read [Managing Secrets with Pulumi]({{< relref "/blog/managing-secrets-with-pulumi" >}}) to learn about security options available for secrets in Pulumi config.
 
 ## 4. Azure Key Vault
 

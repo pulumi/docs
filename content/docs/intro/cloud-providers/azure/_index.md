@@ -1,5 +1,6 @@
 ---
 title: Azure
+meta_desc: The Azure provider for Pulumi can be used to provision any of the cloud resources available in Azure via Azure Resource Manager (ARM).
 menu:
   intro:
     parent: cloud-providers
@@ -17,7 +18,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/a
 
 ## Setup
 
-The Azure provider supports several options for providing access to Azure credentials.  See [Azure setup page]({{< relref "/docs/intro/cloud-providers/azure/setup.md" >}}) for details.
+The Azure provider supports several options for providing access to Azure credentials.  See [Azure setup page]({{< relref "/docs/intro/cloud-providers/azure/setup" >}}) for details.
 
 ## Getting Started
 
@@ -34,7 +35,6 @@ In addition to the tutorial, several interesting examples are available complete
 * [Azure Kubernetes Service (AKS) Cluster](https://github.com/pulumi/examples/tree/master/azure-ts-aks-helm): Create an AKS cluster and deploy a Helm Chart into it
 * [Azure CosmosDB, AKS and Node.js](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean): Stands up an AKS cluster and a MongoDB-flavored instance of CosmosDB used by a Node.js application.
 
-
 ## Example
 
 ```javascript
@@ -45,14 +45,16 @@ const resourceGroupName = new azure.core.ResourceGroup("my-group", {
 });
 ```
 
-You can find additional examples of using Azure in [the Pulumi examples repo](https://github.com/pulumi/examples).
+Above is one example of an Azure resource group using Pulumi. You can find additional examples in [the Pulumi examples repo](https://github.com/pulumi/examples).
 
 ## Libraries
 
 The following packages are available in package managers:
+
 * JavaScript/TypeScript: [`@pulumi/azure`](https://www.npmjs.com/package/@pulumi/azure)
 * Python: [`pulumi-azure`](https://pypi.org/project/pulumi-azure/)
 * Go: [`github.com/pulumi/pulumi-azure/sdk/go/azure`](https://github.com/pulumi/pulumi-azure)
+* .NET: [`Pulumi.Azure`](https://www.nuget.org/packages/Pulumi.Azure)
 
 The Azure provider is open source and available in the [pulumi/pulumi-azure](https://github.com/pulumi/pulumi-azure) repo.
 
@@ -70,3 +72,5 @@ The Azure provider accepts the following configuration settings.  These can be p
 * `subscriptionId`: (Optional) The subscription ID to use. It can also be sourced from the `ARM_SUBSCRIPTION_ID` environment variable.
 * `tenantId`: (Optional) The tenant ID to use. It can also be sourced from the `ARM_TENANT_ID` environment variable.
 * `useMsi`: (Optional) Set to true to authenticate using managed service identity. It can also be sourced from the `ARM_USE_MSI` environment variable.
+
+For Pulumi support and troubleshooting, click the links in the sidebar on the left of the page.

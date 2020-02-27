@@ -661,7 +661,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_azure.scheduler.</code><code class="sig-name descname">get_job_collection</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.get_job_collection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Scheduler Job Collection.</p>
 <blockquote>
-<div><p><strong>NOTE:</strong> Support for Scheduler Job Collections has been deprecated by Microsoft in favour of Logic Apps (<a class="reference external" href="https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps">more information can be found at this link</a>) - as such we plan to remove support for this data source as a part of version 2.0 of the AzureRM Provider.</p>
+<div><p><strong>Note:</strong> Support for Scheduler Job Collections has been deprecated by Microsoft in favour of Logic Apps (<a class="reference external" href="https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps">more information can be found at this link</a>) - as such we plan to remove support for this data source as a part of version 2.0 of the AzureRM Provider.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

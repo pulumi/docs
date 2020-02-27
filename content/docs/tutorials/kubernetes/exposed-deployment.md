@@ -1,6 +1,7 @@
 ---
-title: "Hello, World!"
-
+title: Deploy NGINX to a Kubernetes Cluster
+meta_desc: How to deploy NGINX to a Kubernetes cluster with a publicly exposed IP using
+           a Kubernetes Service.
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment/"]
 ---
 
@@ -23,7 +24,7 @@ Start by downloading the example code
 
 If you haven't already, follow the steps in [Pulumi Installation and
 Setup]({{< relref "/docs/get-started/install" >}}) and [Configuring Pulumi
-Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes/setup.md" >}}) to get setup with
+Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}}) to get setup with
 Pulumi and Kubernetes.
 
 Now, install dependencies:

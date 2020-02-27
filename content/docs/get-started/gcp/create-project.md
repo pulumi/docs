@@ -1,5 +1,8 @@
 ---
-title: Create a New Project
+title: Create a New Project | GCP
+h1: Create a New Project
+linktitle: Create a New Project
+meta_desc: This page provides an overview of how to create a new Google Cloud (GCP) + Pulumi project.
 weight: 5
 menu:
   getstarted:
@@ -11,7 +14,7 @@ aliases: ["/docs/quickstart/gcp/create-project/"]
 
 Let's get started with a new project in a new directory.
 
-{{< langchoose nogo csharp >}}
+{{< langchoose csharp >}}
 
 <div class="language-prologue-javascript"></div>
 
@@ -32,6 +35,17 @@ $ pulumi new gcp-typescript
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new gcp-python
+```
+
+<div class="language-prologue-go"></div>
+
+```bash
+# install the pulumi gcp plugin
+# check for the release version here https://github.com/pulumi/pulumi-gcp/releases
+$ pulumi plugin install resource gcp 2.6.0
+# from within your $GOPATH
+$ mkdir quickstart && cd quickstart
+$ pulumi new gcp-go
 ```
 
 <div class="language-prologue-csharp"></div>
@@ -79,6 +93,10 @@ After some dependency installations from `npm`, the project and stack will be re
 {{% /lang %}}
 
 {{% lang python %}}
+After the command completes, the project and stack will be ready.
+{{% /lang %}}
+
+{{% lang go %}}
 After the command completes, the project and stack will be ready.
 {{% /lang %}}
 

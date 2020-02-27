@@ -185,8 +185,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <code class="docutils literal notranslate"><span class="pre">default_capacity_provider_strategy</span></code> configuration block supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">capacity_provider</span></code> - (Required) The short name or full Amazon Resource Name (ARN) of the capacity provider.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Required) The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacity_provider</span></code> - (Required) The short name of the capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Optional) The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> - (Optional) The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
 </ul>
 <dl class="field-list simple">
@@ -194,7 +194,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>capacity_providers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of short names or full Amazon Resource Names (ARNs) of one or more capacity providers to associate with the cluster. Valid values also include <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code> and <code class="docutils literal notranslate"><span class="pre">FARGATE_SPOT</span></code>.</p></li>
+<li><p><strong>capacity_providers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of short names of one or more capacity providers to associate with the cluster. Valid values also include <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code> and <code class="docutils literal notranslate"><span class="pre">FARGATE_SPOT</span></code>.</p></li>
 <li><p><strong>default_capacity_provider_strategies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)</p></li>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.</p></li>
@@ -225,7 +225,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.Cluster.capacity_providers">
 <code class="sig-name descname">capacity_providers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Cluster.capacity_providers" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of short names or full Amazon Resource Names (ARNs) of one or more capacity providers to associate with the cluster. Valid values also include <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code> and <code class="docutils literal notranslate"><span class="pre">FARGATE_SPOT</span></code>.</p>
+<dd><p>List of short names of one or more capacity providers to associate with the cluster. Valid values also include <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code> and <code class="docutils literal notranslate"><span class="pre">FARGATE_SPOT</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -273,7 +273,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) that identifies the cluster</p></li>
-<li><p><strong>capacity_providers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of short names or full Amazon Resource Names (ARNs) of one or more capacity providers to associate with the cluster. Valid values also include <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code> and <code class="docutils literal notranslate"><span class="pre">FARGATE_SPOT</span></code>.</p></li>
+<li><p><strong>capacity_providers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of short names of one or more capacity providers to associate with the cluster. Valid values also include <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code> and <code class="docutils literal notranslate"><span class="pre">FARGATE_SPOT</span></code>.</p></li>
 <li><p><strong>default_capacity_provider_strategies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)</p></li>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.</p></li>
@@ -1006,6 +1006,12 @@ Guide</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The scope for the Docker volume, which determines its lifecycle, either <code class="docutils literal notranslate"><span class="pre">task</span></code> or <code class="docutils literal notranslate"><span class="pre">shared</span></code>.  Docker volumes that are scoped to a <code class="docutils literal notranslate"><span class="pre">task</span></code> are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are <code class="docutils literal notranslate"><span class="pre">scoped</span></code> as shared persist after the task stops.</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">efsVolumeConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Used to configure a EFS volume. Can be used only with an EC2 type task.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileSystemId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the EFS File System.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootDirectory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount on the host</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the volume. This name is referenced in the <code class="docutils literal notranslate"><span class="pre">sourceVolume</span></code>
 parameter of container definition in the <code class="docutils literal notranslate"><span class="pre">mountPoints</span></code> section.</p></li>
@@ -1134,6 +1140,12 @@ Guide</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The scope for the Docker volume, which determines its lifecycle, either <code class="docutils literal notranslate"><span class="pre">task</span></code> or <code class="docutils literal notranslate"><span class="pre">shared</span></code>.  Docker volumes that are scoped to a <code class="docutils literal notranslate"><span class="pre">task</span></code> are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are <code class="docutils literal notranslate"><span class="pre">scoped</span></code> as shared persist after the task stops.</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">efsVolumeConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Used to configure a EFS volume. Can be used only with an EC2 type task.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileSystemId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the EFS File System.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootDirectory</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to mount on the host</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the volume. This name is referenced in the <code class="docutils literal notranslate"><span class="pre">sourceVolume</span></code>
 parameter of container definition in the <code class="docutils literal notranslate"><span class="pre">mountPoints</span></code> section.</p></li>
@@ -1199,6 +1211,12 @@ Guide</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">driverOpts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of Docker driver specific options.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of custom metadata to add to your Docker volume.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The scope for the Docker volume, which determines its lifecycle, either <code class="docutils literal notranslate"><span class="pre">task</span></code> or <code class="docutils literal notranslate"><span class="pre">shared</span></code>.  Docker volumes that are scoped to a <code class="docutils literal notranslate"><span class="pre">task</span></code> are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are <code class="docutils literal notranslate"><span class="pre">scoped</span></code> as shared persist after the task stops.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">efsVolumeConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Used to configure a EFS volume. Can be used only with an EC2 type task.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileSystemId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the EFS File System.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootDirectory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount on the host</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.</p></li>

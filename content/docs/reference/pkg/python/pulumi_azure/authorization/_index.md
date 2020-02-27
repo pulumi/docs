@@ -535,7 +535,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">get_builtin_role_definition</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.get_builtin_role_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about a built-in Role Definition. To access information about a custom Role Definition, please see the <code class="docutils literal notranslate"><span class="pre">authorization.RoleDefinition</span></code> data source instead.</p>
 <blockquote>
-<div><p><strong>NOTE:</strong> The this datasource has been deprecated in favour of <code class="docutils literal notranslate"><span class="pre">authorization.RoleDefinition</span></code> that now can look up role definitions by name. As such this data source will be removed in version 2.0 of the AzureRM Provider.</p>
+<div><p><strong>Note:</strong> The this datasource has been deprecated in favour of <code class="docutils literal notranslate"><span class="pre">authorization.RoleDefinition</span></code> that now can look up role definitions by name. As such this data source will be removed in version 2.0 of the AzureRM Provider.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

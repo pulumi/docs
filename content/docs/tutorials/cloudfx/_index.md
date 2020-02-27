@@ -1,6 +1,7 @@
 ---
 title: Pulumi Cloud Framework (Preview)
-
+meta_desc: The Cloud framework for Pulumi lets you program infrastructure and application logic using high-level
+           cloud-agnostic building blocks.
 aliases: ["/docs/quickstart/cloudfx/"]
 ---
 
@@ -46,16 +47,18 @@ exports.url = api.publish().url;
 ## Libraries
 
 The following packages are available in package managers:
-* JavaScript/TypeScript: https://www.npmjs.com/package/@pulumi/cloud
+
+* JavaScript/TypeScript: [https://www.npmjs.com/package/@pulumi/cloud](https://www.npmjs.com/package/@pulumi/cloud)
 
 The provider-specific implementations of this library are also available for use directly when writing code that does not need to be portable:
-* JavaScript/TypeScript: https://www.npmjs.com/package/@pulumi/cloud-aws
+
+* JavaScript/TypeScript: [https://www.npmjs.com/package/@pulumi/cloud-aws](https://www.npmjs.com/package/@pulumi/cloud-aws)
 
 The Cloud framework is open source and available in the [pulumi/pulumi-cloud](https://github.com/pulumi/pulumi-cloud) repo.
 
 ## Authentication
 
-Authentication options must be set for the target cloud provider. See the [AWS setup page]({{< relref "/docs/intro/cloud-providers/aws/setup.md" >}}) for details (more providers for the Cloud framework coming soon).
+Authentication options must be set for the target cloud provider. See the [AWS setup page]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}) for details (more providers for the Cloud framework coming soon).
 
 ## Configuration
 

@@ -4,7 +4,7 @@ menu:
     userguides:
         identifier: self_hosted
         weight: 6
-meta_desc: Pulumi Enterprise Edition gives you the option to self-host Pulumi within your organization's infrastructure. This document walks you through the components and their configuration.
+meta_desc: Pulumi Enterprise Edition gives you the option to self-host Pulumi within your organization's infrastructure.
 ---
 
 <div class="note note-info" role="alert">
@@ -15,7 +15,7 @@ meta_desc: Pulumi Enterprise Edition gives you the option to self-host Pulumi wi
 
 This guide walks you through the components that are required to get the Pulumi Service running in your own environment.
 
-There are two services that need to be hosted for the purposes of remote state management and a management UI for users. To store user data, and the state for your [stacks](https://www.pulumi.com/docs/intro/concepts/stack/), the following components are also needed:
+There are two services that need to be hosted for the purposes of remote state management and a management UI for users. To store user data, and the state for your [stacks]({{< relref "/docs/intro/concepts/stack" >}}), the following components are also needed:
 
 * MySQL 5.6 DB server with at least 20GB storage space for data
 * Minimum 50GB SSD for object storage
@@ -26,7 +26,7 @@ There are two services that need to be hosted for the purposes of remote state m
 
 The self-hosted version of the Pulumi Service also offers some features that are not available with the managed version (i.e. [app.pulumi.com](https://app.pulumi.com)). The self-hosted installation of Pulumi provides full control of your data -- a requirement for enterprises in certain industries with specific security compliance requirements.
 
-If you are unsure about whether a self-hosted version of the Pulumi Service is right for your organization, [contact us](https://www.pulumi.com/about/#contact) to learn more.
+If you are unsure about whether a self-hosted version of the Pulumi Service is right for your organization, [contact us]({{< relref "/about#contact" >}}) to learn more.
 
 ## Deployment Topology
 
@@ -47,9 +47,9 @@ Here are some examples of deployment topologies:
 
 | Component | Repository |
 | --------- | ---------- |
-| [API]({{< relref "api" >}}) | https://hub.docker.com/r/pulumi/service/ |
-| [Console]({{< relref "console" >}}) |	https://hub.docker.com/r/pulumi/console/ |
-| Migrations | https://hub.docker.com/r/pulumi/migrations/ |
+| [API]({{< relref "api" >}}) | [https://hub.docker.com/r/pulumi/service/](https://hub.docker.com/r/pulumi/service/) |
+| [Console]({{< relref "console" >}}) |	[https://hub.docker.com/r/pulumi/console/](https://hub.docker.com/r/pulumi/console/) |
+| Migrations | [https://hub.docker.com/r/pulumi/migrations/](https://hub.docker.com/r/pulumi/migrations/) |
 
 > **Note**: The above container image repositories are private.
 
@@ -70,10 +70,6 @@ In addition to the environment variables that each container exposes, the follow
 For example, `PULUMI_DATA_PATH=/my/persistent/dir LOCAL_DATABASE_NAME=my-db LOCAL_DATABASE_PORT=3306 ./scripts/run-ee.sh`.
 
 Regardless of the quickstart option you choose below, `run-ee.sh` will be the way to start the necessary containers. There will be at most 3 containers (including the DB) for the system to be considered complete.
-
-Just see this quickstart video recorded by our CTO, Luke Hoban. You, too, can get started with Pulumi very quickly.
-
-<!--INSERT YOUTUBE LINK-->
 
 ### Quickstart Option #1 - Using the all-in-one approach
 

@@ -1,5 +1,8 @@
 ---
-title: Modify the Program
+title: Modify the Program | Kubernetes
+h1: Modify the Program
+linktitle: Modify the Program
+meta_desc: This page provides an overview on how to update Kubernetes project from a Pulumi program.
 weight: 8
 menu:
   getstarted:
@@ -238,9 +241,11 @@ class Program
 }
 ```
 
-Our program now creates a service to access the NGINX deployment, and requires a new [config]({{< relref "/docs/intro/concepts/config.md" >}}) value to indicate whether the program is being deployed to Minikube or not.
+Our program now creates a service to access the NGINX deployment, and requires a new [config]({{< relref "/docs/intro/concepts/config" >}}) value to indicate whether the program is being deployed to Minikube or not.
 
-The required config value must be set for the stack using `pulumi config set isMinikube <true|false>`:
+The configuration value can be set for the stack using `pulumi config set isMinikube <true|false>` command.
+
+If you are currently using Minikube, set `isMinikube` to `true`, otherwise, set `isMinikube` to `false` as shown in the following command.
 
 ```bash
 $ pulumi config set isMinikube false

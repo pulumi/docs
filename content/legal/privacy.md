@@ -1,6 +1,7 @@
 ---
 title: Privacy Policy
 url: /privacy
+meta_desc: The Privacy Policy for the Pulumi Corporation and its users.
 menu:
     legal:
         weight: 4

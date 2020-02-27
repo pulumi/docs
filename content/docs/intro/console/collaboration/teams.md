@@ -1,6 +1,6 @@
 ---
 title: Teams
-
+meta_desc: An overview of role-based access control (RBAC) using teams within the Pulumi Cloud Service.
 aliases:
 - /docs/reference/service/teams/
 - /docs/console/collaboration/teams/
@@ -9,7 +9,7 @@ aliases:
 The Pulumi Console offers role-based access control (RBAC) using teams.
 
 > Note: This feature is only available to organizations using the Pulumi Team Pro or
-> Enterprise editions. To learn more about Pulumi editions, see the [pricing page](https://www.pulumi.com/pricing/).
+> Enterprise editions. To learn more about Pulumi editions, see the [pricing page]({{< relref "/pricing" >}}).
 
 ## Teams
 

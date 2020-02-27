@@ -61,7 +61,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="class">
 <dt id="pulumi_packet.BgpSession">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">BgpSession</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address_family=None</em>, <em class="sig-param">default_route=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.BgpSession" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to manage BGP sessions in Packet Host. Refer to <a class="reference external" href="https://support.packet.com/kb/articles/bgp">Packet BGP documentation</a> for more details.</p>
+<dd><p>Provides a resource to manage BGP sessions in Packet Host. Refer to <a class="reference external" href="https://www.packet.com/developers/docs/network/advanced/local-and-global-bgp/">Packet BGP documentation</a> for more details.</p>
 <p>You need to have BGP config enabled in your project.</p>
 <p>BGP session must be linked to a device running <a class="reference external" href="https://bird.network.cz">BIRD</a> or other BGP routing daemon which will control route advertisements via the session to Packet’s upstream routers.</p>
 <dl class="field-list simple">
@@ -177,22 +177,22 @@ modify, and delete devices.</p>
 continue to boot via iPXE on reboots.</p></li>
 <li><p><strong>billing_cycle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – monthly or hourly</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description string for the device</p></li>
-<li><p><strong>facilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.com/developers/api/#facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p></li>
+<li><p><strong>facilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.com/developers/api/facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p></li>
 <li><p><strong>force_detach_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Delete device even if it has volumes attached. Only applies for destroy action.</p></li>
 <li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device name</p></li>
 <li><p><strong>ip_address_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set containing one or more of [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv6</span></code>]. It specifies which IP address types a new device should obtain. If omitted, a created device will obtain all 3 addresses. If you only want private IPv4 address for the new device, pass [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>].</p></li>
 <li><p><strong>ipxe_script_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL pointing to a hosted iPXE script. More
 information is in the
-<a class="reference external" href="https://support.packet.com/kb/articles/custom-ipxe">Custom iPXE</a>
+<a class="reference external" href="https://www.packet.com/developers/docs/servers/operating-systems/custom-ipxe/">Custom iPXE</a>
 doc.</p></li>
-<li><p><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operating system slug. To find the slug, or visit <a class="reference external" href="https://www.packet.com/developers/api/#operatingsystems">Operating Systems API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p></li>
-<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device plan slug. To find the plan slug, visit <a class="reference external" href="https://www.packet.com/developers/api/#plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</p></li>
+<li><p><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operating system slug. To find the slug, or visit <a class="reference external" href="https://www.packet.com/developers/api/operatingsystems">Operating Systems API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p></li>
+<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device plan slug. To find the plan slug, visit <a class="reference external" href="https://www.packet.com/developers/api/plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which to create the device</p></li>
 <li><p><strong>project_ssh_key_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the [.ProjectSshKey][packet_project_ssh_key.html] resource.</p></li>
 <li><p><strong>public_ipv4_subnet_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Size of allocated subnet, more
 information is in the
-<a class="reference external" href="https://support.packet.com/kb/articles/custom-subnet-size">Custom Subnet Size</a> doc.</p></li>
-<li><p><strong>storage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON for custom partitioning. Only usable on reserved hardware. More information in in the <a class="reference external" href="https://support.packet.com/kb/articles/custom-partitioning-raid">Custom Partitioning and RAID</a> doc.</p></li>
+<a class="reference external" href="https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/">Custom Subnet Size</a> doc.</p></li>
+<li><p><strong>storage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON for custom partitioning. Only usable on reserved hardware. More information in in the <a class="reference external" href="https://www.packet.com/developers/docs/servers/key-features/cpr/">Custom Partitioning and RAID</a> doc.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Tags attached to the device</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string of the desired User Data for the device.</p></li>
 <li><p><strong>wait_for_reservation_deprovision</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).</p></li>
@@ -254,7 +254,7 @@ continue to boot via iPXE on reboots.</p>
 <dl class="attribute">
 <dt id="pulumi_packet.Device.facilities">
 <code class="sig-name descname">facilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.facilities" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.com/developers/api/#facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
+<dd><p>List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.com/developers/api/facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -280,7 +280,7 @@ continue to boot via iPXE on reboots.</p>
 <code class="sig-name descname">ipxe_script_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.ipxe_script_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>URL pointing to a hosted iPXE script. More
 information is in the
-<a class="reference external" href="https://support.packet.com/kb/articles/custom-ipxe">Custom iPXE</a>
+<a class="reference external" href="https://www.packet.com/developers/docs/servers/operating-systems/custom-ipxe/">Custom iPXE</a>
 doc.</p>
 </dd></dl>
 
@@ -314,13 +314,13 @@ The fields of the network attributes are:</p>
 <dl class="attribute">
 <dt id="pulumi_packet.Device.operating_system">
 <code class="sig-name descname">operating_system</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.operating_system" title="Permalink to this definition">¶</a></dt>
-<dd><p>The operating system slug. To find the slug, or visit <a class="reference external" href="https://www.packet.com/developers/api/#operatingsystems">Operating Systems API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
+<dd><p>The operating system slug. To find the slug, or visit <a class="reference external" href="https://www.packet.com/developers/api/operatingsystems">Operating Systems API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_packet.Device.plan">
 <code class="sig-name descname">plan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.plan" title="Permalink to this definition">¶</a></dt>
-<dd><p>The device plan slug. To find the plan slug, visit <a class="reference external" href="https://www.packet.com/developers/api/#plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</p>
+<dd><p>The device plan slug. To find the plan slug, visit <a class="reference external" href="https://www.packet.com/developers/api/plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -357,7 +357,7 @@ The fields of the network attributes are:</p>
 <code class="sig-name descname">public_ipv4_subnet_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.public_ipv4_subnet_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Size of allocated subnet, more
 information is in the
-<a class="reference external" href="https://support.packet.com/kb/articles/custom-subnet-size">Custom Subnet Size</a> doc.</p>
+<a class="reference external" href="https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/">Custom Subnet Size</a> doc.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -381,7 +381,7 @@ information is in the
 <dl class="attribute">
 <dt id="pulumi_packet.Device.storage">
 <code class="sig-name descname">storage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.storage" title="Permalink to this definition">¶</a></dt>
-<dd><p>JSON for custom partitioning. Only usable on reserved hardware. More information in in the <a class="reference external" href="https://support.packet.com/kb/articles/custom-partitioning-raid">Custom Partitioning and RAID</a> doc.</p>
+<dd><p>JSON for custom partitioning. Only usable on reserved hardware. More information in in the <a class="reference external" href="https://www.packet.com/developers/docs/servers/key-features/cpr/">Custom Partitioning and RAID</a> doc.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -428,14 +428,14 @@ continue to boot via iPXE on reboots.</p></li>
 <li><p><strong>created</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for when the device was created</p></li>
 <li><p><strong>deployed_facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The facility where the device is deployed.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description string for the device</p></li>
-<li><p><strong>facilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.com/developers/api/#facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
+<li><p><strong>facilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.com/developers/api/facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
 </p></li>
 <li><p><strong>force_detach_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Delete device even if it has volumes attached. Only applies for destroy action.</p></li>
 <li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device name</p></li>
 <li><p><strong>ip_address_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set containing one or more of [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv6</span></code>]. It specifies which IP address types a new device should obtain. If omitted, a created device will obtain all 3 addresses. If you only want private IPv4 address for the new device, pass [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>].</p></li>
 <li><p><strong>ipxe_script_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>URL pointing to a hosted iPXE script. More
 information is in the
-<a class="reference external" href="https://support.packet.com/kb/articles/custom-ipxe">Custom iPXE</a>
+<a class="reference external" href="https://www.packet.com/developers/docs/servers/operating-systems/custom-ipxe/">Custom iPXE</a>
 doc.</p>
 </p></li>
 <li><p><strong>locked</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the device is locked</p></li>
@@ -453,21 +453,21 @@ The fields of the network attributes are:
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The operating system slug. To find the slug, or visit <a class="reference external" href="https://www.packet.com/developers/api/#operatingsystems">Operating Systems API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
+<li><p><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The operating system slug. To find the slug, or visit <a class="reference external" href="https://www.packet.com/developers/api/operatingsystems">Operating Systems API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
 </p></li>
-<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The device plan slug. To find the plan slug, visit <a class="reference external" href="https://www.packet.com/developers/api/#plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</p>
+<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The device plan slug. To find the plan slug, visit <a class="reference external" href="https://www.packet.com/developers/api/plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</p>
 </p></li>
 <li><p><strong>ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Ports assigned to the device</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which to create the device</p></li>
 <li><p><strong>project_ssh_key_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the [.ProjectSshKey][packet_project_ssh_key.html] resource.</p></li>
 <li><p><strong>public_ipv4_subnet_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>Size of allocated subnet, more
 information is in the
-<a class="reference external" href="https://support.packet.com/kb/articles/custom-subnet-size">Custom Subnet Size</a> doc.</p>
+<a class="reference external" href="https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/">Custom Subnet Size</a> doc.</p>
 </p></li>
 <li><p><strong>root_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Root password to the server (disabled after 24 hours)</p></li>
 <li><p><strong>ssh_key_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IDs of SSH keys deployed in the device, can be both user and project SSH keys</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the device</p></li>
-<li><p><strong>storage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>JSON for custom partitioning. Only usable on reserved hardware. More information in in the <a class="reference external" href="https://support.packet.com/kb/articles/custom-partitioning-raid">Custom Partitioning and RAID</a> doc.</p>
+<li><p><strong>storage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>JSON for custom partitioning. Only usable on reserved hardware. More information in in the <a class="reference external" href="https://www.packet.com/developers/docs/servers/key-features/cpr/">Custom Partitioning and RAID</a> doc.</p>
 </p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Tags attached to the device</p></li>
 <li><p><strong>updated</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for the last time the device was updated</p></li>
@@ -781,7 +781,7 @@ The fields of the network attributes are:</p></li>
 <dl class="attribute">
 <dt id="pulumi_packet.GetProjectResult.bgp_config">
 <code class="sig-name descname">bgp_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetProjectResult.bgp_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Optional BGP settings. Refer to <a class="reference external" href="https://support.packet.com/kb/articles/bgp">Packet guide for BGP</a>.</p>
+<dd><p>Optional BGP settings. Refer to <a class="reference external" href="https://www.packet.com/developers/docs/network/advanced/local-and-global-bgp/">Packet guide for BGP</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -929,7 +929,7 @@ The fields of the network attributes are:</p></li>
 one of your reserved blocks in the same project and facility as the target device.</p>
 <p>For example, you have reserved IPv4 address block 147.229.10.152/30, you can choose to assign either the whole
 block as one subnet to a device; or 2 subnets with CIDRs 147.229.10.152/31’ and 147.229.10.154/31; or 4 subnets
-with mask prefix length 32. More about the elastic IP subnets is <a class="reference external" href="https://support.packet.com/kb/articles/elastic-ips">here</a>.</p>
+with mask prefix length 32. More about the elastic IP subnets is <a class="reference external" href="https://www.packet.com/developers/docs/network/basic/elastic-ips/">here</a>.</p>
 <p>Device and reserved block must be in the same facility.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1180,8 +1180,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>If you need this resource to add the port back to bond on removal, set <code class="docutils literal notranslate"><span class="pre">force_bond</span> <span class="pre">=</span> <span class="pre">true</span></code>.</p>
 <p>To learn more about Layer 2 networking in Packet, refer to</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://support.packet.com/kb/articles/layer-2-configurations">https://support.packet.com/kb/articles/layer-2-configurations</a></p></li>
-<li><p><a class="reference external" href="https://support.packet.com/kb/articles/layer-2-overview">https://support.packet.com/kb/articles/layer-2-overview</a></p></li>
+<li><p><a class="reference external" href="https://www.packet.com/resources/guides/layer-2-configurations/">https://www.packet.com/resources/guides/layer-2-configurations/</a></p></li>
+<li><p><a class="reference external" href="https://www.packet.com/developers/docs/network/advanced/layer-2/">https://www.packet.com/developers/docs/network/advanced/layer-2/</a></p></li>
 </ul>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - UUID of device port used in the assignment</p></li>
@@ -1306,8 +1306,8 @@ in your projects.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>backend_transfer</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or disable <a class="reference external" href="https://support.packet.com/kb/articles/backend-transfer">Backend Transfer</a>, default is false</p></li>
-<li><p><strong>bgp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Optional BGP settings. Refer to <a class="reference external" href="https://support.packet.com/kb/articles/bgp">Packet guide for BGP</a>.</p>
+<li><p><strong>backend_transfer</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or disable <a class="reference external" href="https://www.packet.com/developers/docs/network/basic/backend-transfer/">Backend Transfer</a>, default is false</p></li>
+<li><p><strong>bgp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Optional BGP settings. Refer to <a class="reference external" href="https://www.packet.com/developers/docs/network/advanced/local-and-global-bgp/">Packet guide for BGP</a>.</p>
 </p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the project</p></li>
 <li><p><strong>organization_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.</p></li>
@@ -1329,13 +1329,13 @@ in your projects.</p>
 <dl class="attribute">
 <dt id="pulumi_packet.Project.backend_transfer">
 <code class="sig-name descname">backend_transfer</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Project.backend_transfer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enable or disable <a class="reference external" href="https://support.packet.com/kb/articles/backend-transfer">Backend Transfer</a>, default is false</p>
+<dd><p>Enable or disable <a class="reference external" href="https://www.packet.com/developers/docs/network/basic/backend-transfer/">Backend Transfer</a>, default is false</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_packet.Project.bgp_config">
 <code class="sig-name descname">bgp_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Project.bgp_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Optional BGP settings. Refer to <a class="reference external" href="https://support.packet.com/kb/articles/bgp">Packet guide for BGP</a>.</p>
+<dd><p>Optional BGP settings. Refer to <a class="reference external" href="https://www.packet.com/developers/docs/network/advanced/local-and-global-bgp/">Packet guide for BGP</a>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deploymentType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -1386,9 +1386,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>backend_transfer</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Enable or disable <a class="reference external" href="https://support.packet.com/kb/articles/backend-transfer">Backend Transfer</a>, default is false</p>
+<li><p><strong>backend_transfer</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Enable or disable <a class="reference external" href="https://www.packet.com/developers/docs/network/basic/backend-transfer/">Backend Transfer</a>, default is false</p>
 </p></li>
-<li><p><strong>bgp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Optional BGP settings. Refer to <a class="reference external" href="https://support.packet.com/kb/articles/bgp">Packet guide for BGP</a>.</p>
+<li><p><strong>bgp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Optional BGP settings. Refer to <a class="reference external" href="https://www.packet.com/developers/docs/network/advanced/local-and-global-bgp/">Packet guide for BGP</a>.</p>
 </p></li>
 <li><p><strong>created</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for when the project was created</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the project</p></li>
@@ -1821,7 +1821,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.SpotMarketRequest">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">SpotMarketRequest</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">devices_max=None</em>, <em class="sig-param">devices_min=None</em>, <em class="sig-param">facilities=None</em>, <em class="sig-param">instance_parameters=None</em>, <em class="sig-param">max_bid_price=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">wait_for_devices=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SpotMarketRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Packet Spot Market Request resource to allow you to
-manage spot market requests on your account. <a class="reference external" href="https://support.packet.com/kb/articles/spot-market">https://support.packet.com/kb/articles/spot-market</a></p>
+manage spot market requests on your account. For more detail on Spot Market, see <a class="reference external" href="https://www.packet.com/developers/docs/getting-started/deployment-options/spot-market/">this article in Packing documentaion</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2116,8 +2116,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a resource to allow users to manage Virtual Networks in their projects.</p>
 <p>To learn more about Layer 2 networking in Packet, refer to</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://support.packet.com/kb/articles/layer-2-configurations">https://support.packet.com/kb/articles/layer-2-configurations</a></p></li>
-<li><p><a class="reference external" href="https://support.packet.com/kb/articles/layer-2-overview">https://support.packet.com/kb/articles/layer-2-overview</a></p></li>
+<li><p><a class="reference external" href="https://www.packet.com/resources/guides/layer-2-configurations/">https://www.packet.com/resources/guides/layer-2-configurations/</a></p></li>
+<li><p><a class="reference external" href="https://www.packet.com/developers/docs/network/advanced/layer-2/">https://www.packet.com/developers/docs/network/advanced/layer-2/</a></p></li>
 </ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

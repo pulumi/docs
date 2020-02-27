@@ -1,5 +1,6 @@
 ---
 title: Webhooks
+meta_desc: An overview of how to use Webhooks within the Pulumi Cloud Service.
 aliases:
 - /docs/reference/service/webhooks/
 - /docs/console/extensions/webhooks/
@@ -17,7 +18,6 @@ notification, start running integration tests, or even update additional stacks.
 
 Webhooks can be used for pretty much anything you want, and are the foundation
 of most _ChatOps_ workflows.
-
 
 ## Management
 
@@ -145,7 +145,7 @@ identity of the user who triggered the webhook. For example, the person who init
 the stack update or performed the action.
 
 > The Pulumi Webhook payloads are under development, and may be changed from
-> time to time. See the [Pulumi Community Slack](http://slack.pulumi.com/) for
+> time to time. See the [Pulumi Community Slack](https://slack.pulumi.com/) for
 > any announcements or changes.
 
 ### Stack Creation

@@ -1,6 +1,6 @@
 ---
 title: State and Backends
-description: Learn about how Pulumi handles your infrastructure state files and supported backend options for these state files.
+meta_desc: Learn about how Pulumi handles your infrastructure state files and supported backend options for these state files.
 keywords:
  - IaC
  - infrastructure state
@@ -31,7 +31,6 @@ state:
 - The Pulumi Service backend
 - A self-managed backend, either stored locally on your filesystem or remotely using
 a cloud storage service
-
 
 ### Pulumi Service backend
 
@@ -204,7 +203,6 @@ $ pulumi login file:///app/data
 
 Notice that `pulumi login --local` is simply syntactic sugar for `pulumi login
 file://~`.
-
 
 #### Cloud storage or remote
 

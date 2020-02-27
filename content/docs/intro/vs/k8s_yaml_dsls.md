@@ -1,5 +1,7 @@
 ---
 title: Pulumi vs. Kubernetes YAML and DSLs
+meta_desc: This page gives and overview of the major differences between Pulumi
+           and Kubernetes YAML & DSLs.
 linktitle: Kubernetes YAML
 menu:
   intro:

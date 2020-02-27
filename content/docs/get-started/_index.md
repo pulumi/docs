@@ -1,12 +1,16 @@
 ---
 title: Get Started
+meta_desc: Step-by-step guides for creating, deploying, and managing infrastructure with
+           Pulumi on the cloud using your favorite language.
 no_on_this_page: true
 menu:
   getstarted:
       name: Overview
       weight: 1
 
-aliases: ["/docs/quickstart/"]
+aliases:
+  - /docs/quickstart/
+  - /start/
 ---
 
 <div class="flex max-w-2xl">

@@ -1,5 +1,7 @@
 ---
-title: Configure Access Control
+title: Configure Kubernetes Access Control
+meta_desc: This page will walk you through how to configure Kubernetes
+           access control on AWS, Azure, and GCP.
 menu:
   userguides:
     parent: crosswalk-kubernetes
@@ -21,7 +23,10 @@ will have a particular binding into the cluster's auth to determine how it works
 with the cluster.
 
 The full code for this stack is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
@@ -38,7 +43,10 @@ will have a particular binding into the cluster's auth to determine how it works
 with the cluster.
 
 The full code for this stack is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/03-cluster-configuration
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
@@ -55,7 +63,10 @@ ServiceAccount will have a particular binding into the cluster's auth to determi
 with the cluster.
 
 The full code for this stack is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
@@ -64,7 +75,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 We'll examine how to:
 
-  * [Configure RBAC Authorization](#configure-rbac-authorization)
+* [Configure RBAC Authorization](#configure-rbac-authorization)
 
 ## Configure RBAC Authorization
 
@@ -97,8 +108,11 @@ Assume the `admin` user.
 $ az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
+
+<!-- markdownlint-disable url -->
 [crosswalk-configure-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults" >}}
 [crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
@@ -133,8 +147,12 @@ Assume the `admin` user.
 $ aws sts assume-role --role-arn `pulumi stack output adminsIamRoleArn` --role-session-name k8s-admins
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
+
+<!-- markdownlint-disable url -->
 [crosswalk-configure-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults" >}}
 [crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -167,10 +185,12 @@ Below is an example of how to create a Kubernetes `Role` with the ability to **o
 workloads in the `apps` namespace (created in [cluster defaults][crosswalk-configure-defaults]), and a `RoleBinding` to associate
 the Kubernetes `Role` to the IAM `devs` role.
 
+<!-- markdownlint-disable url -->
 [crosswalk-configure-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults" >}}
 [k8s-rbac-docs]: https://kubernetes.io/docs/reference/access-authn-authz/rbac/
 [gke-predefined-roles]: https://cloud.google.com/kubernetes-engine/docs/how-to/iam#predefined
 [crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
+<!-- markdownlint-enable url -->
 
 Assume the `admin` user.
 
@@ -178,6 +198,7 @@ Assume the `admin` user.
 $ gcloud auth activate-service-account --key-file k8s-admin-sa-key.json
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
+
 {{% /md %}}
 </div>
 
@@ -235,6 +256,7 @@ $ kubectl run --namespace=`pulumi stack output appsNamespaceName` --generator=ru
 service/nginx created
 pod/nginx created
 ```
+
 {{% /md %}}
 </div>
 <div class="cloud-prologue-azure"></div>
@@ -250,6 +272,7 @@ $ kubectl run --namespace=`pulumi stack output appsNamespaceName` --generator=ru
 service/nginx created
 pod/nginx created
 ```
+
 {{% /md %}}
 </div>
 <div class="cloud-prologue-gcp"></div>
@@ -265,6 +288,7 @@ $ kubectl run --namespace=`pulumi stack output appsNamespaceName` --generator=ru
 service/nginx created
 pod/nginx created
 ```
+
 {{% /md %}}
 </div>
 
@@ -287,6 +311,8 @@ RBAC in Amazon EKS][simplify-rbac].
 
 See the [official Kubernetes RBAC docs][k8s-rbac-docs] for more details.
 
+<!-- markdownlint-disable url -->
 [crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 [k8s-rbac-docs]: https://kubernetes.io/docs/reference/access-authn-authz/rbac/
 [crosswalk-configure-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults" >}}
+<!-- markdownlint-enable url -->

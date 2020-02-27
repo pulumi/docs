@@ -1,5 +1,7 @@
 ---
-title: "Staged App Rollout Gated by Prometheus Checks"
+title: "Staged App Rollout Gated by Prometheus Checks | TypeScript"
+h1: "Staged App Rollout Gated by Prometheus Checks"
+linktitle: "Staged App Rollout Gated by Prometheus Checks"
 no_edit_this_page: true
 ---
 

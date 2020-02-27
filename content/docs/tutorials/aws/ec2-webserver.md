@@ -1,6 +1,7 @@
 ---
-title: "EC2 Linux WebServer Instance"
-
+title: Deploy a Webserver to AWS EC2
+meta_desc: This tutorial will teach you how to deploy a simple webserver to an
+           AWS EC2 instance.
 aliases: ["/docs/reference/tutorials/aws/tutorial-ec2-webserver/"]
 ---
 
@@ -259,11 +260,11 @@ Permalink: https://app.pulumi.com/bermudezmt/myproject/webserver-dev/updates/1
 
 ### Step 4: View your stack resources
 
-**Pulumi Console**
+#### **Pulumi Console**
 
 To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser. The **Resources** tab on the Pulumi Console has a link to the AWS console for the provisioned EC2 instance.
 
-**Pulumi CLI**
+#### **Pulumi CLI**
 
 To view the provisioned resources on the command line, run [`pulumi stack`]({{< relref "/docs/reference/cli/pulumi_stack" >}}). You'll also see two [stack outputs]({{< relref "/docs/intro/concepts/stack#outputs" >}}) corresponding to the IP and the fully qualified domain name (FQDN) of the EC2 instance we've created.
 
@@ -430,6 +431,7 @@ Resources:
     +-1 to replace
     2 changes. 1 unchanged
 ```
+
 When prompted to confirm your update, you may review the planned changes to your stack resources by selecting `details`.
 
 ```bash
@@ -502,7 +504,6 @@ Hello, World!
 In this tutorial, we showed you how to use Pulumi programs to create and manage cloud resources in AWS, using TypeScript, JavaScript, or Python (and its corresponding package manager).
 {{< /summary >}}
 
-
 <!-- Common links -->
 [EC2 Instance]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/ec2#Instance" >}}
 [Security Group]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/ec2#SecurityGroup" >}}
@@ -514,4 +515,3 @@ In this tutorial, we showed you how to use Pulumi programs to create and manage 
 - [Containers on ECS Fargate]({{< relref "/docs/tutorials/aws/ecs-fargate" >}})
 - [API Gateways and Lambda]({{< relref "/docs/tutorials/aws/rest-api" >}})
 - [Serve a Static Webstie from S3]({{< relref "/docs/tutorials/aws/s3-website" >}})
-

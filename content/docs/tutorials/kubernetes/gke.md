@@ -1,6 +1,6 @@
 ---
-title: "Clusters: GKE - Hello World!"
-
+title: Google Kubernetes Engine (GKE) - Hello World!
+meta_desc: How to launch a new Managed Kubernetes Cluster in Google Kubernetes Engine (GKE) on GCP.
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-gke/"]
 ---
 
@@ -21,17 +21,16 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
         $ gcloud config set project <YOUR_GCP_PROJECT_HERE>
         $ gcloud auth application-default login
         ```
+
     > Note: This auth mechanism is meant for inner loop developer
     > workflows. If you want to run this example in an unattended service
     > account setting, such as in CI/CD, please [follow instructions to
-    > configure your service account]({{< relref "service-account.md" >}}). The
+    > configure your service account]({{< relref "service-account" >}}). The
     > service account must have the role `Kubernetes Engine Admin` / `container.admin`.
-
-
 
 ## Create a new GKE cluster {#new-gke-cluster}
 
-1.  In a new folder `gke-hello-world`, create an empty project with `pulumi new`.
+1. In a new folder `gke-hello-world`, create an empty project with `pulumi new`.
 
     ```bash
     $ mkdir gke-hello-world && cd gke-hello-world
@@ -40,7 +39,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 
     * Enter in a Pulumi project name, and description to detail what this
       Pulumi program does
-    * Enter in a name for the [Pulumi stack]({{< relref "/docs/intro/concepts/stack.md" >}}), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
+    * Enter in a name for the [Pulumi stack]({{< relref "/docs/intro/concepts/stack" >}}), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
 
 1. Add the required dependencies:
 
@@ -61,7 +60,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     pulumi config set gcp:zone us-west1-a     // any valid GCP Zone here
     ```
 
-1.  Open the existing file `index.ts`, and replace the contents with the following below.
+1. Open the existing file `index.ts`, and replace the contents with the following below.
 
     The `index.ts` occupies the role as the *main* entrypoint in our Pulumi
     program. In it, we are going to declare:
@@ -140,7 +139,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     });
     ```
 
-1.  To preview and deploy changes, run `pulumi up` and select "yes."
+1. To preview and deploy changes, run `pulumi up` and select "yes."
 
     The `up` sub-command shows a preview of the resources that will be created
     and prompts on whether to proceed with the deployment. Note that the stack
@@ -186,7 +185,7 @@ Now that we have an instance of Kubernetes running, we may want to create API re
 
 We can do this by configuring a Pulumi provider for our newly created cluster, and instantiating a new Kubernetes resource object in our Pulumi program. The concept of a provider allows us to abstract away Kubernetes clusters in Pulumi that are independent of their underlying cloud provider, so that you can operate on and work with your Kubernetes clusters in a standard manner.
 
-1.  Create a new Kubernetes Namespace and Deployment:
+1. Create a new Kubernetes Namespace and Deployment:
 
 	This declares a new Kubernetes Namespace, Deployment and Service to be
 	created using the Pulumi Kubernetes provider to our cluster.
@@ -258,7 +257,7 @@ We can do this by configuring a Pulumi provider for our newly created cluster, a
     export const servicePublicIP = service.status.apply(s => s.loadBalancer.ingress[0].ip)
     ```
 
-1.  Run `pulumi up`, note the preview diff, and select "yes" to deploy the changes.
+1. Run `pulumi up`, note the preview diff, and select "yes" to deploy the changes.
 
     As part of the update, you'll see some new objects in the output: a
     `Namespace` in Kubernetes to deploy into, a `Deployment` resource for
@@ -270,7 +269,7 @@ We can do this by configuring a Pulumi provider for our newly created cluster, a
     also output incremental status updates, as the Kubernetes changes progress.
 
 	> **Note:** Pulumi auto-generates a suffix for all objects.
-    > See the [Pulumi Programming Model]({{< relref "/docs/intro/concepts/programming-model.md#autonaming" >}}) for more info.
+    > See the [Pulumi Programming Model]({{< relref "/docs/intro/concepts/programming-model#autonaming" >}}) for more info.
     >
     > ```
     > ...
@@ -379,10 +378,10 @@ export const guestbookPublicIP =
 
 Run the following command to tear down the resources that are part of our stack.
 
-1.  Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these
+1. Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these
     resources.
 
-1.  To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the
+1. To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the
     Pulumi Console and cannot be undone.
 
 ## Summary

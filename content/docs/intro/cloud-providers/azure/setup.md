@@ -1,6 +1,7 @@
 ---
-title: Setup
-
+title: Azure Setup
+meta_desc: This page provides an overview of how to setup and configure credentials
+           for the Pulumi Azure Provider.
 aliases: ["/docs/reference/clouds/azure/setup/"]
 ---
 

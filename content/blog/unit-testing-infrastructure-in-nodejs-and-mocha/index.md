@@ -3,7 +3,7 @@ title: "Unit Testing Your Infrastructure with Node.js and Mocha"
 authors: ["joe-duffy"]
 tags: ["Testing","Infrastructure"]
 date: "2019-07-13"
-meta_desc: "Pulumi makes it easy to test your infrastructure using familiar test driven development (TDD) techniques and frameworks. This post shows you how to use Node.js with TypeScript, the Mocha test framework, and the Chai assertion library to embed tests alongside your infrastructure-as-code definitions."
+meta_desc: "This post shows how to use Node.js, the Mocha test framework, and the Chai assertion library to embed tests alongside your infrastructure-as-code definitions."
 meta_image: "meta.png"
 ---
 
@@ -22,7 +22,7 @@ your infrastructure.
 ## Test-Driven Infrastructure
 
 We [previously explored many reasons and solutions](
-https://www.pulumi.com/blog/testing-your-infrastructure-as-code-with-pulumi/) for
+{{< relref "/blog/testing-your-infrastructure-as-code-with-pulumi" >}}) for
 testing your infrastructure. In this post, we'll see a very simple approach that
 leverages existing test tools and frameworks. For this blog post, we'll be using
 Node.js with TypeScript, the Mocha test framework, and the Chai assertion library.
@@ -79,7 +79,7 @@ The VPC test is slightly more complex. For the most part, it is simply checking 
 `cluster.core.vpcId` property and ensuring it doesn't equal the default VPC ID, which
 we fetch with `aws.ec2.getVpc`. However, because we might be creating the custom VPC in the
 program itself, it's possible we won't know the ID during previews. (A [preview](
-https://www.pulumi.com/docs/reference/cli/pulumi_preview/) is when
+{{< relref "/docs/reference/cli/pulumi_preview" >}}) is when
 Pulumi shows you a dry-run of your deployment without actually doing it yet.) That's why
 we check `pulumi.runtime.isDryRun` and let things slide, with a little warning message.
 We could always be conservative and fail the test, but in this case, we'll actually permit the
@@ -450,9 +450,9 @@ And if we click into it, we'll see the complete Mocha test output:
 
 ![Failed Deployment Details](./failed-deployment-details.png)
 
-We could even [use webhooks](https://www.pulumi.com/docs/reference/service/webhooks/) to
+We could even [use webhooks]({{< relref "/docs/intro/console/extensions/webhooks" >}}) to
 fire off a Slack alarm so that nobody misses the issue. This is often very helpful in
-unattended scenarios, like [continuous deployment](https://www.pulumi.com/docs/reference/cd/).
+unattended scenarios, like [continuous deployment]({{< relref "/docs/guides/continuous-delivery" >}}).
 
 Better to catch these things late than never!
 
@@ -491,12 +491,12 @@ This does mean we aren't hidden from the details of whether a preview is running
 By using this function in our tests, we have the following cases to consider:
 
 * The value is known, which could be due to the following cases
-    - It was explicitly supplied in our program
-    - It was a default populated by the underlying resource provider during a preview
-    - We are doing an update and the full outputs are available
+    * It was explicitly supplied in our program
+    * It was a default populated by the underlying resource provider during a preview
+    * We are doing an update and the full outputs are available
 * The value is `undefined`, which could be due to the following cases
-    - We are in a preview and the value hasn't been computed yet
-    - We have done an update and the property was not made available as an output value
+    * We are in a preview and the value hasn't been computed yet
+    * We have done an update and the property was not made available as an output value
 
 In all cases, the `pulumi.runtime.isDryRun` function will return `true` during a preview.
 

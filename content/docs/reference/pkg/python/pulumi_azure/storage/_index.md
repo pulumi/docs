@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.storage"></span><dl class="class">
 <dt id="pulumi_azure.storage.Account">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">Account</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_tier=None</em>, <em class="sig-param">account_encryption_source=None</em>, <em class="sig-param">account_kind=None</em>, <em class="sig-param">account_replication_type=None</em>, <em class="sig-param">account_tier=None</em>, <em class="sig-param">account_type=None</em>, <em class="sig-param">custom_domain=None</em>, <em class="sig-param">enable_advanced_threat_protection=None</em>, <em class="sig-param">enable_blob_encryption=None</em>, <em class="sig-param">enable_file_encryption=None</em>, <em class="sig-param">enable_https_traffic_only=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">is_hns_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_rules=None</em>, <em class="sig-param">queue_properties=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Account" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">Account</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_tier=None</em>, <em class="sig-param">account_encryption_source=None</em>, <em class="sig-param">account_kind=None</em>, <em class="sig-param">account_replication_type=None</em>, <em class="sig-param">account_tier=None</em>, <em class="sig-param">account_type=None</em>, <em class="sig-param">blob_properties=None</em>, <em class="sig-param">custom_domain=None</em>, <em class="sig-param">enable_advanced_threat_protection=None</em>, <em class="sig-param">enable_blob_encryption=None</em>, <em class="sig-param">enable_file_encryption=None</em>, <em class="sig-param">enable_https_traffic_only=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">is_hns_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_rules=None</em>, <em class="sig-param">queue_properties=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Storage Account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -27,6 +27,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>account_kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the Kind of account. Valid options are <code class="docutils literal notranslate"><span class="pre">BlobStorage</span></code>, <code class="docutils literal notranslate"><span class="pre">BlockBlobStorage</span></code>, <code class="docutils literal notranslate"><span class="pre">FileStorage</span></code>, <code class="docutils literal notranslate"><span class="pre">Storage</span></code> and <code class="docutils literal notranslate"><span class="pre">StorageV2</span></code>. Changing this forces a new resource to be created. Defaults to <code class="docutils literal notranslate"><span class="pre">Storage</span></code>.</p></li>
 <li><p><strong>account_replication_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the type of replication to use for this storage account. Valid options are <code class="docutils literal notranslate"><span class="pre">LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">GRS</span></code>, <code class="docutils literal notranslate"><span class="pre">RAGRS</span></code> and <code class="docutils literal notranslate"><span class="pre">ZRS</span></code>.</p></li>
 <li><p><strong>account_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the Tier to use for this storage account. Valid options are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. For <code class="docutils literal notranslate"><span class="pre">FileStorage</span></code> accounts only <code class="docutils literal notranslate"><span class="pre">Premium</span></code> is valid. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>blob_properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">blob_properties</span></code> block as defined below.</p></li>
 <li><p><strong>custom_domain</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">custom_domain</span></code> block as documented below.</p></li>
 <li><p><strong>enable_advanced_threat_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls if advanced threat protection is enabled, see <a class="reference external" href="https://docs.microsoft.com/en-us/azure/storage/common/storage-advanced-threat-protection">here</a> for more information. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>enable_blob_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Boolean flag which controls if Encryption Services are enabled for Blob storage, see <a class="reference external" href="https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/">here</a> for more information. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
@@ -47,6 +48,14 @@ for more information.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>blob_properties</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteRetentionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 <p>The <strong>custom_domain</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.</p></li>
@@ -133,6 +142,19 @@ for more information.</p>
 <dt id="pulumi_azure.storage.Account.account_tier">
 <code class="sig-name descname">account_tier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.account_tier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines the Tier to use for this storage account. Valid options are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. For <code class="docutils literal notranslate"><span class="pre">FileStorage</span></code> accounts only <code class="docutils literal notranslate"><span class="pre">Premium</span></code> is valid. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.Account.blob_properties">
+<code class="sig-name descname">blob_properties</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.blob_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">blob_properties</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteRetentionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -459,7 +481,7 @@ for more information.</p>
 
 <dl class="method">
 <dt id="pulumi_azure.storage.Account.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_tier=None</em>, <em class="sig-param">account_encryption_source=None</em>, <em class="sig-param">account_kind=None</em>, <em class="sig-param">account_replication_type=None</em>, <em class="sig-param">account_tier=None</em>, <em class="sig-param">account_type=None</em>, <em class="sig-param">custom_domain=None</em>, <em class="sig-param">enable_advanced_threat_protection=None</em>, <em class="sig-param">enable_blob_encryption=None</em>, <em class="sig-param">enable_file_encryption=None</em>, <em class="sig-param">enable_https_traffic_only=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">is_hns_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_rules=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">primary_blob_connection_string=None</em>, <em class="sig-param">primary_blob_endpoint=None</em>, <em class="sig-param">primary_blob_host=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">primary_dfs_endpoint=None</em>, <em class="sig-param">primary_dfs_host=None</em>, <em class="sig-param">primary_file_endpoint=None</em>, <em class="sig-param">primary_file_host=None</em>, <em class="sig-param">primary_location=None</em>, <em class="sig-param">primary_queue_endpoint=None</em>, <em class="sig-param">primary_queue_host=None</em>, <em class="sig-param">primary_table_endpoint=None</em>, <em class="sig-param">primary_table_host=None</em>, <em class="sig-param">primary_web_endpoint=None</em>, <em class="sig-param">primary_web_host=None</em>, <em class="sig-param">queue_properties=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">secondary_blob_connection_string=None</em>, <em class="sig-param">secondary_blob_endpoint=None</em>, <em class="sig-param">secondary_blob_host=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">secondary_dfs_endpoint=None</em>, <em class="sig-param">secondary_dfs_host=None</em>, <em class="sig-param">secondary_file_endpoint=None</em>, <em class="sig-param">secondary_file_host=None</em>, <em class="sig-param">secondary_location=None</em>, <em class="sig-param">secondary_queue_endpoint=None</em>, <em class="sig-param">secondary_queue_host=None</em>, <em class="sig-param">secondary_table_endpoint=None</em>, <em class="sig-param">secondary_table_host=None</em>, <em class="sig-param">secondary_web_endpoint=None</em>, <em class="sig-param">secondary_web_host=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Account.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_tier=None</em>, <em class="sig-param">account_encryption_source=None</em>, <em class="sig-param">account_kind=None</em>, <em class="sig-param">account_replication_type=None</em>, <em class="sig-param">account_tier=None</em>, <em class="sig-param">account_type=None</em>, <em class="sig-param">blob_properties=None</em>, <em class="sig-param">custom_domain=None</em>, <em class="sig-param">enable_advanced_threat_protection=None</em>, <em class="sig-param">enable_blob_encryption=None</em>, <em class="sig-param">enable_file_encryption=None</em>, <em class="sig-param">enable_https_traffic_only=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">is_hns_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_rules=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">primary_blob_connection_string=None</em>, <em class="sig-param">primary_blob_endpoint=None</em>, <em class="sig-param">primary_blob_host=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">primary_dfs_endpoint=None</em>, <em class="sig-param">primary_dfs_host=None</em>, <em class="sig-param">primary_file_endpoint=None</em>, <em class="sig-param">primary_file_host=None</em>, <em class="sig-param">primary_location=None</em>, <em class="sig-param">primary_queue_endpoint=None</em>, <em class="sig-param">primary_queue_host=None</em>, <em class="sig-param">primary_table_endpoint=None</em>, <em class="sig-param">primary_table_host=None</em>, <em class="sig-param">primary_web_endpoint=None</em>, <em class="sig-param">primary_web_host=None</em>, <em class="sig-param">queue_properties=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">secondary_blob_connection_string=None</em>, <em class="sig-param">secondary_blob_endpoint=None</em>, <em class="sig-param">secondary_blob_host=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">secondary_dfs_endpoint=None</em>, <em class="sig-param">secondary_dfs_host=None</em>, <em class="sig-param">secondary_file_endpoint=None</em>, <em class="sig-param">secondary_file_host=None</em>, <em class="sig-param">secondary_location=None</em>, <em class="sig-param">secondary_queue_endpoint=None</em>, <em class="sig-param">secondary_queue_host=None</em>, <em class="sig-param">secondary_table_endpoint=None</em>, <em class="sig-param">secondary_table_host=None</em>, <em class="sig-param">secondary_web_endpoint=None</em>, <em class="sig-param">secondary_web_host=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Account.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Account resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -473,6 +495,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>account_kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the Kind of account. Valid options are <code class="docutils literal notranslate"><span class="pre">BlobStorage</span></code>, <code class="docutils literal notranslate"><span class="pre">BlockBlobStorage</span></code>, <code class="docutils literal notranslate"><span class="pre">FileStorage</span></code>, <code class="docutils literal notranslate"><span class="pre">Storage</span></code> and <code class="docutils literal notranslate"><span class="pre">StorageV2</span></code>. Changing this forces a new resource to be created. Defaults to <code class="docutils literal notranslate"><span class="pre">Storage</span></code>.</p></li>
 <li><p><strong>account_replication_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the type of replication to use for this storage account. Valid options are <code class="docutils literal notranslate"><span class="pre">LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">GRS</span></code>, <code class="docutils literal notranslate"><span class="pre">RAGRS</span></code> and <code class="docutils literal notranslate"><span class="pre">ZRS</span></code>.</p></li>
 <li><p><strong>account_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the Tier to use for this storage account. Valid options are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. For <code class="docutils literal notranslate"><span class="pre">FileStorage</span></code> accounts only <code class="docutils literal notranslate"><span class="pre">Premium</span></code> is valid. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>blob_properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">blob_properties</span></code> block as defined below.</p></li>
 <li><p><strong>custom_domain</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">custom_domain</span></code> block as documented below.</p></li>
 <li><p><strong>enable_advanced_threat_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Boolean flag which controls if advanced threat protection is enabled, see <a class="reference external" href="https://docs.microsoft.com/en-us/azure/storage/common/storage-advanced-threat-protection">here</a> for more information. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </p></li>
@@ -527,6 +550,14 @@ for more information.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>blob_properties</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteRetentionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 <p>The <strong>custom_domain</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.</p></li>
@@ -758,7 +789,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.AwaitableGetAccountResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">AwaitableGetAccountResult</code><span class="sig-paren">(</span><em class="sig-param">access_tier=None</em>, <em class="sig-param">account_encryption_source=None</em>, <em class="sig-param">account_kind=None</em>, <em class="sig-param">account_replication_type=None</em>, <em class="sig-param">account_tier=None</em>, <em class="sig-param">custom_domain=None</em>, <em class="sig-param">enable_blob_encryption=None</em>, <em class="sig-param">enable_file_encryption=None</em>, <em class="sig-param">enable_https_traffic_only=None</em>, <em class="sig-param">is_hns_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">primary_blob_connection_string=None</em>, <em class="sig-param">primary_blob_endpoint=None</em>, <em class="sig-param">primary_blob_host=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">primary_dfs_endpoint=None</em>, <em class="sig-param">primary_dfs_host=None</em>, <em class="sig-param">primary_file_endpoint=None</em>, <em class="sig-param">primary_file_host=None</em>, <em class="sig-param">primary_location=None</em>, <em class="sig-param">primary_queue_endpoint=None</em>, <em class="sig-param">primary_queue_host=None</em>, <em class="sig-param">primary_table_endpoint=None</em>, <em class="sig-param">primary_table_host=None</em>, <em class="sig-param">primary_web_endpoint=None</em>, <em class="sig-param">primary_web_host=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">secondary_blob_connection_string=None</em>, <em class="sig-param">secondary_blob_endpoint=None</em>, <em class="sig-param">secondary_blob_host=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">secondary_dfs_endpoint=None</em>, <em class="sig-param">secondary_dfs_host=None</em>, <em class="sig-param">secondary_file_endpoint=None</em>, <em class="sig-param">secondary_file_host=None</em>, <em class="sig-param">secondary_location=None</em>, <em class="sig-param">secondary_queue_endpoint=None</em>, <em class="sig-param">secondary_queue_host=None</em>, <em class="sig-param">secondary_table_endpoint=None</em>, <em class="sig-param">secondary_table_host=None</em>, <em class="sig-param">secondary_web_endpoint=None</em>, <em class="sig-param">secondary_web_host=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.AwaitableGetAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">AwaitableGetAccountResult</code><span class="sig-paren">(</span><em class="sig-param">access_tier=None</em>, <em class="sig-param">account_encryption_source=None</em>, <em class="sig-param">account_kind=None</em>, <em class="sig-param">account_replication_type=None</em>, <em class="sig-param">account_tier=None</em>, <em class="sig-param">custom_domains=None</em>, <em class="sig-param">enable_blob_encryption=None</em>, <em class="sig-param">enable_file_encryption=None</em>, <em class="sig-param">enable_https_traffic_only=None</em>, <em class="sig-param">is_hns_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">primary_blob_connection_string=None</em>, <em class="sig-param">primary_blob_endpoint=None</em>, <em class="sig-param">primary_blob_host=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">primary_dfs_endpoint=None</em>, <em class="sig-param">primary_dfs_host=None</em>, <em class="sig-param">primary_file_endpoint=None</em>, <em class="sig-param">primary_file_host=None</em>, <em class="sig-param">primary_location=None</em>, <em class="sig-param">primary_queue_endpoint=None</em>, <em class="sig-param">primary_queue_host=None</em>, <em class="sig-param">primary_table_endpoint=None</em>, <em class="sig-param">primary_table_host=None</em>, <em class="sig-param">primary_web_endpoint=None</em>, <em class="sig-param">primary_web_host=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">secondary_blob_connection_string=None</em>, <em class="sig-param">secondary_blob_endpoint=None</em>, <em class="sig-param">secondary_blob_host=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">secondary_dfs_endpoint=None</em>, <em class="sig-param">secondary_dfs_host=None</em>, <em class="sig-param">secondary_file_endpoint=None</em>, <em class="sig-param">secondary_file_host=None</em>, <em class="sig-param">secondary_location=None</em>, <em class="sig-param">secondary_queue_endpoint=None</em>, <em class="sig-param">secondary_queue_host=None</em>, <em class="sig-param">secondary_table_endpoint=None</em>, <em class="sig-param">secondary_table_host=None</em>, <em class="sig-param">secondary_web_endpoint=None</em>, <em class="sig-param">secondary_web_host=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.AwaitableGetAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -769,6 +800,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.storage.AwaitableGetPolicyResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">AwaitableGetPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">rules=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.AwaitableGetPolicyResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.storage.AwaitableGetStorageContainerResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">AwaitableGetStorageContainerResult</code><span class="sig-paren">(</span><em class="sig-param">container_access_type=None</em>, <em class="sig-param">has_immutability_policy=None</em>, <em class="sig-param">has_legal_hold=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.AwaitableGetStorageContainerResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1220,7 +1256,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.GetAccountResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">GetAccountResult</code><span class="sig-paren">(</span><em class="sig-param">access_tier=None</em>, <em class="sig-param">account_encryption_source=None</em>, <em class="sig-param">account_kind=None</em>, <em class="sig-param">account_replication_type=None</em>, <em class="sig-param">account_tier=None</em>, <em class="sig-param">custom_domain=None</em>, <em class="sig-param">enable_blob_encryption=None</em>, <em class="sig-param">enable_file_encryption=None</em>, <em class="sig-param">enable_https_traffic_only=None</em>, <em class="sig-param">is_hns_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">primary_blob_connection_string=None</em>, <em class="sig-param">primary_blob_endpoint=None</em>, <em class="sig-param">primary_blob_host=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">primary_dfs_endpoint=None</em>, <em class="sig-param">primary_dfs_host=None</em>, <em class="sig-param">primary_file_endpoint=None</em>, <em class="sig-param">primary_file_host=None</em>, <em class="sig-param">primary_location=None</em>, <em class="sig-param">primary_queue_endpoint=None</em>, <em class="sig-param">primary_queue_host=None</em>, <em class="sig-param">primary_table_endpoint=None</em>, <em class="sig-param">primary_table_host=None</em>, <em class="sig-param">primary_web_endpoint=None</em>, <em class="sig-param">primary_web_host=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">secondary_blob_connection_string=None</em>, <em class="sig-param">secondary_blob_endpoint=None</em>, <em class="sig-param">secondary_blob_host=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">secondary_dfs_endpoint=None</em>, <em class="sig-param">secondary_dfs_host=None</em>, <em class="sig-param">secondary_file_endpoint=None</em>, <em class="sig-param">secondary_file_host=None</em>, <em class="sig-param">secondary_location=None</em>, <em class="sig-param">secondary_queue_endpoint=None</em>, <em class="sig-param">secondary_queue_host=None</em>, <em class="sig-param">secondary_table_endpoint=None</em>, <em class="sig-param">secondary_table_host=None</em>, <em class="sig-param">secondary_web_endpoint=None</em>, <em class="sig-param">secondary_web_host=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">GetAccountResult</code><span class="sig-paren">(</span><em class="sig-param">access_tier=None</em>, <em class="sig-param">account_encryption_source=None</em>, <em class="sig-param">account_kind=None</em>, <em class="sig-param">account_replication_type=None</em>, <em class="sig-param">account_tier=None</em>, <em class="sig-param">custom_domains=None</em>, <em class="sig-param">enable_blob_encryption=None</em>, <em class="sig-param">enable_file_encryption=None</em>, <em class="sig-param">enable_https_traffic_only=None</em>, <em class="sig-param">is_hns_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">primary_blob_connection_string=None</em>, <em class="sig-param">primary_blob_endpoint=None</em>, <em class="sig-param">primary_blob_host=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">primary_dfs_endpoint=None</em>, <em class="sig-param">primary_dfs_host=None</em>, <em class="sig-param">primary_file_endpoint=None</em>, <em class="sig-param">primary_file_host=None</em>, <em class="sig-param">primary_location=None</em>, <em class="sig-param">primary_queue_endpoint=None</em>, <em class="sig-param">primary_queue_host=None</em>, <em class="sig-param">primary_table_endpoint=None</em>, <em class="sig-param">primary_table_host=None</em>, <em class="sig-param">primary_web_endpoint=None</em>, <em class="sig-param">primary_web_host=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">secondary_blob_connection_string=None</em>, <em class="sig-param">secondary_blob_endpoint=None</em>, <em class="sig-param">secondary_blob_host=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">secondary_dfs_endpoint=None</em>, <em class="sig-param">secondary_dfs_host=None</em>, <em class="sig-param">secondary_file_endpoint=None</em>, <em class="sig-param">secondary_file_host=None</em>, <em class="sig-param">secondary_location=None</em>, <em class="sig-param">secondary_queue_endpoint=None</em>, <em class="sig-param">secondary_queue_host=None</em>, <em class="sig-param">secondary_table_endpoint=None</em>, <em class="sig-param">secondary_table_host=None</em>, <em class="sig-param">secondary_web_endpoint=None</em>, <em class="sig-param">secondary_web_host=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAccount.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.GetAccountResult.access_tier">
@@ -1253,8 +1289,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_azure.storage.GetAccountResult.custom_domain">
-<code class="sig-name descname">custom_domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.custom_domain" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_azure.storage.GetAccountResult.custom_domains">
+<code class="sig-name descname">custom_domains</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.custom_domains" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">custom_domain</span></code> block as documented below.</p>
 </dd></dl>
 
@@ -1534,6 +1570,42 @@ for more information.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.GetPolicyResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetPolicyResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.storage.GetStorageContainerResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">GetStorageContainerResult</code><span class="sig-paren">(</span><em class="sig-param">container_access_type=None</em>, <em class="sig-param">has_immutability_policy=None</em>, <em class="sig-param">has_legal_hold=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.GetStorageContainerResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getStorageContainer.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetStorageContainerResult.container_access_type">
+<code class="sig-name descname">container_access_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetStorageContainerResult.container_access_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Access Level configured for this Container.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetStorageContainerResult.has_immutability_policy">
+<code class="sig-name descname">has_immutability_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetStorageContainerResult.has_immutability_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is there an Immutability Policy configured on this Storage Container?</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetStorageContainerResult.has_legal_hold">
+<code class="sig-name descname">has_legal_hold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetStorageContainerResult.has_legal_hold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is there a Legal Hold configured on this Storage Container?</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetStorageContainerResult.metadata">
+<code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetStorageContainerResult.metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of MetaData for this Container.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetStorageContainerResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetStorageContainerResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -2233,7 +2305,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>row_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key for the row where the entity will be inserted/merged. Changing this forces a new resource.</p></li>
 <li><p><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage account in which to create the storage table entity.
 Changing this forces a new resource to be created.</p></li>
-<li><p><strong>table_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the storage table in which to create the storage table entity. 
+<li><p><strong>table_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the storage table in which to create the storage table entity.
 Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
@@ -2269,7 +2341,7 @@ Changing this forces a new resource to be created.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.TableEntity.table_name">
 <code class="sig-name descname">table_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.TableEntity.table_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the storage table in which to create the storage table entity. 
+<dd><p>The name of the storage table in which to create the storage table entity.
 Changing this forces a new resource to be created.</p>
 </dd></dl>
 
@@ -2289,7 +2361,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>row_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key for the row where the entity will be inserted/merged. Changing this forces a new resource.</p></li>
 <li><p><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage account in which to create the storage table entity.
 Changing this forces a new resource to be created.</p></li>
-<li><p><strong>table_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the storage table in which to create the storage table entity. 
+<li><p><strong>table_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the storage table in which to create the storage table entity.
 Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
@@ -2516,6 +2588,23 @@ and <em>not</em> a <a class="reference external" href="https://docs.microsoft.co
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_management_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_management_policy.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.storage.get_storage_container">
+<code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">get_storage_container</code><span class="sig-paren">(</span><em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.get_storage_container" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Storage Container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Container.</p></li>
+<li><p><strong>storage_account_name</strong> (<em>str</em>) – The name of the Storage Account where the Container was created.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_container.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_container.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

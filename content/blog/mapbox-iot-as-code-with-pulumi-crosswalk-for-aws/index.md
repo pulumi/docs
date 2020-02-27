@@ -7,7 +7,7 @@ authors: ["chris-toomey"]
 tags: ["JavaScript","Serverless","AWS","Infrastructure","Customer"]
 ---
 
-**Guest Author: Chris Toomey, Solution Architect Lead @ Mapbox**
+## **Guest Author: Chris Toomey, Solution Architect Lead @ Mapbox**
 
 With 8 billion+ connected IoT devices and 2 billion GPS-equipped
 smartphones already online, logistics businesses are tracking assets at
@@ -28,16 +28,16 @@ In this blog, we will show snippets of the Javascript code that embraces
 the power of Pulumi to program AWS service APIs to create the Mapbox
 solution. To see the full architecture in action with a live bike race
 across America, please refer to this
-[webinar](https://www.pulumi.com/webinar/aws-mapbox/?utm_campaign=Partner%20-%20AWS&utm_medium=email&_hsenc=p2ANqtz--wro3maaq0AodmaPINTCc0V7Cpd2xRwWLbVlSOp9d5kwsWV-2sgjVxDyUjeS7FfNinlOk2DKKa6wQ07K0xP-NQ9p1kGA&_hsmi=73158875&utm_content=73158875&utm_source=hs_email&hsCtaTracking=cd221e5f-79fa-4b95-b7e3-43b5a49609b2%7Ccd0a7d93-082a-4572-8e8e-abf1c1b2548f)
+[webinar]({{< relref "/webinar/aws-mapbox" >}}?utm_campaign=Partner%20-%20AWS&utm_medium=email&_hsenc=p2ANqtz--wro3maaq0AodmaPINTCc0V7Cpd2xRwWLbVlSOp9d5kwsWV-2sgjVxDyUjeS7FfNinlOk2DKKa6wQ07K0xP-NQ9p1kGA&_hsmi=73158875&utm_content=73158875&utm_source=hs_email&hsCtaTracking=cd221e5f-79fa-4b95-b7e3-43b5a49609b2%7Ccd0a7d93-082a-4572-8e8e-abf1c1b2548f)
 recorded on June 13th 2019 and the Mapbox
 [asset tracking solution](https://www.mapbox.com/solutions/asset-tracking/).
 Also refer to this blog of the [Race across America](https://blog.mapbox.com/team-haase-partners-with-mapbox-for-2019-race-across-america-bid-7803a3bdbe49)
 showcased live during the webinar tomorrow.
 <!--more-->
 
-**Prerequisites:** [Install Pulumi]({{< ref "/docs/get-started/install" >}});
+**Prerequisites:** [Install Pulumi]({{< relref "/docs/get-started/install" >}});
 [Install Node.js version 8 or later](https://nodejs.org/en/download/) and
-[Setup AWS]({{< ref "/docs/get-started/aws" >}})
+[Setup AWS]({{< relref "/docs/get-started/aws" >}})
 
 The diagram represents how Mapbox's solution design on AWS services is
 built with Pulumi AWS and AWSX libraries in Javascript. Data is ingested
@@ -61,7 +61,7 @@ Mapbox solution team [here](mailto:chris.toomey@mapbox.com) and
 Pulumi team [here](mailto:sales@pulumi.com). We will be happy to help you sample test this
 solution on AWS!
 
-**STEP 1: Create a Pulumi project using an AWS JavaScript template**
+### **STEP 1: Create a Pulumi project using an AWS JavaScript template**
 
     $ brew install pulumi
     $ mkdir asset-tracking && cd asset-tracking
@@ -70,7 +70,7 @@ solution on AWS!
     $ ls
     Pulumi.dev.yaml    Pulumi.yaml       index.js   node_modules    package-lock.json     package.json
 
-**STEP 2: Create the ingestion REST API with AWS Services**
+### **STEP 2: Create the ingestion REST API with AWS Services**
 
 To visualize data the system has to accept large volumes of data from
 multiple sources into the rest of the system. Mapbox uses Pulumi's AWS &
@@ -148,8 +148,7 @@ To get this piece of code, please connect with Mapbox solution team
 [here](mailto:chris.toomey@mapbox.com) and Pulumi team
 [here](mailto:sales@pulumi.com).
 
-**STEP 3: Create a consumption API for the map client to consume from a
-data source**
+### **STEP 3: Create a consumption API for the map client to consume from a data source**
 
 Once, data is flowing through the system we build another API to query
 DynamoDB, transform that data, and provide it to our mapping client in
@@ -237,7 +236,7 @@ client. Even more beautiful is how Pulumi handles all the heavy lifting
 of packaging, deploying, and giving you the endpoint to query
 immediately.
 
-**STEP 4: Hook up a map!**
+### **STEP 4: Hook up a map!**
 
 Now we have data coming and going from our Solution, we just have to
 hook it up to a Mapbox map. This is actually quite simple now that

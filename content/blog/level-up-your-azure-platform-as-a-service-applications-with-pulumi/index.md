@@ -1,7 +1,8 @@
 ---
-title: "Level up your Azure Platform as a Service applications with Pulumi"
+title: Level up your Azure Platform as a Service Applications
+h1: "Level up your Azure Platform as a Service applications with Pulumi"
 date: "2019-05-06"
-meta_desc: "Writing a TypeScript program to compose an application out of the cloud building blocks with Pulumi. Today's post walks through the process of developing Pulumi programs to leverage Azure Platform services."
+meta_desc: "This post walks through the process of developing Pulumi programs to leverage Azure Platform services."
 meta_image: "app-insights.png"
 authors: ["mikhail-shilkov"]
 tags: ["Infrastructure","Azure"]
@@ -61,7 +62,7 @@ and a SQL database.
 describes how to deploy such application to Azure App Service by means
 of clicking buttons in the Azure portal.
 
-*"Friends don't let friends right-click publish"*
+### *"Friends don't let friends right-click publish"*
 
 Instead, I suggest relying on infrastructure as code. I built a Pulumi
 program and integrated it into a fully automated build and deployment
@@ -100,7 +101,7 @@ definition, and deployment pipeline in [Pulumi Examples repository](https://git
 
 The Pulumi development experience is powered by the
 [Pulumi CLI]({{< relref "/docs/reference/cli" >}}). After
-[installing the CLI]({{< ref "/docs/get-started/install" >}}), I jump into an empty
+[installing the CLI]({{< relref "/docs/get-started/install" >}}), I jump into an empty
 `infra` folder and run `pulumi new azure-typescript` accepting all the
 default answers. The CLI bootstraps a skeleton of a TypeScript NodeJS
 application. The code looks like this:
@@ -108,12 +109,12 @@ application. The code looks like this:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
- 
+
 // Create an Azure Resource Group
 const resourceGroup = new azure.core.ResourceGroup("resourceGroup", {
     location: "WestUS",
 });
- 
+
 // Create an Azure resource (Storage Account)
 const account = new azure.storage.Account("storage", {
     resourceGroupName: resourceGroup.name,
@@ -121,7 +122,7 @@ const account = new azure.storage.Account("storage", {
     accountTier: "Standard",
     accountReplicationType: "LRS",
 });
- 
+
 // Export the connection string for the storage account
 export const connectionString = account.primaryConnectionString;
 ```
@@ -138,7 +139,7 @@ that such an application will run in multiple environments: production,
 staging, development, and so on.
 
 Pulumi comes with a handy concept of
-[stacks]({{< ref "/docs/intro/concepts/stack" >}})--- isolated,
+[stacks]({{< relref "/docs/intro/concepts/stack" >}})--- isolated,
 independently configurable instances of a Pulumi program. A separate
 stack can be designated for each deployment environment.
 
@@ -262,7 +263,7 @@ I'm using Azure SQL Database service.
 Setting up a SQL Server requires a couple of parameter values that might
 change between execution environments, for instance, a username and a
 password for the connection string. Pulumi provides
-[a way to configure]({{< ref "/docs/intro/concepts/config" >}}) the program's
+[a way to configure]({{< relref "/docs/intro/concepts/config" >}}) the program's
 parameters per stack.
 
 The configuration itself will happen in my CI/CD pipeline. For now, I
@@ -453,9 +454,9 @@ language.
 
 You can get going with these resources:
 
-- [Getting Started with Pulumi]({{< ref "/docs/get-started" >}})
-- [Setup Pulumi to work with Azure]({{< ref "/docs/get-started/azure" >}})
-- [Walkthroughs and Examples]({{< ref "/docs/get-started/azure" >}})
+- [Getting Started with Pulumi]({{< relref "/docs/get-started" >}})
+- [Setup Pulumi to work with Azure]({{< relref "/docs/get-started/azure" >}})
+- [Walkthroughs and Examples]({{< relref "/docs/get-started/azure" >}})
 
 Pulumi enables developers to define cloud infrastructure using general
 purpose programming languages. Pulumi works with multiple cloud

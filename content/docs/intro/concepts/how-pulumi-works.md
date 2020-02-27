@@ -1,5 +1,7 @@
 ---
 title: "How Pulumi Works"
+meta_desc: This page provides an overview of how Pulumi works and interacts with different
+           Cloud Providers.
 menu:
   intro:
     parent: concepts
@@ -33,10 +35,10 @@ The deployment engine is embedded in the `pulumi` CLI itself.
 
 A resource provider is made up of two different pieces:
 
-1. A _resource plugin_, which is the binary used by the deployment engine to manage a resource. These plugins are stored in the _plugin cache_ (located in `~/.pulumi/plugins`) and can be managed using the [`pulumi plugin`]({{< relref "/docs/reference/cli/pulumi_plugin.md" >}}) set of commands.
+1. A _resource plugin_, which is the binary used by the deployment engine to manage a resource. These plugins are stored in the _plugin cache_ (located in `~/.pulumi/plugins`) and can be managed using the [`pulumi plugin`]({{< relref "/docs/reference/cli/pulumi_plugin" >}}) set of commands.
 2. An _SDK_ which provides bindings for each type of resource the provider can manage.
 
-Like the language runtime itself, the SDKs are available as regular packages.  For example, there is a [`@pulumi/aws`](https://www.npmjs.com/package/@pulumi/aws) package for Node available on npm and a [`pulumi_aws`](https://pypi.org/project/pulumi-aws) package for Python available on PyPI.  When these packages are added to your project, they run [`pulumi plugin install`]({{< relref "/docs/reference/cli/pulumi_plugin_install.md" >}})  behind the scenes in order to download the resource plugin from pulumi.com.
+Like the language runtime itself, the SDKs are available as regular packages.  For example, there is a [`@pulumi/aws`](https://www.npmjs.com/package/@pulumi/aws) package for Node available on npm and a [`pulumi_aws`](https://pypi.org/project/pulumi-aws) package for Python available on PyPI.  When these packages are added to your project, they run [`pulumi plugin install`]({{< relref "/docs/reference/cli/pulumi_plugin_install" >}})  behind the scenes in order to download the resource plugin from pulumi.com.
 
 ## Putting it all together
 

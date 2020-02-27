@@ -1,6 +1,7 @@
 ---
-title: "Graceful App Rollout"
-
+title: "Kubernetes: Create, Update, and Destroy"
+meta_desc: Learn how to write and manage a Kubernetes application through it's lifecycle.
+           Easily create, update, and destroy resources on a Kubernetes cluster.
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-configmap-rollout/"]
 ---
 
@@ -15,12 +16,12 @@ For example, in the gif below, we can see how updating one resource (in this cas
 
 **Topics:**
 
--   [Prerequisites](#prerequisites)
--   [Provisioning a Kubernetes application](#provisioning-a-Kubernetes-application)
--   [Using Pulumi's notion of "stack outputs"](#using-pulumis-notion-of-stack-outputs)
--   [Using Pulumi's diff facilities to understand how a change affects an application](#using-pulumis-diff-facilities-to-understand-how-a-change-affects-an-application)
--   [Updating an application](#updating-an-application)
--   [Deleting resources safely](#deleting-resources-safely)
+- [Prerequisites](#prerequisites)
+- [Provisioning a Kubernetes application](#provisioning-a-Kubernetes-application)
+- [Using Pulumi's notion of "stack outputs"](#using-pulumis-notion-of-stack-outputs)
+- [Using Pulumi's diff facilities to understand how a change affects an application](#using-pulumis-diff-facilities-to-understand-how-a-change-affects-an-application)
+- [Updating an application](#updating-an-application)
+- [Deleting resources safely](#deleting-resources-safely)
 
 ![configmapRollout](/images/docs/quickstart/kubernetes/cm-rollout.gif "ConfigMap-induced Rollout")
 
@@ -29,9 +30,9 @@ For example, in the gif below, we can see how updating one resource (in this cas
 > **IMPORTANT:** This tutorial expects that you have provisioned a Kubernetes cluster and have an
 > active kubeconfig file. If you don't, please follow instructions [here]({{< relref "/docs/intro/cloud-providers/kubernetes" >}}).
 
-1.  Install [Node.js][nodejs] version 8 or later.
-1.  Install a package manager for Node.js, such as [npm] or [Yarn].
-1.  Follow the directions [here][install] to install the Pulumi CLI.
+1. Install [Node.js][nodejs] version 8 or later.
+1. Install a package manager for Node.js, such as [npm] or [Yarn].
+1. Follow the directions [here][install] to install the Pulumi CLI.
 
 ## Provisioning a Kubernetes application
 
@@ -40,11 +41,11 @@ code when we modify it later.
 
 This application will:
 
--   Create a container running [nginx](https://nginx.org/) (an open source web server).
--   Create a `ConfigMap` with an configuration file that configures nginx to proxy traffic to
+- Create a container running [nginx](https://nginx.org/) (an open source web server).
+- Create a `ConfigMap` with an configuration file that configures nginx to proxy traffic to
     `pulumi.github.io`.
--   Mount that configuration data into the nginx container.
--   Expose the nginx container to the internet using a `Service`.
+- Mount that configuration data into the nginx container.
+- Expose the nginx container to the internet using a `Service`.
 
 To provision the application, we need to:
 
@@ -86,14 +87,14 @@ your stack.
 
 There are several things to notice here:
 
--   **Resources are provisioned in a specific order.** We can see from the output that the
+- **Resources are provisioned in a specific order.** We can see from the output that the
     `ConfigMap` is provisioned first, the `Deployment` second, and the `Service` third.
 
     As we will see in the following sections, Pulumi keeps track of resources as a _graph_. We will
     also see that this allows Pulumi to tell us how a change to one resource will affect other
     resources.
 
--   **We get intermediate status updates as resources provision.** As the `Service` rolls out, for
+- **We get intermediate status updates as resources provision.** As the `Service` rolls out, for
     example, we can see distinct stages in the initialization.
 
 These two things will be important in the next sections.
@@ -114,7 +115,7 @@ $ pulumi stack output frontendIp
 ```
 
 If you paste this IP into your browser, you should see that it's redirected you to the [Pulumi
-homepage](http://www.pulumi.com). Alternatively, you can run this:
+homepage](/). Alternatively, you can run this:
 
 ```sh
 $ curl -sL $(pulumi stack output frontendIp):80 | grep -C 1 "<title>"
@@ -210,6 +211,7 @@ Once we're confident this is what we want, we can run the update:
 
 2. **Verify the rollout worked.** You can do this by pasting the URL into the browser (be sure to
    disable the cache), or by running the following:
+
     ```sh
     $ curl -sL $(pulumi stack output frontendIp) | grep -o "<title>Google</title>"
     <title>Google</title>
@@ -223,6 +225,7 @@ Once we're done with the application, it's possible to destroy it using:
 $ pulumi destroy
 ```
 
+<!-- markdownlint-disable url -->
 [ts]: https://www.typescriptlang.org/
 [nodejs]: https://nodejs.org/en/
 [npm]: https://www.npmjs.com/get-npm
@@ -230,3 +233,4 @@ $ pulumi destroy
 [install]: {{< relref "/docs/get-started/install" >}}
 [pulumi-test]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout
 [index.ts]: https://github.com/pulumi/examples/blob/master/kubernetes-ts-configmap-rollout/index.ts
+<!-- markdownlint-enable url -->

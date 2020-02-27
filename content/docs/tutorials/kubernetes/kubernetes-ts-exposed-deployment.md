@@ -1,5 +1,7 @@
 ---
-title: "Exposing a Deployment with a Public IP Address"
+title: "Exposing a Deployment with a Public IP Address | TypeScript"
+h1: "Exposing a Deployment with a Public IP Address"
+linktitle: "Exposing a Deployment with a Public IP Address"
 no_edit_this_page: true
 ---
 

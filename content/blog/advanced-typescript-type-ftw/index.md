@@ -1,7 +1,7 @@
 ---
 title: "Advanced TypeScript type FTW!"
 date: "2018-09-19"
-meta_desc: "TypeScript is great for cloud apps and infrastructure because of its rich type system. In this blog, Cyrus shows how the type system works for infrastructure as code in Pulumi."
+meta_desc: "TypeScript is great for cloud apps and infrastructure because of its rich type system. In this blog, learn how the type system works for infrastructure as code."
 meta_image: "completion-list.png"
 authors: ["cyrus-najmabadi"]
 tags: ["TypeScript"]
@@ -12,8 +12,8 @@ typechecking – making for a more productive inner loop and helping to find err
 how this works for infrastructure as code can be fascinating!
 <!--more-->
 
-A core part of the Pulumi [programming model]({{< ref "/docs/reference" >}}) is that we allow people to express complex
-[dependency data]({{< ref "/docs/intro/concepts/programming-model#outputs" >}}) that may _eventually_ be available.
+A core part of the Pulumi [programming model]({{< relref "/docs/reference" >}}) is that we allow people to express complex
+[dependency data]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) that may _eventually_ be available.
 Traditional JavaScript programming might expose that as a Promise<T>, but we’ve taken that one step further by introducing
     a type we call:
 

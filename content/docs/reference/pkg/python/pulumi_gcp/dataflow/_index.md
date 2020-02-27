@@ -28,7 +28,10 @@ the official documentation for
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>ip_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The configuration for VM IPs.  Options are <code class="docutils literal notranslate"><span class="pre">&quot;WORKER_IP_PUBLIC&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;WORKER_IP_PRIVATE&quot;</span></code>.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User labels to be specified for the job. Keys and values should follow the restrictions specified in the <a class="reference external" href="https://cloud.google.com/compute/docs/labeling-resources#restrictions">labeling restrictions</a> page.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User labels to be specified for the job. Keys and values should follow the restrictions
+specified in the <a class="reference external" href="https://cloud.google.com/compute/docs/labeling-resources#restrictions">labeling restrictions</a> page.
+<strong>NOTE</strong>: Google-provided Dataflow templates often provide default labels that begin with <code class="docutils literal notranslate"><span class="pre">goog-dataflow-provided</span></code>.
+Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.</p></li>
 <li><p><strong>machine_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The machine type to use for the job.</p></li>
 <li><p><strong>max_workers</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the resource, required by Dataflow.</p></li>
@@ -54,9 +57,18 @@ the official documentation for
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.dataflow.Job.job_id">
+<code class="sig-name descname">job_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dataflow.Job.job_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique ID of this job.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.dataflow.Job.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dataflow.Job.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>User labels to be specified for the job. Keys and values should follow the restrictions specified in the <a class="reference external" href="https://cloud.google.com/compute/docs/labeling-resources#restrictions">labeling restrictions</a> page.</p>
+<dd><p>User labels to be specified for the job. Keys and values should follow the restrictions
+specified in the <a class="reference external" href="https://cloud.google.com/compute/docs/labeling-resources#restrictions">labeling restrictions</a> page.
+<strong>NOTE</strong>: Google-provided Dataflow templates often provide default labels that begin with <code class="docutils literal notranslate"><span class="pre">goog-dataflow-provided</span></code>.
+Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -139,7 +151,7 @@ the official documentation for
 
 <dl class="method">
 <dt id="pulumi_gcp.dataflow.Job.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ip_configuration=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">max_workers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">on_delete=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">temp_gcs_location=None</em>, <em class="sig-param">template_gcs_path=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dataflow.Job.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ip_configuration=None</em>, <em class="sig-param">job_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">max_workers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">on_delete=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">temp_gcs_location=None</em>, <em class="sig-param">template_gcs_path=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dataflow.Job.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Job resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -149,7 +161,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>ip_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The configuration for VM IPs.  Options are <code class="docutils literal notranslate"><span class="pre">&quot;WORKER_IP_PUBLIC&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;WORKER_IP_PRIVATE&quot;</span></code>.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>User labels to be specified for the job. Keys and values should follow the restrictions specified in the <a class="reference external" href="https://cloud.google.com/compute/docs/labeling-resources#restrictions">labeling restrictions</a> page.</p>
+<li><p><strong>job_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID of this job.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>User labels to be specified for the job. Keys and values should follow the restrictions
+specified in the <a class="reference external" href="https://cloud.google.com/compute/docs/labeling-resources#restrictions">labeling restrictions</a> page.
+<strong>NOTE</strong>: Google-provided Dataflow templates often provide default labels that begin with <code class="docutils literal notranslate"><span class="pre">goog-dataflow-provided</span></code>.
+Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.</p>
 </p></li>
 <li><p><strong>machine_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The machine type to use for the job.</p></li>
 <li><p><strong>max_workers</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.</p></li>

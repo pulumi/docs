@@ -1,5 +1,6 @@
 ---
-title: "Data science on demand: spinning up a Wallaroo cluster is easy with Pulumi"
+title: "Data science on demand: spinning up a Wallaroo cluster"
+h1: "Data science on demand: spinning up a Wallaroo cluster is easy with Pulumi"
 date: "2018-11-02"
 meta_desc: "Find out how Wallaroo powered their cluster provisioning with Pulumi, for data science on demand."
 meta_image: "tty-fast.gif"
@@ -9,14 +10,14 @@ tags: ["Infrastructure","Customer"]
 
 *This guest post is from Simon Zelazny of
 [Wallaroo Labs](https://www.wallaroolabs.com/), and previously appeared on the
-[Wallaroo Labs blog](https://blog.wallaroolabs.com/2018/10/spinning-up-a-wallaroo-cluster-is-easy/).
+[Wallaroo Labs blog](https://blog.wallaroolabs.com/).
 Find out how Wallaroo powered their cluster provisioning with Pulumi,
 for data science on demand.*
 
 ## Oh no, more data!
 
 Last month, we took a
-[long-running pandas classifier](https://blog.wallaroolabs.com/2018/09/make-python-pandas-go-fast/)
+[long-running pandas classifier](https://github.com/WallarooLabs/wallaroo_blog_examples/tree/master/provisioned-classifier/classifier)
 and made it run faster by leveraging Wallaroo's parallelization
 capabilities. This time around, we'd like to kick it up a notch and see
 if we can keep scaling out to meet higher demand. We'd also like to be
@@ -74,7 +75,7 @@ Let's jump into it!
 
 First of all, if you'd like to follow along (and spend some money
 provisioning EC2 servers), please
-[download and set up Pulumi]({{< ref "/docs/get-started/install" >}}).
+[download and set up Pulumi]({{< relref "/docs/get-started/install" >}}).
 
 Next, [clone the wallaroo blog examples repo](https://github.com/WallarooLabs/wallaroo_blog_examples) and
 navigate to `provisioned-classifier`. If you followed along with the
@@ -93,29 +94,29 @@ make up run-cluster get-results down INPUT_LINES=1000000 CLUSTER_SIZE=3
 
 Let's break that down and see what's really going on here.
 
-1) `make up CLUSTER_SIZE=3` configures the cluster to consist of 3
+1. `make up CLUSTER_SIZE=3` configures the cluster to consist of 3
 machines, and delegates to `pulumi up` the actual business of spinning
 up the infrastructure. Our physical cluster will contain 3 nodes for
 processing, and one extra metrics_host node for hosting our [Metrics
 UI](https://docs.wallaroolabs.com/book/metrics/metrics-ui.html), and
 collecting results.
 
-2) Once provisioning is complete, the next make
+2. Once provisioning is complete, the next make
 task: `run-cluster INPUT_LINES=1000000` uses our Ansible playbooks to
 upload application code from `classifier/*` to all 3 machines
 provisioned above, and then start up a Wallaroo cluster with 7 worker
 processes per machine.
 
-Next, Ansible starts sending 1 million lines of our
+3. Next, Ansible starts sending 1 million lines of our
 [synthetic CSV data](https://github.com/WallarooLabs/wallaroo_blog_examples/blob/master/provisioned-classifier/bin/send.py),
 and waits for 1 million lines to arrive at the `data_receiver` process.
 When those lines arrive, they are compressed, and the cluster is shut
 down.
 
-3) `make get-results` pulls the compressed result file
+4. `make get-results` pulls the compressed result file
 to `output/results.tgz`,
 
-4) And finally, `make down` destroys the cloud infrastructure that was
+5. And finally, `make down` destroys the cloud infrastructure that was
 used to power our computation.
 
 ## The Pulumi cluster definition

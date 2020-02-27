@@ -3,7 +3,7 @@ title: "Testing Your Infrastructure as Code with Pulumi"
 authors: ["joe-duffy"]
 tags: ["JavaScript","TypeScript","CI/CD","Cloud-Native","Python"]
 date: "2019-04-17"
-meta_desc: "Leverage Pulumi for your core acceptance test workflow and unlock new automation capabilities that improve your team's productivity and confidence. Since Pulumi is multi-cloud and its programs are written in general-purpose programming languages, you get access to testing frameworks for your language's runtime and can test the full underlying platform for your cloud."
+meta_desc: "Leverage Pulumi for your core acceptance test workflow and unlock new automation capabilities that improve your team's productivity and confidence."
 meta_image: "InfraTesting.png"
 ---
 
@@ -84,24 +84,24 @@ Our running example is loosely based on
 
 ```javascript
 let aws = require("@pulumi/aws");
- 
+
 let group = new aws.ec2.SecurityGroup("web-secgrp", {
     ingress: [
     { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
     { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
     ],
 });
- 
+
 let userData =
 `#!/bin/bash echo "Hello, World!" > index.html nohup python -m SimpleHTTPServer 80 &`;
- 
+
 let server = new aws.ec2.Instance("web-server-www", {
     instanceType: "t2.micro",
     securityGroups: [ group.name ], // reference the group object above
     ami: "ami-c55673a0"             // AMI for us-east-2 (Ohio),
     userData: userData              // start a simple web server
 });
- 
+
 exports.group = group;
 exports.server = server;
 exports.publicIp = server.publicIp;
@@ -117,14 +117,14 @@ the rules stated above -- let's write some tests!
 The overall structure and scaffolding of our tests will look like any
 ordinary Mocha testing:
 
-**ec2tests.js**
+#### **ec2tests.js**
 
 ```javascript
 let assert = require("assert");
 let mocha = require("mocha");
 let pulumi = require("@pulumi/pulumi");
 let infra = require("./index");
- 
+
 describe("Infrastructure", function() {
     let server = infra.server;
     describe("#server", function() {
@@ -268,46 +268,46 @@ hoped!
         #server
      1) must have a name tag      2) must not use userData (use an AMI instead)
         #group
-     3) must not open port 22 (SSH) to the Internet 
+     3) must not open port 22 (SSH) to the Internet
       0 passing (17ms)
       3 failing
-     
+
      1) Infrastructure
            #server
          must have a name tag:
      Error: Missing a name tag on server
-     urn:pulumi:my-ws::my-dev::aws:ec2/instance:Instance::web-server-www 
+     urn:pulumi:my-ws::my-dev::aws:ec2/instance:Instance::web-server-www
      2) Infrastructure
            #server
          must not use userData (use an AMI instead):
      Error: Illegal use of userData on server
-     urn:pulumi:my-ws::my-dev::aws:ec2/instance:Instance::web-server-www 
+     urn:pulumi:my-ws::my-dev::aws:ec2/instance:Instance::web-server-www
      3) Infrastructure
            #group
          must not open port 22 (SSH) to the Internet:
-     Error: Illegal SSH port 22 open to the Internet (CIDR 0.0.0.0/0) on group   
+     Error: Illegal SSH port 22 open to the Internet (CIDR 0.0.0.0/0) on group  
 ```
 
 Let's fix our program to comply:
 
 ```javascript
 "use strict";
- 
+
 let aws = require("@pulumi/aws");
- 
+
 let group = new aws.ec2.SecurityGroup("web-secgrp", {
     ingress: [
     { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
     ],
 });
- 
+
 let server = new aws.ec2.Instance("web-server-www", {
     tags: { "Name": "web-server-www" },
     instanceType: "t2.micro",
     securityGroups: [ group.name ], // reference the group object above
     ami: "ami-c55673a0"             // AMI for us-east-2 (Ohio),
 });
- 
+
 exports.group = group;
 exports.server = server;
 exports.publicIp = server.publicIp;
@@ -323,8 +323,8 @@ And then rerun our tests:
           ✓ must not use userData (use an AMI instead)
         #group
           ✓ must not open port 22 (SSH) to the Internet
-     
-     
+
+
      3 passing (16ms)
 ```
 
@@ -391,10 +391,10 @@ import (
     "os"
     "path"
     "testing"
- 
+
     "github.com/pulumi/pulumi/pkg/testing/integration"
 )
- 
+
 func TestExamples(t *testing.T) {
     awsRegion := os.Getenv("AWS_REGION")
     if awsRegion == "" {
@@ -545,29 +545,29 @@ domains.
 Pulumi supports your existing CI systems. Here are a few of those
 supported:
 
-- [AWS Code Services]({{< ref "/docs/guides/continuous-delivery/aws-code-services" >}})
-- [Azure DevOps]({{< ref "/docs/guides/continuous-delivery/azure-devops" >}})
-- [CircleCI]({{< ref "/docs/guides/continuous-delivery/circleci" >}})
-- [GitHub Actions]({{< ref "/docs/guides/continuous-delivery/github-actions" >}})
-- [GitLab CI]({{< ref "/docs/guides/continuous-delivery/gitlab-ci" >}})
-- [Google Cloud Build]({{< ref "/docs/guides/continuous-delivery/google-cloud-build" >}})
-- [Travis]({{< ref "/docs/guides/continuous-delivery/travis" >}})
+- [AWS Code Services]({{< relref "/docs/guides/continuous-delivery/aws-code-services" >}})
+- [Azure DevOps]({{< relref "/docs/guides/continuous-delivery/azure-devops" >}})
+- [CircleCI]({{< relref "/docs/guides/continuous-delivery/circleci" >}})
+- [GitHub Actions]({{< relref "/docs/guides/continuous-delivery/github-actions" >}})
+- [GitLab CI]({{< relref "/docs/guides/continuous-delivery/gitlab-ci" >}})
+- [Google Cloud Build]({{< relref "/docs/guides/continuous-delivery/google-cloud-build" >}})
+- [Travis]({{< relref "/docs/guides/continuous-delivery/travis" >}})
 
 Please refer to the
-[Continuous Delivery documentation]({{< ref "/docs/guides/continuous-delivery" >}})) for a more
+[Continuous Delivery documentation]({{< relref "/docs/guides/continuous-delivery" >}})) for a more
 comprehensive guide.
 
 ## Ephemeral Environments
 
 A very powerful capability this unlocks is the ability to spin up
 ephemeral environments solely for purposes of acceptance testing.
-Pulumi's concept of [projects and stacks]({{< ref "/docs/intro/concepts/organizing-stacks-projects" >}}) is
+Pulumi's concept of [projects and stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}) is
 designed to make it very easy to stand up entirely isolated and
 independent environments, and to tear them down, all in either a few
 easy CLI gestures, or by using the integration testing framework.
 
 If you are using GitHub, Pulumi offers a
-[GitHub App]({{< ref "/docs/guides/continuous-delivery/github-app" >}}) that helps to glue
+[GitHub App]({{< relref "/docs/guides/continuous-delivery/github-app" >}}) that helps to glue
 together your Pull Request workflow with this sort of acceptance testing
 run inside of your CI pipelines. Simply install the App into your GitHub
 repos, and Pulumi in your CI, and your Pull Requests will light up with
@@ -589,4 +589,4 @@ runtime testing. It's easy to run these on demand and harness them in
 your CI system of choice.
 
 Pulumi is open source, free to use, and works with your favorite
-languages and clouds -- [give it a try today]({{< ref "/docs" >}})!
+languages and clouds -- [give it a try today]({{< relref "/docs" >}})!

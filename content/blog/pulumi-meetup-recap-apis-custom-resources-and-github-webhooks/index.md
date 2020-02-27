@@ -1,9 +1,10 @@
 ---
-title: "Pulumi Meetup Recap: APIs, Custom Resources and GitHub Webhooks"
+title: "Pulumi Meetup: APIs, Custom Resources and GitHub Webhooks"
+h1: "Pulumi Meetup Recap: APIs, Custom Resources and GitHub Webhooks"
 authors: ["aydrian-howard"]
 tags: ["events"]
 date: "2019-07-16"
-meta_desc: "Pulumi's July meetup featured talks from two key engineers: Paul reviewed how programming languages help in building the best infrastructure code and wrote a simple Pulumi program to create an RDS instance, and Matt demoed a nifty little bot that enforced pull request policies using GitHub Webhooks and Pulumi."
+meta_desc: "Pulumi's July meetup featured talks about how programming languages help in building the best infrastructure code and a bot that enforced pull request policies."
 meta_image: "meta.jpg"
 ---
 
@@ -17,7 +18,7 @@ Unfortunately, due to travel issues, [Paul Stack](https://twitter.com/stack72) w
 
 ## Automate your troubles away with Webhooks and Pulumi
 
-Next up, [Matt Ellis](https://twitter.com/ellism) presented “Automating your troubles away with Webhooks and Pulumi.” Matt isn’t a fan of confrontation, but as the lead of the Pulumi API team, he needs to ensure that our changelog is kept up-to-date with every pull request. In his talk, he walked through his solution that leveraged GitHub Webhooks and Pulumi in building a small bot that enforced some policies on pull requests. You can read more about it in his previous [blog post on Pulumi Webhooks](https://www.pulumi.com/blog/managing-github-webhooks-with-pulumi/), or watch the [recording of his talk](https://www.youtube.com/watch?v=QuOMyZvSt-A), which is also available on the [Pulumi TV YouTube Channel](https://www.youtube.com/pulumitv).
+Next up, [Matt Ellis](https://twitter.com/ellism) presented “Automating your troubles away with Webhooks and Pulumi.” Matt isn’t a fan of confrontation, but as the lead of the Pulumi API team, he needs to ensure that our changelog is kept up-to-date with every pull request. In his talk, he walked through his solution that leveraged GitHub Webhooks and Pulumi in building a small bot that enforced some policies on pull requests. You can read more about it in his previous [blog post on Pulumi Webhooks]({{< relref "/blog/managing-github-webhooks-with-pulumi" >}}), or watch the [recording of his talk](https://www.youtube.com/watch?v=QuOMyZvSt-A), which is also available on the [Pulumi TV YouTube Channel](https://www.youtube.com/pulumitv).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KhHDhGCdU3c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

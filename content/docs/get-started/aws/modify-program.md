@@ -1,5 +1,8 @@
 ---
-title: Modify the Program
+title: Modify the Program | AWS
+h1: Modify the Program
+linktitle: Modify the Program
+meta_desc: This page provides an overview on how to update an AWS project from a Pulumi program.
 weight: 8
 menu:
   getstarted:
@@ -13,7 +16,7 @@ Now that we have an instance of our Pulumi program deployed, let's enable encryp
 
 Replace the entire contents of {{< langfile >}} with the following:
 
-{{< langchoose nogo csharp >}}
+{{< langchoose csharp >}}
 
 ```javascript
 "use strict";
@@ -86,6 +89,45 @@ bucket = s3.Bucket('my-bucket',
 pulumi.export('bucket_name',  bucket.id)
 ```
 
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/go/aws/kms"
+	"github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Create a KMS Key for S3 server-side encryption
+		key, err := kms.NewKey(ctx, "my-key", nil)
+		if err != nil {
+			return err
+		}
+
+		// Create an AWS resource (S3 Bucket)
+		bucket, err := s3.NewBucket(ctx, "my-bucket", &s3.BucketArgs{
+			ServerSideEncryptionConfiguration: s3.BucketServerSideEncryptionConfigurationArgs{
+				Rule: s3.BucketServerSideEncryptionConfigurationRuleArgs{
+					ApplyServerSideEncryptionByDefault: s3.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs{
+						SseAlgorithm:   pulumi.StringInput(pulumi.String("aws:kms")),
+						KmsMasterKeyId: key.ID(),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		// Export the name of the bucket
+		ctx.Export("bucketName", bucket.ID())
+		return nil
+	})
+}
+```
+
 ```csharp
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -127,6 +169,15 @@ class Program
 ```
 
 Our program now creates a KMS key and enables server-side encryption on the S3 bucket using the KMS key.
+
+{{% lang go %}}
+We'll need to run `dep ensure` to pick up the new dependencies:
+
+```bash
+$ dep ensure
+```
+
+{{% /lang %}}
 
 Next, we'll deploy the changes.
 

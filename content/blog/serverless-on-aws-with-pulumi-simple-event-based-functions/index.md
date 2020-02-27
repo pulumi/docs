@@ -3,7 +3,7 @@ title: "Serverless on AWS with Pulumi: Simple, Event-based Functions"
 authors: ["cyrus-najmabadi"]
 tags: ["JavaScript","Serverless","AWS"]
 date: "2019-01-14"
-meta_desc: "Pulumi provides the simplest way possible to do serverless programming on AWS. Use Pulumi's AWS package as the the deployment-time API for defining your AWS infrastructure, and the run-time API during Lambda execution."
+meta_desc: "Pulumi's AWS package provides the simplest way possible to do serverless programming on AWS."
 
 ---
 
@@ -37,8 +37,8 @@ const bucket = new aws.s3.Bucket("testbucket", {
 
 // Create a lambda that will post a message to slack when the bucket changes.
 // We can pass a simple JavaScript/TypeScript lambda here thanks to the magic of "Lambdas as Lambdas"
-// See: www.pulumi.com{{< relref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}}
-const lambda = new aws.lambda.CallbackFunction("postToSlack", { 
+// See: www.pulumi.com{{< relref "/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}}
+const lambda = new aws.lambda.CallbackFunction("postToSlack", {
     callback: async (e) => {
       const client = new slack.WebClient(...);
       for (const rec of e.Records) {
@@ -50,8 +50,8 @@ const lambda = new aws.lambda.CallbackFunction("postToSlack", {
 
 // Give the bucket permission to invoke the lambda.
 const permission = new aws.lambda.Permission("invokelambda", {
-    function: lambda, 
-  action: "lambda:InvokeFunction", 
+  function: lambda,
+  action: "lambda:InvokeFunction",
   principal: "s3.amazonaws.com", sourceArn: bucket.id.apply(bucketName => `arn:aws:s3:::${bucketName}`), }));
 
 // Now hookup a notification that will trigger the lambda when any object is created in the bucket.

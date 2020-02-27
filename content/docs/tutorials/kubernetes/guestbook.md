@@ -1,6 +1,7 @@
 ---
-title: "Guestbook App with Redis and Nginx"
-
+title: Guestbook App with Redis and Nginx
+meta_desc: How to create a guestbook application with Redis and Nginx powered by Docker and
+           deployed with Kubernetes.
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-guestbook/"]
 ---
 
@@ -29,7 +30,7 @@ You need to have the Pulumi CLI and a working Kubernetes cluster.
 [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube) is an easy way to get started.
 
 1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-2. [Connect Pulumi to a Kubernetes Cluster]({{< relref "/docs/intro/cloud-providers/kubernetes/setup.md" >}})
+2. [Connect Pulumi to a Kubernetes Cluster]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}})
 
 ## Running the Guestbook
 
@@ -43,7 +44,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
 ### Create and Configure a Project
 
-1.  To create a new Pulumi project, let's use a template:
+1. To create a new Pulumi project, let's use a template:
 
     ```shell
     $ mkdir k8s-guestbook && cd k8s-guestbook
@@ -52,7 +53,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
     This command will initialize a fresh project in the `k8s-guestbook` newly-created directory.
 
-2.  Next, replace the minimal contents of the template's `index.ts` file with the full guestbook:
+2. Next, replace the minimal contents of the template's `index.ts` file with the full guestbook:
 
     ```javascript
     import * as k8s from "@pulumi/kubernetes";
@@ -201,11 +202,11 @@ To start, we'll need to create a project and stack (a deployment target) for our
     This code creates three Kubernetes Services, each with an associated Deployment. The full Kubernetes object model is
     available to us, giving us the full power of Kubernetes right away.
 
-3.  (Optional) By default, our frontend Service will be of type `ClusterIP`. This will work on Minikube, but for most
+3. (Optional) By default, our frontend Service will be of type `ClusterIP`. This will work on Minikube, but for most
     production Kubernetes clusters, we will want it to be of type `LoadBalancer`, ensuring that a load balancer in your
     target cloud environment is allocated.
 
-    The above code uses [configuration]({{< relref "/docs/intro/concepts/config.md" >}}) to make this parameterizable.
+    The above code uses [configuration]({{< relref "/docs/intro/concepts/config" >}}) to make this parameterizable.
     If you'd like our program to use a load balancer, simply run:
 
     ```shell
@@ -214,9 +215,9 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
     If you're not sure, it's safe to skip this step.
 
-### Deploying
+    ### Deploying
 
-4.  Now we're ready to deploy our code. To do so, simply run `pulumi up`:
+4. Now we're ready to deploy our code. To do so, simply run `pulumi up`:
 
     ```
     $ pulumi up
@@ -224,7 +225,6 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
     The command will first show us a complete preview of what will take place, with a confirmation prompt. No changes
     will have been made yet. It should look something like this:
-
 
         Previewing update of stack 'k8s-guestbook-dev'
         Previewing changes:
@@ -246,9 +246,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
         no
         details
 
-
     Let's select "yes" and hit enter. The deployment will proceed, and the output will look like this:
-
 
         Updating stack 'k8s-guestbook-dev'
         Performing changes:
@@ -281,10 +279,9 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
         Permalink: https://app.pulumi.com/joeduffy/k8s-guestbook-dev/updates/1
 
+    ### Viewing the Guestbook
 
-### Viewing the Guestbook
-
-5.  The application is now running in our cluster. Let's inspect our cluster state to validate the deployment.
+5. The application is now running in our cluster. Let's inspect our cluster state to validate the deployment.
 
     Use `kubectl` to see the deployed services:
 
@@ -316,7 +313,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
     10.102.193.86
     ```
 
-5.  Now let's see our guestbook application in action.
+6. Now let's see our guestbook application in action.
 
     ![Guestbook in browser](/images/docs/quickstart/kubernetes/guestbook.png)
 
@@ -364,7 +361,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
     </html>
     ```
 
-6.  We're almost done. To demonstrate incremental updates, however, Let's make an update to our program to scale
+7. We're almost done. To demonstrate incremental updates, however, Let's make an update to our program to scale
     the frontend from 3 replicas to 5. Find the line:
 
     ```typescript
@@ -387,7 +384,6 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
     The output from running this command should look something like this:
 
-
         Updating stack 'k8s-guestbook-dev'
         Performing changes:
 
@@ -399,10 +395,9 @@ To start, we'll need to create a project and stack (a deployment target) for our
             ~ 1 resource updated
               6 resources unchanged
 
+    ### Cleaning Up
 
-### Cleaning Up
-
-7.  Feel free to experiment. As soon as you're done, let's clean up and destroy the resources and remove our stack:
+8. Feel free to experiment. As soon as you're done, let's clean up and destroy the resources and remove our stack:
 
     ```shell
     $ pulumi destroy --yes

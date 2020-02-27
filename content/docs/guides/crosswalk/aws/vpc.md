@@ -1,5 +1,7 @@
 ---
 title: "AWS Virtual Private Cloud (VPC)"
+meta_desc: Pulumi Crosswalk for AWS provides simple, out of the box VPC functionality that follows widely accepted best
+           practices.
 linktitle: Virtual Private Cloud (VPC)
 menu:
   userguides:
@@ -9,7 +11,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/vpc/"]
 ---
 
-<a href="{{< relref "_index.md" >}}">
+<a href="{{< relref "./" >}}">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -304,12 +306,12 @@ export const vpcPublicSubnetIds = vpc.publicSubnetIds;
 The `subnets` argument simply takes an array of subnet specifications. Each one can include this information:
 
 * `type`: A required type of subnet to create. There are three kinds available:
-  - A `public` subnet is is one whose traffic is routed to an
+    * A `public` subnet is is one whose traffic is routed to an
     [Internet Gateway (IGW)](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html).
-  - A `private` subnet is one that is configured to use a
+    * A `private` subnet is one that is configured to use a
     [NAT Gateway (NAT)](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat.html) so that it can reach the internet,
     but which prevents the internet from initiating connections to it.
-  - An `isolated` subnet is one that cannot reach the internet either through an IGW or with NAT.
+    * An `isolated` subnet is one that cannot reach the internet either through an IGW or with NAT.
 
 * `name`: An optional name to use as part of the subnet name. If not provided, the type of the subnet will be
   used. As a result, this is required when making multiple subnets of the same type.
@@ -392,7 +394,7 @@ routed to in a round-robin fashion from the availability zones with NAT gateways
 
 All traffic in and out of a VPC is controlled by
 [Security Groups](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html), which act as virtual
-firewalls that limit inbound traffic to and outbound traffic from your VPC. 
+firewalls that limit inbound traffic to and outbound traffic from your VPC.
 
 For security groups, you add _rules_ that control traffic what traffic is permitted in the form of _ingress rules_ (for
 inbound traffic) and _egress rules_ (outbound traffic). In addition to specifying what network protocol and ports

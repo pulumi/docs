@@ -1,5 +1,8 @@
 ---
-title: Create a New Project
+title: Create a New Project | Kubernetes
+h1: Create a New Project
+linktitle: Create a New Project
+meta_desc: This page provides an overview of how to create a new Kubernetes + Pulumi project.
 weight: 5
 menu:
   getstarted:
@@ -40,7 +43,6 @@ $ pulumi new kubernetes-python
 $ mkdir quickstart && cd quickstart
 $ pulumi new kubernetes-csharp
 ```
-
 
 {{< cli-note >}}
 

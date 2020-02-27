@@ -1,6 +1,7 @@
 ---
-title: "EKS - Migrating Node Groups with Zero Downtime"
-
+title: EKS - Migrating Node Groups with Zero Downtime
+meta_desc: Zero downtime Node Group Migrations in Elastic Kubernetes Servie (EKS). Learn
+           Kubernetes Day 2 operations to administer & update a running cluster & workloads.
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups/"]
 ---
 
@@ -20,26 +21,26 @@ original node group from Kubernetes and AWS.
 
 [View the code on GitHub][example-gh]
 
-![](/images/docs/reference/kubernetes/eks-migrate-nodegroups.png)
+![EKS Migrate Node Groups](/images/docs/reference/kubernetes/eks-migrate-nodegroups.png)
 
 {{< aws-eks-prereqs >}}
 
 ## Initialize the Pulumi Project
 
-1.  Start by cloning the [example][example-gh] to your local machine.
+1. Start by cloning the [example][example-gh] to your local machine.
 
     ```bash
     $ git clone https://github.com/pulumi/examples
     $ cd examples/aws-ts-eks-migrate-nodegroups
     ```
 
-1.  Install the dependencies.
+1. Install the dependencies.
 
     ```bash
     $ npm install
     ```
 
-1.  Create a new Pulumi [stack][stack] named `dev`.
+1. Create a new Pulumi [stack][stack] named `dev`.
 
     ```bash
     $ pulumi stack init dev
@@ -221,20 +222,20 @@ capabilities that Kubernetes offers for HA and rolling updates to support
 migration of the NGINX Ingress Controller example.
 
 We highly encourage you to check out the references below to help your
-apps achieve proper Kubernetes and production readiness. 
+apps achieve proper Kubernetes and production readiness.
 
 #### References
 
-- [Deployments][k8s-deployments]
-- [PodDisruptionBudget][k8s-pdb]
-- [Node Selectors & Affinity][k8s-node-affinity]
-- [Pod Affinity & Anti-Affinity][k8s-pod-affinity]
-- [Service Selectors][k8s-service]
-- [Readiness & Liveness Probes][k8s-probes]
-- [Lifecycle Hooks][k8s-hooks]
-- [Termation Grace Period & Graceful Shutdown][k8s-graceful-shutdown]
-- [Pod Termination Lifecycle][pod-lifecycle]
-- [Zero-downtime Deployment in Kubernetes with Jenkins][k8s-jenkins]
+* [Deployments][k8s-deployments]
+* [PodDisruptionBudget][k8s-pdb]
+* [Node Selectors & Affinity][k8s-node-affinity]
+* [Pod Affinity & Anti-Affinity][k8s-pod-affinity]
+* [Service Selectors][k8s-service]
+* [Readiness & Liveness Probes][k8s-probes]
+* [Lifecycle Hooks][k8s-hooks]
+* [Termation Grace Period & Graceful Shutdown][k8s-graceful-shutdown]
+* [Pod Termination Lifecycle][pod-lifecycle]
+* [Zero-downtime Deployment in Kubernetes with Jenkins][k8s-jenkins]
 
 ## The Great Migration
 
@@ -245,7 +246,7 @@ instead, specifically targets the `2xlarge` node group given its heftier specs.
 Both scheduling choices were made with the intent of segmenting our workloads
 by use-case, and performance requirements we've identified.
 
-In our [inital update][initial-update] we selected that our EKS 
+In our [inital update][initial-update] we selected that our EKS
 control plane run on `v1.13.7` of Kubernetes, that the Standard node group
 use `v1.13.7` of the [EKS-optimized][eks-amis] worker AMIs, and that the
 `2xlarge` node group use `v1.12.7` workers.
@@ -253,7 +254,7 @@ use `v1.13.7` of the [EKS-optimized][eks-amis] worker AMIs, and that the
 Since we do not want our `2xlarge` workers to drift too far apart from the control
 plane's version to cause [unsupported skew][version-skew], and we
 ultimately realize that the `2xlarge` node group may not suffice for a
-large, anticipated request load, we've decided to update various settings of 
+large, anticipated request load, we've decided to update various settings of
 the node group for NGINX.
 
 The node group that NGINX will select and target will go from:
@@ -275,7 +276,7 @@ machine by doing the following:
 $ go get -u github.com/rakyll/hey
 ```
 
-Using the `LB` environment variable previously defined in the 
+Using the `LB` environment variable previously defined in the
 `pulumi stack output` for NGINX's AWS load balancer, and a helper script in
 `./scripts`, we'll load test for many iterations of 50,000 requests, with 100
 concurrent requests at a time, e.g. run testing across 75 iterations:
@@ -328,7 +329,7 @@ This change updates the NGINX Deployment spec to require the use of
 `c5.4xlarge` nodes during scheduling, and forces a rolling update over to the
 `4xlarge` node group.
 
-![](/images/docs/reference/kubernetes/migrate-nginx-4xlarge.png)
+![Migrate NGINX 4x-large](/images/docs/reference/kubernetes/migrate-nginx-4xlarge.png)
 
 Edit `index.ts` by setting `nodeSelectorTermValues` to `c5.4xlarge`, and run an update:
 
@@ -355,7 +356,7 @@ $ kubectl get nodes -o wide --show-labels -l beta.kubernetes.io/instance-type=c5
 
 > **Note:** It may take a couple of minutes for the Pods to fully migrate over, but
 > it will do so with zero downtime as demonstrated in the load testing.
-
+<br />
 > **Note:** You should also notice a linear up-tick in **requests per second** in the
 load testing results, due to the more capable `c5.4xlarge` worker instances
 being used.
@@ -368,10 +369,10 @@ longer in use.
 
 Decommissioning the node group means that we’ll:
 
-  * Drain the Kubernetes nodes.
-  * Delete the Kubernetes nodes from the APIServer.
-  * Scale down the Auto Scaling Group to 0.
-  * Delete the node group.
+* Drain the Kubernetes nodes.
+* Delete the Kubernetes nodes from the APIServer.
+* Scale down the Auto Scaling Group to 0.
+* Delete the node group.
 
 Setup `kubectl` by using the `kubeconfig` from the stack output.
 
@@ -396,7 +397,7 @@ $ ./scripts/delete-t3.2xlarge-nodes.sh
 
 Scale down the node group Auto Scaling Group completely:
 
-![](/images/docs/reference/kubernetes/scale-down-ng-2xlarge.png)
+![Scale Down ng-2xlarge](/images/docs/reference/kubernetes/scale-down-ng-2xlarge.png)
 
 Edit `index.ts` by setting the `desiredCapacity` to `0` for the `2xlarge` node group, and run an update:
 
@@ -406,7 +407,7 @@ $ pulumi up
 
 Once the Auto Scaling Group has scaled down, we can delete the node group from AWS and the Pulumi program:
 
-![](/images/docs/reference/kubernetes/remove-ng-2xlarge.png)
+![Remove ng-2xlarge](/images/docs/reference/kubernetes/remove-ng-2xlarge.png)
 
 Delete the snippet above from `index.ts`, and run an update:
 
@@ -428,14 +429,17 @@ process. 🍹🎉
 Run the following command to tear down the resources that are part of our stack.
 
 1. Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these resources.
+
 ```bash
 $ pulumi destroy
 ```
 
 1. To delete the stack, run the following command.
+
 ```bash
 $ pulumi stack rm
 ```
+
 > **Note:** This command deletes all deployment history from the Pulumi Console and cannot be undone.
 
 ## Summary
@@ -455,8 +459,9 @@ For a follow-up example on how to further use Pulumi to create Kubernetes
 clusters, or deploy workloads to a cluster, check out the rest of the
 [Kubernetes tutorials]({{< relref "/docs/tutorials/kubernetes" >}}).
 
+<!-- markdownlint-disable url -->
 [example-gh]: https://github.com/pulumi/examples/tree/master/aws-ts-eks-migrate-nodegroups
-[stack]: {{< relref "/docs/intro/concepts/stack.md" >}}
+[stack]: {{< relref "/docs/intro/concepts/stack" >}}
 [eks-amis]: https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
 [ingress-nginx]: https://github.com/kubernetes/ingress-nginx
 [echoserver]: https://github.com/kubernetes-retired/contrib/blob/master/ingress/echoheaders/echo-app.yaml
@@ -482,3 +487,4 @@ clusters, or deploy workloads to a cluster, check out the rest of the
 [sigterm]: https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html
 [initial-update]: #create-an-eks-cluster-deploy-workloads
 [hey-load-testing]: https://github.com/rakyll/hey
+<!-- markdownlint-enable url -->

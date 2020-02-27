@@ -1,5 +1,7 @@
 ---
 title: Authoring a Policy Pack
+meta_desc: This page provides an overview on how to author a Policy Pack to enforce best practices
+           and security compliance when creating coud resources.
 linktitle: Authoring a Policy Pack
 weight: 1
 menu:
@@ -7,6 +9,8 @@ menu:
     parent: pac
 aliases: ["/docs/get-started/policy-as-code/authoring-a-policy-pack/"]
 ---
+<!-- markdownlint-disable emphasis ul -->
+
 {{% crossguard-preview %}}
 
 1. Install prerequisites.
@@ -38,6 +42,7 @@ On macOS, you can run `export PULUMI_EXPERIMENTAL=true` or simply prepend it to 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy new aws-typescript
 ```
+
 {{% /md %}}
     </div>
 
@@ -49,6 +54,7 @@ On Linux, you can run `export PULUMI_EXPERIMENTAL=true` or simply prepend it to 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy new aws-typescript
 ```
+
 {{% /md %}}
     </div>
 
@@ -60,20 +66,21 @@ On Windows, you must first set the environment variable before running the comma
 **Windows cmd.exe**
 
 ```bat
-set PULUMI_EXPERIMENTAL=true
-pulumi policy new aws-typescript
+> set PULUMI_EXPERIMENTAL=true
+> pulumi policy new aws-typescript
 ```
 
 **Windows PowerShell**
 
 ```powershell
-$env:PULUMI_EXPERIMENTAL = 'true'
-pulumi policy new aws-typescript
+> $env:PULUMI_EXPERIMENTAL = 'true'
+> pulumi policy new aws-typescript
 ```
+
 {{% /md %}}
     </div>
 
-1. Tweak the Policy Pack in the `index.ts` file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled. Each Policy must have a unique name, an enforcement level, and a validation function. Here we use `validateTypedResource` that allows us to validate S3 Bucket resources.
+1. Tweak the Policy Pack in the `index.ts` file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled. Each Policy must have a unique name, an enforcement level, and a validation function. Here we use `validateResourceOfType` that allows us to validate S3 Bucket resources.
 
     ```typescript
     // Create a new Policy Pack.
@@ -90,9 +97,9 @@ pulumi policy new aws-typescript
             // simply prints a warning for users, while a "mandatory" policy will block an update from proceeding.
             enforcementLevel: "mandatory",
 
-            // The validateTypedResource function allows you to filter resources. In this case, the rule only
+            // The validateResourceOfType function allows you to filter resources. In this case, the rule only
             // applies to S3 buckets and reports a violation if the acl is "public-read" or "public-read-write".
-            validateResource: validateTypedResource(aws.s3.Bucket, (bucket, args, reportViolation) => {
+            validateResource: validateResourceOfType(aws.s3.Bucket, (bucket, args, reportViolation) => {
                 if (bucket.acl === "public-read" || bucket.acl === "public-read-write") {
                     reportViolation(
                         "You cannot set public-read or public-read-write on an S3 bucket. " +
@@ -122,18 +129,22 @@ Policy Packs can be tested on a user’s local workstation to facilitate rapid d
     <div class="os-prologue-macos"></div>
     <div class="mt-4">
 {{% md %}}
+
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
+
 {{% /md %}}
     </div>
 
     <div class="os-prologue-linux"></div>
     <div class="mt-4">
 {{% md %}}
+
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
+
 {{% /md %}}
     </div>
 
@@ -143,16 +154,17 @@ $ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-dir
 **Windows cmd.exe**
 
 ```bat
-set PULUMI_EXPERIMENTAL=true
-pulumi preview --policy-pack <path-to-policy-pack-directory>
+> set PULUMI_EXPERIMENTAL=true
+> pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
 
 **Windows PowerShell**
 
 ```powershell
-$env:PULUMI_EXPERIMENTAL = 'true'
-pulumi preview --policy-pack <path-to-policy-pack-directory>
+> $env:PULUMI_EXPERIMENTAL = 'true'
+> pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
+
 {{% /md %}}
     </div>
 
@@ -192,9 +204,11 @@ Diagnostics:
 
   aws:s3:Bucket (my-bucket):
     mandatory: [s3-no-public-read] Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.
-    You cannot set public-read or public-read-write on an S3 bucket. Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html
+    You cannot set public-read or public-read-write on an S3 bucket. Read more about ACLs here: [https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html)
 {{< /highlight >}}
 
 Now that your Policy Pack is ready to go, let's enforce the pack across your organization.
 
 {{< get-started-stepper >}}
+
+<!-- markdownlint-enable emphasis ul -->

@@ -1,5 +1,7 @@
 ---
 title: Pulumi CrossGuard policies for AWS (AWSGuard)
+meta_desc: AWSGuard codifies best practices for AWS in a library that you can configure and
+           use to enforce these best practices for your own Pulumi stacks or organization.
 linktitle: AWSGuard
 weight: 2
 
@@ -7,6 +9,7 @@ menu:
   userguides:
     parent: crossguard
 ---
+<!-- markdownlint-disable ul code -->
 {{% crossguard-preview %}}
 
 ## Overview
@@ -21,7 +24,7 @@ In this guide, we'll show you how to create a Policy Pack that configures and us
 
 ### Prerequisites
 
-- [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
+- [Install Pulumi]({{< relref "/docs/get-started/install" >}})
 - [Install Node.js version 8 or later](https://nodejs.org/en/download/)
 
 ### Verify your version of the Pulumi CLI
@@ -39,7 +42,6 @@ To use AWSGuard policies, you must create a Policy Pack that references the `@pu
     ```sh
     mkdir awsguard && cd awsguard
     ```
-
 1. Run the `pulumi policy new` command. Since Policy as Code is in preview, you will need to set `PULUMI_EXPERIMENTAL=true` as an environment variable.
 
     {{< oschoose >}}
@@ -71,19 +73,20 @@ $ PULUMI_EXPERIMENTAL=true pulumi policy new awsguard-typescript
 {{% md %}}
 On Windows, you must first set the environment variable before running the command.
 
-**Windows cmd.exe**
+#### **Windows cmd.exe**
 
 ```bat
-set PULUMI_EXPERIMENTAL=true
-pulumi policy new awsguard-typescript
+> set PULUMI_EXPERIMENTAL=true
+> pulumi policy new awsguard-typescript
 ```
 
-**Windows PowerShell**
+#### **Windows PowerShell**
 
 ```powershell
-$env:PULUMI_EXPERIMENTAL = 'true'
-pulumi policy new awsguard-typescript
+> $env:PULUMI_EXPERIMENTAL = 'true'
+> pulumi policy new awsguard-typescript
 ```
+
 {{% /md %}}
     </div>
 
@@ -159,43 +162,49 @@ Policy Packs can be tested on a user's local workstation to facilitate rapid dev
     <div class="os-prologue-macos"></div>
     <div class="mt-4">
 {{% md %}}
+
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
+
 {{% /md %}}
     </div>
 
     <div class="os-prologue-linux"></div>
     <div class="mt-4">
 {{% md %}}
+
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
+
 {{% /md %}}
     </div>
 
     <div class="os-prologue-windows"></div>
     <div class="mt-4">
 {{% md %}}
-**Windows cmd.exe**
+
+#### **Windows cmd.exe**
 
 ```bat
-set PULUMI_EXPERIMENTAL=true
-pulumi preview --policy-pack <path-to-policy-pack-directory>
+> set PULUMI_EXPERIMENTAL=true
+> pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
 
-**Windows PowerShell**
+#### **Windows PowerShell**
 
 ```powershell
-$env:PULUMI_EXPERIMENTAL = 'true'
-pulumi preview --policy-pack <path-to-policy-pack-directory>
+> $env:PULUMI_EXPERIMENTAL = 'true'
+> pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
+
 {{% /md %}}
     </div>
 
     If the stack is not in compliance, the policy violation will be displayed. Since the enforcement level for all policies are set to advisory, a warning is shown for any resources that are not in compliance with the AWSGuard policies. In this case, logging must be defined for S3 buckets.
 
-    {{< highlight sh >}}
+{{< highlight sh >}}
 Previewing update (dev):
 
     Type                 Name           Plan       Info
@@ -219,7 +228,7 @@ Resources:
 
 1. Running the `pulumi preview` command again will now fail the preview operation.
 
-    {{< highlight sh >}}
+{{< highlight sh >}}
 Previewing update (dev):
 
     Type                 Name           Plan       Info
@@ -249,3 +258,5 @@ aws:s3:Bucket (my-bucket):
 Once you've validated the behavior of the AWSGuard policies you've configured in your Policy Pack, an organization administrator can publish the Policy Pack to the Pulumi Console to be enforced across your organization. To learn more see [Enforcing a Policy Pack Across an Organization]({{< relref "/docs/get-started/crossguard/enforcing-a-policy-pack" >}}).
 
 Now that you've seen how to configure and use AWSGuard policies, you may want to write your own policies. See the [Getting Started tutorial]({{< relref "/docs/get-started/crossguard" >}}) to get started.
+
+<!-- markdownlint-enable ul code -->

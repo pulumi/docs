@@ -1,5 +1,5 @@
 .toc {
-    @apply text-blue-800;
+    @apply text-blue-800 pb-8;
 
     a {
         &:hover {
@@ -16,7 +16,7 @@
     }
 
     h5 {
-        @apply text-gray-500 uppercase tracking-wide font-bold text-sm;
+        @apply text-blue-700 uppercase tracking-wide font-bold text-sm;
     }
 }
 

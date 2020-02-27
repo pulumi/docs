@@ -112,7 +112,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>compute_platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compute platform can be <code class="docutils literal notranslate"><span class="pre">Server</span></code>, <code class="docutils literal notranslate"><span class="pre">Lambda</span></code>, or <code class="docutils literal notranslate"><span class="pre">ECS</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">Server</span></code>.</p></li>
 <li><p><strong>deployment_config_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the deployment config.</p></li>
-<li><p><strong>minimum_healthy_hosts</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A minimum_healthy_hosts block. Minimum Healthy Hosts are documented below.</p></li>
+<li><p><strong>minimum_healthy_hosts</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A minimum_healthy_hosts block. Required for <code class="docutils literal notranslate"><span class="pre">Server</span></code> compute platform. Minimum Healthy Hosts are documented below.</p></li>
 <li><p><strong>traffic_routing_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A traffic_routing_config block. Traffic Routing Config is documented below.</p></li>
 </ul>
 </dd>
@@ -162,7 +162,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.codedeploy.DeploymentConfig.minimum_healthy_hosts">
 <code class="sig-name descname">minimum_healthy_hosts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentConfig.minimum_healthy_hosts" title="Permalink to this definition">¶</a></dt>
-<dd><p>A minimum_healthy_hosts block. Minimum Healthy Hosts are documented below.</p>
+<dd><p>A minimum_healthy_hosts block. Required for <code class="docutils literal notranslate"><span class="pre">Server</span></code> compute platform. Minimum Healthy Hosts are documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
@@ -204,7 +204,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>compute_platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compute platform can be <code class="docutils literal notranslate"><span class="pre">Server</span></code>, <code class="docutils literal notranslate"><span class="pre">Lambda</span></code>, or <code class="docutils literal notranslate"><span class="pre">ECS</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">Server</span></code>.</p></li>
 <li><p><strong>deployment_config_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Assigned deployment config id</p></li>
 <li><p><strong>deployment_config_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the deployment config.</p></li>
-<li><p><strong>minimum_healthy_hosts</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A minimum_healthy_hosts block. Minimum Healthy Hosts are documented below.</p></li>
+<li><p><strong>minimum_healthy_hosts</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A minimum_healthy_hosts block. Required for <code class="docutils literal notranslate"><span class="pre">Server</span></code> compute platform. Minimum Healthy Hosts are documented below.</p></li>
 <li><p><strong>traffic_routing_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A traffic_routing_config block. Traffic Routing Config is documented below.</p></li>
 </ul>
 </dd>
@@ -356,8 +356,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>deployment_style</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">deploymentOption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates whether to route deployment traffic behind a load balancer. Valid Values are <code class="docutils literal notranslate"><span class="pre">WITH_TRAFFIC_CONTROL</span></code> or <code class="docutils literal notranslate"><span class="pre">WITHOUT_TRAFFIC_CONTROL</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deploymentType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are <code class="docutils literal notranslate"><span class="pre">IN_PLACE</span></code> or <code class="docutils literal notranslate"><span class="pre">BLUE_GREEN</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deploymentOption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates whether to route deployment traffic behind a load balancer. Valid Values are <code class="docutils literal notranslate"><span class="pre">WITH_TRAFFIC_CONTROL</span></code> or <code class="docutils literal notranslate"><span class="pre">WITHOUT_TRAFFIC_CONTROL</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">WITHOUT_TRAFFIC_CONTROL</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deploymentType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are <code class="docutils literal notranslate"><span class="pre">IN_PLACE</span></code> or <code class="docutils literal notranslate"><span class="pre">BLUE_GREEN</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">IN_PLACE</span></code>.</p></li>
 </ul>
 <p>The <strong>ec2_tag_filters</strong> object supports the following:</p>
 <ul class="simple">
@@ -522,8 +522,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">deployment_style</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentGroup.deployment_style" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">deploymentOption</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Indicates whether to route deployment traffic behind a load balancer. Valid Values are <code class="docutils literal notranslate"><span class="pre">WITH_TRAFFIC_CONTROL</span></code> or <code class="docutils literal notranslate"><span class="pre">WITHOUT_TRAFFIC_CONTROL</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deploymentType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are <code class="docutils literal notranslate"><span class="pre">IN_PLACE</span></code> or <code class="docutils literal notranslate"><span class="pre">BLUE_GREEN</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deploymentOption</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Indicates whether to route deployment traffic behind a load balancer. Valid Values are <code class="docutils literal notranslate"><span class="pre">WITH_TRAFFIC_CONTROL</span></code> or <code class="docutils literal notranslate"><span class="pre">WITHOUT_TRAFFIC_CONTROL</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">WITHOUT_TRAFFIC_CONTROL</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deploymentType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are <code class="docutils literal notranslate"><span class="pre">IN_PLACE</span></code> or <code class="docutils literal notranslate"><span class="pre">BLUE_GREEN</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">IN_PLACE</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -710,8 +710,8 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>deployment_style</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">deploymentOption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates whether to route deployment traffic behind a load balancer. Valid Values are <code class="docutils literal notranslate"><span class="pre">WITH_TRAFFIC_CONTROL</span></code> or <code class="docutils literal notranslate"><span class="pre">WITHOUT_TRAFFIC_CONTROL</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deploymentType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are <code class="docutils literal notranslate"><span class="pre">IN_PLACE</span></code> or <code class="docutils literal notranslate"><span class="pre">BLUE_GREEN</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deploymentOption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates whether to route deployment traffic behind a load balancer. Valid Values are <code class="docutils literal notranslate"><span class="pre">WITH_TRAFFIC_CONTROL</span></code> or <code class="docutils literal notranslate"><span class="pre">WITHOUT_TRAFFIC_CONTROL</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">WITHOUT_TRAFFIC_CONTROL</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deploymentType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are <code class="docutils literal notranslate"><span class="pre">IN_PLACE</span></code> or <code class="docutils literal notranslate"><span class="pre">BLUE_GREEN</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">IN_PLACE</span></code>.</p></li>
 </ul>
 <p>The <strong>ec2_tag_filters</strong> object supports the following:</p>
 <ul class="simple">

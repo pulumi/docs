@@ -1,6 +1,7 @@
 ---
 title: Continuous Delivery
-
+meta_desc: This page provides an overview of how to integrate Pulumi with your current CI/CD
+           processes to review, validate, and test cloud resources.
 menu:
     userguides:
         identifier: cont_delivery
@@ -15,10 +16,10 @@ Pulumi's approach to infrastructure as code is great for continuous delivery, be
 cloud resources. This means updates to your cloud infrastructure can be reviewed, validated, and tested using the same
 process that you have today. For example, doing code reviews via Pull Requests, running code through linters or static
 analysis tools, and running unit and integration tests as appropriate. It all "just works" for your cloud
-infrasturcture the same way it would for your application code.
+infrastructure the same way it would for your application code.
 
 Pulumi can easily integrate into any CI/CD system. If yours isn't listed below, see our guide for using Pulumi
-within a [generic CI/CD system]({{< relref "other.md" >}}).
+within a [generic CI/CD system]({{< relref "other" >}}).
 
 <div class="supported-cicd-platforms">
     <a href="{{< relref aws-code-services >}}">
@@ -57,6 +58,10 @@ within a [generic CI/CD system]({{< relref "other.md" >}}).
         <img src="/logos/tech/ci-cd/octopus-deploy.svg" alt="Octopus Deploy">
         <h4 class="no-anchor">Octopus Deploy</h4>
     </a>
+    <a href="{{< relref teamcity >}}">
+            <img src="/logos/tech/ci-cd/teamcity.svg" alt="JetBrains TeamCity">
+            <h4 class="no-anchor">JetBrains TeamCity</h4>
+        </a>
     <a href="{{< relref travis >}}">
         <img src="/logos/tech/ci-cd/travis-ci.svg" alt="TravisCI">
         <h4 class="no-anchor">TravisCI</h4>
@@ -64,7 +69,7 @@ within a [generic CI/CD system]({{< relref "other.md" >}}).
 </div>
 
 > Pulumi can also bridge results from your CI/CD system with GitHub, surfacing the results of stack updates
-> on GitHub pull requests. See the [Pulumi GitHub App]({{< relref "github-app.md" >}}) for more information.
+> on GitHub pull requests. See the [Pulumi GitHub App]({{< relref "github-app" >}}) for more information.
 
 ### Configuration and Secrets
 
@@ -79,15 +84,15 @@ sensitive information. See [Managing Secrets with Pulumi]({{< relref "managing-s
 ### Managing Complex Environments
 
 Most real-world environments are complex. Perhaps you have a networking stack that's independent from your data
-and application stacks. Pulumi [supports "stack references"]({{< relref "/docs/intro/concepts/organizing-stacks-projects.md" >}}), which
+and application stacks. Pulumi [supports "stack references"]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}), which
 permit one stack to depend upon another. This facilitates continuous delivery at scale.
 
 ### Using Branches for Environments
 
 Pulumi is agnostic to what sort of branching strategy you take. Most customers use Git-based flows; the most common is
-to use one branch-per-[stack]({{< relref "/docs/intro/concepts/stack.md" >}}). This allows you to control deployments to environments
+to use one branch-per-[stack]({{< relref "/docs/intro/concepts/stack" >}}). This allows you to control deployments to environments
 using your usual commit, code review, and approval process, such as GitHub pull requests.
 
 If you are using GitHub pull requests to trigger updates, you will likely want to use the
-[Pulumi GitHub App]({{< relref "github-app.md" >}}). This gives you interactive infrastructure change previews
+[Pulumi GitHub App]({{< relref "github-app" >}}). This gives you interactive infrastructure change previews
 inside of your Pull Request, making it easier to see, review, and comment on any changes before a deployment occurs.

@@ -1,6 +1,6 @@
 ---
-title: "Video Thumbnailer"
-
+title: Video Thumbnailer with AWS Lambda and Fargate
+meta_desc: This tutorial will teach you how to build a video thumbnailer using AWS Lambda and Fargate.
 aliases: ["/docs/reference/tutorials/aws/tutorial-thumbnailer/"]
 ---
 
@@ -18,16 +18,16 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
 
 ## Create and deploy the project
 
-1.  Make sure [Docker](https://docs.docker.com/install/) is installed and running.
+1. Make sure [Docker](https://docs.docker.com/install/) is installed and running.
 
-1.  Run `pulumi new`:
+1. Run `pulumi new`:
 
     ```bash
     $ mkdir video-thumbnail && cd video-thumbnail
     $ pulumi new aws-typescript
     ```
 
-1.  Replace the contents of `index.ts` with the following:
+1. Replace the contents of `index.ts` with the following:
 
     ```typescript
     import * as aws from "@pulumi/aws";
@@ -106,19 +106,19 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
 
     This code declares the following resources:
 
-    - **Cloud infrastructure**. S3 bucket for videos and still frames. We define a [stack output property]({{< relref "/docs/intro/concepts/stack.md#outputs" >}}) `bucketName`, to easily retrieve this value after the project has been deployed.
+    - **Cloud infrastructure**. S3 bucket for videos and still frames. We define a [stack output property]({{< relref "/docs/intro/concepts/stack#outputs" >}}) `bucketName`, to easily retrieve this value after the project has been deployed.
     - **Containers**. Uses awsx.ecs.FargateTaskDefinition, which is a high-level, convenient component for working with containers. The component automatically provisions a container registry instance in ECR, runs a Docker build, and saves the Docker image to the provisioned ECR instance. It also defines an ECS task and configures it to use the built image.
     - **Serverless functions**
       - The Lambda function `onNewVideo` is triggered whenever a new `.mp4` video file is uploaded to the S3 bucket. The Lambda extracts the time index that is encoded in the video filename (in the form `file_mm-ss`) and launches the container task.
       - The Lambda function `onNewThumbnail` is triggered when a new `.jpg` thumbnail file is uploaded to the S3 bucket, and prints a message to the log file.
 
-1.  Create a directory named `docker-ffmpeg-thumb`.
+1. Create a directory named `docker-ffmpeg-thumb`.
 
     ```bash
     $ mkdir docker-ffmpeg-thumb
     ```
 
-1.  Create a file named `Dockerfile` in the `docker-ffmpeg-thumb` folder with the following contents. For the container setup, it uses an existing container for FFmpeg and installs Python and the AWS CLI. When the container is started, it copies the video file from S3, runs `ffmpeg`, and copies the output back to S3.
+1. Create a file named `Dockerfile` in the `docker-ffmpeg-thumb` folder with the following contents. For the container setup, it uses an existing container for FFmpeg and installs Python and the AWS CLI. When the container is started, it copies the video file from S3, runs `ffmpeg`, and copies the output back to S3.
 
     ```docker
     FROM jrottenberg/ffmpeg
@@ -140,13 +140,13 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
         aws s3 cp ./${OUTPUT_FILE} s3://${S3_BUCKET}/${OUTPUT_FILE}
     ```
 
-1.  Configure Pulumi to use an AWS region that supports Fargate. (Note: Fargate is currently available only in `us-east-1`, `us-east-2`, `us-west-2`, and `eu-west-1`).
+1. Configure Pulumi to use an AWS region that supports Fargate. (Note: Fargate is currently available only in `us-east-1`, `us-east-2`, `us-west-2`, and `eu-west-1`).
 
     ```bash
     $ pulumi config set aws:region us-east-2
     ```
 
-1.  Preview and deploy changes via `pulumi up`, which will take a few minutes. During the preview phase, Pulumi runs the Docker build.
+1. Preview and deploy changes via `pulumi up`, which will take a few minutes. During the preview phase, Pulumi runs the Docker build.
 
     ```bash
     $ pulumi up
@@ -177,9 +177,9 @@ To test the application, we'll upload a video to S3, view the running applicatio
 
 ### 1. Upload a video to S3
 
--  Download [a short sample video](https://github.com/pulumi/examples/blob/master/aws-ts-thumbnailer/sample/cat.mp4?raw=true) to your project folder.
+- Download [a short sample video](https://github.com/pulumi/examples/blob/master/aws-ts-thumbnailer/sample/cat.mp4?raw=true) to your project folder.
 
--  Copy the video to S3, encoding the time index in the filename (00:01 becomes `00-01`):
+- Copy the video to S3, encoding the time index in the filename (00:01 becomes `00-01`):
 
     ```bash
     $ aws s3 cp cat.mp4 s3://$(pulumi stack output bucketName)/cat_00-01.mp4

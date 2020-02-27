@@ -1,6 +1,7 @@
 ---
-title: "Run a Stateless App Deployment"
-
+title: Kubernetes Stateless App Deployment
+meta_desc: Learn how to deploy an automatically scaled out container running inside a Kubernetes
+           cluster.
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-stateless-app/"]
 ---
 
@@ -30,7 +31,7 @@ You need to have the Pulumi CLI and a working Kubernetes cluster.
 [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube) is an easy way to get started.
 
 1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-2. [Connect Pulumi to a Kubernetes Cluster]({{< relref "/docs/intro/cloud-providers/kubernetes/setup.md" >}})
+2. [Connect Pulumi to a Kubernetes Cluster]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}})
 
 ## Creating and Running the Application
 
@@ -41,7 +42,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
 ### Create and Configure a Project
 
-1.  To create a new Pulumi project, let's use a template:
+1. To create a new Pulumi project, let's use a template:
 
     ```shell
     $ mkdir k8s-nginx && cd k8s-nginx
@@ -50,7 +51,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
     This command will initialize a fresh project in the `k8s-nginx` newly-created directory.
 
-2.  Next, replace the minimal contents of the template's `index.ts` file with the code for the deployment:
+2. Next, replace the minimal contents of the template's `index.ts` file with the code for the deployment:
 
     ```typescript
     import * as pulumi from "@pulumi/pulumi";
@@ -84,7 +85,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
 ### Deploying
 
-3.  Now we're ready to deploy our code. To do so, simply run `pulumi up`:
+1. Now we're ready to deploy our code. To do so, simply run `pulumi up`:
 
     ```shell
     $ pulumi up
@@ -126,12 +127,11 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
         Permalink: https://app.pulumi.com/joeduffy/k8s-nginx-dev/updates/1
 
-
     Note that Pulumi will wait until the deployment has succeeded (or failed), and it will print detailed
     status outputs as the deployment happens. This is in contrast to `kubectl` which returns immediately. The
     Pulumi CLI's approach ensures that you have more robust deployments that converge as expected.
 
-4. Now that we've done the deployment, let's check some state with `kubectl`:
+2. Now that we've done the deployment, let's check some state with `kubectl`:
 
     ```shell
     $ kubectl describe deployment $(pulumi stack output nginx)
@@ -190,7 +190,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
 You can update your program by changing the source code and re-running `pulumi up`. Let's do two quick updates
 to see what this looks like. After that, we'll clean up and we're done!
 
-5. Let's update our version of Nginx from 1.7 to 1.8. Simply replace the line
+1. Let's update our version of Nginx from 1.7 to 1.8. Simply replace the line
 
     ```typescript
                         image: "nginx:1.7.9",
@@ -244,10 +244,9 @@ to see what this looks like. After that, we'll clean up and we're done!
                     }
                 }
 
-
     If we select `yes` and hit enter to proceed with the update, the deployment will be updated in place.
 
-6.  Next, let's scale our application by increasing the replica count. You may have noticed this example used
+2. Next, let's scale our application by increasing the replica count. You may have noticed this example used
     the Pulumi configuration system so that the replica count can be easily changed. Simply run
 
     ```shell

@@ -3,7 +3,7 @@ title: "Pulumi now supports Atlassian Identity"
 authors: ["praneet-loke"]
 tags: ["Features","CI/CD"]
 date: "2019-01-30"
-meta_desc: "Sign up for a new Pulumi account using your Atlassian identity. If you have a Pulumi account, connect it with your Atlassian identity, invite members of your Bitbucket team, and start collaborating on Pulumi stacks owned by your organizations. You can also use the Pulumi CLI in your team's CI/CD workflow."
+meta_desc: "Connect your Pulumi account with your Atlassian identity, invite members of your Bitbucket team, and start collaborating on Pulumi stacks."
 meta_image: "atlassian-1.png"
 ---
 
@@ -49,23 +49,23 @@ A [Bitbucket Team](https://confluence.atlassian.com/bitbucket/teams-321853005.ht
 helps you organize users into user groups and therefore, assign each of
 them a permission to your repositories. By adding a Bitbucket
 Team-backed organization, you can invite the same members to collaborate
-on Pulumi. 
+on Pulumi.
 
 This allows you to set permissions on
-[Stacks]({{< ref "/docs/intro/concepts/stack" >}}) owned by your
+[Stacks]({{< relref "/docs/intro/concepts/stack" >}}) owned by your
 organization. You can learn more about
-[Teams & Collaboration]({{< ref "/docs/intro/console/collaboration" >}})
+[Teams & Collaboration]({{< relref "/docs/intro/console/collaboration" >}})
 in the Pulumi and how those permissions get applied too.
 
 ## CI Integration
 
 Did you also know that the Pulumi CLI can be used in most, if not all,
 CI/CD workflows? Check out our
-[documentation]({{< ref "/docs/guides/continuous-delivery" >}}) for integrating
+[documentation]({{< relref "/docs/guides/continuous-delivery" >}}) for integrating
 with several popular CI/CD systems. Get up and running with Pulumi in CI
-on [GitLab]({{< ref "/docs/guides/continuous-delivery/gitlab-ci" >}}),
-[Travis]({{< ref "/docs/guides/continuous-delivery/travis" >}}),
-[Azure DevOps]({{< ref "/docs/guides/continuous-delivery/azure-devops" >}}) and more.
+on [GitLab]({{< relref "/docs/guides/continuous-delivery/gitlab-ci" >}}),
+[Travis]({{< relref "/docs/guides/continuous-delivery/travis" >}}),
+[Azure DevOps]({{< relref "/docs/guides/continuous-delivery/azure-devops" >}}) and more.
 Don't see docs for a particular CI system? Let us know or better yet
 file an issue [here](https://github.com/pulumi/docs/issues).
 

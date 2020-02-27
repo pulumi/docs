@@ -1,6 +1,7 @@
 ---
-title: "Gating rollout on Prometheus checks"
-
+title: Gated Kubernetes Deployments with Prometheus
+meta_desc: Learn how to create a staged rollout (from 3-replica canary -> 10-replica
+           staging), gated by checking that the P90 response time reported by Prometheus.
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-p8s-rollout/"]
 ---
 
@@ -123,7 +124,9 @@ can see `canary-example-app` and `canary-staging-app` created.
    that was computed by the promise is `export`ed, which causes Pulumi to report its value just
    before it terminates.
 
+<!-- markdownlint-disable MD034 -->
 [install]: {{< relref "/docs/get-started/install" >}}
-[configuration]: {{< relref "/docs/intro/cloud-providers/kubernetes/setup.md" >}}
+[configuration]: {{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}}
 [p8s]: https://prometheus.io/
 [helm]: https://www.helm.sh/
+<!-- markdownlint-restore MD034 -->

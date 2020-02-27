@@ -1,5 +1,6 @@
 ---
 title: "Environment Variables"
+meta_desc: A list of different environemt variables the Pulumi CLI supports.
 ---
 
 | Variable | Setting | Description |

@@ -1545,8 +1545,7 @@ Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHAR
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The Hosted Zone name of the desired Hosted Zone.</p></li>
 <li><p><strong>private_zone</strong> (<em>bool</em>) – Used with <code class="docutils literal notranslate"><span class="pre">name</span></code> field to get a private Hosted Zone.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – Used with <code class="docutils literal notranslate"><span class="pre">name</span></code> field. A mapping of tags, each pair of which must exactly match
-a pair on the desired Hosted Zone.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – Used with <code class="docutils literal notranslate"><span class="pre">name</span></code> field. A mapping of tags, each pair of which must exactly match a pair on the desired Hosted Zone.</p></li>
 <li><p><strong>vpc_id</strong> (<em>str</em>) – Used with <code class="docutils literal notranslate"><span class="pre">name</span></code> field to get a private Hosted Zone associated with the vpc_id (in this case, private_zone is not mandatory).</p></li>
 <li><p><strong>zone_id</strong> (<em>str</em>) – The Hosted Zone id of the desired Hosted Zone.</p></li>
 </ul>

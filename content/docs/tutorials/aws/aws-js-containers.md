@@ -1,5 +1,7 @@
 ---
-title: "ECS Fargate Containers"
+title: "ECS Fargate Containers | JavaScript"
+h1: "ECS Fargate Containers"
+linktitle: "ECS Fargate Containers"
 no_edit_this_page: true
 ---
 

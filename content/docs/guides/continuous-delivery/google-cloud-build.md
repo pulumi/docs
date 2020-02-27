@@ -1,6 +1,6 @@
 ---
 title: Google Cloud Build
-
+meta_desc: This page gives an overview of how to integration Google Cloud Build with a Pulumi program.
 menu:
     userguides:
         parent: cont_delivery
@@ -16,24 +16,24 @@ aliases:
 ### Google Cloud Platform
 
 - A Google Cloud Platform account with the following APIs enabled:
-  - Cloud Build API
-  - Cloud Functions API (and/or any other relevant resource that will be deployed).
+    - Cloud Build API
+    - Cloud Functions API (and/or any other relevant resource that will be deployed).
 - Add `Cloud Functions Developer` role (and/or any other relevant resource that will be deployed) and the `Service Account User` role to the Cloud Build's service account. You can do this by navigating to the IAM tab in the GCP Console.
 
 ![Cloud Build service account](/images/docs/reference/google-cloud-build/cloud-build-service-account.png)
 
-  - If you do not grant the necessary permissions to the Cloud Build service account, you may see an error like this while deploying Cloud Functions (or whichever resource you are deploying.)
+- If you do not grant the necessary permissions to the Cloud Build service account, you may see an error like this while deploying Cloud Functions (or whichever resource you are deploying.)
 
-  ```
-  error: Plan apply failed: googleapi: Error 403: Missing necessary permission iam.serviceAccounts.actAs for  on resource cloud-build-samples@appspot.gserviceaccount.com. Please grant  the roles/iam.serviceAccountUser role. You can do that by running 'gcloud iam service-accounts add-iam-policy-binding cloud-build-samples@appspot.gserviceaccount.com --member= --role=roles/iam.serviceAccountUser', forbidden
-  ```
+```
+error: Plan apply failed: googleapi: Error 403: Missing necessary permission iam.serviceAccounts.actAs for  on resource cloud-build-samples@appspot.gserviceaccount.com. Please grant  the roles/iam.serviceAccountUser role. You can do that by running 'gcloud iam service-accounts add-iam-policy-binding cloud-build-samples@appspot.gserviceaccount.com --member= --role=roles/iam.serviceAccountUser', forbidden
+```
 
 ### Pulumi
 
 - A Pulumi account. Don't have one? [Signup](https://app.pulumi.com/signup) now.
 - An existing stack or create one based off a template.
 - This page uses the [GCP Functions example](https://github.com/pulumi/examples/tree/master/gcp-ts-functions) from the Pulumi examples repo.
-  - The choice of example has no bearing on the information presented on this page. You may choose any example. However, the Cloud Functions example is the easiest and quickest to get up and running with Cloud Build.
+    - The choice of example has no bearing on the information presented on this page. You may choose any example. However, the Cloud Functions example is the easiest and quickest to get up and running with Cloud Build.
 
 ## Deploying from a Cloud Source repo
 
@@ -77,9 +77,9 @@ steps:
 
 In the above configuration, both `_BUILD_TYPE` and `_INSECURE_SUBSTITUTION_PULUMI_ACCESS_TOKEN` are substitutions configured in Cloud Build Triggers. You can read more about triggers [here](https://cloud.google.com/cloud-build/docs/running-builds/automate-builds).
 
-* `_BUILD_TYPE` is used to indicate to the build environment about the type of build it is running. This allows us to run a `preview` or an `update` based on the build type. To configure the substitution, you need to setup build triggers for each type of branch builds you intend to support for your project.
+- `_BUILD_TYPE` is used to indicate to the build environment about the type of build it is running. This allows us to run a `preview` or an `update` based on the build type. To configure the substitution, you need to setup build triggers for each type of branch builds you intend to support for your project.
 
-* `_INSECURE_SUBSTITUTION_PULUMI_ACCESS_TOKEN` is used to supply the [Pulumi Access Token](https://app.pulumi.com/account/tokens) value.
+- `_INSECURE_SUBSTITUTION_PULUMI_ACCESS_TOKEN` is used to supply the [Pulumi Access Token](https://app.pulumi.com/account/tokens) value.
 
 For example, if you only want to support PR and merge builds, setup two triggers with the filter pattern `master` for all merge builds and `^master` for all other builds.
 
@@ -135,10 +135,10 @@ To setup a build trigger, navigate to the Cloud Build service (or click [here](h
 Click on **Add Trigger** and follow the prompts to setup a trigger for your repo. In the final step **Trigger settings**, select the following settings:
 
 - **Branch (regex)**: `[^master]`
-  - This will match any branch _except_ `master`.
-  - This means that this trigger will run for any branch other than `master`.
-  - Alternatively, you can set this to `master` if you want this trigger to only run for `master` branches.
-  - The default `.*` will match all branches, and therefore, the trigger will run for pushes against any branch.
+    - This will match any branch _except_ `master`.
+    - This means that this trigger will run for any branch other than `master`.
+    - Alternatively, you can set this to `master` if you want this trigger to only run for `master` branches.
+    - The default `.*` will match all branches, and therefore, the trigger will run for pushes against any branch.
 - **Build configuration**: `Cloud Build configuration`.
 
 ## Next Steps

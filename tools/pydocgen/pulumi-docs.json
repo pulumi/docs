@@ -14,6 +14,12 @@
       "terraform_provider_name": ""
     },
     {
+      "name": "Pulumi Alicloud",
+      "package_name": "pulumi_alicloud",
+      "pulumi_provider_name": "alicloud",
+      "terraform_provider_name": "alicloud"
+    },
+    {
       "name": "Pulumi Random",
       "package_name": "pulumi_random",
       "pulumi_provider_name": "random",
@@ -98,6 +104,12 @@
       "terraform_provider_name": ""
     },
     {
+      "name": "Pulumi Keycloak",
+      "package_name": "pulumi_keycloak",
+      "pulumi_provider_name": "keycloak",
+      "terraform_provider_name": ""
+    },
+    {
       "name": "Pulumi vSphere",
       "package_name": "pulumi_vsphere",
       "pulumi_provider_name": "vsphere",
@@ -120,6 +132,12 @@
       "package_name": "pulumi_linode",
       "pulumi_provider_name": "linode",
       "terraform_provider_name": "linode"
+    },
+    {
+      "name": "Pulumi Mailgun",
+      "package_name": "pulumi_mailgun",
+      "pulumi_provider_name": "mailgun",
+      "terraform_provider_name": "mailgun"
     },
     {
       "name": "Pulumi MySQL",
@@ -186,6 +204,12 @@
       "package_name": "pulumi_rabbitmq",
       "pulumi_provider_name": "rabbitmq",
       "terraform_provider_name": "rabbitmq"
+    },
+    {
+      "name": "Pulumi Rancher2",
+      "package_name": "pulumi_rancher2",
+      "pulumi_provider_name": "rancher2",
+      "terraform_provider_name": "rancher2"
     },
     {
       "name": "Pulumi TLS",

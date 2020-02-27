@@ -1,6 +1,7 @@
 ---
 layout: "search-data"
 outputs: ["json"]
-noindex: true
+exclude_from_pulumi_search_index: true
+block_external_search_index: true
 private: true
 ---

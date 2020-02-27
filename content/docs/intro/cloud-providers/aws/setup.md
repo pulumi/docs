@@ -1,14 +1,16 @@
 ---
-title: Setup
-
+title: AWS Setup
+meta_desc: This page provides an overview of how to setup and configure credentials
+           for the Pulumi AWS Provider.
 aliases: ["/docs/reference/clouds/aws/setup/"]
 ---
 
-<!-- LINKS -->
+<!-- markdownlint-disable url -->
 [Pulumi AWS provider]: {{< relref "./" >}}
 [iam-user-console]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console
 [iam-manage-keys]: https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html
 [configure-aws-cli]: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+<!-- markdownlint-enable url -->
 
 The [Pulumi AWS provider] uses the AWS SDK to manage and provision resources.
 
@@ -109,7 +111,7 @@ $ export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>`
 
 Or use the `set` command on Windows:
 
-```batch
+```bat
 > set AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>
 > set AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
 ```

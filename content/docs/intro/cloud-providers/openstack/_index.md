@@ -1,5 +1,6 @@
 ---
 title: OpenStack
+meta_desc: This page provides an overview of the OpenStack Provider for Pulumi.
 menu:
   intro:
     parent: cloud-providers
@@ -17,7 +18,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/o
 
 ## Setup
 
-The OpenStack provider supports several options for providing access to OpenStack credentials.  See the [OpenStack setup page]({{< relref "setup.md" >}}) for details.
+The OpenStack provider supports several options for providing access to OpenStack credentials.  See the [OpenStack setup page]({{< relref "setup" >}}) for details.
 
 ## Example
 
@@ -84,5 +85,6 @@ The following packages are available in packager managers:
 * JavaScript/TypeScript: [`@pulumi/openstack`](https://www.npmjs.com/package/@pulumi/openstack)
 * Python: [`pulumi-openstack`](https://pypi.org/project/pulumi-openstack/)
 * Go: [`github.com/pulumi/pulumi-openstack/sdk/go/openstack`](https://github.com/pulumi/pulumi-openstack)
+* .NET: [`Pulumi.Openstack`](https://www.nuget.org/packages/Pulumi.Openstack)
 
 The OpenStack provider is open source and available in the [pulumi/pulumi-openstack](https://github.com/pulumi/pulumi-openstack) repo.

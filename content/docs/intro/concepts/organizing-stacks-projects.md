@@ -1,5 +1,6 @@
 ---
 title: Organizing Projects and Stacks
+meta_desc: An overview of best practices when organization and structuring cloud projects and stacks.
 menu:
   intro:
     parent: concepts
@@ -8,10 +9,10 @@ menu:
 aliases: ["/docs/reference/organizing-stacks-projects/"]
 ---
 
-[Projects]({{< relref "project.md" >}}) and [stacks]({{< relref "stack.md" >}}) are intentionally flexible so that they can accommodate
+[Projects]({{< relref "project" >}}) and [stacks]({{< relref "stack" >}}) are intentionally flexible so that they can accommodate
 diverse needs across a spectrum of team, application, and infrastructure scenarios. This is very much like how Git
 repos work and, much like Git repos, there are varying approaches to organizing your code within them. That said,
-there are some clear best practices that, when followed, will ensure Pulumi works seamless for your situation. This
+there are some clear best practices that, when followed, will ensure Pulumi works seamlessly for your situation. This
 article describes some of the most common approaches and when to choose one over another.
 
 ## Tradeoffs
@@ -118,9 +119,17 @@ pulumi.export("kubeConfig", ... a cluster's output property ...)
 ```
 
 ```csharp
-// StackReference is not supported in .NET currently.
-//
-// See https://github.com/pulumi/pulumi/issues/3406.
+class ClusterStack : Stack
+{
+    [Output] public Output<string> KubeConfig { get; set; }
+
+    public ClusterStack()
+    {
+        // ... a cluster is created ...
+
+        this.KubeConfig = ... a cluster's output property ...
+    }
+}
 ```
 
 The challenge here is that our services project needs to ingest this output during deployment so that it can
@@ -154,7 +163,7 @@ from pulumi_kubernetes import Provider, core
 
 env = get_stack()
 infra = StackReference(f"acmecorp/infra/{env}")
-provider = Provider("k8s", { "kubeconfig": infra.get_output("kubeConfig") })
+provider = Provider("k8s", kubeconfig=infra.get_output("kubeConfig"))
 service = core.v1.Service(..., ResourceOptions(provider=provider))
 ```
 
@@ -165,9 +174,20 @@ service = core.v1.Service(..., ResourceOptions(provider=provider))
 ```
 
 ```csharp
-// StackReference is not supported in .NET currently.
-//
-// See https://github.com/pulumi/pulumi/issues/3406.
+using Pulumi;
+using Pulumi.Kubernetes.Core.V1;
+
+class AppStack : Stack
+{
+    public AppStack()
+    {
+        var cluster = new StackReference($"acmecorp/infra/{Deployment.Instance.StackName}");
+        var kubeConfig = cluster.RequireOutput("KubeConfig").Apply(v => v.ToString());
+        var provider = new Provider("k8s", new ProviderArgs { KubeConfig = kubeConfig });
+        var options = new ComponentResourceOptions { Provider = provider };
+        var service = new Service(..., ..., options);
+    }
+}
 ```
 
 The `StackReference` constructor takes as input a string of the form `<organization>/<project>/<stack>`, and lets
@@ -191,11 +211,11 @@ structure enables seamless continuous deployment.
 
 In this model, there is a rough correspondence between a Git repo and a Pulumi project, and a Git branch and
 its associated Pulumi stack. Please read more about
-[how these mapping are maintained here]({{< ref "/docs/guides/continuous-delivery" >}}).
+[how these mapping are maintained here]({{< relref "/docs/guides/continuous-delivery" >}}).
 
 ## Tagging Stacks
 
-Stacks have associated metadata in the form of name/value tags. You can assign custom tags to stacks (when logged into the [Pulumi Service backend]({{< relref "state.md" >}})) to customize how stacks are listed in the [Pulumi Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in the Pulumi Console, you'll be able to group stacks by `Tag: environment`. Please read more about [how to manage stack tags here]({{< relref "stack.md#stack-tags" >}}).
+Stacks have associated metadata in the form of name/value tags. You can assign custom tags to stacks (when logged into the [Pulumi Service backend]({{< relref "state" >}})) to customize how stacks are listed in the [Pulumi Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in the Pulumi Console, you'll be able to group stacks by `Tag: environment`. Please read more about [how to manage stack tags here]({{< relref "stack#stack-tags" >}}).
 
 ## Examples
 

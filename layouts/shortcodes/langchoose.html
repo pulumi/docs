@@ -12,6 +12,8 @@
 {{ range .Params }}
     {{ if eq . "nopreview" }}
         {{ $nopreview = true }}
+    {{ else if eq . "nojavascript" }}
+        {{ $javascript = false }}
     {{ else if eq . "nogo" }}
         {{ $go = false }}
     {{ else if eq . "nodeonly" }}
@@ -41,13 +43,13 @@
 
 <div class="mdl-tabs language-tab-tabs">
     <div class="mdl-tabs__tab-dir language-tab-tabstrip">
-        {{ if $typescript }}<a class="mdl-tabs__tab language-tab is-active">TypeScript</a>{{ end }}
-        {{ if $javascript }}<a class="mdl-tabs__tab language-tab">JavaScript</a>{{ end }}
-        {{ if $python }}<a class="mdl-tabs__tab language-tab">Python</a>{{ end }}
-        {{ if $go }}<a class="mdl-tabs__tab language-tab" data-choice="go">Go{{ if not $nopreview }} <span class="badge badge-preview">PREVIEW</span>{{ end }}</a>{{ end }}
-        {{ if $csharp }}<a class="mdl-tabs__tab language-tab" data-choice="csharp">C#{{ if not $nopreview }} <span class="badge badge-preview">PREVIEW</span>{{ end }}</a>{{ end }}
-        {{ if $fsharp }}<a class="mdl-tabs__tab language-tab" data-choice="fsharp">F#{{ if not $nopreview }} <span class="badge badge-preview">PREVIEW</span>{{ end }}</a>{{ end }}
-        {{ if $visualbasic }}<a class="mdl-tabs__tab language-tab" data-choice="visualbasic">VB{{ if not $nopreview }} <span class="badge badge-preview">PREVIEW</span>{{ end }}</a>{{ end }}
+        {{ if $typescript }}<a data-track="langchoose-typescript" class="mdl-tabs__tab language-tab is-active">TypeScript</a>{{ end }}
+        {{ if $javascript }}<a data-track="langchoose-javascript" class="mdl-tabs__tab language-tab">JavaScript</a>{{ end }}
+        {{ if $python }}<a data-track="langchoose-python" class="mdl-tabs__tab language-tab">Python</a>{{ end }}
+        {{ if $go }}<a data-track="langchoose-go" class="mdl-tabs__tab language-tab" data-choice="go">Go{{ if not $nopreview }} <span class="badge badge-preview">PREVIEW</span>{{ end }}</a>{{ end }}
+        {{ if $csharp }}<a data-track="langchoose-csharp" class="mdl-tabs__tab language-tab" data-choice="csharp">C#{{ if not $nopreview }} <span class="badge badge-preview">PREVIEW</span>{{ end }}</a>{{ end }}
+        {{ if $fsharp }}<a data-track="langchoose-fsharp" class="mdl-tabs__tab language-tab" data-choice="fsharp">F#{{ if not $nopreview }} <span class="badge badge-preview">PREVIEW</span>{{ end }}</a>{{ end }}
+        {{ if $visualbasic }}<a data-track="langchoose-visualbasic" class="mdl-tabs__tab language-tab" data-choice="visualbasic">VB{{ if not $nopreview }} <span class="badge badge-preview">PREVIEW</span>{{ end }}</a>{{ end }}
     </div>
 </div>
 

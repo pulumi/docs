@@ -19,7 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>SignalFx AWS CloudWatch integrations using Role ARNs. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#connect-to-aws">Connect to AWS CloudWatch</a>.</p>
 <p><strong>Note:</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
 <blockquote>
-<div><p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with one of either <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>. Check with SignalFx support for your realm’s AWS account id.</p>
+<div><p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>. Check with SignalFx support for your realm’s AWS account id.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -45,9 +45,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The name of this integration</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_signalfx.aws.ExternalIntegration.signalfx_aws_account">
+<code class="sig-name descname">signalfx_aws_account</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.signalfx_aws_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>The AWS Account ARN to use with your policies/roles, provided by SignalFx.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_signalfx.aws.ExternalIntegration.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">signalfx_aws_account=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ExternalIntegration resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -58,6 +64,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>external_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The external ID to use with your IAM role and with <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this integration</p></li>
+<li><p><strong>signalfx_aws_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Account ARN to use with your policies/roles, provided by SignalFx.</p></li>
 </ul>
 </dd>
 </dl>
@@ -106,7 +113,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_signalfx.aws.Integration">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.aws.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_cloudwatch_namespaces=None</em>, <em class="sig-param">custom_namespace_sync_rules=None</em>, <em class="sig-param">enable_aws_usage=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">import_cloud_watch=None</em>, <em class="sig-param">integration_id=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">namespace_sync_rules=None</em>, <em class="sig-param">poll_rate=None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.Integration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.aws.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_cloudwatch_namespaces=None</em>, <em class="sig-param">custom_namespace_sync_rules=None</em>, <em class="sig-param">enable_aws_usage=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">import_cloud_watch=None</em>, <em class="sig-param">integration_id=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">namespace_sync_rules=None</em>, <em class="sig-param">poll_rate=None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">use_get_metric_data_method=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>SignalFx AWS CloudWatch integrations. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#monitor-amazon-web-services">Monitoring Amazon Web Services</a>.</p>
 <p><strong>Note:</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
 <blockquote>
@@ -129,8 +136,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>namespace_sync_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the <code class="docutils literal notranslate"><span class="pre">services</span></code> property. If you don’t specify either property, SignalFx syncs all data in all AWS namespaces.</p></li>
 <li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – AWS poll rate (in seconds). One of <code class="docutils literal notranslate"><span class="pre">60</span></code> or <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p></li>
 <li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of AWS regions that SignalFx should monitor.</p></li>
-<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role ARN that you add to an existing AWS integration object.</p></li>
+<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role ARN that you add to an existing AWS integration object. <strong>Note</strong>: Ensure you use the <code class="docutils literal notranslate"><span class="pre">arn</span></code> property of your role, not the id!</p></li>
 <li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with <code class="docutils literal notranslate"><span class="pre">namespace_sync_rule</span></code>.</p></li>
+<li><p><strong>use_get_metric_data_method</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable the use of Amazon’s <code class="docutils literal notranslate"><span class="pre">GetMetricData</span></code> for collecting metrics. Note that this requires the inclusion of the <code class="docutils literal notranslate"><span class="pre">&quot;cloudwatch:GetMetricData&quot;</span></code> permission.</p></li>
 </ul>
 </dd>
 </dl>
@@ -232,7 +240,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_signalfx.aws.Integration.role_arn">
 <code class="sig-name descname">role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.role_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>Role ARN that you add to an existing AWS integration object.</p>
+<dd><p>Role ARN that you add to an existing AWS integration object. <strong>Note</strong>: Ensure you use the <code class="docutils literal notranslate"><span class="pre">arn</span></code> property of your role, not the id!</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -241,9 +249,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with <code class="docutils literal notranslate"><span class="pre">namespace_sync_rule</span></code>.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_signalfx.aws.Integration.use_get_metric_data_method">
+<code class="sig-name descname">use_get_metric_data_method</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.use_get_metric_data_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable the use of Amazon’s <code class="docutils literal notranslate"><span class="pre">GetMetricData</span></code> for collecting metrics. Note that this requires the inclusion of the <code class="docutils literal notranslate"><span class="pre">&quot;cloudwatch:GetMetricData&quot;</span></code> permission.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_signalfx.aws.Integration.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_cloudwatch_namespaces=None</em>, <em class="sig-param">custom_namespace_sync_rules=None</em>, <em class="sig-param">enable_aws_usage=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">import_cloud_watch=None</em>, <em class="sig-param">integration_id=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">namespace_sync_rules=None</em>, <em class="sig-param">poll_rate=None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">token=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.Integration.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_cloudwatch_namespaces=None</em>, <em class="sig-param">custom_namespace_sync_rules=None</em>, <em class="sig-param">enable_aws_usage=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">import_cloud_watch=None</em>, <em class="sig-param">integration_id=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">namespace_sync_rules=None</em>, <em class="sig-param">poll_rate=None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">use_get_metric_data_method=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.Integration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Integration resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -263,8 +277,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>namespace_sync_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the <code class="docutils literal notranslate"><span class="pre">services</span></code> property. If you don’t specify either property, SignalFx syncs all data in all AWS namespaces.</p></li>
 <li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – AWS poll rate (in seconds). One of <code class="docutils literal notranslate"><span class="pre">60</span></code> or <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p></li>
 <li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of AWS regions that SignalFx should monitor.</p></li>
-<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role ARN that you add to an existing AWS integration object.</p></li>
+<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role ARN that you add to an existing AWS integration object. <strong>Note</strong>: Ensure you use the <code class="docutils literal notranslate"><span class="pre">arn</span></code> property of your role, not the id!</p></li>
 <li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with <code class="docutils literal notranslate"><span class="pre">namespace_sync_rule</span></code>.</p></li>
+<li><p><strong>use_get_metric_data_method</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable the use of Amazon’s <code class="docutils literal notranslate"><span class="pre">GetMetricData</span></code> for collecting metrics. Note that this requires the inclusion of the <code class="docutils literal notranslate"><span class="pre">&quot;cloudwatch:GetMetricData&quot;</span></code> permission.</p></li>
 </ul>
 </dd>
 </dl>
@@ -331,7 +346,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>SignalFx AWS CloudWatch integrations using security tokens. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#connect-to-aws">Connect to AWS CloudWatch</a>.</p>
 <p><strong>Note:</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
 <blockquote>
-<div><p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with one of either <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>.</p>
+<div><p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -351,9 +366,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The name of this integration</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_signalfx.aws.TokenIntegration.signalfx_aws_account">
+<code class="sig-name descname">signalfx_aws_account</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.signalfx_aws_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>The AWS Account ARN to use with your policies/roles, provided by SignalFx.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_signalfx.aws.TokenIntegration.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">token_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">signalfx_aws_account=None</em>, <em class="sig-param">token_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TokenIntegration resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -363,6 +384,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this integration</p></li>
+<li><p><strong>signalfx_aws_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Account ARN to use with your policies/roles, provided by SignalFx.</p></li>
 </ul>
 </dd>
 </dl>

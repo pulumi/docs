@@ -1,7 +1,7 @@
 ---
 title: "Deploying production-ready containers with Pulumi"
 date: "2018-06-20"
-meta_desc: "Deploy a simple Docker container running NGINX with Pulumi. This blog covers creating a container registry instance in ECR, creating task definitions in ECS, and configuring a load balancer."
+meta_desc: "This blog covers creating a container registry instance in ECR, creating task definitions in ECS, and configuring a load balancer."
 meta_image: "hello-world-page.png"
 authors: ["donna-malayeri"]
 tags: ["JavaScript","AWS","Containers"]
@@ -34,7 +34,7 @@ If you're on Windows, run this:
     SET "PATH=%PATH%;%USERPROFILE%.pulumiin"
 
 You'll deploy this app to your own AWS account, so follow the steps to
-[configure your AWS account]({{< ref "/docs/intro/cloud-providers/aws/setup.md" >}}).
+[configure your AWS account]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}).
 
 Make sure you have [Node.js](https://nodejs.org/en/download/) installed,
 with a version of 6.10.x or later.
@@ -73,11 +73,10 @@ let service = new cloud.Service("pulumi-nginx", {
 exports.url = service.defaultEndpoint.apply(e => `http://${e.hostname}`);
 ```
 
-
 These 15 lines of code are everything you need to deploy a custom
 container! We're using `cloud.Service`, which is a high-level,
 convenient interface for building containers and provisioning an AWS
-container service. Using the `build `property, we point to a folder
+container service. Using the `build` property, we point to a folder
 containing a `Dockerfile`, which is `app` in this case.
 
 Now, let's create a `Dockerfile` and a static page. Create a
@@ -110,11 +109,11 @@ You should have the following directory structure:
 
 ![file layout](./file-layout.png)
 
-4. Install the `@pulumi/cloud-aws` NPM package:
+1. Install the `@pulumi/cloud-aws` NPM package:
 
     npm install --save @pulumi/cloud-aws @pulumi/cloud
 
-5. Configure Pulumi to use AWS Fargate. Note that, currently, Fargate is
+2. Configure Pulumi to use AWS Fargate. Note that, currently, Fargate is
 available only in `us-east-1`, `us-east-2`, `us-west-2`, and
 `eu-west-1`.
 
@@ -125,7 +124,7 @@ available only in `us-east-1`, `us-east-2`, `us-west-2`, and
 To deploy both the infrastructure and app code, we'll run
 `pulumi update`. This command first shows a preview of all the resources
 that will be created and prompts for confirmation. During the preview
-phase, Pulumi invokes `docker build`. 
+phase, Pulumi invokes `docker build`.
 
 ![Pulumi preview](./pulumi-update-preview.png)
 
@@ -149,9 +148,9 @@ Now, go back to the stack details page, which shows the stack
 configuration, as well as the stack output property. The following line
 creates the stack output `url`:
 
-`` exports.url = service.defaultEndpoint.apply(e => `http://${e.hostname}`); ``
+``exports.url = service.defaultEndpoint.apply(e => `http://${e.hostname}`);``
 
-If you navigate to the link for `url` you'll see the following page: 
+If you navigate to the link for `url` you'll see the following page:
 
 !["Hello, World!"](./hello-world-page.png)
 

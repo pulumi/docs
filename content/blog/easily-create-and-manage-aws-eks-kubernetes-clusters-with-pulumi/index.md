@@ -1,7 +1,8 @@
 ---
-title: "Easily Create and Manage AWS EKS Kubernetes Clusters with Pulumi"
+title: Easily Create and Manage AWS EKS Kubernetes Clusters
+h1: "Easily Create and Manage AWS EKS Kubernetes Clusters with Pulumi"
 date: "2019-01-24"
-meta_desc: "Use Pulumi to easily deploy new clusters, managed AWS resources, and then deploy Kubernetes apps to it. See how to provision an entire EKS cluster with a CLI single gesture."
+meta_desc: "Use Pulumi to easily deploy new clusters, manage AWS resources, and deploy Kubernetes apps. See how to provision an EKS cluster with a CLI single gesture."
 meta_image: "easy-eks.png"
 authors: ["luke-hoban"]
 tags: ["AWS","Kubernetes"]
@@ -19,11 +20,11 @@ package](https://github.com/pulumi/pulumi-eks). Let's see how.
 ![Pulumi making EKS Easy](./easy-eks.png)
 
 To get started, download the free and open source
-[Pulumi SDK]({{< ref "/docs/get-started/install" >}}). The SDK includes
+[Pulumi SDK]({{< relref "/docs/get-started/install" >}}). The SDK includes
 the CLI we'll be using below, and requires AWS credentials to access
 your AWS account and provision resources. If you already have the AWS
 CLI installed and configured, you're already all set to go. Otherwise,
-[check out the docs here]({{< ref "/docs/intro/cloud-providers/aws/setup.md" >}})
+[check out the docs here]({{< relref "/docs/intro/cloud-providers/aws/setup" >}})
 to set things up.
 
 From here, there are two ways to proceed:
@@ -80,10 +81,10 @@ TypeScript:
 import * as aws from "@pulumi/aws";
 import * as awsinfra from "@pulumi/aws-infra";
 import * as eks from "@pulumi/eks";
- 
+
 // Create a VPC for our cluster.
 const network = new awsinfra.Network("eksNetwork");
- 
+
 // Create the EKS cluster
 const cluster = new eks.Cluster("eksCluster", {
     vpcId: network.vpcId,
@@ -95,7 +96,7 @@ const cluster = new eks.Cluster("eksCluster", {
     storageClasses: "gp2",
     deployDashboard: true,
 });
- 
+
 // Export the cluster's kubeconfig.
 export const kubeconfig = cluster.kubeconfig;
 ```
@@ -180,7 +181,7 @@ this stack. The stack exports are also published in this same dashboard,
 so that key outputs from a deployment are easily available and can be
 shared with other users in your organization, like your kubeconfig.
 
-[Additional management features]({{< ref "/product" >}}), including
+[Additional management features]({{< relref "/product" >}}), including
 RBAC, CI/CD integrations, and rich resource graph visualization, are
 also available via the [Pulumi app](https://app.pulumi.com),
 including Team and Enterprise Editions for production teams of all
@@ -191,10 +192,10 @@ sizes.
 We've seen how Pulumi takes care of the heavy lifting with AWS EKS so
 you don't have to. You can use Pulumi to easily deploy new clusters,
 managed AWS resources, and then deploy Kubernetes apps to it. Support is
-also available for Azure AKS, [Google GKE]({{< ref "/docs/tutorials/kubernetes/gke" >}}),
+also available for Azure AKS, [Google GKE]({{< relref "/docs/tutorials/kubernetes/gke" >}}),
 and custom clusters (including Minikube), using the same workflow and approach.
 
 For more information:
 
-- [Get started with Pulumi and Kubernetes]({{< ref "/docs/get-started/kubernetes" >}})
-- [Get started with Pulumi and AWS]({{< ref "/docs/get-started/aws" >}})
+- [Get started with Pulumi and Kubernetes]({{< relref "/docs/get-started/kubernetes" >}})
+- [Get started with Pulumi and AWS]({{< relref "/docs/get-started/aws" >}})

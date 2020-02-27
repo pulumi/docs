@@ -3,7 +3,7 @@ title: "Using Terraform Remote State with Pulumi"
 authors: ["paul-stack"]
 tags: ["Infrastructure","Features"]
 date: "2019-06-07"
-meta_desc: "Using Pulumi to read the outputs of other deployment tools provides a great deal of flexibility for adopting Pulumi into existing environments. Resources which were provisioned by CloudFormation, ARM or Terraform can remain in place, while still allowing those values to be dynamically consumed by a Pulumi program."
+meta_desc: "Pulumi allows resources which were provisioned by CloudFormation, ARM, or Terraform to remain, while allowing those resources to be consumed by Pulumi."
 
 ---
 
@@ -19,25 +19,25 @@ by different teams. For example, it's common to see an application team
 deploying into a VPC owned and managed by a network operations team.
 
 Pulumi supports
-[this kind of workflow]({{< ref "/docs/intro/concepts/organizing-stacks-projects#inter-stack-dependencies" >}})
-natively using the [`StackReference`]({{< ref "/docs/reference/pkg/nodejs/pulumi/pulumi#StackReference" >}})
+[this kind of workflow]({{< relref "/docs/intro/concepts/organizing-stacks-projects#inter-stack-dependencies" >}})
+natively using the [`StackReference`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#StackReference" >}})
 type from the Pulumi SDK. Integration with the most popular
 cloud-specific tools have been supported by Pulumi since the earliest
 days:
 
-- The [`aws.cloudformation.getStack()`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/cloudformation#getStack" >}})
+- The [`aws.cloudformation.getStack()`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudformation#getStack" >}})
   function can be used to obtain the outputs from a CloudFormation
   Stack.
 
-- The [`get`]({{< ref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment-get" >}})
+- The [`get`]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment-get" >}})
   method of the
-  [`azure.core.TemplateDeployment`]({{< ref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment" >}})
+  [`azure.core.TemplateDeployment`]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment" >}})
   class can be used to obtain the outputs of an ARM Template Deployment.
 
 We recently added similar support for reading the outputs of a Terraform
 state file - both from local `.tfstate` files, and from all of the
 remote state backends supported by Terraform. This is exposed via the
-[`terraform.state.RemoteStateReference`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/terraform/state/#RemoteStateReference) type in the
+[`terraform.state.RemoteStateReference`]({{< relref "/docs/reference/pkg/nodejs/pulumi/terraform/state#RemoteStateReference" >}}) type in the
 [`@pulumi/terraform`](https://www.npmjs.com/package/@pulumi/terraform)
 NPM package.
 <!--more-->
@@ -119,54 +119,54 @@ Enterprise, using the following HCL:
 To consume the outputs of this Terraform state in our Pulumi program we
 can do the following:
 
-1.  Create a new Pulumi program written in TypeScript
+1. Create a new Pulumi program written in TypeScript
 
         $ pulumi new --yes typescript
 
-2.  Install the `@pulumi/terraform` package from NPM:
+2. Install the `@pulumi/terraform` package from NPM:
 
         $ npm install @pulumi/terraform
 
-3.  In the `index.ts` file, create a
+3. In the `index.ts` file, create a
     `terraform.state.RemoteStateReference` resource to access the state.
     Note that we can use [Pulumi
     secrets]({{< relref "managing-secrets-with-pulumi" >}})
     to ensure that our Terraform Enterprise token is encrypted and never
     stored in plaintext by Pulumi:
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as terraform from "@pulumi/terraform";
+    ```typescript
+    import * as pulumi from "@pulumi/pulumi";
+    import * as terraform from "@pulumi/terraform";
 
-const config = new pulumi.Config();
-const tfeToken = config.requireSecret("tfeToken");
+    const config = new pulumi.Config();
+    const tfeToken = config.requireSecret("tfeToken");
 
-const networkState = new terraform.state.RemoteStateReference("network", {
-    backendType: "remote",
-    token: tfeToken,
-    organization: "acme",
-    workspaces: {
-        name: "production-network"
-    },
-});
-```
+    const networkState = new terraform.state.RemoteStateReference("network", {
+        backendType: "remote",
+        token: tfeToken,
+        organization: "acme",
+        workspaces: {
+            name: "production-network"
+        },
+    });
+    ```
 
-4.  We can now use either the `outputs` property or the `getOutput()`
+4. We can now use either the `outputs` property or the `getOutput()`
     function on `networkState` to obtain individual outputs:
 
-```typescript
-const vpcId = networkState.getOutput("vpc_id");
-const publicSubnetIds = networkState.outputs["public_subnet_ids"] as pulumi.Output<string[]>;
+    ```typescript
+    const vpcId = networkState.getOutput("vpc_id");
+    const publicSubnetIds = networkState.outputs["public_subnet_ids"] as pulumi.Output<string[]>;
 
-// Create our webservers in each subnet
-for (let i = 0; i < 2; i++) {
-    new aws.ec2.Instance(`instance${i}`, {
-        ami: nginxAmi,
-        instanceType: "t2.medium",
-        subnetId: publicSubnetIds[i],
-    })
-}
-```
+    // Create our webservers in each subnet
+    for (let i = 0; i < 2; i++) {
+        new aws.ec2.Instance(`instance${i}`, {
+            ami: nginxAmi,
+            instanceType: "t2.medium",
+            subnetId: publicSubnetIds[i],
+        })
+    }
+    ```
 
 Using Pulumi to read the outputs of other deployment tools provides a
 great deal of flexibility for adopting Pulumi into existing
@@ -174,10 +174,10 @@ environments. Resources which were provisioned by CloudFormation, ARM or
 Terraform can remain in place, while still allowing those values to be
 dynamically consumed by a Pulumi program.
 
-Pulumi is free and open-source, and you can [get started today]({{< ref "/docs/get-started" >}}).
+Pulumi is free and open-source, and you can [get started today]({{< relref "/docs/get-started" >}}).
 To learn more about migrating
 from Terraform to Pulumi, check out
 [From Terraform to Infrastructure as Software]({{< relref "from-terraform-to-infrastructure-as-software" >}})
-and the [Terraform comparison documentation]({{< ref "/docs/intro/vs/terraform" >}}), or join us in
+and the [Terraform comparison documentation]({{< relref "/docs/intro/vs/terraform" >}}), or join us in
 the [Pulumi Community Slack](https://slack.pulumi.com/) to discuss with
 the Pulumi community.

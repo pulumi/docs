@@ -1,5 +1,8 @@
 ---
-title: Review the New Project
+title: Review the New Project | Kubernetes
+h1: Review the New Project
+linktitle: Review the New Project
+meta_desc: This page provides an overview on how to review a new Kubernetes project.
 weight: 6
 menu:
   getstarted:
@@ -11,8 +14,8 @@ aliases: ["/docs/quickstart/kubernetes/review-project/"]
 
 Let's review some of the generated project files:
 
-- `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project.md" >}}).
-- `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config.md" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack.md" >}}) we initialized.
+- `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
+- `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) we initialized.
 - {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
 
 {{< langchoose nogo csharp >}}
@@ -118,8 +121,8 @@ class Program
                                     Image = "nginx",
                                     Ports =
                                     {
-                                        new ContainerPortArgs 
-                                        { 
+                                        new ContainerPortArgs
+                                        {
                                             ContainerPortValue = 80
                                         },
                                     },
@@ -129,7 +132,7 @@ class Program
                     },
                 },
             });
-            
+
             return new Dictionary<string, object?>
             {
                 { "name", deployment.Metadata.Apply(m => m.Name) },
@@ -155,6 +158,7 @@ $ source venv/bin/activate
 ```bash
 $ pip3 install -r requirements.txt
 ```
+
 {{% /lang %}}
 
 Next, we'll deploy the stack.

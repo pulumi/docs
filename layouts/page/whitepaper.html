@@ -27,22 +27,22 @@
         <div class="container mx-auto">
             <ul>
                 {{ range .Params.sections }}
-                    <li><a href="#{{ .anchor }}">{{ .label }}</a></li>
+                    <li><a data-track="{{ .label | urlize }}" href="#{{ .anchor }}">{{ .label }}</a></li>
                 {{ end }}
             </ul>
         </div>
     </nav>
 
-    <section id="executive-summary" class="mt-8 py-8 px-4 md:px-0">
+    <section id="executive-summary" class="mt-8 py-8 px-4">
         <div class="container mx-auto max-w-4xl py-8 border-b border-gray-300">
             <h2>Executive Summary</h2>
             <p>
-                {{ .Params.summary }}
+                {{ .Params.exec_summary }}
             </p>
         </div>
     </section>
 
-    <section class="pb-16 px-4 md:px-0">
+    <section class="pb-16 px-4">
         <div class="container mx-auto max-w-4xl mb-4">
             {{ .Content }}
 

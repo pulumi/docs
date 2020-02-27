@@ -4,7 +4,9 @@ description: Enabling the future of cloud engineering with Pulumi
 type: page
 layout: whitepaper
 
-meta_desc: In this paper, we make the case for a consistent cloud programming model using general purpose programming languages for infrastructure, managed services, containers, Kubernetes, and serverless.
+meta_desc: In this paper, we present a consistent cloud programming model using general purpose programming languages for interacting with cloud resources.
+
+exec_summary: To a first approximation, all developers are cloud developers, all applications are cloud native, and all operations are cloud-first. Yet, there is a lack of a consistent approach to delivering cloud native applications and infrastructure. The tools and processes differ by technology generation, and even by cloud vendor, and so deny the full potential of cloud native application delivery.
 
 hero_image: /images/whitepaper/cloud-native-infrastructure/deliveringCloudNative_pdf_large.png
 
@@ -36,6 +38,7 @@ In this paper, we make the case for a consistent programming model for the cloud
 The cloud is no longer new, and most IT teams &mdash; from development to operations &mdash; will have cloud as some portion of their portfolio, and likely a long-term strategy or posture on cloud migration. But precisely how has the cloud changed the tools, and concerns for software delivery?
 
 ### The 3 Evolutions of Cloud
+
 **Enterprise software has undergone a slow shift from containerless servers to serverless containers.** In its relatively short lifespan, the cloud has already undergone &mdash; or is undergoing &mdash; three distinct evolutions. Each of these evolutions unlocked further economies of scope and scale.
 
 * **Virtual Machines.** The initial wave of cloud computing offered 'lift and shift' migration strategies and flipped infrastructure planning from a capex to opex activity.
@@ -90,7 +93,7 @@ DevOps teams have taken it upon themselves to become those DSL experts, but are 
 
 ## Pulumi Provides a Cloud Native Programming Model
 
-Using real languages changes everything. [The Pulumi Cloud Development Platform](https://www.pulumi.com/product/) is a combination of tools, libraries, runtime, and service that delivers a consistent development and operational control plane for cloud native infrastructure.
+Using real languages changes everything. [The Pulumi Cloud Development Platform]({{< relref "/product" >}}) is a combination of tools, libraries, runtime, and service that delivers a consistent development and operational control plane for cloud native infrastructure.
 
 At the center of Pulumi is an open source cloud object model, coupled with an evaluation runtime that understands how to take programs written in any language, understand the cloud resources necessary to execute them, and then plan and manage those resources in a robust way. This cloud runtime and object model is inherently language- and cloud-neutral, enabling Pulumi to support many languages and clouds rapidly.
 
@@ -102,7 +105,8 @@ Pulumi aims to provide a solution to the challenges of cloud application develop
 * **Productive, expressive use of real languages.** Providing a common runtime that can be bound to existing languages, taking advantage of the idioms of that language: from abstraction, through to packaging.
 * **Continuous delivery for cloud native infrastructure.** Providing a common structure to connect application code and infrastructure code to ensure a rapid inner development loop, and a well-managed outer operational loop.
 
-### Consistency and power across cloud technology paradigms.
+### Consistency and power across cloud technology paradigms
+
 The fragmentation of existing tools and DSLs is consolidated within the Pulumi framework which offers:
 
 **Multi-Language Runtime.** The Pulumi runtime was architected to support many languages, and to do so in an idiomatic way for all aspects of a target language: style, syntax, packages, etc. It currently supports JavaScript, TypeScript, Python, and Go and is fully open source to accept contributions for alternative languages.
@@ -117,7 +121,8 @@ The fragmentation of existing tools and DSLs is consolidated within the Pulumi f
 
 > Using real languages changes everything.
 
-### Productive, expressive use of real languages.
+### Productive, expressive use of real languages
+
 As the Pulumi runtime can support many languages, development and devops teams gain the natural productivity benefits of those languages which are often missing from DSLs and associated tooling. Advantages include:
 
 **Familiarity and expressiveness.** Using already understood languages has clear productivity, communication and collaboration benefits and negates the need to learn new bespoke DSLs or YAML-based templating languages. Developers and DevOps teams can work using a common language and code base rather than attempting a hand-o  through a DSL-enforced separation of concerns, which improves collaboration, and reduces the fragility and risk in a system.
@@ -158,7 +163,7 @@ let network = new awsinfra.Network(`${prefix}-net`, {
 
 > Pulumi brings the existing power of real programming languages to cloud native infrastructure and application delivery for huge productivity and collaboration gains.
 
-### Continuous delivery for cloud native infrastructure.
+### Continuous delivery for cloud native infrastructure
 
 Because infrastructure is now linked to application code, and because of the ephemeral nature of the infrastructure, the 'integration' aspect of CI/CD becomes less interesting. What matters more is the 'delivery' aspect: improving both 'inner loop' development and 'outer loop' operations.
 
@@ -177,6 +182,7 @@ Previously there was very limited tooling at the very point of collaboration nee
 Pulumi provides a consistent programming model across the cloud, from VMs through containers and Kubernetes, to serverless and managed services.
 
 ### Infrastructure
+
 Managed cloud services and infrastructure, continuously deployed and con gured in a robust and compliant manner.
 
 ```javascript
@@ -199,6 +205,7 @@ exports.publicHostName = server.publicDns;
 ```
 
 ### Kubernetes
+
 Target on-premises or cloud-based Kubernetes services to provision clusters, and create, deploy, and manage apps.
 
 ```javascript
@@ -235,6 +242,7 @@ const nginxServer = deploy("nginx", 3, {
 ```
 
 ### Serverless
+
 Deploy and scale websites easily, handle event-streaming, and processing with multi-cloud microservices.
 
 ```javascript
@@ -253,6 +261,7 @@ export let url = app.publish().url;
 ```
 
 ### Containers
+
 Deploy container-based apps into any cloud native infrastructure, from VMs to Kubernetes, to custom orchestrators.
 
 ```javascript

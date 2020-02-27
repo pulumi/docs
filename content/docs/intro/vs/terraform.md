@@ -1,5 +1,6 @@
 ---
 title: Pulumi vs. Terraform
+meta_desc: Pulumi is like Terraform—create, deploy, and manage infrastructure as code on any cloud. But unlike Terraform you can use familiar languages and tools.
 linktitle: Terraform
 menu:
   intro:
@@ -9,8 +10,8 @@ menu:
 aliases: ["/docs/reference/vs/terraform/"]
 ---
 
-Pulumi is like Terraform, in that you create, deploy, and manage infrastructure as code on any cloud. Unlike
-Terraform, however, you will use familiar general purpose languages and tools to do so. Like Terraform, Pulumi is
+Terraform and Pulumi hold a lot of similarities, but they differ in a few key ways. This page helps provide a rundown of the differences. First, Pulumi is like Terraform, in that you create, deploy, and manage infrastructure as code on any cloud. But where
+Terraform requires the use of a custom programming language, however, Pulumi allows you to use familiar general purpose languages and tools to accomplish the same goals. Like Terraform, Pulumi is
 [open source on GitHub](https://github.com/pulumi/pulumi) and is [free to use]({{< relref "/docs/get-started" >}}).
 
 ## Summary
@@ -22,12 +23,12 @@ your infrastructure. Both Terraform and Pulumi support many cloud providers, inc
 plus other services like CloudFlare, Digital Ocean, and more. Thanks to integration with Terraform providers, Pulumi
 is able to support a superset of the providers that Terraform currently offers.
 
-## Major Differences
+## Major Differences Between Terraform and Pulumi
 
 The major differences between Terraform and Pulumi are as follows:
 
 1. Terraform requires that you and your team learn a new custom language, the HCL DSL. In contrast, Pulumi lets you use
-   languages you already know and love, like JavaScript, TypeScript, Python, and Go.
+   languages you already know and love, like Python, Go, JavaScript, TypeScript, and C#.
 
 2. Because of the use of real languages, you get familiar constructs like for loops, functions, and classes. This
    significantly improves the ability to cut down on boilerplate and enforce best practices. Instead of creating
@@ -64,7 +65,7 @@ makes it easy to create new Pulumi providers out of existing Terraform Providers
 
 ## Converting From Terraform
 
-Pulumi offers a tool, [`tf2pulumi`](https://github.com/pulumi/tf2pulumi), that converts Terraform HCL to Pulumi. It is
+Pulumi offers a tool, [`tf2pulumi`](https://github.com/pulumi/tf2pulumi), that converts Terraform HashiCorp Configuration Language to Pulumi. It is
 open source on GitHub, and works for most projects we have come across; if you run into a snag, Issues and Pull
 Requests are welcome! [Download and use it now.](https://github.com/pulumi/tf2pulumi)
 
@@ -78,6 +79,6 @@ incremental adoption, whereby you continue managing a subset of your infrastruct
 incrementally move to Pulumi.
 
 For instance, say you would like to keep your VPC and low level network definitions written in Terraform so as to
-avoid any disruption, or maybe because some of the team would like to stay on Terraform for now. Using the
+avoid any disruption, or maybe because some of the team would like to stay on Terraform for now and make a shift in the future. Using the
 state reference support described above, you can author higher level infrastructure in Pulumi that consumes the
-Terraform-provisioned VPC information (like the VPC ID, Subnet IDs, etc), making co-existence easy to automate.
+Terraform-provisioned VPC information (like the VPC ID, Subnet IDs, etc), making the co-existence of Pulumi and Terraform easy to automate.

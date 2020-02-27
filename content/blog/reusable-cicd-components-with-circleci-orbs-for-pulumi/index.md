@@ -3,7 +3,7 @@ title: "Reusable CI/CD components with CircleCI Orbs for Pulumi"
 authors: ["chris-smith"]
 tags: ["CI/CD"]
 date: "2018-11-07"
-meta_desc: "Pulumi is proud to be a CircleCI technology partner as we continue to make Pulumi the best tool for CI/CD workflows. This blog post showcases Pulumi Orbs with CircleCI, using a simple job to build and update a JavaScript-based stack."
+meta_desc: "This blog post showcases Pulumi Orbs with CircleCI, using a simple job to build and update a JavaScript-based stack."
 meta_image: "circleci-ui.png"
 ---
 
@@ -75,7 +75,7 @@ that happened during a CircleCI workflow.
 
 Also, if you are using CircleCI with GitHub, you can consider installing
 the
-[Pulumi GitHub application]({{< ref "/docs/guides/continuous-delivery/github-app" >}}. The Pulumi
+[Pulumi GitHub application]({{< relref "/docs/guides/continuous-delivery/github-app" >}}. The Pulumi
 GitHub app will surface the results of any previews or updates from your
 CI/CD on the source GitHub pull request. It's always good to know if a
 pull request is going to lead to changes to your cloud infrastructure!
@@ -84,11 +84,9 @@ We are continuing to make Pulumi the best tool for the "Continuous
 Deployment" part of CI/CD workflows, and with the release of CircleCIs
 Orbs, it's just that much easier.
 
-
 Having trouble? Questions? Join our [community Slack](https://slack.pulumi.com/)
-or [drop us a line]({{< ref "/contact" >}}).
+or [drop us a line]({{< relref "/contact" >}}).
 
 Links:
 
--   [Get Started with Circle CI Orbs](https://circleci.com/orbs/)
-
+- [Get Started with Circle CI Orbs](https://circleci.com/orbs/)

@@ -1,19 +1,20 @@
 ---
-title: "Web Server Virtual Machine Instance"
-
+title: Web Server Virtual Machine Instance on GCE
+meta_desc: Learn how to deploy a simple webserver Virtual Machine instance to Google
+           Compute Engine.
 aliases: ["/docs/reference/tutorials/gcp/tutorial-gce-webserver/"]
 ---
 
-In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Machine instance to Google Compute Engine. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/gcp-js-webserver) is available on GitHub. 
+In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Machine instance to Google Compute Engine. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/gcp-js-webserver) is available on GitHub.
 
 ## Prerequisites
 
-1.  [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-1.  [Configure GCP credentials]({{< relref "/docs/intro/cloud-providers/gcp/setup.md" >}})
+1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
+1. [Configure GCP credentials]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}})
 
 ## Create a Virtual Machine with SSH access {#webserver}
 
-1.  In a new folder `webserver`, create an empty project with `pulumi new`. Choose a Google Cloud `project` you have access to create Virtual Machines within.
+1. In a new folder `webserver`, create an empty project with `pulumi new`. Choose a Google Cloud `project` you have access to create Virtual Machines within.
 
     ```bash
     $ mkdir webserver && cd webserver
@@ -22,7 +23,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
     gcp:project: The Google Cloud project to deploy into: <your project>
     ```
 
-1.  Open `index.js` and replace the contents with the following:
+1. Open `index.js` and replace the contents with the following:
 
     ```javascript
     const gcp = require("@pulumi/gcp");
@@ -45,7 +46,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
         networkInterfaces: [{
             network: network.id,
             // accessConfigus must includ a single empty config to request an ephemeral IP
-            accessConfigs: [{}], 
+            accessConfigs: [{}],
         }],
     });
 
@@ -56,7 +57,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
 
     This example uses the [@pulumi/gcp]({{< relref "/docs/reference/pkg/nodejs/pulumi/gcp" >}}) package to create and manage three Google Cloud resources: a [gcp.compute.Network]({{< relref "/docs/reference/pkg/nodejs/pulumi/gcp/compute#Network" >}}) in which the virtual machine will run, a [gcp.compute.Firewall]({{< relref "/docs/reference/pkg/nodejs/pulumi/gcp/compute#Firewall" >}}) which allows access for incoming SSH access, and a [gcp.compute.Instance]({{< relref "/docs/reference/pkg/nodejs/pulumi/gcp/compute#Instance" >}}) which is created inside the network from the Debian 9 base image.
 
-1.  To preview and deploy changes, run `pulumi up`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
+1. To preview and deploy changes, run `pulumi up`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
 
         $ pulumi up
         Previewing update (webservergcp-dev):
@@ -71,7 +72,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
             + 3 to create
             1 unchanged
 
-1.  Now, proceed with the deployment, which will take around a minute to complete. 
+1. Now, proceed with the deployment, which will take around a minute to complete.
 
         Do you want to perform this update? yes
         Updating (webservergcp-dev):
@@ -96,7 +97,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
 
     To see the full details of the deployment and the resources that are now part of the stack, open the update permalink in a browser.
 
-1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs]({{< relref "/docs/intro/concepts/stack.md#output" >}}) corresponding to the IP and full-qualified host name of the virtual machine instance we've created.  
+1. To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs]({{< relref "/docs/intro/concepts/stack#output" >}}) corresponding to the IP and full-qualified host name of the virtual machine instance we've created.
 
     ```
     $ pulumi stack
@@ -120,7 +121,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
 Now that we have an instance of our Pulumi program deployed, we may want to make changes. We do this by updating our
 Pulumi program to define the new state we want our infrastructure to be in, then and running `pulumi up` to commit the changes.
 
-1.  Replace the creation of the two firewall and instance with the following. This exposes an additional port and adds a startup
+1. Replace the creation of the two firewall and instance with the following. This exposes an additional port and adds a startup
     script to run a simple HTTP server at startup.
 
     ```javascript
@@ -147,7 +148,7 @@ Pulumi program to define the new state we want our infrastructure to be in, then
         networkInterfaces: [{
             network: network.id,
             // accessConfigus must include a single empty config to request an ephemeral IP
-            accessConfigs: [{}], 
+            accessConfigs: [{}],
         }],
     });
 
@@ -159,7 +160,7 @@ Pulumi program to define the new state we want our infrastructure to be in, then
     defined in our program.  We'll see in later sections how we can deploy and version the application code of our
     program in a variety of different ways using Pulumi.
 
-1.  Run `pulumi up` to preview and deploy the changes. You'll see two changes: the `allows` property of the `Firewall` will be _updated_ in-place.  Second, the `Instance` will be _replaced_ with a new virtual machine Instance which will run the new script on startup. Pulumi understands which changes to a given cloud resource can be made in-place, and which require replacement, and computes the minimally disruptive change to achieve the desired state.
+1. Run `pulumi up` to preview and deploy the changes. You'll see two changes: the `allows` property of the `Firewall` will be _updated_ in-place.  Second, the `Instance` will be _replaced_ with a new virtual machine Instance which will run the new script on startup. Pulumi understands which changes to a given cloud resource can be made in-place, and which require replacement, and computes the minimally disruptive change to achieve the desired state.
 
     ```bash
     $ pulumi up
@@ -187,7 +188,7 @@ Pulumi program to define the new state we want our infrastructure to be in, then
     Permalink: https://app.pulumi.com/lukehoban/webservergcp-dev/updates/2
     ```
 
-1.  We can use `pulumi stack output` to get the value of stack outputs from the CLI.  So we can `curl` the virtual machine instance to see the HTTP server running there. Stack outputs can also be viewed on the Pulumi Console.
+1. We can use `pulumi stack output` to get the value of stack outputs from the CLI.  So we can `curl` the virtual machine instance to see the HTTP server running there. Stack outputs can also be viewed on the Pulumi Console.
 
     ```bash
     $ curl $(pulumi stack output instanceIP)
@@ -198,9 +199,9 @@ Pulumi program to define the new state we want our infrastructure to be in, then
 
 Before moving on, let's tear down the resources that are part of our stack.
 
-1.  Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these resources. This takes about 60 seconds; Pulumi waits for the virtual machine instance to shutdown and for the compute network to be removed before it considers the destroy operation to be complete.
+1. Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these resources. This takes about 60 seconds; Pulumi waits for the virtual machine instance to shutdown and for the compute network to be removed before it considers the destroy operation to be complete.
 
-1.  To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console.
+1. To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console.
 
 ## Summary
 

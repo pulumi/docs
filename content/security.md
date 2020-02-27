@@ -1,5 +1,6 @@
 ---
 title: Pulumi Security
+meta_desc: A summary of security topics and how they relate to the Pulumi platform.
 ---
 
 Pulumi takes security and privacy matters very seriously. We appreciate that our customers and users place a high degree of confidence and trust in our products and services and we strive to meet those expectations.
@@ -75,4 +76,4 @@ Ska9hJu+9cKvItwYz2D5sacdA+3KJTI8MY8kgXDgQjVt3Rs1AoQ3ftd1UsWIfwQ5
 
 ## Public Notifications
 
-Public security notifications are posted in the **#announcements** channel of the [Pulumi Community on Slack](http://slack.pulumi.com/).
+Public security notifications are posted in the **#announcements** channel of the [Pulumi Community on Slack](https://slack.pulumi.com/).

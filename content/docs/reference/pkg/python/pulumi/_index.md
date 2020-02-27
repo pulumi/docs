@@ -780,7 +780,7 @@ configuration value is not a legal number, an error is thrown.</p>
 
 <dl class="method">
 <dt id="pulumi.Config.require_secret_float">
-<code class="sig-name descname">require_secret_float</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pulumi.Config.require_secret_float" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">require_secret_float</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[float][float]<a class="headerlink" href="#pulumi.Config.require_secret_float" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a configuration value, as a float, marked as a secret by its given key.  If it doesn’t exist, or the
 configuration value is not a legal number, an error is thrown.</p>
 <dl class="field-list simple">
@@ -904,7 +904,7 @@ on the Output class in order to observe the value of an output. See
 <a class="reference external" href="/docs/intro/concepts/programming-model/#outputs">the documentation</a> for more details on this part of the Pulumi programming model.</p>
 <dl class="class">
 <dt id="pulumi.Output">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">Output</code><span class="sig-paren">(</span><em class="sig-param">resources: Set[Resource], future: Awaitable[T], is_known: Awaitable[bool], is_secret: Optional[Awaitable[bool]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.Output" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">Output</code><span class="sig-paren">(</span><em class="sig-param">resources: Union[Awaitable[Set[Resource]], Set[Resource]], future: Awaitable[T], is_known: Awaitable[bool], is_secret: Optional[Awaitable[bool]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.Output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output helps encode the relationship between Resources in a Pulumi application. Specifically an
 Output holds onto a piece of Data and the Resource it was generated from. An Output value can
 then be provided when constructing new Resources, allowing that new Resource to know both the

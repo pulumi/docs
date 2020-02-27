@@ -1,6 +1,7 @@
 ---
-title: Setup
-
+title: Google Cloud Platfrom (GCP) Setup
+meta_desc: This page provides an overview on how to setup the Google Cloud
+           Platfrom Provider with Pulumi.
 aliases: ["/docs/reference/clouds/gcp/setup/"]
 ---
 
@@ -17,7 +18,7 @@ $ gcloud auth application-default login
 
 The credentials are saved unencrypted (as plaintext) on the disk!
 
-If you are using Pulumi in an non-interactive setting (such as a CI/CD system) you will need to [configure and use a service account]({{< relref "service-account.md" >}}) instead.
+If you are using Pulumi in an non-interactive setting (such as a CI/CD system) you will need to [configure and use a service account]({{< relref "service-account" >}}) instead.
 
 ## Optional Settings
 

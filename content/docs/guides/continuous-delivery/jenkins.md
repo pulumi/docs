@@ -1,6 +1,6 @@
 ---
-title: Jenkins
-
+title: Jenkins Pipeline
+meta_desc: This document will help you setup a Jenkins Pipeline to deploy a sample app to Azure using Pulumi.
 menu:
     userguides:
         parent: cont_delivery
@@ -21,7 +21,7 @@ altered to fit into any existing type of deployment setup.
 - A working installation of a recent version of Jenkins.
 - An account on the [Pulumi Console](https://app.pulumi.com).
 - The latest version of Pulumi. Installation instructions are [here]({{< relref "/docs/get-started/install" >}}).
-- Setup a new project and [stack]({{< relref "/docs/intro/concepts/stack" >}}) using one of our [Get Started]({{< relref "/docs/get-started" >}}) guides or simply by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new.md" >}})
+- Setup a new project and [stack]({{< relref "/docs/intro/concepts/stack" >}}) using one of our [Get Started]({{< relref "/docs/get-started" >}}) guides or simply by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new" >}})
 and choosing one of the many templates that are available.
 - A bare repo and set the remote URL to be your GitHub project.
 
@@ -32,14 +32,14 @@ An example project is located [here](https://github.com/pulumi/examples/tree/mas
 ## Stack and Branch Mappings
 
 The scripts below act on a hypothetical stack: `homer/acme/product-catalog-service-stack`.
-You can create a new stack by running [`pulumi stack init`]({{< relref "/docs/reference/cli/pulumi_stack_init.md" >}}) if you have already created a project.
+You can create a new stack by running [`pulumi stack init`]({{< relref "/docs/reference/cli/pulumi_stack_init" >}}) if you have already created a project.
 The source code for the stack is in a repository in GitHub and uses TypeScript as the language.
 
 **Note**: The names used above are purely for demonstration purposes only.
 You may choose a naming convention that best suits your organization.
 
 Alternatively, you can also run `pulumi new [template]` to create a template project.
-Learn more [here]({{< ref "/docs/reference/cli/pulumi_new.md" >}}).
+Learn more [here]({{< relref "/docs/reference/cli/pulumi_new" >}}).
 
 ## PULUMI_ACCESS_TOKEN
 
@@ -87,7 +87,7 @@ In order to use the Node JS plugin, you must first ensure you add at least one i
 ```groovy
 pipeline {
     agent any
-    
+
     stages {
         stage ("Checkout code") {
             steps {
@@ -100,14 +100,14 @@ pipeline {
                     branch: "master"
             }
         }
-        
+
         stage ("Install dependencies") {
             steps {
                 sh "curl -fsSL https://get.pulumi.com | sh"
                 sh "$HOME/.pulumi/bin/pulumi version"
             }
         }
-        
+
         stage ("Pulumi up") {
             steps {
                 // The value "node 8.9.4" is the configuration name in our Global Tool Configuration setup for node.

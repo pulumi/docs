@@ -1,6 +1,6 @@
 ---
 title: Collaboration
-
+meta_desc: An overview of developer collaboration features present in the Pulumi Cloud Service.
 menu:
     intro:
         parent: console

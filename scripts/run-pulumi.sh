@@ -37,7 +37,7 @@ case ${PULUMI_ACTION} in
         assume-role "${ROLE_ARN}" pulumi preview
         ;;
     update)
-        assume-role "${ROLE_ARN}" pulumi up --yes --parallel 10
+        assume-role "${ROLE_ARN}" pulumi up --yes
         ;;
     *)
         echo "Unknown action '${PULUMI_ACTION}'"

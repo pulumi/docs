@@ -1,7 +1,7 @@
 ---
 title: "Program Kubernetes with 11 Pulumi Pearls"
 date: "2018-09-12"
-meta_desc: "In this post, we'll look at some bite-sized code snippets that demonstrate using Pulumi to build and deploy Kubernetes applications using cloud native infrastructure as code, in three categories: config as real code, multi-cloud infrastructure, and software delivery as code."
+meta_desc: "How to build & deploy Kubernetes applications using infrastructure as code, in three categories: config as real code, multi-cloud, & software delivery as code."
 meta_image: "health-checks.gif"
 authors: ["joe-duffy"]
 tags: ["Kubernetes"]
@@ -73,7 +73,7 @@ resources in code.
 
 [
 [Code](https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx) |
-[Tutorial]({{< ref "/docs/tutorials/kubernetes/stateless-app" >}}) ]
+[Tutorial]({{< relref "/docs/tutorials/kubernetes/stateless-app" >}}) ]
 
 Let's begin by seeing what defining Kubernetes applications in a real
 language looks like. The full Kubernetes API is available, just in code
@@ -138,7 +138,7 @@ some more compelling reasons why this is so great.
 
 We've all seen [the canonical Kubernetes guestbook application](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/)
 that uses PHP, Nginx, and Redis. We have
-[the same tutorial written in Pulumi]({{< ref "/docs/tutorials/kubernetes/guestbook" >}}).
+[the same tutorial written in Pulumi]({{< relref "/docs/tutorials/kubernetes/guestbook" >}}).
 But the basic conversion from YAML to TypeScript leaves something to be
 desired; namely, it's equally as verbose, feels a little too "low level"
 for an application definition, and misses opportunities to reduce
@@ -685,7 +685,7 @@ resource graph. In this example, we've changed our container image from
 The ability to look at previews before making an update ensures mistakes
 don't get made and that deployments don't have unanticipated impacts.
 There is even a
-[Pulumi GitHub App]({{< ref "/docs/guides/continuous-delivery/github-app" >}})
+[Pulumi GitHub App]({{< relref "/docs/guides/continuous-delivery/github-app" >}})
 that will show such diffs inside of pull requests before they've been
 deployed, so you know the impact of configuration changes before code
 even makes its way to master.
@@ -827,7 +827,7 @@ these goodies ready to go, are thrilled to ship, and we look forward to
 hearing about your ideas and scenarios about where to take things from
 here.
 
-To get started, head over to the [Pulumi Quickstart]({{< ref "/docs/get-started" >}}),
+To get started, head over to the [Pulumi Quickstart]({{< relref "/docs/get-started" >}}),
 meet us over on GitHub where all the goodies are open source <https://github.com/pulumi/pulumi>, and/or join our
 [Pulumi Community Slack](https://slack.pulumi.com). We can't wait to hear
 from you. Happy hacking!
