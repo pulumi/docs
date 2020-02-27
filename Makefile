@@ -17,6 +17,7 @@ banner:
 .PHONY: ensure
 ensure:
 	yarn install
+	yarn --cwd components install
 
 .PHONY: lint_markdown
 lint_markdown:
@@ -26,7 +27,13 @@ lint_markdown:
 serve:
 	@echo -e "\033[0;32mSERVE:\033[0m"
 	yarn lint-markdown --no-error
+	yarn --cwd components run build
 	hugo server --buildDrafts --buildFuture
+
+.PHONY: serve-components
+serve-components:
+	@echo -e "\033[0;32mSERVE COMPONENTS:\033[0m"
+	yarn --cwd components run start
 
 .PHONY: generate
 generate:
@@ -40,6 +47,7 @@ generate:
 build:
 	@echo -e "\033[0;32mBUILD ($(HUGO_ENVIRONMENT)):\033[0m"
 	yarn lint-markdown
+	NODE_ENV=production yarn --cwd components run build
 	NODE_ENV=production hugo --minify
 	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
 	rm -rf ./public/docs/search-data

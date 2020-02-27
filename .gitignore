@@ -23,3 +23,7 @@ node_modules
 # yarn's yarn.lock file. We ignore package-lock.json to prevent
 # it from being added mistakenly.
 /package-lock.json
+
+# Ignore the Stencil component bundle.
+/static/js/components.js
+/static/js/components/
