@@ -111,7 +111,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_keycloak.open_id.Client">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.open_id.</code><code class="sig-name descname">Client</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_type=None</em>, <em class="sig-param">authorization=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">direct_access_grants_enabled=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">exclude_session_state_from_auth_response=None</em>, <em class="sig-param">full_scope_allowed=None</em>, <em class="sig-param">implicit_flow_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pkce_code_challenge_method=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">service_accounts_enabled=None</em>, <em class="sig-param">standard_flow_enabled=None</em>, <em class="sig-param">valid_redirect_uris=None</em>, <em class="sig-param">web_origins=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.open_id.Client" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.open_id.</code><code class="sig-name descname">Client</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_type=None</em>, <em class="sig-param">admin_url=None</em>, <em class="sig-param">authorization=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">consent_required=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">direct_access_grants_enabled=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">exclude_session_state_from_auth_response=None</em>, <em class="sig-param">full_scope_allowed=None</em>, <em class="sig-param">implicit_flow_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pkce_code_challenge_method=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">service_accounts_enabled=None</em>, <em class="sig-param">standard_flow_enabled=None</em>, <em class="sig-param">valid_redirect_uris=None</em>, <em class="sig-param">web_origins=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.open_id.Client" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows for creating and managing Keycloak clients that use the OpenID Connect protocol.</p>
 <p>Clients are entities that can use Keycloak for user authentication. Typically,
 clients are applications that redirect users to Keycloak for authentication
@@ -170,7 +170,7 @@ is set to <code class="docutils literal notranslate"><span class="pre">true</spa
 </div></blockquote>
 <dl class="method">
 <dt id="pulumi_keycloak.open_id.Client.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_type=None</em>, <em class="sig-param">authorization=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">direct_access_grants_enabled=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">exclude_session_state_from_auth_response=None</em>, <em class="sig-param">full_scope_allowed=None</em>, <em class="sig-param">implicit_flow_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pkce_code_challenge_method=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">service_account_user_id=None</em>, <em class="sig-param">service_accounts_enabled=None</em>, <em class="sig-param">standard_flow_enabled=None</em>, <em class="sig-param">valid_redirect_uris=None</em>, <em class="sig-param">web_origins=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.open_id.Client.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_type=None</em>, <em class="sig-param">admin_url=None</em>, <em class="sig-param">authorization=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">consent_required=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">direct_access_grants_enabled=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">exclude_session_state_from_auth_response=None</em>, <em class="sig-param">full_scope_allowed=None</em>, <em class="sig-param">implicit_flow_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pkce_code_challenge_method=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">service_account_user_id=None</em>, <em class="sig-param">service_accounts_enabled=None</em>, <em class="sig-param">standard_flow_enabled=None</em>, <em class="sig-param">valid_redirect_uris=None</em>, <em class="sig-param">web_origins=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.open_id.Client.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Client resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -641,6 +641,72 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_keycloak.open_id.ClientScope.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.open_id.ClientScope.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_keycloak.open_id.ClientServiceAccountRealmRole">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.open_id.</code><code class="sig-name descname">ClientServiceAccountRealmRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">service_account_user_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.open_id.ClientServiceAccountRealmRole" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a ClientServiceAccountRealmRole resource with the given unique name, props, and options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="pulumi_keycloak.open_id.ClientServiceAccountRealmRole.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">service_account_user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.open_id.ClientServiceAccountRealmRole.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ClientServiceAccountRealmRole resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_keycloak.open_id.ClientServiceAccountRealmRole.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.open_id.ClientServiceAccountRealmRole.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_keycloak.open_id.ClientServiceAccountRealmRole.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.open_id.ClientServiceAccountRealmRole.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
