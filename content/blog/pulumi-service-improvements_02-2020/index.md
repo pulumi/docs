@@ -10,12 +10,7 @@ meta_image: "pretty-print-multiline-json.gif"
 We've been hard at work making it easier to manage stacks, permissions, and organizations in the Pulumi Console. Adding
 new features like first-class support for stack tags, deep links into CI/CD providers, and downloadable checkpoint files.
 
-<<<<<<< HEAD
-We've been hard at work, making it easier to manage stacks, permissions, and organizations. So we're super-excited to showcase
-what's new!
-=======
-In this post we showcase what's new!
->>>>>>> 4da6bd47e2d2dd216760ae49fd83cfc18db1311f
+In this post, we showcase what's new!
 
 <!--more-->
 
@@ -39,16 +34,10 @@ added by Pulumi's first (and extremely awesome) intern, Tasia (👋)!
 
 ## Deep Linking into CI/CD Systems
 
-<<<<<<< HEAD
-We've also added deep links from the Pulumi Console to the CI/CD job or task that performed an update. Depending on
-how you practice [continuous delivery using Pulumi]({{< relref "/docs/guides/continuous-delivery" >}}), you’ can see
-links to things like the [Circle CI job](http://circleci.com) or [Travis CI build](http://travis-ci.com) as appropriate.
-=======
 Many people practice [continuous delivery using Pulumi]({{< relref "/docs/guides/continuous-delivery" >}}), automatically
 updating stacks in response to code check-ins or merges. We've now added support for deep links from the Pulumi Console back
 into your CI/CD tool of choice. So, for example, you'll now see links to the [Circle CI job](http://circleci.com) or
 [Travis CI build](http://travis-ci.com) from the Pulumi Console.
->>>>>>> 4da6bd47e2d2dd216760ae49fd83cfc18db1311f
 
 {{< figure alt="Link to the Travis CI Build from the Pulumi Console" src="./deep-linking-cicd-providers.png" class="md:max-w-lg" >}}
 
@@ -82,23 +71,10 @@ is that it can be difficult to review exactly *_what_* access someone has to a s
 
 Fortunately, the Pulumi Console now has the ability for organization administrators to see all stacks a particular member has access to.
 
-<<<<<<< HEAD
-You can see which stacks a member can access.
-=======
 {{< figure alt="Stacks an organization member has access to" src="./list-of-accessible-stacks.png" class="md:max-w-lg" >}}
->>>>>>> 4da6bd47e2d2dd216760ae49fd83cfc18db1311f
 
 They can even go one step further, review the specific access granted from various sources.
 
-<<<<<<< HEAD
-And also see what sources grant that access.
-
-![Sources granting stack permissions](./stack-access-grants.png)
-
-## Log Rendering Performance
-
-Sadly, there isn't a useful screenshot to show this improvement. But we've made some changes that dramatically improve the Pulumi Console's performance when rendering update logs for large stacks.
-=======
 {{< figure alt="Sources granting stack permissions" src="./stack-access-grants.png" class="md:max-w-lg" >}}
 
 ## Log Rendering Performance
@@ -106,7 +82,6 @@ Sadly, there isn't a useful screenshot to show this improvement. But we've made 
 We've made some changes that dramatically improve the Pulumi Console's performance when rendering large update logs.
 
 {{< figure alt="Log rendering performance" src="./log-rendering-perf.gif" class="md:max-w-lg" >}}
->>>>>>> 4da6bd47e2d2dd216760ae49fd83cfc18db1311f
 
 ## Audit Logs
 
