@@ -2,7 +2,7 @@
 title: "Pulumi Console Improvements, February 2020"
 authors: ["chris-smith"]
 tags: ["pulumi","new-features"]
-date: "2020-3-10"
+date: "2020-03-10"
 meta_desc: "Recent improvements to the Pulumi Console: stack tags, audit logs, CI/CD integration, downloadable checkpoint files"
 meta_image: "pretty-print-multiline-json.gif"
 ---
