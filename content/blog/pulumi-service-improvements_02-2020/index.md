@@ -1,6 +1,5 @@
 ---
 title: "Pulumi Console Improvements, February 2020"
-h1: "Pulumi Console Improvements, February 2020"
 authors: ["chris-smith"]
 tags: ["pulumi","new-features"]
 date: "2020-02-28"
@@ -19,10 +18,10 @@ what's new!
 ## First-class Support for Tags
 
 Pulumi has had support for [stack tags]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}) for a while, enabling
-you to add attribute your stacks with custom data such as the `account-id` or `environment`. But previously the data was
+you to add attributes to your stacks with custom data such as the `account-id` or `environment`. But previously the data was
 only available on the command-line, via the `pulumi stack tag` command ([documentation]({{< relref "/docs/reference/cli/pulumi_stack_tag" >}})).
 
-We've added first-class support for stack tags. You can now create, update, and delete tags from within the Pulumi Console.
+We've now added first-class support for stack tags in the Pulumi Console as well. You can create, update, and delete tags from within the console.
 
 ![Updating stack tags within the Pulumi Console](./update-tags-in-console.png)
 
@@ -32,7 +31,7 @@ based on stack tags. For example, you can now use filters to more quickly add st
 ![Filtering stacks by their tags](./filter-stacks-by-tag.png)
 
 We will continue wiring stack tags throughout other parts of the Pulumi Console, so stay tuned! Also, this new feature was
-added by Pulumi's first (and extremely awesome) inter, Tasia (👋)!
+added by Pulumi's first (and extremely awesome) intern, Tasia (👋)!
 
 ## Deep Linking into CI/CD Systems
 
@@ -58,7 +57,7 @@ The most important job of the Pulumi Console is to maintain a durable, accurate 
 While in most cases your [stack's checkpoint data]({{< relref "/docs/intro/concepts/state" >}}) is a low-level detail
 you don't need to worry about, in some advanced scenarios you may need to inspect or edit it manually.
 
-You can now allow download a stack’s checkpoint file directly from the Pulumi Console. (Though you can sill access the
+You can now download a stack’s checkpoint file directly from the Pulumi Console. You can also access the
 same data from the command-line, using `pulumi stack export` ([documentation]({{< relref "/docs/reference/cli/pulumi_stack_export" >}})),
 which now supports a `--version` flag to export older checkpoint files too.
 
@@ -68,7 +67,7 @@ which now supports a `--version` flag to export older checkpoint files too.
 
 The Team Pro and Enterprise editions support [role-based access control]({{< relref "/docs/intro/console/collaboration/stack-permissions" >}})
 using [teams]({{< relref "/docs/intro/console/collaboration/teams" >}}). But a common problem we've heard from people in large organizations
-is that it can be difficult to review exactly *_what_* access someone has access to a stack and *_why_*.
+is that it can be difficult to review exactly *_what_* access someone has to a stack and *_why_*.
 
 That's why the recent feature I'm personally the most excited about, is the ability for organization administrators to drill into their
 members and review stack permissions.
@@ -77,7 +76,7 @@ You can see what stacks a member has access to.
 
 ![Stacks an organization member has access to](./list-of-accessible-stacks.png)
 
-And also see what sources are granting that stack access.
+And also see what sources are granting that access.
 
 ![Sources granting stack permissions](./stack-access-grants.png)
 
@@ -88,16 +87,16 @@ improve the Pulumi Console's performance when rendering update logs for large st
 
 ## Audit Logs
 
-Users of our Enterprise tier typically have a lot of stacks and teams. This can make it difficult to review what's currently in-motion
-right now, let alone try to understand a sequence of events a few days or few weeks in the past.
+Users of Pulumi Enterprise typically have a lot of stacks and teams. This can make it difficult to review what's currently in-motion
+and to understand a sequence of events a few days or few weeks in the past.
 
 [As we announced earlier]({{< relref "/blog/auditing-your-organizations-infrastructure-as-code-activity" >}}) we launched the ability to view
 and download audit logs with all the changes within an organization.
 
 ![Audit logs of recent changes within an organization](./audit-logs.png)
 
-Phew! Like I said, we've been busy this month working on the Pulumi Console. But have plenty more awesomeness still in the pipe.
-(If you want to get a peek at other things in-development, check out the [Pulumi 2.0 Roadmap]({{< relref "/blog/pulumi-2-0-roadmap" >}}).)
+Phew! Like I said, we've been busy this month working on the Pulumi Console. And there is plenty more awesomeness still in the pipe!
+If you want to get a peek at other things in-development, check out the [Pulumi 2.0 Roadmap]({{< relref "/blog/pulumi-2-0-roadmap" >}}).
 
 As always, we love to hear if you have any feedback, suggestions, or ideas for other improvements we could make to the
 Pulumi Console. Just let us know on the [Pulumi Community Slack](https://slack.pulumi.com), Twitter [@PulumiCorp](https://twitter.com/pulumicorp),
