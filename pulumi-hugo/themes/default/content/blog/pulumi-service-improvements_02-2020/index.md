@@ -2,7 +2,7 @@
 title: "Pulumi Console Improvements, February 2020"
 authors: ["chris-smith"]
 tags: ["pulumi","new-features"]
-date: "2020-02-28"
+date: "2020-3-10"
 meta_desc: "Recent improvements to the Pulumi Console: stack tags, audit logs, CI/CD integration, downloadable checkpoint files"
 meta_image: "pretty-print-multiline-json.gif"
 ---
@@ -76,26 +76,24 @@ You can see which stacks a member can access.
 
 ![Stacks an organization member has access to](./list-of-accessible-stacks.png)
 
-And also see what sources are granting that access.
+And also see what sources grant that access.
 
 ![Sources granting stack permissions](./stack-access-grants.png)
 
 ## Log Rendering Performance
 
-Sadly, there isn't a useful screen shot to go along with this improvement. But we've made some changes that dramatically
-improve the Pulumi Console's performance when rendering update logs for large stacks.
+Sadly, there isn't a useful screenshot to show this improvement. But we've made some changes that dramatically improve the Pulumi Console's performance when rendering update logs for large stacks.
 
 ## Audit Logs
 
-Users of Pulumi Enterprise typically have a lot of stacks and teams. This can make it difficult to review what's currently in-motion
-and to understand a sequence of events a few days or few weeks in the past.
+Pulumi Enterprise customers typically have many stacks and teams. Multiple teams and stacks can make it difficult to review what's currently in-motion and to understand a sequence of events a few days or few weeks in the past.
 
 [As we announced earlier]({{< relref "/blog/auditing-your-organizations-infrastructure-as-code-activity" >}}) we launched the ability to view
 and download audit logs with all the changes within an organization.
 
 ![Audit logs of recent changes within an organization](./audit-logs.png)
 
-Phew! Like I said, we've been busy this month working on the Pulumi Console. And there is plenty more awesomeness still in the pipe!
+Phew! As I said, we've been busy this month working on the Pulumi Console. And there is plenty more awesomeness still in the pipe!
 If you want to get a peek at other things in-development, check out the [Pulumi 2.0 Roadmap]({{< relref "/blog/pulumi-2-0-roadmap" >}}).
 
 As always, we love to hear if you have any feedback, suggestions, or ideas for other improvements we could make to the
