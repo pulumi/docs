@@ -38,16 +38,16 @@ tags:
 # for additional details, and please remove these comments before submitting for review.
 ---
 
-Stop writing Kubernetes YAML by hand, and start using the power of real programming languages! Pulumi now allows you to
-generate Kubernetes manifests that can be easily integrated into existing CI/CD workflows.
+Stop writing Kubernetes YAML by hand, and start using the power of real programming languages! Pulumi can
+generate Kubernetes manifests that easily integrates into existing CI/CD workflows.
 
 <!--more-->
 
-While Pulumi has [great support](https://www.pulumi.com/docs/get-started/kubernetes/) for deploying and updating
+While Pulumi has [excellent support](https://www.pulumi.com/docs/get-started/kubernetes/) for deploying and updating
 Kubernetes resources on a cluster, many users have asked for the option to render YAML that they can integrate into
 existing workflows. The [v1.5.4](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v1.5.4) release of
 `pulumi-kubernetes` adds the [renderYamlToDirectory](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/kubernetes/#ProviderArgs-renderYamlToDirectory)
-option, which enables this behavior. This option is available in every Pulumi-supported language, including
+option, which enables this feature. This option is available in every Pulumi-supported language, including
 TypeScript/JavaScript, Python, and .NET ([Go support is coming soon!](https://github.com/pulumi/pulumi-kubernetes/issues/70)).
 
 Aside from easily templating configuration across resources, using a real programming language allows you to write and
@@ -115,7 +115,7 @@ const service = deployment.createService({type: kx.types.ServiceType.LoadBalance
 ```
 
 Now, run `pulumi update`, and Pulumi renders these resources to YAML. The update process resolves [Outputs](https://www.pulumi.com/docs/intro/concepts/programming-model/#outputs)
-as usual, so the manifests can include other infrastructure configuration specified in your program. The rendered
+as usual, so that the manifests can include other infrastructure configuration specified in your program. The rendered
 manifests are kept in sync with changes to the program on each update.
 
 Here's what the resulting directory looks like:
@@ -135,53 +135,7 @@ Voilà! From 33 (44 with whitespace and comments) lines of TypeScript code to 10
 
 Here's the rendered `Deployment` resource.
 
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  annotations:
-    foo: bar
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"foo":"bar","pulumi.com/autonamed":"true"},"labels":{"app.kubernetes.io/managed-by":"pulumi"},"name":"nginx-nyn4tlkx"},"spec":{"replicas":3,"selector":{"matchLabels":{"app":"nginx"}},"template":{"metadata":{"labels":{"app":"nginx"}},"spec":{"containers":[{"env":[{"name":"CONFIG","valueFrom":{"configMapKeyRef":{"key":"config","name":"cm-5opqxhna"}}},{"name":"PASSWORD","valueFrom":{"secretKeyRef":{"key":"password","name":"secret-hfcg0l06"}}}],"image":"nginx","name":"nginx","ports":[{"containerPort":8080,"name":"http"}],"volumeMounts":[{"mountPath":"/data","name":"data-4qulussd"}]}],"volumes":[{"name":"data-4qulussd","persistentVolumeClaim":{"claimName":"data-4qulussd"}}]}}}}
-    pulumi.com/autonamed: "true"
-  labels:
-    app.kubernetes.io/managed-by: pulumi
-  name: nginx-nyn4tlkx
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: nginx
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - env:
-        - name: CONFIG
-          valueFrom:
-            configMapKeyRef:
-              key: config
-              name: cm-5opqxhna
-        - name: PASSWORD
-          valueFrom:
-            secretKeyRef:
-              key: password
-              name: secret-hfcg0l06
-        image: nginx
-        name: nginx
-        ports:
-        - containerPort: 8080
-          name: http
-        volumeMounts:
-        - mountPath: /data
-          name: data-4qulussd
-      volumes:
-      - name: data-4qulussd
-        persistentVolumeClaim:
-          claimName: data-4qulussd
-```
+{{< gist lblackstone 686935edf7fdcd23d916f34d35bba64a "deployment-nginx-nyn4tlkx.yaml" >}}
 
 See [this gist](https://gist.github.com/lblackstone/686935edf7fdcd23d916f34d35bba64a) for the complete rendered output.
 
@@ -191,7 +145,7 @@ There are two important caveats to note about YAML rendering support:
 
 1. The YAML-rendered resources are **not created** on a Kubernetes cluster, so information that is computed server-side
 will not be available in your program. For example, a `Service` will not have IP assignments, so attempting to export
-these values will not work as usual (the value will be `undefined`).
+these values will not work as usual (i.e., the value will be `undefined`).
 1. **Any Secret values will appear in plaintext in the rendered manifests.** This includes any values marked as
 secret in Pulumi. A warning will be printed for any secret values being rendered to YAML, but it is your responsibility
 to protect the rendered files.
