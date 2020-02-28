@@ -10,7 +10,7 @@ meta_image: "pretty-print-multiline-json.gif"
 Hello! Many posts here on the [Pulumi blog]({{< relref "/blog" >}}) describe new features in our core libraries or
 command-line client. But in this post, we'll highlight some of the recent improvements to the [Pulumi Console](https://app.pulumi.com).
 
-We've been hard at work making it easier to manage stacks, permissions, and organizations. So we're super-excited to showcase
+We've been hard at work, making it easier to manage stacks, permissions, and organizations. So we're super-excited to showcase
 what's new!
 
 <!--more-->
@@ -21,12 +21,12 @@ Pulumi has had support for [stack tags]({{< relref "/docs/intro/concepts/stack#s
 you to add attributes to your stacks with custom data such as the `account-id` or `environment`. But previously the data was
 only available on the command-line, via the `pulumi stack tag` command ([documentation]({{< relref "/docs/reference/cli/pulumi_stack_tag" >}})).
 
-We've now added first-class support for stack tags in the Pulumi Console as well. You can create, update, and delete tags from within the console.
+We've added first-class support for stack tags in the Pulumi Console as well. You can create, update, and delete tags from within the console.
 
 ![Updating stack tags within the Pulumi Console](./update-tags-in-console.png)
 
-But making it easier to create and edit tag data is just the beginning. We've started to add new search/filtering capabilities
-based on stack tags. For example, you can now use filters to more quickly add stacks to [Pulumi teams]({{< relref "/docs/intro/console/collaboration/teams" >}}).
+Making it easier to create and edit tag data is just the beginning. We've started to add new search/filtering capabilities
+based on stack tags. For example, you can now use filters to rapidly add stacks to [Pulumi teams]({{< relref "/docs/intro/console/collaboration/teams" >}}).
 
 ![Filtering stacks by their tags](./filter-stacks-by-tag.png)
 
@@ -35,8 +35,8 @@ added by Pulumi's first (and extremely awesome) intern, Tasia (👋)!
 
 ## Deep Linking into CI/CD Systems
 
-We've also added deep links from the Pulumi Console to the CI/CD job or task that performed an update. So depending on
-how you practice [continuous delivery using Pulumi]({{< relref "/docs/guides/continuous-delivery" >}}), you’ll now see
+We've also added deep links from the Pulumi Console to the CI/CD job or task that performed an update. Depending on
+how you practice [continuous delivery using Pulumi]({{< relref "/docs/guides/continuous-delivery" >}}), you’ can see
 links to things like the [Circle CI job](http://circleci.com) or [Travis CI build](http://travis-ci.com) as appropriate.
 
 ![Link to the Travis CI Build from the Pulumi Console](./deep-linking-cicd-providers.png)
@@ -47,7 +47,7 @@ links to things like the [Circle CI job](http://circleci.com) or [Travis CI buil
 
 ## Pretty Printing JSON / Multi Configuration
 
-We now pretty print configuration values that look like JSON, and have much better support for viewing multi-line data.
+We now pretty print JSON configuration values and have much better support for viewing multi-line data.
 
 ![JSON and mutiline configuration values](./pretty-print-multiline-json.gif)
 
@@ -55,9 +55,9 @@ We now pretty print configuration values that look like JSON, and have much bett
 
 The most important job of the Pulumi Console is to maintain a durable, accurate snapshot of your cloud resource data.
 While in most cases your [stack's checkpoint data]({{< relref "/docs/intro/concepts/state" >}}) is a low-level detail
-you don't need to worry about, in some advanced scenarios you may need to inspect or edit it manually.
+you don't need to worry about; in some advanced scenarios, you may need to inspect or edit it manually.
 
-You can now download a stack’s checkpoint file directly from the Pulumi Console. You can also access the
+You can now download a stack’s checkpoint file directly from the Pulumi Console. You can get the
 same data from the command-line, using `pulumi stack export` ([documentation]({{< relref "/docs/reference/cli/pulumi_stack_export" >}})),
 which now supports a `--version` flag to export older checkpoint files too.
 
@@ -72,7 +72,7 @@ is that it can be difficult to review exactly *_what_* access someone has to a s
 That's why the recent feature I'm personally the most excited about, is the ability for organization administrators to drill into their
 members and review stack permissions.
 
-You can see what stacks a member has access to.
+You can see which stacks a member can access.
 
 ![Stacks an organization member has access to](./list-of-accessible-stacks.png)
 
