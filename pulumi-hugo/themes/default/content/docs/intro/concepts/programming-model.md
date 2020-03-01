@@ -1466,7 +1466,7 @@ record = aws.route53.Record('validation',
     records=[
         # Need to pass along a deep subproperty of this Output
         certificate.domain_validation_options.apply(
-            lambda domain_validation_options: domain_validation_options[0].resource_record_value
+            lambda domain_validation_options: domain_validation_options[0]['resourceRecordValue']
         )
     ],
 ...
