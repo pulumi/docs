@@ -39,7 +39,7 @@ tags:
 ---
 
 Stop writing Kubernetes YAML by hand, and start using the power of real programming languages! Pulumi can
-generate Kubernetes manifests that easily integrates into existing CI/CD workflows.
+generate Kubernetes manifests that easily integrate into existing CI/CD workflows.
 
 <!--more-->
 
