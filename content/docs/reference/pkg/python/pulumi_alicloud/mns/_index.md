@@ -339,7 +339,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filter_tag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The length should be shorter than 16.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Two topics subscription on a single account in the same topic cannot have the same name. A topic subscription name must start with an English letter or a digit, and can contain English letters, digits, and hyphens, with the length not exceeding 256 characters.</p></li>
-<li><p><strong>notify_content_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The NotifyContentFormat attribute of Subscription. This attribute specifies the content format of the messages pushed to users. the attribute has two value SIMPLIFIED or XML.Default value to SIMPLIFIED .</p></li>
+<li><p><strong>notify_content_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The NotifyContentFormat attribute of Subscription. This attribute specifies the content format of the messages pushed to users. The valid values: ‘SIMPLIFIED’, ‘XML’ and ‘JSON’. Default to ‘SIMPLIFIED’.</p></li>
 <li><p><strong>notify_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The NotifyStrategy attribute of Subscription. This attribute specifies the retry strategy when message sending fails. the attribute has two value EXPONENTIAL_DECAY_RETR or BACKOFF_RETRY. Default value to BACKOFF_RETRY .</p></li>
 </ul>
 </dd>
@@ -373,7 +373,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_alicloud.mns.TopicSubscription.notify_content_format">
 <code class="sig-name descname">notify_content_format</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.TopicSubscription.notify_content_format" title="Permalink to this definition">¶</a></dt>
-<dd><p>The NotifyContentFormat attribute of Subscription. This attribute specifies the content format of the messages pushed to users. the attribute has two value SIMPLIFIED or XML.Default value to SIMPLIFIED .</p>
+<dd><p>The NotifyContentFormat attribute of Subscription. This attribute specifies the content format of the messages pushed to users. The valid values: ‘SIMPLIFIED’, ‘XML’ and ‘JSON’. Default to ‘SIMPLIFIED’.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -407,7 +407,7 @@ properties used to qualify the lookup.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filter_tag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The length should be shorter than 16.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Two topics subscription on a single account in the same topic cannot have the same name. A topic subscription name must start with an English letter or a digit, and can contain English letters, digits, and hyphens, with the length not exceeding 256 characters.</p></li>
-<li><p><strong>notify_content_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The NotifyContentFormat attribute of Subscription. This attribute specifies the content format of the messages pushed to users. the attribute has two value SIMPLIFIED or XML.Default value to SIMPLIFIED .</p></li>
+<li><p><strong>notify_content_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The NotifyContentFormat attribute of Subscription. This attribute specifies the content format of the messages pushed to users. The valid values: ‘SIMPLIFIED’, ‘XML’ and ‘JSON’. Default to ‘SIMPLIFIED’.</p></li>
 <li><p><strong>notify_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The NotifyStrategy attribute of Subscription. This attribute specifies the retry strategy when message sending fails. the attribute has two value EXPONENTIAL_DECAY_RETR or BACKOFF_RETRY. Default value to BACKOFF_RETRY .</p></li>
 </ul>
 </dd>
