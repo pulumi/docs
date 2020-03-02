@@ -20,7 +20,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_alicloud.emr.AwaitableGetInstanceTypesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">AwaitableGetInstanceTypesResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">support_local_storage=None</em>, <em class="sig-param">support_node_types=None</em>, <em class="sig-param">types=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.AwaitableGetInstanceTypesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">AwaitableGetInstanceTypesResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">support_local_storage=None</em>, <em class="sig-param">support_node_types=None</em>, <em class="sig-param">types=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.AwaitableGetInstanceTypesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -30,7 +30,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_alicloud.emr.Cluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">charge_type=None</em>, <em class="sig-param">cluster_type=None</em>, <em class="sig-param">deposit_type=None</em>, <em class="sig-param">eas_enable=None</em>, <em class="sig-param">emr_ver=None</em>, <em class="sig-param">high_availability_enable=None</em>, <em class="sig-param">host_groups=None</em>, <em class="sig-param">is_open_public_ip=None</em>, <em class="sig-param">key_pair_name=None</em>, <em class="sig-param">master_pwd=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">option_software_lists=None</em>, <em class="sig-param">related_cluster_id=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">ssh_enable=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_local_metadb=None</em>, <em class="sig-param">user_defined_emr_ecs_role=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bootstrap_actions=None</em>, <em class="sig-param">charge_type=None</em>, <em class="sig-param">cluster_type=None</em>, <em class="sig-param">deposit_type=None</em>, <em class="sig-param">eas_enable=None</em>, <em class="sig-param">emr_ver=None</em>, <em class="sig-param">high_availability_enable=None</em>, <em class="sig-param">host_groups=None</em>, <em class="sig-param">is_open_public_ip=None</em>, <em class="sig-param">key_pair_name=None</em>, <em class="sig-param">master_pwd=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">option_software_lists=None</em>, <em class="sig-param">related_cluster_id=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">ssh_enable=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_local_metadb=None</em>, <em class="sig-param">user_defined_emr_ecs_role=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a EMR Cluster resource. With this you can create, read, and release  EMR Cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.57.0+.</p>
@@ -43,9 +43,8 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.</p></li>
 <li><p><strong>cluster_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported ‘GATEWAY’ available in 1.61.0+.</p></li>
 <li><p><strong>emr_ver</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.</p></li>
-<li><p><strong>host*groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).</p>
-</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of emr cluster. The name length must be less than 64. Supported characters: chinese character, english character, number, “-“, “<a href="#id3"><span class="problematic" id="id4">*</span></a>”.</p></li>
+<li><p><strong>host_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – bootstrap action name.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Zone ID, e.g. cn-huhehaote-a</p></li>
 </ul>
@@ -65,6 +64,12 @@ anything, please consult the source <a class="reference external" href="https://
 * `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
 </pre></div>
 </div>
+<p>The <strong>bootstrap_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arg</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - bootstrap action args, e.g. “–a=b”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - bootstrap action name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - bootstrap action path, e.g. “oss://bucket/path”.</p></li>
+</ul>
 <p>The <strong>host_groups</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">autoRenew</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Auto renew for prepaid, true of false. Default is false.</p></li>
@@ -128,7 +133,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_alicloud.emr.Cluster.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of emr cluster. The name length must be less than 64. Supported characters: chinese character, english character, number, “-“, “_”.</p>
+<dd><p>bootstrap action name.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -159,7 +164,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_alicloud.emr.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">charge_type=None</em>, <em class="sig-param">cluster_type=None</em>, <em class="sig-param">deposit_type=None</em>, <em class="sig-param">eas_enable=None</em>, <em class="sig-param">emr_ver=None</em>, <em class="sig-param">high_availability_enable=None</em>, <em class="sig-param">host_groups=None</em>, <em class="sig-param">is_open_public_ip=None</em>, <em class="sig-param">key_pair_name=None</em>, <em class="sig-param">master_pwd=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">option_software_lists=None</em>, <em class="sig-param">related_cluster_id=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">ssh_enable=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_local_metadb=None</em>, <em class="sig-param">user_defined_emr_ecs_role=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bootstrap_actions=None</em>, <em class="sig-param">charge_type=None</em>, <em class="sig-param">cluster_type=None</em>, <em class="sig-param">deposit_type=None</em>, <em class="sig-param">eas_enable=None</em>, <em class="sig-param">emr_ver=None</em>, <em class="sig-param">high_availability_enable=None</em>, <em class="sig-param">host_groups=None</em>, <em class="sig-param">is_open_public_ip=None</em>, <em class="sig-param">key_pair_name=None</em>, <em class="sig-param">master_pwd=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">option_software_lists=None</em>, <em class="sig-param">related_cluster_id=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">ssh_enable=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_local_metadb=None</em>, <em class="sig-param">user_defined_emr_ecs_role=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -171,9 +176,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.</p></li>
 <li><p><strong>cluster_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported ‘GATEWAY’ available in 1.61.0+.</p></li>
 <li><p><strong>emr_ver</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.</p></li>
-<li><p><strong>host*groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).</p>
-</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of emr cluster. The name length must be less than 64. Supported characters: chinese character, english character, number, “-“, “<a href="#id7"><span class="problematic" id="id8">*</span></a>”.</p></li>
+<li><p><strong>host_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – bootstrap action name.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Zone ID, e.g. cn-huhehaote-a</p></li>
 </ul>
@@ -193,6 +197,12 @@ properties used to qualify the lookup.</p>
 * `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
 </pre></div>
 </div>
+<p>The <strong>bootstrap_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arg</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - bootstrap action args, e.g. “–a=b”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - bootstrap action name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - bootstrap action path, e.g. “oss://bucket/path”.</p></li>
+</ul>
 <p>The <strong>host_groups</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">autoRenew</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Auto renew for prepaid, true of false. Default is false.</p></li>
@@ -279,7 +289,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.emr.GetInstanceTypesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">GetInstanceTypesResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">support_local_storage=None</em>, <em class="sig-param">support_node_types=None</em>, <em class="sig-param">types=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.GetInstanceTypesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">GetInstanceTypesResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">support_local_storage=None</em>, <em class="sig-param">support_node_types=None</em>, <em class="sig-param">types=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.GetInstanceTypesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstanceTypes.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.emr.GetInstanceTypesResult.ids">
@@ -363,7 +373,7 @@ system disk types available in Alibaba Cloud account when create a emr cluster.<
 
 <dl class="function">
 <dt id="pulumi_alicloud.emr.get_instance_types">
-<code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">get_instance_types</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">support_local_storage=None</em>, <em class="sig-param">support_node_types=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.get_instance_types" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">get_instance_types</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">support_local_storage=None</em>, <em class="sig-param">support_node_types=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.get_instance_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">emr.getInstanceTypes</span></code> data source provides a collection of ecs
 instance types available in Alibaba Cloud account when create a emr cluster.</p>
 <blockquote>
@@ -375,8 +385,9 @@ instance types available in Alibaba Cloud account when create a emr cluster.</p>
 <li><p><strong>cluster_type</strong> (<em>str</em>) – The cluster type of the emr cluster instance. Possible values: <code class="docutils literal notranslate"><span class="pre">HADOOP</span></code>, <code class="docutils literal notranslate"><span class="pre">KAFKA</span></code>, <code class="docutils literal notranslate"><span class="pre">ZOOKEEPER</span></code>, <code class="docutils literal notranslate"><span class="pre">DRUID</span></code>.</p></li>
 <li><p><strong>destination_resource</strong> (<em>str</em>) – The destination resource of emr cluster instance</p></li>
 <li><p><strong>instance_charge_type</strong> (<em>str</em>) – Filter the results by charge type. Valid values: <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code> and <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
+<li><p><strong>instance_type</strong> (<em>str</em>) – Filter the specific ecs instance type to create emr cluster.</p></li>
 <li><p><strong>support_local_storage</strong> (<em>bool</em>) – Whether the current storage disk is local or not.</p></li>
-<li><p><strong>support_node_types</strong> (<em>list</em>) – The specific supported node type list. 
+<li><p><strong>support_node_types</strong> (<em>list</em>) – The specific supported node type list.
 Possible values may be any one or combination of these: [“MASTER”, “CORE”, “TASK”, “GATEWAY”]</p></li>
 <li><p><strong>zone_id</strong> (<em>str</em>) – The supported resources of specific zoneId.</p></li>
 </ul>
