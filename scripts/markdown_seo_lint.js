@@ -89,7 +89,7 @@ function searchForMarkdown(paths, result) {
     const fileSuffix = fileParts[fileParts.length - 1];
 
     // Ignore auto generated docs.
-    if (file.indexOf("/content/docs/reference/pkg") > -1) {
+    if (file.indexOf("/content/docs/reference/pkg") > -1 || file.indexOf("/content/docs/reference/providers") > -1) {
         const remaining = paths.slice(1, paths.length);
         return searchForMarkdown(remaining, result);
     }
