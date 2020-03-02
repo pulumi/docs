@@ -5,7 +5,7 @@ title: "Generate Kubernetes YAML with Real Programming Languages"
 # the date this file was generated. Posts with future dates are visible in development,
 # but excluded from production builds. Use the time and timezone-offset portions of
 # of this value to schedule posts for publishing later.
-date: 2020-03-05T08:00:00-05:00
+date: 2020-03-03T08:00:00-05:00
 
 # Draft posts are visible in development, but excluded from production builds.
 # Set this property to `false` before submitting your post for review.
@@ -39,7 +39,7 @@ tags:
 ---
 
 Stop writing Kubernetes YAML by hand, and start using the power of real programming languages! Pulumi can
-generate Kubernetes manifests that easily integrates into existing CI/CD workflows.
+generate Kubernetes manifests that easily integrate into existing CI/CD workflows.
 
 <!--more-->
 
@@ -64,7 +64,7 @@ import * as kx from "@pulumi/kubernetesx";
 
 // Instantiate a Kubernetes Provider and specify the render directory.
 const provider = new k8s.Provider("render-yaml", {
-    renderYamlToDirectory: "rendered"
+    renderYamlToDirectory: "rendered",
 });
 ```
 
@@ -75,13 +75,13 @@ Next, use that `Provider` for any Kubernetes resources you want to render as YAM
 const pvc = new kx.PersistentVolumeClaim("data", {
     spec: {
         accessModes: [ "ReadWriteOnce" ],
-        resources: { requests: { storage: "1Gi" } }
+        resources: { requests: { storage: "1Gi" } },
     }
 }, { provider });
 
 // Create a Kubernetes ConfigMap.
 const cm = new kx.ConfigMap("cm", {
-    data: { "config": "very important data" }
+    data: { "config": "very important data" },
 }, { provider });
 
 // Create a Kubernetes Secret.
@@ -107,11 +107,13 @@ const pb = new kx.PodBuilder({
 
 // Create a Kubernetes Deployment.
 const deployment = new kx.Deployment("nginx", {
-    spec: pb.asDeploymentSpec( { replicas: 3 })
+    spec: pb.asDeploymentSpec( { replicas: 3 } ),
 }, { provider });
 
 // Create a Kubernetes Service.
-const service = deployment.createService({type: kx.types.ServiceType.LoadBalancer});
+const service = deployment.createService({
+    type: kx.types.ServiceType.LoadBalancer,
+});
 ```
 
 Now, run `pulumi update`, and Pulumi renders these resources to YAML. The update process resolves [Outputs](https://www.pulumi.com/docs/intro/concepts/programming-model/#outputs)
