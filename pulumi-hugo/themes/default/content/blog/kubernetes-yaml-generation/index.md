@@ -64,7 +64,7 @@ import * as kx from "@pulumi/kubernetesx";
 
 // Instantiate a Kubernetes Provider and specify the render directory.
 const provider = new k8s.Provider("render-yaml", {
-    renderYamlToDirectory: "rendered"
+    renderYamlToDirectory: "rendered",
 });
 ```
 
@@ -75,13 +75,13 @@ Next, use that `Provider` for any Kubernetes resources you want to render as YAM
 const pvc = new kx.PersistentVolumeClaim("data", {
     spec: {
         accessModes: [ "ReadWriteOnce" ],
-        resources: { requests: { storage: "1Gi" } }
+        resources: { requests: { storage: "1Gi" } },
     }
 }, { provider });
 
 // Create a Kubernetes ConfigMap.
 const cm = new kx.ConfigMap("cm", {
-    data: { "config": "very important data" }
+    data: { "config": "very important data" },
 }, { provider });
 
 // Create a Kubernetes Secret.
@@ -107,11 +107,13 @@ const pb = new kx.PodBuilder({
 
 // Create a Kubernetes Deployment.
 const deployment = new kx.Deployment("nginx", {
-    spec: pb.asDeploymentSpec( { replicas: 3 })
+    spec: pb.asDeploymentSpec( { replicas: 3 } ),
 }, { provider });
 
 // Create a Kubernetes Service.
-const service = deployment.createService({type: kx.types.ServiceType.LoadBalancer});
+const service = deployment.createService({
+    type: kx.types.ServiceType.LoadBalancer,
+});
 ```
 
 Now, run `pulumi update`, and Pulumi renders these resources to YAML. The update process resolves [Outputs](https://www.pulumi.com/docs/intro/concepts/programming-model/#outputs)
