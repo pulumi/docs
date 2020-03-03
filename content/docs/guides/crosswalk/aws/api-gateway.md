@@ -527,7 +527,7 @@ and Amazon Web Application Firewall (WAF) -- and limiting access to authorized c
 
 The `awsx.apigateway.API` class supports three specific methods of controlling access to your APIs:
 
-* *AWS Cognito user pools* let you create customizable authentication and authorization for your APIs.
+* *Amazon Cognito user pools* let you create customizable authentication and authorization for your APIs.
 * *Lambda authorizers* are Lambda Functions that control access to your APIs based on HTTP information
   available in headers, paths, query strings, or other request information, including bearer tokens.
 * *Usage plans* let you provide *API keys* to customers, and then track and limit usage of your APIs.
