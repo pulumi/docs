@@ -147,37 +147,7 @@ This Pulumi program creates an Azure resource group and storage account and expo
 
 {{% lang python %}}
 
-For Python, before we deploy the stack, the following commands need to be run to create a virtual environment, activate it, and install dependencies:
-
-Create a virtual environment in Linux and macOS:
-
-```bash
-$ python3 -m venv venv
-```
-
-Activate the environment in Linux and macOS:
-
-```bash
-$ source venv/bin/activate
-```
-
-Create a virtual environment in Windows:
-
-```bat
-$ python -m venv venv
-```
-
-Activate the environment in Windows:
-
-```bat
-> venv\Scripts\activate
-```
-
-Install dependencies:
-
-```bash
-$ pip3 install -r requirements.txt
-```
+{{< python-venv >}}
 
 {{% /lang %}}
 

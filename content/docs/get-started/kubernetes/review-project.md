@@ -146,38 +146,7 @@ This Pulumi program creates an NGINX deployment and exports the name of the depl
 
 {{% lang python %}}
 
-> *Note*: As a prerequisite, [install virtualenv](https://virtualenv.pypa.io/en/latest/installation/) to manage project requirements
-
-For Python, before we deploy the stack, the following commands need to be run to create a virtual environment, activate it, and install dependencies:
-
-Create a virtual environment:
-
-```bash
-$ python3 -m venv venv
-```
-
-Activate the environment in Linux and macOS:
-
-```bash
-$ source venv/bin/activate
-```
-
-Create a virtual environment in Windows:
-
-```bat
-$ python -m venv venv
-
-Activate the environment in Windows:
-
-```bat
-> venv\Scripts\activate.bat
-```
-
-Install dependencies:
-
-```bash
-$ pip install -r requirements.txt
-```
+{{< python-venv >}}
 
 {{% /lang %}}
 
