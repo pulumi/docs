@@ -61,7 +61,7 @@ function selectLanguage(lang) {
         $("code").each(function (i, e) {
             var classes = getElemClasses(e);
             for (var i = 0; i < classes.length; i++) {
-                if (classes[i].startsWith("language-") && !shellLanguages.includes(classes[i])) {
+                if (classes[i].startsWith("language-") && !shellLanguages.indexOf(classes[i]) !== -1) {
                     var parents = $(e).parents("div.highlight");
                     if (!parents.length) {
                         parents = $(e).parents("span.highlight");
