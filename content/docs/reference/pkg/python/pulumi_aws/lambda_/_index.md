@@ -175,7 +175,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lambda_.EventSourceMapping">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.lambda_.</code><code class="sig-name descname">EventSourceMapping</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">batch_size=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">event_source_arn=None</em>, <em class="sig-param">function_name=None</em>, <em class="sig-param">maximum_batching_window_in_seconds=None</em>, <em class="sig-param">starting_position=None</em>, <em class="sig-param">starting_position_timestamp=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.EventSourceMapping" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.lambda_.</code><code class="sig-name descname">EventSourceMapping</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">batch_size=None</em>, <em class="sig-param">bisect_batch_on_function_error=None</em>, <em class="sig-param">destination_config=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">event_source_arn=None</em>, <em class="sig-param">function_name=None</em>, <em class="sig-param">maximum_batching_window_in_seconds=None</em>, <em class="sig-param">maximum_record_age_in_seconds=None</em>, <em class="sig-param">maximum_retry_attempts=None</em>, <em class="sig-param">parallelization_factor=None</em>, <em class="sig-param">starting_position=None</em>, <em class="sig-param">starting_position_timestamp=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.EventSourceMapping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Lambda event source mapping. This allows Lambda functions to get events from Kinesis, DynamoDB and SQS.</p>
 <p>For information about Lambda and how to use it, see [What is AWS Lambda?][1].
 For information about event source mappings, see [CreateEventSourceMapping][2] in the API docs.</p>
@@ -194,6 +194,21 @@ For information about event source mappings, see [CreateEventSourceMapping][2] i
 </ul>
 </dd>
 </dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
+* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum of 0, maximum and default of 10000.
+* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Minimum of 60, maximum and default of 604800.
+* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
+* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
+</pre></div>
+</div>
+<p>The <strong>destination_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">on_failure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The destination configuration for failed invocations. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Resource Name (ARN) of the destination resource.</p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_event_source_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_event_source_mapping.html.markdown</a>.</p>
 </div></blockquote>
@@ -255,6 +270,13 @@ For information about event source mappings, see [CreateEventSourceMapping][2] i
 <dt id="pulumi_aws.lambda_.EventSourceMapping.starting_position_timestamp">
 <code class="sig-name descname">starting_position_timestamp</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.EventSourceMapping.starting_position_timestamp" title="Permalink to this definition">¶</a></dt>
 <dd><p>A timestamp in <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 format</a> of the data record which to start reading when using <code class="docutils literal notranslate"><span class="pre">starting_position</span></code> set to <code class="docutils literal notranslate"><span class="pre">AT_TIMESTAMP</span></code>. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">parallelization_factor</span></code>: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximum_retry_attempts</span></code>: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum of 0, maximum and default of 10000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximum_record_age_in_seconds</span></code>: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Minimum of 60, maximum and default of 604800.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bisect_batch_on_function_error</span></code>: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination_config</span></code>: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -277,7 +299,7 @@ For information about event source mappings, see [CreateEventSourceMapping][2] i
 
 <dl class="method">
 <dt id="pulumi_aws.lambda_.EventSourceMapping.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">batch_size=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">event_source_arn=None</em>, <em class="sig-param">function_arn=None</em>, <em class="sig-param">function_name=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">last_processing_result=None</em>, <em class="sig-param">maximum_batching_window_in_seconds=None</em>, <em class="sig-param">starting_position=None</em>, <em class="sig-param">starting_position_timestamp=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">state_transition_reason=None</em>, <em class="sig-param">uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.EventSourceMapping.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">batch_size=None</em>, <em class="sig-param">bisect_batch_on_function_error=None</em>, <em class="sig-param">destination_config=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">event_source_arn=None</em>, <em class="sig-param">function_arn=None</em>, <em class="sig-param">function_name=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">last_processing_result=None</em>, <em class="sig-param">maximum_batching_window_in_seconds=None</em>, <em class="sig-param">maximum_record_age_in_seconds=None</em>, <em class="sig-param">maximum_retry_attempts=None</em>, <em class="sig-param">parallelization_factor=None</em>, <em class="sig-param">starting_position=None</em>, <em class="sig-param">starting_position_timestamp=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">state_transition_reason=None</em>, <em class="sig-param">uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.EventSourceMapping.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EventSourceMapping resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -298,12 +320,33 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>starting_position_timestamp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A timestamp in <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 format</a> of the data record which to start reading when using <code class="docutils literal notranslate"><span class="pre">starting_position</span></code> set to <code class="docutils literal notranslate"><span class="pre">AT_TIMESTAMP</span></code>. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.</p>
 </p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
+* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum of 0, maximum and default of 10000.
+* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Minimum of 60, maximum and default of 604800.
+* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
+* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of the event source mapping.</p></li>
 <li><p><strong>state_transition_reason</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The reason the event source mapping is in its current state.</p></li>
 <li><p><strong>uuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of the created event source mapping.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>destination_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">on_failure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The destination configuration for failed invocations. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Resource Name (ARN) of the destination resource.</p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_event_source_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_event_source_mapping.html.markdown</a>.</p>
 </div></blockquote>

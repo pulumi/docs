@@ -9970,6 +9970,519 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilter">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">TrafficMirrorFilter</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">network_services=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an Traffic mirror filter.<span class="raw-html-m2r"><br></span>
+Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the filter.</p></li>
+<li><p><strong>network_services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of amazon network services that should be mirrored. Valid values: amazon-dns</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilter.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilter.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A description of the filter.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilter.network_services">
+<code class="sig-name descname">network_services</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilter.network_services" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of amazon network services that should be mirrored. Valid values: amazon-dns</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilter.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">network_services=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilter.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing TrafficMirrorFilter resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the filter.</p></li>
+<li><p><strong>network_services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of amazon network services that should be mirrored. Valid values: amazon-dns</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilter.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilter.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilter.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilter.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilterRule">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">TrafficMirrorFilterRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">destination_cidr_block=None</em>, <em class="sig-param">destination_port_range=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">rule_action=None</em>, <em class="sig-param">rule_number=None</em>, <em class="sig-param">source_cidr_block=None</em>, <em class="sig-param">source_port_range=None</em>, <em class="sig-param">traffic_direction=None</em>, <em class="sig-param">traffic_mirror_filter_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an Traffic mirror filter rule.<span class="raw-html-m2r"><br></span>
+Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the traffic mirror filter rule.</p></li>
+<li><p><strong>destination_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination CIDR block to assign to the Traffic Mirror rule.</p></li>
+<li><p><strong>destination_port_range</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below</p></li>
+<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see <a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">Protocol Numbers</a> on the Internet Assigned Numbers Authority (IANA) website.</p></li>
+<li><p><strong>rule_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The action to take (accept | reject) on the filtered traffic. Valid values are <code class="docutils literal notranslate"><span class="pre">accept</span></code> and <code class="docutils literal notranslate"><span class="pre">reject</span></code></p></li>
+<li><p><strong>rule_number</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.</p></li>
+<li><p><strong>source_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source CIDR block to assign to the Traffic Mirror rule.</p></li>
+<li><p><strong>source_port_range</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below</p></li>
+<li><p><strong>traffic_direction</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The direction of traffic to be captured. Valid values are <code class="docutils literal notranslate"><span class="pre">ingress</span></code> and <code class="docutils literal notranslate"><span class="pre">egress</span></code></p></li>
+<li><p><strong>traffic_mirror_filter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the traffic mirror filter to which this rule should be added</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>destination_port_range</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Starting port of the range</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Ending port of the range</p></li>
+</ul>
+<p>The <strong>source_port_range</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Starting port of the range</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Ending port of the range</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter_rule.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilterRule.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A description of the traffic mirror filter rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilterRule.destination_cidr_block">
+<code class="sig-name descname">destination_cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule.destination_cidr_block" title="Permalink to this definition">¶</a></dt>
+<dd><p>The destination CIDR block to assign to the Traffic Mirror rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilterRule.destination_port_range">
+<code class="sig-name descname">destination_port_range</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule.destination_port_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>The destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Starting port of the range</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Ending port of the range</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilterRule.protocol">
+<code class="sig-name descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule.protocol" title="Permalink to this definition">¶</a></dt>
+<dd><p>The protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see <a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">Protocol Numbers</a> on the Internet Assigned Numbers Authority (IANA) website.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilterRule.rule_action">
+<code class="sig-name descname">rule_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule.rule_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>The action to take (accept | reject) on the filtered traffic. Valid values are <code class="docutils literal notranslate"><span class="pre">accept</span></code> and <code class="docutils literal notranslate"><span class="pre">reject</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilterRule.rule_number">
+<code class="sig-name descname">rule_number</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule.rule_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilterRule.source_cidr_block">
+<code class="sig-name descname">source_cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule.source_cidr_block" title="Permalink to this definition">¶</a></dt>
+<dd><p>The source CIDR block to assign to the Traffic Mirror rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilterRule.source_port_range">
+<code class="sig-name descname">source_port_range</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule.source_port_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>The source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Starting port of the range</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Ending port of the range</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilterRule.traffic_direction">
+<code class="sig-name descname">traffic_direction</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule.traffic_direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>The direction of traffic to be captured. Valid values are <code class="docutils literal notranslate"><span class="pre">ingress</span></code> and <code class="docutils literal notranslate"><span class="pre">egress</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilterRule.traffic_mirror_filter_id">
+<code class="sig-name descname">traffic_mirror_filter_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule.traffic_mirror_filter_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the traffic mirror filter to which this rule should be added</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilterRule.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">destination_cidr_block=None</em>, <em class="sig-param">destination_port_range=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">rule_action=None</em>, <em class="sig-param">rule_number=None</em>, <em class="sig-param">source_cidr_block=None</em>, <em class="sig-param">source_port_range=None</em>, <em class="sig-param">traffic_direction=None</em>, <em class="sig-param">traffic_mirror_filter_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing TrafficMirrorFilterRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the traffic mirror filter rule.</p></li>
+<li><p><strong>destination_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination CIDR block to assign to the Traffic Mirror rule.</p></li>
+<li><p><strong>destination_port_range</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below</p></li>
+<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>The protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see <a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">Protocol Numbers</a> on the Internet Assigned Numbers Authority (IANA) website.</p>
+</p></li>
+<li><p><strong>rule_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The action to take (accept | reject) on the filtered traffic. Valid values are <code class="docutils literal notranslate"><span class="pre">accept</span></code> and <code class="docutils literal notranslate"><span class="pre">reject</span></code></p></li>
+<li><p><strong>rule_number</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.</p></li>
+<li><p><strong>source_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source CIDR block to assign to the Traffic Mirror rule.</p></li>
+<li><p><strong>source_port_range</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below</p></li>
+<li><p><strong>traffic_direction</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The direction of traffic to be captured. Valid values are <code class="docutils literal notranslate"><span class="pre">ingress</span></code> and <code class="docutils literal notranslate"><span class="pre">egress</span></code></p></li>
+<li><p><strong>traffic_mirror_filter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the traffic mirror filter to which this rule should be added</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>destination_port_range</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Starting port of the range</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Ending port of the range</p></li>
+</ul>
+<p>The <strong>source_port_range</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Starting port of the range</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Ending port of the range</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter_rule.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilterRule.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ec2.TrafficMirrorFilterRule.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ec2.TrafficMirrorSession">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">TrafficMirrorSession</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">packet_length=None</em>, <em class="sig-param">session_number=None</em>, <em class="sig-param">traffic_mirror_filter_id=None</em>, <em class="sig-param">traffic_mirror_target_id=None</em>, <em class="sig-param">virtual_network_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorSession" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an Traffic mirror session.<span class="raw-html-m2r"><br></span>
+Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the traffic mirror session.</p></li>
+<li><p><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the source network interface. Not all network interfaces are eligible as mirror sources. On EC2 instances only nitro based instances support mirroring.</p></li>
+<li><p><strong>packet_length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of bytes in each packet to mirror. These are bytes after the VXLAN header. Do not specify this parameter when you want to mirror the entire packet. To mirror a subset of the packet, set this to the length (in bytes) that you want to mirror.</p></li>
+<li><p><strong>session_number</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <ul>
+<li><p>The session number determines the order in which sessions are evaluated when an interface is used by multiple sessions. The first session with a matching filter is the one that mirrors the packets.</p></li>
+</ul>
+</p></li>
+<li><p><strong>traffic_mirror_filter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the traffic mirror filter to be used</p></li>
+<li><p><strong>traffic_mirror_target_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the traffic mirror target to be used</p></li>
+<li><p><strong>virtual_network_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <ul>
+<li><p>The VXLAN ID for the Traffic Mirror session. For more information about the VXLAN protocol, see RFC 7348. If you do not specify a VirtualNetworkId, an account-wide unique id is chosen at random.</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_session.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_session.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorSession.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorSession.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A description of the traffic mirror session.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorSession.network_interface_id">
+<code class="sig-name descname">network_interface_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorSession.network_interface_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the source network interface. Not all network interfaces are eligible as mirror sources. On EC2 instances only nitro based instances support mirroring.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorSession.packet_length">
+<code class="sig-name descname">packet_length</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorSession.packet_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of bytes in each packet to mirror. These are bytes after the VXLAN header. Do not specify this parameter when you want to mirror the entire packet. To mirror a subset of the packet, set this to the length (in bytes) that you want to mirror.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorSession.session_number">
+<code class="sig-name descname">session_number</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorSession.session_number" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>The session number determines the order in which sessions are evaluated when an interface is used by multiple sessions. The first session with a matching filter is the one that mirrors the packets.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorSession.traffic_mirror_filter_id">
+<code class="sig-name descname">traffic_mirror_filter_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorSession.traffic_mirror_filter_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the traffic mirror filter to be used</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorSession.traffic_mirror_target_id">
+<code class="sig-name descname">traffic_mirror_target_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorSession.traffic_mirror_target_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the traffic mirror target to be used</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorSession.virtual_network_id">
+<code class="sig-name descname">virtual_network_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorSession.virtual_network_id" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>The VXLAN ID for the Traffic Mirror session. For more information about the VXLAN protocol, see RFC 7348. If you do not specify a VirtualNetworkId, an account-wide unique id is chosen at random.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ec2.TrafficMirrorSession.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">packet_length=None</em>, <em class="sig-param">session_number=None</em>, <em class="sig-param">traffic_mirror_filter_id=None</em>, <em class="sig-param">traffic_mirror_target_id=None</em>, <em class="sig-param">virtual_network_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorSession.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing TrafficMirrorSession resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the traffic mirror session.</p></li>
+<li><p><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the source network interface. Not all network interfaces are eligible as mirror sources. On EC2 instances only nitro based instances support mirroring.</p></li>
+<li><p><strong>packet_length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of bytes in each packet to mirror. These are bytes after the VXLAN header. Do not specify this parameter when you want to mirror the entire packet. To mirror a subset of the packet, set this to the length (in bytes) that you want to mirror.</p></li>
+<li><p><strong>session_number</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <ul>
+<li><p>The session number determines the order in which sessions are evaluated when an interface is used by multiple sessions. The first session with a matching filter is the one that mirrors the packets.</p></li>
+</ul>
+</p></li>
+<li><p><strong>traffic_mirror_filter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the traffic mirror filter to be used</p></li>
+<li><p><strong>traffic_mirror_target_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the traffic mirror target to be used</p></li>
+<li><p><strong>virtual_network_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <ul>
+<li><p>The VXLAN ID for the Traffic Mirror session. For more information about the VXLAN protocol, see RFC 7348. If you do not specify a VirtualNetworkId, an account-wide unique id is chosen at random.</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_session.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_session.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ec2.TrafficMirrorSession.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorSession.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ec2.TrafficMirrorSession.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorSession.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ec2.TrafficMirrorTarget">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">TrafficMirrorTarget</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">network_load_balancer_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorTarget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an Traffic mirror target.<span class="raw-html-m2r"><br></span>
+Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the traffic mirror session.</p></li>
+<li><p><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network interface ID that is associated with the target.</p></li>
+<li><p><strong>network_load_balancer_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the Network Load Balancer that is associated with the target.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_target.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorTarget.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorTarget.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A description of the traffic mirror session.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorTarget.network_interface_id">
+<code class="sig-name descname">network_interface_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorTarget.network_interface_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The network interface ID that is associated with the target.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorTarget.network_load_balancer_arn">
+<code class="sig-name descname">network_load_balancer_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorTarget.network_load_balancer_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) of the Network Load Balancer that is associated with the target.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ec2.TrafficMirrorTarget.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">network_load_balancer_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorTarget.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing TrafficMirrorTarget resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the traffic mirror session.</p></li>
+<li><p><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network interface ID that is associated with the target.</p></li>
+<li><p><strong>network_load_balancer_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the Network Load Balancer that is associated with the target.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_target.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ec2.TrafficMirrorTarget.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorTarget.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ec2.TrafficMirrorTarget.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorTarget.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.ec2.VolumeAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">VolumeAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">device_name=None</em>, <em class="sig-param">force_detach=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">skip_destroy=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VolumeAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS EBS Volume Attachment as a top level resource, to attach and
