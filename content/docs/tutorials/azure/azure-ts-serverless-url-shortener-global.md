@@ -1,5 +1,7 @@
 ---
-title: "Globally Distributed Serverless URL Shortener Using Azure Functions and Cosmos DB"
+title: "Globally Distributed Serverless URL Shortener Using Azure Functions and Cosmos DB | TypeScript"
+h1: "Globally Distributed Serverless URL Shortener Using Azure Functions and Cosmos DB"
+linktitle: "Globally Distributed Serverless URL Shortener Using Azure Functions and Cosmos DB"
 no_edit_this_page: true
 ---
 
@@ -66,7 +68,7 @@ Multi-region deployment of Azure Functions and Cosmos DB with Traffic Manager
     https://urlshort-add94ac80f8.azurewebsites.net/api/urlshort-add
     $ curl -H "Content-Type: application/json" \
         --request POST \
-        -D '{"id":"pulumi","url":"https://pulumi.com"}' \
+        -d '{"id":"pulumi","url":"https://pulumi.com"}' \
         "$(pulumi stack output addEndpoint)"    
     Short URL saved
     ```
@@ -75,8 +77,8 @@ Multi-region deployment of Azure Functions and Cosmos DB with Traffic Manager
 
     ```
     $ pulumi stack output endpoint
-    http://urlshort-tm.trafficmanager.net/api/{key}
-    $ curl http://urlshort-tm.trafficmanager.net/api/pulumi
+    http://urlshort-tm.trafficmanager.net/api/
+    $ curl -L $(pulumi stack output endpoint)pulumi
     <!doctype html>
     <html lang="en-US" prefix="og: http://ogp.me/ns#">
         <head>

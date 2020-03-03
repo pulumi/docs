@@ -102,13 +102,13 @@ Alternatively, you can install Pulumi manually. We provide a prebuilt binary for
 <div class="os-prologue-windows"></div>
 <div class="mt-8">
 {{% md %}}
-
+ 
 ### Chocolatey
 
 You can install Pulumi through the [Chocolatey package manager](https://chocolatey.org):
 
 ```powershell
-choco install pulumi
+> choco install pulumi
 ```
 
 This will install the `pulumi` CLI to the usual place (often `$($env:ChocolateyInstall)\lib\pulumi`), will generate [shims](https://chocolatey.org/docs/features-shim) (usually `$($env:ChocolateyInstall)\bin`) that is added to your path.
@@ -116,7 +116,7 @@ This will install the `pulumi` CLI to the usual place (often `$($env:ChocolateyI
 Subsequent updates can be installed in the usual way:
 
 ```powershell
-choco upgrade pulumi
+> choco upgrade pulumi
 ```
 
 ### Installation Script

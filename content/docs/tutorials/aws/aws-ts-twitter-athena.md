@@ -1,5 +1,7 @@
 ---
-title: "Twitter Search in Athena"
+title: "Twitter Search in Athena | TypeScript"
+h1: "Twitter Search in Athena"
+linktitle: "Twitter Search in Athena"
 no_edit_this_page: true
 ---
 

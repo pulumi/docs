@@ -270,12 +270,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appinsights.AwaitableGetInsightsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appinsights.</code><code class="sig-name descname">AwaitableGetInsightsResult</code><span class="sig-paren">(</span><em class="sig-param">app_id=None</em>, <em class="sig-param">application_type=None</em>, <em class="sig-param">instrumentation_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.AwaitableGetInsightsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appinsights.</code><code class="sig-name descname">AwaitableGetInsightsResult</code><span class="sig-paren">(</span><em class="sig-param">app_id=None</em>, <em class="sig-param">application_type=None</em>, <em class="sig-param">instrumentation_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">retention_in_days=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.AwaitableGetInsightsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.appinsights.GetInsightsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appinsights.</code><code class="sig-name descname">GetInsightsResult</code><span class="sig-paren">(</span><em class="sig-param">app_id=None</em>, <em class="sig-param">application_type=None</em>, <em class="sig-param">instrumentation_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.GetInsightsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appinsights.</code><code class="sig-name descname">GetInsightsResult</code><span class="sig-paren">(</span><em class="sig-param">app_id=None</em>, <em class="sig-param">application_type=None</em>, <em class="sig-param">instrumentation_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">retention_in_days=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.GetInsightsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInsights.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.appinsights.GetInsightsResult.app_id">
@@ -302,6 +302,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.appinsights.GetInsightsResult.retention_in_days">
+<code class="sig-name descname">retention_in_days</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.GetInsightsResult.retention_in_days" title="Permalink to this definition">¶</a></dt>
+<dd><p>The retention period in days.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.appinsights.GetInsightsResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.GetInsightsResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tags applied to the component.</p>
@@ -317,7 +323,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appinsights.Insights">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appinsights.</code><code class="sig-name descname">Insights</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sampling_percentage=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.Insights" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appinsights.</code><code class="sig-name descname">Insights</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_type=None</em>, <em class="sig-param">daily_data_cap_in_gb=None</em>, <em class="sig-param">daily_data_cap_notifications_disabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">retention_in_days=None</em>, <em class="sig-param">sampling_percentage=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.Insights" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Application Insights component.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -325,11 +331,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>application_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of Application Insights to create. Valid values are <code class="docutils literal notranslate"><span class="pre">ios</span></code> for <em>iOS</em>, <code class="docutils literal notranslate"><span class="pre">java</span></code> for <em>Java web</em>, <code class="docutils literal notranslate"><span class="pre">MobileCenter</span></code> for <em>App Center</em>, <code class="docutils literal notranslate"><span class="pre">Node.JS</span></code> for <em>Node.js</em>, <code class="docutils literal notranslate"><span class="pre">other</span></code> for <em>General</em>, <code class="docutils literal notranslate"><span class="pre">phone</span></code> for <em>Windows Phone</em>, <code class="docutils literal notranslate"><span class="pre">store</span></code> for <em>Windows Store</em> and <code class="docutils literal notranslate"><span class="pre">web</span></code> for <em>ASP.NET</em>. Please note these values are case sensitive; unmatched values are treated as <em>ASP.NET</em> by Azure. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>daily_data_cap_in_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the Application Insights component daily data volume cap in GB.</p></li>
+<li><p><strong>daily_data_cap_notifications_disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if a notification email will be send when the daily data volume cap is met.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Application Insights component. Changing this forces a
 new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the Application Insights component.</p></li>
+<li><p><strong>retention_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the retention period in days. Possible values are <code class="docutils literal notranslate"><span class="pre">30</span></code>, <code class="docutils literal notranslate"><span class="pre">60</span></code>, <code class="docutils literal notranslate"><span class="pre">90</span></code>, <code class="docutils literal notranslate"><span class="pre">120</span></code>, <code class="docutils literal notranslate"><span class="pre">180</span></code>, <code class="docutils literal notranslate"><span class="pre">270</span></code>, <code class="docutils literal notranslate"><span class="pre">365</span></code>, <code class="docutils literal notranslate"><span class="pre">550</span></code> or <code class="docutils literal notranslate"><span class="pre">730</span></code>.</p></li>
 <li><p><strong>sampling_percentage</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
@@ -348,6 +357,18 @@ create the Application Insights component.</p></li>
 <dt id="pulumi_azure.appinsights.Insights.application_type">
 <code class="sig-name descname">application_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.Insights.application_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the type of Application Insights to create. Valid values are <code class="docutils literal notranslate"><span class="pre">ios</span></code> for <em>iOS</em>, <code class="docutils literal notranslate"><span class="pre">java</span></code> for <em>Java web</em>, <code class="docutils literal notranslate"><span class="pre">MobileCenter</span></code> for <em>App Center</em>, <code class="docutils literal notranslate"><span class="pre">Node.JS</span></code> for <em>Node.js</em>, <code class="docutils literal notranslate"><span class="pre">other</span></code> for <em>General</em>, <code class="docutils literal notranslate"><span class="pre">phone</span></code> for <em>Windows Phone</em>, <code class="docutils literal notranslate"><span class="pre">store</span></code> for <em>Windows Store</em> and <code class="docutils literal notranslate"><span class="pre">web</span></code> for <em>ASP.NET</em>. Please note these values are case sensitive; unmatched values are treated as <em>ASP.NET</em> by Azure. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appinsights.Insights.daily_data_cap_in_gb">
+<code class="sig-name descname">daily_data_cap_in_gb</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.Insights.daily_data_cap_in_gb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the Application Insights component daily data volume cap in GB.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appinsights.Insights.daily_data_cap_notifications_disabled">
+<code class="sig-name descname">daily_data_cap_notifications_disabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.Insights.daily_data_cap_notifications_disabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies if a notification email will be send when the daily data volume cap is met.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -377,6 +398,12 @@ create the Application Insights component.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.appinsights.Insights.retention_in_days">
+<code class="sig-name descname">retention_in_days</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.Insights.retention_in_days" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the retention period in days. Possible values are <code class="docutils literal notranslate"><span class="pre">30</span></code>, <code class="docutils literal notranslate"><span class="pre">60</span></code>, <code class="docutils literal notranslate"><span class="pre">90</span></code>, <code class="docutils literal notranslate"><span class="pre">120</span></code>, <code class="docutils literal notranslate"><span class="pre">180</span></code>, <code class="docutils literal notranslate"><span class="pre">270</span></code>, <code class="docutils literal notranslate"><span class="pre">365</span></code>, <code class="docutils literal notranslate"><span class="pre">550</span></code> or <code class="docutils literal notranslate"><span class="pre">730</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.appinsights.Insights.sampling_percentage">
 <code class="sig-name descname">sampling_percentage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.Insights.sampling_percentage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.</p>
@@ -390,7 +417,7 @@ create the Application Insights component.</p>
 
 <dl class="method">
 <dt id="pulumi_azure.appinsights.Insights.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">application_type=None</em>, <em class="sig-param">instrumentation_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sampling_percentage=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.Insights.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">application_type=None</em>, <em class="sig-param">daily_data_cap_in_gb=None</em>, <em class="sig-param">daily_data_cap_notifications_disabled=None</em>, <em class="sig-param">instrumentation_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">retention_in_days=None</em>, <em class="sig-param">sampling_percentage=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.Insights.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Insights resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -401,12 +428,15 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The App ID associated with this Application Insights component.</p></li>
 <li><p><strong>application_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of Application Insights to create. Valid values are <code class="docutils literal notranslate"><span class="pre">ios</span></code> for <em>iOS</em>, <code class="docutils literal notranslate"><span class="pre">java</span></code> for <em>Java web</em>, <code class="docutils literal notranslate"><span class="pre">MobileCenter</span></code> for <em>App Center</em>, <code class="docutils literal notranslate"><span class="pre">Node.JS</span></code> for <em>Node.js</em>, <code class="docutils literal notranslate"><span class="pre">other</span></code> for <em>General</em>, <code class="docutils literal notranslate"><span class="pre">phone</span></code> for <em>Windows Phone</em>, <code class="docutils literal notranslate"><span class="pre">store</span></code> for <em>Windows Store</em> and <code class="docutils literal notranslate"><span class="pre">web</span></code> for <em>ASP.NET</em>. Please note these values are case sensitive; unmatched values are treated as <em>ASP.NET</em> by Azure. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>daily_data_cap_in_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the Application Insights component daily data volume cap in GB.</p></li>
+<li><p><strong>daily_data_cap_notifications_disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if a notification email will be send when the daily data volume cap is met.</p></li>
 <li><p><strong>instrumentation_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Instrumentation Key for this Application Insights component.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Application Insights component. Changing this forces a
 new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the Application Insights component.</p></li>
+<li><p><strong>retention_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the retention period in days. Possible values are <code class="docutils literal notranslate"><span class="pre">30</span></code>, <code class="docutils literal notranslate"><span class="pre">60</span></code>, <code class="docutils literal notranslate"><span class="pre">90</span></code>, <code class="docutils literal notranslate"><span class="pre">120</span></code>, <code class="docutils literal notranslate"><span class="pre">180</span></code>, <code class="docutils literal notranslate"><span class="pre">270</span></code>, <code class="docutils literal notranslate"><span class="pre">365</span></code>, <code class="docutils literal notranslate"><span class="pre">550</span></code> or <code class="docutils literal notranslate"><span class="pre">730</span></code>.</p></li>
 <li><p><strong>sampling_percentage</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>

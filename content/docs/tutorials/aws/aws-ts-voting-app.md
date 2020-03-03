@@ -1,5 +1,7 @@
 ---
-title: "Voting app Using Redis and Flask"
+title: "Voting app Using Redis and Flask | TypeScript"
+h1: "Voting app Using Redis and Flask"
+linktitle: "Voting app Using Redis and Flask"
 no_edit_this_page: true
 ---
 

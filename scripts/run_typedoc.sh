@@ -77,6 +77,7 @@ generate_docs() {
 
 REPOS=(
     "aiven,pulumi-aiven,sdk/nodejs"
+    "alicloud,pulumi-alicloud,sdk/nodejs"
     "aws,pulumi-aws,sdk/nodejs"
     "awsx,pulumi-awsx/nodejs/awsx"
     "azure,pulumi-azure,sdk/nodejs"
@@ -94,9 +95,11 @@ REPOS=(
     "gcp,pulumi-gcp,sdk/nodejs"
     "gitlab,pulumi-gitlab,sdk/nodejs"
     "kafka,pulumi-kafka,sdk/nodejs"
+    "keycloak,pulumi-keycloak,sdk/nodejs"
     "kubernetes,pulumi-kubernetes,sdk/nodejs"
     "kubernetesx,pulumi-kubernetesx/nodejs/kubernetesx"
     "linode,pulumi-linode,sdk/nodejs"
+    "mailgun,pulumi-mailgun,sdk/nodejs"
     "mysql,pulumi-mysql,sdk/nodejs"
     "newrelic,pulumi-newrelic,sdk/nodejs"
     "okta,pulumi-okta,sdk/nodejs"

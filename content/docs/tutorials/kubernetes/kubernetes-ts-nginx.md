@@ -1,5 +1,7 @@
 ---
-title: "Stateless Application Using a Deployment"
+title: "Stateless Application Using a Deployment | TypeScript"
+h1: "Stateless Application Using a Deployment"
+linktitle: "Stateless Application Using a Deployment"
 no_edit_this_page: true
 ---
 

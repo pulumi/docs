@@ -1,5 +1,7 @@
 ---
-title: "Azure CDN Custom Domain Dynamic Provider"
+title: "Azure CDN Custom Domain Dynamic Provider | TypeScript"
+h1: "Azure CDN Custom Domain Dynamic Provider"
+linktitle: "Azure CDN Custom Domain Dynamic Provider"
 no_edit_this_page: true
 ---
 

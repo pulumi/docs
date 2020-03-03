@@ -10,6 +10,7 @@ notitle: true
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="v2/">v2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v3/">v3</a></li>
 </ul>
 </div>
 </div>

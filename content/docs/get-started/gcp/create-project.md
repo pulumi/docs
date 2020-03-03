@@ -40,6 +40,10 @@ $ pulumi new gcp-python
 <div class="language-prologue-go"></div>
 
 ```bash
+# install the pulumi gcp plugin
+# check for the release version here https://github.com/pulumi/pulumi-gcp/releases
+$ pulumi plugin install resource gcp 2.6.0
+# from within your $GOPATH
 $ mkdir quickstart && cd quickstart
 $ pulumi new gcp-go
 ```

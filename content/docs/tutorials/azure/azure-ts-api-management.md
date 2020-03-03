@@ -1,5 +1,7 @@
 ---
-title: "Azure API Management"
+title: "Azure API Management | TypeScript"
+h1: "Azure API Management"
+linktitle: "Azure API Management"
 no_edit_this_page: true
 ---
 

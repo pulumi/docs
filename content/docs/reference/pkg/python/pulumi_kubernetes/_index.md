@@ -127,6 +127,7 @@ notitle: true
 </li>
 <li class="toctree-l1"><a class="reference internal" href="helm/">helm</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="helm/v2/">v2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helm/v3/">v3</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="provider/">provider</a></li>

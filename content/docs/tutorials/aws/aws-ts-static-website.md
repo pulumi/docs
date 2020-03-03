@@ -1,5 +1,7 @@
 ---
-title: "Secure Static Website Using Amazon S3, CloudFront, Route53, and Certificate Manager"
+title: "Secure Static Website Using Amazon S3, CloudFront, Route53, and Certificate Manager | TypeScript"
+h1: "Secure Static Website Using Amazon S3, CloudFront, Route53, and Certificate Manager"
+linktitle: "Secure Static Website Using Amazon S3, CloudFront, Route53, and Certificate Manager"
 no_edit_this_page: true
 ---
 

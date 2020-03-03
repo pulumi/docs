@@ -47,7 +47,7 @@ There are a ton of moving pieces in our ecosystems today. It is difficult to kno
 
 ## CrossGuard in Action
 
-With an understanding of what CrossGuard enables, let's look at what that means in practice. The following is a policy pack definition that prohibits creating an AWS S3 bucket that is public readable. Our Policy Pack is not complicated. It uses a `validateTypedResource` helper function to filter for the resource type we care about and reports a violation if present.
+With an understanding of what CrossGuard enables, let's look at what that means in practice. The following is a policy pack definition that prohibits creating an AWS S3 bucket that is public readable. Our Policy Pack is not complicated. It uses a `validateResourceOfType` helper function to filter for the resource type we care about and reports a violation if present.
 
 ```typescript
 new PolicyPack("aws-typescript", {
@@ -55,7 +55,7 @@ new PolicyPack("aws-typescript", {
         name: "s3-no-public-read",
         description: "Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.",
         enforcementLevel: "mandatory",
-        validateResource: validateTypedResource(aws.s3.Bucket, (bucket, args, reportViolation) => {
+        validateResource: validateResourceOfType(aws.s3.Bucket, (bucket, args, reportViolation) => {
             if (bucket.acl === "public-read" || bucket.acl === "public-read-write") {
                 reportViolation(
                     "You cannot set public-read or public-read-write on an S3 bucket. " +

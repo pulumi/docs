@@ -1,5 +1,7 @@
 ---
-title: "Pulumi Webhook Handler"
+title: "Pulumi Webhook Handler | TypeScript"
+h1: "Pulumi Webhook Handler"
+linktitle: "Pulumi Webhook Handler"
 no_edit_this_page: true
 ---
 

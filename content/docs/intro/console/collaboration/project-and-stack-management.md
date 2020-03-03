@@ -42,11 +42,17 @@ If you have been added to a Pulumi organization with existing projects and stack
 
 #### Stack View
 
-Clicking on a specific stack update takes you to the Stack tab. This tab displays your stack's outputs and configuration values and renders a web-based view of the resulting output when you run `pulumi config` and `pulumi stack output` from the command line.
+Clicking on a specific stack update takes you to the Stack tab. This tab displays your stack's outputs, configuration values, and tags and renders a web-based view of the resulting output when you run `pulumi config` and `pulumi stack output` from the command line.
 
 <img class="lg:max-w-xl" src="/images/docs/reference/service/stack-outputs-and-configuration.png" alt="Stack Outputs and Configuration">
 
 You can see other details such as who applied the update and when, as well as counts of added, updated, and unchanged resources. If your stack is integrated with your workflow, such as [GitHub Actions]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}), you should also see useful links to data like your Git commit hash, mapped branch, and pull request ID.
+
+##### Stack tags
+
+Custom [stack tags]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}) can be managed within the Stack tab. Click the **NEW** button to create a new tag, the pencil to edit an existing tag, or the trash can to permanently delete a tag.
+
+<img class="lg:max-w-xl" src="/images/docs/reference/service/stack-tags.png" alt="Stack Tags">
 
 #### Detailed Activity View
 

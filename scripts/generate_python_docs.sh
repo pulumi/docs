@@ -6,6 +6,7 @@ set -x
 PACKAGES=(
   "pulumi"
   "pulumi_aiven"
+  "pulumi_alicloud"
   "pulumi_aws"
   "pulumi_azure"
   "pulumi_azuread"
@@ -21,8 +22,10 @@ PACKAGES=(
   "pulumi_gcp"
   "pulumi_gitlab"
   "pulumi_kafka"
+  "pulumi_keycloak"
   "pulumi_kubernetes"
   "pulumi_linode"
+  "pulumi_mailgun"
   "pulumi_mysql"
   "pulumi_newrelic"
   "pulumi_okta"

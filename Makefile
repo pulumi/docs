@@ -40,7 +40,7 @@ generate:
 build:
 	@echo -e "\033[0;32mBUILD ($(HUGO_ENVIRONMENT)):\033[0m"
 	yarn lint-markdown
-	hugo
+	NODE_ENV=production hugo --minify
 	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
 	rm -rf ./public/docs/search-data
 
@@ -62,7 +62,7 @@ travis_push::
 	$(MAKE) banner
 	$(MAKE) ensure
 ifeq ($(TRAVIS_BRANCH),master)
-	HUGO_ENVIRONMENT=production $(MAKE) build
+	$(MAKE) build
 	./scripts/run-pulumi.sh update production
 else
 	$(MAKE) build
@@ -73,7 +73,7 @@ travis_pull_request::
 	$(MAKE) banner
 	$(MAKE) ensure
 ifeq ($(TRAVIS_BRANCH),master)
-	HUGO_ENVIRONMENT=production $(MAKE) build
+	$(MAKE) build
 	./scripts/run-pulumi.sh preview production
 else
 	$(MAKE) build

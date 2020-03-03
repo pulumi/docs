@@ -1,5 +1,7 @@
 ---
-title: "AWS Resources Using AssumeRole"
+title: "AWS Resources Using AssumeRole | TypeScript"
+h1: "AWS Resources Using AssumeRole"
+linktitle: "AWS Resources Using AssumeRole"
 no_edit_this_page: true
 ---
 

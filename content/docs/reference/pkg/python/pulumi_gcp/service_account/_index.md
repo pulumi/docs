@@ -31,7 +31,8 @@ creation.</p>
 account email address and a stable unique id. It is unique within a project,
 must be 6-30 characters long, and match the regular expression <code class="docutils literal notranslate"><span class="pre">a-z</span></code>
 to comply with RFC1035. Changing this forces a new service account to be created.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A text description of the service account.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A text description of the service account.
+Must be less than or equal to 256 UTF-8 bytes.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name for the service account.
 Can be updated without creating a new resource.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project that the service account will be created in.
@@ -54,7 +55,8 @@ to comply with RFC1035. Changing this forces a new service account to be created
 <dl class="attribute">
 <dt id="pulumi_gcp.service_account.Account.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.Account.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>A text description of the service account.</p>
+<dd><p>A text description of the service account.
+Must be less than or equal to 256 UTF-8 bytes.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -106,7 +108,8 @@ properties used to qualify the lookup.</p>
 account email address and a stable unique id. It is unique within a project,
 must be 6-30 characters long, and match the regular expression <code class="docutils literal notranslate"><span class="pre">a-z</span></code>
 to comply with RFC1035. Changing this forces a new service account to be created.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A text description of the service account.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A text description of the service account.
+Must be less than or equal to 256 UTF-8 bytes.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name for the service account.
 Can be updated without creating a new resource.</p></li>
 <li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The e-mail address of the service account. This value

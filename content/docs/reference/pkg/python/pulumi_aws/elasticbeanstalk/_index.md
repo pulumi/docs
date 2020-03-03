@@ -35,8 +35,8 @@ the infrastructure that runs those applications.</p>
 <p>The <strong>appversion_lifecycle</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteSourceFromS3</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to delete a version’s source bundle from S3 when the application version is deleted.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days to retain an application version.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of application versions to retain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days to retain an application version (‘max_age_in_days’ and ‘max_count’ cannot be enabled simultaneously.).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of application versions to retain (‘max_age_in_days’ and ‘max_count’ cannot be enabled simultaneously.).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service_role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an IAM service role under which the application version is deleted.  Elastic Beanstalk must have permission to assume this role.</p></li>
 </ul>
 <blockquote>
@@ -87,8 +87,8 @@ properties used to qualify the lookup.</p>
 <p>The <strong>appversion_lifecycle</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteSourceFromS3</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to delete a version’s source bundle from S3 when the application version is deleted.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days to retain an application version.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of application versions to retain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days to retain an application version (‘max_age_in_days’ and ‘max_count’ cannot be enabled simultaneously.).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of application versions to retain (‘max_age_in_days’ and ‘max_count’ cannot be enabled simultaneously.).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service_role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an IAM service role under which the application version is deleted.  Elastic Beanstalk must have permission to assume this role.</p></li>
 </ul>
 <blockquote>
@@ -146,12 +146,8 @@ Environment.</p>
 <div><p><strong>NOTE on Application Version Resource:</strong>  When using the Application Version resource with multiple 
 Elastic Beanstalk Environments it is possible that an error may be returned
 when attempting to delete an Application Version while it is still in use by a different environment.
-To work around this you can:</p>
-<ol>
-<li>Create each environment in a separate AWS account</li>
-<li>Create your `elasticbeanstalk.ApplicationVersion` resources with a unique names in your 
-Elastic Beanstalk Application. For example &lt;revision&gt;-&lt;environment&gt;.</li>
-</ol></div></blockquote>
+To work around this you can either create each environment in a separate AWS account or create your <code class="docutils literal notranslate"><span class="pre">elasticbeanstalk.ApplicationVersion</span></code> resources with a unique names in your Elastic Beanstalk Application. For example &amp;lt;revision&amp;gt;-&amp;lt;environment&amp;gt;.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

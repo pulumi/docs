@@ -21,6 +21,7 @@ aliases: ["/docs/reference/clouds/"]
 
 ## Cloud Providers
 
+* [Alibaba Cloud]({{< relref "./alicloud" >}})
 * [CloudAMQP]({{< relref "./cloudamqp" >}})
 * [Fastly]({{< relref "./fastly" >}})
 * [DigitalOcean]({{< relref "./digitalocean" >}})
@@ -31,14 +32,21 @@ aliases: ["/docs/reference/clouds/"]
 
 ## Infrastructure Providers
 
+* [Aiven]({{< relref "./aiven" >}})
 * [Consul]({{< relref "./consul" >}})
 * [Docker]({{< relref "./docker" >}})
 * [Kafka]({{< relref "./kafka" >}})
+* [Mailgun]({{< relref "./mailgun" >}})
 * [Okta]({{< relref "./okta" >}})
 * [RabbitMQ]({{< relref "./rabbitmq" >}})
 * [Rancher2]({{< relref "./rancher2" >}})
 * [Spotinst]({{< relref "./spotinst" >}})
 * [Vault]({{< relref "./vault" >}})
+
+## Database Providers
+
+* [MySQL]({{< relref "./mysql" >}})
+* [PostgreSQL]({{< relref "./postgresql" >}})
 
 ## Monitoring Providers
 
@@ -56,5 +64,11 @@ aliases: ["/docs/reference/clouds/"]
 
 * [GitLab]({{< relref "./gitlab" >}})
 
+## Misc. Providers
+
+* [Random]({{< relref "./random" >}})
+* [TLS]({{< relref "./tls" >}})
+
 If your provider isn't listed, check out the [Pulumi GitHub](https://github.com/pulumi) and
-[Pulumi Examples](https://github.com/pulumi/examples) repositories. If you can't find what you're looking for, [contact us]({{< relref "/docs/troubleshooting#contact-us" >}}) and let us know.
+[Pulumi Examples](https://github.com/pulumi/examples) repositories. If you can't find what you're looking for,
+[contact us]({{< relref "/docs/troubleshooting#contact-us" >}}) and let us know.

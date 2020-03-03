@@ -111,7 +111,7 @@ $ export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>`
 
 Or use the `set` command on Windows:
 
-```batch
+```bat
 > set AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>
 > set AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
 ```

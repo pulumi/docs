@@ -1,5 +1,7 @@
 ---
-title: "Zero Downtime Migration of EKS Node Groups"
+title: "Zero Downtime Migration of EKS Node Groups | TypeScript"
+h1: "Zero Downtime Migration of EKS Node Groups"
+linktitle: "Zero Downtime Migration of EKS Node Groups"
 no_edit_this_page: true
 ---
 

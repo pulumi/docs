@@ -1,5 +1,7 @@
 ---
-title: "Staged Kubernetes Rollout Gated by Prometheus Checks"
+title: "Staged App Rollout Gated by Prometheus Checks | TypeScript"
+h1: "Staged App Rollout Gated by Prometheus Checks"
+linktitle: "Staged App Rollout Gated by Prometheus Checks"
 no_edit_this_page: true
 ---
 
@@ -140,3 +142,4 @@ can see `canary-example-app` and `canary-staging-app` created.
 [configuration]: https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/setup/
 [p8s]: https://prometheus.io/
 [helm]: https://www.helm.sh/
+

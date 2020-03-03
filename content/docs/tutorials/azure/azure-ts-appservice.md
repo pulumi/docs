@@ -1,5 +1,7 @@
 ---
-title: "Azure App Service with SQL Database and Application Insights"
+title: "Azure App Service with SQL Database and Application Insights | TypeScript"
+h1: "Azure App Service with SQL Database and Application Insights"
+linktitle: "Azure App Service with SQL Database and Application Insights"
 no_edit_this_page: true
 ---
 
@@ -40,6 +42,12 @@ with App Service.
 
     ```
     $ npm install
+    ```
+    
+1. Set the azure location in which to run the test:
+    
+    ```
+    $ pulumi config set azure:location westus2
     ```
 
 1. Define SQL Server password (make it complex enough to satisfy Azure policy):

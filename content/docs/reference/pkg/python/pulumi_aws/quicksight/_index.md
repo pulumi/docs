@@ -133,10 +133,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>aws_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for the AWS account that the group is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.</p></li>
+<li><p><strong>aws_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for the AWS account that the user is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.</p></li>
 <li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address of the user that you want to register.</p></li>
 <li><p><strong>iam_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM user or role that you are registering with Amazon QuickSight.</p></li>
-<li><p><strong>identity_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon QuickSight supports several ways of managing the identity of users. This parameter accepts two values: <code class="docutils literal notranslate"><span class="pre">IAM</span></code> and <code class="docutils literal notranslate"><span class="pre">QUICKSIGHT</span></code>.</p></li>
+<li><p><strong>identity_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon QuickSight supports several ways of managing the identity of users. This parameter accepts either  <code class="docutils literal notranslate"><span class="pre">IAM</span></code> or <code class="docutils literal notranslate"><span class="pre">QUICKSIGHT</span></code>.</p></li>
 <li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace. Currently, you should set this to <code class="docutils literal notranslate"><span class="pre">default</span></code>.</p></li>
 <li><p><strong>session_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the IAM session to use when assuming roles that can embed QuickSight dashboards.</p></li>
 <li><p><strong>user_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon QuickSight user name that you want to create for the user you are registering.</p></li>
@@ -156,7 +156,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.quicksight.User.aws_account_id">
 <code class="sig-name descname">aws_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.quicksight.User.aws_account_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID for the AWS account that the group is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.</p>
+<dd><p>The ID for the AWS account that the user is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -174,7 +174,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.quicksight.User.identity_type">
 <code class="sig-name descname">identity_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.quicksight.User.identity_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Amazon QuickSight supports several ways of managing the identity of users. This parameter accepts two values: <code class="docutils literal notranslate"><span class="pre">IAM</span></code> and <code class="docutils literal notranslate"><span class="pre">QUICKSIGHT</span></code>.</p>
+<dd><p>Amazon QuickSight supports several ways of managing the identity of users. This parameter accepts either  <code class="docutils literal notranslate"><span class="pre">IAM</span></code> or <code class="docutils literal notranslate"><span class="pre">QUICKSIGHT</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -213,10 +213,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the user</p></li>
-<li><p><strong>aws_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for the AWS account that the group is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.</p></li>
+<li><p><strong>aws_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for the AWS account that the user is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.</p></li>
 <li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address of the user that you want to register.</p></li>
 <li><p><strong>iam_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM user or role that you are registering with Amazon QuickSight.</p></li>
-<li><p><strong>identity_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon QuickSight supports several ways of managing the identity of users. This parameter accepts two values: <code class="docutils literal notranslate"><span class="pre">IAM</span></code> and <code class="docutils literal notranslate"><span class="pre">QUICKSIGHT</span></code>.</p></li>
+<li><p><strong>identity_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon QuickSight supports several ways of managing the identity of users. This parameter accepts either  <code class="docutils literal notranslate"><span class="pre">IAM</span></code> or <code class="docutils literal notranslate"><span class="pre">QUICKSIGHT</span></code>.</p></li>
 <li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace. Currently, you should set this to <code class="docutils literal notranslate"><span class="pre">default</span></code>.</p></li>
 <li><p><strong>session_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the IAM session to use when assuming roles that can embed QuickSight dashboards.</p></li>
 <li><p><strong>user_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon QuickSight user name that you want to create for the user you are registering.</p></li>

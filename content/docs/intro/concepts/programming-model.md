@@ -19,7 +19,7 @@ In this section, we will see the most basic concepts required to start declaring
 
 Pulumi programs are written in general-purpose programming languages, including [JavaScript]({{< relref "/docs/intro/languages/javascript" >}}), [TypeScript]({{< relref "/docs/intro/languages/javascript" >}}), [Python]({{< relref "/docs/intro/languages/python" >}}), [Go]({{< relref "/docs/intro/languages/go" >}}) or [any .NET language]({{< relref "/docs/intro/languages/dotnet" >}}) such as C#, F#, or VB. You use the language's native tools and libraries, including [Pulumi's own packages]({{< relref "/docs/reference/pkg" >}}) containing infrastructure resource types.
 
-Although you use general-purpose languages, Pulumi is still a declarative infrasturcture as code tool. After writing a program, you run the Pulumi CLI command `pulumi up`, which executes the program and determines the desired infrastructure state for all resources declared. The CLI will show you a preview of changes to be made, including all new resources to be created and existing resources to update or destroy. After confirming, Pulumi will carry out the changes.
+Although you use general-purpose languages, Pulumi is still a declarative infrastructure as code tool. After writing a program, you run the Pulumi CLI command `pulumi up`, which executes the program and determines the desired infrastructure state for all resources declared. The CLI will show you a preview of changes to be made, including all new resources to be created and existing resources to update or destroy. After confirming, Pulumi will carry out the changes.
 
 ### Program Structure
 
@@ -27,7 +27,7 @@ Pulumi programs are structured as projects and stacks. The distinction between t
 
 * [Program](#programs): a collection of files written in your chosen programming language
 * [Project]({{< relref "project" >}}): a directory containing a program, with metadata, so Pulumi knows how to run it
-* [Stack]({{< relref "stack" >}}): an instance of your project, each often corresponding to different cloud environment
+* [Stack]({{< relref "stack" >}}): an instance of your project, each often corresponding to a different cloud environment
 
 Infrastructure and application artifacts can be managed together or separately. For instance, Pulumi can build and publish Docker container images containing application code when you do a `pulumi up`, alongside the private registry and container service infrastructure that consumes it. Equally as well, however, your infrastructure can reference independently deployed artifacts.
 
@@ -87,21 +87,23 @@ server = aws.ec2.Instance('web-server',
 ```
 
 ```go
+package main
+
 import (
     "github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
     "github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
+    pulumi.Run(func(ctx *pulumi.Context) error {
         group, err := ec2.NewSecurityGroup(ctx, "web-sg", &ec2.SecurityGroupArgs{
-            Description: "Enable HTTP access",
-            Ingress: []map[string]interface{}{
-                {
-                    "protocol":   "tcp",
-                    "fromPort":   80,
-                    "toPort":     80,
-                    "cidrBlocks": []string{"0.0.0.0/0"},
+            Description: pulumi.String("Enable HTTP access"),
+            Ingress: ec2.SecurityGroupIngressArray{
+                ec2.SecurityGroupIngressArgs{
+                    Protocol:   pulumi.String("tcp"),
+                    FromPort:   pulumi.Int(80),
+                    ToPort:     pulumi.Int(80),
+                    CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
                 },
             },
         })
@@ -109,9 +111,9 @@ func main() {
             return err
         }
         server, err := ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
-            Ami:            "ami-6869aa05",
-            InstanceType:   "t2.micro",
-            SecurityGroups: []interface{}{group.Name()},
+            Ami:            pulumi.String("ami-6869aa05"),
+            InstanceType:   pulumi.String("t2.micro"),
+            SecurityGroups: pulumi.StringArray{group.Name},
         })
         if err != nil {
             return err
@@ -180,8 +182,8 @@ pulumi.export('public_dns', server.public_dns)
 
 ```go
 // ...
-        ctx.Export("publicIp", server.PublicIp())
-        ctx.Export("publicHostName", server.PublicDns())
+        ctx.Export("publicIp", server.PublicIp)
+        ctx.Export("publicHostName", server.PublicDns)
         return nil
     })
 }
@@ -271,7 +273,7 @@ res, err := NewResource(ctx, name, args, opt1, opt2)
 var res = new Resource(name, args, options);
 ```
 
-All resources have a [`name`](#names), which must be unique across your entire Pulumi program. This _logical name_ influences the _physical name_ assigned by your infrastructure's cloud provider, although [Pulumi auto-names resources](#autonaming) by default, so they may differ.
+All resources have a required [`name`](#names) argument, which must be unique across resources of the same kind in a [stack]({{< relref "stack" >}}). This _logical name_ influences the _physical name_ assigned by your infrastructure's cloud provider, although [Pulumi auto-names resources](#autonaming) by default, so they may differ.
 
 The `args` argument is an object with a set of named property input values that are used to initialize the resource. These can be normal raw values---such as strings, integers, lists, and maps---or [outputs from other resources](#outputs).
 
@@ -296,7 +298,7 @@ role = iam.Role("my-role")
 ```
 
 ```go
-role, _ := iam.Role(ctx, "my-role", &iam.RoleArgs{}, pulumi.ResourceOpt{})
+role, err := iam.NewRole(ctx, "my-role", &iam.RoleArgs{})
 ```
 
 ```csharp
@@ -345,9 +347,9 @@ role = iam.Role('my-role', {
 ```
 
 ```go
-role, _ := iam.Role(ctx, "my-role", &iam.RoleArgs{
-    Name: "my-role-001",
-}, pulumi.ResourceOpt{})
+role, err := iam.NewRole(ctx, "my-role", &iam.RoleArgs{
+    Name: pulumi.String("my-role-001"),
+})
 ```
 
 ```csharp
@@ -384,9 +386,9 @@ role = iam.Role('my-role', {
 ```
 
 ```go
-role, _ := iam.Role(ctx, "my-role", &iam.RoleArgs{
-    Name: "my-role-"+pulumi.GetProject()+"-"+pulumi.GetStack(),
-}, pulumi.ResourceOpt{DeleteBeforeReplace: true})
+role, _ := iam.NewRole(ctx, "my-role", &iam.RoleArgs{
+    Name: fmt.Sprintf("my-role-%s-%s", ctx.Project(), ctx.Stack()),
+}, pulumi.DeleteBeforeReplace(true))
 ```
 
 ```csharp
@@ -466,9 +468,8 @@ db = Database('db',
 ```
 
 ```go
-// AdditionalSecretOutputs is not yet supported in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
+    pulumi.AdditionalSecretOutputs([]string{"password"}))
 ```
 
 ```csharp
@@ -502,14 +503,13 @@ db = Database('db',
 ```
 
 ```go
-// Aliases is not yet supported in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
+    pulumi.Aliases(pulumi.Alias{Name: pulumi.String("old-name-for-db")}))
 ```
 
 ```csharp
 var db = new Database("new-name-for-db", new DatabaseArgs(),
-    new ResourceOptions { Aliases = { new Alias { Name = "old-name-for-db"} } });
+    new CustomResourceOptions { Aliases = { new Alias { Name = "old-name-for-db"} } });
 ```
 
 The `aliases` option accepts a list of old identifiers. If a resource has been renamed multiple times, it may contain many. This list may contain old `Alias` objects and/or old [resource URNs](#urns).
@@ -534,14 +534,16 @@ db = Database('db',
 ```
 
 ```go
-// Aliases is not yet supported in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
+    pulumi.Aliases([]pulumi.Alias{pulumi.Alias{
+        URN: pulumi.URN("urn:pulumi:stackname::projectname::aws:rds/database:Database::old-name-for-db"),
+    }})
+)
 ```
 
 ```csharp
 var db = new Database("new-name-for-db", new DatabaseArgs(),
-    new ResourceOptions { Aliases = { new Alias {
+    new CustomResourceOptions { Aliases = { new Alias {
         Urn = "urn:pulumi:stackname::projectname::aws:rds/database:Database::old-name-for-db" } } });
 ```
 
@@ -571,13 +573,13 @@ db = Database('db',
 ```
 
 ```go
-db, _ := Database(ctx, "db", &DatabaseArgs{/*...*/},
-    pulumi.ResourceOpt{CustomTimeouts: &CustomTimeouts{Create: "30m"}});
+db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
+    pulumi.Timeouts(&pulumi.CustomTimeouts{Create: "30m"}))
 ```
 
 ```csharp
 var db = new Database("db", new DatabaseArgs(),
-    new ResourceOptions { CustomTimeouts = new CustomTimeouts { Create = TimeSpan.FromMinutes(30) } });
+    new CustomResourceOptions { CustomTimeouts = new CustomTimeouts { Create = TimeSpan.FromMinutes(30) } });
 ```
 
 ###### `deleteBeforeReplace`
@@ -606,8 +608,8 @@ db = Database("db",
 ```
 
 ```go
-db, _ := Database(ctx, "db", &DatabaseArgs{/*...*/},
-    pulumi.ResourceOpt{DeleteBeforeReplace: true});
+db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
+    pulumi.DeleteBeforeReplace(true))
 ```
 
 ```csharp
@@ -642,13 +644,13 @@ res2 = MyResource("res2", opts=ResourceOptions(depends_on=[res1]));
 ```
 
 ```go
-res1, _ := MyResource(ctx, "res1");
-res2, _ := MyResource(ctx, "res2", pulumi.ResourceOpt{DependsOn: []Resource{res1}});
+res1, _ := NewMyResource(ctx, "res1", &MyResourceArgs{/*...*/})
+res2, _ := NewMyResource(ctx, "res2", &MyResourceArgs{/*...*/}, pulumi.DependsOn([]Resource{res1}))
 ```
 
 ```csharp
 var res1 = new MyResource("res1", new MyResourceArgs());
-var res2 = new MyResource("res2", new MyResourceArgs(), new ResourceOptions { DependsOn = { res1 } });
+var res2 = new MyResource("res2", new MyResourceArgs(), new CustomResourceOptions { DependsOn = { res1 } });
 ```
 
 ###### `ignoreChanges`
@@ -676,18 +678,21 @@ res = MyResource("res",
 ```
 
 ```go
-// IgnoreChanges is not yet supported in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+res, _ := NewMyResource(ctx, "res",
+    &MyResourceArgs{Prop: "new-value"},
+    pulumi.IgnoreChanges([]string{"prop"}))
 ```
 
 ```csharp
 var res = new MyResource("res",
-    new MyResourceArgs { prop = "new-value" },
-    new ResourceOptions { IgnoreChanges = { "prop" } });
+    new MyResourceArgs { Prop = "new-value" },
+    new CustomResourceOptions { IgnoreChanges = { "prop" } });
 ```
 
 You would use the `ignoreChanges` option to avoid changes in properties leading to diffs or to change defaults for a property without forcing all existing deployed stacks to update or replace the affected resource. This is common after you've imported existing infrastructure provisioned by another method into Pulumi, where there may be historical drift that you'd prefer to retain than have to replace and reconstruct some critical parts of your infrastructure.
+
+> **Note:** The property names passed to `ignoreChanges` should always be the "camelCase" version of
+> the property name as used in the core Pulumi resource model.
 
 ###### `import`
 
@@ -754,29 +759,29 @@ server = aws.ec2.Instance('web-server',
 ```go
 group, err := ec2.NewSecurityGroup(ctx, "web-sg",
     &ec2.SecurityGroupArgs{
-        Name: "web-sg-62a569b",
-        Description: "Enable HTTP access",
-        Ingress: []map[string]interface{}{
-            {
-                "protocol":   "tcp",
-                "fromPort":   80,
-                "toPort":     80,
-                "cidrBlocks": []string{"0.0.0.0/0"},
+        Name:        pulumi.String("web-sg-62a569b"),
+        Description: pulumi.String("Enable HTTP access"),
+        Ingress: ec2.SecurityGroupIngressArray{
+            ec2.SecurityGroupIngressArgs{
+                Protocol:   pulumi.String("tcp"),
+                FromPort:   pulumi.Int(80),
+                ToPort:     pulumi.Int(80),
+                CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
             },
         },
     },
-    pulumi.ResourceOpt{Import: "sg-04aeda9a214730248"},
+    pulumi.Import(pulumi.ID("sg-04aeda9a214730248")),
 )
 if err != nil {
     return err
 }
 server, err := ec2.NewInstance(ctx, "web-server",
     &ec2.InstanceArgs{
-        Ami:            "ami-6869aa05",
-        InstanceType:   "t2.micro",
-        SecurityGroups: []interface{}{group.Name()},
+        Ami:            pulumi.String("ami-6869aa05"),
+        InstanceType:   pulumi.String("t2.micro"),
+        SecurityGroups: pulumi.StringArray{group.Name},
     },
-    pulumi.ResourceOpt{Import: "i-06a1073de86f4adef"},
+    pulumi.Import(pulumi.ID("i-06a1073de86f4adef")),
 )
 if err != nil {
     return err
@@ -845,14 +850,14 @@ child = MyResource("child", opts=ResourceOptions(parent=parent));
 ```
 
 ```go
-parent, _ := MyResource(ctx, "parent");
-child, _ := MyResource(ctx, "child", pulumi.ResourceOpt{Parent: parent});
+parent, _ := NewMyResource(ctx, "parent", &MyResourceArgs{/*...*/})
+child, _ := NewMyResource(ctx, "child", &MyResourceArgs{/*...*/}, pulumi.Parent(parent))
 ```
 
 ```csharp
 var parent = new MyResource("parent", new MyResourceArgs());
 var child = new MyResource("child", new MyResourceArgs(),
-    new ResourceOptions { Parent = parent });
+    new CustomResourceOptions { Parent = parent });
 ```
 
 Using parents can help to understand causality; that is, why a given resource was created in the first place. For example, this `pulumi up` output shows that we have an AWS Virtual Private Cloud (VPC) with two subnets attached to it, and that this VPC directly belongs to the implicit `pulumi:pulumi:Stack` resource:
@@ -886,11 +891,11 @@ db = Database("db", opts=ResourceOptions(protect=True))
 ```
 
 ```go
-db, _ := Database(ctx, "db", &DatabaseArgs{}, pulumi.ResourceOpt{Protect: true});
+db, _ := NewDatabase(ctx, "db", &DatabaseArgs{}, pulumi.Protect(true));
 ```
 
 ```csharp
-var db = new Database("db", new DatabaseArgs(), new ResourceOptions { Protect = true });
+var db = new Database("db", new DatabaseArgs(), new CustomResourceOptions { Protect = true });
 ```
 
 ###### `provider`
@@ -915,13 +920,13 @@ vpc = ec2.Vpc("vpc", opts=ResourceOptions(provider=provider))
 ```
 
 ```go
-provider, _ := aws.Provider(ctx, "provider", { region: "us-west-2" });
-vpc, _ := ec2.Vpc(ctx, "vpc", &VpcArgs{}, pulumi.ResourceOpt{Provider: provider});
+provider, _ := aws.NewProvider(ctx, "provider", &aws.ProviderArgs{Region: pulumi.StringPtr("us-west-2")})
+vpc, _ := ec2.NewVpc(ctx, "vpc", &ec2.VpcArgs{}, pulumi.Provider(provider))
 ```
 
 ```csharp
 var provider = new Aws.Provider("provider", new Aws.ProviderArgs { Region = "us-west-2" });
-var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(), new ResourceOptions { Provider = provider });
+var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(), new CustomResourceOptions { Provider = provider });
 ```
 
 ###### `transformations`
@@ -981,7 +986,7 @@ vpc = MyVpcComponent("vpc", opts=ResourceOptions(transformations=[transformation
 ```
 
 ```csharp
-var vpc = new MyVpcComponent("vpc", new ResourceOptions
+var vpc = new MyVpcComponent("vpc", new ComponentResourceOptions
 {
     Transformations =
     {
@@ -995,7 +1000,7 @@ var vpc = new MyVpcComponent("vpc", new ResourceOptions
                     Args: args.Args,
                     Options: ResourceOptions.Merge(
                         args.Options,
-                        new ResourceOptions { IgnoreChanges =  { "tags" } }),
+                        new CustomResourceOptions { IgnoreChanges =  { "tags" } }),
                 };
             }
 
@@ -1057,15 +1062,15 @@ import (
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-        group, err := ec2.GetSecurityGroup(ctx, "sg-0dfd33cdac25b1ec9", nil)
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        group, err := ec2.GetSecurityGroup(ctx, "group", pulumi.ID("sg-0dfd33cdac25b1ec9"), nil)
         if err != nil {
             return err
         }
         server, err := ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
-            Ami:            "ami-6869aa05",
-            InstanceType:   "t2.micro",
-            SecurityGroups: []interface{}{group.Name()},
+            Ami:            pulumi.String("ami-6869aa05"),
+            InstanceType:   pulumi.String("t2.micro"),
+            SecurityGroups: pulumi.StringArray{group.Name},
         })
         if err != nil {
             return err
@@ -1142,9 +1147,19 @@ class MyComponent(pulumi.ComponentResource):
 ```
 
 ```go
-// ComponentResources are currently not directly supported in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+type MyComponent struct {
+    pulumi.ResourceState
+}
+
+func NewMyComponent(ctx *pulumi.Context, name string, opts ...pulumi.ResourceOption) (*MyComponent, error) {
+    myComponent := &MyComponent{}
+    err := ctx.RegisterComponentResource("pkg:index:MyComponent", name, myComponent, opts...)
+    if err != nil {
+        return nil, err
+    }
+
+    return myComponent, nil
+}
 ```
 
 ```csharp
@@ -1193,13 +1208,13 @@ bucket = s3.Bucket(f"{name}-bucket",
 ```
 
 ```go
-bucket := s3.Bucket(ctx, fmt.Sprintf("%s-bucket", name),
-    &s3.BucketArgs{/*...*/}, pulumi.ResourceOpt{Parent: parent});
+bucket, err := s3.NewBucket(ctx, fmt.Sprintf("%s-bucket", name),
+    &s3.BucketArgs{ /*...*/ }, pulumi.Parent(myComponent))
 ```
 
 ```csharp
 var bucket = new Aws.S3.Bucket($"{name}-bucket",
-    new Aws.S3.BucketArgs(/*...*/), new ResourceOptions { Parent = this });
+    new Aws.S3.BucketArgs(/*...*/), new CustomResourceOptions { Parent = this });
 ```
 
 ##### Registering Component Outputs
@@ -1229,9 +1244,9 @@ self.register_outputs({
 ```
 
 ```go
-// ComponentResources are currently not directly supported in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+ctx.RegisterResourceOutputs(myComponent, pulumi.Map{
+    "bucketDnsName": bucket.BucketDomainName,
+})
 ```
 
 ```csharp
@@ -1279,9 +1294,12 @@ component = MyComponent('...', ResourceOptions(providers={
 ```
 
 ```go
-// ComponentResources are currently not directly supported in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+component, err := NewMyResource(ctx, "...", nil, pulumi.ProviderMap(
+    map[string]pulumi.ProviderResource{
+        "aws":        awsUsEast1,
+        "kubernetes": myk8s,
+    },
+))
 ```
 
 ```csharp
@@ -1339,8 +1357,8 @@ url = virtual_machine.dns_name.apply(
 ```
 
 ```go
-url := virtualmachine.DnsName().Apply(func(dnsName string) (interface{}, error) {
-    return "https://" + dnsName, nil
+url := vpc.DnsName.ApplyString(func(dnsName string) string {
+    return "https://" + dnsName
 })
 ```
 
@@ -1384,9 +1402,13 @@ connection_string = Output.all(sql_server.name, database.name) \
 ```
 
 ```go
-// `all` is not yet available in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+connectionString := pulumi.All(sqlServer.Name, database.Name).ApplyT(
+    func (args []interface{}) (string, error) {
+        server := args[0].(string)
+        db := args[1].(string)
+        return fmt.Sprintf("Server=tcp:%s.database.windows.net;initial catalog=%s...", server, db)
+    },
+)
 ```
 
 ```csharp
@@ -1444,7 +1466,7 @@ record = aws.route53.Record('validation',
     records=[
         # Need to pass along a deep subproperty of this Output
         certificate.domain_validation_options.apply(
-            lambda domain_validation_options: domain_validation_options[0].resource_record_value
+            lambda domain_validation_options: domain_validation_options[0]['resourceRecordValue']
         )
     ],
 ...
@@ -1452,8 +1474,6 @@ record = aws.route53.Record('validation',
 
 ```go
 // Helpers for accessing properties are not yet available in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
 ```csharp
@@ -1503,8 +1523,6 @@ record = aws.route53.Record('validation',
 
 ```go
 // Helpers for accessing properties are not yet available in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
 ```csharp
@@ -1548,7 +1566,7 @@ For example, say you want to create a URL from hostname and port output values:
 {{< langchoose csharp >}}
 
 ```javascript
-let hostName = // get some Output
+let hostname = // get some Output
 let port = // get some Output
 
 // Would like to produce a string equivalent to: http://${hostname}:${port}/
@@ -1556,7 +1574,7 @@ let url = // ?
 ```
 
 ```typescript
-let hostName: Output<string> = // get some Output
+let hostname: Output<string> = // get some Output
 let port: Output<number> = // get some Output
 
 // Would like to produce a string equivalent to: http://${hostname}:${port}/
@@ -1564,7 +1582,7 @@ let url = // ?
 ```
 
 ```python
-hostName: Output[str] = # get some Output
+hostname: Output[str] = # get some Output
 port: Output[int] = # get some Output
 
 # Would like to produce a string equivalent to: http://${hostname}:${port}/
@@ -1572,13 +1590,14 @@ url = # ?
 ```
 
 ```go
-// Helpers for combining Outputs into strings are not yet available in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+var hostname pulumi.StringOutput
+var port pulumi.NumberOutput
+
+url := // ?
 ```
 
 ```csharp
-Output<string> hostName = // get some Output
+Output<string> hostname = // get some Output
 Output<int> port = // get some Output
 
 // Would like to produce a string equivalent to: http://{hostname}:{port}/
@@ -1602,9 +1621,9 @@ url = Output.all([hostname, port]).apply(lambda l: f"http://{l[0]}:{l[1]}/")
 ```
 
 ```go
-// Helpers for combining Outputs into strings are not yet available in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+url := pulumi.All(hostname, port).ApplyString(func (args []interface{}) string {
+    return fmt.Sprintf("http://%s:%d/", args[0], args[1])
+})
 ```
 
 ```csharp
@@ -1629,13 +1648,11 @@ const url2: Output<string> = pulumi.interpolate `http://${hostname}:${port}/`;
 
 ```python
 # concat takes a list of args and concatenates all of them into a single output:
-url = Output.concat("http://", hostname, ":", post, "/")
+url = Output.concat("http://", hostname, ":", port, "/")
 ```
 
 ```go
-// Helpers for combining Outputs into strings are not yet available in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+url := pulumi.Sprintf("http://%s:%d/", hostname, port)
 ```
 
 ```csharp
@@ -1673,13 +1690,15 @@ def split(input):
 ```
 
 ```go
-// Helpers for converting Inputs to Outputs are not yet available in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+func split(input pulumi.StringInput) pulumi.StringArrayOutput {
+    return input.ToStringOutput().ApplyStringArray(func(s string) []string {
+        return strings.Split(s, ",")
+    })
+}
 ```
 
 ```csharp
-Output<string[]> Split(Input<string[]> input)
+Output<string[]> Split(Input<string> input)
 {
     var output = input.ToOutput()
     return output.Apply(v => v.Split(","));
@@ -1730,7 +1749,8 @@ There are two ways to programmatically create secret values:
 
 <div class="language-prologue-go"></div>
 
-Secrets are not yet available in Go. See <https://github.com/pulumi/pulumi/issues/2820>.
+* Using `config.GetSecret(key)` or `config.RequireSecret(key)` when reading a value from config.
+* Calling `pulumi.ToSecret(value)` to construct a secret from an existing value.
 
 <div class="language-prologue-csharp"></div>
 
@@ -1765,16 +1785,21 @@ param = ssm.Parameter("a-secret-param",
 ```
 
 ```go
-// Secrets are not yet avaiaible in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/2820
+cfg := config.New(ctx, "")
+param, err := ssm.NewParameter(ctx, "a-secret-param", &ssm.ParameterArgs{
+    Type:  "SecureString",
+    Value: cfg.RequireSecret("my-secret-value"),
+})
+if err != nil {
+    return err
+}
 ```
 
 ```csharp
 var cfg = new Pulumi.Config()
 var param = new Aws.Ssm.Parameter("a-secret-param", new Aws.Ssm.ParameterArgs
 {
-    type = "SecureString",
+    type = pulumi.String("SecureString"),
     value = cfg.RequireSecret("my-secret-value"),
 });
 ```
@@ -1818,7 +1843,7 @@ pulumi.export("url", resource.url)
 ```
 
 ```go
-ctx.Export("url", resource.Url())
+ctx.Export("url", resource.Url)
 ```
 
 ```csharp
@@ -1858,10 +1883,10 @@ pulumi.export("o", {'num': 42})
 ```
 
 ```go
-ctx.Export("x", "hello")
-ctx.Export("o", map[string]interface{}{
-    "num": 42,
-})
+ctx.Export("x", pulumi.String("hello"))
+ctx.Export("o", pulumi.Map(map[string]pulumi.Input{
+    "num": pulumi.Int(42),
+}))
 ```
 
 ```csharp
@@ -1930,9 +1955,11 @@ other_output = other.get_output("x");
 ```
 
 ```go
-// StackReference is not currently supported in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+other, err := pulumi.NewStackReference(ctx, "acmecorp/infra/other", nil)
+if err != nil {
+    return err
+}
+otherOutput := other.GetOutput(pulumi.String("x"))
 ```
 
 ```csharp
@@ -1969,7 +1996,7 @@ console.log(`Hello, ${name} -- I see your lucky number is ${lucky}!`);
 ```typescript
 let config = new pulumi.Config();
 let name = config.require("name");
-let lucky = config.getNumber("lucky");
+let lucky = config.getNumber("lucky") || 42;
 console.log(`Hello, ${name} -- I see your lucky number is ${lucky}!`);
 ```
 
@@ -1981,13 +2008,13 @@ print(f'Hello, {name} -- I see your lucky number is {lucky}!')
 ```
 
 ```go
-conf := config.New(ctx, "my-project");
-name := conf.Require("name");
-lucky := conf.Get("lucky")
-if lucky == nil {
+conf := config.New(ctx, "")
+name := conf.Require("name")
+lucky, err := conf.TryInt("lucky")
+if err != nil {
     lucky = 42
 }
-fmt.Printf("Hello, %v -- I see your lucky number is %v!", name, lucky);
+fmt.Printf("Hello, %v -- I see your lucky number is %v!", name, lucky)
 ```
 
 ```csharp
@@ -2047,18 +2074,18 @@ print(f"Active: ${data.active}")
 
 ```go
 type Data struct {
-	Active bool
-	Nums   []int
+    Active bool
+    Nums   []int
 }
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		var d Data
-		cfg := config.New(ctx, "")
-		cfg.RequireObject("data", &d)
-		fmt.Printf("Active: %v\n", d.Active)
-		return nil
-	})
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        var d Data
+        cfg := config.New(ctx, "")
+        cfg.RequireObject("data", &d)
+        fmt.Printf("Active: %v\n", d.Active)
+        return nil
+    })
 }
 ```
 
@@ -2119,9 +2146,10 @@ instance = ec2.Instance("myInstance", instance_type="t2.micro", ami="myAMI")
 ```
 
 ```go
-// Providers are currently not supported in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+vpc, err := ec2.NewInstance(ctx, "myInstance", &ec2.InstanceArgs{
+    InstanceType: pulumi.String("t2.micro"),
+    Ami:          pulumi.String("myAMI"),
+})
 ```
 
 ```csharp
@@ -2222,9 +2250,40 @@ listener = aws.lb.Listener("listener",
 ```
 
 ```go
-// Providers are currently not supported in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+// Create an AWS provider for the us-east-1 region.
+useast1, err := aws.NewProvider(ctx, "useast1", &aws.ProviderArgs{
+    Region: pulumi.String("us-east-1"),
+})
+if err != nil {
+    return err
+}
+
+// Create an ACM certificate in us-east-1.
+cert, err := acm.NewCertificate(ctx, "myInstance", &acm.CertificateArgs{
+    DomainName:       pulumi.String("foo.com"),
+    ValidationMethod: pulumi.String("EMAIL"),
+}, pulumi.Provider(useast1))
+if err != nil {
+    return err
+}
+
+// Create an ALB listener in the default region that references the ACM certificate created above.
+listener, err := lb.NewListener(ctx, "myInstance", &lb.ListenerArgs{
+    LoadBalancerArn: loadBalancerArn,
+    Port:            pulumi.Int(443),
+    Protocol:        pulumi.String("HTTPS"),
+    SslPolicy:       pulumi.String("ELBSecurityPolicy-2016-08"),
+    CertificateArn:  cert.Arn,
+    DefaultActions: lb.ListenerDefaultActionArray{
+        &lb.ListenerDefaultActionArgs{
+            TargetGroupArn: targetGroupArn,
+            Type:           pulumi.String("forward"),
+        },
+    },
+})
+if err != nil {
+    return err
+}
 ```
 
 ```csharp
@@ -2313,9 +2372,25 @@ my_resource = MyResource("myResource", pulumi.ResourceOptions(providers={
 ```
 
 ```go
-// Providers are currently not supported in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+useast1, err := aws.NewProvider(ctx, "useast1", &aws.ProviderArgs{
+    Region: pulumi.String("us-east-1"),
+})
+if err != nil {
+    return err
+}
+myk8s, err := kubernetes.NewProvider(ctx, "myk8s", &kubernetes.ProviderArgs{
+    Context: pulumi.String("test-ci"),
+})
+if err != nil {
+    return err
+}
+myResource, err := NewMyResource(ctx, "myResource", pulumi.ProviderMap(map[string]pulumi.ProviderResource{
+    "aws": useast1,
+    "kubernetes": myk8s,
+}))
+if err != nil {
+    return err
+}
 ```
 
 ```csharp
@@ -2328,8 +2403,8 @@ class MyResource : pulumi.ComponentResource
     public MyResource(string name, ComponentResourceOptions opts)
         : base(name, opts)
     {
-        var instance = new Aws.Ec2.Instance("instance", new Aws.Ec2.InstanceArgs { ... }, new ResourceOptions { Parent = this });
-        var pod = new Kubernetes.Core.V1.Pod("pod", new Kubernetes.Core.V1.PodArgs { ... }, new ResourceOptions { Parent = this });
+        var instance = new Aws.Ec2.Instance("instance", new Aws.Ec2.InstanceArgs { ... }, new CustomResourceOptions { Parent = this });
+        var pod = new Kubernetes.Core.V1.Pod("pod", new Kubernetes.Core.V1.PodArgs { ... }, new CustomResourceOptions { Parent = this });
     }
 }
 
@@ -2541,6 +2616,45 @@ class MyResource extends pulumi.dynamic.Resource {
 }
 ```
 
+```python
+from pulumi import Input, Output, ResourceOptions
+from pulumi.dynamic import *
+from typing import Any, Optional
+
+class MyResourceInputs(object):
+    my_string_prop: Input[str]
+    my_bool_prop: Input[bool]
+
+    def __init__(self, my_string_prop, my_bool_prop):
+        self.my_string_prop = my_string_prop
+        self.my_bool_prop = my_bool_prop
+
+class _MyResourceProviderInputs(object):
+    """
+    MyResourceProviderInputs is the unwrapped version of the same inputs
+    from the MyResourceInputs class.
+    """
+    my_string_prop: str
+    my_bool_prop: bool
+
+    def __init__(self, my_string_prop: str, my_bool_prop: bool):
+        self.my_bool_prop = my_bool_prop
+        self.my_string_prop = my_string_prop
+
+class MyResourceProvider(ResourceProvider):
+    def create(self, inputs: _MyResourceProviderInputs) -> CreateResult:
+        ...
+        return CreateResult()
+
+    def diff(self, id: str, oldInputs: _MyResourceProviderInputs, newInputs: _MyResourceProviderInputs) -> DiffResult:
+        ...
+        return DiffResult()
+
+class MyResource(Resource):
+    def __init__(self, name: str, props: MyResourceInputs, opts: Optional[ResourceOptions] = None):
+        super().__init__(MyResourceProvider(), name, {**vars(props)}, opts)
+```
+
 ```go
 // Dynamic Providers are currently not supported in Go.
 ```
@@ -2608,8 +2722,8 @@ class MyResourceProvider extends pulumi.dynamic.ResourceProvider {
 }
 
 export class MyResource extends pulumi.dynamic.Resource {
-    public readonly myStringOutput: pulumi.Output<string>;
-    public readonly myNumberOutput: pulumi.Output<number>;
+    public readonly myStringOutput!: pulumi.Output<string>;
+    public readonly myNumberOutput!: pulumi.Output<number>;
 
     constructor(name: string, props: MyResourceInputs, opts?: pulumi.CustomResourceOptions) {
         super(myprovider, name, { myStringOutput: undefined, myNumberOutput: undefined, ...props }, opts);
@@ -2617,10 +2731,17 @@ export class MyResource extends pulumi.dynamic.Resource {
 }
 ```
 
+```javascript
+JavaScript does not support types.
+```
+
 ```python
 from pulumi import ResourceOptions, Input, Output
 from pulumi.dynamic import Resource, ResourceProvider, CreateResult
 from typing import Any, Optional
+
+...
+...
 
 class MyProvider(ResourceProvider):
     def create(self, inputs):
@@ -2629,6 +2750,7 @@ class MyProvider(ResourceProvider):
 class MyResource(Resource):
     my_string_output: Output[str]
     my_number_output: Output[str]
+
     def __init__(self, name: str, props: MyResourceInputs, opts: Optional[ResourceOptions] = None):
          super().__init__(MyProvider(), name, { 'my_string_output': None, 'my_number_output': None, **vars(props) }, opts)
 ```
@@ -2859,6 +2981,15 @@ export("label_url", label.url)
 // Dynamic Providers are currently not supported in .NET.
 ```
 
+#### Additional Examples
+
+* [Enable Azure Storage’s Static Websites Feature](https://github.com/pulumi/examples/tree/master/azure-ts-static-website)
+    * The Azure resource provider does not support enabling the static website feature for a storage account. However, there is a REST API that can be called to enable the feature, so we can easily call the API from within the dynamic provider.
+* [Add a Custom Domain to an Azure CDN endpoint](https://github.com/pulumi/examples/tree/master/azure-ts-dynamicresource)
+    * Similar to the previous example, this is another example of a shortcoming of the regular Azure resource provider available in Pulumi. However, due to the availability of a REST API, we can easily add a custom domain to an Azure CDN resource using a dynamic provider.
+* [Dynamic Providers as Provisioners](https://github.com/pulumi/examples/tree/master/aws-ts-ec2-provisioners)
+    * Provisioning a VM after it is created is a common problem. Developers have the option to run user-supplied scripts while creating the VM itself. For example, the AWS EC2 resource has a userData parameter, that allows you to specify an inline script, which EC2 will run at instance startup. However, this example of dynamic providers as provisioners allows you to copy/execute scripts on the target instance without replacing the instance itself.
+
 ### Runtime Functions
 
 The Pulumi SDK library also offers a number of helper functions.
@@ -2871,9 +3002,77 @@ The Pulumi SDK library also offers a number of helper functions.
 
 The {{< pulumi-getproject >}} and {{< pulumi-getstack >}} functions give you the currently deploying project and stack, respectively. This can be useful for naming or tagging resources.
 
+{{< langchoose csharp >}}
+
+```javascript
+let project = pulumi.getProject();
+let stack = pulumi.getStack();
+```
+
+```typescript
+let project = pulumi.getProject();
+let stack = pulumi.getStack();
+```
+
+```python
+project = pulumi.get_project()
+stack = pulumi.get_stack()
+```
+
+```go
+project := ctx.Project()
+stack := ctx.Stack()
+```
+
+```csharp
+var project = Deployment.Instance.ProjectName
+var stack = Deployment.Instance.StackName
+```
+
 #### Logging
 
 The {{< pulumi-log >}} collection of functions allows you to log diagnostics, warnings, or errors with the Pulumi engine. These will be displayed alongside all other Pulumi output in the CLI and in the Pulumi Console. They will also be logged and kept for historical purposes if you ever want to use them to audit or diagnose what has transpired.
+
+{{< langchoose csharp >}}
+
+```javascript
+pulumi.log.info("message")
+pulumi.log.info("message", resource)
+pulumi.log.debug("hidden by default")
+pulumi.log.warn("warning")
+pulumi.log.error("fatal error")
+```
+
+```typescript
+pulumi.log.info("message")
+pulumi.log.info("message", resource)
+pulumi.log.debug("hidden by default")
+pulumi.log.warn("warning")
+pulumi.log.error("fatal error")
+```
+
+```python
+log.info("message")
+log.info("message", resource)
+log.debug("hidden by default")
+log.warn("warning")
+log.error("fatal error")
+```
+
+```go
+// The Pulumi logging functions are not yet available in Go.
+//
+// See https://github.com/pulumi/pulumi/issues/3801.
+```
+
+```csharp
+Pulumi.Log.Info("message");
+Pulumi.Log.Info("message", resource);
+Pulumi.Log.Debug("hidden by default");
+Pulumi.Log.Warn("warning");
+Pulumi.Log.Error("fatal error");
+
+```
 
 #### Serializing Lambdas <span class="badge">NODE.JS ONLY</span> {#runtime}
 

@@ -1,11 +1,15 @@
 // Copyright 2016-2019, Pulumi Corporation.  All rights reserved.
 
 import * as aws from "@pulumi/aws";
+import * as awsx from "@pulumi/awsx";
 import * as pulumi from "@pulumi/pulumi";
 
 import * as fs from "fs";
+import * as glob from "glob";
 import * as mime from "mime";
 import * as path from "path";
+import * as tar from "tar";
+import * as tmp from "tmp";
 
 const stackConfig = new pulumi.Config();
 
@@ -14,6 +18,8 @@ const config = {
     pathToWebsiteContents: stackConfig.require("pathToWebsiteContents"),
     // targetDomain is the domain/host to serve content at.
     targetDomain: stackConfig.require("targetDomain"),
+    // websiteDomain is the domain/host to serve content at.
+    websiteDomain: stackConfig.require("websiteDomain"),
     // alias is an optional domain alias the CDN will support as well.
     alias: stackConfig.get("alias") || undefined,
     // ACM certificate for the target domain. Must be in the us-east-1 region.
@@ -23,13 +29,13 @@ const config = {
 };
 
 // redirectDomain is the domain to use when redirecting.
-const redirectDomain = config.redirectDomain || config.targetDomain;
+const redirectDomain = config.redirectDomain || config.websiteDomain;
 
-// contentBucket stores the static content to be served via the CDN.
-const contentBucket = new aws.s3.Bucket(
-    "contentBucket",
+// websiteBucket stores the static content to be served via the CDN.
+const websiteBucket = new aws.s3.Bucket(
+    "website-bucket",
     {
-        bucket: config.targetDomain,
+        bucket: config.websiteDomain,
         acl: "public-read",
 
         // Have S3 serve its contents as if it were a website. This is how we get the right behavior
@@ -41,14 +47,15 @@ const contentBucket = new aws.s3.Bucket(
     },
     {
         protect: false,
-    });
+    },
+);
 
-// contentBucket needs to have the "public-read" ACL so its contents can be ready by CloudFront and
-// served. But we deny the s3:ListBucket permission to prevent unintended disclosure of the bucket's
-// contents.
-const denyListPolicyState: aws.s3.BucketPolicyArgs = {
-    bucket: contentBucket.bucket,
-    policy: contentBucket.arn.apply((arn: string) => JSON.stringify({
+// The website bucket needs to have the "public-read" ACL so its contents can be read by
+// CloudFront and served. But we deny the s3:ListBucket permission to anyone but account
+// users to prevent unintended disclosure of the bucket's contents.
+const policy = new aws.s3.BucketPolicy("website-bucket-policy", {
+    bucket: websiteBucket.bucket,
+    policy: websiteBucket.arn.apply(arn => JSON.stringify({
         Version: "2008-10-17",
         Statement: [
             {
@@ -56,11 +63,65 @@ const denyListPolicyState: aws.s3.BucketPolicyArgs = {
                 Principal: "*",
                 Action: "s3:ListBucket",
                 Resource: arn,
+                Condition: {
+                    StringNotEquals: {
+                        "aws:PrincipalAccount": aws.getCallerIdentity().accountId,
+                    },
+                },
             },
         ],
     })),
-};
-const denyListPolicy = new aws.s3.BucketPolicy("deny-list", denyListPolicyState);
+});
+
+// archiveBucket receives uploaded tarballs of website builds.
+const archiveBucket = new aws.s3.Bucket("archive-bucket");
+
+// archiveHandler processes those uploads.
+const archiveHandler = new awsx.ecs.FargateTaskDefinition("archive-handler", {
+    container: {
+        image: awsx.ecs.Image.fromPath("archive-handler-image", "./"),
+        memory: 4096,
+        cpu: 4,
+    },
+});
+
+// Handle uploads by running the archiveHandler task, which downloads the file, unpacks
+// it, and synchronizes its contents with S3.
+const cluster = awsx.ecs.Cluster.getDefault();
+archiveBucket.onObjectCreated("archive-bucket-subscription", new aws.lambda.CallbackFunction<aws.s3.BucketEvent, void>("archive-bucket-callback", {
+    runtime: "nodejs10.x",
+    policies: awsx.ecs.TaskDefinition.defaultTaskRolePolicyARNs(),
+    callback: async bucketArgs => {
+        if (!bucketArgs.Records) {
+            return;
+        }
+
+        for (const record of bucketArgs.Records) {
+            console.log(`A file was uploaded to the ${archiveBucket.id.get()} bucket: ${record.s3.object.key}`);
+            const source = `s3://${archiveBucket.id.get()}/${record.s3.object.key}`;
+            const dest = `s3://${websiteBucket.id.get()}`;
+
+            console.log(`Running the container task...`);
+            await archiveHandler.run({
+                cluster,
+                overrides: {
+                    containerOverrides: [
+                        {
+                            name: "container",
+
+                            // Pass the S3 URL of the uploaded tarball and destination
+                            // bucket to the container task.
+                            command: [
+                                source,
+                                dest,
+                            ],
+                        },
+                    ],
+                },
+            });
+        }
+    },
+}));
 
 // logsBucket stores the request logs for incoming requests.
 const logsBucket = new aws.s3.Bucket(
@@ -73,12 +134,25 @@ const logsBucket = new aws.s3.Bucket(
         protect: true,
     });
 
+// websiteLogsBucket stores the request logs for incoming requests.
+const websiteLogsBucket = new aws.s3.Bucket(
+    "website-logs-bucket",
+    {
+        bucket: `${config.websiteDomain}-logs`,
+        acl: "private",
+    },
+    {
+        protect: true,
+    },
+);
+
 const fiveMinutes = 60 * 5;
 const oneHour = fiveMinutes * 12;
 const oneWeek = oneHour * 24 * 7;
+const oneYear = oneWeek * 52;
 
 const baseCacheBehavior = {
-    targetOriginId: contentBucket.arn,
+    targetOriginId: websiteBucket.arn,
     compress: true,
 
     viewerProtocolPolicy: "redirect-to-https",
@@ -99,6 +173,19 @@ const baseCacheBehavior = {
     maxTtl: fiveMinutes,
 };
 
+// domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
+// domain name to be used to access the website must be listed here.
+const domainAliases = [];
+// websiteDomain is the A record for the website bucket associated with the website.
+domainAliases.push(config.websiteDomain);
+// targetDomain is the A record associated with the bucket populated by Pulumi. It may be
+// removed once that bucket is removed.
+domainAliases.push(config.targetDomain);
+// redirectDomain is the domain to use for fully-qualified 301 redirects.
+if (config.redirectDomain) {
+     domainAliases.push(config.redirectDomain);
+}
+
 // distributionArgs configures the CloudFront distribution. Relevant documentation:
 // https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html
@@ -106,11 +193,13 @@ const baseCacheBehavior = {
 const distributionArgs: aws.cloudfront.DistributionArgs = {
     enabled: true,
 
+    aliases: domainAliases,
+
     // We only specify one origin for this distribution: the S3 content bucket.
     origins: [
         {
-            originId: contentBucket.arn,
-            domainName: contentBucket.websiteEndpoint,
+            originId: websiteBucket.arn,
+            domainName: websiteBucket.websiteEndpoint,
             customOriginConfig: {
                 // > If your Amazon S3 bucket is configured as a website endpoint, [like we have here] you must specify
                 // > HTTP Only. Amazon S3 doesn't support HTTPS connections in that configuration.
@@ -136,20 +225,20 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/css/styles.*.css",
-            defaultTtl: oneWeek,
-            maxTtl: oneWeek,
+            defaultTtl: oneYear,
+            maxTtl: oneYear,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/js/bundle.min.*.js",
-            defaultTtl: oneWeek,
-            maxTtl: oneWeek,
+            defaultTtl: oneYear,
+            maxTtl: oneYear,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/js/search.min.*.js",
-            defaultTtl: oneWeek,
-            maxTtl: oneWeek,
+            defaultTtl: oneYear,
+            maxTtl: oneYear,
         },
         {
             ...baseCacheBehavior,
@@ -206,9 +295,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     },
 
     loggingConfig: {
-        bucket: logsBucket.bucketDomainName,
+        bucket: websiteLogsBucket.bucketDomainName,
         includeCookies: false,
-        prefix: `${config.targetDomain}/`,
+        prefix: `${config.websiteDomain}/`,
     },
 };
 
@@ -223,24 +312,9 @@ const cdn = new aws.cloudfront.Distribution(
     distributionArgs,
     {
         protect: true,
-        dependsOn: [ contentBucket, logsBucket ],
-    });
-
-// crawlDirectory recursive crawls the provided directory, applying the provided function
-// to every file it contains. Doesn't handle cycles from symlinks.
-function crawlDirectory(dir: string, f: (_: string) => void) {
-    const files = fs.readdirSync(dir);
-    for (const file of files) {
-        const filePath = `${dir}/${file}`;
-        const stat = fs.statSync(filePath);
-        if (stat.isDirectory()) {
-            crawlDirectory(filePath, f);
-        }
-        if (stat.isFile()) {
-            f(filePath);
-        }
+        dependsOn: [ websiteBucket, websiteLogsBucket ],
     }
-}
+);
 
 // Some files do not get the correct mime/type inferred from the mime package, and we
 // need to set our own.
@@ -257,47 +331,6 @@ function getMimeType(filePath: string): string | undefined {
 // Sync the contents of the source directory with the S3 bucket, which will in-turn show up on the CDN.
 const webContentsRootPath = path.join(process.cwd(), config.pathToWebsiteContents);
 console.log("Syncing contents from local disk at", webContentsRootPath);
-crawlDirectory(
-    webContentsRootPath,
-    (filePath: string) => {
-        const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
-
-        const baseArgs = {
-            acl: "public-read",
-            key: relativeFilePath,
-            bucket: contentBucket,
-        };
-
-        // Create a new S3 object for most files, but HTML files that contain a redirect
-        // just create a stubbed out S3 object with the right metadata so they return a
-        // 301 redirect (instead of serving the HTML with a meta-redirect). This ensures
-        // the right HTTP code response is returned for search engines, as well as
-        // enables better support for URL anchors.
-        const redirect = getMetaRefreshRedirect(filePath);
-        if (!redirect) {
-            const contentFile = new aws.s3.BucketObject(
-                relativeFilePath,
-                {
-                    ...baseArgs,
-                    source: new pulumi.asset.FileAsset(filePath),
-                    contentType: getMimeType(filePath) || undefined,
-                },
-                {
-                    parent: contentBucket,
-                });
-        } else {
-            const s3Redirect = new aws.s3.BucketObject(
-                relativeFilePath,
-                {
-                    ...baseArgs,
-                    source: new pulumi.asset.FileAsset("/dev/null"), // Empty file.
-                    websiteRedirect: translateRedirect(filePath, redirect),
-                },
-                {
-                    parent: contentBucket,
-                });
-        }
-    });
 
 // Returns the redirect URL if filePath is an HTML file that contains a meta refresh tag, otherwise undefined.
 function getMetaRefreshRedirect(filePath: string): string | undefined {
@@ -384,9 +417,70 @@ async function createAliasRecord(
             ],
         });
 }
-const aRecord = createAliasRecord(config.targetDomain, cdn);
 
-export const contentBucketUri = contentBucket.bucket.apply(b => `s3://${b}`);
-export const contentBucketWebsiteDomain = contentBucket.websiteDomain;
-export const contentBucketWebsiteEndpoint = contentBucket.websiteEndpoint;
+// If the current run is an update (i.e., not a preview), zip up the contents of the
+// website directory and upload the archive to S3.
+if (!pulumi.runtime.isDryRun()) {
+    archiveBucket.id.apply(bucketID => {
+
+        // Wait for the update to complete before running the code to upload the archive,
+        // to ensure the task that handles it is the one most recently deployed.
+        process.on("beforeExit", async (code) => {
+            if (code === 0 /* success */) {
+                const s3 = new aws.sdk.S3();
+
+                // For each Hugo-generated redirect, write the relative path and destination URL
+                // to a text file to be processed later in the sync step.
+                const redirectPaths = new Map<string, string>();
+                glob.sync(`${webContentsRootPath}/**/*.html`).map(filePath => {
+                    const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
+                    const redirect = getMetaRefreshRedirect(filePath);
+
+                    if (redirect) {
+                        redirectPaths.set(relativeFilePath, translateRedirect(filePath, redirect));
+                    }
+                });
+
+                fs.writeFileSync(
+                    `${webContentsRootPath}/redirects.txt`,
+                    Array.from(redirectPaths, ([k, v]) => `${k}|${v}`).join("\n") + "\n",
+                );
+
+                // Tar up the files in the `public` directory.
+                const archivePath = tmp.fileSync({ postfix: ".tgz" }).name;
+                tar.c(
+                    {
+                        gzip: true,
+                        sync: true,
+                        file: archivePath,
+                        C: config.pathToWebsiteContents,
+                        portable: true,
+                    },
+                    fs.readdirSync(config.pathToWebsiteContents),
+                );
+
+                // Upload the archive.
+                const result = await s3.putObject({
+                    Bucket: bucketID,
+                    Key: path.basename(archivePath),
+                    Body: fs.readFileSync(archivePath),
+                })
+                .promise();
+
+                console.log(`Website archive ${archivePath} was uploaded.`);
+
+                // Properly exit.
+                process.exit(code);
+            }
+        });
+    });
+}
+
+const aRecord = createAliasRecord(config.targetDomain, cdn);
+const aliasRecord = createAliasRecord(config.websiteDomain, cdn);
+
+export const archiveBucketUri = archiveBucket.bucket.apply(b => `s3://${b}`);
+export const websiteBucketUri = websiteBucket.bucket.apply(b => `s3://${b}`);
+export const websiteBucketWebsiteDomain = websiteBucket.websiteDomain;
+export const websiteBucketWebsiteEndpoint = websiteBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;

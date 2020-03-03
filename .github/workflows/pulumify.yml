@@ -5,12 +5,13 @@ jobs:
     name: Update Live Preview
     runs-on: ubuntu-latest
     steps:
-    - uses: docker://pulumi/pulumify:v0.1.2
+    - uses: docker://pulumi/pulumify:v0.1.4
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-        PULUMIFY_BUILD: make ensure && hugo --buildFuture -e $GITHUB_SHA
+        NODE_ENV: production
+        PULUMIFY_BUILD: NODE_ENV=production make ensure && NODE_ENV=production hugo --minify --buildFuture -e $GITHUB_SHA
         PULUMIFY_ROOT: public
         PULUMIFY_ORGANIZATION: pulumi

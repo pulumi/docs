@@ -186,7 +186,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <code class="docutils literal notranslate"><span class="pre">default_capacity_provider_strategy</span></code> configuration block supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">capacity_provider</span></code> - (Required) The short name of the capacity provider.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Required) The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Optional) The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> - (Optional) The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
 </ul>
 <dl class="field-list simple">
@@ -1006,6 +1006,12 @@ Guide</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The scope for the Docker volume, which determines its lifecycle, either <code class="docutils literal notranslate"><span class="pre">task</span></code> or <code class="docutils literal notranslate"><span class="pre">shared</span></code>.  Docker volumes that are scoped to a <code class="docutils literal notranslate"><span class="pre">task</span></code> are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are <code class="docutils literal notranslate"><span class="pre">scoped</span></code> as shared persist after the task stops.</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">efsVolumeConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Used to configure a EFS volume. Can be used only with an EC2 type task.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileSystemId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the EFS File System.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootDirectory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount on the host</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the volume. This name is referenced in the <code class="docutils literal notranslate"><span class="pre">sourceVolume</span></code>
 parameter of container definition in the <code class="docutils literal notranslate"><span class="pre">mountPoints</span></code> section.</p></li>
@@ -1134,6 +1140,12 @@ Guide</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The scope for the Docker volume, which determines its lifecycle, either <code class="docutils literal notranslate"><span class="pre">task</span></code> or <code class="docutils literal notranslate"><span class="pre">shared</span></code>.  Docker volumes that are scoped to a <code class="docutils literal notranslate"><span class="pre">task</span></code> are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are <code class="docutils literal notranslate"><span class="pre">scoped</span></code> as shared persist after the task stops.</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">efsVolumeConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Used to configure a EFS volume. Can be used only with an EC2 type task.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileSystemId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the EFS File System.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootDirectory</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to mount on the host</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the volume. This name is referenced in the <code class="docutils literal notranslate"><span class="pre">sourceVolume</span></code>
 parameter of container definition in the <code class="docutils literal notranslate"><span class="pre">mountPoints</span></code> section.</p></li>
@@ -1199,6 +1211,12 @@ Guide</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">driverOpts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of Docker driver specific options.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of custom metadata to add to your Docker volume.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The scope for the Docker volume, which determines its lifecycle, either <code class="docutils literal notranslate"><span class="pre">task</span></code> or <code class="docutils literal notranslate"><span class="pre">shared</span></code>.  Docker volumes that are scoped to a <code class="docutils literal notranslate"><span class="pre">task</span></code> are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are <code class="docutils literal notranslate"><span class="pre">scoped</span></code> as shared persist after the task stops.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">efsVolumeConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Used to configure a EFS volume. Can be used only with an EC2 type task.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileSystemId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the EFS File System.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootDirectory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount on the host</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.</p></li>

@@ -1,5 +1,7 @@
 ---
-title: "Post AWS SQS Messages to Slack using Serverless Lambdas"
+title: "Post AWS SQS Messages to Slack using Serverless Lambdas | JavaScript"
+h1: "Post AWS SQS Messages to Slack using Serverless Lambdas"
+linktitle: "Post AWS SQS Messages to Slack using Serverless Lambdas"
 no_edit_this_page: true
 ---
 

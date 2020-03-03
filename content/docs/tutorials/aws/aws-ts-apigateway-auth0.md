@@ -1,5 +1,7 @@
 ---
-title: "Secure Serverless REST API Using Auth0"
+title: "Secure Serverless REST API Using Auth0 | TypeScript"
+h1: "Secure Serverless REST API Using Auth0"
+linktitle: "Secure Serverless REST API Using Auth0"
 no_edit_this_page: true
 ---
 

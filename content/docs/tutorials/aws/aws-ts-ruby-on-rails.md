@@ -1,5 +1,7 @@
 ---
-title: "Ruby on Rails Server Using Amazon EC2"
+title: "Ruby on Rails Server Using Amazon EC2 | TypeScript"
+h1: "Ruby on Rails Server Using Amazon EC2"
+linktitle: "Ruby on Rails Server Using Amazon EC2"
 no_edit_this_page: true
 ---
 

@@ -118,6 +118,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="function">
+<dt id="pulumi_kubernetes.yaml.get_version">
+<code class="sig-prename descclassname">pulumi_kubernetes.yaml.</code><code class="sig-name descname">get_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.get_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Semver-formatted version of the package containing this file.</p>
+</dd></dl>
+
 <dl class="class">
 <dt id="pulumi_kubernetes.yaml.ConfigFile">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.yaml.</code><code class="sig-name descname">ConfigFile</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">file_id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">transformations=None</em>, <em class="sig-param">resource_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.ConfigFile" title="Permalink to this definition">¶</a></dt>

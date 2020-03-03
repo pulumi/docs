@@ -1,5 +1,7 @@
 ---
-title: "Serverless REST API"
+title: "Serverless REST API | TypeScript"
+h1: "Serverless REST API"
+linktitle: "Serverless REST API"
 no_edit_this_page: true
 ---
 

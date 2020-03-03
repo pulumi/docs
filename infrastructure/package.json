@@ -4,12 +4,16 @@
         "lint": "tslint --project tsconfig.json"
     },
     "devDependencies": {
+        "@types/glob": "^7.1.1",
         "@types/mime": "^2.0.1",
         "@types/node": "^12.7.2",
+        "@types/tar": "^4.0.3",
+        "@types/tmp": "^0.1.0",
         "tslint": "^5.19.0"
     },
     "dependencies": {
         "@pulumi/aws": "^0.18.27",
+        "@pulumi/awsx": "^0.19.1",
         "@pulumi/pulumi": "^0.17.28",
         "mime": "^2.4.4"
     }

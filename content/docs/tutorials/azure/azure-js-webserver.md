@@ -1,5 +1,7 @@
 ---
-title: "Web Server Using Azure Virtual Machine"
+title: "Web Server Using Azure Virtual Machine | JavaScript"
+h1: "Web Server Using Azure Virtual Machine"
+linktitle: "Web Server Using Azure Virtual Machine"
 no_edit_this_page: true
 ---
 

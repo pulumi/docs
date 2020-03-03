@@ -20,8 +20,8 @@ Please note that we may change our Acceptable Use Policy at any time, and pursua
 	<li>Excessively profane content;</li>
 	<li>Hate-related or violent content;</li>
 	<li>Content advocating racial or ethnic intolerance;</li>
-	<li>Content intended to advocate or advance computer hacking or cracking;
-	<li>Gambling;</li>
+	<li>Content intended to advocate or advance computer hacking or cracking;</li>
+	<li>Content that promotes illegal gambling;</li>
 	<li>Other illegal activity, including without limitation illegal export of controlled substances or illegal software;</li>
 	<li>Drug paraphernalia;</li>
 	<li>Phishing;</li>

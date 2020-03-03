@@ -1,5 +1,7 @@
 ---
-title: "StackReference Example"
+title: "StackReference Example | TypeScript"
+h1: "StackReference Example"
+linktitle: "StackReference Example"
 no_edit_this_page: true
 ---
 
@@ -43,7 +45,7 @@ stacks via [StackReference](https://www.pulumi.com/docs/intro/concepts/organizin
 1. Set the required configuration variables:
 
     ```bash
-    $ pulumi config set companyName 'ACME Widget Co.'
+    $ pulumi config set companyName 'ACME Widget Company'
     ```
 
 1. Deploy everything with the `pulumi up` command. 

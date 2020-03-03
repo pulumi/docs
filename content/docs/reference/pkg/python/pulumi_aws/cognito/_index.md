@@ -742,7 +742,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">smsMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SMS message template. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. Conflicts with <code class="docutils literal notranslate"><span class="pre">sms_verification_message</span></code> argument.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unusedAccountValidityDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The user account expiration limit, in days, after which the account is no longer usable.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unusedAccountValidityDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - <strong>DEPRECATED</strong> Use password_policy.temporary_password_validity_days instead - The user account expiration limit, in days, after which the account is no longer usable.</p></li>
 </ul>
 <p>The <strong>device_configuration</strong> object supports the following:</p>
 <ul class="simple">
@@ -775,6 +775,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">requireNumbers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you have required users to use at least one number in their password.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireSymbols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you have required users to use at least one symbol in their password.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireUppercase</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you have required users to use at least one uppercase letter in their password.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">temporaryPasswordValidityDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.</p></li>
 </ul>
 <p>The <strong>schemas</strong> object supports the following:</p>
 <ul class="simple">
@@ -830,7 +831,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">smsMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The SMS message template. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. Conflicts with <code class="docutils literal notranslate"><span class="pre">sms_verification_message</span></code> argument.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unusedAccountValidityDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The user account expiration limit, in days, after which the account is no longer usable.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unusedAccountValidityDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - <strong>DEPRECATED</strong> Use password_policy.temporary_password_validity_days instead - The user account expiration limit, in days, after which the account is no longer usable.</p></li>
 </ul>
 </dd></dl>
 
@@ -943,6 +944,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">requireNumbers</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether you have required users to use at least one number in their password.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireSymbols</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether you have required users to use at least one symbol in their password.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireUppercase</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether you have required users to use at least one uppercase letter in their password.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">temporaryPasswordValidityDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.</p></li>
 </ul>
 </dd></dl>
 
@@ -1076,7 +1078,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">smsMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SMS message template. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. Conflicts with <code class="docutils literal notranslate"><span class="pre">sms_verification_message</span></code> argument.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unusedAccountValidityDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The user account expiration limit, in days, after which the account is no longer usable.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unusedAccountValidityDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - <strong>DEPRECATED</strong> Use password_policy.temporary_password_validity_days instead - The user account expiration limit, in days, after which the account is no longer usable.</p></li>
 </ul>
 <p>The <strong>device_configuration</strong> object supports the following:</p>
 <ul class="simple">
@@ -1109,6 +1111,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireNumbers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you have required users to use at least one number in their password.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireSymbols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you have required users to use at least one symbol in their password.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireUppercase</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you have required users to use at least one uppercase letter in their password.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">temporaryPasswordValidityDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.</p></li>
 </ul>
 <p>The <strong>schemas</strong> object supports the following:</p>
 <ul class="simple">
@@ -1205,7 +1208,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>allowed_oauth_scopes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).</p></li>
 <li><p><strong>callback_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed callback URLs for the identity providers.</p></li>
 <li><p><strong>default_redirect_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default redirect URI. Must be in the list of callback URLs.</p></li>
-<li><p><strong>explicit_auth_flows</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH).</p></li>
+<li><p><strong>explicit_auth_flows</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).</p></li>
 <li><p><strong>generate_secret</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should an application secret be generated.</p></li>
 <li><p><strong>logout_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed logout URLs for the identity providers.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the application client.</p></li>
@@ -1259,7 +1262,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.UserPoolClient.explicit_auth_flows">
 <code class="sig-name descname">explicit_auth_flows</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPoolClient.explicit_auth_flows" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH).</p>
+<dd><p>List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1327,7 +1330,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>callback_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed callback URLs for the identity providers.</p></li>
 <li><p><strong>client_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The client secret of the user pool client.</p></li>
 <li><p><strong>default_redirect_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default redirect URI. Must be in the list of callback URLs.</p></li>
-<li><p><strong>explicit_auth_flows</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH).</p></li>
+<li><p><strong>explicit_auth_flows</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).</p></li>
 <li><p><strong>generate_secret</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should an application secret be generated.</p></li>
 <li><p><strong>logout_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed logout URLs for the identity providers.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the application client.</p></li>
