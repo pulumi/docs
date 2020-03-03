@@ -27,9 +27,9 @@ This page contains detailed instructions for [installing Pulumi](#install-pulumi
 <div class="mt-8">
 {{% md %}}
 
-### Homebrew
-
 macOS Sierra (10.12) or later is required.
+
+### Homebrew
 
 You can install Pulumi through the [Homebrew package manager](https://brew.sh/):
 
