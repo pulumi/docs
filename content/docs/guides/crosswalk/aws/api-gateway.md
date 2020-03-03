@@ -540,7 +540,7 @@ https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-
 ### Authorizing Requests using Cognito Authorizers
 
 [Cognito Authorizers](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html)
-allow you to use [AWS Cognito User Pools](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html)
+allow you to use [Amazon Cognito User Pools](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html)
 as an Authorizer for API Gateway. With a user pool, your users can sign into your web or mobile app through
 Amazon Cognito directly, or through social identity providers like Facebook or Amazon, or even through SAML
 identity providers. This enables your API Gateway to offload the difficult work of security to Cognito entirely.
