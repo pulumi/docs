@@ -27,7 +27,7 @@ is inexpensive, has no minimum fees, and you only pay for the API calls you rece
 
 ## Defining an AWS API Gateway Endpoint and Routes
 
-An AWS API Gateway creates REST APIs that:
+AWS API Gateway creates REST APIs that:
 
 * Are HTTP based.
 * Adhere to the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) protocol.
