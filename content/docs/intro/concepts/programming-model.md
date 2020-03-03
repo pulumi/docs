@@ -1013,7 +1013,7 @@ var vpc = new MyVpcComponent("vpc", new ResourceOptions
 });
 ```
 
-Transformations can also be applied in bulk to many resources in a stack by using the `pulumi.runtime.registerStackTransformation` or `ctx.RegisterStackTransformation` function.
+Transformations can also be applied in bulk to many resources in a stack by using the `registerStackTransformation` function.
 
 ##### Resource Getter Functions {#resource-get}
 
