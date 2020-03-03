@@ -102,7 +102,7 @@ Alternatively, you can install Pulumi manually. We provide a prebuilt binary for
 <div class="os-prologue-windows"></div>
 <div class="mt-8">
 {{% md %}}
- 
+
 ### Chocolatey
 
 You can install Pulumi through the [Chocolatey package manager](https://chocolatey.org):
