@@ -1,41 +1,16 @@
 ---
 title: "Generate Kubernetes YAML with Real Programming Languages"
-
-# The date represents the post's publish date, and by default corresponds with
-# the date this file was generated. Posts with future dates are visible in development,
-# but excluded from production builds. Use the time and timezone-offset portions of
-# of this value to schedule posts for publishing later.
-date: 2020-03-03T08:00:00-05:00
-
-# Draft posts are visible in development, but excluded from production builds.
-# Set this property to `false` before submitting your post for review.
+date: 2020-03-03
 draft: false
-
-# Use the optional meta_desc property to provide a brief summary (one or two sentences)
-# of the content of the post, which is useful for targeting search results or social-media
-# previews. If omitted or left blank, the content preceding the `<!--more-->` token
-# will be used in its place.
 meta_desc: Stop writing Kubernetes YAML by hand, and start using the power of real programming languages! Pulumi now supports rendering YAML for Kubernetes resources.
-
-# The meta_image appears in social-media previews and on the blog home page.
-# A placeholder image representing the recommended format, dimensions and aspect
-# ratio has been provided for you.
 meta_image: yamlRuler.png
-
-# At least one author is required. The values in this list correspond with the `id`
-# properties of the team member files at /data/team/team. Create a file for yourself
-# if you don't already have one.
 authors:
     - levi-blackstone
-
-# At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - kubernetes
     - yaml
     - kubernetesx
-
-# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
-# for additional details, and please remove these comments before submitting for review.
+    
 ---
 
 Stop writing Kubernetes YAML by hand, and start using the power of real programming languages! Pulumi can
