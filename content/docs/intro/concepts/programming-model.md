@@ -980,9 +980,17 @@ vpc = MyVpcComponent("vpc", opts=ResourceOptions(transformations=[transformation
 ```
 
 ```go
-// Transformations are not yet supported in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+transformation := func(args *pulumi.ResourceTransformationArgs) *pulumi.ResourceTransformationResult {
+    if args.Type == "aws:ec2/vpc:Vpc" || args.Type == "aws:ec2/subnet:Subnet" {
+        return &pulumi.ResourceTransformationResult{
+            Props: args.Props,
+            Opts:  append(args.Opts, pulumi.IgnoreChanges([]string{"tags"}))
+        }
+    }
+    return nil
+}
+
+vpc := MyVpcComponent("vpc", pulumi.Transformations([]pulumi.ResourceTransformation{transformation}))
 ```
 
 ```csharp
@@ -1010,7 +1018,7 @@ var vpc = new MyVpcComponent("vpc", new ComponentResourceOptions
 });
 ```
 
-Transformations can also be applied in bulk to many resources in a stack by using the `pulumi.runtime.registerStackTransformation` function.
+Transformations can also be applied in bulk to many resources in a stack by using the `registerStackTransformation` function.
 
 ##### Resource Getter Functions {#resource-get}
 
