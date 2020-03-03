@@ -14,6 +14,234 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.s3"></span><dl class="class">
+<dt id="pulumi_aws.s3.AccessPoint">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">AccessPoint</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">public_access_block_configuration=None</em>, <em class="sig-param">vpc_configuration=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AccessPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a AccessPoint resource with the given unique name, props, and options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket that you want to associate this access point with.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name you want to assign to this access point.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid JSON document that specifies the policy that you want to apply to this access point.</p></li>
+<li><p><strong>public_access_block_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block to manage the <code class="docutils literal notranslate"><span class="pre">PublicAccessBlock</span></code> configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.</p></li>
+<li><p><strong>vpc_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>public_access_block_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">block_public_acls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Enabling this setting does not affect existing policies or ACLs. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> causes the following behavior:</p>
+<ul>
+<li><p>PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.</p></li>
+<li><p>PUT Object calls fail if the request includes a public ACL.</p></li>
+<li><p>PUT Bucket calls fail if the request includes a public ACL.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">block_public_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether Amazon S3 should block public bucket policies for buckets in this account. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Enabling this setting does not affect existing bucket policies. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> causes Amazon S3 to:</p>
+<ul>
+<li><p>Reject calls to PUT Bucket policy if the specified bucket policy allows public access.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignore_public_acls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Enabling this setting does not affect the persistence of any existing ACLs and doesn’t prevent new public ACLs from being set. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> causes Amazon S3 to:</p>
+<ul>
+<li><p>Ignore all public ACLs on buckets in this account and any objects that they contain.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restrict_public_buckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether Amazon S3 should restrict public bucket policies for buckets in this account. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Enabling this setting does not affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code>:</p>
+<ul>
+<li><p>Only the bucket owner and AWS Services can access buckets with public policies.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>vpc_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This access point will only allow connections from the specified VPC ID.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_access_point.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_access_point.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.s3.AccessPoint.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AccessPoint.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of the S3 Access Point.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.AccessPoint.bucket">
+<code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AccessPoint.bucket" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the bucket that you want to associate this access point with.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.AccessPoint.domain_name">
+<code class="sig-name descname">domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AccessPoint.domain_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DNS domain name of the S3 Access Point in the format <em>``name``*-_`account_id`_.s3-accesspoint.*region</em>.amazonaws.com.
+Note: S3 access points only support secure access by HTTPS. HTTP isn’t supported.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.AccessPoint.has_public_access_policy">
+<code class="sig-name descname">has_public_access_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AccessPoint.has_public_access_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether this access point currently has a policy that allows public access.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.AccessPoint.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AccessPoint.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name you want to assign to this access point.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.AccessPoint.network_origin">
+<code class="sig-name descname">network_origin</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AccessPoint.network_origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether this access point allows access from the public Internet. Values are <code class="docutils literal notranslate"><span class="pre">VPC</span></code> (the access point doesn’t allow access from the public Internet) and <code class="docutils literal notranslate"><span class="pre">Internet</span></code> (the access point allows access from the public Internet, subject to the access point and bucket access policies).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.AccessPoint.policy">
+<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AccessPoint.policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A valid JSON document that specifies the policy that you want to apply to this access point.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.AccessPoint.public_access_block_configuration">
+<code class="sig-name descname">public_access_block_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AccessPoint.public_access_block_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block to manage the <code class="docutils literal notranslate"><span class="pre">PublicAccessBlock</span></code> configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">block_public_acls</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Enabling this setting does not affect existing policies or ACLs. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> causes the following behavior:</p>
+<ul>
+<li><p>PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.</p></li>
+<li><p>PUT Object calls fail if the request includes a public ACL.</p></li>
+<li><p>PUT Bucket calls fail if the request includes a public ACL.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">block_public_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether Amazon S3 should block public bucket policies for buckets in this account. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Enabling this setting does not affect existing bucket policies. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> causes Amazon S3 to:</p>
+<ul>
+<li><p>Reject calls to PUT Bucket policy if the specified bucket policy allows public access.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignore_public_acls</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Enabling this setting does not affect the persistence of any existing ACLs and doesn’t prevent new public ACLs from being set. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> causes Amazon S3 to:</p>
+<ul>
+<li><p>Ignore all public ACLs on buckets in this account and any objects that they contain.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restrict_public_buckets</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether Amazon S3 should restrict public bucket policies for buckets in this account. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Enabling this setting does not affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code>:</p>
+<ul>
+<li><p>Only the bucket owner and AWS Services can access buckets with public policies.</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.AccessPoint.vpc_configuration">
+<code class="sig-name descname">vpc_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AccessPoint.vpc_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - This access point will only allow connections from the specified VPC ID.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.s3.AccessPoint.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">has_public_access_policy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_origin=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">public_access_block_configuration=None</em>, <em class="sig-param">vpc_configuration=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AccessPoint.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AccessPoint resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the S3 Access Point.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket that you want to associate this access point with.</p></li>
+<li><p><strong>domain*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The DNS domain name of the S3 Access Point in the format <em>`name`_-_`account_id`_.s3-accesspoint.*region</em>.amazonaws.com.
+Note: S3 access points only support secure access by HTTPS. HTTP isn’t supported.</p>
+</p></li>
+<li><p><strong>has_public_access_policy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this access point currently has a policy that allows public access.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name you want to assign to this access point.</p></li>
+<li><p><strong>network_origin</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether this access point allows access from the public Internet. Values are <code class="docutils literal notranslate"><span class="pre">VPC</span></code> (the access point doesn’t allow access from the public Internet) and <code class="docutils literal notranslate"><span class="pre">Internet</span></code> (the access point allows access from the public Internet, subject to the access point and bucket access policies).</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid JSON document that specifies the policy that you want to apply to this access point.</p></li>
+<li><p><strong>public_access_block_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block to manage the <code class="docutils literal notranslate"><span class="pre">PublicAccessBlock</span></code> configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.</p></li>
+<li><p><strong>vpc_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>public_access_block_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">block_public_acls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Enabling this setting does not affect existing policies or ACLs. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> causes the following behavior:</p>
+<ul>
+<li><p>PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.</p></li>
+<li><p>PUT Object calls fail if the request includes a public ACL.</p></li>
+<li><p>PUT Bucket calls fail if the request includes a public ACL.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">block_public_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether Amazon S3 should block public bucket policies for buckets in this account. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Enabling this setting does not affect existing bucket policies. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> causes Amazon S3 to:</p>
+<ul>
+<li><p>Reject calls to PUT Bucket policy if the specified bucket policy allows public access.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignore_public_acls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Enabling this setting does not affect the persistence of any existing ACLs and doesn’t prevent new public ACLs from being set. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> causes Amazon S3 to:</p>
+<ul>
+<li><p>Ignore all public ACLs on buckets in this account and any objects that they contain.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restrict_public_buckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether Amazon S3 should restrict public bucket policies for buckets in this account. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Enabling this setting does not affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code>:</p>
+<ul>
+<li><p>Only the bucket owner and AWS Services can access buckets with public policies.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>vpc_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This access point will only allow connections from the specified VPC ID.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_access_point.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_access_point.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.s3.AccessPoint.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AccessPoint.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.s3.AccessPoint.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AccessPoint.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.s3.AccountPublicAccessBlock">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">AccountPublicAccessBlock</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">block_public_acls=None</em>, <em class="sig-param">block_public_policy=None</em>, <em class="sig-param">ignore_public_acls=None</em>, <em class="sig-param">restrict_public_buckets=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AccountPublicAccessBlock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages S3 account-level Public Access Block configuration. For more information about these settings, see the <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">AWS S3 Block Public Access documentation</a>.</p>
@@ -1285,7 +1513,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">canned ACL</a> to apply. Defaults to “private”.</p>
 </p></li>
-<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket to put the file in.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket to put the file in. Alternatively, an <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html">S3 access point</a> ARN can be specified.</p></li>
 <li><p><strong>cache_control</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies caching behavior along the request/reply chain Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">w3c cache_control</a> for further details.</p></li>
 <li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.</p></li>
 <li><p><strong>content_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the <code class="docutils literal notranslate"><span class="pre">gzipbase64</span></code> function with small text strings. For larger objects, use <code class="docutils literal notranslate"><span class="pre">source</span></code> to stream the content from a disk file.</p></li>
@@ -1327,7 +1555,7 @@ for the object. Can be either “<code class="docutils literal notranslate"><spa
 <dl class="attribute">
 <dt id="pulumi_aws.s3.BucketObject.bucket">
 <code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketObject.bucket" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the bucket to put the file in.</p>
+<dd><p>The name of the bucket to put the file in. Alternatively, an <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html">S3 access point</a> ARN can be specified.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1476,7 +1704,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">canned ACL</a> to apply. Defaults to “private”.</p>
 </p></li>
-<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket to put the file in.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the bucket to put the file in. Alternatively, an <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html">S3 access point</a> ARN can be specified.</p>
+</p></li>
 <li><p><strong>cache_control</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies caching behavior along the request/reply chain Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">w3c cache_control</a> for further details.</p>
 </p></li>
 <li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.</p></li>
@@ -2290,7 +2519,8 @@ Distribution.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>bucket</strong> (<em>str</em>) – The name of the bucket to read the object from</p></li>
+<li><p><strong>bucket</strong> (<em>str</em>) – <p>The name of the bucket to read the object from. Alternatively, an <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html">S3 access point</a> ARN can be specified</p>
+</p></li>
 <li><p><strong>key</strong> (<em>str</em>) – The full path to the object inside the bucket</p></li>
 <li><p><strong>version_id</strong> (<em>str</em>) – Specific version ID of the object returned (defaults to latest version)</p></li>
 </ul>
@@ -2308,7 +2538,8 @@ Distribution.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>bucket</strong> (<em>str</em>) – Lists object keys in this S3 bucket</p></li>
+<li><p><strong>bucket</strong> (<em>str</em>) – <p>Lists object keys in this S3 bucket. Alternatively, an <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html">S3 access point</a> ARN can be specified</p>
+</p></li>
 <li><p><strong>delimiter</strong> (<em>str</em>) – A character used to group keys (Default: none)</p></li>
 <li><p><strong>encoding_type</strong> (<em>str</em>) – Encodes keys using this method (Default: none; besides none, only “url” can be used)</p></li>
 <li><p><strong>fetch_owner</strong> (<em>bool</em>) – Boolean specifying whether to populate the owner list (Default: false)</p></li>

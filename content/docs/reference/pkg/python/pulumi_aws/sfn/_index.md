@@ -109,6 +109,76 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.sfn.AwaitableGetActivityResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">AwaitableGetActivityResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.AwaitableGetActivityResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.sfn.AwaitableGetStateMachineResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">AwaitableGetStateMachineResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">definition=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.AwaitableGetStateMachineResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.sfn.GetActivityResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">GetActivityResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.GetActivityResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getActivity.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.sfn.GetActivityResult.creation_date">
+<code class="sig-name descname">creation_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sfn.GetActivityResult.creation_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date the activity was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.sfn.GetActivityResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sfn.GetActivityResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.sfn.GetStateMachineResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">GetStateMachineResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">definition=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.GetStateMachineResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getStateMachine.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.sfn.GetStateMachineResult.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sfn.GetStateMachineResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set to the arn of the state function.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.sfn.GetStateMachineResult.creation_date">
+<code class="sig-name descname">creation_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sfn.GetStateMachineResult.creation_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date the state machine was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.sfn.GetStateMachineResult.definition">
+<code class="sig-name descname">definition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sfn.GetStateMachineResult.definition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set to the state machine definition.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.sfn.GetStateMachineResult.role_arn">
+<code class="sig-name descname">role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sfn.GetStateMachineResult.role_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set to the role_arn used by the state function.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.sfn.GetStateMachineResult.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sfn.GetStateMachineResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set to the current status of the state machine.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.sfn.GetStateMachineResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sfn.GetStateMachineResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.sfn.StateMachine">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">StateMachine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">definition=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.StateMachine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Step Function State Machine resource</p>
@@ -224,6 +294,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.sfn.get_activity">
+<code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">get_activity</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.get_activity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Step Functions Activity data source</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arn</strong> (<em>str</em>) – The Amazon Resource Name (ARN) that identifies the activity.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name that identifies the activity.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sfn_activity.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sfn_activity.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.sfn.get_state_machine">
+<code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">get_state_machine</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.get_state_machine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get the ARN of a State Machine in AWS Step
+Function (SFN). By using this data source, you can reference a
+state machine without having to hard code the ARNs as input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The friendly name of the state machine to match.</p>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sfn_state_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sfn_state_machine.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

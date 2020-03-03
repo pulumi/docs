@@ -25,7 +25,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_aws.msk.Cluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">broker_node_group_info=None</em>, <em class="sig-param">client_authentication=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">configuration_info=None</em>, <em class="sig-param">encryption_info=None</em>, <em class="sig-param">enhanced_monitoring=None</em>, <em class="sig-param">kafka_version=None</em>, <em class="sig-param">number_of_broker_nodes=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">broker_node_group_info=None</em>, <em class="sig-param">client_authentication=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">configuration_info=None</em>, <em class="sig-param">encryption_info=None</em>, <em class="sig-param">enhanced_monitoring=None</em>, <em class="sig-param">kafka_version=None</em>, <em class="sig-param">number_of_broker_nodes=None</em>, <em class="sig-param">open_monitoring=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages AWS Managed Streaming for Kafka cluster</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -40,6 +40,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>enhanced_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the desired enhanced MSK CloudWatch monitoring level.  See <a class="reference external" href="https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html">Monitoring Amazon MSK with Amazon CloudWatch</a></p></li>
 <li><p><strong>kafka_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the desired Kafka software version.</p></li>
 <li><p><strong>number_of_broker_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.</p></li>
+<li><p><strong>open_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for JMX and Node monitoring for the MSK cluster. See below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource</p></li>
 </ul>
 </dd>
@@ -72,6 +73,23 @@ anything, please consult the source <a class="reference external" href="https://
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">clientBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Encryption setting for data in transit between clients and brokers. Valid values: <code class="docutils literal notranslate"><span class="pre">TLS</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code>, and <code class="docutils literal notranslate"><span class="pre">PLAINTEXT</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">inCluster</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether data communication among broker nodes is encrypted. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>open_monitoring</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block for Prometheus settings for open monitoring. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">jmxExporter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block for JMX Exporter. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable the Node Exporter.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeExporter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block for Node Exporter. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable the Node Exporter.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -181,6 +199,28 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.msk.Cluster.open_monitoring">
+<code class="sig-name descname">open_monitoring</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.open_monitoring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block for JMX and Node monitoring for the MSK cluster. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block for Prometheus settings for open monitoring. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">jmxExporter</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block for JMX Exporter. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether you want to enable or disable the Node Exporter.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeExporter</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block for Node Exporter. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether you want to enable or disable the Node Exporter.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.msk.Cluster.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource</p>
@@ -189,12 +229,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_aws.msk.Cluster.zookeeper_connect_string">
 <code class="sig-name descname">zookeeper_connect_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.zookeeper_connect_string" title="Permalink to this definition">¶</a></dt>
-<dd><p>A comma separated list of one or more IP:port pairs to use to connect to the Apache Zookeeper cluster.</p>
+<dd><p>A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.msk.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">bootstrap_brokers=None</em>, <em class="sig-param">bootstrap_brokers_tls=None</em>, <em class="sig-param">broker_node_group_info=None</em>, <em class="sig-param">client_authentication=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">configuration_info=None</em>, <em class="sig-param">current_version=None</em>, <em class="sig-param">encryption_info=None</em>, <em class="sig-param">enhanced_monitoring=None</em>, <em class="sig-param">kafka_version=None</em>, <em class="sig-param">number_of_broker_nodes=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zookeeper_connect_string=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">bootstrap_brokers=None</em>, <em class="sig-param">bootstrap_brokers_tls=None</em>, <em class="sig-param">broker_node_group_info=None</em>, <em class="sig-param">client_authentication=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">configuration_info=None</em>, <em class="sig-param">current_version=None</em>, <em class="sig-param">encryption_info=None</em>, <em class="sig-param">enhanced_monitoring=None</em>, <em class="sig-param">kafka_version=None</em>, <em class="sig-param">number_of_broker_nodes=None</em>, <em class="sig-param">open_monitoring=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zookeeper_connect_string=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -225,8 +265,9 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>kafka_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the desired Kafka software version.</p></li>
 <li><p><strong>number_of_broker_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.</p></li>
+<li><p><strong>open_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for JMX and Node monitoring for the MSK cluster. See below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource</p></li>
-<li><p><strong>zookeeper_connect_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A comma separated list of one or more IP:port pairs to use to connect to the Apache Zookeeper cluster.</p></li>
+<li><p><strong>zookeeper_connect_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster.</p></li>
 </ul>
 </dd>
 </dl>
@@ -258,6 +299,23 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">clientBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Encryption setting for data in transit between clients and brokers. Valid values: <code class="docutils literal notranslate"><span class="pre">TLS</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code>, and <code class="docutils literal notranslate"><span class="pre">PLAINTEXT</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">inCluster</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether data communication among broker nodes is encrypted. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>open_monitoring</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block for Prometheus settings for open monitoring. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">jmxExporter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block for JMX Exporter. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable the Node Exporter.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeExporter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block for Node Exporter. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable the Node Exporter.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -470,7 +528,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.msk.GetClusterResult.zookeeper_connect_string">
 <code class="sig-name descname">zookeeper_connect_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetClusterResult.zookeeper_connect_string" title="Permalink to this definition">¶</a></dt>
-<dd><p>A comma separated list of one or more IP:port pairs to use to connect to the Apache Zookeeper cluster.</p>
+<dd><p>A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster.</p>
 </dd></dl>
 
 <dl class="attribute">

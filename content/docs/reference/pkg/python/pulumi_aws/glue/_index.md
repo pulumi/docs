@@ -1042,7 +1042,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.Job">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Job</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_capacity=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">default_arguments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_property=None</em>, <em class="sig-param">glue_version=None</em>, <em class="sig-param">max_capacity=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number_of_workers=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">worker_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Job</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_capacity=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">default_arguments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_property=None</em>, <em class="sig-param">glue_version=None</em>, <em class="sig-param">max_capacity=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_property=None</em>, <em class="sig-param">number_of_workers=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">worker_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Job resource.</p>
 <blockquote>
 <div><p>Glue functionality, such as monitoring and logging of jobs, is typically managed with the <code class="docutils literal notranslate"><span class="pre">default_arguments</span></code> argument. See the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html">Special Parameters Used by AWS Glue</a> topic in the Glue developer guide for additional information.</p>
@@ -1060,9 +1060,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the job.</p></li>
 <li><p><strong>execution_property</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Execution property of the job. Defined below.</p></li>
 <li><p><strong>glue_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of glue to use, for example “1.0”. For information about available versions, see the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/release-notes.html">AWS Glue Release Notes</a>.</p></li>
-<li><p><strong>max_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs.</p></li>
+<li><p><strong>max_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. <code class="docutils literal notranslate"><span class="pre">Required</span></code> when <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> is set, accept either <code class="docutils literal notranslate"><span class="pre">0.0625</span></code> or <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p></li>
 <li><p><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of times to retry this job if it fails.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code>. Use <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> for Python Shell Job Type, <code class="docutils literal notranslate"><span class="pre">max_capacity</span></code> needs to be set if <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> is chosen.</p></li>
+<li><p><strong>notification_property</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Notification property of the job. Defined below.</p></li>
 <li><p><strong>number_of_workers</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of workers of a defined workerType that are allocated when a job runs.</p></li>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM role associated with this job.</p></li>
 <li><p><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Security Configuration to be associated with the job.</p></li>
@@ -1074,13 +1075,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>command</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code>. Use <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> for Python Shell Job Type, <code class="docutils literal notranslate"><span class="pre">max_capacity</span></code> needs to be set if <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> is chosen.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Python version being used to execute a Python shell job. Allowed values are 2 or 3.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scriptLocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the S3 path to a script that executes a job.</p></li>
 </ul>
 <p>The <strong>execution_property</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConcurrentRuns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of concurrent runs allowed for a job. The default is 1.</p></li>
+</ul>
+<p>The <strong>notification_property</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">notifyDelayAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - After a job run starts, the number of minutes to wait before sending a job run delay notification.</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown</a>.</p>
@@ -1102,7 +1107,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">command</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.command" title="Permalink to this definition">¶</a></dt>
 <dd><p>The command of the job. Defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code>. Use <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> for Python Shell Job Type, <code class="docutils literal notranslate"><span class="pre">max_capacity</span></code> needs to be set if <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> is chosen.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Python version being used to execute a Python shell job. Allowed values are 2 or 3.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scriptLocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the S3 path to a script that executes a job.</p></li>
 </ul>
@@ -1144,7 +1149,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.glue.Job.max_capacity">
 <code class="sig-name descname">max_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.max_capacity" title="Permalink to this definition">¶</a></dt>
-<dd><p>The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs.</p>
+<dd><p>The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. <code class="docutils literal notranslate"><span class="pre">Required</span></code> when <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> is set, accept either <code class="docutils literal notranslate"><span class="pre">0.0625</span></code> or <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1156,7 +1161,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.glue.Job.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p>
+<dd><p>The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code>. Use <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> for Python Shell Job Type, <code class="docutils literal notranslate"><span class="pre">max_capacity</span></code> needs to be set if <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> is chosen.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.glue.Job.notification_property">
+<code class="sig-name descname">notification_property</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.notification_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification property of the job. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">notifyDelayAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - After a job run starts, the number of minutes to wait before sending a job run delay notification.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1197,7 +1211,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.glue.Job.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_capacity=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">default_arguments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_property=None</em>, <em class="sig-param">glue_version=None</em>, <em class="sig-param">max_capacity=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number_of_workers=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">worker_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_capacity=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">default_arguments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_property=None</em>, <em class="sig-param">glue_version=None</em>, <em class="sig-param">max_capacity=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_property=None</em>, <em class="sig-param">number_of_workers=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">worker_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Job resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1216,9 +1230,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>execution_property</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Execution property of the job. Defined below.</p></li>
 <li><p><strong>glue_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The version of glue to use, for example “1.0”. For information about available versions, see the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/release-notes.html">AWS Glue Release Notes</a>.</p>
 </p></li>
-<li><p><strong>max_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs.</p></li>
+<li><p><strong>max_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. <code class="docutils literal notranslate"><span class="pre">Required</span></code> when <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> is set, accept either <code class="docutils literal notranslate"><span class="pre">0.0625</span></code> or <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p></li>
 <li><p><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of times to retry this job if it fails.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code>. Use <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> for Python Shell Job Type, <code class="docutils literal notranslate"><span class="pre">max_capacity</span></code> needs to be set if <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> is chosen.</p></li>
+<li><p><strong>notification_property</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Notification property of the job. Defined below.</p></li>
 <li><p><strong>number_of_workers</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of workers of a defined workerType that are allocated when a job runs.</p></li>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM role associated with this job.</p></li>
 <li><p><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Security Configuration to be associated with the job.</p></li>
@@ -1230,13 +1245,17 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>command</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code>. Use <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> for Python Shell Job Type, <code class="docutils literal notranslate"><span class="pre">max_capacity</span></code> needs to be set if <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> is chosen.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Python version being used to execute a Python shell job. Allowed values are 2 or 3.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scriptLocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the S3 path to a script that executes a job.</p></li>
 </ul>
 <p>The <strong>execution_property</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConcurrentRuns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of concurrent runs allowed for a job. The default is 1.</p></li>
+</ul>
+<p>The <strong>notification_property</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">notifyDelayAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - After a job run starts, the number of minutes to wait before sending a job run delay notification.</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown</a>.</p>
