@@ -46,7 +46,7 @@ const topic = new kafka.Topic("topic", {
 ```python
 import pulumi_kafka as kafka
 
-topic = rabbitmq.Topic("topic",
+topic = kafka.Topic("topic",
   name="sample-topic",
   replication_factor=1,
   partitions=4,
