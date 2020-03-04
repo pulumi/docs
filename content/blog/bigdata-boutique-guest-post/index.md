@@ -1,5 +1,5 @@
 ---
-title: "How Pulumi Drives Our Elasticsearch Capacity Planning and Cost Optimization Service"
+title: "How Pulumi Drives Our Elasticsearch Capacity and Cost Optimization Service"
 date: 2020-03-05
 meta_desc: "BigData Boutique uses Pulumi to determine optimal Elasticsearch configurations for their customers"
 meta_image: bdbq-pulumi.png
