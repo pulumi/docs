@@ -4,7 +4,7 @@ date: 2020-03-05
 meta_desc: "BigData Boutique uses Pulumi to determine optimal Elasticsearch configurations for their customers"
 meta_image: bdbq-pulumi.png
 authors:
-    - sophia-parafina
+    - itamar-syn-hershko
 tags:
     - BigData Boutique
     - Elasticsearch
