@@ -146,19 +146,8 @@ This Pulumi program creates an Azure resource group and storage account and expo
 **Note**: In this program, the location of the resource group is set in the configuration setting `azure:location` (check the `Pulumi.dev.yaml` file). This is an easy way to set a global location for your program so you don't have to specify the location for each resource manually. The location for the storage account is automatically derived from the location of the resource group. To override the location for a resource, simply set the location property to one of Azure's [supported locations](https://azure.microsoft.com/en-us/global-infrastructure/locations/).
 
 {{% lang python %}}
-For Python, before we deploy the stack, the following commands need to be run to create a virtual environment, activate it, and install dependencies:
 
-```bash
-$ virtualenv -p python3 venv
-```
-
-```bash
-$ source venv/bin/activate
-```
-
-```bash
-$ pip3 install -r requirements.txt
-```
+{{< python-venv >}}
 
 {{% /lang %}}
 

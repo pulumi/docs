@@ -104,19 +104,8 @@ class Program
 This Pulumi program creates a storage bucket and exports the bucket URL.
 
 {{% lang python %}}
-For Python, before we deploy the stack, the following commands need to be run to create a virtual environment, activate it, and install dependencies:
 
-```bash
-$ virtualenv -p python3 venv
-```
-
-```bash
-$ source venv/bin/activate
-```
-
-```bash
-$ pip3 install -r requirements.txt
-```
+{{< python-venv >}}
 
 {{% /lang %}}
 

@@ -52,11 +52,16 @@ function selectChoice(kind, choice, extra) {
 // selectLanguage chooses a language.
 function selectLanguage(lang) {
     selectChoice("language", lang, function() {
+        var shellLanguages = ["bat", "batch", "batchfile", "powershell", "posh", "pwsh", "bash", "sh", "shell", "zsh"].map(
+            function(l) {
+                return "language-" + l;
+            }
+        );
         // In addition to the basic showing/hiding, highlight the right code blocks:
         $("code").each(function (i, e) {
             var classes = getElemClasses(e);
             for (var i = 0; i < classes.length; i++) {
-                if (classes[i].startsWith("language-") && classes[i] !== "language-bash" && classes[i] !== "language-sh") {
+                if (classes[i].startsWith("language-") && shellLanguages.indexOf(classes[i]) === -1) {
                     var parents = $(e).parents("div.highlight");
                     if (!parents.length) {
                         parents = $(e).parents("span.highlight");
