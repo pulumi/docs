@@ -20,6 +20,18 @@ tags:
 
 *Capacity Planning and Cost Optimization of Elasticsearch clusters requires a special level of expertise and automation. Here is how we use Pulumi to launch long-running benchmarks to correctly identify the right configuration for our customers’ Big Data clusters.*
 
+<div class="md:flex">
+  <div class="flex-1 px-4">
+    {{% md %}} ![Itamar Syn-Hershko](portrait.PNG) {{% /md %}}
+  </div>
+  <div class="flex-1 px-4">
+    {{% md %}}
+    At [BigData Boutique](https://bigdataboutique.com/), we are continually challenged by our customers—whether it’s complex Big Data challenges we are asked to solve, reducing costs for sophisticated systems holding mountains of data, improving performance for high-demand systems, or challenges faced in building a data-driven system.
+    {{% /md %}}
+  </div>
+</div>
+
+
 <table style="width:100%" cellspacing="0" cellpadding="0">
   <tr>
     <td>{{< figure src="portrait.PNG" alt="Itamar Sy-Hershko" >}}</td>
