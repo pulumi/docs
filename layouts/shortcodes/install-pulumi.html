@@ -19,7 +19,7 @@ wrapping/indenting the subsequent element containing the code snippet.
 
 <div class="os-prologue-macos"></div>
 <div class="install_macos">
-    <p>Install Pulumi on macOS through <a href="https://brew.sh/" target="_blank">Homebrew</a>:</p>
+    <p>Install Pulumi on macOS through <a href="https://brew.sh/" target="_blank" rel="noopener">Homebrew</a>:</p>
     <div class="highlight">
         <pre class="chroma"><code class="language-bash" data-lang="bash">$ brew install pulumi</code></pre>
     </div>
@@ -35,13 +35,13 @@ wrapping/indenting the subsequent element containing the code snippet.
 
 <div class="os-prologue-windows"></div>
 <div class="install_windows">
-    <p>Install Pulumi on Windows by running the installation script from a <code>cmd.exe</code> window:</p>
+    <p>Install Pulumi on Windows through the <a href="https://chocolatey.org" target="_blank" rel="noopener">Chocolatey package manager</a>:</p>
     <div class="highlight">
-        <pre class="chroma"><code class="language-batch" data-lang="batch">@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"</code></pre>
+        <pre class="chroma"><code class="language-bat" data-lang="bat"><span class="p">&gt;</span> choco install pulumi</code></pre>
     </div>
 </div>
 
 <p>
-    <i>For manual installation instructions, other platforms, or troubleshooting, see
-    <a href="{{ relref . "/docs/get-started/install" }}" target="_blank">Download and Install</a>.</i>
+    <i>For alternative installation instructions (e.g. script-based installation, binaries, etc.) or troubleshooting, see
+    <a href="{{ relref . "/docs/get-started/install" }}" target="_blank" rel="noopener">Download and Install</a>.</i>
 </p>
