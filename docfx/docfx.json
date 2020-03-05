@@ -20,6 +20,9 @@
     ],
     "overwrite": [],
     "dest": "../static/docs/reference/pkg/dotnet",
+    "globalMetadata": {
+      "_appFooter": "Copyright 2016-2020, Pulumi Corporation."
+    },
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
