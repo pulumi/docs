@@ -1008,14 +1008,14 @@ form in state files.</p>
 
 <dl class="method">
 <dt id="pulumi.Output.all">
-<em class="property">static </em><code class="sig-name descname">all</code><span class="sig-paren">(</span><em class="sig-param">*args: List[Union[T, Awaitable[T], Output[T]]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.List[~T]][List[T]]<a class="headerlink" href="#pulumi.Output.all" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">all</code><span class="sig-paren">(</span><em class="sig-param">*args: Union[T, Awaitable[T], Output[T]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.List[~T]][List[T]]<a class="headerlink" href="#pulumi.Output.all" title="Permalink to this definition">¶</a></dt>
 <dd><p>Produces an Output of Lists from a List of Inputs.</p>
 <p>This function can be used to combine multiple, separate Inputs into a single
 Output which can then be used as the target of <code class="docutils literal notranslate"><span class="pre">apply</span></code>. Resource dependencies
 are preserved in the returned Output.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>args</strong> (<em>List</em><em>[</em><em>Input</em><em>[</em><em>T</em><em>]</em><em>]</em>) – A list of Inputs to convert.</p>
+<dd class="field-odd"><p><strong>args</strong> (<em>Input</em><em>[</em><em>T</em><em>]</em>) – A list of Inputs to convert.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>An output of lists, converted from an Input to prompt values.</p>
@@ -1028,7 +1028,7 @@ are preserved in the returned Output.</p>
 
 <dl class="method">
 <dt id="pulumi.Output.concat">
-<em class="property">static </em><code class="sig-name descname">concat</code><span class="sig-paren">(</span><em class="sig-param">*args: List[Union[str, Awaitable[str], Output[T]]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[str][str]<a class="headerlink" href="#pulumi.Output.concat" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">concat</code><span class="sig-paren">(</span><em class="sig-param">*args: Union[str, Awaitable[str], Output[T]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[str][str]<a class="headerlink" href="#pulumi.Output.concat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Concatenates a collection of Input[str] into a single Output[str].</p>
 <p>This function takes a sequence of Input[str], stringifies each, and concatenates all values
 into one final string. This can be used like so:</p>
@@ -1037,7 +1037,7 @@ into one final string. This can be used like so:</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>args</strong> (<em>List</em><em>[</em><em>Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – A list of string Inputs to concatenate.</p>
+<dd class="field-odd"><p><strong>args</strong> (<em>Input</em><em>[</em><em>str</em><em>]</em>) – A list of string Inputs to concatenate.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A concatenated output string.</p>
