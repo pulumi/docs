@@ -8,6 +8,7 @@ The Pulumi SDK package is used for accessing the core programming model around r
 directly. Additional general purpose packages can be used across all cloud platforms:
 
 * [**Pulumi SDK** (`Pulumi`)]({{< relref "pulumi" >}})
+* [**Pulumi F# SDK** (`Pulumi.FSharp`)]({{< relref "pulumi-fsharp" >}})
 
 ### Cloud Providers
 

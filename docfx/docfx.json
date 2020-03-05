@@ -4,14 +4,20 @@
       "src": [
         {
           "src": "../../pulumi/sdk/dotnet",
-          "files": [
-            "Pulumi/Pulumi.csproj",
-            "Pulumi.FSharp/Pulumi.FSharp.fsproj"
-          ]
+          "files": ["Pulumi/Pulumi.csproj"]
         }
       ],
       "dest": "metadata/Pulumi",
       "filter": "filterConfig.yml"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi/sdk/dotnet",
+          "files": ["Pulumi.FSharp/Pulumi.FSharp.fsproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.FSharp"
     }
   ],
   "build": {
@@ -20,6 +26,11 @@
         "src": "metadata/Pulumi",
         "files": ["**/*.yml"],
         "dest": "Pulumi"
+      },
+      {
+        "src": "metadata/Pulumi.FSharp",
+        "files": ["**/*.yml"],
+        "dest": "Pulumi.FSharp"
       }
     ],
     "overwrite": [],

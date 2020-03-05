@@ -820,193 +820,193 @@ references:
   nameWithType: FileAsset.FileAsset
 - uid: Pulumi.FSharp
   name: Pulumi.FSharp
-  href: Pulumi/Pulumi.FSharp.html
+  href: Pulumi.FSharp/Pulumi.FSharp.html
   commentId: N:Pulumi.FSharp
   fullName: Pulumi.FSharp
   nameWithType: Pulumi.FSharp
 - uid: Pulumi.FSharp.Deployment
   name: Deployment (mod)
-  href: Pulumi/Pulumi.FSharp.Deployment.html
+  href: Pulumi.FSharp/Pulumi.FSharp.Deployment.html
   commentId: T:Pulumi.FSharp.Deployment
   fullName: Pulumi.FSharp.Deployment
   nameWithType: Pulumi.FSharp.Deployment
 - uid: Pulumi.FSharp.Deployment.run(unit -> System.Collections.Generic.IDictionary<string,obj>)
   name: 'val run: unit -> IDictionary<string,obj> -> int'
-  href: Pulumi/Pulumi.FSharp.Deployment.html#Pulumi_FSharp_Deployment_run_unit____System_Collections_Generic_IDictionary_string_obj__
+  href: Pulumi.FSharp/Pulumi.FSharp.Deployment.html#Pulumi_FSharp_Deployment_run_unit____System_Collections_Generic_IDictionary_string_obj__
   commentId: M:Pulumi.FSharp.run(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,System.Collections.Generic.IDictionary{System.String,System.Object}})
   fullName: 'val Pulumi.FSharp.Deployment.run: unit -> System.Collections.Generic.IDictionary<string,obj> -> int'
   nameWithType: 'val Deployment.run: unit -> IDictionary<string,obj> -> int'
 - uid: Pulumi.FSharp.Deployment.run*
   name: run
-  href: Pulumi/Pulumi.FSharp.Deployment.html#Pulumi_FSharp_Deployment_run_
+  href: Pulumi.FSharp/Pulumi.FSharp.Deployment.html#Pulumi_FSharp_Deployment_run_
   commentId: Overload:Pulumi.FSharp.Deployment.run*
   isSpec: "True"
   fullName: Pulumi.FSharp.Deployment.run
   nameWithType: Deployment.run
 - uid: Pulumi.FSharp.Deployment.runAsync(unit -> FSharp.Control.Async<System.Collections.Generic.IDictionary<string,obj>>)
   name: 'val runAsync: unit -> Async<IDictionary<string,obj>> -> int'
-  href: Pulumi/Pulumi.FSharp.Deployment.html#Pulumi_FSharp_Deployment_runAsync_unit____FSharp_Control_Async_System_Collections_Generic_IDictionary_string_obj___
+  href: Pulumi.FSharp/Pulumi.FSharp.Deployment.html#Pulumi_FSharp_Deployment_runAsync_unit____FSharp_Control_Async_System_Collections_Generic_IDictionary_string_obj___
   commentId: M:Pulumi.FSharp.runAsync(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Control.FSharpAsync{System.Collections.Generic.IDictionary{System.String,System.Object}}})
   fullName: 'val Pulumi.FSharp.Deployment.runAsync: unit -> FSharp.Control.Async<System.Collections.Generic.IDictionary<string,obj>> -> int'
   nameWithType: 'val Deployment.runAsync: unit -> Async<IDictionary<string,obj>> -> int'
 - uid: Pulumi.FSharp.Deployment.runAsync*
   name: runAsync
-  href: Pulumi/Pulumi.FSharp.Deployment.html#Pulumi_FSharp_Deployment_runAsync_
+  href: Pulumi.FSharp/Pulumi.FSharp.Deployment.html#Pulumi_FSharp_Deployment_runAsync_
   commentId: Overload:Pulumi.FSharp.Deployment.runAsync*
   isSpec: "True"
   fullName: Pulumi.FSharp.Deployment.runAsync
   nameWithType: Deployment.runAsync
 - uid: Pulumi.FSharp.Ops
   name: Ops (mod)
-  href: Pulumi/Pulumi.FSharp.Ops.html
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html
   commentId: T:Pulumi.FSharp.Ops
   fullName: Pulumi.FSharp.Ops
   nameWithType: Pulumi.FSharp.Ops
 - uid: Pulumi.FSharp.Ops.input('a)
   name: "val input: 'a -> Input<'a>"
-  href: Pulumi/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_input__a_
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_input__a_
   commentId: M:Pulumi.FSharp.input``1(``0)
   fullName: "val Pulumi.FSharp.Ops.input: 'a -> Pulumi.Input<'a>"
   nameWithType: "val Ops.input: 'a -> Input<'a>"
 - uid: Pulumi.FSharp.Ops.input*
   name: input
-  href: Pulumi/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_input_
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_input_
   commentId: Overload:Pulumi.FSharp.Ops.input*
   isSpec: "True"
   fullName: Pulumi.FSharp.Ops.input
   nameWithType: Ops.input
 - uid: Pulumi.FSharp.Ops.inputList(seq<Pulumi.Input<'a>>)
   name: "val inputList: seq<Input<'a>> -> InputList<'a>"
-  href: Pulumi/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_inputList_seq_Pulumi_Input__a___
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_inputList_seq_Pulumi_Input__a___
   commentId: M:Pulumi.FSharp.inputList``1(System.Collections.Generic.IEnumerable{Pulumi.Input{``0}})
   fullName: "val Pulumi.FSharp.Ops.inputList: seq<Pulumi.Input<'a>> -> Pulumi.InputList<'a>"
   nameWithType: "val Ops.inputList: seq<Input<'a>> -> InputList<'a>"
 - uid: Pulumi.FSharp.Ops.inputList*
   name: inputList
-  href: Pulumi/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_inputList_
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_inputList_
   commentId: Overload:Pulumi.FSharp.Ops.inputList*
   isSpec: "True"
   fullName: Pulumi.FSharp.Ops.inputList
   nameWithType: Ops.inputList
 - uid: Pulumi.FSharp.Ops.inputMap(seq<string * Pulumi.Input<'a>>)
   name: "val inputMap: seq<string * Input<'a>> -> InputMap<'a>"
-  href: Pulumi/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_inputMap_seq_string___Pulumi_Input__a___
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_inputMap_seq_string___Pulumi_Input__a___
   commentId: M:Pulumi.FSharp.inputMap``1(System.Collections.Generic.IEnumerable{System.Tuple{System.String,Pulumi.Input{``0}}})
   fullName: "val Pulumi.FSharp.Ops.inputMap: seq<string * Pulumi.Input<'a>> -> Pulumi.InputMap<'a>"
   nameWithType: "val Ops.inputMap: seq<string * Input<'a>> -> InputMap<'a>"
 - uid: Pulumi.FSharp.Ops.inputMap*
   name: inputMap
-  href: Pulumi/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_inputMap_
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_inputMap_
   commentId: Overload:Pulumi.FSharp.Ops.inputMap*
   isSpec: "True"
   fullName: Pulumi.FSharp.Ops.inputMap
   nameWithType: Ops.inputMap
 - uid: Pulumi.FSharp.Ops.io(Pulumi.Output<'a>)
   name: "val io: Output<'a> -> Input<'a>"
-  href: Pulumi/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_io_Pulumi_Output__a__
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_io_Pulumi_Output__a__
   commentId: M:Pulumi.FSharp.io``1(Pulumi.Output{``0})
   fullName: "val Pulumi.FSharp.Ops.io: Pulumi.Output<'a> -> Pulumi.Input<'a>"
   nameWithType: "val Ops.io: Output<'a> -> Input<'a>"
 - uid: Pulumi.FSharp.Ops.io*
   name: io
-  href: Pulumi/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_io_
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_io_
   commentId: Overload:Pulumi.FSharp.Ops.io*
   isSpec: "True"
   fullName: Pulumi.FSharp.Ops.io
   nameWithType: Ops.io
 - uid: Pulumi.FSharp.Outputs
   name: Outputs (mod)
-  href: Pulumi/Pulumi.FSharp.Outputs.html
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html
   commentId: T:Pulumi.FSharp.Outputs
   fullName: Pulumi.FSharp.Outputs
   nameWithType: Pulumi.FSharp.Outputs
 - uid: Pulumi.FSharp.Outputs.all(List<Pulumi.Output<'a>>)
   name: "val all: List<Output<'a>> -> Output<List<'a>>"
-  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_all_List_Pulumi_Output__a___
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_all_List_Pulumi_Output__a___
   commentId: M:Pulumi.FSharp.all``1(Microsoft.FSharp.Collections.FSharpList{Pulumi.Output{``0}})
   fullName: "val Pulumi.FSharp.Outputs.all: List<Pulumi.Output<'a>> -> Pulumi.Output<List<'a>>"
   nameWithType: "val Outputs.all: List<Output<'a>> -> Output<List<'a>>"
 - uid: Pulumi.FSharp.Outputs.all*
   name: all
-  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_all_
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_all_
   commentId: Overload:Pulumi.FSharp.Outputs.all*
   isSpec: "True"
   fullName: Pulumi.FSharp.Outputs.all
   nameWithType: Outputs.all
 - uid: Pulumi.FSharp.Outputs.apply('a -> 'b -> Pulumi.Output<'a>)
   name: "val apply: 'a -> 'b -> Output<'a> -> Output<'b>"
-  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_apply__a_____b____Pulumi_Output__a__
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_apply__a_____b____Pulumi_Output__a__
   commentId: M:Pulumi.FSharp.apply``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Pulumi.Output{``0})
   fullName: "val Pulumi.FSharp.Outputs.apply: 'a -> 'b -> Pulumi.Output<'a> -> Pulumi.Output<'b>"
   nameWithType: "val Outputs.apply: 'a -> 'b -> Output<'a> -> Output<'b>"
 - uid: Pulumi.FSharp.Outputs.apply*
   name: apply
-  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_apply_
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_apply_
   commentId: Overload:Pulumi.FSharp.Outputs.apply*
   isSpec: "True"
   fullName: Pulumi.FSharp.Outputs.apply
   nameWithType: Outputs.apply
 - uid: Pulumi.FSharp.Outputs.applyAsync('a -> FSharp.Control.Async<'b> -> Pulumi.Output<'a>)
   name: "val applyAsync: 'a -> Async<'b> -> Output<'a> -> Output<'b>"
-  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_applyAsync__a____FSharp_Control_Async__b_____Pulumi_Output__a__
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_applyAsync__a____FSharp_Control_Async__b_____Pulumi_Output__a__
   commentId: M:Pulumi.FSharp.applyAsync``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Control.FSharpAsync{``1}},Pulumi.Output{``0})
   fullName: "val Pulumi.FSharp.Outputs.applyAsync: 'a -> FSharp.Control.Async<'b> -> Pulumi.Output<'a> -> Pulumi.Output<'b>"
   nameWithType: "val Outputs.applyAsync: 'a -> Async<'b> -> Output<'a> -> Output<'b>"
 - uid: Pulumi.FSharp.Outputs.applyAsync*
   name: applyAsync
-  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_applyAsync_
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_applyAsync_
   commentId: Overload:Pulumi.FSharp.Outputs.applyAsync*
   isSpec: "True"
   fullName: Pulumi.FSharp.Outputs.applyAsync
   nameWithType: Outputs.applyAsync
 - uid: Pulumi.FSharp.Outputs.bind('a -> Pulumi.Output<'b> -> Pulumi.Output<'a>)
   name: "val bind: 'a -> Output<'b> -> Output<'a> -> Output<'b>"
-  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_bind__a____Pulumi_Output__b_____Pulumi_Output__a__
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_bind__a____Pulumi_Output__b_____Pulumi_Output__a__
   commentId: M:Pulumi.FSharp.bind``2(Microsoft.FSharp.Core.FSharpFunc{``0,Pulumi.Output{``1}},Pulumi.Output{``0})
   fullName: "val Pulumi.FSharp.Outputs.bind: 'a -> Pulumi.Output<'b> -> Pulumi.Output<'a> -> Pulumi.Output<'b>"
   nameWithType: "val Outputs.bind: 'a -> Output<'b> -> Output<'a> -> Output<'b>"
 - uid: Pulumi.FSharp.Outputs.bind*
   name: bind
-  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_bind_
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_bind_
   commentId: Overload:Pulumi.FSharp.Outputs.bind*
   isSpec: "True"
   fullName: Pulumi.FSharp.Outputs.bind
   nameWithType: Outputs.bind
 - uid: Pulumi.FSharp.Outputs.pair(Pulumi.Output<'a> -> Pulumi.Output<'b>)
   name: "val pair: Output<'a> -> Output<'b> -> Output<'a * 'b>"
-  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair_Pulumi_Output__a_____Pulumi_Output__b__
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair_Pulumi_Output__a_____Pulumi_Output__b__
   commentId: M:Pulumi.FSharp.pair``2(Pulumi.Output{``0},Pulumi.Output{``1})
   fullName: "val Pulumi.FSharp.Outputs.pair: Pulumi.Output<'a> -> Pulumi.Output<'b> -> Pulumi.Output<'a * 'b>"
   nameWithType: "val Outputs.pair: Output<'a> -> Output<'b> -> Output<'a * 'b>"
 - uid: Pulumi.FSharp.Outputs.pair*
   name: pair
-  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair_
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair_
   commentId: Overload:Pulumi.FSharp.Outputs.pair*
   isSpec: "True"
   fullName: Pulumi.FSharp.Outputs.pair
   nameWithType: Outputs.pair
 - uid: Pulumi.FSharp.Outputs.pair3(Pulumi.Output<'a> -> Pulumi.Output<'b> -> Pulumi.Output<'c>)
   name: "val pair3: Output<'a> -> Output<'b> -> Output<'c> -> Output<'a * 'b * 'c>"
-  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair3_Pulumi_Output__a_____Pulumi_Output__b_____Pulumi_Output__c__
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair3_Pulumi_Output__a_____Pulumi_Output__b_____Pulumi_Output__c__
   commentId: M:Pulumi.FSharp.pair3``3(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2})
   fullName: "val Pulumi.FSharp.Outputs.pair3: Pulumi.Output<'a> -> Pulumi.Output<'b> -> Pulumi.Output<'c> -> Pulumi.Output<'a * 'b * 'c>"
   nameWithType: "val Outputs.pair3: Output<'a> -> Output<'b> -> Output<'c> -> Output<'a * 'b * 'c>"
 - uid: Pulumi.FSharp.Outputs.pair3*
   name: pair3
-  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair3_
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair3_
   commentId: Overload:Pulumi.FSharp.Outputs.pair3*
   isSpec: "True"
   fullName: Pulumi.FSharp.Outputs.pair3
   nameWithType: Outputs.pair3
 - uid: Pulumi.FSharp.Outputs.pair4(Pulumi.Output<'a> -> Pulumi.Output<'b> -> Pulumi.Output<'c> -> Pulumi.Output<'d>)
   name: "val pair4: Output<'a> -> Output<'b> -> Output<'c> -> Output<'d> -> Output<'a * 'b * 'c * 'd>"
-  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair4_Pulumi_Output__a_____Pulumi_Output__b_____Pulumi_Output__c_____Pulumi_Output__d__
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair4_Pulumi_Output__a_____Pulumi_Output__b_____Pulumi_Output__c_____Pulumi_Output__d__
   commentId: M:Pulumi.FSharp.pair4``4(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3})
   fullName: "val Pulumi.FSharp.Outputs.pair4: Pulumi.Output<'a> -> Pulumi.Output<'b> -> Pulumi.Output<'c> -> Pulumi.Output<'d> -> Pulumi.Output<'a * 'b * 'c * 'd>"
   nameWithType: "val Outputs.pair4: Output<'a> -> Output<'b> -> Output<'c> -> Output<'d> -> Output<'a * 'b * 'c * 'd>"
 - uid: Pulumi.FSharp.Outputs.pair4*
   name: pair4
-  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair4_
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair4_
   commentId: Overload:Pulumi.FSharp.Outputs.pair4*
   isSpec: "True"
   fullName: Pulumi.FSharp.Outputs.pair4
