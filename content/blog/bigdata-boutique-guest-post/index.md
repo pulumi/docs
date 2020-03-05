@@ -16,9 +16,9 @@ tags:
 
 <!--more-->
 
-BigData Boutique can rapidly iterate through infrastructure configurations based on client requirements. Real programming languages can significantly shorten the inner dev loop because developers and operators can use modern programming tools such as IDEs, test frameworks, and CI/CD. By increasing the velocity of infrastructure deployment across many clouds with repeatable and versioned code, Pulumi enables companies to build efficient revenue centers for their business.
+BigData Boutique can rapidly iterate through infrastructure configurations based on client requirements. Real programming languages significantly shortens the inner dev loop because developers and operators can use modern programming tools such as IDEs, test frameworks, and CI/CD. By increasing the velocity of infrastructure deployment across many clouds with repeatable and versioned code, Pulumi enables companies to build efficient revenue centers for their business.
 
-- - -
+- - - -
 
 ### How Pulumi Drives Our Elasticsearch Capacity Planning and Cost Optimization Service
 
@@ -40,9 +40,9 @@ Whether our customer is running on-prem or on a cloud, our [Elasticsearch Capaci
 
 #### Elasticsearch Sizing Process
 
-Our process begins with a sample data request. We ask the customer for their data (or a large sample of it), existing index mappings, expected queries, and finally known KPIs and SLAs. Our goal in the initial discovery phase is to reduce the number of free variables as much as possible because the more such variables, the more permutations we will have to test. Ideally, we want very few dimensions of freedom—usually in terms of hardware and configurations—so the number of permutations to test is on the order of dozens and not thousands.
+Our process begins with a sample data request. We ask the customer for their data (or a large sample of it), existing index mappings, expected queries, and finally known KPIs and SLAs. Our goal in the initial discovery phase is to reduce the number of free variables as much as possible because the more such variables, the more permutations we will have to test. Ideally, we want very few dimensions of freedom --- usually in terms of hardware and configurations—so the number of permutations to test is on the order of dozens and not thousands.
 
-Once the initial framework has been decided, we run fully automated benchmarks to test some of the permutations our experience tells us are the most promising to deliver good results. The benchmarking process is smart enough to omit long tales and outliers, so the results are not going to lie as to the true nature of the configuration that was selected and tested.
+Once the initial framework has been decided, we run fully automated benchmarks to test some of the permutations our experience tells us are the most promising to deliver good results. The benchmarking process is smart enough to omit long tails and outliers, so the results are not going to lie as to the true nature of the configuration that was selected and tested.
 
 Between benchmark iterations, our team uses its years of experience to create more test configurations that optimize various configurations we decide are important based on the results of the previous benchmarks. After several iterations of benchmarking on various configurations, we send the preliminary findings to confirm our results and proposed direction to the customer. The purpose is to communicate the results and validate the trade-offs we decide on during the sizing procedure. Finally, we provide a summary session with our team of Elasticsearch experts and customer technical and business contacts to present the results and recommendations, and to explain the reasoning behind the analysis.
 
