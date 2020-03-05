@@ -3,8 +3,11 @@
     {
       "src": [
         {
-          "src": "../../pulumi/sdk/dotnet/Pulumi/",
-          "files": ["*.csproj"]
+          "src": "../../pulumi/sdk/dotnet",
+          "files": [
+            "Pulumi/Pulumi.csproj",
+            "Pulumi.FSharp/Pulumi.FSharp.fsproj"
+          ]
         }
       ],
       "dest": "metadata/Pulumi",

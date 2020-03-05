@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class FileArchive
+    <title>Class Deployment (mod)
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class FileArchive
+    <meta name="title" content="Class Deployment (mod)
    ">
     <meta name="generator" content="docfx 2.49.0.0">
     
@@ -68,65 +68,37 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Pulumi.FileArchive">
+            <article class="content wrap" id="_content" data-uid="Pulumi.FSharp.Deployment">
   
   
-  <h1 id="Pulumi_FileArchive" data-uid="Pulumi.FileArchive" class="text-break">Class FileArchive
+  <h1 id="Pulumi_FSharp_Deployment" data-uid="Pulumi.FSharp.Deployment" class="text-break">Class Deployment (mod)
   </h1>
-  <div class="markdown level0 summary"><p>A FileArchive is a file-based archive, or a collection of file-based assets.  This can be a
-raw directory or a single archive file in one of the supported formats(.tar, .tar.gz,
-or.zip).</p>
+  <div class="markdown level0 summary"><p>Pulumi deployment functions.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Pulumi.AssetOrArchive.html">AssetOrArchive</a></div>
-    <div class="level2"><a class="xref" href="Pulumi.Archive.html">Archive</a></div>
-    <div class="level3"><span class="xref">FileArchive</span></div>
+    <div class="level0"><span class="xref">Deployment (mod)</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
-  <h6><strong>Assembly</strong>: Pulumi.dll</h6>
-  <h5 id="Pulumi_FileArchive_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.FSharp.html">Pulumi.FSharp</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.FSharp.dll</h6>
+  <h5 id="Pulumi_FSharp_Deployment_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class FileArchive : Archive</code></pre>
+    <pre><code class="lang-csharp hljs">module Deployment</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/Archive.cs/#L39">View Source</a>
-  </span>
-  <a id="Pulumi_FileArchive__ctor_" data-uid="Pulumi.FileArchive.#ctor*"></a>
-  <h4 id="Pulumi_FileArchive__ctor_System_String_" data-uid="Pulumi.FileArchive.#ctor(System.String)">FileArchive(String)</h4>
-  <div class="markdown level1 summary"></div>
+  
+  <a id="Pulumi_FSharp_Deployment_run_" data-uid="Pulumi.FSharp.Deployment.run*"></a>
+  <h4 id="Pulumi_FSharp_Deployment_run_unit____System_Collections_Generic_IDictionary_string_obj__" data-uid="Pulumi.FSharp.Deployment.run(unit -&gt; System.Collections.Generic.IDictionary&lt;string,obj&gt;)">val run: unit -&gt; IDictionary&lt;string,obj&gt; -&gt; int</h4>
+  <div class="markdown level1 summary"><p>Runs a function as a Pulumi <a class="xref" href="Pulumi.FSharp.Deployment.html">Deployment (mod)</a>.
+Blocks internally until the provided function completes,
+so that this function could be used directly from the main function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FileArchive(string path)</code></pre>
+    <pre><code class="lang-csharp hljs">val run: f:unit -&gt; IDictionary&lt;string,obj&gt; -&gt; int</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -139,8 +111,67 @@ or.zip).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">path</span></td>
+        <td><span class="xref">unit</span> -&gt; <span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">string</span>,<span class="xref">obj</span>&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <a id="Pulumi_FSharp_Deployment_runAsync_" data-uid="Pulumi.FSharp.Deployment.runAsync*"></a>
+  <h4 id="Pulumi_FSharp_Deployment_runAsync_unit____FSharp_Control_Async_System_Collections_Generic_IDictionary_string_obj___" data-uid="Pulumi.FSharp.Deployment.runAsync(unit -&gt; FSharp.Control.Async&lt;System.Collections.Generic.IDictionary&lt;string,obj&gt;&gt;)">val runAsync: unit -&gt; Async&lt;IDictionary&lt;string,obj&gt;&gt; -&gt; int</h4>
+  <div class="markdown level1 summary"><p>Runs an async function as a Pulumi <a class="xref" href="Pulumi.FSharp.Deployment.html">Deployment (mod)</a>.
+Blocks internally until the provided function completes,
+so that this function could be used directly from the main function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">val runAsync: f:unit -&gt; Async&lt;IDictionary&lt;string,obj&gt;&gt; -&gt; int</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">unit</span> -&gt; <span class="xref">FSharp.Control.Async</span>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">string</span>,<span class="xref">obj</span>&gt;&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -152,9 +183,6 @@ or.zip).</p>
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/Archive.cs/#L37" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

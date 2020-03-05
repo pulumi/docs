@@ -97,6 +97,27 @@
     <div>
       <a class="xref" href="Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
     </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
@@ -162,7 +183,8 @@ If args is not specified, the name of the referenced stack will be the name of t
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Output(&quot;name&quot;)]
+public Output&lt;string&gt; Name { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,7 +211,8 @@ If args is not specified, the name of the referenced stack will be the name of t
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Outputs { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Output(&quot;outputs&quot;)]
+public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Outputs { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,7 +224,7 @@ If args is not specified, the name of the referenced stack will be the name of t
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -216,7 +239,8 @@ If args is not specified, the name of the referenced stack will be the name of t
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SecretOutputNames { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Output(&quot;secretOutputNames&quot;)]
+public Output&lt;ImmutableArray&lt;string&gt;&gt; SecretOutputNames { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -228,7 +252,7 @@ If args is not specified, the name of the referenced stack will be the name of t
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -245,7 +269,7 @@ If args is not specified, the name of the referenced stack will be the name of t
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;object?&gt; GetOutput(Input&lt;string&gt; name)</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;object&gt; GetOutput(Input&lt;string&gt; name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -275,7 +299,7 @@ If args is not specified, the name of the referenced stack will be the name of t
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td><p>An <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> containing the requested value.</p>
 </td>
       </tr>
@@ -294,7 +318,7 @@ This operation is not supported (and will throw) for secret outputs.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;object?&gt; GetValueAsync(Input&lt;string&gt; name)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;object&gt; GetValueAsync(Input&lt;string&gt; name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -324,7 +348,7 @@ This operation is not supported (and will throw) for secret outputs.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td><p>The value of the referenced stack output.</p>
 </td>
       </tr>
@@ -419,7 +443,7 @@ This operation is not supported (and will throw) for secret outputs.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td><p>The value of the referenced stack output.</p>
 </td>
       </tr>

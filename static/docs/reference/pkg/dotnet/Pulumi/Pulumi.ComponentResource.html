@@ -96,6 +96,27 @@ CRUD operations for provisioning.</p>
     <div>
       <a class="xref" href="Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
     </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
@@ -168,15 +189,15 @@ state as quickly as possible (instead of waiting until the entire application co
     <pre><code class="lang-csharp hljs">protected void RegisterOutputs()</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Resources/ComponentResource.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Resources/ComponentResource.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_ComponentResource_RegisterOutputs_" data-uid="Pulumi.ComponentResource.RegisterOutputs*"></a>
-  <h4 id="Pulumi_ComponentResource_RegisterOutputs_IDictionary_System_String_System_Nullable_System_Object___" data-uid="Pulumi.ComponentResource.RegisterOutputs(IDictionary{System.String,System.Nullable{System.Object}})">RegisterOutputs(IDictionary&lt;String, Nullable&lt;Object&gt;&gt;)</h4>
+  <h4 id="Pulumi_ComponentResource_RegisterOutputs_Pulumi_Output_System_Collections_Generic_IDictionary_System_String_System_Object___" data-uid="Pulumi.ComponentResource.RegisterOutputs(Pulumi.Output{System.Collections.Generic.IDictionary{System.String,System.Object}})">RegisterOutputs(Output&lt;IDictionary&lt;String, Object&gt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void RegisterOutputs(IDictionary&lt;string, object?&gt; outputs)</code></pre>
+    <pre><code class="lang-csharp hljs">protected void RegisterOutputs(Output&lt;IDictionary&lt;string, object&gt;&gt; outputs)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,22 +210,22 @@ state as quickly as possible (instead of waiting until the entire application co
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Nullable</span>&lt;<span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td><span class="parametername">outputs</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Resources/ComponentResource.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Resources/ComponentResource.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_ComponentResource_RegisterOutputs_" data-uid="Pulumi.ComponentResource.RegisterOutputs*"></a>
-  <h4 id="Pulumi_ComponentResource_RegisterOutputs_Pulumi_Output_IDictionary_System_String_System_Nullable_System_Object____" data-uid="Pulumi.ComponentResource.RegisterOutputs(Pulumi.Output{IDictionary{System.String,System.Nullable{System.Object}}})">RegisterOutputs(Output&lt;IDictionary&lt;String, Nullable&lt;Object&gt;&gt;&gt;)</h4>
+  <h4 id="Pulumi_ComponentResource_RegisterOutputs_System_Collections_Generic_IDictionary_System_String_System_Object__" data-uid="Pulumi.ComponentResource.RegisterOutputs(System.Collections.Generic.IDictionary{System.String,System.Object})">RegisterOutputs(IDictionary&lt;String, Object&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void RegisterOutputs(Output&lt;IDictionary&lt;string, object?&gt;&gt; outputs)</code></pre>
+    <pre><code class="lang-csharp hljs">protected void RegisterOutputs(IDictionary&lt;string, object&gt; outputs)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,7 +238,7 @@ state as quickly as possible (instead of waiting until the entire application co
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Nullable</span>&lt;<span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td><span class="parametername">outputs</span></td>
         <td></td>
       </tr>
@@ -227,12 +248,12 @@ state as quickly as possible (instead of waiting until the entire application co
     <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Resources/ComponentResource.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_ComponentResource_RegisterOutputs_" data-uid="Pulumi.ComponentResource.RegisterOutputs*"></a>
-  <h4 id="Pulumi_ComponentResource_RegisterOutputs_Task_IDictionary_System_String_System_Nullable_System_Object____" data-uid="Pulumi.ComponentResource.RegisterOutputs(Task{IDictionary{System.String,System.Nullable{System.Object}}})">RegisterOutputs(Task&lt;IDictionary&lt;String, Nullable&lt;Object&gt;&gt;&gt;)</h4>
+  <h4 id="Pulumi_ComponentResource_RegisterOutputs_System_Threading_Tasks_Task_System_Collections_Generic_IDictionary_System_String_System_Object___" data-uid="Pulumi.ComponentResource.RegisterOutputs(System.Threading.Tasks.Task{System.Collections.Generic.IDictionary{System.String,System.Object}})">RegisterOutputs(Task&lt;IDictionary&lt;String, Object&gt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void RegisterOutputs(Task&lt;IDictionary&lt;string, object?&gt;&gt; outputs)</code></pre>
+    <pre><code class="lang-csharp hljs">protected void RegisterOutputs(Task&lt;IDictionary&lt;string, object&gt;&gt; outputs)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -245,7 +266,7 @@ state as quickly as possible (instead of waiting until the entire application co
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Nullable</span>&lt;<span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td><span class="parametername">outputs</span></td>
         <td></td>
       </tr>

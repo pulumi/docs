@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class Input&lt;T&gt;
+    <title>Class Ops (mod)
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class Input&lt;T&gt;
+    <meta name="title" content="Class Ops (mod)
    ">
     <meta name="generator" content="docfx 2.49.0.0">
     
@@ -68,54 +68,68 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Pulumi.Input`1">
+            <article class="content wrap" id="_content" data-uid="Pulumi.FSharp.Ops">
   
   
-  <h1 id="Pulumi_Input_1" data-uid="Pulumi.Input`1" class="text-break">Class Input&lt;T&gt;
+  <h1 id="Pulumi_FSharp_Ops" data-uid="Pulumi.FSharp.Ops" class="text-break">Class Ops (mod)
   </h1>
-  <div class="markdown level0 summary"><p><a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> is a property input for a <a class="xref" href="Pulumi.Resource.html">Resource</a>.  It may be a promptly
-available T, or the output from a existing <a class="xref" href="Pulumi.Resource.html">Resource</a>.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Input&lt;T&gt;</span></div>
-      <div class="level2"><a class="xref" href="Pulumi.InputJson.html">InputJson</a></div>
-      <div class="level2"><a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a></div>
-      <div class="level2"><a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a></div>
-      <div class="level2"><a class="xref" href="Pulumi.InputUnion-2.html">InputUnion&lt;T0, T1&gt;</a></div>
+    <div class="level0"><span class="xref">Ops (mod)</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
-  <h6><strong>Assembly</strong>: Pulumi.dll</h6>
-  <h5 id="Pulumi_Input_1_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.FSharp.html">Pulumi.FSharp</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.FSharp.dll</h6>
+  <h5 id="Pulumi_FSharp_Ops_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Input&lt;T&gt; : IInput</code></pre>
+    <pre><code class="lang-csharp hljs">[&lt;AutoOpen&gt;]
+module Ops</code></pre>
   </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  <a id="Pulumi_FSharp_Ops_input_" data-uid="Pulumi.FSharp.Ops.input*"></a>
+  <h4 id="Pulumi_FSharp_Ops_input__a_" data-uid="Pulumi.FSharp.Ops.input('a)">val input: 'a -&gt; Input&lt;'a&gt;</h4>
+  <div class="markdown level1 summary"><p>Wraps a raw value into an <span class="xref">Input{'a}</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">val input: value:'a -&gt; Input&lt;'a&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&#39;a</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;&#39;a&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -126,23 +140,20 @@ available T, or the output from a existing <a class="xref" href="Pulumi.Resource
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
+        <td><span class="parametername">'a</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="operators">Operators
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/Input.cs/#L37">View Source</a>
-  </span>
-  <a id="Pulumi_Input_1_op_Implicit_" data-uid="Pulumi.Input`1.op_Implicit*"></a>
-  <h4 id="Pulumi_Input_1_op_Implicit__0__Pulumi_Input__0_" data-uid="Pulumi.Input`1.op_Implicit(`0)~Pulumi.Input{`0}">Implicit(T to Input&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  
+  <a id="Pulumi_FSharp_Ops_inputList_" data-uid="Pulumi.FSharp.Ops.inputList*"></a>
+  <h4 id="Pulumi_FSharp_Ops_inputList_seq_Pulumi_Input__a___" data-uid="Pulumi.FSharp.Ops.inputList(seq&lt;Pulumi.Input&lt;'a&gt;&gt;)">val inputList: seq&lt;Input&lt;'a&gt;&gt; -&gt; InputList&lt;'a&gt;</h4>
+  <div class="markdown level1 summary"><p>Wraps a collection of items into an <span class="xref">InputList{'a}}</span>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Input&lt;T&gt;(T value)</code></pre>
+    <pre><code class="lang-csharp hljs">val inputList: items:seq&lt;Input&lt;'a&gt;&gt; -&gt; InputList&lt;'a&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,8 +166,8 @@ available T, or the output from a existing <a class="xref" href="Pulumi.Resource
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
+        <td><span class="xref">seq</span>&lt;<a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;&#39;a&gt;&gt;</td>
+        <td><span class="parametername">items</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -171,21 +182,35 @@ available T, or the output from a existing <a class="xref" href="Pulumi.Resource
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;T&gt;</td>
+        <td><a class="xref" href="Pulumi.InputList-1.html">InputList</a>&lt;&#39;a&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/Input.cs/#L43">View Source</a>
-  </span>
-  <a id="Pulumi_Input_1_op_Implicit_" data-uid="Pulumi.Input`1.op_Implicit*"></a>
-  <h4 id="Pulumi_Input_1_op_Implicit_Pulumi_Input__0___Pulumi_Output__0_" data-uid="Pulumi.Input`1.op_Implicit(Pulumi.Input{`0})~Pulumi.Output{`0}">Implicit(Input&lt;T&gt; to Output&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">'a</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <a id="Pulumi_FSharp_Ops_inputMap_" data-uid="Pulumi.FSharp.Ops.inputMap*"></a>
+  <h4 id="Pulumi_FSharp_Ops_inputMap_seq_string___Pulumi_Input__a___" data-uid="Pulumi.FSharp.Ops.inputMap(seq&lt;string * Pulumi.Input&lt;'a&gt;&gt;)">val inputMap: seq&lt;string * Input&lt;'a&gt;&gt; -&gt; InputMap&lt;'a&gt;</h4>
+  <div class="markdown level1 summary"><p>Wraps a collection of key-value pairs into an <span class="xref">InputMap{'a}}</span>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Output&lt;T&gt;(Input&lt;T&gt; input)</code></pre>
+    <pre><code class="lang-csharp hljs">val inputMap: items:seq&lt;string * Input&lt;'a&gt;&gt; -&gt; InputMap&lt;'a&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -198,8 +223,8 @@ available T, or the output from a existing <a class="xref" href="Pulumi.Resource
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;T&gt;</td>
-        <td><span class="parametername">input</span></td>
+        <td><span class="xref">seq</span>&lt;<span class="xref">string</span> * <a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;&#39;a&gt;&gt;</td>
+        <td><span class="parametername">items</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -214,21 +239,35 @@ available T, or the output from a existing <a class="xref" href="Pulumi.Resource
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;T&gt;</td>
+        <td><a class="xref" href="Pulumi.InputMap-1.html">InputMap</a>&lt;&#39;a&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/Input.cs/#L40">View Source</a>
-  </span>
-  <a id="Pulumi_Input_1_op_Implicit_" data-uid="Pulumi.Input`1.op_Implicit*"></a>
-  <h4 id="Pulumi_Input_1_op_Implicit_Pulumi_Output__0___Pulumi_Input__0_" data-uid="Pulumi.Input`1.op_Implicit(Pulumi.Output{`0})~Pulumi.Input{`0}">Implicit(Output&lt;T&gt; to Input&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">'a</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <a id="Pulumi_FSharp_Ops_io_" data-uid="Pulumi.FSharp.Ops.io*"></a>
+  <h4 id="Pulumi_FSharp_Ops_io_Pulumi_Output__a__" data-uid="Pulumi.FSharp.Ops.io(Pulumi.Output&lt;'a&gt;)">val io: Output&lt;'a&gt; -&gt; Input&lt;'a&gt;</h4>
+  <div class="markdown level1 summary"><p>Wraps an <span class="xref">Output</span> value into an <span class="xref">Input{'a}}</span> value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Input&lt;T&gt;(Output&lt;T&gt; value)</code></pre>
+    <pre><code class="lang-csharp hljs">val io: v:Output&lt;'a&gt; -&gt; Input&lt;'a&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -241,8 +280,8 @@ available T, or the output from a existing <a class="xref" href="Pulumi.Resource
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;T&gt;</td>
-        <td><span class="parametername">value</span></td>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;&#39;a&gt;</td>
+        <td><span class="parametername">v</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -257,27 +296,26 @@ available T, or the output from a existing <a class="xref" href="Pulumi.Resource
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;T&gt;</td>
+        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;&#39;a&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0___1__">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, U&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_System_Threading_Tasks_Task___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, Task&lt;U&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Input___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, Input&lt;U&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Output___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, Output&lt;U&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_ToOutput__1_Pulumi_Input___0__">InputExtensions.ToOutput&lt;T&gt;(Input&lt;T&gt;)</a>
-  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">'a</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -285,9 +323,6 @@ available T, or the output from a existing <a class="xref" href="Pulumi.Resource
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/Input.cs/#L23" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

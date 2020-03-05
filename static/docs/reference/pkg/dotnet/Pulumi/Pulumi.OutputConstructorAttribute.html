@@ -75,19 +75,45 @@
   </h1>
   <div class="markdown level0 summary"><p>Attribute used by a Pulumi Cloud Provider Package to marks the constructor for a complex
 property type so that it can be instantiated by the Pulumi runtime.</p>
-<p>The constructor should contain parameters that map to the resultant <see cref="!:Struct.Fields"></see> returned by the engine.</p>
+<p>The constructor should contain parameters that map to the resultant <span class="xref">Google.Protobuf.WellKnownTypes.Struct.Fields</span> returned by the engine.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">OutputConstructorAttribute</span></div>
+    <div class="level1"><span class="xref">System.Attribute</span></div>
+    <div class="level2"><span class="xref">OutputConstructorAttribute</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Attribute.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_OutputConstructorAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class OutputConstructorAttribute : Attribute</code></pre>
+    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Constructor)]
+public sealed class OutputConstructorAttribute : Attribute</code></pre>
   </div>
 </article>
           </div>

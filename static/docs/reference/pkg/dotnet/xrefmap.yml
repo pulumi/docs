@@ -135,13 +135,13 @@ references:
   commentId: T:Pulumi.AssetArchive
   fullName: Pulumi.AssetArchive
   nameWithType: AssetArchive
-- uid: Pulumi.AssetArchive.#ctor(IDictionary{System.String,Pulumi.AssetOrArchive})
+- uid: Pulumi.AssetArchive.#ctor(System.Collections.Generic.IDictionary{System.String,Pulumi.AssetOrArchive})
   name: AssetArchive(IDictionary<String, AssetOrArchive>)
-  href: Pulumi/Pulumi.AssetArchive.html#Pulumi_AssetArchive__ctor_IDictionary_System_String_Pulumi_AssetOrArchive__
-  commentId: M:Pulumi.AssetArchive.#ctor(IDictionary{System.String,Pulumi.AssetOrArchive})
+  href: Pulumi/Pulumi.AssetArchive.html#Pulumi_AssetArchive__ctor_System_Collections_Generic_IDictionary_System_String_Pulumi_AssetOrArchive__
+  commentId: M:Pulumi.AssetArchive.#ctor(System.Collections.Generic.IDictionary{System.String,Pulumi.AssetOrArchive})
   name.vb: AssetArchive(IDictionary(Of String, AssetOrArchive))
-  fullName: Pulumi.AssetArchive.AssetArchive(IDictionary<System.String, Pulumi.AssetOrArchive>)
-  fullName.vb: Pulumi.AssetArchive.AssetArchive(IDictionary(Of System.String, Pulumi.AssetOrArchive))
+  fullName: Pulumi.AssetArchive.AssetArchive(System.Collections.Generic.IDictionary<System.String, Pulumi.AssetOrArchive>)
+  fullName.vb: Pulumi.AssetArchive.AssetArchive(System.Collections.Generic.IDictionary(Of System.String, Pulumi.AssetOrArchive))
   nameWithType: AssetArchive.AssetArchive(IDictionary<String, AssetOrArchive>)
   nameWithType.vb: AssetArchive.AssetArchive(IDictionary(Of String, AssetOrArchive))
 - uid: Pulumi.AssetArchive.#ctor*
@@ -182,33 +182,33 @@ references:
   commentId: M:Pulumi.ComponentResource.RegisterOutputs
   fullName: Pulumi.ComponentResource.RegisterOutputs()
   nameWithType: ComponentResource.RegisterOutputs()
-- uid: Pulumi.ComponentResource.RegisterOutputs(IDictionary{System.String,System.Nullable{System.Object}})
-  name: RegisterOutputs(IDictionary<String, Nullable<Object>>)
-  href: Pulumi/Pulumi.ComponentResource.html#Pulumi_ComponentResource_RegisterOutputs_IDictionary_System_String_System_Nullable_System_Object___
-  commentId: M:Pulumi.ComponentResource.RegisterOutputs(IDictionary{System.String,System.Nullable{System.Object}})
-  name.vb: RegisterOutputs(IDictionary(Of String, Nullable(Of Object)))
-  fullName: Pulumi.ComponentResource.RegisterOutputs(IDictionary<System.String, System.Nullable<System.Object>>)
-  fullName.vb: Pulumi.ComponentResource.RegisterOutputs(IDictionary(Of System.String, System.Nullable(Of System.Object)))
-  nameWithType: ComponentResource.RegisterOutputs(IDictionary<String, Nullable<Object>>)
-  nameWithType.vb: ComponentResource.RegisterOutputs(IDictionary(Of String, Nullable(Of Object)))
-- uid: Pulumi.ComponentResource.RegisterOutputs(Pulumi.Output{IDictionary{System.String,System.Nullable{System.Object}}})
-  name: RegisterOutputs(Output<IDictionary<String, Nullable<Object>>>)
-  href: Pulumi/Pulumi.ComponentResource.html#Pulumi_ComponentResource_RegisterOutputs_Pulumi_Output_IDictionary_System_String_System_Nullable_System_Object____
-  commentId: M:Pulumi.ComponentResource.RegisterOutputs(Pulumi.Output{IDictionary{System.String,System.Nullable{System.Object}}})
-  name.vb: RegisterOutputs(Output(Of IDictionary(Of String, Nullable(Of Object))))
-  fullName: Pulumi.ComponentResource.RegisterOutputs(Pulumi.Output<IDictionary<System.String, System.Nullable<System.Object>>>)
-  fullName.vb: Pulumi.ComponentResource.RegisterOutputs(Pulumi.Output(Of IDictionary(Of System.String, System.Nullable(Of System.Object))))
-  nameWithType: ComponentResource.RegisterOutputs(Output<IDictionary<String, Nullable<Object>>>)
-  nameWithType.vb: ComponentResource.RegisterOutputs(Output(Of IDictionary(Of String, Nullable(Of Object))))
-- uid: Pulumi.ComponentResource.RegisterOutputs(Task{IDictionary{System.String,System.Nullable{System.Object}}})
-  name: RegisterOutputs(Task<IDictionary<String, Nullable<Object>>>)
-  href: Pulumi/Pulumi.ComponentResource.html#Pulumi_ComponentResource_RegisterOutputs_Task_IDictionary_System_String_System_Nullable_System_Object____
-  commentId: M:Pulumi.ComponentResource.RegisterOutputs(Task{IDictionary{System.String,System.Nullable{System.Object}}})
-  name.vb: RegisterOutputs(Task(Of IDictionary(Of String, Nullable(Of Object))))
-  fullName: Pulumi.ComponentResource.RegisterOutputs(Task<IDictionary<System.String, System.Nullable<System.Object>>>)
-  fullName.vb: Pulumi.ComponentResource.RegisterOutputs(Task(Of IDictionary(Of System.String, System.Nullable(Of System.Object))))
-  nameWithType: ComponentResource.RegisterOutputs(Task<IDictionary<String, Nullable<Object>>>)
-  nameWithType.vb: ComponentResource.RegisterOutputs(Task(Of IDictionary(Of String, Nullable(Of Object))))
+- uid: Pulumi.ComponentResource.RegisterOutputs(Pulumi.Output{System.Collections.Generic.IDictionary{System.String,System.Object}})
+  name: RegisterOutputs(Output<IDictionary<String, Object>>)
+  href: Pulumi/Pulumi.ComponentResource.html#Pulumi_ComponentResource_RegisterOutputs_Pulumi_Output_System_Collections_Generic_IDictionary_System_String_System_Object___
+  commentId: M:Pulumi.ComponentResource.RegisterOutputs(Pulumi.Output{System.Collections.Generic.IDictionary{System.String,System.Object}})
+  name.vb: RegisterOutputs(Output(Of IDictionary(Of String, Object)))
+  fullName: Pulumi.ComponentResource.RegisterOutputs(Pulumi.Output<System.Collections.Generic.IDictionary<System.String, System.Object>>)
+  fullName.vb: Pulumi.ComponentResource.RegisterOutputs(Pulumi.Output(Of System.Collections.Generic.IDictionary(Of System.String, System.Object)))
+  nameWithType: ComponentResource.RegisterOutputs(Output<IDictionary<String, Object>>)
+  nameWithType.vb: ComponentResource.RegisterOutputs(Output(Of IDictionary(Of String, Object)))
+- uid: Pulumi.ComponentResource.RegisterOutputs(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: RegisterOutputs(IDictionary<String, Object>)
+  href: Pulumi/Pulumi.ComponentResource.html#Pulumi_ComponentResource_RegisterOutputs_System_Collections_Generic_IDictionary_System_String_System_Object__
+  commentId: M:Pulumi.ComponentResource.RegisterOutputs(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name.vb: RegisterOutputs(IDictionary(Of String, Object))
+  fullName: Pulumi.ComponentResource.RegisterOutputs(System.Collections.Generic.IDictionary<System.String, System.Object>)
+  fullName.vb: Pulumi.ComponentResource.RegisterOutputs(System.Collections.Generic.IDictionary(Of System.String, System.Object))
+  nameWithType: ComponentResource.RegisterOutputs(IDictionary<String, Object>)
+  nameWithType.vb: ComponentResource.RegisterOutputs(IDictionary(Of String, Object))
+- uid: Pulumi.ComponentResource.RegisterOutputs(System.Threading.Tasks.Task{System.Collections.Generic.IDictionary{System.String,System.Object}})
+  name: RegisterOutputs(Task<IDictionary<String, Object>>)
+  href: Pulumi/Pulumi.ComponentResource.html#Pulumi_ComponentResource_RegisterOutputs_System_Threading_Tasks_Task_System_Collections_Generic_IDictionary_System_String_System_Object___
+  commentId: M:Pulumi.ComponentResource.RegisterOutputs(System.Threading.Tasks.Task{System.Collections.Generic.IDictionary{System.String,System.Object}})
+  name.vb: RegisterOutputs(Task(Of IDictionary(Of String, Object)))
+  fullName: Pulumi.ComponentResource.RegisterOutputs(System.Threading.Tasks.Task<System.Collections.Generic.IDictionary<System.String, System.Object>>)
+  fullName.vb: Pulumi.ComponentResource.RegisterOutputs(System.Threading.Tasks.Task(Of System.Collections.Generic.IDictionary(Of System.String, System.Object)))
+  nameWithType: ComponentResource.RegisterOutputs(Task<IDictionary<String, Object>>)
+  nameWithType.vb: ComponentResource.RegisterOutputs(Task(Of IDictionary(Of String, Object)))
 - uid: Pulumi.ComponentResource.RegisterOutputs*
   name: RegisterOutputs
   href: Pulumi/Pulumi.ComponentResource.html#Pulumi_ComponentResource_RegisterOutputs_
@@ -254,15 +254,12 @@ references:
   commentId: T:Pulumi.Config
   fullName: Pulumi.Config
   nameWithType: Config
-- uid: Pulumi.Config.#ctor(System.Nullable{System.String})
-  name: Config(Nullable<String>)
-  href: Pulumi/Pulumi.Config.html#Pulumi_Config__ctor_System_Nullable_System_String__
-  commentId: M:Pulumi.Config.#ctor(System.Nullable{System.String})
-  name.vb: Config(Nullable(Of String))
-  fullName: Pulumi.Config.Config(System.Nullable<System.String>)
-  fullName.vb: Pulumi.Config.Config(System.Nullable(Of System.String))
-  nameWithType: Config.Config(Nullable<String>)
-  nameWithType.vb: Config.Config(Nullable(Of String))
+- uid: Pulumi.Config.#ctor(System.String)
+  name: Config(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config__ctor_System_String_
+  commentId: M:Pulumi.Config.#ctor(System.String)
+  fullName: Pulumi.Config.Config(System.String)
+  nameWithType: Config.Config(String)
 - uid: Pulumi.Config.#ctor*
   name: Config
   href: Pulumi/Pulumi.Config.html#Pulumi_Config__ctor_
@@ -721,30 +718,30 @@ references:
   fullName: Pulumi.Deployment.Pulumi.IDeployment.StackName
   nameWithType: Deployment.IDeployment.StackName
   nameWithType.vb: Deployment.Pulumi.IDeployment.StackName
-- uid: Pulumi.Deployment.RunAsync(Action)
+- uid: Pulumi.Deployment.RunAsync(System.Action)
   name: RunAsync(Action)
-  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_Action_
-  commentId: M:Pulumi.Deployment.RunAsync(Action)
-  fullName: Pulumi.Deployment.RunAsync(Action)
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_System_Action_
+  commentId: M:Pulumi.Deployment.RunAsync(System.Action)
+  fullName: Pulumi.Deployment.RunAsync(System.Action)
   nameWithType: Deployment.RunAsync(Action)
-- uid: Pulumi.Deployment.RunAsync(Func{IDictionary{System.String,System.Nullable{System.Object}}})
-  name: RunAsync(Func<IDictionary<String, Nullable<Object>>>)
-  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_Func_IDictionary_System_String_System_Nullable_System_Object____
-  commentId: M:Pulumi.Deployment.RunAsync(Func{IDictionary{System.String,System.Nullable{System.Object}}})
-  name.vb: RunAsync(Func(Of IDictionary(Of String, Nullable(Of Object))))
-  fullName: Pulumi.Deployment.RunAsync(Func<IDictionary<System.String, System.Nullable<System.Object>>>)
-  fullName.vb: Pulumi.Deployment.RunAsync(Func(Of IDictionary(Of System.String, System.Nullable(Of System.Object))))
-  nameWithType: Deployment.RunAsync(Func<IDictionary<String, Nullable<Object>>>)
-  nameWithType.vb: Deployment.RunAsync(Func(Of IDictionary(Of String, Nullable(Of Object))))
-- uid: Pulumi.Deployment.RunAsync(Func{Task{IDictionary{System.String,System.Nullable{System.Object}}}})
-  name: RunAsync(Func<Task<IDictionary<String, Nullable<Object>>>>)
-  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_Func_Task_IDictionary_System_String_System_Nullable_System_Object_____
-  commentId: M:Pulumi.Deployment.RunAsync(Func{Task{IDictionary{System.String,System.Nullable{System.Object}}}})
-  name.vb: RunAsync(Func(Of Task(Of IDictionary(Of String, Nullable(Of Object)))))
-  fullName: Pulumi.Deployment.RunAsync(Func<Task<IDictionary<System.String, System.Nullable<System.Object>>>>)
-  fullName.vb: Pulumi.Deployment.RunAsync(Func(Of Task(Of IDictionary(Of System.String, System.Nullable(Of System.Object)))))
-  nameWithType: Deployment.RunAsync(Func<Task<IDictionary<String, Nullable<Object>>>>)
-  nameWithType.vb: Deployment.RunAsync(Func(Of Task(Of IDictionary(Of String, Nullable(Of Object)))))
+- uid: Pulumi.Deployment.RunAsync(System.Func{System.Collections.Generic.IDictionary{System.String,System.Object}})
+  name: RunAsync(Func<IDictionary<String, Object>>)
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_System_Func_System_Collections_Generic_IDictionary_System_String_System_Object___
+  commentId: M:Pulumi.Deployment.RunAsync(System.Func{System.Collections.Generic.IDictionary{System.String,System.Object}})
+  name.vb: RunAsync(Func(Of IDictionary(Of String, Object)))
+  fullName: Pulumi.Deployment.RunAsync(System.Func<System.Collections.Generic.IDictionary<System.String, System.Object>>)
+  fullName.vb: Pulumi.Deployment.RunAsync(System.Func(Of System.Collections.Generic.IDictionary(Of System.String, System.Object)))
+  nameWithType: Deployment.RunAsync(Func<IDictionary<String, Object>>)
+  nameWithType.vb: Deployment.RunAsync(Func(Of IDictionary(Of String, Object)))
+- uid: Pulumi.Deployment.RunAsync(System.Func{System.Threading.Tasks.Task{System.Collections.Generic.IDictionary{System.String,System.Object}}})
+  name: RunAsync(Func<Task<IDictionary<String, Object>>>)
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_System_Func_System_Threading_Tasks_Task_System_Collections_Generic_IDictionary_System_String_System_Object____
+  commentId: M:Pulumi.Deployment.RunAsync(System.Func{System.Threading.Tasks.Task{System.Collections.Generic.IDictionary{System.String,System.Object}}})
+  name.vb: RunAsync(Func(Of Task(Of IDictionary(Of String, Object))))
+  fullName: Pulumi.Deployment.RunAsync(System.Func<System.Threading.Tasks.Task<System.Collections.Generic.IDictionary<System.String, System.Object>>>)
+  fullName.vb: Pulumi.Deployment.RunAsync(System.Func(Of System.Threading.Tasks.Task(Of System.Collections.Generic.IDictionary(Of System.String, System.Object))))
+  nameWithType: Deployment.RunAsync(Func<Task<IDictionary<String, Object>>>)
+  nameWithType.vb: Deployment.RunAsync(Func(Of Task(Of IDictionary(Of String, Object))))
 - uid: Pulumi.Deployment.RunAsync*
   name: RunAsync
   href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_
@@ -767,15 +764,15 @@ references:
   commentId: T:Pulumi.DictionaryResourceArgs
   fullName: Pulumi.DictionaryResourceArgs
   nameWithType: DictionaryResourceArgs
-- uid: Pulumi.DictionaryResourceArgs.#ctor(ImmutableDictionary{System.String,System.Nullable{System.Object}})
-  name: DictionaryResourceArgs(ImmutableDictionary<String, Nullable<Object>>)
-  href: Pulumi/Pulumi.DictionaryResourceArgs.html#Pulumi_DictionaryResourceArgs__ctor_ImmutableDictionary_System_String_System_Nullable_System_Object___
-  commentId: M:Pulumi.DictionaryResourceArgs.#ctor(ImmutableDictionary{System.String,System.Nullable{System.Object}})
-  name.vb: DictionaryResourceArgs(ImmutableDictionary(Of String, Nullable(Of Object)))
-  fullName: Pulumi.DictionaryResourceArgs.DictionaryResourceArgs(ImmutableDictionary<System.String, System.Nullable<System.Object>>)
-  fullName.vb: Pulumi.DictionaryResourceArgs.DictionaryResourceArgs(ImmutableDictionary(Of System.String, System.Nullable(Of System.Object)))
-  nameWithType: DictionaryResourceArgs.DictionaryResourceArgs(ImmutableDictionary<String, Nullable<Object>>)
-  nameWithType.vb: DictionaryResourceArgs.DictionaryResourceArgs(ImmutableDictionary(Of String, Nullable(Of Object)))
+- uid: Pulumi.DictionaryResourceArgs.#ctor(System.Collections.Immutable.ImmutableDictionary{System.String,System.Object})
+  name: DictionaryResourceArgs(ImmutableDictionary<String, Object>)
+  href: Pulumi/Pulumi.DictionaryResourceArgs.html#Pulumi_DictionaryResourceArgs__ctor_System_Collections_Immutable_ImmutableDictionary_System_String_System_Object__
+  commentId: M:Pulumi.DictionaryResourceArgs.#ctor(System.Collections.Immutable.ImmutableDictionary{System.String,System.Object})
+  name.vb: DictionaryResourceArgs(ImmutableDictionary(Of String, Object))
+  fullName: Pulumi.DictionaryResourceArgs.DictionaryResourceArgs(System.Collections.Immutable.ImmutableDictionary<System.String, System.Object>)
+  fullName.vb: Pulumi.DictionaryResourceArgs.DictionaryResourceArgs(System.Collections.Immutable.ImmutableDictionary(Of System.String, System.Object))
+  nameWithType: DictionaryResourceArgs.DictionaryResourceArgs(ImmutableDictionary<String, Object>)
+  nameWithType.vb: DictionaryResourceArgs.DictionaryResourceArgs(ImmutableDictionary(Of String, Object))
 - uid: Pulumi.DictionaryResourceArgs.#ctor*
   name: DictionaryResourceArgs
   href: Pulumi/Pulumi.DictionaryResourceArgs.html#Pulumi_DictionaryResourceArgs__ctor_
@@ -821,6 +818,199 @@ references:
   isSpec: "True"
   fullName: Pulumi.FileAsset.FileAsset
   nameWithType: FileAsset.FileAsset
+- uid: Pulumi.FSharp
+  name: Pulumi.FSharp
+  href: Pulumi/Pulumi.FSharp.html
+  commentId: N:Pulumi.FSharp
+  fullName: Pulumi.FSharp
+  nameWithType: Pulumi.FSharp
+- uid: Pulumi.FSharp.Deployment
+  name: Deployment (mod)
+  href: Pulumi/Pulumi.FSharp.Deployment.html
+  commentId: T:Pulumi.FSharp.Deployment
+  fullName: Pulumi.FSharp.Deployment
+  nameWithType: Pulumi.FSharp.Deployment
+- uid: Pulumi.FSharp.Deployment.run(unit -> System.Collections.Generic.IDictionary<string,obj>)
+  name: 'val run: unit -> IDictionary<string,obj> -> int'
+  href: Pulumi/Pulumi.FSharp.Deployment.html#Pulumi_FSharp_Deployment_run_unit____System_Collections_Generic_IDictionary_string_obj__
+  commentId: M:Pulumi.FSharp.run(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,System.Collections.Generic.IDictionary{System.String,System.Object}})
+  fullName: 'val Pulumi.FSharp.Deployment.run: unit -> System.Collections.Generic.IDictionary<string,obj> -> int'
+  nameWithType: 'val Deployment.run: unit -> IDictionary<string,obj> -> int'
+- uid: Pulumi.FSharp.Deployment.run*
+  name: run
+  href: Pulumi/Pulumi.FSharp.Deployment.html#Pulumi_FSharp_Deployment_run_
+  commentId: Overload:Pulumi.FSharp.Deployment.run*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Deployment.run
+  nameWithType: Deployment.run
+- uid: Pulumi.FSharp.Deployment.runAsync(unit -> FSharp.Control.Async<System.Collections.Generic.IDictionary<string,obj>>)
+  name: 'val runAsync: unit -> Async<IDictionary<string,obj>> -> int'
+  href: Pulumi/Pulumi.FSharp.Deployment.html#Pulumi_FSharp_Deployment_runAsync_unit____FSharp_Control_Async_System_Collections_Generic_IDictionary_string_obj___
+  commentId: M:Pulumi.FSharp.runAsync(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Control.FSharpAsync{System.Collections.Generic.IDictionary{System.String,System.Object}}})
+  fullName: 'val Pulumi.FSharp.Deployment.runAsync: unit -> FSharp.Control.Async<System.Collections.Generic.IDictionary<string,obj>> -> int'
+  nameWithType: 'val Deployment.runAsync: unit -> Async<IDictionary<string,obj>> -> int'
+- uid: Pulumi.FSharp.Deployment.runAsync*
+  name: runAsync
+  href: Pulumi/Pulumi.FSharp.Deployment.html#Pulumi_FSharp_Deployment_runAsync_
+  commentId: Overload:Pulumi.FSharp.Deployment.runAsync*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Deployment.runAsync
+  nameWithType: Deployment.runAsync
+- uid: Pulumi.FSharp.Ops
+  name: Ops (mod)
+  href: Pulumi/Pulumi.FSharp.Ops.html
+  commentId: T:Pulumi.FSharp.Ops
+  fullName: Pulumi.FSharp.Ops
+  nameWithType: Pulumi.FSharp.Ops
+- uid: Pulumi.FSharp.Ops.input('a)
+  name: "val input: 'a -> Input<'a>"
+  href: Pulumi/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_input__a_
+  commentId: M:Pulumi.FSharp.input``1(``0)
+  fullName: "val Pulumi.FSharp.Ops.input: 'a -> Pulumi.Input<'a>"
+  nameWithType: "val Ops.input: 'a -> Input<'a>"
+- uid: Pulumi.FSharp.Ops.input*
+  name: input
+  href: Pulumi/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_input_
+  commentId: Overload:Pulumi.FSharp.Ops.input*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Ops.input
+  nameWithType: Ops.input
+- uid: Pulumi.FSharp.Ops.inputList(seq<Pulumi.Input<'a>>)
+  name: "val inputList: seq<Input<'a>> -> InputList<'a>"
+  href: Pulumi/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_inputList_seq_Pulumi_Input__a___
+  commentId: M:Pulumi.FSharp.inputList``1(System.Collections.Generic.IEnumerable{Pulumi.Input{``0}})
+  fullName: "val Pulumi.FSharp.Ops.inputList: seq<Pulumi.Input<'a>> -> Pulumi.InputList<'a>"
+  nameWithType: "val Ops.inputList: seq<Input<'a>> -> InputList<'a>"
+- uid: Pulumi.FSharp.Ops.inputList*
+  name: inputList
+  href: Pulumi/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_inputList_
+  commentId: Overload:Pulumi.FSharp.Ops.inputList*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Ops.inputList
+  nameWithType: Ops.inputList
+- uid: Pulumi.FSharp.Ops.inputMap(seq<string * Pulumi.Input<'a>>)
+  name: "val inputMap: seq<string * Input<'a>> -> InputMap<'a>"
+  href: Pulumi/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_inputMap_seq_string___Pulumi_Input__a___
+  commentId: M:Pulumi.FSharp.inputMap``1(System.Collections.Generic.IEnumerable{System.Tuple{System.String,Pulumi.Input{``0}}})
+  fullName: "val Pulumi.FSharp.Ops.inputMap: seq<string * Pulumi.Input<'a>> -> Pulumi.InputMap<'a>"
+  nameWithType: "val Ops.inputMap: seq<string * Input<'a>> -> InputMap<'a>"
+- uid: Pulumi.FSharp.Ops.inputMap*
+  name: inputMap
+  href: Pulumi/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_inputMap_
+  commentId: Overload:Pulumi.FSharp.Ops.inputMap*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Ops.inputMap
+  nameWithType: Ops.inputMap
+- uid: Pulumi.FSharp.Ops.io(Pulumi.Output<'a>)
+  name: "val io: Output<'a> -> Input<'a>"
+  href: Pulumi/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_io_Pulumi_Output__a__
+  commentId: M:Pulumi.FSharp.io``1(Pulumi.Output{``0})
+  fullName: "val Pulumi.FSharp.Ops.io: Pulumi.Output<'a> -> Pulumi.Input<'a>"
+  nameWithType: "val Ops.io: Output<'a> -> Input<'a>"
+- uid: Pulumi.FSharp.Ops.io*
+  name: io
+  href: Pulumi/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_io_
+  commentId: Overload:Pulumi.FSharp.Ops.io*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Ops.io
+  nameWithType: Ops.io
+- uid: Pulumi.FSharp.Outputs
+  name: Outputs (mod)
+  href: Pulumi/Pulumi.FSharp.Outputs.html
+  commentId: T:Pulumi.FSharp.Outputs
+  fullName: Pulumi.FSharp.Outputs
+  nameWithType: Pulumi.FSharp.Outputs
+- uid: Pulumi.FSharp.Outputs.all(List<Pulumi.Output<'a>>)
+  name: "val all: List<Output<'a>> -> Output<List<'a>>"
+  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_all_List_Pulumi_Output__a___
+  commentId: M:Pulumi.FSharp.all``1(Microsoft.FSharp.Collections.FSharpList{Pulumi.Output{``0}})
+  fullName: "val Pulumi.FSharp.Outputs.all: List<Pulumi.Output<'a>> -> Pulumi.Output<List<'a>>"
+  nameWithType: "val Outputs.all: List<Output<'a>> -> Output<List<'a>>"
+- uid: Pulumi.FSharp.Outputs.all*
+  name: all
+  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_all_
+  commentId: Overload:Pulumi.FSharp.Outputs.all*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Outputs.all
+  nameWithType: Outputs.all
+- uid: Pulumi.FSharp.Outputs.apply('a -> 'b -> Pulumi.Output<'a>)
+  name: "val apply: 'a -> 'b -> Output<'a> -> Output<'b>"
+  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_apply__a_____b____Pulumi_Output__a__
+  commentId: M:Pulumi.FSharp.apply``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Pulumi.Output{``0})
+  fullName: "val Pulumi.FSharp.Outputs.apply: 'a -> 'b -> Pulumi.Output<'a> -> Pulumi.Output<'b>"
+  nameWithType: "val Outputs.apply: 'a -> 'b -> Output<'a> -> Output<'b>"
+- uid: Pulumi.FSharp.Outputs.apply*
+  name: apply
+  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_apply_
+  commentId: Overload:Pulumi.FSharp.Outputs.apply*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Outputs.apply
+  nameWithType: Outputs.apply
+- uid: Pulumi.FSharp.Outputs.applyAsync('a -> FSharp.Control.Async<'b> -> Pulumi.Output<'a>)
+  name: "val applyAsync: 'a -> Async<'b> -> Output<'a> -> Output<'b>"
+  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_applyAsync__a____FSharp_Control_Async__b_____Pulumi_Output__a__
+  commentId: M:Pulumi.FSharp.applyAsync``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Control.FSharpAsync{``1}},Pulumi.Output{``0})
+  fullName: "val Pulumi.FSharp.Outputs.applyAsync: 'a -> FSharp.Control.Async<'b> -> Pulumi.Output<'a> -> Pulumi.Output<'b>"
+  nameWithType: "val Outputs.applyAsync: 'a -> Async<'b> -> Output<'a> -> Output<'b>"
+- uid: Pulumi.FSharp.Outputs.applyAsync*
+  name: applyAsync
+  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_applyAsync_
+  commentId: Overload:Pulumi.FSharp.Outputs.applyAsync*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Outputs.applyAsync
+  nameWithType: Outputs.applyAsync
+- uid: Pulumi.FSharp.Outputs.bind('a -> Pulumi.Output<'b> -> Pulumi.Output<'a>)
+  name: "val bind: 'a -> Output<'b> -> Output<'a> -> Output<'b>"
+  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_bind__a____Pulumi_Output__b_____Pulumi_Output__a__
+  commentId: M:Pulumi.FSharp.bind``2(Microsoft.FSharp.Core.FSharpFunc{``0,Pulumi.Output{``1}},Pulumi.Output{``0})
+  fullName: "val Pulumi.FSharp.Outputs.bind: 'a -> Pulumi.Output<'b> -> Pulumi.Output<'a> -> Pulumi.Output<'b>"
+  nameWithType: "val Outputs.bind: 'a -> Output<'b> -> Output<'a> -> Output<'b>"
+- uid: Pulumi.FSharp.Outputs.bind*
+  name: bind
+  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_bind_
+  commentId: Overload:Pulumi.FSharp.Outputs.bind*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Outputs.bind
+  nameWithType: Outputs.bind
+- uid: Pulumi.FSharp.Outputs.pair(Pulumi.Output<'a> -> Pulumi.Output<'b>)
+  name: "val pair: Output<'a> -> Output<'b> -> Output<'a * 'b>"
+  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair_Pulumi_Output__a_____Pulumi_Output__b__
+  commentId: M:Pulumi.FSharp.pair``2(Pulumi.Output{``0},Pulumi.Output{``1})
+  fullName: "val Pulumi.FSharp.Outputs.pair: Pulumi.Output<'a> -> Pulumi.Output<'b> -> Pulumi.Output<'a * 'b>"
+  nameWithType: "val Outputs.pair: Output<'a> -> Output<'b> -> Output<'a * 'b>"
+- uid: Pulumi.FSharp.Outputs.pair*
+  name: pair
+  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair_
+  commentId: Overload:Pulumi.FSharp.Outputs.pair*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Outputs.pair
+  nameWithType: Outputs.pair
+- uid: Pulumi.FSharp.Outputs.pair3(Pulumi.Output<'a> -> Pulumi.Output<'b> -> Pulumi.Output<'c>)
+  name: "val pair3: Output<'a> -> Output<'b> -> Output<'c> -> Output<'a * 'b * 'c>"
+  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair3_Pulumi_Output__a_____Pulumi_Output__b_____Pulumi_Output__c__
+  commentId: M:Pulumi.FSharp.pair3``3(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2})
+  fullName: "val Pulumi.FSharp.Outputs.pair3: Pulumi.Output<'a> -> Pulumi.Output<'b> -> Pulumi.Output<'c> -> Pulumi.Output<'a * 'b * 'c>"
+  nameWithType: "val Outputs.pair3: Output<'a> -> Output<'b> -> Output<'c> -> Output<'a * 'b * 'c>"
+- uid: Pulumi.FSharp.Outputs.pair3*
+  name: pair3
+  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair3_
+  commentId: Overload:Pulumi.FSharp.Outputs.pair3*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Outputs.pair3
+  nameWithType: Outputs.pair3
+- uid: Pulumi.FSharp.Outputs.pair4(Pulumi.Output<'a> -> Pulumi.Output<'b> -> Pulumi.Output<'c> -> Pulumi.Output<'d>)
+  name: "val pair4: Output<'a> -> Output<'b> -> Output<'c> -> Output<'d> -> Output<'a * 'b * 'c * 'd>"
+  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair4_Pulumi_Output__a_____Pulumi_Output__b_____Pulumi_Output__c_____Pulumi_Output__d__
+  commentId: M:Pulumi.FSharp.pair4``4(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3})
+  fullName: "val Pulumi.FSharp.Outputs.pair4: Pulumi.Output<'a> -> Pulumi.Output<'b> -> Pulumi.Output<'c> -> Pulumi.Output<'d> -> Pulumi.Output<'a * 'b * 'c * 'd>"
+  nameWithType: "val Outputs.pair4: Output<'a> -> Output<'b> -> Output<'c> -> Output<'d> -> Output<'a * 'b * 'c * 'd>"
+- uid: Pulumi.FSharp.Outputs.pair4*
+  name: pair4
+  href: Pulumi/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair4_
+  commentId: Overload:Pulumi.FSharp.Outputs.pair4*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Outputs.pair4
+  nameWithType: Outputs.pair4
 - uid: Pulumi.IDeployment
   name: IDeployment
   href: Pulumi/Pulumi.IDeployment.html
@@ -985,40 +1175,40 @@ references:
   isSpec: "True"
   fullName: Pulumi.InputExtensions.Apply
   nameWithType: InputExtensions.Apply
-- uid: Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},Func{``0,``1})
+- uid: Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,``1})
   name: Apply<T, U>(Input<T>, Func<T, U>)
-  href: Pulumi/Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__Func___0___1__
-  commentId: M:Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},Func{``0,``1})
+  href: Pulumi/Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0___1__
+  commentId: M:Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,``1})
   name.vb: Apply(Of T, U)(Input(Of T), Func(Of T, U))
-  fullName: Pulumi.InputExtensions.Apply<T, U>(Pulumi.Input<T>, Func<T, U>)
-  fullName.vb: Pulumi.InputExtensions.Apply(Of T, U)(Pulumi.Input(Of T), Func(Of T, U))
+  fullName: Pulumi.InputExtensions.Apply<T, U>(Pulumi.Input<T>, System.Func<T, U>)
+  fullName.vb: Pulumi.InputExtensions.Apply(Of T, U)(Pulumi.Input(Of T), System.Func(Of T, U))
   nameWithType: InputExtensions.Apply<T, U>(Input<T>, Func<T, U>)
   nameWithType.vb: InputExtensions.Apply(Of T, U)(Input(Of T), Func(Of T, U))
-- uid: Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},Func{``0,Pulumi.Input{``1}})
+- uid: Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,Pulumi.Input{``1}})
   name: Apply<T, U>(Input<T>, Func<T, Input<U>>)
-  href: Pulumi/Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__Func___0_Pulumi_Input___1___
-  commentId: M:Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},Func{``0,Pulumi.Input{``1}})
+  href: Pulumi/Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Input___1___
+  commentId: M:Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,Pulumi.Input{``1}})
   name.vb: Apply(Of T, U)(Input(Of T), Func(Of T, Input(Of U)))
-  fullName: Pulumi.InputExtensions.Apply<T, U>(Pulumi.Input<T>, Func<T, Pulumi.Input<U>>)
-  fullName.vb: Pulumi.InputExtensions.Apply(Of T, U)(Pulumi.Input(Of T), Func(Of T, Pulumi.Input(Of U)))
+  fullName: Pulumi.InputExtensions.Apply<T, U>(Pulumi.Input<T>, System.Func<T, Pulumi.Input<U>>)
+  fullName.vb: Pulumi.InputExtensions.Apply(Of T, U)(Pulumi.Input(Of T), System.Func(Of T, Pulumi.Input(Of U)))
   nameWithType: InputExtensions.Apply<T, U>(Input<T>, Func<T, Input<U>>)
   nameWithType.vb: InputExtensions.Apply(Of T, U)(Input(Of T), Func(Of T, Input(Of U)))
-- uid: Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},Func{``0,Pulumi.Output{``1}})
+- uid: Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,Pulumi.Output{``1}})
   name: Apply<T, U>(Input<T>, Func<T, Output<U>>)
-  href: Pulumi/Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__Func___0_Pulumi_Output___1___
-  commentId: M:Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},Func{``0,Pulumi.Output{``1}})
+  href: Pulumi/Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Output___1___
+  commentId: M:Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,Pulumi.Output{``1}})
   name.vb: Apply(Of T, U)(Input(Of T), Func(Of T, Output(Of U)))
-  fullName: Pulumi.InputExtensions.Apply<T, U>(Pulumi.Input<T>, Func<T, Pulumi.Output<U>>)
-  fullName.vb: Pulumi.InputExtensions.Apply(Of T, U)(Pulumi.Input(Of T), Func(Of T, Pulumi.Output(Of U)))
+  fullName: Pulumi.InputExtensions.Apply<T, U>(Pulumi.Input<T>, System.Func<T, Pulumi.Output<U>>)
+  fullName.vb: Pulumi.InputExtensions.Apply(Of T, U)(Pulumi.Input(Of T), System.Func(Of T, Pulumi.Output(Of U)))
   nameWithType: InputExtensions.Apply<T, U>(Input<T>, Func<T, Output<U>>)
   nameWithType.vb: InputExtensions.Apply(Of T, U)(Input(Of T), Func(Of T, Output(Of U)))
-- uid: Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},Func{``0,Task{``1}})
+- uid: Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,System.Threading.Tasks.Task{``1}})
   name: Apply<T, U>(Input<T>, Func<T, Task<U>>)
-  href: Pulumi/Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__Func___0_Task___1___
-  commentId: M:Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},Func{``0,Task{``1}})
+  href: Pulumi/Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_System_Threading_Tasks_Task___1___
+  commentId: M:Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,System.Threading.Tasks.Task{``1}})
   name.vb: Apply(Of T, U)(Input(Of T), Func(Of T, Task(Of U)))
-  fullName: Pulumi.InputExtensions.Apply<T, U>(Pulumi.Input<T>, Func<T, Task<U>>)
-  fullName.vb: Pulumi.InputExtensions.Apply(Of T, U)(Pulumi.Input(Of T), Func(Of T, Task(Of U)))
+  fullName: Pulumi.InputExtensions.Apply<T, U>(Pulumi.Input<T>, System.Func<T, System.Threading.Tasks.Task<U>>)
+  fullName.vb: Pulumi.InputExtensions.Apply(Of T, U)(Pulumi.Input(Of T), System.Func(Of T, System.Threading.Tasks.Task(Of U)))
   nameWithType: InputExtensions.Apply<T, U>(Input<T>, Func<T, Task<U>>)
   nameWithType.vb: InputExtensions.Apply(Of T, U)(Input(Of T), Func(Of T, Task(Of U)))
 - uid: Pulumi.InputExtensions.ToOutput*
@@ -1182,12 +1372,12 @@ references:
   fullName.vb: Pulumi.InputList(Of T).Concat
   nameWithType: InputList<T>.Concat
   nameWithType.vb: InputList(Of T).Concat
-- uid: Pulumi.InputList`1.GetAsyncEnumerator(CancellationToken)
+- uid: Pulumi.InputList`1.GetAsyncEnumerator(System.Threading.CancellationToken)
   name: GetAsyncEnumerator(CancellationToken)
-  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_GetAsyncEnumerator_CancellationToken_
-  commentId: M:Pulumi.InputList`1.GetAsyncEnumerator(CancellationToken)
-  fullName: Pulumi.InputList<T>.GetAsyncEnumerator(CancellationToken)
-  fullName.vb: Pulumi.InputList(Of T).GetAsyncEnumerator(CancellationToken)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_GetAsyncEnumerator_System_Threading_CancellationToken_
+  commentId: M:Pulumi.InputList`1.GetAsyncEnumerator(System.Threading.CancellationToken)
+  fullName: Pulumi.InputList<T>.GetAsyncEnumerator(System.Threading.CancellationToken)
+  fullName.vb: Pulumi.InputList(Of T).GetAsyncEnumerator(System.Threading.CancellationToken)
   nameWithType: InputList<T>.GetAsyncEnumerator(CancellationToken)
   nameWithType.vb: InputList(Of T).GetAsyncEnumerator(CancellationToken)
 - uid: Pulumi.InputList`1.GetAsyncEnumerator*
@@ -1217,60 +1407,6 @@ references:
   fullName.vb: Pulumi.InputList(Of T).Widening(T() to Pulumi.InputList(Of T))
   nameWithType: InputList<T>.Implicit(T[] to InputList<T>)
   nameWithType.vb: InputList(Of T).Widening(T() to InputList(Of T))
-- uid: Pulumi.InputList`1.op_Implicit(ImmutableArray{`0})~Pulumi.InputList{`0}
-  name: Implicit(ImmutableArray<T> to InputList<T>)
-  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_ImmutableArray__0___Pulumi_InputList__0_
-  commentId: M:Pulumi.InputList`1.op_Implicit(ImmutableArray{`0})~Pulumi.InputList{`0}
-  name.vb: Widening(ImmutableArray(Of T) to InputList(Of T))
-  fullName: Pulumi.InputList<T>.Implicit(ImmutableArray<T> to Pulumi.InputList<T>)
-  fullName.vb: Pulumi.InputList(Of T).Widening(ImmutableArray(Of T) to Pulumi.InputList(Of T))
-  nameWithType: InputList<T>.Implicit(ImmutableArray<T> to InputList<T>)
-  nameWithType.vb: InputList(Of T).Widening(ImmutableArray(Of T) to InputList(Of T))
-- uid: Pulumi.InputList`1.op_Implicit(ImmutableArray{Pulumi.Input{`0}})~Pulumi.InputList{`0}
-  name: Implicit(ImmutableArray<Input<T>> to InputList<T>)
-  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_ImmutableArray_Pulumi_Input__0____Pulumi_InputList__0_
-  commentId: M:Pulumi.InputList`1.op_Implicit(ImmutableArray{Pulumi.Input{`0}})~Pulumi.InputList{`0}
-  name.vb: Widening(ImmutableArray(Of Input(Of T)) to InputList(Of T))
-  fullName: Pulumi.InputList<T>.Implicit(ImmutableArray<Pulumi.Input<T>> to Pulumi.InputList<T>)
-  fullName.vb: Pulumi.InputList(Of T).Widening(ImmutableArray(Of Pulumi.Input(Of T)) to Pulumi.InputList(Of T))
-  nameWithType: InputList<T>.Implicit(ImmutableArray<Input<T>> to InputList<T>)
-  nameWithType.vb: InputList(Of T).Widening(ImmutableArray(Of Input(Of T)) to InputList(Of T))
-- uid: Pulumi.InputList`1.op_Implicit(ImmutableArray{Pulumi.Output{`0}})~Pulumi.InputList{`0}
-  name: Implicit(ImmutableArray<Output<T>> to InputList<T>)
-  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_ImmutableArray_Pulumi_Output__0____Pulumi_InputList__0_
-  commentId: M:Pulumi.InputList`1.op_Implicit(ImmutableArray{Pulumi.Output{`0}})~Pulumi.InputList{`0}
-  name.vb: Widening(ImmutableArray(Of Output(Of T)) to InputList(Of T))
-  fullName: Pulumi.InputList<T>.Implicit(ImmutableArray<Pulumi.Output<T>> to Pulumi.InputList<T>)
-  fullName.vb: Pulumi.InputList(Of T).Widening(ImmutableArray(Of Pulumi.Output(Of T)) to Pulumi.InputList(Of T))
-  nameWithType: InputList<T>.Implicit(ImmutableArray<Output<T>> to InputList<T>)
-  nameWithType.vb: InputList(Of T).Widening(ImmutableArray(Of Output(Of T)) to InputList(Of T))
-- uid: Pulumi.InputList`1.op_Implicit(List{`0})~Pulumi.InputList{`0}
-  name: Implicit(List<T> to InputList<T>)
-  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_List__0___Pulumi_InputList__0_
-  commentId: M:Pulumi.InputList`1.op_Implicit(List{`0})~Pulumi.InputList{`0}
-  name.vb: Widening(List(Of T) to InputList(Of T))
-  fullName: Pulumi.InputList<T>.Implicit(List<T> to Pulumi.InputList<T>)
-  fullName.vb: Pulumi.InputList(Of T).Widening(List(Of T) to Pulumi.InputList(Of T))
-  nameWithType: InputList<T>.Implicit(List<T> to InputList<T>)
-  nameWithType.vb: InputList(Of T).Widening(List(Of T) to InputList(Of T))
-- uid: Pulumi.InputList`1.op_Implicit(List{Pulumi.Input{`0}})~Pulumi.InputList{`0}
-  name: Implicit(List<Input<T>> to InputList<T>)
-  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_List_Pulumi_Input__0____Pulumi_InputList__0_
-  commentId: M:Pulumi.InputList`1.op_Implicit(List{Pulumi.Input{`0}})~Pulumi.InputList{`0}
-  name.vb: Widening(List(Of Input(Of T)) to InputList(Of T))
-  fullName: Pulumi.InputList<T>.Implicit(List<Pulumi.Input<T>> to Pulumi.InputList<T>)
-  fullName.vb: Pulumi.InputList(Of T).Widening(List(Of Pulumi.Input(Of T)) to Pulumi.InputList(Of T))
-  nameWithType: InputList<T>.Implicit(List<Input<T>> to InputList<T>)
-  nameWithType.vb: InputList(Of T).Widening(List(Of Input(Of T)) to InputList(Of T))
-- uid: Pulumi.InputList`1.op_Implicit(List{Pulumi.Output{`0}})~Pulumi.InputList{`0}
-  name: Implicit(List<Output<T>> to InputList<T>)
-  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_List_Pulumi_Output__0____Pulumi_InputList__0_
-  commentId: M:Pulumi.InputList`1.op_Implicit(List{Pulumi.Output{`0}})~Pulumi.InputList{`0}
-  name.vb: Widening(List(Of Output(Of T)) to InputList(Of T))
-  fullName: Pulumi.InputList<T>.Implicit(List<Pulumi.Output<T>> to Pulumi.InputList<T>)
-  fullName.vb: Pulumi.InputList(Of T).Widening(List(Of Pulumi.Output(Of T)) to Pulumi.InputList(Of T))
-  nameWithType: InputList<T>.Implicit(List<Output<T>> to InputList<T>)
-  nameWithType.vb: InputList(Of T).Widening(List(Of Output(Of T)) to InputList(Of T))
 - uid: Pulumi.InputList`1.op_Implicit(Pulumi.Input{`0})~Pulumi.InputList{`0}
   name: Implicit(Input<T> to InputList<T>)
   href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_Pulumi_Input__0___Pulumi_InputList__0_
@@ -1316,33 +1452,87 @@ references:
   fullName.vb: Pulumi.InputList(Of T).Widening(Pulumi.Output(Of T)() to Pulumi.InputList(Of T))
   nameWithType: InputList<T>.Implicit(Output<T>[] to InputList<T>)
   nameWithType.vb: InputList(Of T).Widening(Output(Of T)() to InputList(Of T))
-- uid: Pulumi.InputList`1.op_Implicit(Pulumi.Output{IEnumerable{`0}})~Pulumi.InputList{`0}
+- uid: Pulumi.InputList`1.op_Implicit(Pulumi.Output{System.Collections.Generic.IEnumerable{`0}})~Pulumi.InputList{`0}
   name: Implicit(Output<IEnumerable<T>> to InputList<T>)
-  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_Pulumi_Output_IEnumerable__0____Pulumi_InputList__0_
-  commentId: M:Pulumi.InputList`1.op_Implicit(Pulumi.Output{IEnumerable{`0}})~Pulumi.InputList{`0}
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_Pulumi_Output_System_Collections_Generic_IEnumerable__0____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(Pulumi.Output{System.Collections.Generic.IEnumerable{`0}})~Pulumi.InputList{`0}
   name.vb: Widening(Output(Of IEnumerable(Of T)) to InputList(Of T))
-  fullName: Pulumi.InputList<T>.Implicit(Pulumi.Output<IEnumerable<T>> to Pulumi.InputList<T>)
-  fullName.vb: Pulumi.InputList(Of T).Widening(Pulumi.Output(Of IEnumerable(Of T)) to Pulumi.InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(Pulumi.Output<System.Collections.Generic.IEnumerable<T>> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(Pulumi.Output(Of System.Collections.Generic.IEnumerable(Of T)) to Pulumi.InputList(Of T))
   nameWithType: InputList<T>.Implicit(Output<IEnumerable<T>> to InputList<T>)
   nameWithType.vb: InputList(Of T).Widening(Output(Of IEnumerable(Of T)) to InputList(Of T))
-- uid: Pulumi.InputList`1.op_Implicit(Pulumi.Output{ImmutableArray{`0}})~Pulumi.InputList{`0}
-  name: Implicit(Output<ImmutableArray<T>> to InputList<T>)
-  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_Pulumi_Output_ImmutableArray__0____Pulumi_InputList__0_
-  commentId: M:Pulumi.InputList`1.op_Implicit(Pulumi.Output{ImmutableArray{`0}})~Pulumi.InputList{`0}
-  name.vb: Widening(Output(Of ImmutableArray(Of T)) to InputList(Of T))
-  fullName: Pulumi.InputList<T>.Implicit(Pulumi.Output<ImmutableArray<T>> to Pulumi.InputList<T>)
-  fullName.vb: Pulumi.InputList(Of T).Widening(Pulumi.Output(Of ImmutableArray(Of T)) to Pulumi.InputList(Of T))
-  nameWithType: InputList<T>.Implicit(Output<ImmutableArray<T>> to InputList<T>)
-  nameWithType.vb: InputList(Of T).Widening(Output(Of ImmutableArray(Of T)) to InputList(Of T))
-- uid: Pulumi.InputList`1.op_Implicit(Pulumi.Output{List{`0}})~Pulumi.InputList{`0}
+- uid: Pulumi.InputList`1.op_Implicit(Pulumi.Output{System.Collections.Generic.List{`0}})~Pulumi.InputList{`0}
   name: Implicit(Output<List<T>> to InputList<T>)
-  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_Pulumi_Output_List__0____Pulumi_InputList__0_
-  commentId: M:Pulumi.InputList`1.op_Implicit(Pulumi.Output{List{`0}})~Pulumi.InputList{`0}
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_Pulumi_Output_System_Collections_Generic_List__0____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(Pulumi.Output{System.Collections.Generic.List{`0}})~Pulumi.InputList{`0}
   name.vb: Widening(Output(Of List(Of T)) to InputList(Of T))
-  fullName: Pulumi.InputList<T>.Implicit(Pulumi.Output<List<T>> to Pulumi.InputList<T>)
-  fullName.vb: Pulumi.InputList(Of T).Widening(Pulumi.Output(Of List(Of T)) to Pulumi.InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(Pulumi.Output<System.Collections.Generic.List<T>> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(Pulumi.Output(Of System.Collections.Generic.List(Of T)) to Pulumi.InputList(Of T))
   nameWithType: InputList<T>.Implicit(Output<List<T>> to InputList<T>)
   nameWithType.vb: InputList(Of T).Widening(Output(Of List(Of T)) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(Pulumi.Output{System.Collections.Immutable.ImmutableArray{`0}})~Pulumi.InputList{`0}
+  name: Implicit(Output<ImmutableArray<T>> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_Pulumi_Output_System_Collections_Immutable_ImmutableArray__0____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(Pulumi.Output{System.Collections.Immutable.ImmutableArray{`0}})~Pulumi.InputList{`0}
+  name.vb: Widening(Output(Of ImmutableArray(Of T)) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(Pulumi.Output<System.Collections.Immutable.ImmutableArray<T>> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(Pulumi.Output(Of System.Collections.Immutable.ImmutableArray(Of T)) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(Output<ImmutableArray<T>> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(Output(Of ImmutableArray(Of T)) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(System.Collections.Generic.List{`0})~Pulumi.InputList{`0}
+  name: Implicit(List<T> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_System_Collections_Generic_List__0___Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(System.Collections.Generic.List{`0})~Pulumi.InputList{`0}
+  name.vb: Widening(List(Of T) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(System.Collections.Generic.List<T> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(System.Collections.Generic.List(Of T) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(List<T> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(List(Of T) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(System.Collections.Generic.List{Pulumi.Input{`0}})~Pulumi.InputList{`0}
+  name: Implicit(List<Input<T>> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_System_Collections_Generic_List_Pulumi_Input__0____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(System.Collections.Generic.List{Pulumi.Input{`0}})~Pulumi.InputList{`0}
+  name.vb: Widening(List(Of Input(Of T)) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(System.Collections.Generic.List<Pulumi.Input<T>> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(System.Collections.Generic.List(Of Pulumi.Input(Of T)) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(List<Input<T>> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(List(Of Input(Of T)) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(System.Collections.Generic.List{Pulumi.Output{`0}})~Pulumi.InputList{`0}
+  name: Implicit(List<Output<T>> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_System_Collections_Generic_List_Pulumi_Output__0____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(System.Collections.Generic.List{Pulumi.Output{`0}})~Pulumi.InputList{`0}
+  name.vb: Widening(List(Of Output(Of T)) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(System.Collections.Generic.List<Pulumi.Output<T>> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(System.Collections.Generic.List(Of Pulumi.Output(Of T)) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(List<Output<T>> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(List(Of Output(Of T)) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(System.Collections.Immutable.ImmutableArray{`0})~Pulumi.InputList{`0}
+  name: Implicit(ImmutableArray<T> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_System_Collections_Immutable_ImmutableArray__0___Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(System.Collections.Immutable.ImmutableArray{`0})~Pulumi.InputList{`0}
+  name.vb: Widening(ImmutableArray(Of T) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(System.Collections.Immutable.ImmutableArray<T> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(System.Collections.Immutable.ImmutableArray(Of T) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(ImmutableArray<T> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(ImmutableArray(Of T) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(System.Collections.Immutable.ImmutableArray{Pulumi.Input{`0}})~Pulumi.InputList{`0}
+  name: Implicit(ImmutableArray<Input<T>> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_System_Collections_Immutable_ImmutableArray_Pulumi_Input__0____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(System.Collections.Immutable.ImmutableArray{Pulumi.Input{`0}})~Pulumi.InputList{`0}
+  name.vb: Widening(ImmutableArray(Of Input(Of T)) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(System.Collections.Immutable.ImmutableArray<Pulumi.Input<T>> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(System.Collections.Immutable.ImmutableArray(Of Pulumi.Input(Of T)) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(ImmutableArray<Input<T>> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(ImmutableArray(Of Input(Of T)) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(System.Collections.Immutable.ImmutableArray{Pulumi.Output{`0}})~Pulumi.InputList{`0}
+  name: Implicit(ImmutableArray<Output<T>> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_System_Collections_Immutable_ImmutableArray_Pulumi_Output__0____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(System.Collections.Immutable.ImmutableArray{Pulumi.Output{`0}})~Pulumi.InputList{`0}
+  name.vb: Widening(ImmutableArray(Of Output(Of T)) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(System.Collections.Immutable.ImmutableArray<Pulumi.Output<T>> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(System.Collections.Immutable.ImmutableArray(Of Pulumi.Output(Of T)) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(ImmutableArray<Output<T>> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(ImmutableArray(Of Output(Of T)) to InputList(Of T))
 - uid: Pulumi.InputList`1.op_Implicit*
   name: Implicit
   href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_
@@ -1353,6 +1543,25 @@ references:
   fullName.vb: Pulumi.InputList(Of T).Widening
   nameWithType: InputList<T>.Implicit
   nameWithType.vb: InputList(Of T).Widening
+- uid: Pulumi.InputList`1.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Pulumi.InputList`1.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Pulumi.InputList<T>.System.Collections.IEnumerable.GetEnumerator()
+  fullName.vb: Pulumi.InputList(Of T).System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: InputList<T>.IEnumerable.GetEnumerator()
+  nameWithType.vb: InputList(Of T).System.Collections.IEnumerable.GetEnumerator()
+- uid: Pulumi.InputList`1.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Pulumi.InputList`1.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Pulumi.InputList<T>.System.Collections.IEnumerable.GetEnumerator
+  fullName.vb: Pulumi.InputList(Of T).System.Collections.IEnumerable.GetEnumerator
+  nameWithType: InputList<T>.IEnumerable.GetEnumerator
+  nameWithType.vb: InputList(Of T).System.Collections.IEnumerable.GetEnumerator
 - uid: Pulumi.InputMap`1
   name: InputMap<V>
   href: Pulumi/Pulumi.InputMap-1.html
@@ -1397,12 +1606,12 @@ references:
   fullName.vb: Pulumi.InputMap(Of V).Add
   nameWithType: InputMap<V>.Add
   nameWithType.vb: InputMap(Of V).Add
-- uid: Pulumi.InputMap`1.GetAsyncEnumerator(CancellationToken)
+- uid: Pulumi.InputMap`1.GetAsyncEnumerator(System.Threading.CancellationToken)
   name: GetAsyncEnumerator(CancellationToken)
-  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_GetAsyncEnumerator_CancellationToken_
-  commentId: M:Pulumi.InputMap`1.GetAsyncEnumerator(CancellationToken)
-  fullName: Pulumi.InputMap<V>.GetAsyncEnumerator(CancellationToken)
-  fullName.vb: Pulumi.InputMap(Of V).GetAsyncEnumerator(CancellationToken)
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_GetAsyncEnumerator_System_Threading_CancellationToken_
+  commentId: M:Pulumi.InputMap`1.GetAsyncEnumerator(System.Threading.CancellationToken)
+  fullName: Pulumi.InputMap<V>.GetAsyncEnumerator(System.Threading.CancellationToken)
+  fullName.vb: Pulumi.InputMap(Of V).GetAsyncEnumerator(System.Threading.CancellationToken)
   nameWithType: InputMap<V>.GetAsyncEnumerator(CancellationToken)
   nameWithType.vb: InputMap(Of V).GetAsyncEnumerator(CancellationToken)
 - uid: Pulumi.InputMap`1.GetAsyncEnumerator*
@@ -1450,51 +1659,51 @@ references:
   fullName.vb: Pulumi.InputMap(Of V).Merge
   nameWithType: InputMap<V>.Merge
   nameWithType.vb: InputMap(Of V).Merge
-- uid: Pulumi.InputMap`1.op_Implicit(Dictionary{System.String,`0})~Pulumi.InputMap{`0}
-  name: Implicit(Dictionary<String, V> to InputMap<V>)
-  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_Dictionary_System_String__0___Pulumi_InputMap__0_
-  commentId: M:Pulumi.InputMap`1.op_Implicit(Dictionary{System.String,`0})~Pulumi.InputMap{`0}
-  name.vb: Widening(Dictionary(Of String, V) to InputMap(Of V))
-  fullName: Pulumi.InputMap<V>.Implicit(Dictionary<System.String, V> to Pulumi.InputMap<V>)
-  fullName.vb: Pulumi.InputMap(Of V).Widening(Dictionary(Of System.String, V) to Pulumi.InputMap(Of V))
-  nameWithType: InputMap<V>.Implicit(Dictionary<String, V> to InputMap<V>)
-  nameWithType.vb: InputMap(Of V).Widening(Dictionary(Of String, V) to InputMap(Of V))
-- uid: Pulumi.InputMap`1.op_Implicit(ImmutableDictionary{System.String,`0})~Pulumi.InputMap{`0}
-  name: Implicit(ImmutableDictionary<String, V> to InputMap<V>)
-  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_ImmutableDictionary_System_String__0___Pulumi_InputMap__0_
-  commentId: M:Pulumi.InputMap`1.op_Implicit(ImmutableDictionary{System.String,`0})~Pulumi.InputMap{`0}
-  name.vb: Widening(ImmutableDictionary(Of String, V) to InputMap(Of V))
-  fullName: Pulumi.InputMap<V>.Implicit(ImmutableDictionary<System.String, V> to Pulumi.InputMap<V>)
-  fullName.vb: Pulumi.InputMap(Of V).Widening(ImmutableDictionary(Of System.String, V) to Pulumi.InputMap(Of V))
-  nameWithType: InputMap<V>.Implicit(ImmutableDictionary<String, V> to InputMap<V>)
-  nameWithType.vb: InputMap(Of V).Widening(ImmutableDictionary(Of String, V) to InputMap(Of V))
-- uid: Pulumi.InputMap`1.op_Implicit(Pulumi.Output{Dictionary{System.String,`0}})~Pulumi.InputMap{`0}
+- uid: Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Generic.Dictionary{System.String,`0}})~Pulumi.InputMap{`0}
   name: Implicit(Output<Dictionary<String, V>> to InputMap<V>)
-  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_Pulumi_Output_Dictionary_System_String__0____Pulumi_InputMap__0_
-  commentId: M:Pulumi.InputMap`1.op_Implicit(Pulumi.Output{Dictionary{System.String,`0}})~Pulumi.InputMap{`0}
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_Pulumi_Output_System_Collections_Generic_Dictionary_System_String__0____Pulumi_InputMap__0_
+  commentId: M:Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Generic.Dictionary{System.String,`0}})~Pulumi.InputMap{`0}
   name.vb: Widening(Output(Of Dictionary(Of String, V)) to InputMap(Of V))
-  fullName: Pulumi.InputMap<V>.Implicit(Pulumi.Output<Dictionary<System.String, V>> to Pulumi.InputMap<V>)
-  fullName.vb: Pulumi.InputMap(Of V).Widening(Pulumi.Output(Of Dictionary(Of System.String, V)) to Pulumi.InputMap(Of V))
+  fullName: Pulumi.InputMap<V>.Implicit(Pulumi.Output<System.Collections.Generic.Dictionary<System.String, V>> to Pulumi.InputMap<V>)
+  fullName.vb: Pulumi.InputMap(Of V).Widening(Pulumi.Output(Of System.Collections.Generic.Dictionary(Of System.String, V)) to Pulumi.InputMap(Of V))
   nameWithType: InputMap<V>.Implicit(Output<Dictionary<String, V>> to InputMap<V>)
   nameWithType.vb: InputMap(Of V).Widening(Output(Of Dictionary(Of String, V)) to InputMap(Of V))
-- uid: Pulumi.InputMap`1.op_Implicit(Pulumi.Output{IDictionary{System.String,`0}})~Pulumi.InputMap{`0}
+- uid: Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Generic.IDictionary{System.String,`0}})~Pulumi.InputMap{`0}
   name: Implicit(Output<IDictionary<String, V>> to InputMap<V>)
-  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_Pulumi_Output_IDictionary_System_String__0____Pulumi_InputMap__0_
-  commentId: M:Pulumi.InputMap`1.op_Implicit(Pulumi.Output{IDictionary{System.String,`0}})~Pulumi.InputMap{`0}
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_Pulumi_Output_System_Collections_Generic_IDictionary_System_String__0____Pulumi_InputMap__0_
+  commentId: M:Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Generic.IDictionary{System.String,`0}})~Pulumi.InputMap{`0}
   name.vb: Widening(Output(Of IDictionary(Of String, V)) to InputMap(Of V))
-  fullName: Pulumi.InputMap<V>.Implicit(Pulumi.Output<IDictionary<System.String, V>> to Pulumi.InputMap<V>)
-  fullName.vb: Pulumi.InputMap(Of V).Widening(Pulumi.Output(Of IDictionary(Of System.String, V)) to Pulumi.InputMap(Of V))
+  fullName: Pulumi.InputMap<V>.Implicit(Pulumi.Output<System.Collections.Generic.IDictionary<System.String, V>> to Pulumi.InputMap<V>)
+  fullName.vb: Pulumi.InputMap(Of V).Widening(Pulumi.Output(Of System.Collections.Generic.IDictionary(Of System.String, V)) to Pulumi.InputMap(Of V))
   nameWithType: InputMap<V>.Implicit(Output<IDictionary<String, V>> to InputMap<V>)
   nameWithType.vb: InputMap(Of V).Widening(Output(Of IDictionary(Of String, V)) to InputMap(Of V))
-- uid: Pulumi.InputMap`1.op_Implicit(Pulumi.Output{ImmutableDictionary{System.String,`0}})~Pulumi.InputMap{`0}
+- uid: Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Immutable.ImmutableDictionary{System.String,`0}})~Pulumi.InputMap{`0}
   name: Implicit(Output<ImmutableDictionary<String, V>> to InputMap<V>)
-  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_Pulumi_Output_ImmutableDictionary_System_String__0____Pulumi_InputMap__0_
-  commentId: M:Pulumi.InputMap`1.op_Implicit(Pulumi.Output{ImmutableDictionary{System.String,`0}})~Pulumi.InputMap{`0}
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_Pulumi_Output_System_Collections_Immutable_ImmutableDictionary_System_String__0____Pulumi_InputMap__0_
+  commentId: M:Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Immutable.ImmutableDictionary{System.String,`0}})~Pulumi.InputMap{`0}
   name.vb: Widening(Output(Of ImmutableDictionary(Of String, V)) to InputMap(Of V))
-  fullName: Pulumi.InputMap<V>.Implicit(Pulumi.Output<ImmutableDictionary<System.String, V>> to Pulumi.InputMap<V>)
-  fullName.vb: Pulumi.InputMap(Of V).Widening(Pulumi.Output(Of ImmutableDictionary(Of System.String, V)) to Pulumi.InputMap(Of V))
+  fullName: Pulumi.InputMap<V>.Implicit(Pulumi.Output<System.Collections.Immutable.ImmutableDictionary<System.String, V>> to Pulumi.InputMap<V>)
+  fullName.vb: Pulumi.InputMap(Of V).Widening(Pulumi.Output(Of System.Collections.Immutable.ImmutableDictionary(Of System.String, V)) to Pulumi.InputMap(Of V))
   nameWithType: InputMap<V>.Implicit(Output<ImmutableDictionary<String, V>> to InputMap<V>)
   nameWithType.vb: InputMap(Of V).Widening(Output(Of ImmutableDictionary(Of String, V)) to InputMap(Of V))
+- uid: Pulumi.InputMap`1.op_Implicit(System.Collections.Generic.Dictionary{System.String,`0})~Pulumi.InputMap{`0}
+  name: Implicit(Dictionary<String, V> to InputMap<V>)
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_System_Collections_Generic_Dictionary_System_String__0___Pulumi_InputMap__0_
+  commentId: M:Pulumi.InputMap`1.op_Implicit(System.Collections.Generic.Dictionary{System.String,`0})~Pulumi.InputMap{`0}
+  name.vb: Widening(Dictionary(Of String, V) to InputMap(Of V))
+  fullName: Pulumi.InputMap<V>.Implicit(System.Collections.Generic.Dictionary<System.String, V> to Pulumi.InputMap<V>)
+  fullName.vb: Pulumi.InputMap(Of V).Widening(System.Collections.Generic.Dictionary(Of System.String, V) to Pulumi.InputMap(Of V))
+  nameWithType: InputMap<V>.Implicit(Dictionary<String, V> to InputMap<V>)
+  nameWithType.vb: InputMap(Of V).Widening(Dictionary(Of String, V) to InputMap(Of V))
+- uid: Pulumi.InputMap`1.op_Implicit(System.Collections.Immutable.ImmutableDictionary{System.String,`0})~Pulumi.InputMap{`0}
+  name: Implicit(ImmutableDictionary<String, V> to InputMap<V>)
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_System_Collections_Immutable_ImmutableDictionary_System_String__0___Pulumi_InputMap__0_
+  commentId: M:Pulumi.InputMap`1.op_Implicit(System.Collections.Immutable.ImmutableDictionary{System.String,`0})~Pulumi.InputMap{`0}
+  name.vb: Widening(ImmutableDictionary(Of String, V) to InputMap(Of V))
+  fullName: Pulumi.InputMap<V>.Implicit(System.Collections.Immutable.ImmutableDictionary<System.String, V> to Pulumi.InputMap<V>)
+  fullName.vb: Pulumi.InputMap(Of V).Widening(System.Collections.Immutable.ImmutableDictionary(Of System.String, V) to Pulumi.InputMap(Of V))
+  nameWithType: InputMap<V>.Implicit(ImmutableDictionary<String, V> to InputMap<V>)
+  nameWithType.vb: InputMap(Of V).Widening(ImmutableDictionary(Of String, V) to InputMap(Of V))
 - uid: Pulumi.InputMap`1.op_Implicit*
   name: Implicit
   href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_
@@ -1505,6 +1714,25 @@ references:
   fullName.vb: Pulumi.InputMap(Of V).Widening
   nameWithType: InputMap<V>.Implicit
   nameWithType.vb: InputMap(Of V).Widening
+- uid: Pulumi.InputMap`1.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Pulumi.InputMap`1.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Pulumi.InputMap<V>.System.Collections.IEnumerable.GetEnumerator()
+  fullName.vb: Pulumi.InputMap(Of V).System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: InputMap<V>.IEnumerable.GetEnumerator()
+  nameWithType.vb: InputMap(Of V).System.Collections.IEnumerable.GetEnumerator()
+- uid: Pulumi.InputMap`1.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Pulumi.InputMap`1.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Pulumi.InputMap<V>.System.Collections.IEnumerable.GetEnumerator
+  fullName.vb: Pulumi.InputMap(Of V).System.Collections.IEnumerable.GetEnumerator
+  nameWithType: InputMap<V>.IEnumerable.GetEnumerator
+  nameWithType.vb: InputMap(Of V).System.Collections.IEnumerable.GetEnumerator
 - uid: Pulumi.InputUnion`2
   name: InputUnion<T0, T1>
   href: Pulumi/Pulumi.InputUnion-2.html
@@ -1685,13 +1913,13 @@ references:
   isSpec: "True"
   fullName: Pulumi.Log.Error
   nameWithType: Log.Error
-- uid: Pulumi.Log.Exception(Exception,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})
+- uid: Pulumi.Log.Exception(System.Exception,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})
   name: Exception(Exception, Resource, Nullable<Int32>, Nullable<Boolean>)
-  href: Pulumi/Pulumi.Log.html#Pulumi_Log_Exception_Exception_Pulumi_Resource_System_Nullable_System_Int32__System_Nullable_System_Boolean__
-  commentId: M:Pulumi.Log.Exception(Exception,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})
+  href: Pulumi/Pulumi.Log.html#Pulumi_Log_Exception_System_Exception_Pulumi_Resource_System_Nullable_System_Int32__System_Nullable_System_Boolean__
+  commentId: M:Pulumi.Log.Exception(System.Exception,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})
   name.vb: Exception(Exception, Resource, Nullable(Of Int32), Nullable(Of Boolean))
-  fullName: Pulumi.Log.Exception(Exception, Pulumi.Resource, System.Nullable<System.Int32>, System.Nullable<System.Boolean>)
-  fullName.vb: Pulumi.Log.Exception(Exception, Pulumi.Resource, System.Nullable(Of System.Int32), System.Nullable(Of System.Boolean))
+  fullName: Pulumi.Log.Exception(System.Exception, Pulumi.Resource, System.Nullable<System.Int32>, System.Nullable<System.Boolean>)
+  fullName.vb: Pulumi.Log.Exception(System.Exception, Pulumi.Resource, System.Nullable(Of System.Int32), System.Nullable(Of System.Boolean))
   nameWithType: Log.Exception(Exception, Resource, Nullable<Int32>, Nullable<Boolean>)
   nameWithType.vb: Log.Exception(Exception, Resource, Nullable(Of Int32), Nullable(Of Boolean))
 - uid: Pulumi.Log.Exception*
@@ -1746,15 +1974,6 @@ references:
   isSpec: "True"
   fullName: Pulumi.Output.All
   nameWithType: Output.All
-- uid: Pulumi.Output.All``1(ImmutableArray{Pulumi.Input{``0}})
-  name: All<T>(ImmutableArray<Input<T>>)
-  href: Pulumi/Pulumi.Output.html#Pulumi_Output_All__1_ImmutableArray_Pulumi_Input___0___
-  commentId: M:Pulumi.Output.All``1(ImmutableArray{Pulumi.Input{``0}})
-  name.vb: All(Of T)(ImmutableArray(Of Input(Of T)))
-  fullName: Pulumi.Output.All<T>(ImmutableArray<Pulumi.Input<T>>)
-  fullName.vb: Pulumi.Output.All(Of T)(ImmutableArray(Of Pulumi.Input(Of T)))
-  nameWithType: Output.All<T>(ImmutableArray<Input<T>>)
-  nameWithType.vb: Output.All(Of T)(ImmutableArray(Of Input(Of T)))
 - uid: Pulumi.Output.All``1(Pulumi.Input{``0}[])
   name: All<T>(Input<T>[])
   href: Pulumi/Pulumi.Output.html#Pulumi_Output_All__1_Pulumi_Input___0____
@@ -1764,6 +1983,15 @@ references:
   fullName.vb: Pulumi.Output.All(Of T)(Pulumi.Input(Of T)())
   nameWithType: Output.All<T>(Input<T>[])
   nameWithType.vb: Output.All(Of T)(Input(Of T)())
+- uid: Pulumi.Output.All``1(System.Collections.Immutable.ImmutableArray{Pulumi.Input{``0}})
+  name: All<T>(ImmutableArray<Input<T>>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_All__1_System_Collections_Immutable_ImmutableArray_Pulumi_Input___0___
+  commentId: M:Pulumi.Output.All``1(System.Collections.Immutable.ImmutableArray{Pulumi.Input{``0}})
+  name.vb: All(Of T)(ImmutableArray(Of Input(Of T)))
+  fullName: Pulumi.Output.All<T>(System.Collections.Immutable.ImmutableArray<Pulumi.Input<T>>)
+  fullName.vb: Pulumi.Output.All(Of T)(System.Collections.Immutable.ImmutableArray(Of Pulumi.Input(Of T)))
+  nameWithType: Output.All<T>(ImmutableArray<Input<T>>)
+  nameWithType.vb: Output.All(Of T)(ImmutableArray(Of Input(Of T)))
 - uid: Pulumi.Output.Create*
   name: Create
   href: Pulumi/Pulumi.Output.html#Pulumi_Output_Create_
@@ -1780,13 +2008,13 @@ references:
   fullName.vb: Pulumi.Output.Create(Of T)(T)
   nameWithType: Output.Create<T>(T)
   nameWithType.vb: Output.Create(Of T)(T)
-- uid: Pulumi.Output.Create``1(Task{``0})
+- uid: Pulumi.Output.Create``1(System.Threading.Tasks.Task{``0})
   name: Create<T>(Task<T>)
-  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Create__1_Task___0__
-  commentId: M:Pulumi.Output.Create``1(Task{``0})
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Create__1_System_Threading_Tasks_Task___0__
+  commentId: M:Pulumi.Output.Create``1(System.Threading.Tasks.Task{``0})
   name.vb: Create(Of T)(Task(Of T))
-  fullName: Pulumi.Output.Create<T>(Task<T>)
-  fullName.vb: Pulumi.Output.Create(Of T)(Task(Of T))
+  fullName: Pulumi.Output.Create<T>(System.Threading.Tasks.Task<T>)
+  fullName.vb: Pulumi.Output.Create(Of T)(System.Threading.Tasks.Task(Of T))
   nameWithType: Output.Create<T>(Task<T>)
   nameWithType.vb: Output.Create(Of T)(Task(Of T))
 - uid: Pulumi.Output.CreateSecret*
@@ -1805,20 +2033,20 @@ references:
   fullName.vb: Pulumi.Output.CreateSecret(Of T)(T)
   nameWithType: Output.CreateSecret<T>(T)
   nameWithType.vb: Output.CreateSecret(Of T)(T)
-- uid: Pulumi.Output.CreateSecret``1(Task{``0})
+- uid: Pulumi.Output.CreateSecret``1(System.Threading.Tasks.Task{``0})
   name: CreateSecret<T>(Task<T>)
-  href: Pulumi/Pulumi.Output.html#Pulumi_Output_CreateSecret__1_Task___0__
-  commentId: M:Pulumi.Output.CreateSecret``1(Task{``0})
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_CreateSecret__1_System_Threading_Tasks_Task___0__
+  commentId: M:Pulumi.Output.CreateSecret``1(System.Threading.Tasks.Task{``0})
   name.vb: CreateSecret(Of T)(Task(Of T))
-  fullName: Pulumi.Output.CreateSecret<T>(Task<T>)
-  fullName.vb: Pulumi.Output.CreateSecret(Of T)(Task(Of T))
+  fullName: Pulumi.Output.CreateSecret<T>(System.Threading.Tasks.Task<T>)
+  fullName.vb: Pulumi.Output.CreateSecret(Of T)(System.Threading.Tasks.Task(Of T))
   nameWithType: Output.CreateSecret<T>(Task<T>)
   nameWithType.vb: Output.CreateSecret(Of T)(Task(Of T))
-- uid: Pulumi.Output.Format(FormattableString)
+- uid: Pulumi.Output.Format(System.FormattableString)
   name: Format(FormattableString)
-  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Format_FormattableString_
-  commentId: M:Pulumi.Output.Format(FormattableString)
-  fullName: Pulumi.Output.Format(FormattableString)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Format_System_FormattableString_
+  commentId: M:Pulumi.Output.Format(System.FormattableString)
+  fullName: Pulumi.Output.Format(System.FormattableString)
   nameWithType: Output.Format(FormattableString)
 - uid: Pulumi.Output.Format*
   name: Format
@@ -1978,49 +2206,49 @@ references:
   fullName.vb: Pulumi.Output(Of T).Apply
   nameWithType: Output<T>.Apply
   nameWithType.vb: Output(Of T).Apply
-- uid: Pulumi.Output`1.Apply``1(Func{`0,``0})
+- uid: Pulumi.Output`1.Apply``1(System.Func{`0,``0})
   name: Apply<U>(Func<T, U>)
-  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_Func__0___0__
-  commentId: M:Pulumi.Output`1.Apply``1(Func{`0,``0})
+  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0___0__
+  commentId: M:Pulumi.Output`1.Apply``1(System.Func{`0,``0})
   name.vb: Apply(Of U)(Func(Of T, U))
-  fullName: Pulumi.Output<T>.Apply<U>(Func<T, U>)
-  fullName.vb: Pulumi.Output(Of T).Apply(Of U)(Func(Of T, U))
+  fullName: Pulumi.Output<T>.Apply<U>(System.Func<T, U>)
+  fullName.vb: Pulumi.Output(Of T).Apply(Of U)(System.Func(Of T, U))
   nameWithType: Output<T>.Apply<U>(Func<T, U>)
   nameWithType.vb: Output(Of T).Apply(Of U)(Func(Of T, U))
-- uid: Pulumi.Output`1.Apply``1(Func{`0,Pulumi.Input{``0}})
+- uid: Pulumi.Output`1.Apply``1(System.Func{`0,Pulumi.Input{``0}})
   name: Apply<U>(Func<T, Input<U>>)
-  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_Func__0_Pulumi_Input___0___
-  commentId: M:Pulumi.Output`1.Apply``1(Func{`0,Pulumi.Input{``0}})
+  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Input___0___
+  commentId: M:Pulumi.Output`1.Apply``1(System.Func{`0,Pulumi.Input{``0}})
   name.vb: Apply(Of U)(Func(Of T, Input(Of U)))
-  fullName: Pulumi.Output<T>.Apply<U>(Func<T, Pulumi.Input<U>>)
-  fullName.vb: Pulumi.Output(Of T).Apply(Of U)(Func(Of T, Pulumi.Input(Of U)))
+  fullName: Pulumi.Output<T>.Apply<U>(System.Func<T, Pulumi.Input<U>>)
+  fullName.vb: Pulumi.Output(Of T).Apply(Of U)(System.Func(Of T, Pulumi.Input(Of U)))
   nameWithType: Output<T>.Apply<U>(Func<T, Input<U>>)
   nameWithType.vb: Output(Of T).Apply(Of U)(Func(Of T, Input(Of U)))
-- uid: Pulumi.Output`1.Apply``1(Func{`0,Pulumi.Output{``0}})
+- uid: Pulumi.Output`1.Apply``1(System.Func{`0,Pulumi.Output{``0}})
   name: Apply<U>(Func<T, Output<U>>)
-  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_Func__0_Pulumi_Output___0___
-  commentId: M:Pulumi.Output`1.Apply``1(Func{`0,Pulumi.Output{``0}})
+  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___
+  commentId: M:Pulumi.Output`1.Apply``1(System.Func{`0,Pulumi.Output{``0}})
   name.vb: Apply(Of U)(Func(Of T, Output(Of U)))
-  fullName: Pulumi.Output<T>.Apply<U>(Func<T, Pulumi.Output<U>>)
-  fullName.vb: Pulumi.Output(Of T).Apply(Of U)(Func(Of T, Pulumi.Output(Of U)))
+  fullName: Pulumi.Output<T>.Apply<U>(System.Func<T, Pulumi.Output<U>>)
+  fullName.vb: Pulumi.Output(Of T).Apply(Of U)(System.Func(Of T, Pulumi.Output(Of U)))
   nameWithType: Output<T>.Apply<U>(Func<T, Output<U>>)
   nameWithType.vb: Output(Of T).Apply(Of U)(Func(Of T, Output(Of U)))
-- uid: Pulumi.Output`1.Apply``1(Func{`0,Task{``0}})
+- uid: Pulumi.Output`1.Apply``1(System.Func{`0,System.Threading.Tasks.Task{``0}})
   name: Apply<U>(Func<T, Task<U>>)
-  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_Func__0_Task___0___
-  commentId: M:Pulumi.Output`1.Apply``1(Func{`0,Task{``0}})
+  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_System_Threading_Tasks_Task___0___
+  commentId: M:Pulumi.Output`1.Apply``1(System.Func{`0,System.Threading.Tasks.Task{``0}})
   name.vb: Apply(Of U)(Func(Of T, Task(Of U)))
-  fullName: Pulumi.Output<T>.Apply<U>(Func<T, Task<U>>)
-  fullName.vb: Pulumi.Output(Of T).Apply(Of U)(Func(Of T, Task(Of U)))
+  fullName: Pulumi.Output<T>.Apply<U>(System.Func<T, System.Threading.Tasks.Task<U>>)
+  fullName.vb: Pulumi.Output(Of T).Apply(Of U)(System.Func(Of T, System.Threading.Tasks.Task(Of U)))
   nameWithType: Output<T>.Apply<U>(Func<T, Task<U>>)
   nameWithType.vb: Output(Of T).Apply(Of U)(Func(Of T, Task(Of U)))
-- uid: Pulumi.Output`1.Create(Task{`0})
+- uid: Pulumi.Output`1.Create(System.Threading.Tasks.Task{`0})
   name: Create(Task<T>)
-  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Create_Task__0__
-  commentId: M:Pulumi.Output`1.Create(Task{`0})
+  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Create_System_Threading_Tasks_Task__0__
+  commentId: M:Pulumi.Output`1.Create(System.Threading.Tasks.Task{`0})
   name.vb: Create(Task(Of T))
-  fullName: Pulumi.Output<T>.Create(Task<T>)
-  fullName.vb: Pulumi.Output(Of T).Create(Task(Of T))
+  fullName: Pulumi.Output<T>.Create(System.Threading.Tasks.Task<T>)
+  fullName.vb: Pulumi.Output(Of T).Create(System.Threading.Tasks.Task(Of T))
   nameWithType: Output<T>.Create(Task<T>)
   nameWithType.vb: Output(Of T).Create(Task(Of T))
 - uid: Pulumi.Output`1.Create*
@@ -2038,15 +2266,12 @@ references:
   commentId: T:Pulumi.OutputAttribute
   fullName: Pulumi.OutputAttribute
   nameWithType: OutputAttribute
-- uid: Pulumi.OutputAttribute.#ctor(System.Nullable{System.String})
-  name: OutputAttribute(Nullable<String>)
-  href: Pulumi/Pulumi.OutputAttribute.html#Pulumi_OutputAttribute__ctor_System_Nullable_System_String__
-  commentId: M:Pulumi.OutputAttribute.#ctor(System.Nullable{System.String})
-  name.vb: OutputAttribute(Nullable(Of String))
-  fullName: Pulumi.OutputAttribute.OutputAttribute(System.Nullable<System.String>)
-  fullName.vb: Pulumi.OutputAttribute.OutputAttribute(System.Nullable(Of System.String))
-  nameWithType: OutputAttribute.OutputAttribute(Nullable<String>)
-  nameWithType.vb: OutputAttribute.OutputAttribute(Nullable(Of String))
+- uid: Pulumi.OutputAttribute.#ctor(System.String)
+  name: OutputAttribute(String)
+  href: Pulumi/Pulumi.OutputAttribute.html#Pulumi_OutputAttribute__ctor_System_String_
+  commentId: M:Pulumi.OutputAttribute.#ctor(System.String)
+  fullName: Pulumi.OutputAttribute.OutputAttribute(System.String)
+  nameWithType: OutputAttribute.OutputAttribute(String)
 - uid: Pulumi.OutputAttribute.#ctor*
   name: OutputAttribute
   href: Pulumi/Pulumi.OutputAttribute.html#Pulumi_OutputAttribute__ctor_
@@ -2118,13 +2343,13 @@ references:
   isSpec: "True"
   fullName: Pulumi.OutputExtensions.First
   nameWithType: OutputExtensions.First
-- uid: Pulumi.OutputExtensions.First``1(Pulumi.Output{ImmutableArray{``0}})
+- uid: Pulumi.OutputExtensions.First``1(Pulumi.Output{System.Collections.Immutable.ImmutableArray{``0}})
   name: First<T>(Output<ImmutableArray<T>>)
-  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_First__1_Pulumi_Output_ImmutableArray___0___
-  commentId: M:Pulumi.OutputExtensions.First``1(Pulumi.Output{ImmutableArray{``0}})
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_First__1_Pulumi_Output_System_Collections_Immutable_ImmutableArray___0___
+  commentId: M:Pulumi.OutputExtensions.First``1(Pulumi.Output{System.Collections.Immutable.ImmutableArray{``0}})
   name.vb: First(Of T)(Output(Of ImmutableArray(Of T)))
-  fullName: Pulumi.OutputExtensions.First<T>(Pulumi.Output<ImmutableArray<T>>)
-  fullName.vb: Pulumi.OutputExtensions.First(Of T)(Pulumi.Output(Of ImmutableArray(Of T)))
+  fullName: Pulumi.OutputExtensions.First<T>(Pulumi.Output<System.Collections.Immutable.ImmutableArray<T>>)
+  fullName.vb: Pulumi.OutputExtensions.First(Of T)(Pulumi.Output(Of System.Collections.Immutable.ImmutableArray(Of T)))
   nameWithType: OutputExtensions.First<T>(Output<ImmutableArray<T>>)
   nameWithType.vb: OutputExtensions.First(Of T)(Output(Of ImmutableArray(Of T)))
 - uid: Pulumi.OutputExtensions.GetAt*
@@ -2134,13 +2359,13 @@ references:
   isSpec: "True"
   fullName: Pulumi.OutputExtensions.GetAt
   nameWithType: OutputExtensions.GetAt
-- uid: Pulumi.OutputExtensions.GetAt``1(Pulumi.Output{ImmutableArray{``0}},Pulumi.Input{System.Int32})
+- uid: Pulumi.OutputExtensions.GetAt``1(Pulumi.Output{System.Collections.Immutable.ImmutableArray{``0}},Pulumi.Input{System.Int32})
   name: GetAt<T>(Output<ImmutableArray<T>>, Input<Int32>)
-  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_GetAt__1_Pulumi_Output_ImmutableArray___0___Pulumi_Input_System_Int32__
-  commentId: M:Pulumi.OutputExtensions.GetAt``1(Pulumi.Output{ImmutableArray{``0}},Pulumi.Input{System.Int32})
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_GetAt__1_Pulumi_Output_System_Collections_Immutable_ImmutableArray___0___Pulumi_Input_System_Int32__
+  commentId: M:Pulumi.OutputExtensions.GetAt``1(Pulumi.Output{System.Collections.Immutable.ImmutableArray{``0}},Pulumi.Input{System.Int32})
   name.vb: GetAt(Of T)(Output(Of ImmutableArray(Of T)), Input(Of Int32))
-  fullName: Pulumi.OutputExtensions.GetAt<T>(Pulumi.Output<ImmutableArray<T>>, Pulumi.Input<System.Int32>)
-  fullName.vb: Pulumi.OutputExtensions.GetAt(Of T)(Pulumi.Output(Of ImmutableArray(Of T)), Pulumi.Input(Of System.Int32))
+  fullName: Pulumi.OutputExtensions.GetAt<T>(Pulumi.Output<System.Collections.Immutable.ImmutableArray<T>>, Pulumi.Input<System.Int32>)
+  fullName.vb: Pulumi.OutputExtensions.GetAt(Of T)(Pulumi.Output(Of System.Collections.Immutable.ImmutableArray(Of T)), Pulumi.Input(Of System.Int32))
   nameWithType: OutputExtensions.GetAt<T>(Output<ImmutableArray<T>>, Input<Int32>)
   nameWithType.vb: OutputExtensions.GetAt(Of T)(Output(Of ImmutableArray(Of T)), Input(Of Int32))
 - uid: Pulumi.OutputExtensions.IsT0*
@@ -2182,13 +2407,13 @@ references:
   isSpec: "True"
   fullName: Pulumi.OutputExtensions.Length
   nameWithType: OutputExtensions.Length
-- uid: Pulumi.OutputExtensions.Length``1(Pulumi.Output{ImmutableArray{``0}})
+- uid: Pulumi.OutputExtensions.Length``1(Pulumi.Output{System.Collections.Immutable.ImmutableArray{``0}})
   name: Length<T>(Output<ImmutableArray<T>>)
-  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_Length__1_Pulumi_Output_ImmutableArray___0___
-  commentId: M:Pulumi.OutputExtensions.Length``1(Pulumi.Output{ImmutableArray{``0}})
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_Length__1_Pulumi_Output_System_Collections_Immutable_ImmutableArray___0___
+  commentId: M:Pulumi.OutputExtensions.Length``1(Pulumi.Output{System.Collections.Immutable.ImmutableArray{``0}})
   name.vb: Length(Of T)(Output(Of ImmutableArray(Of T)))
-  fullName: Pulumi.OutputExtensions.Length<T>(Pulumi.Output<ImmutableArray<T>>)
-  fullName.vb: Pulumi.OutputExtensions.Length(Of T)(Pulumi.Output(Of ImmutableArray(Of T)))
+  fullName: Pulumi.OutputExtensions.Length<T>(Pulumi.Output<System.Collections.Immutable.ImmutableArray<T>>)
+  fullName.vb: Pulumi.OutputExtensions.Length(Of T)(Pulumi.Output(Of System.Collections.Immutable.ImmutableArray(Of T)))
   nameWithType: OutputExtensions.Length<T>(Output<ImmutableArray<T>>)
   nameWithType.vb: OutputExtensions.Length(Of T)(Output(Of ImmutableArray(Of T)))
 - uid: Pulumi.OutputExtensions.Value*
@@ -2835,15 +3060,14 @@ references:
   fullName.vb: Pulumi.Union(Of T0, T1).Equals(Pulumi.Union(Of T0, T1))
   nameWithType: Union<T0, T1>.Equals(Union<T0, T1>)
   nameWithType.vb: Union(Of T0, T1).Equals(Union(Of T0, T1))
-- uid: Pulumi.Union`2.Equals(System.Nullable{System.Object})
-  name: Equals(Nullable<Object>)
-  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_Equals_System_Nullable_System_Object__
-  commentId: M:Pulumi.Union`2.Equals(System.Nullable{System.Object})
-  name.vb: Equals(Nullable(Of Object))
-  fullName: Pulumi.Union<T0, T1>.Equals(System.Nullable<System.Object>)
-  fullName.vb: Pulumi.Union(Of T0, T1).Equals(System.Nullable(Of System.Object))
-  nameWithType: Union<T0, T1>.Equals(Nullable<Object>)
-  nameWithType.vb: Union(Of T0, T1).Equals(Nullable(Of Object))
+- uid: Pulumi.Union`2.Equals(System.Object)
+  name: Equals(Object)
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_Equals_System_Object_
+  commentId: M:Pulumi.Union`2.Equals(System.Object)
+  fullName: Pulumi.Union<T0, T1>.Equals(System.Object)
+  fullName.vb: Pulumi.Union(Of T0, T1).Equals(System.Object)
+  nameWithType: Union<T0, T1>.Equals(Object)
+  nameWithType.vb: Union(Of T0, T1).Equals(Object)
 - uid: Pulumi.Union`2.Equals*
   name: Equals
   href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_Equals_
@@ -2947,13 +3171,13 @@ references:
   fullName.vb: Pulumi.Union(Of T0, T1).MapT0
   nameWithType: Union<T0, T1>.MapT0
   nameWithType.vb: Union(Of T0, T1).MapT0
-- uid: Pulumi.Union`2.MapT0``1(Func{`0,``0})
+- uid: Pulumi.Union`2.MapT0``1(System.Func{`0,``0})
   name: MapT0<TResult>(Func<T0, TResult>)
-  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_MapT0__1_Func__0___0__
-  commentId: M:Pulumi.Union`2.MapT0``1(Func{`0,``0})
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_MapT0__1_System_Func__0___0__
+  commentId: M:Pulumi.Union`2.MapT0``1(System.Func{`0,``0})
   name.vb: MapT0(Of TResult)(Func(Of T0, TResult))
-  fullName: Pulumi.Union<T0, T1>.MapT0<TResult>(Func<T0, TResult>)
-  fullName.vb: Pulumi.Union(Of T0, T1).MapT0(Of TResult)(Func(Of T0, TResult))
+  fullName: Pulumi.Union<T0, T1>.MapT0<TResult>(System.Func<T0, TResult>)
+  fullName.vb: Pulumi.Union(Of T0, T1).MapT0(Of TResult)(System.Func(Of T0, TResult))
   nameWithType: Union<T0, T1>.MapT0<TResult>(Func<T0, TResult>)
   nameWithType.vb: Union(Of T0, T1).MapT0(Of TResult)(Func(Of T0, TResult))
 - uid: Pulumi.Union`2.MapT1*
@@ -2965,13 +3189,13 @@ references:
   fullName.vb: Pulumi.Union(Of T0, T1).MapT1
   nameWithType: Union<T0, T1>.MapT1
   nameWithType.vb: Union(Of T0, T1).MapT1
-- uid: Pulumi.Union`2.MapT1``1(Func{`1,``0})
+- uid: Pulumi.Union`2.MapT1``1(System.Func{`1,``0})
   name: MapT1<TResult>(Func<T1, TResult>)
-  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_MapT1__1_Func__1___0__
-  commentId: M:Pulumi.Union`2.MapT1``1(Func{`1,``0})
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_MapT1__1_System_Func__1___0__
+  commentId: M:Pulumi.Union`2.MapT1``1(System.Func{`1,``0})
   name.vb: MapT1(Of TResult)(Func(Of T1, TResult))
-  fullName: Pulumi.Union<T0, T1>.MapT1<TResult>(Func<T1, TResult>)
-  fullName.vb: Pulumi.Union(Of T0, T1).MapT1(Of TResult)(Func(Of T1, TResult))
+  fullName: Pulumi.Union<T0, T1>.MapT1<TResult>(System.Func<T1, TResult>)
+  fullName.vb: Pulumi.Union(Of T0, T1).MapT1(Of TResult)(System.Func(Of T1, TResult))
   nameWithType: Union<T0, T1>.MapT1<TResult>(Func<T1, TResult>)
   nameWithType.vb: Union(Of T0, T1).MapT1(Of TResult)(Func(Of T1, TResult))
 - uid: Pulumi.Union`2.Match*
@@ -2983,13 +3207,13 @@ references:
   fullName.vb: Pulumi.Union(Of T0, T1).Match
   nameWithType: Union<T0, T1>.Match
   nameWithType.vb: Union(Of T0, T1).Match
-- uid: Pulumi.Union`2.Match``1(Func{`0,``0},Func{`1,``0})
+- uid: Pulumi.Union`2.Match``1(System.Func{`0,``0},System.Func{`1,``0})
   name: Match<TResult>(Func<T0, TResult>, Func<T1, TResult>)
-  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_Match__1_Func__0___0__Func__1___0__
-  commentId: M:Pulumi.Union`2.Match``1(Func{`0,``0},Func{`1,``0})
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_Match__1_System_Func__0___0__System_Func__1___0__
+  commentId: M:Pulumi.Union`2.Match``1(System.Func{`0,``0},System.Func{`1,``0})
   name.vb: Match(Of TResult)(Func(Of T0, TResult), Func(Of T1, TResult))
-  fullName: Pulumi.Union<T0, T1>.Match<TResult>(Func<T0, TResult>, Func<T1, TResult>)
-  fullName.vb: Pulumi.Union(Of T0, T1).Match(Of TResult)(Func(Of T0, TResult), Func(Of T1, TResult))
+  fullName: Pulumi.Union<T0, T1>.Match<TResult>(System.Func<T0, TResult>, System.Func<T1, TResult>)
+  fullName.vb: Pulumi.Union(Of T0, T1).Match(Of TResult)(System.Func(Of T0, TResult), System.Func(Of T1, TResult))
   nameWithType: Union<T0, T1>.Match<TResult>(Func<T0, TResult>, Func<T1, TResult>)
   nameWithType.vb: Union(Of T0, T1).Match(Of TResult)(Func(Of T0, TResult), Func(Of T1, TResult))
 - uid: Pulumi.Union`2.op_Implicit(`0)~Pulumi.Union{`0,`1}
@@ -3020,13 +3244,13 @@ references:
   fullName.vb: Pulumi.Union(Of T0, T1).Widening
   nameWithType: Union<T0, T1>.Implicit
   nameWithType.vb: Union(Of T0, T1).Widening
-- uid: Pulumi.Union`2.Switch(Action{`0},Action{`1})
+- uid: Pulumi.Union`2.Switch(System.Action{`0},System.Action{`1})
   name: Switch(Action<T0>, Action<T1>)
-  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_Switch_Action__0__Action__1__
-  commentId: M:Pulumi.Union`2.Switch(Action{`0},Action{`1})
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_Switch_System_Action__0__System_Action__1__
+  commentId: M:Pulumi.Union`2.Switch(System.Action{`0},System.Action{`1})
   name.vb: Switch(Action(Of T0), Action(Of T1))
-  fullName: Pulumi.Union<T0, T1>.Switch(Action<T0>, Action<T1>)
-  fullName.vb: Pulumi.Union(Of T0, T1).Switch(Action(Of T0), Action(Of T1))
+  fullName: Pulumi.Union<T0, T1>.Switch(System.Action<T0>, System.Action<T1>)
+  fullName.vb: Pulumi.Union(Of T0, T1).Switch(System.Action(Of T0), System.Action(Of T1))
   nameWithType: Union<T0, T1>.Switch(Action<T0>, Action<T1>)
   nameWithType.vb: Union(Of T0, T1).Switch(Action(Of T0), Action(Of T1))
 - uid: Pulumi.Union`2.Switch*

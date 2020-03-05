@@ -81,13 +81,39 @@ in your Pulumi programs to mark outputs of <a class="xref" href="Pulumi.Componen
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">OutputAttribute</span></div>
+    <div class="level1"><span class="xref">System.Attribute</span></div>
+    <div class="level2"><span class="xref">OutputAttribute</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Attribute.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_OutputAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class OutputAttribute : Attribute</code></pre>
+    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Property)]
+public sealed class OutputAttribute : Attribute</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -95,12 +121,12 @@ in your Pulumi programs to mark outputs of <a class="xref" href="Pulumi.Componen
     <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Serialization/Attributes.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_OutputAttribute__ctor_" data-uid="Pulumi.OutputAttribute.#ctor*"></a>
-  <h4 id="Pulumi_OutputAttribute__ctor_System_Nullable_System_String__" data-uid="Pulumi.OutputAttribute.#ctor(System.Nullable{System.String})">OutputAttribute(Nullable&lt;String&gt;)</h4>
+  <h4 id="Pulumi_OutputAttribute__ctor_System_String_" data-uid="Pulumi.OutputAttribute.#ctor(System.String)">OutputAttribute(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OutputAttribute(string? name = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public OutputAttribute(string name = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -113,7 +139,7 @@ in your Pulumi programs to mark outputs of <a class="xref" href="Pulumi.Componen
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
@@ -130,7 +156,7 @@ in your Pulumi programs to mark outputs of <a class="xref" href="Pulumi.Componen
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? Name { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -142,7 +168,7 @@ in your Pulumi programs to mark outputs of <a class="xref" href="Pulumi.Componen
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>

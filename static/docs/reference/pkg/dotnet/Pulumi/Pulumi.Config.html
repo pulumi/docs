@@ -87,11 +87,35 @@ such as <code>pulumi:foo:a</code>, ..., and <code>pulumi:bar:a</code>, respectiv
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Config</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_Config_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Config : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Config</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -99,7 +123,7 @@ such as <code>pulumi:foo:a</code>, ..., and <code>pulumi:bar:a</code>, respectiv
     <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Config.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Config__ctor_" data-uid="Pulumi.Config.#ctor*"></a>
-  <h4 id="Pulumi_Config__ctor_System_Nullable_System_String__" data-uid="Pulumi.Config.#ctor(System.Nullable{System.String})">Config(Nullable&lt;String&gt;)</h4>
+  <h4 id="Pulumi_Config__ctor_System_String_" data-uid="Pulumi.Config.#ctor(System.String)">Config(String)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Pulumi.Config.html">Config</a> instance. <code data-dev-comment-type="paramref" class="paramref">name</code> is the
 configuration bag's logical name and uniquely identifies it. The default is the name of
 the current project.</p>
@@ -107,7 +131,7 @@ the current project.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Config(string? name = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Config(string name = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,7 +144,7 @@ the current project.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
@@ -138,7 +162,7 @@ the current project.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? Get(string key)</code></pre>
+    <pre><code class="lang-csharp hljs">public string Get(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,7 +191,7 @@ the current project.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
