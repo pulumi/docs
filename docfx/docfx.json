@@ -7,7 +7,8 @@
           "files": ["*.csproj"]
         }
       ],
-      "dest": "metadata/Pulumi"
+      "dest": "metadata/Pulumi",
+      "filter": "filterConfig.yml"
     }
   ],
   "build": {
