@@ -9,7 +9,7 @@ tags:
     - BigData Boutique
     - Elasticsearch
     - testing
-    - optimize
+
 ---
 
 **Guest Article:** [Itamar Syn-Hershko](https://twitter.com/synhershko), Founder and CTO of [BigData Boutique](https://bigdataboutique.com/) shows how they use Pulumi to benchmark Elasticsearch configurations across cloud providers. Pulumi enables BigData Boutique to test deployments in parallel and gather metrics to produce performant and cost-effective solutions for its customers.
@@ -18,7 +18,7 @@ tags:
 
 BigData Boutique can rapidly iterate through infrastructure configurations based on client requirements. Real programming languages significantly shortens the inner dev loop because developers and operators can use modern programming tools such as IDEs, test frameworks, and CI/CD. By increasing the velocity of infrastructure deployment across many clouds with repeatable and versioned code, Pulumi enables companies to build efficient revenue centers for their business.
 
-- - - -
+-
 
 ### How Pulumi Drives Our Elasticsearch Capacity Planning and Cost Optimization Service
 
