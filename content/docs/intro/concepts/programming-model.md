@@ -1625,7 +1625,7 @@ let url: Output<string> = pulumi.all([hostname, port]).
 ```
 
 ```python
-url = Output.all([hostname, port]).apply(lambda l: f"http://{l[0]}:{l[1]}/")
+url = Output.all(hostname, port).apply(lambda l: f"http://{l[0]}:{l[1]}/")
 ```
 
 ```go
