@@ -43,8 +43,8 @@ generate:
 	pulumi gen-markdown ./content/docs/reference/cli
 	./scripts/mktutorial.sh
 
-.PHONY: docs
-docs::
+.PHONY: resource_docs
+resource_docs::
 	./scripts/gen_resource_docs.sh
 
 .PHONY: build
