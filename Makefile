@@ -43,6 +43,10 @@ generate:
 	pulumi gen-markdown ./content/docs/reference/cli
 	./scripts/mktutorial.sh
 
+.PHONY: docs
+docs::
+	./scripts/gen_resource_docs.sh
+
 .PHONY: build
 build:
 	@echo -e "\033[0;32mBUILD ($(HUGO_ENVIRONMENT)):\033[0m"
