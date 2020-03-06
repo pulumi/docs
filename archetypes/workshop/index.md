@@ -3,6 +3,9 @@
 title: "Name of the Event"
 meta_desc: "Search Description"
 
+# Events with unlisted as true will not be shown on the event list
+unlisted: false
+
 # The layout of the landing page.
 type: events
 
