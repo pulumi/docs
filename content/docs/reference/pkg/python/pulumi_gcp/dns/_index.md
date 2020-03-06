@@ -14,9 +14,26 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.dns"></span><dl class="class">
+<dt id="pulumi_gcp.dns.AwaitableGetKeysResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.dns.</code><code class="sig-name descname">AwaitableGetKeysResult</code><span class="sig-paren">(</span><em class="sig-param">key_signing_keys=None</em>, <em class="sig-param">managed_zone=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">zone_signing_keys=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.AwaitableGetKeysResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.dns.AwaitableGetManagedZoneResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.dns.</code><code class="sig-name descname">AwaitableGetManagedZoneResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">visibility=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.AwaitableGetManagedZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.dns.GetKeysResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.dns.</code><code class="sig-name descname">GetKeysResult</code><span class="sig-paren">(</span><em class="sig-param">key_signing_keys=None</em>, <em class="sig-param">managed_zone=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">zone_signing_keys=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.GetKeysResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getKeys.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.dns.GetKeysResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.GetKeysResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.dns.GetManagedZoneResult">
@@ -456,6 +473,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_gcp.dns.get_keys">
+<code class="sig-prename descclassname">pulumi_gcp.dns.</code><code class="sig-name descname">get_keys</code><span class="sig-paren">(</span><em class="sig-param">managed_zone=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.get_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
 </dd></dl>
 
 <dl class="function">

@@ -144,6 +144,12 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.dataflow.Job.type">
+<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dataflow.Job.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of this job, selected from the <a class="reference external" href="https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobType">JobType enum</a></p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.dataflow.Job.zone">
 <code class="sig-name descname">zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dataflow.Job.zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>The zone in which the created job should run. If it is not provided, the provider zone is used.</p>
@@ -151,7 +157,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
 
 <dl class="method">
 <dt id="pulumi_gcp.dataflow.Job.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ip_configuration=None</em>, <em class="sig-param">job_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">max_workers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">on_delete=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">temp_gcs_location=None</em>, <em class="sig-param">template_gcs_path=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dataflow.Job.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ip_configuration=None</em>, <em class="sig-param">job_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">max_workers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">on_delete=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">temp_gcs_location=None</em>, <em class="sig-param">template_gcs_path=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dataflow.Job.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Job resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -180,6 +186,8 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
 <li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnetwork to which VMs will be assigned. Should be of the form “regions/REGION/subnetworks/SUBNETWORK”.</p></li>
 <li><p><strong>temp_gcs_location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A writeable location on GCS for the Dataflow job to dump its temporary data.</p></li>
 <li><p><strong>template_gcs_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCS path to the Dataflow job template.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The type of this job, selected from the <a class="reference external" href="https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobType">JobType enum</a></p>
+</p></li>
 <li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone in which the created job should run. If it is not provided, the provider zone is used.</p></li>
 </ul>
 </dd>

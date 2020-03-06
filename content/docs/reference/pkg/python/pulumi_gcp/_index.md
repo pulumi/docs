@@ -33,6 +33,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="dataflow/">dataflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datafusion/">datafusion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataproc/">dataproc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastore/">datastore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="deploymentmanager/">deploymentmanager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="diagflow/">diagflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dns/">dns</a></li>
@@ -40,6 +41,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="filestore/">filestore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="firestore/">firestore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="folder/">folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gameservices/">gameservices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="healthcare/">healthcare</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iam/">iam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iap/">iap</a></li>
