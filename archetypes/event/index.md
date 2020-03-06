@@ -2,6 +2,9 @@
 # Name of the event.
 title: "Name of the Event"
 
+# Events with unlisted as true will not be shown on the event list
+unlisted: false
+
 # Events with external registrations should not be indexed
 # and have redirect to the external registration page.
 block_from_external_search: true
