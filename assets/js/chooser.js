@@ -52,7 +52,7 @@ function selectChoice(kind, choice, extra) {
 // selectLanguage chooses a language.
 function selectLanguage(lang) {
     selectChoice("language", lang, function() {
-        var shellLanguages = ["bat", "batch", "batchfile", "powershell", "posh", "pwsh", "bash", "sh", "shell", "zsh"].map(
+        var shellLanguages = ["bat", "batch", "batchfile", "powershell", "posh", "pwsh", "bash", "sh", "shell", "zsh", "diff"].map(
             function(l) {
                 return "language-" + l;
             }
