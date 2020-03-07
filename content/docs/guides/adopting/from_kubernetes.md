@@ -1,10 +1,8 @@
 ---
-h1: "From Kubernetes or Helm YAML"
-title: "Adopting Pulumi From Kubernetes or Helm YAML"
+title: "From Kubernetes or Helm YAML"
 meta_desc: Migrate your existing Kubernetes or Helm YAML and/or coexist with existing templates.
 menu:
   userguides:
-    name: "From Kubernetes or Helm YAML"
     parent: adopting
     weight: 5
 ---

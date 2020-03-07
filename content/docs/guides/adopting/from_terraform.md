@@ -1,10 +1,8 @@
 ---
-h1: "From Terraform"
-title: "Adopting Pulumi From Terraform"
+title: "From Terraform"
 meta_desc: Migrate your existing Terraform HCL and/or coexist with existing workspaces.
 menu:
   userguides:
-    name: "From Terraform"
     parent: adopting
     weight: 2
 ---
