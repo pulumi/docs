@@ -7,15 +7,15 @@ menu:
     weight: 3
 ---
 
-If your team has already provisioned infrastructure using AWS CloudFormation, and you'd like to adopt Pulumi, you have three primary strategies you can take.
+If your team has already provisioned infrastructure using AWS CloudFormation, and you'd like to adopt Pulumi, you have three primary strategies you can take:
 
-* [**Coexist**](#referencing-cloudformation-stack-outputs) with resources provisioned by CloudFormation by referencing stack outputs.
+* [**Coexist**](#referencing-stack-outputs) with resources provisioned by CloudFormation by referencing stack outputs.
 * [**Import**]({{< relref "import" >}}) existing resources into Pulumi in the usual way.
-* [**Convert**](#converting-cloudformation-deployments-and-resources) your deployments to use Pulumi and then incrementally migrate resources.
+* [**Convert**](#converting-stacks-and-resources) your deployments to use Pulumi and then incrementally migrate resources.
 
 ## Referencing Stack Outputs
 
-It is possible to reference existing AWS CloudFormation stacks from your program. This lets you read properties of that CloudFormation stack for use within your Pulumi program. This includes output values computed from resources provisioned that stack.
+It is possible to reference existing AWS CloudFormation stacks from your program. It doesn't matter how these stacks were created. This lets you read properties of that CloudFormation stack for use within your Pulumi program. This includes output values computed from resources provisioned that stack.
 
 For instance, let's say your infrastructure team has provisioned your network infrastructure using CloudFormation and you need to use the Subnet ID to provision something new from your Pulumi program. One approach is to hardcode that ID but this is brittle and, if it ever changes, you'd need to go and manually update the hardcoded value.
 
@@ -125,13 +125,13 @@ class Program
                 Name = "my-network-stack",
             });
 
-            var subnetId = network.Outputs["SubnetId"];
+            var subnetId = (string)network.Outputs["SubnetId"];
 
             var web = new Ec2.Instance("web", new Ec2.InstanceArgs
             {
                 Ami = "ami-0adc0e3ef2558cb1f", // us-west-2 AMI
                 InstanceType = "t3.micro",
-                SubnetId = (string)subnetId,
+                SubnetId = subnetId,
             });
 
             return new Dictionary<string, object?>();
@@ -412,6 +412,8 @@ Outputs:
 Resources:
  + 2 created
 ```
+
+From here, you can change the template body and/or surrounding code, rerun `pulumi up`, and the right incremental changes will take place.
 
 ### Migrate Resources into Code
 
