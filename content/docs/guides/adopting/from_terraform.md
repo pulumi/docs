@@ -1,19 +1,21 @@
 ---
-title: "From Terraform"
+h1: "From Terraform"
+title: "Adopting Pulumi From Terraform"
 meta_desc: Migrate your existing Terraform HCL and/or coexist with existing workspaces.
 menu:
   userguides:
+    name: "From Terraform"
     parent: adopting
     weight: 2
 ---
 
 If your infrastructure was provisioned with Terraform, there are a number of options that will help you adopt Pulumi.
 
-* Coexist: You can reference resources provisioned with Terraform from a Pulumi project.
-* Import: You can import existing resources into Pulumi, [in the usual way]({{< relref "import" >}}).
-* Convert: The `tf2pulumi` tool will convert any Terraform HCL to Pulumi code and import state.
+* **Coexist** with resources provisioned by Terraform by referencing a `.tfstate` file.
+* **Import** existing resources into Pulumi [in the usual way]({{< relref "import" >}}) or using the `tf2pulumi` to adopt all resources from an existing `.tfstate` file.
+* **Convert** any Terraform HCL to Pulumi code using `tf2pulumi`.
 
-Below we'll review how to coexist with Terraform in addition to converting existing projects. For instructions on how to manually import your infrastructure, please [refer to this guide]({{< relref "import" >}}).
+This range of techniques helps to either temporarily or permenanely use Pulumi alongside Terraform, in addition to fully migrating existing infrastructure to Pulumi.
 
 ## Referencing Terraform State
 
@@ -45,11 +47,11 @@ $ pip3 install pulumi_terraform
 
 <div class="language-prologue-go"></div>
 
-> Terraform RemoteStateReference is not yet supported in Go. See https://github.com/pulumi/pulumi-terraform/issues/518.
+> Terraform RemoteStateReference is not yet supported in Go. See <https://github.com/pulumi/pulumi-terraform/issues/518>.
 
 <div class="language-prologue-csharp"></div>
 
-> Terraform RemoteStateReference is not yet supported in .NET. See https://github.com/pulumi/pulumi-terraform/issues/516.
+> Terraform RemoteStateReference is not yet supported in .NET. See <https://github.com/pulumi/pulumi-terraform/issues/516>.
 
 For example, this code reads AWS EC2 VPC and subnet IDs from `terraform.tfstate` file and provisions new EC2 instances that use them:
 
@@ -249,3 +251,55 @@ Please refer to the API documentation for these libraries for full details on co
 ## Converting Terraform HCL to Pulumi
 
 The [`tf2pulumi`](https://github.com/pulumi/tf2pulumi) tool can convert existing Terraform source code written in the HashiCorp Configuration Language (HCL) into Pulumi source code. In addition to converting source code, this tool also offers the option to automatically insert import IDs [as described here]({{< relref "import" >}}), so that you can also import state during the conversion. This ensures live resources are brought under the control of Pulumi as well as letting you deploy and manage new copies of that inrastruture.
+
+### How to Use the Tool
+
+To use this tool, [first install it](https://github.com/pulumi/tf2pulumi#building-and-installation).
+
+> At the moment, this tool needs to be built from source. Regularly released binaries across macOS, Linux, and Windows [will soon be available](https://github.com/pulumi/tf2pulumi/issues/119).
+
+Next, `cd` into a Terraform project you'd like to convert. Create a new stack in a subdirectory:
+
+```bash
+$ pulumi new typescript --dir my-stack
+```
+
+> At the moment, TypeScript is the only language target. [Python is under active development](https://github.com/pulumi/tf2pulumi/issues/98). Please let us know if your desired language isn't available.
+
+Next, run `tf2pulumi`. It will conver the entire project whose directory you are in and print the resulting code to `stdout`. You'll probably want to redirect its output, for instance to a file named `index.ts` in the directory that contains the Pulumi project you just created:
+
+```bash
+$ tf2pulumi >my-stack/index.ts
+```
+
+This will generate a Pulumi TypeScript program in index.ts that when run with pulumi update will deploy the infrastructure originally described by the Terraform project. Note that if your infrastructure references files or directories with paths relative to the location of the Terraform project, you will most likely need to update these paths such that they are relative to the generated index.ts file.
+
+> If `tf2pulumi` complains about missing Terraform resource plugins, install those plugins as per the instructions in the error message and re-run the command above.
+
+### Importing Resources
+
+That command converted the static HCL source code to Pulumi code. What if you want to import existing resource states from a `.tfstate` file, however, to avoid unnecessarily recreating your infrastructure?
+
+To do so, [copy the `import.ts` file from this repo](https://github.com/pulumi/tf2pulumi/blob/master/misc/import/import.ts) into your new stack's directory, and add the following near the top of your generated `index.ts` file just before any resource creations:
+
+```typescript
+...
+import "./import";
+...
+```
+
+Next, set the `importFromStatefile` config setting on your project to a valid location of a `.tfstate` file to import resources from that state:
+
+```bash
+$ pulumi config set importFromStatefile ./terraform.tfstate
+```
+
+After doing this, the first `pulumi up` for a new stack with this configuration variable set will import instead of create all of the resources defined in the code. Once imported, the existing resources in your cloud provider can now be managed by Pulumi going forward. See the [Importing Infrastructure User Guide]({{< relref "import" >}}) for more details on importing existing resources.
+
+### Limitations
+
+While the majority of Terraform constructs are supported, there are some known gaps that we are working to address. If you run into a problem, please [let us know on GitHub](https://github.com/pulumi/tf2pulumi/issues/new) and we would be happy to work through it with you.
+
+### Example Conversion
+
+For an example of a full end-to-end conversion, including some improvements made possible after the conversion is finished, please see the blog post, [From Terraform to Infrastructure as Software]({{< relref "/blog/from-terraform-to-infrastructure-as-software" >}}).
