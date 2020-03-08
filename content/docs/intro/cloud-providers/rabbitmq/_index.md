@@ -5,7 +5,7 @@ menu:
   intro:
     parent: cloud-providers
     identifier: clouds-rabbitmq
-    weight: 5
+    weight: 2
 ---
 
 <img src="/logos/tech/rabbitmq.svg" align="right" class="h-16 px-8 pb-4">

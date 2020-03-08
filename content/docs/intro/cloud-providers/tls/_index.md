@@ -5,7 +5,7 @@ menu:
   intro:
     parent: cloud-providers
     identifier: clouds-tls
-    weight: 5
+    weight: 2
 ---
 
 The TLS provider for Pulumi can be used to help to create TLS keys and certitifcate for use with Pulumi resources.

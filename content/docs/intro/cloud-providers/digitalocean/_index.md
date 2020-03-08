@@ -5,7 +5,7 @@ menu:
   intro:
     parent: cloud-providers
     identifier: clouds-digitalocean
-    weight: 5
+    weight: 2
 
 aliases: ["/docs/reference/clouds/digitalocean/"]
 ---
