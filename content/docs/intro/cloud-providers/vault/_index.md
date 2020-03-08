@@ -5,7 +5,7 @@ menu:
   intro:
     parent: cloud-providers
     identifier: clouds-vault
-    weight: 5
+    weight: 2
 ---
 
 <img src="/logos/tech/vault.png" align="right" class="h-16 px-8 pb-4">

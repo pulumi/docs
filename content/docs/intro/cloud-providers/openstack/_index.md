@@ -5,7 +5,7 @@ menu:
   intro:
     parent: cloud-providers
     identifier: clouds-openstack
-    weight: 5
+    weight: 2
 
 aliases: ["/docs/reference/clouds/openstack/"]
 ---

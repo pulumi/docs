@@ -5,7 +5,7 @@ menu:
   intro:
     parent: cloud-providers
     identifier: clouds-cloudamqp
-    weight: 5
+    weight: 2
 ---
 
 <img src="/logos/tech/cloudamqp.png" align="right" class="h-16 px-8 pb-4">
