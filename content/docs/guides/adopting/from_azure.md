@@ -7,6 +7,8 @@ menu:
     weight: 4
 ---
 
+<img src="/logos/tech/azure_arm.png" align="right" class="h-32 px-8 pb-4">
+
 If your team has already provisioned infrastructure using Azure Resource Manager (ARM) Templates, and you'd like to adopt Pulumi, you have three primary strategies you can take:
 
 * [**Coexist**](#referencing-deployment-outputs) with resources provisioned by ARM by referencing deployment outputs.

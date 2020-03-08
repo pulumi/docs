@@ -7,6 +7,8 @@ menu:
     weight: 3
 ---
 
+<img src="/logos/tech/aws_cloudformation.png" align="right" class="h-32 px-8 pb-4">
+
 If your team has already provisioned infrastructure using AWS CloudFormation, and you'd like to adopt Pulumi, you have three primary strategies you can take:
 
 * [**Coexist**](#referencing-stack-outputs) with resources provisioned by CloudFormation by referencing stack outputs.
