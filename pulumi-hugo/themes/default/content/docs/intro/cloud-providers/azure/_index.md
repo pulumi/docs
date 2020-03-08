@@ -5,7 +5,7 @@ menu:
   intro:
     parent: cloud-providers
     identifier: clouds-azure
-    weight: 2
+    weight: 1
 
 aliases: ["/docs/reference/clouds/azure/"]
 ---

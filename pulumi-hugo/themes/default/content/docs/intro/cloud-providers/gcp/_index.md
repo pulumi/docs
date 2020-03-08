@@ -5,7 +5,7 @@ menu:
   intro:
     parent: cloud-providers
     identifier: clouds-gcp
-    weight: 3
+    weight: 1
 
 aliases: ["/docs/reference/clouds/gcp/"]
 ---

@@ -5,7 +5,7 @@ menu:
   intro:
     parent: cloud-providers
     identifier: clouds-kubernetes
-    weight: 4
+    weight: 1
 
 aliases: ["/docs/reference/clouds/kubernetes/"]
 ---

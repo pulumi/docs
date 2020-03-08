@@ -5,7 +5,7 @@ menu:
   intro:
     parent: cloud-providers
     identifier: clouds-datadog
-    weight: 5
+    weight: 2
 ---
 
 <img src="/logos/tech/datadog.svg" align="right" class="h-16 px-8 pb-4">
