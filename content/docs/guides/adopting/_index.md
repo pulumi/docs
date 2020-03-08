@@ -17,7 +17,7 @@ Below we will review some basic concepts, but feel free to jump straight to a sp
 * [**From Terraform**]({{< relref "from_terraform" >}}): coexist with existing workspaces or convert your HCL
 * [**From AWS CloudFormation**]({{< relref "from_aws" >}}): coexist with, deploy, or convert your templates and stacks
 * [**From Azure Resource Manager (ARM)**]({{< relref "from_azure" >}}): coexist with, deploy, or convert your templates and deployments
-* [**From Kubernetes or Helm YAML**]({{< relref "from_kubernetes" >}}): coexist with, deploy, or convert your configuration
+* [**From Kubernetes YAML or Helm**]({{< relref "from_kubernetes" >}}): coexist with, deploy, or convert your configuration
 
 ## Concepts
 

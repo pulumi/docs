@@ -12,7 +12,7 @@ menu:
 If your team has already provisioned infrastructure using AWS CloudFormation, and you'd like to adopt Pulumi, you have three primary strategies you can take:
 
 * [**Coexist**](#referencing-stack-outputs) with resources provisioned by CloudFormation by referencing stack outputs.
-* [**Import**]({{< relref "import" >}}) existing resources into Pulumi in the usual way.
+* [**Import**]({{< relref "import" >}}) existing resources into Pulumi [in the usual way]({{< relref "import" >}}).
 * [**Convert**](#converting-stacks-and-resources) your deployments to use Pulumi and then incrementally migrate resources.
 
 ## Referencing Stack Outputs
