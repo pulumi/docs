@@ -16,13 +16,15 @@ $(function() {
 
         // For command line code snippets:
         //   1. Strip the prompt from any lines that are prefixed with it
-        //   2. Discard subsequent lines that don't start with the prompt (i.e. output)
+        //   2. Discard subsequent lines that don't start with the prompt (i.e. output),
+        //      making sure to respect line continuation charcters.
         //   3. Combine multiple lines that start with a prompt into a single line, e.g.
         //      "$ mkdir mydir && mydir\n$ pulumi new typescript" =>
         //      "mkdir mydir && mydir && pulumi new typescript"
         var prompt;
         var comment;
         var trailingCommentRE;
+        var trailingContinuationChar;
         var combinator;
         switch (lang) {
             case "bash":
@@ -32,6 +34,7 @@ $(function() {
                 prompt = "$ ";
                 comment = "#";
                 trailingCommentRE = /\s+#.*$/m
+                trailingContinuationChar = "\\";
                 combinator = " && ";
                 break;
 
@@ -41,6 +44,7 @@ $(function() {
                 prompt = "> ";
                 comment = "::";
                 trailingCommentRE = /\s+::.*$/m
+                trailingContinuationChar = "^";
                 combinator = " && ";
                 break;
 
@@ -50,12 +54,14 @@ $(function() {
                 prompt = "> ";
                 comment = "#";
                 trailingCommentRE = /\s+#.*$/m
+                trailingContinuationChar = "`";
                 combinator = "; ";
                 break;
         }
         if (prompt) {
             var results = [];
             var lines = text.split("\n");
+            var priorLineContinued = false;
             for (var i = 0; i < lines.length; i++) {
                 var line = lines[i].trim();
 
@@ -67,16 +73,31 @@ $(function() {
 
                 // Skip empty lines and comments.
                 if (line.length === 0 || line.startsWith(comment)) {
+                    priorLineContinued = false;
                     continue;
                 }
 
                 // Include all initial lines that start with a prompt and discard subsequent lines after
                 // a line is reached that doesn't start with a prompt.
-                if (line.startsWith(prompt)) {
+                if (line.startsWith(prompt) || priorLineContinued) {
                     // Removing trailing comments.
                     line = line.replace(trailingCommentRE, "")
 
-                    results.push(line.substring(2));
+                    // Remember and remove line continuations.
+                    var wasContinued = priorLineContinued;
+                    if (line.endsWith(trailingContinuationChar)) {
+                        priorLineContinued = true;
+                        line = line.substring(0, line.length-trailingContinuationChar.length);
+                    } else {
+                        priorLineContinued = false;
+                    }
+
+                    // Continue the prior line, or add a new one, as appropriate.
+                    if (wasContinued) {
+                        results.push(results.pop() + line);
+                    } else {
+                        results.push(line.substring(2));
+                    }
                 } else {
                     break;
                 }
