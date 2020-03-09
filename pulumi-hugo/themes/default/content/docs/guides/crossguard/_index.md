@@ -5,7 +5,7 @@ meta_desc: Pulumi's Policy as Code offering, CrossGuard, allows you to set guard
 menu:
     userguides:
         identifier: crossguard
-        weight: 4
+        weight: 6
 ---
 
 {{% crossguard-preview %}}

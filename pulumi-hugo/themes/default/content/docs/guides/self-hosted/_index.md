@@ -3,7 +3,7 @@ title: Self-Hosted Pulumi Service
 menu:
     userguides:
         identifier: self_hosted
-        weight: 6
+        weight: 8
 meta_desc: Pulumi Enterprise Edition gives you the option to self-host Pulumi within your organization's infrastructure.
 ---
 

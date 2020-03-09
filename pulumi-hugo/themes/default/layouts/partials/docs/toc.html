@@ -7,8 +7,8 @@
     {{ else if hasPrefix .RelPermalink "/docs/" }}
         {{/* Render a top-level menu for our major docs sections */}}
         {{ $toc_page := . }}
-        {{ $toc_sections := slice "Getting Started" "Intro" "Guides and Tutorials" "Reference" "Support" }}
-        {{ $toc_menus := dict "Getting Started" .Site.Menus.getstarted "Intro" .Site.Menus.intro "Guides and Tutorials" .Site.Menus.userguides "Reference" .Site.Menus.reference "Support" .Site.Menus.troubleshooting }}
+        {{ $toc_sections := slice "Getting Started" "Intro" "User Guides" "Reference" "Support" }}
+        {{ $toc_menus := dict "Getting Started" .Site.Menus.getstarted "Intro" .Site.Menus.intro "User Guides" .Site.Menus.userguides "Reference" .Site.Menus.reference "Support" .Site.Menus.troubleshooting }}
         {{ range $toc_sections }}
             {{ $toc_name := . }}
             {{ $toc_menu := (index $toc_menus $toc_name) }}
