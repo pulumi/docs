@@ -5,7 +5,7 @@ meta_desc: This page provides an overview of how to integrate Pulumi with your c
 menu:
     userguides:
         identifier: cont_delivery
-        weight: 1
+        weight: 3
 
 aliases:
 - /docs/reference/cd/

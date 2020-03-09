@@ -69,6 +69,8 @@ Pulumi offers a tool, [`tf2pulumi`](https://github.com/pulumi/tf2pulumi), that c
 open source on GitHub, and works for most projects we have come across; if you run into a snag, Issues and Pull
 Requests are welcome! [Download and use it now.](https://github.com/pulumi/tf2pulumi)
 
+To learn more, [see Referencing Terraform State in our Adopting Pulumi user guide]({{< relref "/docs/guides/adopting/from_terraform#referencing-terraform-state" >}}).
+
 ## Using Pulumi and Terraform Side-by-Side
 
 Pulumi supports
@@ -82,3 +84,5 @@ For instance, say you would like to keep your VPC and low level network definiti
 avoid any disruption, or maybe because some of the team would like to stay on Terraform for now and make a shift in the future. Using the
 state reference support described above, you can author higher level infrastructure in Pulumi that consumes the
 Terraform-provisioned VPC information (like the VPC ID, Subnet IDs, etc), making the co-existence of Pulumi and Terraform easy to automate.
+
+To learn more, [see Converting Terraform HCL to Pulumi in our Adopting Pulumi user guide]({{< relref "/docs/guides/adopting/from_terraform#converting-terraform-hcl-to-pulumi" >}}).

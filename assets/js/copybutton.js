@@ -17,7 +17,7 @@ $(function() {
         // For command line code snippets:
         //   1. Strip the prompt from any lines that are prefixed with it
         //   2. Discard subsequent lines that don't start with the prompt (i.e. output),
-        //      making sure to respect line continuation charcters.
+        //      making sure to respect line continuation characters.
         //   3. Combine multiple lines that start with a prompt into a single line, e.g.
         //      "$ mkdir mydir && mydir\n$ pulumi new typescript" =>
         //      "mkdir mydir && mydir && pulumi new typescript"
