@@ -16,7 +16,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_aws.globalaccelerator"></span><dl class="class">
 <dt id="pulumi_aws.globalaccelerator.Accelerator">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.globalaccelerator.</code><code class="sig-name descname">Accelerator</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">ip_address_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Global Accelerator accelerator.</p>
+<dd><p>Creates a Global Accelerator accelerator.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -50,6 +50,17 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.globalaccelerator.Accelerator.dns_name">
+<code class="sig-name descname">dns_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.dns_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DNS name of the accelerator. For example, <code class="docutils literal notranslate"><span class="pre">a5d53ff5ee6bca4ce.awsglobalaccelerator.com</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hosted_zone_id</span></code> –  The Global Accelerator Route 53 zone ID that can be used to
+route an [Alias Resource Record Set][1] to the Global Accelerator. This attribute
+is simply an alias for the zone ID <code class="docutils literal notranslate"><span class="pre">Z2BJ6XQ5FK7U4H</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.globalaccelerator.Accelerator.enabled">
 <code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates whether the accelerator is enabled. The value is true or false. The default value is true.</p>
@@ -66,7 +77,7 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">ip_sets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.ip_sets" title="Permalink to this definition">¶</a></dt>
 <dd><p>IP address set associated with the accelerator.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ipAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The array of IP addresses in the IP address set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of IP addresses in the IP address set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipFamily</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The types of IP addresses included in this IP set.</p></li>
 </ul>
 </dd></dl>
@@ -79,7 +90,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_aws.globalaccelerator.Accelerator.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">ip_address_type=None</em>, <em class="sig-param">ip_sets=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">ip_address_type=None</em>, <em class="sig-param">ip_sets=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Accelerator resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -89,6 +100,18 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The attributes of the accelerator. Fields documented below.</p></li>
+<li><p><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS name of the accelerator. For example, <code class="docutils literal notranslate"><span class="pre">a5d53ff5ee6bca4ce.awsglobalaccelerator.com</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
+route an [Alias Resource Record Set][1] to the Global Accelerator. This attribute
+is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the accelerator is enabled. The value is true or false. The default value is true.</p></li>
 <li><p><strong>ip_address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value for the address type must be <code class="docutils literal notranslate"><span class="pre">IPV4</span></code>.</p></li>
 <li><p><strong>ip_sets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – IP address set associated with the accelerator.</p></li>
@@ -104,7 +127,7 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>ip_sets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ipAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The array of IP addresses in the IP address set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of IP addresses in the IP address set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipFamily</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The types of IP addresses included in this IP set.</p></li>
 </ul>
 <blockquote>

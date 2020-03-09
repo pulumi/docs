@@ -727,7 +727,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the drive in GiBs.</p></li>
 <li><p><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A snapshot to base the EBS volume off of.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of EBS volume. Can be “standard”, “gp2”, “io1”, “sc1” or “st1” (Default: “standard”).</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of EBS volume. Can be “standard”, “gp2”, “io1”, “sc1” or “st1” (Default: “gp2”).</p></li>
 </ul>
 </dd>
 </dl>
@@ -785,7 +785,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.Volume.type">
 <code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.Volume.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of EBS volume. Can be “standard”, “gp2”, “io1”, “sc1” or “st1” (Default: “standard”).</p>
+<dd><p>The type of EBS volume. Can be “standard”, “gp2”, “io1”, “sc1” or “st1” (Default: “gp2”).</p>
 </dd></dl>
 
 <dl class="method">
@@ -807,7 +807,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the drive in GiBs.</p></li>
 <li><p><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A snapshot to base the EBS volume off of.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of EBS volume. Can be “standard”, “gp2”, “io1”, “sc1” or “st1” (Default: “standard”).</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of EBS volume. Can be “standard”, “gp2”, “io1”, “sc1” or “st1” (Default: “gp2”).</p></li>
 </ul>
 </dd>
 </dl>

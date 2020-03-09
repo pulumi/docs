@@ -78,7 +78,7 @@ defined for notification of log file delivery.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">dataResources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies logging data events. Fields documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource type in which you want to log data events. You can specify only the follwing value: “AWS::S3::Object”, “AWS::Lambda::Function”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource type in which you want to log data events. You can specify only the following value: “AWS::S3::Object”, “AWS::Lambda::Function”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of ARN for the specified S3 buckets and object prefixes..</p></li>
 </ul>
 </li>
@@ -129,7 +129,7 @@ Setting this to <code class="docutils literal notranslate"><span class="pre">fal
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">dataResources</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies logging data events. Fields documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The resource type in which you want to log data events. You can specify only the follwing value: “AWS::S3::Object”, “AWS::Lambda::Function”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The resource type in which you want to log data events. You can specify only the following value: “AWS::S3::Object”, “AWS::Lambda::Function”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of ARN for the specified S3 buckets and object prefixes..</p></li>
 </ul>
 </li>
@@ -245,7 +245,7 @@ defined for notification of log file delivery.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">dataResources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies logging data events. Fields documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource type in which you want to log data events. You can specify only the follwing value: “AWS::S3::Object”, “AWS::Lambda::Function”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource type in which you want to log data events. You can specify only the following value: “AWS::S3::Object”, “AWS::Lambda::Function”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of ARN for the specified S3 buckets and object prefixes..</p></li>
 </ul>
 </li>

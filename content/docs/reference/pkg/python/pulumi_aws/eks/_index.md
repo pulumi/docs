@@ -25,7 +25,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_aws.eks.Cluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.eks.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enabled_cluster_log_types=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.eks.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enabled_cluster_log_types=None</em>, <em class="sig-param">encryption_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EKS Cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -33,6 +33,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>enabled_cluster_log_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the desired control plane logging to enable. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon EKS Control Plane Logging</a></p></li>
+<li><p><strong>encryption_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the cluster.</p></li>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf. Ensure the resource configuration includes explicit dependencies on the IAM Role permissions by adding <cite>``depends_on`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#depends_on-explicit-resource-dependencies">https://www.terraform.io/docs/configuration/resources.html#depends_on-explicit-resource-dependencies</a>&gt;`_ if using the <cite>``iam.RolePolicy`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_role_policy.html">https://www.terraform.io/docs/providers/aws/r/iam_role_policy.html</a>&gt;`_ or <cite>``iam.RolePolicyAttachment`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_role_policy_attachment.html">https://www.terraform.io/docs/providers/aws/r/iam_role_policy_attachment.html</a>&gt;`_, otherwise EKS cannot delete EKS managed EC2 infrastructure such as Security Groups on EKS Cluster deletion.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
@@ -41,6 +42,15 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
+<p>The <strong>encryption_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block with provider for encryption. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html">Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide</a>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of strings with resources to be encrypted. Valid values: <code class="docutils literal notranslate"><span class="pre">secrets</span></code></p></li>
+</ul>
 <p>The <strong>vpc_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">clusterSecurityGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The cluster security group that was created by Amazon EKS for the cluster.</p></li>
@@ -73,6 +83,20 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.eks.Cluster.enabled_cluster_log_types">
 <code class="sig-name descname">enabled_cluster_log_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.Cluster.enabled_cluster_log_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of the desired control plane logging to enable. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon EKS Control Plane Logging</a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.Cluster.encryption_config">
+<code class="sig-name descname">encryption_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.Cluster.encryption_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block with provider for encryption. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name (ARN) of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html">Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide</a>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of strings with resources to be encrypted. Valid values: <code class="docutils literal notranslate"><span class="pre">secrets</span></code></p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -147,7 +171,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_aws.eks.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">certificate_authority=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">enabled_cluster_log_types=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">identities=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_version=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">certificate_authority=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">enabled_cluster_log_types=None</em>, <em class="sig-param">encryption_config=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">identities=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_version=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -160,6 +184,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>certificate_authority</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested attribute containing <code class="docutils literal notranslate"><span class="pre">certificate-authority-data</span></code> for your cluster.</p></li>
 <li><p><strong>enabled_cluster_log_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of the desired control plane logging to enable. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon EKS Control Plane Logging</a></p>
 </p></li>
+<li><p><strong>encryption_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.</p></li>
 <li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint for your Kubernetes API server.</p></li>
 <li><p><strong>identities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the cluster.</p></li>
@@ -176,6 +201,15 @@ properties used to qualify the lookup.</p>
 <p>The <strong>certificate_authority</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The base64 encoded certificate data required to communicate with your cluster. Add this to the <code class="docutils literal notranslate"><span class="pre">certificate-authority-data</span></code> section of the <code class="docutils literal notranslate"><span class="pre">kubeconfig</span></code> file for your cluster.</p></li>
+</ul>
+<p>The <strong>encryption_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block with provider for encryption. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html">Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide</a>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of strings with resources to be encrypted. Valid values: <code class="docutils literal notranslate"><span class="pre">secrets</span></code></p></li>
 </ul>
 <p>The <strong>identities</strong> object supports the following:</p>
 <ul class="simple">

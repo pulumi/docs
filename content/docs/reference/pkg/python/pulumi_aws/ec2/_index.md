@@ -908,6 +908,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.ec2.AwaitableGetInstanceTypeOfferingResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInstanceTypeOfferingResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">location_type=None</em>, <em class="sig-param">preferred_instance_types=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInstanceTypeOfferingResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ec2.AwaitableGetInstanceTypeOfferingsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInstanceTypeOfferingsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">instance_types=None</em>, <em class="sig-param">location_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInstanceTypeOfferingsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetInstancesResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_state_names=None</em>, <em class="sig-param">instance_tags=None</em>, <em class="sig-param">private_ips=None</em>, <em class="sig-param">public_ips=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -3385,6 +3395,42 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInstanceResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ec2.GetInstanceTypeOfferingResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetInstanceTypeOfferingResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">location_type=None</em>, <em class="sig-param">preferred_instance_types=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getInstanceTypeOffering.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetInstanceTypeOfferingResult.instance_type">
+<code class="sig-name descname">instance_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingResult.instance_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>EC2 Instance Type.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetInstanceTypeOfferingResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ec2.GetInstanceTypeOfferingsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetInstanceTypeOfferingsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">instance_types=None</em>, <em class="sig-param">location_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getInstanceTypeOfferings.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetInstanceTypeOfferingsResult.instance_types">
+<code class="sig-name descname">instance_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingsResult.instance_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of EC2 Instance Types.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetInstanceTypeOfferingsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -13070,6 +13116,52 @@ exactly match a pair on the desired Instance.</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instance.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.ec2.get_instance_type_offering">
+<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_instance_type_offering</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">location_type=None</em>, <em class="sig-param">preferred_instance_types=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instance_type_offering" title="Permalink to this definition">¶</a></dt>
+<dd><p>Information about single EC2 Instance Type Offering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – One or more configuration blocks containing name-values filters. See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstanceTypeOfferings.html">EC2 API Reference</a> for supported filters. Detailed below.</p></li>
+<li><p><strong>location_type</strong> (<em>str</em>) – Location type. Defaults to <code class="docutils literal notranslate"><span class="pre">region</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">availability-zone</span></code>, <code class="docutils literal notranslate"><span class="pre">availability-zone-id</span></code>, and <code class="docutils literal notranslate"><span class="pre">region</span></code>.</p></li>
+<li><p><strong>preferred_instance_types</strong> (<em>list</em>) – Ordered list of preferred EC2 Instance Types. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the filter. The <code class="docutils literal notranslate"><span class="pre">location</span></code> filter depends on the top-level <code class="docutils literal notranslate"><span class="pre">location_type</span></code> argument and if not specified, defaults to the current region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of one or more values for the filter.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_instance_type_offering.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_instance_type_offering.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.ec2.get_instance_type_offerings">
+<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_instance_type_offerings</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">location_type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instance_type_offerings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Information about EC2 Instance Type Offerings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – <p>One or more configuration blocks containing name-values filters. See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstanceTypeOfferings.html">EC2 API Reference</a> for supported filters. Detailed below.</p>
+</p></li>
+<li><p><strong>location_type</strong> (<em>str</em>) – Location type. Defaults to <code class="docutils literal notranslate"><span class="pre">region</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">availability-zone</span></code>, <code class="docutils literal notranslate"><span class="pre">availability-zone-id</span></code>, and <code class="docutils literal notranslate"><span class="pre">region</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the filter. The <code class="docutils literal notranslate"><span class="pre">location</span></code> filter depends on the top-level <code class="docutils literal notranslate"><span class="pre">location_type</span></code> argument and if not specified, defaults to the current region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of one or more values for the filter.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_instance_type_offerings.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_instance_type_offerings.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
