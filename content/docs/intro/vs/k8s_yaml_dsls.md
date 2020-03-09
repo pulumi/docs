@@ -31,3 +31,5 @@ between multiple systems, including
 
 Pulumi is [open source](https://github.com/pulumi/pulumi), has a growing community around it, and is a proud member of
 the Cloud Native Computing Foundation (CNCF).
+
+To learn more about adopting Pulumi, please refer to the [Kubernetes YAML and Helm migration guide]({{< relref "/docs/guides/adopting/from_kubernetes" >}}).

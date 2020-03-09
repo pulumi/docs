@@ -47,7 +47,7 @@ In these cases, new infrastructure can coexist with old infrastructure in two wa
 
 * [**Stack References**]({{< relref "/docs/intro/concepts/organizing-stacks-projects#inter-stack-dependencies" >}}) let you reference outputs of another Pulumi stack for use as inputs to a stack, which is very useful for [organizing projects and stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}).
 
-* **State References** let you reference outputs from a non-Pulumi stack for use as inputs to a Pulumi stack. Many infrastructure as code tools have the notion of "outputs," which are simply values exported for easy consumption. This might be VPC IDs, auto-assigned IP addresses, and so on. Examples include [Terraform state files and workspaces]({{< relref "from_terraform" >}}), [AWS CloudFormation stacks]({{< relref "from_aws" >}}), and [Azure Resource Manager (ARM) deployments]({{< relref "from_azure" >}}).
+* **External State References** let you reference outputs from a non-Pulumi stack for use as inputs to a Pulumi stack. Many infrastructure as code tools have the notion of "outputs," which are simply values exported for easy consumption. This might be VPC IDs, auto-assigned IP addresses, and so on. Examples include [Terraform state files and workspaces]({{< relref "from_terraform" >}}), [AWS CloudFormation stacks]({{< relref "from_aws" >}}), and [Azure Resource Manager (ARM) deployments]({{< relref "from_azure" >}}).
 
 Together, these make it easy to reference existing infrastructure regardless of how it was provisioned, without Pulumi taking over control of its ongoing management.
 

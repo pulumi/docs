@@ -39,3 +39,5 @@ configuration templates as a sort of "compilation" step. These offer nice syntac
 templates, but the underlying model leaks through and carries forward all of the other abovementioned shortcomings.
 
 Finally, Pulumi is [open source](https://github.com/pulumi/pulumi) and community-driven. All of the other cloud systems — such as Azure Resource Manager or AWS CloudFormation — are proprietary closed source, lead to lock-in, and lack the ability for the community to contribute to them.
+
+To learn more about adopting Pulumi, please refer to the [AWS CloudFormation]({{< relref "/docs/guides/adopting/from_aws" >}}) or [Azure Resource Manager (ARM)]({{< relref "/docs/guides/adopting/from_azure" >}}) migration guides.
