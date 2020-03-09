@@ -272,7 +272,9 @@ $ tf2pulumi >my-stack/index.ts
 
 This will generate a Pulumi TypeScript program in index.ts that when run with pulumi update will deploy the infrastructure originally described by the Terraform project. Note that if your infrastructure references files or directories with paths relative to the location of the Terraform project, you will most likely need to update these paths such that they are relative to the generated index.ts file.
 
-> If `tf2pulumi` complains about missing Terraform resource plugins, install those plugins as per the instructions in the error message and re-run the command above.
+> If `tf2pulumi` complains about missing Terraform resource plugins, install those plugins as per the instructions in the error message and re-run the command above. The `--allow-missing-plugins` option allows you to proceed even in the face of missing plugins.
+
+If you'd like to record the original HCL source code positions in the resulting generated code, pass the `--record-locations` flag. This can help with subsequent refactorings which may require that you consult back with the origin source code.
 
 ### Importing Resources
 

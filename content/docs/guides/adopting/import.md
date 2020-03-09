@@ -18,19 +18,7 @@ When working with existing resources, there are two primary scenarios:
 * You need to reference existing resources to use as inputs to new resources in Pulumi
 * You need to adopt existing resources under management so they can be managed by Pulumi
 
-We'll review referencing existing resources and then dive deeper to see how to adopt existing resources to be entirely under the control of Pulumi.
-
-## Referencing Existing Resources
-
-For referencing existing resources, Pulumi offers several options:
-
-* [**Resource getter functions**]({{< relref "/docs/intro/concepts/programming-model#resource-get" >}}) available on every resource let you read all the details for a resource from the cloud provider based just on its ID.
-
-* [**Stack references**]({{< relref "/docs/intro/concepts/organizing-stacks-projects#inter-stack-dependencies" >}}) let you reference outputs of another Pulumi stack for use as inputs to a stack, which is very useful for [organizing projects and stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}).
-
-* **State references** let you reference outputs from a non-Pulumi stack for use as inputs to a Pulumi stack, including [Terraform workspaces]({{< relref "from_terraform" >}}), [AWS CloudFormation stacks]({{< relref "from_aws" >}}), and [Azure Resource Manager (ARM) deployments]({{< relref "from_azure" >}}).
-
-Together, these make it easy to reference existing infrastructure regardless of how it was provisioned, without Pulumi taking over control of its ongoing management.
+For the first situation, please consult [the user guide index]({{< relref "/docs/guides/adopting#coexistence" >}}). For the second, let's now see how to adopt existing resources.
 
 ## Adopting Existing Resources
 

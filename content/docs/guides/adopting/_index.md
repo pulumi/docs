@@ -41,15 +41,15 @@ Let's say you already have infrastructure provisioned by an existing tool, such 
 * Perhaps that infrastructure is managed by a different team who will keep using their own tool.
 * Or it could be that this infrastructure is slated to be retired after your current project anyway.
 
- In these cases, new infrastructure can coexist with old infrastructure in two ways, letting you keep your existing infrastructure as-is while building new infrastructure under Pulumi's management.
+In these cases, new infrastructure can coexist with old infrastructure in two ways, letting you keep your existing infrastructure as-is while building new infrastructure under Pulumi's management. The following techniques can be used:
 
-#### Resource Getters
+* [**Resource Getters**]({{< relref "/docs/intro/concepts/programming-model#resource-get" >}}) available on every resource let you read all the details for a resource from the cloud provider based just on its ID.
 
-Every resource type in Pulumi has a "gettter." This allows you to look up an existing resource using its ID for purposes of reading state from it. This gives you back a fully populated Pulumi resource object whose properties can be used to initialize other resources that themselves are under Pulumi's control. For more details, [read the programming model documentation]({{< relref "/docs/intro/concepts/programming-model#resource-get" >}}).
+* [**Stack References**]({{< relref "/docs/intro/concepts/organizing-stacks-projects#inter-stack-dependencies" >}}) let you reference outputs of another Pulumi stack for use as inputs to a stack, which is very useful for [organizing projects and stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}).
 
-#### Referencing Stack Outputs
+* **State References** let you reference outputs from a non-Pulumi stack for use as inputs to a Pulumi stack. Many infrastructure as code tools have the notion of "outputs," which are simply values exported for easy consumption. This might be VPC IDs, auto-assigned IP addresses, and so on. Examples include [Terraform state files and workspaces]({{< relref "from_terraform" >}}), [AWS CloudFormation stacks]({{< relref "from_aws" >}}), and [Azure Resource Manager (ARM) deployments]({{< relref "from_azure" >}}).
 
-Many infrastructure as code tools have the notion of "outputs," which are simply values exported for easy consumption. This might be VPC IDs, auto-assigned IP addresses, and so on. Examples of this include Terraform workspaces, AWS CloudFormation stacks, and ARM templates. In your Pulumi program, you can reference these outputs by name, much like Pulumi's [built-in "stack reference" concept]({{< relref "/docs/intro/concepts/organizing-stacks-projects#inter-stack-dependencies" >}}) which can be used for Pulumi-to-Pulumi dependencies. For details on specifics, refer to the technology-specific guide above.
+Together, these make it easy to reference existing infrastructure regardless of how it was provisioned, without Pulumi taking over control of its ongoing management.
 
 ### Importing Infrastructure
 
@@ -59,8 +59,12 @@ In the above coexistence scenarios, Pulumi simply _reads_ your existing infrastr
 
 Furthermore, Pulumi doesn't care where the infrastructure originally came from. You could have manually provisioned it in your cloud's console UI, from the CLI, using Terraform, your cloud's built-in templating mechanism, and so on. In all cases, after the import process, you'll be left with a working Pulumi program, and all subequent infrastructure updates can be made with Pulumi. You can then retire the old way of managing your infrastructure. This works even if you've lost the original scripts or templates that created the infrastructure.
 
+To learn more about how to import resources in this manner, please [refer to this guide on resource adoption]({{< relref "import" >}}).
+
 ### Conversion
 
 The final approach is to convert an existing infrastructure as code program to Pulumi. This preserves existing program structure &mdash; which may be important if you carefully designed your existing infrastructure as code layout in terms of names, modules, and configurability. This can be difficult if not impossible to reverse-engineer automatically during the import process.
 
 Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. This is usually still combined with importing so that you not only get a new program that provisions the right infrastructure, but also adopt existing infrastructure under the management of Pulumi too.
+
+The primary conversion tool available right now is `tf2pulumi` which converts any Terraform HCL to Pulumi code. [Learn more about how to use it here.]({{< relref "from_terraform#converting-terraform-hcl-to-pulumi" >}}).
