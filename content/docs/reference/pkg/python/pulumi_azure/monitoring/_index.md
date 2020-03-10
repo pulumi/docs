@@ -588,222 +588,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
-<dt id="pulumi_azure.monitoring.AlertRule">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">AlertRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aggregation=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">email_action=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">operator=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">resource_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">threshold=None</em>, <em class="sig-param">webhook_action=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a <a class="reference external" href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitor-quick-resource-metric-alert-portal">metric-based alert rule</a> in Azure Monitor.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> This resource has been <a class="reference external" href="https://docs.microsoft.com/en-us/azure/azure-monitor/platform/monitoring-classic-retirement">deprecated</a> in favour of the <code class="docutils literal notranslate"><span class="pre">monitoring.MetricAlert</span></code> resource and will be removed in the next major version of the AzureRM Provider. The new resource shares the same fields as this one, and information on migrating across can be found in this guide.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>aggregation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines how the metric data is combined over time. Possible values are <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code>, <code class="docutils literal notranslate"><span class="pre">Total</span></code>, and <code class="docutils literal notranslate"><span class="pre">Last</span></code>.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A verbose description of the alert rule that will be included in the alert email.</p></li>
-<li><p><strong>email_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">email_action</span></code> block as defined below.</p></li>
-<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the alert rule is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The metric that defines what the rule monitors.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the alert rule. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>operator</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operator used to compare the metric data and the threshold. Possible values are <code class="docutils literal notranslate"><span class="pre">GreaterThan</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqual</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThan</span></code>, and <code class="docutils literal notranslate"><span class="pre">LessThanOrEqual</span></code>.</p></li>
-<li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The period of time formatted in <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration format</a> that is used to monitor the alert activity based on the threshold. The period must be between 5 minutes and 1 day.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the alert rule. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the resource monitored by the alert rule.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The threshold value that activates the alert.</p></li>
-<li><p><strong>webhook_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">webhook_action</span></code> block as defined below.</p></li>
-</ul>
-</dd>
-</dl>
-<p>The <strong>email_action</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">customEmails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of email addresses to be notified when the alert is triggered.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sendToServiceOwners</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the administrators (service and co-administrators) of the subscription are notified when the alert is triggered. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-</ul>
-<p>The <strong>webhook_action</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A dictionary of custom properties to include with the webhook POST operation payload.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service uri of the webhook to POST the notification when the alert is triggered.</p></li>
-</ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/metric_alertrule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/metric_alertrule.html.markdown</a>.</p>
-</div></blockquote>
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.AlertRule.aggregation">
-<code class="sig-name descname">aggregation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.aggregation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines how the metric data is combined over time. Possible values are <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code>, <code class="docutils literal notranslate"><span class="pre">Total</span></code>, and <code class="docutils literal notranslate"><span class="pre">Last</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.AlertRule.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>A verbose description of the alert rule that will be included in the alert email.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.AlertRule.email_action">
-<code class="sig-name descname">email_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.email_action" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <code class="docutils literal notranslate"><span class="pre">email_action</span></code> block as defined below.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">customEmails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of email addresses to be notified when the alert is triggered.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sendToServiceOwners</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the administrators (service and co-administrators) of the subscription are notified when the alert is triggered. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-</ul>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.AlertRule.enabled">
-<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the alert rule is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.AlertRule.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.location" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.AlertRule.metric_name">
-<code class="sig-name descname">metric_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.metric_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The metric that defines what the rule monitors.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.AlertRule.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the name of the alert rule. Changing this forces a new resource to be created.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.AlertRule.operator">
-<code class="sig-name descname">operator</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.operator" title="Permalink to this definition">¶</a></dt>
-<dd><p>The operator used to compare the metric data and the threshold. Possible values are <code class="docutils literal notranslate"><span class="pre">GreaterThan</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqual</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThan</span></code>, and <code class="docutils literal notranslate"><span class="pre">LessThanOrEqual</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.AlertRule.period">
-<code class="sig-name descname">period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.period" title="Permalink to this definition">¶</a></dt>
-<dd><p>The period of time formatted in <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration format</a> that is used to monitor the alert activity based on the threshold. The period must be between 5 minutes and 1 day.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.AlertRule.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.resource_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the resource group in which to create the alert rule. Changing this forces a new resource to be created.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.AlertRule.resource_id">
-<code class="sig-name descname">resource_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.resource_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the resource monitored by the alert rule.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.AlertRule.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource. Changing this forces a new resource to be created.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.AlertRule.threshold">
-<code class="sig-name descname">threshold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.threshold" title="Permalink to this definition">¶</a></dt>
-<dd><p>The threshold value that activates the alert.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.AlertRule.webhook_action">
-<code class="sig-name descname">webhook_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.webhook_action" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <code class="docutils literal notranslate"><span class="pre">webhook_action</span></code> block as defined below.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A dictionary of custom properties to include with the webhook POST operation payload.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The service uri of the webhook to POST the notification when the alert is triggered.</p></li>
-</ul>
-</dd></dl>
-
-<dl class="method">
-<dt id="pulumi_azure.monitoring.AlertRule.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aggregation=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">email_action=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">operator=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">resource_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">threshold=None</em>, <em class="sig-param">webhook_action=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get an existing AlertRule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>aggregation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines how the metric data is combined over time. Possible values are <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code>, <code class="docutils literal notranslate"><span class="pre">Total</span></code>, and <code class="docutils literal notranslate"><span class="pre">Last</span></code>.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A verbose description of the alert rule that will be included in the alert email.</p></li>
-<li><p><strong>email_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">email_action</span></code> block as defined below.</p></li>
-<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the alert rule is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The metric that defines what the rule monitors.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the alert rule. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>operator</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operator used to compare the metric data and the threshold. Possible values are <code class="docutils literal notranslate"><span class="pre">GreaterThan</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqual</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThan</span></code>, and <code class="docutils literal notranslate"><span class="pre">LessThanOrEqual</span></code>.</p></li>
-<li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The period of time formatted in <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration format</a> that is used to monitor the alert activity based on the threshold. The period must be between 5 minutes and 1 day.</p>
-</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the alert rule. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the resource monitored by the alert rule.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The threshold value that activates the alert.</p></li>
-<li><p><strong>webhook_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">webhook_action</span></code> block as defined below.</p></li>
-</ul>
-</dd>
-</dl>
-<p>The <strong>email_action</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">customEmails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of email addresses to be notified when the alert is triggered.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sendToServiceOwners</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the administrators (service and co-administrators) of the subscription are notified when the alert is triggered. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-</ul>
-<p>The <strong>webhook_action</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A dictionary of custom properties to include with the webhook POST operation payload.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service uri of the webhook to POST the notification when the alert is triggered.</p></li>
-</ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/metric_alertrule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/metric_alertrule.html.markdown</a>.</p>
-</div></blockquote>
-</dd></dl>
-
-<dl class="method">
-<dt id="pulumi_azure.monitoring.AlertRule.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
-into a format of their choosing before writing those properties to the resource object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A potentially transformed property name.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pulumi_azure.monitoring.AlertRule.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
-a format of their choosing before sending those properties to the Pulumi engine.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A potentially transformed property name.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
 <dt id="pulumi_azure.monitoring.AutoscaleSetting">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">AutoscaleSetting</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification=None</em>, <em class="sig-param">profiles=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_resource_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AutoscaleSetting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a AutoScale Setting which can be applied to Virtual Machine Scale Sets, App Services and other scalable resources.</p>
@@ -868,7 +652,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">metricTrigger</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">metric_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metricResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">statistic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -963,7 +747,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">metricTrigger</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">metric_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metricResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">statistic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -1071,7 +855,7 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">metricTrigger</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">metric_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metricResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">statistic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -1658,7 +1442,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">action</span></code> blocks as defined below.</p></li>
-<li><p><strong>auto_mitigate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the alerts in this Metric Alert be auto resolved? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>auto_mitigate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the alerts in this Metric Alert be auto resolved? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>criterias</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">criteria</span></code> blocks as defined below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of this Metric Alert.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should this Metric Alert be enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
@@ -1687,7 +1471,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metric_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metricNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
@@ -1708,7 +1492,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.monitoring.MetricAlert.auto_mitigate">
 <code class="sig-name descname">auto_mitigate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlert.auto_mitigate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Should the alerts in this Metric Alert be auto resolved? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<dd><p>Should the alerts in this Metric Alert be auto resolved? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1724,7 +1508,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metric_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metricNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
@@ -1797,7 +1581,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">action</span></code> blocks as defined below.</p></li>
-<li><p><strong>auto_mitigate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the alerts in this Metric Alert be auto resolved? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>auto_mitigate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the alerts in this Metric Alert be auto resolved? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>criterias</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">criteria</span></code> blocks as defined below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of this Metric Alert.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should this Metric Alert be enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
@@ -1826,7 +1610,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metric_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metricNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
@@ -1857,220 +1641,6 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_azure.monitoring.MetricAlert.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlert.translate_input_property" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
-a format of their choosing before sending those properties to the Pulumi engine.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A potentially transformed property name.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="pulumi_azure.monitoring.MetricAlertRule">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">MetricAlertRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aggregation=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">email_action=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">operator=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">resource_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">threshold=None</em>, <em class="sig-param">webhook_action=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a <a class="reference external" href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitor-quick-resource-metric-alert-portal">metric-based alert rule</a> in Azure Monitor.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>aggregation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines how the metric data is combined over time. Possible values are <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code>, <code class="docutils literal notranslate"><span class="pre">Total</span></code>, and <code class="docutils literal notranslate"><span class="pre">Last</span></code>.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A verbose description of the alert rule that will be included in the alert email.</p></li>
-<li><p><strong>email_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">email_action</span></code> block as defined below.</p></li>
-<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the alert rule is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The metric that defines what the rule monitors.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the alert rule. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>operator</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operator used to compare the metric data and the threshold. Possible values are <code class="docutils literal notranslate"><span class="pre">GreaterThan</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqual</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThan</span></code>, and <code class="docutils literal notranslate"><span class="pre">LessThanOrEqual</span></code>.</p></li>
-<li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The period of time formatted in <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration format</a> that is used to monitor the alert activity based on the threshold. The period must be between 5 minutes and 1 day.</p>
-</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the alert rule. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the resource monitored by the alert rule.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The threshold value that activates the alert.</p></li>
-<li><p><strong>webhook_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">webhook_action</span></code> block as defined below.</p></li>
-</ul>
-</dd>
-</dl>
-<p>The <strong>email_action</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">customEmails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of email addresses to be notified when the alert is triggered.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sendToServiceOwners</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the administrators (service and co-administrators) of the subscription are notified when the alert is triggered. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-</ul>
-<p>The <strong>webhook_action</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A dictionary of custom properties to include with the webhook POST operation payload.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service uri of the webhook to POST the notification when the alert is triggered.</p></li>
-</ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_metric_alertrule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_metric_alertrule.html.markdown</a>.</p>
-</div></blockquote>
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.aggregation">
-<code class="sig-name descname">aggregation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.aggregation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines how the metric data is combined over time. Possible values are <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code>, <code class="docutils literal notranslate"><span class="pre">Total</span></code>, and <code class="docutils literal notranslate"><span class="pre">Last</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>A verbose description of the alert rule that will be included in the alert email.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.email_action">
-<code class="sig-name descname">email_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.email_action" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <code class="docutils literal notranslate"><span class="pre">email_action</span></code> block as defined below.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">customEmails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of email addresses to be notified when the alert is triggered.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sendToServiceOwners</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the administrators (service and co-administrators) of the subscription are notified when the alert is triggered. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-</ul>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.enabled">
-<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the alert rule is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.location" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.metric_name">
-<code class="sig-name descname">metric_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.metric_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The metric that defines what the rule monitors.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the name of the alert rule. Changing this forces a new resource to be created.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.operator">
-<code class="sig-name descname">operator</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.operator" title="Permalink to this definition">¶</a></dt>
-<dd><p>The operator used to compare the metric data and the threshold. Possible values are <code class="docutils literal notranslate"><span class="pre">GreaterThan</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqual</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThan</span></code>, and <code class="docutils literal notranslate"><span class="pre">LessThanOrEqual</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.period">
-<code class="sig-name descname">period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.period" title="Permalink to this definition">¶</a></dt>
-<dd><p>The period of time formatted in <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration format</a> that is used to monitor the alert activity based on the threshold. The period must be between 5 minutes and 1 day.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.resource_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the resource group in which to create the alert rule. Changing this forces a new resource to be created.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.resource_id">
-<code class="sig-name descname">resource_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.resource_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the resource monitored by the alert rule.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource. Changing this forces a new resource to be created.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.threshold">
-<code class="sig-name descname">threshold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.threshold" title="Permalink to this definition">¶</a></dt>
-<dd><p>The threshold value that activates the alert.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.webhook_action">
-<code class="sig-name descname">webhook_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.webhook_action" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <code class="docutils literal notranslate"><span class="pre">webhook_action</span></code> block as defined below.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A dictionary of custom properties to include with the webhook POST operation payload.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The service uri of the webhook to POST the notification when the alert is triggered.</p></li>
-</ul>
-</dd></dl>
-
-<dl class="method">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aggregation=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">email_action=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">operator=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">resource_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">threshold=None</em>, <em class="sig-param">webhook_action=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get an existing MetricAlertRule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>aggregation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines how the metric data is combined over time. Possible values are <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code>, <code class="docutils literal notranslate"><span class="pre">Total</span></code>, and <code class="docutils literal notranslate"><span class="pre">Last</span></code>.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A verbose description of the alert rule that will be included in the alert email.</p></li>
-<li><p><strong>email_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">email_action</span></code> block as defined below.</p></li>
-<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the alert rule is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The metric that defines what the rule monitors.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the alert rule. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>operator</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operator used to compare the metric data and the threshold. Possible values are <code class="docutils literal notranslate"><span class="pre">GreaterThan</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqual</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThan</span></code>, and <code class="docutils literal notranslate"><span class="pre">LessThanOrEqual</span></code>.</p></li>
-<li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The period of time formatted in <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration format</a> that is used to monitor the alert activity based on the threshold. The period must be between 5 minutes and 1 day.</p>
-</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the alert rule. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the resource monitored by the alert rule.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The threshold value that activates the alert.</p></li>
-<li><p><strong>webhook_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">webhook_action</span></code> block as defined below.</p></li>
-</ul>
-</dd>
-</dl>
-<p>The <strong>email_action</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">customEmails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of email addresses to be notified when the alert is triggered.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sendToServiceOwners</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the administrators (service and co-administrators) of the subscription are notified when the alert is triggered. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-</ul>
-<p>The <strong>webhook_action</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A dictionary of custom properties to include with the webhook POST operation payload.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service uri of the webhook to POST the notification when the alert is triggered.</p></li>
-</ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_metric_alertrule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_metric_alertrule.html.markdown</a>.</p>
-</div></blockquote>
-</dd></dl>
-
-<dl class="method">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
-into a format of their choosing before writing those properties to the resource object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A potentially transformed property name.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pulumi_azure.monitoring.MetricAlertRule.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

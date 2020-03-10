@@ -24,7 +24,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Azure Maps Account. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Azure Maps Account should exist. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The sku of the Azure Maps Account. Possible values are <code class="docutils literal notranslate"><span class="pre">s0</span></code> and <code class="docutils literal notranslate"><span class="pre">s1</span></code>.</p></li>
+<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The sku of the Azure Maps Account. Possible values are <code class="docutils literal notranslate"><span class="pre">S0</span></code> and <code class="docutils literal notranslate"><span class="pre">S1</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the Azure Maps Account.</p></li>
 </ul>
 </dd>
@@ -59,7 +59,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_azure.maps.Account.sku_name">
 <code class="sig-name descname">sku_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.maps.Account.sku_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The sku of the Azure Maps Account. Possible values are <code class="docutils literal notranslate"><span class="pre">s0</span></code> and <code class="docutils literal notranslate"><span class="pre">s1</span></code>.</p>
+<dd><p>The sku of the Azure Maps Account. Possible values are <code class="docutils literal notranslate"><span class="pre">S0</span></code> and <code class="docutils literal notranslate"><span class="pre">S1</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -89,7 +89,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>primary_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The primary key used to authenticate and authorize access to the Maps REST APIs.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Azure Maps Account should exist. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>secondary_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secondary key used to authenticate and authorize access to the Maps REST APIs.</p></li>
-<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The sku of the Azure Maps Account. Possible values are <code class="docutils literal notranslate"><span class="pre">s0</span></code> and <code class="docutils literal notranslate"><span class="pre">s1</span></code>.</p></li>
+<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The sku of the Azure Maps Account. Possible values are <code class="docutils literal notranslate"><span class="pre">S0</span></code> and <code class="docutils literal notranslate"><span class="pre">S1</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the Azure Maps Account.</p></li>
 <li><p><strong>x_ms_client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique identifier for the Maps Account.</p></li>
 </ul>

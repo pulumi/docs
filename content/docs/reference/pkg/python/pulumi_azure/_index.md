@@ -15,7 +15,6 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="ad/">ad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="analysisservices/">analysisservices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apimanagement/">apimanagement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appconfiguration/">appconfiguration</a></li>
@@ -23,7 +22,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="appservice/">appservice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="authorization/">authorization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="automation/">automation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="autoscale/">autoscale</a></li>
 <li class="toctree-l1"><a class="reference internal" href="backup/">backup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="batch/">batch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bot/">bot</a></li>
@@ -37,7 +35,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="databricks/">databricks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datafactory/">datafactory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datalake/">datalake</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ddosprotection/">ddosprotection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devspace/">devspace</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devtest/">devtest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dns/">dns</a></li>
@@ -76,7 +73,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="redis/">redis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="relay/">relay</a></li>
 <li class="toctree-l1"><a class="reference internal" href="role/">role</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scheduler/">scheduler</a></li>
 <li class="toctree-l1"><a class="reference internal" href="search/">search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="securitycenter/">securitycenter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="servicebus/">servicebus</a></li>
