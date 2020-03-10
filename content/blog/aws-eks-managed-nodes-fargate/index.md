@@ -8,7 +8,7 @@ date: "2019-12-05"
 meta_image: "pulumi-eks-fargate.png"
 ---
 
-At AWS re:Invent this week, Amazon highlighted two new features that simplify scaling your Elastic Kubernetes Service (EKS) clusters: Managed Node Groups and Fargate. We're happy to announce that we've integrated support for both, making our existing EKS support even easier to use than before. The result is a great spectrum of options for managing your cluster's compute &mdash; offering productivity, flexibility, and control, based on your needs.
+AWS Elastic Kubernetes Service (EKS) provides a range of performance and control for dynamically scaling your Kubernetes clusters, including Managed Node Groups, Fargate, and Manually-Managed Node Groups in EC2. In this post, we'll see how to use each of these compute options, and when to prefer one over the other in order to maximize productivity, flexibility, and control, based on your needs.
 
 <!--more-->
 
