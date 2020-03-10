@@ -157,7 +157,7 @@ class Program
             // Read the deployment and the storage account name.
             var deployment = Core.TemplateDeployment.Get("myStorageDeployment",
                 "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg8fd69ec2/providers/Microsoft.Resources/deployments/myStorageDeployment62ba53a3");
-            var storageAccountName = string)deployment.Outputs["storageAccountName"];
+            var storageAccountName = (string)deployment.Outputs["storageAccountName"];
 
             // Create a blob for our own deployment.
             var blob = new Storage.ZipBlob("myBlob", new Storage.ZipBlobArgs
