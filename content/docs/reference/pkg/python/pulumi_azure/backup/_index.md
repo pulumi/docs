@@ -14,6 +14,11 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.backup"></span><dl class="class">
+<dt id="pulumi_azure.backup.AwaitableGetPolicyVMResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.backup.</code><code class="sig-name descname">AwaitableGetPolicyVMResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">recovery_vault_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.backup.AwaitableGetPolicyVMResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.backup.ContainerStorageAccount">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.backup.</code><code class="sig-name descname">ContainerStorageAccount</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">recovery_vault_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.backup.ContainerStorageAccount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages registration of a storage account with Azure Backup. Storage accounts must be registered with an Azure Recovery Vault in order to backup file shares within the storage account. Registering a storage account with a vault creates what is known as a protection container within Azure Recovery Services. Once the container is created, Azure file shares within the storage account can be backed up using the <code class="docutils literal notranslate"><span class="pre">backup.ProtectedFileShare</span></code> resource.</p>
@@ -108,6 +113,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.backup.GetPolicyVMResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.backup.</code><code class="sig-name descname">GetPolicyVMResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">recovery_vault_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.backup.GetPolicyVMResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getPolicyVM.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.backup.GetPolicyVMResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.backup.GetPolicyVMResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.backup.GetPolicyVMResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.backup.GetPolicyVMResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -713,6 +736,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.backup.get_policy_vm">
+<code class="sig-prename descclassname">pulumi_azure.backup.</code><code class="sig-name descname">get_policy_vm</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">recovery_vault_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.backup.get_policy_vm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing VM Backup Policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the VM Backup Policy.</p></li>
+<li><p><strong>recovery_vault_name</strong> (<em>str</em>) – Specifies the name of the Recovery Services Vault.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The name of the resource group in which the VM Backup Policy resides.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/backup_policy_vm.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/backup_policy_vm.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

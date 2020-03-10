@@ -19,18 +19,13 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
-<dt id="pulumi_azure.privatelink.AwaitableGetPrivateLinkEndpointConnectionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.privatelink.</code><code class="sig-name descname">AwaitableGetPrivateLinkEndpointConnectionResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">private_service_connections=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.privatelink.AwaitableGetPrivateLinkEndpointConnectionResult" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="class">
 <dt id="pulumi_azure.privatelink.AwaitableGetServiceEndpointConnectionsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.privatelink.</code><code class="sig-name descname">AwaitableGetServiceEndpointConnectionsResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">private_endpoint_connections=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">service_id=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.privatelink.AwaitableGetServiceEndpointConnectionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.privatelink.AwaitableGetServiceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.privatelink.</code><code class="sig-name descname">AwaitableGetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">alias=None</em>, <em class="sig-param">auto_approval_subscription_ids=None</em>, <em class="sig-param">enable_proxy_protocol=None</em>, <em class="sig-param">load_balancer_frontend_ip_configuration_ids=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nat_ip_configurations=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">visibility_subscription_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.privatelink.AwaitableGetServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.privatelink.</code><code class="sig-name descname">AwaitableGetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">alias=None</em>, <em class="sig-param">auto_approval_subscription_ids=None</em>, <em class="sig-param">enable_proxy_protocol=None</em>, <em class="sig-param">load_balancer_frontend_ip_configuration_ids=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nat_ip_configurations=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">visibility_subscription_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.privatelink.AwaitableGetServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -197,30 +192,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
-<dt id="pulumi_azure.privatelink.GetPrivateLinkEndpointConnectionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.privatelink.</code><code class="sig-name descname">GetPrivateLinkEndpointConnectionResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">private_service_connections=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.privatelink.GetPrivateLinkEndpointConnectionResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>A collection of values returned by getPrivateLinkEndpointConnection.</p>
-<dl class="attribute">
-<dt id="pulumi_azure.privatelink.GetPrivateLinkEndpointConnectionResult.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.privatelink.GetPrivateLinkEndpointConnectionResult.location" title="Permalink to this definition">¶</a></dt>
-<dd><p>The supported Azure location where the resource exists.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.privatelink.GetPrivateLinkEndpointConnectionResult.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.privatelink.GetPrivateLinkEndpointConnectionResult.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the Private Link endpoint.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.privatelink.GetPrivateLinkEndpointConnectionResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.privatelink.GetPrivateLinkEndpointConnectionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
 <dt id="pulumi_azure.privatelink.GetServiceEndpointConnectionsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.privatelink.</code><code class="sig-name descname">GetServiceEndpointConnectionsResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">private_endpoint_connections=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">service_id=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.privatelink.GetServiceEndpointConnectionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServiceEndpointConnections.</p>
@@ -240,7 +211,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.privatelink.GetServiceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.privatelink.</code><code class="sig-name descname">GetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">alias=None</em>, <em class="sig-param">auto_approval_subscription_ids=None</em>, <em class="sig-param">enable_proxy_protocol=None</em>, <em class="sig-param">load_balancer_frontend_ip_configuration_ids=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nat_ip_configurations=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">visibility_subscription_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.privatelink.GetServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.privatelink.</code><code class="sig-name descname">GetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">alias=None</em>, <em class="sig-param">auto_approval_subscription_ids=None</em>, <em class="sig-param">enable_proxy_protocol=None</em>, <em class="sig-param">load_balancer_frontend_ip_configuration_ids=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nat_ip_configurations=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">visibility_subscription_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.privatelink.GetServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getService.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.privatelink.GetServiceResult.alias">
@@ -321,23 +292,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/private_endpoint_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/private_endpoint_connection.html.markdown</a>.</p>
-</div></blockquote>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_azure.privatelink.get_private_link_endpoint_connection">
-<code class="sig-prename descclassname">pulumi_azure.privatelink.</code><code class="sig-name descname">get_private_link_endpoint_connection</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.privatelink.get_private_link_endpoint_connection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>) – Specifies the Name of the private link endpoint.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the Name of the Resource Group within which the private link endpoint exists.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/private_link_endpoint_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/private_link_endpoint_connection.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

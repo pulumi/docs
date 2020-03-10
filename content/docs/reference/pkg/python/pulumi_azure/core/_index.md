@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.core"></span><dl class="class">
 <dt id="pulumi_azure.core.AwaitableGetClientConfigResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">AwaitableGetClientConfigResult</code><span class="sig-paren">(</span><em class="sig-param">client_id=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">service_principal_application_id=None</em>, <em class="sig-param">service_principal_object_id=None</em>, <em class="sig-param">subscription_id=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.AwaitableGetClientConfigResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">AwaitableGetClientConfigResult</code><span class="sig-paren">(</span><em class="sig-param">client_id=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">subscription_id=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.AwaitableGetClientConfigResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -45,7 +45,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_azure.core.GetClientConfigResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">GetClientConfigResult</code><span class="sig-paren">(</span><em class="sig-param">client_id=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">service_principal_application_id=None</em>, <em class="sig-param">service_principal_object_id=None</em>, <em class="sig-param">subscription_id=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.GetClientConfigResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">GetClientConfigResult</code><span class="sig-paren">(</span><em class="sig-param">client_id=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">subscription_id=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.GetClientConfigResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClientConfig.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.core.GetClientConfigResult.id">

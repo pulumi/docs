@@ -16,17 +16,17 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_azure.compute"></span><dl class="class">
 <dt id="pulumi_azure.compute.AvailabilitySet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AvailabilitySet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">managed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain_count=None</em>, <em class="sig-param">platform_update_domain_count=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AvailabilitySet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages an availability set for virtual machines.</p>
+<dd><p>Manages an Availability Set for Virtual Machines.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>managed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the availability set is managed or not. Possible values are <code class="docutils literal notranslate"><span class="pre">true</span></code> (to specify aligned) or <code class="docutils literal notranslate"><span class="pre">false</span></code> (to specify classic). Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>managed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the availability set is managed or not. Possible values are <code class="docutils literal notranslate"><span class="pre">true</span></code> (to specify aligned) or <code class="docutils literal notranslate"><span class="pre">false</span></code> (to specify classic). Default is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the availability set. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>platform_fault_domain_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of fault domains that are used. Defaults to 3.</p></li>
-<li><p><strong>platform_update_domain_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of update domains that are used. Defaults to 5.</p></li>
+<li><p><strong>platform_fault_domain_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of fault domains that are used. Defaults to <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
+<li><p><strong>platform_update_domain_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of update domains that are used. Defaults to <code class="docutils literal notranslate"><span class="pre">5</span></code>.</p></li>
 <li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the availability set. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -45,7 +45,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_azure.compute.AvailabilitySet.managed">
 <code class="sig-name descname">managed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.AvailabilitySet.managed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether the availability set is managed or not. Possible values are <code class="docutils literal notranslate"><span class="pre">true</span></code> (to specify aligned) or <code class="docutils literal notranslate"><span class="pre">false</span></code> (to specify classic). Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<dd><p>Specifies whether the availability set is managed or not. Possible values are <code class="docutils literal notranslate"><span class="pre">true</span></code> (to specify aligned) or <code class="docutils literal notranslate"><span class="pre">false</span></code> (to specify classic). Default is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -57,13 +57,13 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_azure.compute.AvailabilitySet.platform_fault_domain_count">
 <code class="sig-name descname">platform_fault_domain_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.AvailabilitySet.platform_fault_domain_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the number of fault domains that are used. Defaults to 3.</p>
+<dd><p>Specifies the number of fault domains that are used. Defaults to <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.compute.AvailabilitySet.platform_update_domain_count">
 <code class="sig-name descname">platform_update_domain_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.AvailabilitySet.platform_update_domain_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the number of update domains that are used. Defaults to 5.</p>
+<dd><p>Specifies the number of update domains that are used. Defaults to <code class="docutils literal notranslate"><span class="pre">5</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -96,10 +96,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>managed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the availability set is managed or not. Possible values are <code class="docutils literal notranslate"><span class="pre">true</span></code> (to specify aligned) or <code class="docutils literal notranslate"><span class="pre">false</span></code> (to specify classic). Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>managed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the availability set is managed or not. Possible values are <code class="docutils literal notranslate"><span class="pre">true</span></code> (to specify aligned) or <code class="docutils literal notranslate"><span class="pre">false</span></code> (to specify classic). Default is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the availability set. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>platform_fault_domain_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of fault domains that are used. Defaults to 3.</p></li>
-<li><p><strong>platform_update_domain_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of update domains that are used. Defaults to 5.</p></li>
+<li><p><strong>platform_fault_domain_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of fault domains that are used. Defaults to <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
+<li><p><strong>platform_update_domain_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of update domains that are used. Defaults to <code class="docutils literal notranslate"><span class="pre">5</span></code>.</p></li>
 <li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the availability set. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -488,7 +488,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of this Dedicated Host. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>platform_fault_domain</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specify the fault domain of the Dedicated Host Group in which to create the Dedicated Host. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the sku name of the Dedicated Host. Possible values are <code class="docutils literal notranslate"><span class="pre">DSv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">ESv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">FSv2-Type2</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the sku name of the Dedicated Host. Possible values are <code class="docutils literal notranslate"><span class="pre">DSv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">DSv3-Type2</span></code>, <code class="docutils literal notranslate"><span class="pre">ESv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">ESv3-Type2</span></code>,<code class="docutils literal notranslate"><span class="pre">FSv2-Type2</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
@@ -535,7 +535,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.DedicatedHost.sku_name">
 <code class="sig-name descname">sku_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.DedicatedHost.sku_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specify the sku name of the Dedicated Host. Possible values are <code class="docutils literal notranslate"><span class="pre">DSv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">ESv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">FSv2-Type2</span></code>. Changing this forces a new resource to be created.</p>
+<dd><p>Specify the sku name of the Dedicated Host. Possible values are <code class="docutils literal notranslate"><span class="pre">DSv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">DSv3-Type2</span></code>, <code class="docutils literal notranslate"><span class="pre">ESv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">ESv3-Type2</span></code>,<code class="docutils literal notranslate"><span class="pre">FSv2-Type2</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -561,7 +561,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of this Dedicated Host. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>platform_fault_domain</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specify the fault domain of the Dedicated Host Group in which to create the Dedicated Host. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the sku name of the Dedicated Host. Possible values are <code class="docutils literal notranslate"><span class="pre">DSv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">ESv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">FSv2-Type2</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the sku name of the Dedicated Host. Possible values are <code class="docutils literal notranslate"><span class="pre">DSv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">DSv3-Type2</span></code>, <code class="docutils literal notranslate"><span class="pre">ESv3-Type1</span></code>, <code class="docutils literal notranslate"><span class="pre">ESv3-Type2</span></code>,<code class="docutils literal notranslate"><span class="pre">FSv2-Type2</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
@@ -868,7 +868,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.Extension">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">Extension</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_upgrade_minor_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protected_settings=None</em>, <em class="sig-param">publisher=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">type_handler_version=None</em>, <em class="sig-param">virtual_machine_id=None</em>, <em class="sig-param">virtual_machine_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Extension" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">Extension</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_upgrade_minor_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protected_settings=None</em>, <em class="sig-param">publisher=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">type_handler_version=None</em>, <em class="sig-param">virtual_machine_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Extension" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Virtual Machine Extension to provide post deployment configuration
 and run automated tasks.</p>
 <blockquote>
@@ -882,17 +882,12 @@ and run automated tasks.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>auto_upgrade_minor_version</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the platform deploys
 the latest minor version update to the <code class="docutils literal notranslate"><span class="pre">type_handler_version</span></code> specified.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location where the extension is created. Changing
-this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the virtual machine extension peering. Changing
 this forces a new resource to be created.</p></li>
 <li><p><strong>protected_settings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protected_settings passed to the
 extension, like settings, these are specified as a JSON object in a string.</p></li>
 <li><p><strong>publisher</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The publisher of the extension, available publishers
 can be found by using the Azure CLI.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
-create the virtual network. Changing this forces a new resource to be
-created.</p></li>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The settings passed to the extension, these are
 specified as a JSON object in a string.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -900,11 +895,7 @@ specified as a JSON object in a string.</p></li>
 be found using the Azure CLI.</p></li>
 <li><p><strong>type_handler_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of the extension to
 use, available versions can be found using the Azure CLI.</p></li>
-<li><p><strong>virtual_machine_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource ID of the virtual machine. This value replaces
-<code class="docutils literal notranslate"><span class="pre">location</span></code>, <code class="docutils literal notranslate"><span class="pre">resource_group_name</span></code> and <code class="docutils literal notranslate"><span class="pre">virtual_machine_name</span></code>. Changing this forces a new
-resource to be created</p></li>
-<li><p><strong>virtual_machine_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the virtual machine. Changing
-this forces a new resource to be created.</p></li>
+<li><p><strong>virtual_machine_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Virtual Machine. Changing this forces a new resource to be created</p></li>
 </ul>
 </dd>
 </dl>
@@ -916,13 +907,6 @@ this forces a new resource to be created.</p></li>
 <code class="sig-name descname">auto_upgrade_minor_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.Extension.auto_upgrade_minor_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies if the platform deploys
 the latest minor version update to the <code class="docutils literal notranslate"><span class="pre">type_handler_version</span></code> specified.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.compute.Extension.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.Extension.location" title="Permalink to this definition">¶</a></dt>
-<dd><p>The location where the extension is created. Changing
-this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -944,14 +928,6 @@ extension, like settings, these are specified as a JSON object in a string.</p>
 <code class="sig-name descname">publisher</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.Extension.publisher" title="Permalink to this definition">¶</a></dt>
 <dd><p>The publisher of the extension, available publishers
 can be found by using the Azure CLI.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.compute.Extension.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.Extension.resource_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the resource group in which to
-create the virtual network. Changing this forces a new resource to be
-created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -984,21 +960,12 @@ use, available versions can be found using the Azure CLI.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.Extension.virtual_machine_id">
 <code class="sig-name descname">virtual_machine_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.Extension.virtual_machine_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource ID of the virtual machine. This value replaces
-<code class="docutils literal notranslate"><span class="pre">location</span></code>, <code class="docutils literal notranslate"><span class="pre">resource_group_name</span></code> and <code class="docutils literal notranslate"><span class="pre">virtual_machine_name</span></code>. Changing this forces a new
-resource to be created</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.compute.Extension.virtual_machine_name">
-<code class="sig-name descname">virtual_machine_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.Extension.virtual_machine_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the virtual machine. Changing
-this forces a new resource to be created.</p>
+<dd><p>The ID of the Virtual Machine. Changing this forces a new resource to be created</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_azure.compute.Extension.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_upgrade_minor_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protected_settings=None</em>, <em class="sig-param">publisher=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">type_handler_version=None</em>, <em class="sig-param">virtual_machine_id=None</em>, <em class="sig-param">virtual_machine_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Extension.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_upgrade_minor_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protected_settings=None</em>, <em class="sig-param">publisher=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">type_handler_version=None</em>, <em class="sig-param">virtual_machine_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Extension.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Extension resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1009,17 +976,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>auto_upgrade_minor_version</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the platform deploys
 the latest minor version update to the <code class="docutils literal notranslate"><span class="pre">type_handler_version</span></code> specified.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location where the extension is created. Changing
-this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the virtual machine extension peering. Changing
 this forces a new resource to be created.</p></li>
 <li><p><strong>protected_settings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protected_settings passed to the
 extension, like settings, these are specified as a JSON object in a string.</p></li>
 <li><p><strong>publisher</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The publisher of the extension, available publishers
 can be found by using the Azure CLI.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
-create the virtual network. Changing this forces a new resource to be
-created.</p></li>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The settings passed to the extension, these are
 specified as a JSON object in a string.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -1027,11 +989,7 @@ specified as a JSON object in a string.</p></li>
 be found using the Azure CLI.</p></li>
 <li><p><strong>type_handler_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of the extension to
 use, available versions can be found using the Azure CLI.</p></li>
-<li><p><strong>virtual_machine_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource ID of the virtual machine. This value replaces
-<code class="docutils literal notranslate"><span class="pre">location</span></code>, <code class="docutils literal notranslate"><span class="pre">resource_group_name</span></code> and <code class="docutils literal notranslate"><span class="pre">virtual_machine_name</span></code>. Changing this forces a new
-resource to be created</p></li>
-<li><p><strong>virtual_machine_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the virtual machine. Changing
-this forces a new resource to be created.</p></li>
+<li><p><strong>virtual_machine_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Virtual Machine. Changing this forces a new resource to be created</p></li>
 </ul>
 </dd>
 </dl>
@@ -3154,7 +3112,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.compute.ScaleSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">ScaleSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">automatic_os_upgrade=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">extensions=None</em>, <em class="sig-param">health_probe_id=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_profiles=None</em>, <em class="sig-param">os_profile=None</em>, <em class="sig-param">os_profile_linux_config=None</em>, <em class="sig-param">os_profile_secrets=None</em>, <em class="sig-param">os_profile_windows_config=None</em>, <em class="sig-param">overprovision=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rolling_upgrade_policy=None</em>, <em class="sig-param">single_placement_group=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">storage_profile_data_disks=None</em>, <em class="sig-param">storage_profile_image_reference=None</em>, <em class="sig-param">storage_profile_os_disk=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">upgrade_policy_mode=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.ScaleSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ScaleSet resource with the given unique name, props, and options.</p>
+<dd><p>Manages a virtual machine scale set.</p>
+<blockquote>
+<div><p><strong>Note:</strong> The <code class="docutils literal notranslate"><span class="pre">compute.ScaleSet</span></code> resource has been superseded by the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachineScaleSet</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachineScaleSet</span></code> resources. The existing <code class="docutils literal notranslate"><span class="pre">compute.ScaleSet</span></code> resource will continue to be available throughout the 2.x releases however is in a feature-frozen state to maintain compatibility - new functionality will instead be added to the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachineScaleSet</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachineScaleSet</span></code> resources.</p>
+<p><strong>NOTE:</strong> All arguments including the administrator login and password will be stored in the raw state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3222,7 +3184,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An ip_configuration block as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets can use the same application gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies up to <code class="docutils literal notranslate"><span class="pre">20</span></code> application security group IDs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to inbound NAT pools for load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
@@ -3415,7 +3377,7 @@ When setting this field <code class="docutils literal notranslate"><span class="
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An ip_configuration block as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets can use the same application gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies up to <code class="docutils literal notranslate"><span class="pre">20</span></code> application security group IDs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies an array of references to inbound NAT pools for load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
@@ -3704,7 +3666,7 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An ip_configuration block as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets can use the same application gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies up to <code class="docutils literal notranslate"><span class="pre">20</span></code> application security group IDs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to inbound NAT pools for load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
@@ -4498,7 +4460,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.compute.VirtualMachine">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">VirtualMachine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">availability_set_id=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">delete_data_disks_on_termination=None</em>, <em class="sig-param">delete_os_disk_on_termination=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">os_profile=None</em>, <em class="sig-param">os_profile_linux_config=None</em>, <em class="sig-param">os_profile_secrets=None</em>, <em class="sig-param">os_profile_windows_config=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">primary_network_interface_id=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_data_disks=None</em>, <em class="sig-param">storage_image_reference=None</em>, <em class="sig-param">storage_os_disk=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vm_size=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a VirtualMachine resource with the given unique name, props, and options.</p>
+<dd><p>Manages a Virtual Machine.</p>
+<blockquote>
+<div><p><strong>Note:</strong> The <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource has been superseded by the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachine</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachine</span></code> resources. The existing <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource will continue to be available throughout the 2.x releases however is in a feature-frozen state to maintain compatibility - new functionality will instead be added to the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachine</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachine</span></code> resources.</p>
+<p><strong>Note:</strong> Data Disks can be attached either directly on the <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">compute.DataDiskAttachment</span></code> resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5055,10 +5021,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.compute.VirtualMachineScaleSetExtension">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">VirtualMachineScaleSetExtension</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_upgrade_minor_version=None</em>, <em class="sig-param">force_update_tag=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protected_settings=None</em>, <em class="sig-param">provision_after_extensions=None</em>, <em class="sig-param">publisher=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">type_handler_version=None</em>, <em class="sig-param">virtual_machine_scale_set_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.VirtualMachineScaleSetExtension" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p><strong>NOTE:</strong> <strong>This resource is in Beta</strong> and as such the Schema can change in Minor versions of the Provider.</p>
-</div></blockquote>
-<p>Manages an Extension for a Virtual Machine Scale Set.</p>
+<dd><p>Manages an Extension for a Virtual Machine Scale Set.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource is not intended to be used with the <code class="docutils literal notranslate"><span class="pre">compute.ScaleSet</span></code> resource - instead it’s intended for this to be used with the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachineScaleSet</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachineScaleSet</span></code> resources.</p>
 </div></blockquote>

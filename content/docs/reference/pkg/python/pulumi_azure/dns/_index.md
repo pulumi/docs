@@ -269,7 +269,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.dns.AwaitableGetZoneResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">AwaitableGetZoneResult</code><span class="sig-paren">(</span><em class="sig-param">max_number_of_record_sets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">number_of_record_sets=None</em>, <em class="sig-param">registration_virtual_network_ids=None</em>, <em class="sig-param">resolution_virtual_network_ids=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.AwaitableGetZoneResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">AwaitableGetZoneResult</code><span class="sig-paren">(</span><em class="sig-param">max_number_of_record_sets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">number_of_record_sets=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.AwaitableGetZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -545,7 +545,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.dns.GetZoneResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">GetZoneResult</code><span class="sig-paren">(</span><em class="sig-param">max_number_of_record_sets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">number_of_record_sets=None</em>, <em class="sig-param">registration_virtual_network_ids=None</em>, <em class="sig-param">resolution_virtual_network_ids=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.GetZoneResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">GetZoneResult</code><span class="sig-paren">(</span><em class="sig-param">max_number_of_record_sets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">number_of_record_sets=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.GetZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getZone.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.dns.GetZoneResult.max_number_of_record_sets">
@@ -566,27 +566,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_azure.dns.GetZoneResult.registration_virtual_network_ids">
-<code class="sig-name descname">registration_virtual_network_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.GetZoneResult.registration_virtual_network_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of Virtual Network ID’s that register hostnames in this DNS zone.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.dns.GetZoneResult.resolution_virtual_network_ids">
-<code class="sig-name descname">resolution_virtual_network_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.GetZoneResult.resolution_virtual_network_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of Virtual Network ID’s that resolve records in this DNS zone.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_azure.dns.GetZoneResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.GetZoneResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the EventHub Namespace.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.dns.GetZoneResult.zone_type">
-<code class="sig-name descname">zone_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.GetZoneResult.zone_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>(<strong>Deprecated</strong>) The type of this DNS zone, such as <code class="docutils literal notranslate"><span class="pre">Public</span></code> or <code class="docutils literal notranslate"><span class="pre">Private</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -740,7 +722,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.dns.NsRecord">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">NsRecord</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">record=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.NsRecord" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">NsRecord</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.NsRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables you to manage DNS NS Records within Azure DNS.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -748,8 +730,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS NS Record.</p></li>
-<li><p><strong>record</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of values that make up the NS record. Each <code class="docutils literal notranslate"><span class="pre">record</span></code> block supports fields documented below. This field has been deprecated and will be removed in a future release.</p></li>
-<li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of values that make up the NS record. <em>WARNING</em>: Either <code class="docutils literal notranslate"><span class="pre">records</span></code> or <code class="docutils literal notranslate"><span class="pre">record</span></code> is required.</p></li>
+<li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of values that make up the NS record.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Time To Live (TTL) of the DNS record in seconds.</p></li>
@@ -757,10 +738,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<p>The <strong>record</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">nsdname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_ns_record.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_ns_record.html.markdown</a>.</p>
 </div></blockquote>
@@ -777,18 +754,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_azure.dns.NsRecord.record">
-<code class="sig-name descname">record</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.NsRecord.record" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of values that make up the NS record. Each <code class="docutils literal notranslate"><span class="pre">record</span></code> block supports fields documented below. This field has been deprecated and will be removed in a future release.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">nsdname</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-</ul>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_azure.dns.NsRecord.records">
 <code class="sig-name descname">records</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.NsRecord.records" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of values that make up the NS record. <em>WARNING</em>: Either <code class="docutils literal notranslate"><span class="pre">records</span></code> or <code class="docutils literal notranslate"><span class="pre">record</span></code> is required.</p>
+<dd><p>A list of values that make up the NS record.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -817,7 +785,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.dns.NsRecord.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">record=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.NsRecord.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.NsRecord.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NsRecord resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -828,8 +796,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN of the DNS NS Record.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS NS Record.</p></li>
-<li><p><strong>record</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of values that make up the NS record. Each <code class="docutils literal notranslate"><span class="pre">record</span></code> block supports fields documented below. This field has been deprecated and will be removed in a future release.</p></li>
-<li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of values that make up the NS record. <em>WARNING</em>: Either <code class="docutils literal notranslate"><span class="pre">records</span></code> or <code class="docutils literal notranslate"><span class="pre">record</span></code> is required.</p></li>
+<li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of values that make up the NS record.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Time To Live (TTL) of the DNS record in seconds.</p></li>
@@ -837,10 +804,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<p>The <strong>record</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">nsdname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_ns_record.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_ns_record.html.markdown</a>.</p>
 </div></blockquote>
@@ -1298,7 +1261,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.dns.Zone">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">Zone</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registration_virtual_network_ids=None</em>, <em class="sig-param">resolution_virtual_network_ids=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.Zone" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">Zone</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.Zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables you to manage DNS zones within Azure DNS. These zones are hosted on Azure’s name servers to which you can delegate the zone from the parent domain.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1306,11 +1269,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS Zone. Must be a valid domain name.</p></li>
-<li><p><strong>registration_virtual_network_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Virtual Network ID’s that register hostnames in this DNS zone. This field can only be set when <code class="docutils literal notranslate"><span class="pre">zone_type</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Private</span></code>.</p></li>
-<li><p><strong>resolution_virtual_network_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Virtual Network ID’s that resolve records in this DNS zone. This field can only be set when <code class="docutils literal notranslate"><span class="pre">zone_type</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Private</span></code>.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-<li><p><strong>zone_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of this DNS zone. Possible values are <code class="docutils literal notranslate"><span class="pre">Public</span></code> or <code class="docutils literal notranslate"><span class="pre">Private</span></code> (Defaults to <code class="docutils literal notranslate"><span class="pre">Public</span></code>).</p></li>
 </ul>
 </dd>
 </dl>
@@ -1342,18 +1302,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_azure.dns.Zone.registration_virtual_network_ids">
-<code class="sig-name descname">registration_virtual_network_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.Zone.registration_virtual_network_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of Virtual Network ID’s that register hostnames in this DNS zone. This field can only be set when <code class="docutils literal notranslate"><span class="pre">zone_type</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Private</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.dns.Zone.resolution_virtual_network_ids">
-<code class="sig-name descname">resolution_virtual_network_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.Zone.resolution_virtual_network_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of Virtual Network ID’s that resolve records in this DNS zone. This field can only be set when <code class="docutils literal notranslate"><span class="pre">zone_type</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Private</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_azure.dns.Zone.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.Zone.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p>
@@ -1365,15 +1313,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.dns.Zone.zone_type">
-<code class="sig-name descname">zone_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.Zone.zone_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the type of this DNS zone. Possible values are <code class="docutils literal notranslate"><span class="pre">Public</span></code> or <code class="docutils literal notranslate"><span class="pre">Private</span></code> (Defaults to <code class="docutils literal notranslate"><span class="pre">Public</span></code>).</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_azure.dns.Zone.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">max_number_of_record_sets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">number_of_record_sets=None</em>, <em class="sig-param">registration_virtual_network_ids=None</em>, <em class="sig-param">resolution_virtual_network_ids=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.Zone.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">max_number_of_record_sets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">number_of_record_sets=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.Zone.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Zone resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1386,11 +1328,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS Zone. Must be a valid domain name.</p></li>
 <li><p><strong>name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (Optional) A list of values that make up the NS record for the zone.</p></li>
 <li><p><strong>number_of_record_sets</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – (Optional) The number of records already in the zone.</p></li>
-<li><p><strong>registration_virtual_network_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Virtual Network ID’s that register hostnames in this DNS zone. This field can only be set when <code class="docutils literal notranslate"><span class="pre">zone_type</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Private</span></code>.</p></li>
-<li><p><strong>resolution_virtual_network_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Virtual Network ID’s that resolve records in this DNS zone. This field can only be set when <code class="docutils literal notranslate"><span class="pre">zone_type</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Private</span></code>.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-<li><p><strong>zone_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of this DNS zone. Possible values are <code class="docutils literal notranslate"><span class="pre">Public</span></code> or <code class="docutils literal notranslate"><span class="pre">Private</span></code> (Defaults to <code class="docutils literal notranslate"><span class="pre">Public</span></code>).</p></li>
 </ul>
 </dd>
 </dl>

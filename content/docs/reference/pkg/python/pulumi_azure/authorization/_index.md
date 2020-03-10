@@ -141,11 +141,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
-<dt id="pulumi_azure.authorization.AwaitableGetBuiltinRoleDefinitionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">AwaitableGetBuiltinRoleDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">assignable_scopes=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.AwaitableGetBuiltinRoleDefinitionResult" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="class">
 <dt id="pulumi_azure.authorization.AwaitableGetRoleDefinitionResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">AwaitableGetRoleDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">assignable_scopes=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">role_definition_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.AwaitableGetRoleDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -154,42 +149,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.authorization.AwaitableGetUserAssignedIdentityResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">AwaitableGetUserAssignedIdentityResult</code><span class="sig-paren">(</span><em class="sig-param">client_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">principal_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.AwaitableGetUserAssignedIdentityResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-
-<dl class="class">
-<dt id="pulumi_azure.authorization.GetBuiltinRoleDefinitionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">GetBuiltinRoleDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">assignable_scopes=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.GetBuiltinRoleDefinitionResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>A collection of values returned by getBuiltinRoleDefinition.</p>
-<dl class="attribute">
-<dt id="pulumi_azure.authorization.GetBuiltinRoleDefinitionResult.assignable_scopes">
-<code class="sig-name descname">assignable_scopes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.authorization.GetBuiltinRoleDefinitionResult.assignable_scopes" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more assignable scopes for this Role Definition, such as <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333</span></code>, <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup</span></code>, or <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.authorization.GetBuiltinRoleDefinitionResult.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.authorization.GetBuiltinRoleDefinitionResult.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>the Description of the built-in Role.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.authorization.GetBuiltinRoleDefinitionResult.permissions">
-<code class="sig-name descname">permissions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.authorization.GetBuiltinRoleDefinitionResult.permissions" title="Permalink to this definition">¶</a></dt>
-<dd><p>a <code class="docutils literal notranslate"><span class="pre">permissions</span></code> block as documented below.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.authorization.GetBuiltinRoleDefinitionResult.type">
-<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.authorization.GetBuiltinRoleDefinitionResult.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>the Type of the Role.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.authorization.GetBuiltinRoleDefinitionResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.authorization.GetBuiltinRoleDefinitionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
-</dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.authorization.GetRoleDefinitionResult">
@@ -528,23 +487,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_azure.authorization.get_builtin_role_definition">
-<code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">get_builtin_role_definition</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.get_builtin_role_definition" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about a built-in Role Definition. To access information about a custom Role Definition, please see the <code class="docutils literal notranslate"><span class="pre">authorization.RoleDefinition</span></code> data source instead.</p>
-<blockquote>
-<div><p><strong>Note:</strong> The this datasource has been deprecated in favour of <code class="docutils literal notranslate"><span class="pre">authorization.RoleDefinition</span></code> that now can look up role definitions by name. As such this data source will be removed in version 2.0 of the AzureRM Provider.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Specifies the name of the built-in Role Definition. Possible values are: <code class="docutils literal notranslate"><span class="pre">Contributor</span></code>, <code class="docutils literal notranslate"><span class="pre">Owner</span></code>, <code class="docutils literal notranslate"><span class="pre">Reader</span></code> and <code class="docutils literal notranslate"><span class="pre">VirtualMachineContributor</span></code>.</p>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/builtin_role_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/builtin_role_definition.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">

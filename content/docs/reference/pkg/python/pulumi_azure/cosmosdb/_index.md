@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.cosmosdb"></span><dl class="class">
 <dt id="pulumi_azure.cosmosdb.Account">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cosmosdb.</code><code class="sig-name descname">Account</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">consistency_policy=None</em>, <em class="sig-param">enable_automatic_failover=None</em>, <em class="sig-param">enable_multiple_write_locations=None</em>, <em class="sig-param">failover_policies=None</em>, <em class="sig-param">geo_locations=None</em>, <em class="sig-param">ip_range_filter=None</em>, <em class="sig-param">is_virtual_network_filter_enabled=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">offer_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtual_network_rules=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.Account" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cosmosdb.</code><code class="sig-name descname">Account</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">consistency_policy=None</em>, <em class="sig-param">enable_automatic_failover=None</em>, <em class="sig-param">enable_multiple_write_locations=None</em>, <em class="sig-param">geo_locations=None</em>, <em class="sig-param">ip_range_filter=None</em>, <em class="sig-param">is_virtual_network_filter_enabled=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">offer_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtual_network_rules=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.Account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a CosmosDB (formally DocumentDB) Account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -48,12 +48,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">consistencyLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Consistency Level to use for this CosmosDB Account - can be either <code class="docutils literal notranslate"><span class="pre">BoundedStaleness</span></code>, <code class="docutils literal notranslate"><span class="pre">Eventual</span></code>, <code class="docutils literal notranslate"><span class="pre">Session</span></code>, <code class="docutils literal notranslate"><span class="pre">Strong</span></code> or <code class="docutils literal notranslate"><span class="pre">ConsistentPrefix</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxIntervalInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is <code class="docutils literal notranslate"><span class="pre">5</span></code> - <code class="docutils literal notranslate"><span class="pre">86400</span></code> (1 day). Defaults to <code class="docutils literal notranslate"><span class="pre">5</span></code>. Required when <code class="docutils literal notranslate"><span class="pre">consistency_level</span></code> is set to <code class="docutils literal notranslate"><span class="pre">BoundedStaleness</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxStalenessPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is <code class="docutils literal notranslate"><span class="pre">10</span></code> – <code class="docutils literal notranslate"><span class="pre">2147483647</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">100</span></code>. Required when <code class="docutils literal notranslate"><span class="pre">consistency_level</span></code> is set to <code class="docutils literal notranslate"><span class="pre">BoundedStaleness</span></code>.</p></li>
-</ul>
-<p>The <strong>failover_policies</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the virtual network subnet.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Azure region to host replicated data.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
 <p>The <strong>geo_locations</strong> object supports the following:</p>
 <ul class="simple">
@@ -220,7 +214,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_azure.cosmosdb.Account.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">connection_strings=None</em>, <em class="sig-param">consistency_policy=None</em>, <em class="sig-param">enable_automatic_failover=None</em>, <em class="sig-param">enable_multiple_write_locations=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">failover_policies=None</em>, <em class="sig-param">geo_locations=None</em>, <em class="sig-param">ip_range_filter=None</em>, <em class="sig-param">is_virtual_network_filter_enabled=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">offer_type=None</em>, <em class="sig-param">primary_master_key=None</em>, <em class="sig-param">primary_readonly_master_key=None</em>, <em class="sig-param">read_endpoints=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_master_key=None</em>, <em class="sig-param">secondary_readonly_master_key=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtual_network_rules=None</em>, <em class="sig-param">write_endpoints=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.Account.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">connection_strings=None</em>, <em class="sig-param">consistency_policy=None</em>, <em class="sig-param">enable_automatic_failover=None</em>, <em class="sig-param">enable_multiple_write_locations=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">geo_locations=None</em>, <em class="sig-param">ip_range_filter=None</em>, <em class="sig-param">is_virtual_network_filter_enabled=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">offer_type=None</em>, <em class="sig-param">primary_master_key=None</em>, <em class="sig-param">primary_readonly_master_key=None</em>, <em class="sig-param">read_endpoints=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_master_key=None</em>, <em class="sig-param">secondary_readonly_master_key=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtual_network_rules=None</em>, <em class="sig-param">write_endpoints=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.Account.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Account resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -263,12 +257,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">consistencyLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Consistency Level to use for this CosmosDB Account - can be either <code class="docutils literal notranslate"><span class="pre">BoundedStaleness</span></code>, <code class="docutils literal notranslate"><span class="pre">Eventual</span></code>, <code class="docutils literal notranslate"><span class="pre">Session</span></code>, <code class="docutils literal notranslate"><span class="pre">Strong</span></code> or <code class="docutils literal notranslate"><span class="pre">ConsistentPrefix</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxIntervalInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is <code class="docutils literal notranslate"><span class="pre">5</span></code> - <code class="docutils literal notranslate"><span class="pre">86400</span></code> (1 day). Defaults to <code class="docutils literal notranslate"><span class="pre">5</span></code>. Required when <code class="docutils literal notranslate"><span class="pre">consistency_level</span></code> is set to <code class="docutils literal notranslate"><span class="pre">BoundedStaleness</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxStalenessPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is <code class="docutils literal notranslate"><span class="pre">10</span></code> – <code class="docutils literal notranslate"><span class="pre">2147483647</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">100</span></code>. Required when <code class="docutils literal notranslate"><span class="pre">consistency_level</span></code> is set to <code class="docutils literal notranslate"><span class="pre">BoundedStaleness</span></code>.</p></li>
-</ul>
-<p>The <strong>failover_policies</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the virtual network subnet.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Azure region to host replicated data.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
 <p>The <strong>geo_locations</strong> object supports the following:</p>
 <ul class="simple">
@@ -821,7 +809,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.cosmosdb.MongoCollection">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cosmosdb.</code><code class="sig-name descname">MongoCollection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_name=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">default_ttl_seconds=None</em>, <em class="sig-param">indexes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">shard_key=None</em>, <em class="sig-param">throughput=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.MongoCollection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cosmosdb.</code><code class="sig-name descname">MongoCollection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_name=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">default_ttl_seconds=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">shard_key=None</em>, <em class="sig-param">throughput=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.MongoCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Mongo Collection within a Cosmos DB Account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -830,18 +818,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Cosmos DB Mongo Database in which the Cosmos DB Mongo Collection is created. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>default_ttl_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default Time To Live in seconds. If the value is <code class="docutils literal notranslate"><span class="pre">-1</span></code> items are not automatically expired.</p></li>
-<li><p><strong>indexes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">indexes</span></code> blocks as defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Cosmos DB Mongo Collection. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Cosmos DB Mongo Collection is created. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>shard_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the key to partition on for sharding. There must not be any other unique index keys.</p></li>
 </ul>
 </dd>
 </dl>
-<p>The <strong>indexes</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unique</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cosmosdb_mongo_collection.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cosmosdb_mongo_collection.html.markdown</a>.</p>
 </div></blockquote>
@@ -855,16 +837,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.cosmosdb.MongoCollection.default_ttl_seconds">
 <code class="sig-name descname">default_ttl_seconds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.MongoCollection.default_ttl_seconds" title="Permalink to this definition">¶</a></dt>
 <dd><p>The default Time To Live in seconds. If the value is <code class="docutils literal notranslate"><span class="pre">-1</span></code> items are not automatically expired.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_azure.cosmosdb.MongoCollection.indexes">
-<code class="sig-name descname">indexes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.MongoCollection.indexes" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">indexes</span></code> blocks as defined below.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unique</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -887,7 +859,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.cosmosdb.MongoCollection.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_name=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">default_ttl_seconds=None</em>, <em class="sig-param">indexes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">shard_key=None</em>, <em class="sig-param">throughput=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.MongoCollection.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_name=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">default_ttl_seconds=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">shard_key=None</em>, <em class="sig-param">throughput=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.MongoCollection.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MongoCollection resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -898,18 +870,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Cosmos DB Mongo Database in which the Cosmos DB Mongo Collection is created. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>default_ttl_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default Time To Live in seconds. If the value is <code class="docutils literal notranslate"><span class="pre">-1</span></code> items are not automatically expired.</p></li>
-<li><p><strong>indexes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">indexes</span></code> blocks as defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Cosmos DB Mongo Collection. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Cosmos DB Mongo Collection is created. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>shard_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the key to partition on for sharding. There must not be any other unique index keys.</p></li>
 </ul>
 </dd>
 </dl>
-<p>The <strong>indexes</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unique</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cosmosdb_mongo_collection.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cosmosdb_mongo_collection.html.markdown</a>.</p>
 </div></blockquote>
