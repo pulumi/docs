@@ -184,7 +184,7 @@ It’s best practice to store them using AWS SecretsManager to [load and store t
 
 Here is an example for reading/writing a Pulumi Access Token from AWS Secrets Manager. This, of course, assumes that the current AWS credentials (e.g., the result of assume-role) have access. Create an access token using the Pulumi console and copy it to a file.
 
-![Create PulumiAccess Token]()
+![Create PulumiAccess Token](app-pulumi-com-access-token.png)
 
 ```bash
 # On developer machine
@@ -199,6 +199,7 @@ $ aws secretsmanager create-secret --name MyPulumiSecret --description "Pulumi A
 # During CI/CD job, obtain token from Secrets Manager
 # Read the value using the AWS CLI, extract value with jq, and set PULUMI_ACCESS_TOKEN
 $ export PULUMI_ACCESS_TOKEN=$(aws secretsmanager get-secret-value --secret-id MyPulumiSecret --version-stage AWSCURRENT | jq -r '.SecretString')
+```
 
 ## Alternatives: External Systems for Key Exchange
 
