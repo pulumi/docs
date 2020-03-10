@@ -197,7 +197,7 @@ Depending on what you're trying to accomplish, you may prefer to start with (1) 
 
 ### Deploy Templates Using Pulumi
 
-The Pulumi AWS package [provides an ARM TemplateDeployment]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment" >}}) resource type. Using this type, you can deploy an existing ARM template written in JSON without needing to make any edits to it.
+The Pulumi Azure package [provides an ARM TemplateDeployment]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment" >}}) resource type. Using this type, you can deploy an existing ARM template written in JSON without needing to make any edits to it.
 
 For instance, this code deploys a simple ARM template using the given parameters, and exports the resulting Storage Account name:
 
@@ -389,7 +389,7 @@ pulumi.export('storage_account_name', deployment.outputs["storageAccountName"])
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/go/azure/core"
+    "github.com/pulumi/pulumi-azure/sdk/go/azure/core"
     "github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
@@ -467,7 +467,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using Pulumi;
-using CloudFormation = Pulumi.Aws.CloudFormation;
 
 class Program
 {
@@ -564,7 +563,7 @@ From here, you can change the template body and/or surrounding code, rerun `pulu
 
 Now let's see how to actually migrate your ARM-managed resources fully to Pulumi. This requires rewriting the ARM template JSON as real code, either entirely, or one resource at a time. Because you can query deployment outputs and provide parameters in code, you can more easily intermingle ARM-managed resources alongside Pulumi ones. Cyclic dependencies, of course, cannot be expressed, since the entire ARM deployment is seen as one opaque resource to Pulumi.
 
-> Because Pulumi's AWS resource model doesn't match ARM's resource projections exactly, there is no tool currently available to automate this translation. A good apraoch is to copy the ARM template definition into your code and then rewrite it to your language of choice, translating resource and property names as appropriate.
+> Because Pulumi's Azure resource model doesn't match ARM's resource projections exactly, there is no tool currently available to automate this translation. A good apraoch is to copy the ARM template definition into your code and then rewrite it to your language of choice, translating resource and property names as appropriate.
 
 Note that you can always skip the intermediate step of deploying your ARM template using Pulumi and go straight to migrating your resources. For deployments with many resources, however, doing this in multiple incremental steps can help minimize disruption and allow you to do this migration more slowly over time.
 
