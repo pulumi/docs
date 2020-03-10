@@ -1,5 +1,5 @@
 ---
-title: "An Update on Pulumi 2.0"
+title: "An Update on our Roadmap"
 authors: ["joe-duffy"]
 tags: ["Pulumi-News"]
 date: "2020-03-09"
@@ -7,7 +7,7 @@ meta_desc: "Learn about some of Pulumi's progress rounding out our .NET and Go S
 meta_image: "pulumi-1-0.png"
 ---
 
-It's been a few months since we announced the Pulumi 2.0 roadmap, and we've been hard at work ever since. The .NET and Go SDKs are now more idiomatic and easier to use, Policy as Code is ready for prime-time, and many other useful features and foundational improvements have been released. As we get closer to Pulumi 2.0 GA, I wanted to take a moment to highlight these improvements. Please don't hold back on the feedback &mdash; we want to make sure 2.0 is the best it can be for you!
+2020 is off to a big start for us! The .NET and Go SDKs are now more idiomatic and easier to use, Policy as Code is ready for prime-time, and many other useful features and foundational improvements have been released. I'd like to take a moment to highlight these improvements and ask for feedback &mdash; we want to make sure these new features work great for you!
 
 <!--more-->
 
@@ -15,7 +15,7 @@ It's been a few months since we announced the Pulumi 2.0 roadmap, and we've been
 
 [Our .NET SDK]({{< relref "/docs/intro/languages/dotnet" >}}) has come a long way. We recently tidied up the API surface area to feel more familiar to .NET developers, added C# getting started guides for [AWS]({{< relref "/docs/get-started/aws?language=csharp" >}}), [Azure]({{< relref "/docs/get-started/azure?language=csharp" >}}), [GCP]({{< relref "/docs/get-started/aws?language=csharp" >}}), and [Kubernetes]({{< relref "/docs/get-started/aws?language=csharp" >}}), and added many new examples. We also closed the gap on core Pulumi features missing from the initial release, including [aliases]({{< relref "/docs/intro/concepts/programming-model#aliases" >}}), [transformations]({{< relref "/docs/intro/concepts/programming-model#transformations" >}}), [StackReference]({{< relref "/docs/intro/concepts/organizing-stacks-projects#inter-stack-dependencies" >}}), and .NET versions of the [Kubernetes](https://github.com/pulumi/pulumi-kubernetes), [Docker](https://github.com/pulumi/pulumi-docker), and [Terraform remote state](https://github.com/pulumi/pulumi-terraform) packages.
 
-The remaining areas to improve for 2.0 include making the API documentation available in C# (details are below in the "still to come" section), migrating to .NET Core 3.1, and enabling you to test your infrastructure using familiar C# tools more easily.
+The remaining areas to improve for the .NET SDK include making the API documentation available in C# (details are below in the "still to come" section), migrating to .NET Core 3.1, and enabling you to test your infrastructure using familiar C# tools more easily.
 
 ## Go
 
@@ -73,8 +73,10 @@ We continue to make progress on our multi-language library architecture. This wi
 
 Our [`tf2pulumi` tool](https://github.com/pulumi/tf2pulumi), which converts any Terraform HCL to Pulumi code, is currently getting a fresh coat of paint. Look for HCL2 support and Python code-generation soon.
 
-Finally, we've made some significant performance improvements and have others still in the works. Recent changes have reduced overall network bandwidth used by an average update in some cases by 100x, as well as reducing startup times by multiple seconds. The net result is that you'll see fewer delays during updates and an overall snappier CLI experience.
+We've made some significant performance improvements and have others still in the works. Recent changes have reduced overall network bandwidth used by an average update in some cases by 100x, as well as reducing startup times by multiple seconds. The net result is that you'll see fewer delays during updates and an overall snappier CLI experience.
 
 ## Next Steps
 
-We appreciate all the feedback you've given us that is helping to make sure 2.0 is a major step function in overall features, quality, and capabilities. We're almost there, but it's not too late to let us know what you think. [Give Pulumi a try]({{< relref "/docs/get-started" >}}) today, [drop into our Community Slack](https://slack.pulumi.com) to share your feedback, and make sure to [file any suggestions or improvements we can make on GitHub](https://github.com/pulumi/pulumi/issues/new).
+A lot of good work has already landed in 2020 &mdash; and there is a lot more on its way, including a few surprises!
+
+We appreciate all the feedback you've given us that is helping to make sure our work in early 2020 is a major step function in overall features, quality, and capabilities. We're always looking for feedback so please let us know what you think. [Give Pulumi a try]({{< relref "/docs/get-started" >}}) today, [drop into our Community Slack](https://slack.pulumi.com) to share your feedback, and make sure to [file any suggestions or improvements we can make on GitHub](https://github.com/pulumi/pulumi/issues/new).
