@@ -58,7 +58,7 @@ foreach (let file in files)
 
 Note that `resourceGroupName` properties were removed from all storage resources except the account: blobs or queues can't belong to a resource group on their own.
 
-## New Resources for Virtual Machine & Virtual Machine Scale Set 
+## New Resources for Virtual Machine & Virtual Machine Scale Set
 
 There are four new resources for Virtual Machine & Virtual Machine Scale Set separated by operating system: `LinuxVirtualMachine`, `WindowsVirtualMachine`, `LinuxVirtualMachineScaleSet`, `WindowsVirtualMachineScaleSet`. The old-style generic `VirtualMachine` and `VirtualMachineScaleSet` are still available, so you can take your time before migrating existing stacks.
 
@@ -122,7 +122,7 @@ You shouldn't need this ability often, but it can be a lifesaver when you do.
 
 ## Getting Started with Migration
 
-To get started with Azure provider 2.0, update the versions in your package manager: 
+To get started with Azure provider 2.0, update the versions in your package manager:
 
 ```
 // Node.js: package.json
