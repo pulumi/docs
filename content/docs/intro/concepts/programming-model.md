@@ -440,7 +440,7 @@ All resource constructors also accept an `options` argument which can provide th
 * [`ignoreChanges`](#ignorechanges): declare that changes to certain properties should be ignored during diffing
 * [`import`](#import): adopt an existing resource from your cloud account under the control of Pulumi
 * [`parent`](#parent): establish a parent/child relationship between resources
-* [`protect`](#protect): prevent accidental deletion of a resource by marketing it protected
+* [`protect`](#protect): prevent accidental deletion of a resource by marking it protected
 * [`provider`](#provider): pass an [explicitly configured provider](#explicit-provider-configuration), instead of using the default global provider
 * [`transformations`](#transformations): dynamically transform a resource's properties on the fly
 
@@ -1753,7 +1753,7 @@ There are two ways to programmatically create secret values:
 <div class="language-prologue-python"></div>
 
 * Using [`get_secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Config.get_secret" >}}) or [`require_secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Config.require_secret" >}}) when reading a value from config.
-* Calling [`Output.secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Output.secret" >}} to construct a secret from an existing value.
+* Calling [`Output.secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Output.secret" >}}) to construct a secret from an existing value.
 
 <div class="language-prologue-go"></div>
 
