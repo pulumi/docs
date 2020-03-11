@@ -23,8 +23,8 @@ export class Root {
 
     componentDidRender() {
 
-        // Since this element sits at the root of the page, we dispatch a DOM event
-        // letting listeners know when rendering is complete.
+        // Since this element initializes the store, dispatch a DOM event letting
+        // listeners know when rendering is complete.
         this.rendered.emit();
     }
 

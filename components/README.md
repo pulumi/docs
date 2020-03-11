@@ -49,11 +49,14 @@ the Hugo development server.) To use it, from the project root, run:
 make serve-components
 ```
 
-... and browse to http://localhost:3333. There, you'll see a single HTML page you can use
-as a sandbox for testing your components in isolation. Any changes you make will be
-reflected immediately both in that sandbox and in the development website (i.e., if you're
-running `make serve`), since compiled bundles are copied into the `/static/js/` folder,
-both for development and production builds.
+... and browse to http://localhost:3333. There, you'll see a single HTML page (whose
+source you'll find at `/components/src/index.html`) that you can use as a sandbox for
+developing and testing your components in isolation. Any changes you make to that page
+will be reflected immediately, and changes to the components themselves will trigger a
+recompile and be copied into Hugo site at `/static/js/`. So if you're running `make serve`
+in one shell and `make serve-components` in another, saving a component will trigger a
+reload of the Hugo site as well. (I chose to keep these as separate targets simply because
+most users who run `make serve` won't need be able to work on components concurrently.)
 
 ## Styling components
 
@@ -68,4 +71,4 @@ happen there, and not be expressed as raw CSS alongside your component definitio
 
 ## Questions?
 
-Blame Christian. Also he's happy to help.
+Blame Christian. Also, he's happy to help.
