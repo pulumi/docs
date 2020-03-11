@@ -5,7 +5,6 @@ import { configureStore } from "../../store";
 
 @Component({
     tag: "pulumi-root",
-    styleUrl: "root.scss",
     shadow: false,
 })
 export class Root {
@@ -30,8 +29,6 @@ export class Root {
     }
 
     render() {
-        return (
-            <slot></slot>
-        );
+        return <slot></slot>;
     }
 }
