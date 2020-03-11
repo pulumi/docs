@@ -17,12 +17,12 @@ The service manages your stack's state reliably. Simply run
 and this command will prompt you for an access token, including a way to launch your web browser to
 easily obtain one. You can script by using `PULUMI_ACCESS_TOKEN` environment variable.
 
-By default, this will log into `app.pulumi.com`. If you prefer to log into a separate instance
+By default, this will log into `api.pulumi.com`. If you prefer to log into a separate instance
 of the Pulumi service, such as Pulumi Enterprise, specify a URL. For example, run
 
-    $ pulumi login https://pulumi.acmecorp.com
+    $ pulumi login https://api.pulumi.acmecorp.com
 
-to log in to a Pulumi Enterprise server running at the pulumi.acmecorp.com domain.
+to log in to a Pulumi Enterprise server running at the `api.pulumi.acmecorp.com` and `app.pulumi.acmecorp.com` domains.
 
 For `https://` URLs, the CLI will speak REST to a service that manages state and concurrency control.
 [PREVIEW] If you prefer to operate Pulumi independently of a service, and entirely local to your computer,
