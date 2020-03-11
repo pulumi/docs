@@ -29,6 +29,7 @@ export class Root {
     }
 
     render() {
-        return <slot></slot>;
+        return <div>
+        </div>;
     }
 }

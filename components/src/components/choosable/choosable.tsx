@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Listen, Prop } from '@stencil/core';
 import { Store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
 import { ChooserType, ChooserKey } from "../chooser/chooser";
@@ -41,6 +41,15 @@ export class Choosable {
 
     componentWillLoad() {
 
+    }
+
+    componentDidUnload() {
+        this.storeUnsubscribe();
+    }
+
+    @Listen('document:rendered')
+    onRendered(_event: CustomEvent) {
+
         // Map currently selected values from the store, so we can use them in this component.
         this.storeUnsubscribe = this.store.mapStateToProps(this, (state: AppState) => {
             const { preferences: { language, k8sLanguage, os, cloud } } = state;
@@ -56,10 +65,6 @@ export class Choosable {
                     return { selection: cloud };
             }
         });
-    }
-
-    componentDidUnload() {
-        this.storeUnsubscribe();
     }
 
     render() {

@@ -1,4 +1,4 @@
-import { Component, h, Prop, State, Watch } from "@stencil/core";
+import { Component, h, Listen, Prop, State, Watch } from "@stencil/core";
 import { Store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
 import { setLanguage, setK8sLanguage, setOS, setCloud } from "../../store/actions/preferences";
@@ -88,6 +88,17 @@ export class Chooser {
 
     componentWillLoad() {
 
+        // Translate the set of options provided into choices.
+        this.parseOptions();
+    }
+
+    componentDidUnload() {
+        this.storeUnsubscribe();
+    }
+
+    @Listen('document:rendered')
+    onRendered(_event: CustomEvent) {
+
         // Map currently selected values from the store, so we can use them in this component.
         this.storeUnsubscribe = this.store.mapStateToProps(this, (state: AppState) => {
             const { preferences: { language, k8sLanguage, os, cloud } } = state;
@@ -108,13 +119,6 @@ export class Chooser {
 
         // Map internal methods to actions defined on the store.
         this.store.mapDispatchToProps(this, { setLanguage, setK8sLanguage, setOS, setCloud });
-
-        // Translate the set of options provided into choices.
-        this.parseOptions();
-    }
-
-    componentDidUnload() {
-        this.storeUnsubscribe();
     }
 
     @Watch("type")
