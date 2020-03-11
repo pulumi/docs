@@ -2,11 +2,11 @@
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     {{ partial "head.html" . }}
     <body class="section-{{ .Section }}">
+        <pulumi-root></pulumi-root>
         {{ partial "header.html" . }}
 
         {{ block "hero" . }}
         {{ end }}
-
         <main>
             {{ block "main" . }}
             {{ end }}
