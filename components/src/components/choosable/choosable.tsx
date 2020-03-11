@@ -5,7 +5,7 @@ import { ChooserType, ChooserKey } from "../chooser/chooser";
 
 /**
  * The Choosable component is useful for showing or hiding information based on the
- * currently selected ChooserType and and value. For example, a component defined as:
+ * currently selected ChooserType and value. For example, a component defined as:
  *
  *     <pulumi-choosable type="language" value="typescript">
  *         I <3 TypeScript.
