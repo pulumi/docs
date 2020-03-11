@@ -43,7 +43,7 @@ all, then change the file extension of the CSS file to `.scss`.
 ## Developing and testing your component
 
 Stencil ships with a development server that runs on port 3333. (It runs independently of
-the Hugo development server.) To use it, from the project, root, run:
+the Hugo development server.) To use it, from the project root, run:
 
 ```
 make serve-components
