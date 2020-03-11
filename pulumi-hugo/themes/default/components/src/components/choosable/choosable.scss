@@ -1,0 +1,11 @@
+pulumi-choosable {
+
+    // Structural things -- like visibility.
+    > * {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <title>Stencil Component Starter</title>
+    <script type="module" src="/build/components.esm.js" defer></script>
+    <script nomodule src="/build/components.js" defer></script>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        [data-lang] {
+            display: none;
+        }
+
+        pulumi-chooser ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        pulumi-chooser li {
+            margin-right: 8px;
+        }
+    </style>
+
+    <pulumi-root></pulumi-root>
+
+    <pulumi-chooser type="language" options="typescript,python,go,csharp,fsharp,visualbasic"></pulumi-chooser>
+
+        <pulumi-choosable type="language" value="typescript">
+            <pre><code></code>I am some TypeScript.</pre>
+
+            <!-- Nested chooser with choosables. -->
+            <pulumi-chooser type="os" options="macos,windows"></pulumi-chooser>
+
+            <pulumi-choosable type="os" value="macos">
+                Some info on MacOS.
+            </pulumi-choosable>
+
+            <pulumi-choosable type="os" value="windows">
+                Some info on Windows.
+            </pulumi-choosable>
+
+        </pulumi-choosable>
+
+        <pulumi-choosable type="language" value="python">
+            <pre><code></code>I am some Python.</pre>
+        </pulumi-choosable>
+
+        <pulumi-choosable type="language" value="go">
+            <pre><code></code>I am some Go.</pre>
+        </pulumi-choosable>
+
+        <pulumi-choosable type="language" value="csharp">
+            <pre><code></code>I am some C#.</pre>
+        </pulumi-choosable>
+
+        <pulumi-choosable type="language" value="fsharp">
+            <pre><code></code>I am some F#.</pre>
+        </pulumi-choosable>
+
+        <pulumi-choosable type="language" value="visualbasic">
+            <pre><code></code>I am some VB.</pre>
+        </pulumi-choosable>
+</body>
+</html>

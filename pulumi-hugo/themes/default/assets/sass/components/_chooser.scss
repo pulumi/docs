@@ -1,0 +1,26 @@
+pulumi-chooser {
+
+    ul {
+        @apply flex;
+        padding: 0 !important;
+        list-style-type: none !important;
+
+        li {
+            @apply uppercase text-xs;
+
+            &.active {
+                @apply bg-gray-200;
+            }
+
+            a {
+                @apply inline-block cursor-pointer py-4 px-8;
+            }
+
+            span {
+                @apply ml-1;
+                @extend .badge;
+                @extend .badge-preview;
+            }
+        }
+    }
+}
