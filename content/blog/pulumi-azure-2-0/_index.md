@@ -4,7 +4,6 @@ authors: ["mikhail-shilkov"]
 tags: ["Azure"]
 date: "2020-03-11"
 meta_desc: "Announcing the 2.0 release of Pulumi Azure provider and what's new in it."
-meta_image: "todo.png"
 ---
 
 We are happy to announce the release of a new major version of Pulumi Azure provider. Pulumi Azure 2.0 is based on the [2.0 release](https://www.terraform.io/docs/providers/azurerm/guides/2.0-upgrade-guide.html) of the upstream provider and brings several improvements and breaking changes.
@@ -19,6 +18,8 @@ This article outlines the most significant changes:
 - Latest versions in Callback Functions
 - Configuring custom timeouts
 - How to migrate and where to get help if needed
+
+The provider release is not directly related to our [Pulumi 2.0 plans]({{< relref "/blog/pulumi-2020-update" >}}).
 
 ## Improvements in Azure Storage
 
@@ -101,7 +102,7 @@ Callback Functions also moved from `ZipBlob` to `Blob` deploy as described above
 
 Some types of resources take longer to create than others. For instance, provisioning a new Cosmos DB account may take from 10 minutes to over an hour depending on the number of geo locations and other factors.
 
-If you find that creation of a target resource fails times out, you can override the default timeout using resource options:
+If you find that creation of a target resource times out, you can override the default timeout using resource options:
 
 ``` ts
 const cosmosdbAccount = new azure.cosmosdb.Account("cosmosdb", {
