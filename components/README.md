@@ -9,7 +9,7 @@ authoring your own components, this section probably won't be all that interesti
 ## Start with the docs
 
 [They're right here](https://stenciljs.com/docs/introduction). There isn't much, and a
-brisk read throgh them will help you get oriented quickly.
+brisk read through them will help you get oriented quickly.
 
 If you're familiar with React or Angular, Stencil components operate similarly: values are
 passed into components as HTML attributes (which Stencil calls "props"), and events are
