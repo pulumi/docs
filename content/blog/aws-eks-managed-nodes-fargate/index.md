@@ -17,7 +17,7 @@ summary: |
 
 {{% notes %}}
     Looking for information on how to deploy an EKS cluster? Checkout our
-    <a href="{{< relref "/docs/guides/crosswalk/aws/eks" >}}">AWS Elastic Kubernetes Service</a>.
+    <a href="{{< relref "/docs/guides/crosswalk/aws/eks" >}}">AWS Elastic Kubernetes Service</a> documentation.
 {{% /notes %}}
 
 AWS Elastic Kubernetes Service (EKS) provides a range of performance and control for dynamically scaling your Kubernetes clusters, including Managed Node Groups, Fargate, and Manually-Managed Node Groups in EC2. In this post, we'll see how to use each of these compute options, and when to prefer one over the other in order to maximize productivity, flexibility, and control, based on your needs.
