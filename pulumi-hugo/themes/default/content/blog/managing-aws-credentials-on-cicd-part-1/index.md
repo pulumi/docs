@@ -1,12 +1,12 @@
 ---
-title: "Managing AWS Credentials on CI/CD"
+title: "Managing AWS Credentials on CI/CD (part 1)"
 date: 2020-03-10
 meta_desc:
 meta_image: meta.png
 authors:
-    - sophia-parafina
+    - chris-smith
 tags:
-    - change-me
+    - CI/CD
 ---
 
 Continuous delivery requires providing highly sensitive credentials to your deployment pipeline. Understanding the risks, mitigations, and best practices for handling those credentials can be difficult. In this guide, we describe the best practices for providing AWS credentials to a CI/CD system and to securely automate updating your cloud infrastructure using Pulumi.
@@ -19,7 +19,7 @@ Take a deep breath. It’s going to be OK. You can securely provide AWS credenti
 
 The goal of this article is to have a clear understanding of how to properly use Pulumi to update AWS infrastructure within a hosted CI/CD service like [CircleCI](https://circleci.com), [GitLab CI](https://about.gitlab.com/product/continuous-integration/), or [Travis CI](https://travis-ci.org).
 
-> **NOTE:** These recommendations do not apply ff you are running your own CI/CD system within your AWS account, e.g., running a Jenkins server on an EC2 instance or using [AWS CodeDeploy](https://aws.amazon.com/codedeploy/). There are established methods to [assume IAM Roles from applications running on an EC2 instance](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html). In that case, refer to the documentation specific to your CI/CD system for how to handle AWS credentials.
+> **NOTE:** These recommendations do not apply if you are running your own CI/CD system within your AWS account, e.g., running a Jenkins server on an EC2 instance or using [AWS CodeDeploy](https://aws.amazon.com/codedeploy/). There are established methods to [assume IAM Roles from applications running on an EC2 instance](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html). In that case, refer to the documentation specific to your CI/CD system for how to handle AWS credentials.
 
 Depending on your specific environment, needs, and constraints, there may be a better approach for you to take. These recommendations describe a general “one-size fits most” approach that requires a minimal amount of work to configure and maintain.
 
@@ -145,32 +145,7 @@ The AWS security blog describes how to [rotate access keys for IAM Users](https:
 
 Now that we have a regularly rotated, low-privileged credential to use during deployments, the next step is to use “assume role” to exchange those IAM User credentials for an IAM Role credential. This sounds confusing at first. Why exchange one credential for another? Why not just use the same credentials? In other words, what is an IAM Role, and why is this so much better than an IAM User? The credentials used to assume an IAM Role are only valid for a short period (minutes to hours). After a fixed duration, there is no threat if disclosed.
 
-Earlier, we mitigate potentially exposing IAM User credentials by using our CI/CD provider’s ability to store secret values and automatically rotating credentials. Using the IAM Role credentials adds another layer of security, but within the context of the machine itself during the deployment.
-
-So how do you use these credentials? The AWS Secure Token Service can do this, but in practice, you’ll want to use a lightweight tool to do this.
-
-### Configuring AWS Security Group
-
-The following Pulumi snippet creates the AWS security group.
-
-```ts
-security_group = aws.ec2.SecurityGroup('secgrp',
-    description='Enable HTTP access',
-    ingress=[
-        { 'protocol': 'tcp', 'from_port': 22, 'to_port': 22, 'cidr_blocks': ['0.0.0.0/0'] },
-        { 'protocol': 'tcp', 'from_port': 8080, 'to_port': 8080, 'cidr_blocks': ['0.0.0.0/0'] }
-    ],
-    egress=[
-        { 'protocol': '-1', 'from_port': 0, 'to_port': 0, 'cidr_blocks': ['0.0.0.0/0'] }
-        ]
-)
-```
-
-### Auditing Access
-
-Now that we have secure access, we need to audit it too.
-
-[see auditing blog]
+Earlier, we mitigated potentially exposing IAM User credentials by using our CI/CD provider’s ability to store secret values and automatically rotating credentials. Using the IAM Role credentials adds another layer of security, but within the context of the machine itself during the deployment.
 
 ### What about your Pulumi Credentials?
 
@@ -194,111 +169,14 @@ $ echo "pul-1234567890abcdefegh" > pulumi-token.txt
 $ aws secretsmanager create-secret --name MyPulumiSecret --description "Pulumi Access Token" --secret-string file://pulumi-token.txt
 ```
 
+You can retrieve the Pulumi Access Token during the CI/CD job and set it as an environmental variable. The AWS Secrets Manager returns a JSON file and the token must be extracted from it.
+
 ```bash
-# On the CI/CD
-# During CI/CD job, obtain token from Secrets Manager
 # Read the value using the AWS CLI, extract value with jq, and set PULUMI_ACCESS_TOKEN
 $ export PULUMI_ACCESS_TOKEN=$(aws secretsmanager get-secret-value --secret-id MyPulumiSecret --version-stage AWSCURRENT | jq -r '.SecretString')
 ```
 
-## Alternatives: External Systems for Key Exchange
-
-The guide has described the best practices for securing a CI/CD system using AWS. But you still might not be convinced that giving any AWS credentials to your CI/CD system is “secure enough.” Ultimately, it boils down to a matter of trust and risk tolerance.
-
-When talking to other developers trying to automate DevOps as securely as possible, a common practice is to rely on an external tool or server to handle key exchange. So rather than providing credentials directly to the CI/CD system which would be available on each deployment, each deployment job would request credentials specifically for that job.
-
-Abstractly, the difference here is that the credentials are provided on-demand. This has an advantageous property that no potentially long-lived IAM User credentials are needed, and that the external system could only provide IAM Role credentials.
-
-However, I would argue that it is no more secure than we have described. i.e., “provide IAM User credentials with key rotation.” Not to say there aren’t advantages with these systems, just that it doesn’t fundamentally change the equation.
-
-First, relying on a “credential service” carries risks. It’s a high-value attack surface that you’ll need to lockdown. Also, to prevent DOS attacks, it needs to be highly available. So there is a significant operational overhead towards setting that up.
-
-But more importantly, for it to dispense credentials, e.g., those IAM Role credentials to perform a deployment, it needs to be presented with request credentials, i.e., a valid request or some authorization.
-
-That leaves us in the same problem that we had before; we need to provide the CI/CD system with a set of credentials that can be exchanged (this time by way of the external token service) for higher-privileged credentials.
-
-So if those “new” credentials get compromised, you’re in the same boat. (And thus needing to do key rotation, etc, etc.)
-
-## Putting it Together
-
-A Pulumi program to create the IAM User, IAM Roles, Assume-Role jazz, key rotation, and so on.
-
-```ts
-const aws = require("@pulumi/aws");
-
-// Create role (https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
-const role = new aws.iam.Role("myrole", {
-    assumeRolePolicy: JSON.stringify({
-        Version: "2012-10-17",
-        Statement: [{
-            Action: "sts:AssumeRole",
-            Principal: {
-                Service: "ec2.amazonaws.com"
-            },
-            Effect: "Allow",
-            Sid: ""
-        }]
-    })
-});
-
-// Create a policy for the role
-const rolePolicy = new aws.iam.RolePolicy("myrolepolicy", {
-    role: role,
-    policy: JSON.stringify({
-        Version: "2012-10-17",
-        Statement: [{
-            Action: [ "ec2:Describe*" ],
-            Effect: "Allow",
-            Resource: "*"
-        }]
-    })
-});
-
-// Create policy for the user
-const policy = new aws.iam.Policy("mypolicy", {
-    policy: JSON.stringify({
-        Version: "2012-10-17",
-        Statement: [{
-            Action: [
-              "ec2:Describe*"
-            ],
-            Effect: "Allow",
-            Resource: "*"
-        }]
-    })
-});
-
-const rolePolicyAttachment = new aws.iam.RolePolicyAttachment("myrolepolicyattachment", {
-    role: role,
-    policyArn: policy.arn
-});
-
-const user = new aws.iam.User("myuser");
-
-const group = new aws.iam.Group("mygroup");
-
-const policyAttachment = new aws.iam.PolicyAttachment("mypolicyattachment", {
-    users: [user],
-    groups: [group],
-    roles: [role],
-    policyArn: policy.arn
-});
-```
-
-Script to assume role
-```
-
-```
-
-
-Script to rotate keys
-```
-
-```
-
-Client-side Encryption
-Then, deploy an app that uses client-side secrets. (Pluggable for AWS KMS. So the Pulumi Service doesn’t have access.)
-
 ## Conclusion
 
-While there isn’t any free lunch, by using the approach described here we can describe a relatively easy to understand and secure model for providing AWS credentials to another system, automate key revocation and rotation, as well as providing an auditable trail, to setting up Pulumi in your CI/CD jobs.
+These practices will secure your credentials on a managed CI/CD such as Travis CI or CircleCI. In a following post, we'll work through a complete example that demonstrates these practices in action. Stay tuned, but in the mean time you can read about [Pulumi's approach to continuous delivery]({{< relref "/docs/guides/continuous-delivery" >}})
+
