@@ -1,5 +1,5 @@
 ---
-title: "Managing Aws Credentials on CI/CD"
+title: "Managing AWS Credentials on CI/CD"
 date: 2020-03-10
 meta_desc:
 meta_image: meta.png
@@ -222,6 +222,79 @@ So if those “new” credentials get compromised, you’re in the same boat. (A
 ## Putting it Together
 
 A Pulumi program to create the IAM User, IAM Roles, Assume-Role jazz, key rotation, and so on.
+
+```ts
+const aws = require("@pulumi/aws");
+
+// Create role (https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
+const role = new aws.iam.Role("myrole", {
+    assumeRolePolicy: JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [{
+            Action: "sts:AssumeRole",
+            Principal: {
+                Service: "ec2.amazonaws.com"
+            },
+            Effect: "Allow",
+            Sid: ""
+        }]
+    })
+});
+
+// Create a policy for the role
+const rolePolicy = new aws.iam.RolePolicy("myrolepolicy", {
+    role: role,
+    policy: JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [{
+            Action: [ "ec2:Describe*" ],
+            Effect: "Allow",
+            Resource: "*"
+        }]
+    })
+});
+
+// Create policy for the user
+const policy = new aws.iam.Policy("mypolicy", {
+    policy: JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [{
+            Action: [
+              "ec2:Describe*"
+            ],
+            Effect: "Allow",
+            Resource: "*"
+        }]
+    })
+});
+
+const rolePolicyAttachment = new aws.iam.RolePolicyAttachment("myrolepolicyattachment", {
+    role: role,
+    policyArn: policy.arn
+});
+
+const user = new aws.iam.User("myuser");
+
+const group = new aws.iam.Group("mygroup");
+
+const policyAttachment = new aws.iam.PolicyAttachment("mypolicyattachment", {
+    users: [user],
+    groups: [group],
+    roles: [role],
+    policyArn: policy.arn
+});
+```
+
+Script to assume role
+```
+
+```
+
+
+Script to rotate keys
+```
+
+```
 
 Client-side Encryption
 Then, deploy an app that uses client-side secrets. (Pluggable for AWS KMS. So the Pulumi Service doesn’t have access.)
