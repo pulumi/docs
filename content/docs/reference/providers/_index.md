@@ -1,10 +1,7 @@
 ---
 title: Providers
 linktitle: Providers
-menu:
-  reference:
-    name: Providers
-    weight: 2
+block_external_search_index: true
 ---
 
 TODO create an awesome index page that links to the resource model docs for each provider
