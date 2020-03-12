@@ -23,10 +23,10 @@ You’ve heard about *Infrastructure as Code* and decided to try your hand at us
 **Take a deep breath**. It’s going to be OK. You _can_ securely provide AWS credentials to your CI/CD system and practice continuous delivery. This is the first post
 in a series going in-depth on how to do just that.
 
-The goal of this article series is to give you a clear understanding of AWS credential management, and how that relates to using Pulumi within a CI/CD environment.
+The goal of this article series is to give you a clear understanding of AWS credential management and how that relates to using Pulumi within a CI/CD environment.
 Once you have the AWS credentials in-place, you can then follow our [Continuous Delivery](https://www.pulumi.com/docs/guides/continuous-delivery/) guide for
-configurting your specific CI/CD service. Whether you want to use [CircleCI](https://circleci.com), [GitLab CI](https://about.gitlab.com/product/continuous-integration/,
-[Travis CI](https://travis-ci.org), etc.
+configuring your specific CI/CD service, whether you want to use [CircleCI](https://circleci.com), [GitLab CI](https://about.gitlab.com/product/continuous-integration/), or
+[Travis CI](https://travis-ci.org).
 
 > **NOTE:** These recommendations do not apply if you are running your own CI/CD system within your
 > AWS account, e.g., running a Jenkins server on EC2 or using [AWS CodeDeploy](https://aws.amazon.com/codedeploy/).
@@ -36,9 +36,9 @@ configurting your specific CI/CD service. Whether you want to use [CircleCI](htt
 
 ## Overview
 
-These recommendations in this series describe a general "one-size fits most" approach for credential
+The recommendations in this series describe a general "one-size fits most" approach for credential
 management, which requires a minimal amount of work to configure and maintain. Depending on your
-specific environment, needs, and constraints, there may be a better alternative for you to use.
+specific environment, needs, and constraints, there may be a better alternative for your use case.
 
 Here's the full set of steps in our series, walking through the creation of a secure CI/CD environment
 to deploy AWS resources using Pulumi:
@@ -48,12 +48,12 @@ to deploy AWS resources using Pulumi:
 - _Automating IAM credential rotation using Pulumi_  
 - _Assuming IAM Roles for performing updates_
 - _Securing sensitive data using Pulumi_
-- _Comparison with using hosted sercret managers_
+- _Comparison with using hosted secret managers_
 
 ## Create a dedicated IAM User for your CI/CD {#create-new-iam-user}
 
 The first step for securely automating CI/CD is to create a dedicated IAM User for use in your CI/CD
-pipelines. (Sometimes referred to as a "robot account".)
+pipelines. (Sometimes referred to as a "robot account.")
 
 The following code snippet shows how to create a new AWS IAM User using Pulumi. (The code is in TypeScript,
 but you could another language like Python, C#, or Go as well.)
@@ -69,7 +69,7 @@ const user = new aws.iam.User("cicdUser", {
 
 By default, that IAM User doesn't have permissions to do anything. The recommended best practice
 is to [use groups to assign permissions to IAM Users]((https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#use-groups-for-permissions)).
-So next we will create a "Pulumi Stack updaters" IAM Group, and add our robot account as a member.
+So next, we will create a "Pulumi Stack updaters" IAM Group, and add our robot account as a member.
 
 ```ts
 const group = new aws.iam.Group("pulumiStackUpdaters", {
@@ -89,13 +89,13 @@ Group's members so they can access various APIs and resources. (For example, if 
 will need to create or update EC2 instances, then you will need to provide AWS credentials that
 contain the `ec2:StopInstances` or `ec2:StartInstances` action.)
 
-But rather than grant the newly created `cicd-bot` IAM User those permissions right now, we will
+But rather than grant the newly created `cicd-bot` IAM User those permissions, we will
 instead only grant them access to the `sts:AssumeRole` action. This is an AWS API that allows an IAM
 User to gain temporary credentials that have a different set of permissions associated with them.
 (That is, the permissions associated with an _IAM Role_.)
 
 We'll go into more detail about the exact difference between an IAM User and an IAM Role in the next
-post in the series, since it isn't entirely obvious why one would be more secure than the other.
+post in the series since it isn't entirely obvious why one would be more secure than the other.
 
 ```ts
 const currentAwsIdentity = aws.getCallerIdentity();
@@ -106,8 +106,8 @@ const groupPolicy = new aws.iam.GroupPolicy("pulumiStackUpdatersPolicy", {
         Version: "2012-10-17",
         Statement: [{
             Action: [
-                // Allow anybody (i.e. members of the group) to call the sts:AssumeRole API.
-                // This will allow them to "assume the role" of a more permissive IAM Role
+                // Allow anybody (i.e., members of the group) to call the sts:AssumeRole API.
+                // This allows them to "assume the role" of a more permissive IAM Role
                 // when they go to update a stack later.
                 "sts:AssumeRole",
             ],
@@ -121,9 +121,6 @@ const groupPolicy = new aws.iam.GroupPolicy("pulumiStackUpdatersPolicy", {
 });
 ```
 
-That's it for the first post in our series. We've taken the first step and created an IAM User
-specifically for performing updates to AWS resources using Pulumi.
+That's it for the first post in our series. We've taken the first step and created an IAM User specifically for performing updates to AWS resources using Pulumi.
 
-In the next post we will go over the security concerns when passing AWS credentials to your
-CI/CD provider, as well as show a Pulumi program that you can use to automatically rotate
-the AWS credentials for a user.
+In the next post, we will review over the security concerns when passing AWS credentials to your CI/CD provider, as well as show a Pulumi program that you can use to rotate the AWS credentials for a user automatically.
