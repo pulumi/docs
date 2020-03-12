@@ -41,9 +41,20 @@ By default, a new IAM User does not have any permissions associated with it, mea
 The following code snippet shows how to create an IAM User specifically for your CI/CD jobs. 
 
 ```ts
-const aws = require("@pulumi/aws");
+// First create the user
+// ... probably want to give it a name and tag, right?
+const user = new aws.iam.User("cicdUser", {
+    name: "cicd-bot",
+    tags: {
+        "purpose": "Account for performing deployments for jobs running on <your CI/CD service>",
+    },
+);
+```
 
-const role = new aws.iam.Role("myrole", {
+Next, create a role policy to attach the IAM user to grant them permissions through the `sts:AssumeRole` action.
+
+```ts
+const role = new aws.iam.Role("cicdRole", {
     assumeRolePolicy: JSON.stringify({
         Version: "2012-10-17",
         Statement: [{
@@ -57,19 +68,7 @@ const role = new aws.iam.Role("myrole", {
     })
 });
 
-const rolePolicy = new aws.iam.RolePolicy("myrolepolicy", {
-    role: role,
-    policy: JSON.stringify({
-        Version: "2012-10-17",
-        Statement: [{
-            Action: [ "ec2:Describe*" ],
-            Effect: "Allow",
-            Resource: "*"
-        }]
-    })
-});
-
-const policy = new aws.iam.Policy("mypolicy", {
+const policy = new aws.iam.Policy("cicdPolicy", {
     policy: JSON.stringify({
         Version: "2012-10-17",
         Statement: [{
@@ -86,12 +85,16 @@ const rolePolicyAttachment = new aws.iam.RolePolicyAttachment("myrolepolicyattac
     role: role,
     policyArn: policy.arn
 });
+```
 
-const user = new aws.iam.User("myuser");
+AWS recommends that role policies are attached to groups and not users.
 
-const group = new aws.iam.Group("mygroup");
+```ts
+// Create a group
+const group = new aws.iam.Group("cicdBots");
 
-const policyAttachment = new aws.iam.PolicyAttachment("mypolicyattachment", {
+// Attach the policy
+const policyAttachment = new aws.iam.PolicyAttachment("cicdPolicyAttachment", {
     users: [user],
     groups: [group],
     roles: [role],
@@ -101,9 +104,9 @@ const policyAttachment = new aws.iam.PolicyAttachment("mypolicyattachment", {
 
 ### Isolating with Different Accounts
 
-A common and **recommended** practice is to use multiple AWS accounts to isolate resources and users from one another. For example, if your testing and production environments are in different AWS accounts, it would be difficult for a severe bug in the testing environment to harm your customer data.
+A common and recommended practice is to use multiple AWS accounts to isolate resources and users from one another. For example, if your testing and production environments are in different AWS accounts, it would be difficult for a severe bug in the testing environment to harm your customer data.
 
-Keep this in mind as we configure this IAM User and later grant them IAM Roles to perform cloud deployments. Creating this specific IAM User to CI/CD jobs with its AWS account means that there are no resources to modify, in addition to lacking permissions to do anything.
+It isn't a requirement that the IAM User that deploys your infrastructure is in the same AWS account that the cloud resources are located in. For example, it is possible for the IAM User in your "testing" account to perform a deployment of the application housed in your "production" environment. Keep this in mind as we configure this IAM User and later grant them IAM Roles to perform cloud deployments. 
 
 ## Provide that IAM user’s credentials to your CI/CD system
 
@@ -113,7 +116,7 @@ We need to take great caution here. [AWS’s documentation](https://docs.aws.ama
 
 Providing AWS access keys to any system is dangerous because of the risk that a bad actor could acquire those keys to do something nefarious. Even if you do trust your CI/CD service provider to store these credentials properly, the keys could be inadvertently exposed in debugging output, system logs, or some other place they could be disclosed.
 
-However, if you want to automate changes to your AWS infrastructure from a 3rd party CI/CD service, you must provide those credentials. Here is where security best practices come into play.
+However, if you want to automate changes to your AWS infrastructure from a 3rd party CI/CD service, you must provide those credentials. The next step is to take the credentials for the IAM user we created earlier, and enter those into your CI/CD system so that they are available during the next build. Here is where security best practices come into play.
 
 If we do need to provide credentials to a 3rd party, rather than hoping it will be 100% secure forever (which is impossible), we can instead make those credentials volatile. If we regularly invalidate and rotate the credentials given supplied to CI/CD system, we can dramatically reduce the impact of any accidental disclosure. Since even if the IAM User’s credentials were leaked, by the time they were discovered and used, they would no longer be valid. We’ll go into how to manage key rotation shortly.
 
@@ -141,7 +144,9 @@ The AWS security blog describes how to [rotate access keys for IAM Users](https:
 
 ## During deployments, exchange the IAM user credentials for a more privileged IAM role
 
-Now that we have a regularly rotated, low-privileged credential to use during deployments, the next step is to use “assume role” to exchange those IAM User credentials for an IAM Role credential. This doesn't sound very clear at first. Why exchange one credential for another? Why not just use the same credentials? In other words, what is an IAM Role, and why is this so much better than an IAM User? The credentials used to assume an IAM Role are only valid for a short period (minutes to hours). After a fixed duration, there is no threat if disclosed.
+Now that we have a regularly rotated, low-privileged credential to use during deployments, the next step is to use “assume role” to exchange those IAM User credentials for an IAM Role credential. This doesn't sound very clear at first. Why exchange one credential for another? Why not just use the same credentials? In other words, what is an IAM Role, and why is this so much better than an IAM User? 
+
+The IAM Role has the minimum permisions needed tp access the required APIs in you production account to deploy your Pulumi program. The credentials used to assume an IAM Role are only valid for a short period (minutes to hours). After a fixed duration, there is no threat if disclosed.
 
 Earlier, we mitigated potentially exposing IAM User credentials by using our CI/CD provider’s ability to store secret values and automatically rotating credentials. Using the IAM Role credentials adds another layer of security, but within the context of the machine itself during the deployment.
 
@@ -155,7 +160,7 @@ You’ll want to follow the same approach we described for AWS credentials with 
 
 It’s best practice to store them using AWS SecretsManager to [load and store those credentials](https://aws.amazon.com/secrets-manager/).
 
-Here is an example for reading/writing a Pulumi Access Token from AWS Secrets Manager. The example, of course, assumes that the current AWS credentials (e.g., the result of assume-role) have access. Create an access token using the Pulumi console and copy it to a file.
+Here is an example for reading/writing a Pulumi Access Token from AWS Secrets Manager. The example, of course, assumes that the current AWS credentials (e.g., the result of IAM User assume-role into the more privileged IAM Role account) can read the secret from the secrets manager. Create an access token using the Pulumi console and copy it to a file.
 
 ![Create PulumiAccess Token](app-pulumi-com-access-token.png)
 
