@@ -1,7 +1,7 @@
 ---
 title: "Managing AWS Credentials on CI/CD"
 date: 2020-03-12
-meta_desc:
+meta_desc: "Best practices for managing AWS credentials on CI/CD"
 meta_image: meta.png
 authors:
     - chris-smith
@@ -38,7 +38,7 @@ The first step for securely automating CI/CD on AWS is to create a dedicated IAM
 
 By default, a new IAM User does not have any permissions associated with it, meaning it can only authenticate itself with its access key and secret. Let’s walk through how to grant this IAM User the permissions necessary to update your cloud infrastructure later. For now, we limit this user to have as little access as possible.
 
-The following code snippet shows how to create an IAM User specifically for your CI/CD jobs. 
+The following code snippet shows how to create an IAM User specifically for your CI/CD jobs.
 
 ```ts
 // First create the user
@@ -106,7 +106,7 @@ const policyAttachment = new aws.iam.PolicyAttachment("cicdPolicyAttachment", {
 
 A common and recommended practice is to use multiple AWS accounts to isolate resources and users from one another. For example, if your testing and production environments are in different AWS accounts, it would be difficult for a severe bug in the testing environment to harm your customer data.
 
-It isn't a requirement that the IAM User that deploys your infrastructure is in the same AWS account that the cloud resources are located in. For example, it is possible for the IAM User in your "testing" account to perform a deployment of the application housed in your "production" environment. Keep this in mind as we configure this IAM User and later grant them IAM Roles to perform cloud deployments. 
+It isn't a requirement that the IAM User that deploys your infrastructure is in the same AWS account that the cloud resources are located in. For example, it is possible for the IAM User in your "testing" account to perform a deployment of the application housed in your "production" environment. Keep this in mind as we configure this IAM User and later grant them IAM Roles to perform cloud deployments.
 
 ## Provide that IAM user’s credentials to your CI/CD system
 
@@ -144,7 +144,7 @@ The AWS security blog describes how to [rotate access keys for IAM Users](https:
 
 ## During deployments, exchange the IAM user credentials for a more privileged IAM role
 
-Now that we have a regularly rotated, low-privileged credential to use during deployments, the next step is to use “assume role” to exchange those IAM User credentials for an IAM Role credential. This doesn't sound very clear at first. Why exchange one credential for another? Why not just use the same credentials? In other words, what is an IAM Role, and why is this so much better than an IAM User? 
+Now that we have a regularly rotated, low-privileged credential to use during deployments, the next step is to use “assume role” to exchange those IAM User credentials for an IAM Role credential. This doesn't sound very clear at first. Why exchange one credential for another? Why not just use the same credentials? In other words, what is an IAM Role, and why is this so much better than an IAM User?
 
 The IAM Role has the minimum permisions needed tp access the required APIs in you production account to deploy your Pulumi program. The credentials used to assume an IAM Role are only valid for a short period (minutes to hours). After a fixed duration, there is no threat if disclosed.
 
