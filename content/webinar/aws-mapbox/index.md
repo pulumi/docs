@@ -1,0 +1,58 @@
+---
+# Name of the webinar.
+title: "Pulumi in IoT Webinar: AWS, Mapbox and Pulumi"
+meta_desc: "Join us in the webinar to see how Pulumi supercharges Mapbox’s IoT asset tracking architecture on AWS, from API Gateway, Amazon Kinesis, to DynamoDB and S3."
+
+# Webinars with unlisted as true will not be shown on the webinar list
+unlisted: false
+
+# The layout of the landing page.
+type: webinar
+
+# The url slug for the webinar landing page.
+url_slug: "aws-mapbox"
+
+# The content of the hero section.
+hero:
+    # The title text in the hero. This also serves as the pages H1.
+    title: "Pulumi in IoT: Serverless Asset Tracking Solution"
+    # The image the appears on the right hand side of the hero.
+    image: "/icons/containers.svg"
+
+# Content for the left hand side section of the page.
+main:
+    # Webinar title.
+    title: "Modernizing Logistics: How to program an asset tracking architecture using serverless technologies"
+    # Datetime of the webinar.
+    datetime: 2019-06-13 11:00:00 -07:00
+    # Description of the webinar.
+    description: >
+        Serverless compute services offer an amazing power to application developers to leverage: highly available, automatically scaled, low-ceremony, pay-per-value functions created in several lines of code. With Pulumi’s cloud native SDKs, serverless gets more fun. Using general purpose languages, we can create resources, and then wire up event handlers, like in normal event-driven programming!
+
+
+        Join us in the webinar to see how Pulumi supercharges Mapbox’s IoT asset tracking architecture on AWS, from API Gateway, Amazon Kinesis, to DynamoDB and S3.
+
+    # The webinar presenters
+    presenters:
+        - name: Trevor Hansen
+          role: Startup Partner Solutions Architect, AWS
+        - name: Cameron Stokes
+          role: Customer Engineer, Pulumi
+        - name: Chris Toomey
+          role: Solutions Architect Lead, Mapbox
+
+    # A bullet point list containing what the user will learn during the webinar.
+    learn:
+        - The challenge of tracking assets and why real-time location data matters
+        - Why current technologies fall short—especially at scale
+        - How to compile an asset tracking solution using modern, serverless technology with Pulumi, AWS, and Mapbox
+        - "Pulumi Live demo: Asset tracking at work"
+        - "Programing your cloud applications with TypeScript, JavaScript, or Python: Pulumi SDKs and Service"
+        - Why serverless tech matters and what it enables
+
+# The right hand side webinar setion.
+webinar:
+    cta:
+        label: "Watch the Recording"
+        url: "https://event.on24.com/wcc/r/2000709/49822D39F0E9038AA2A3A84E04BF575D?partnerref=pulumi"
+---

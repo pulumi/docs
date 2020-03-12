@@ -1,0 +1,66 @@
+{{ define "hero" }}
+    <header class="header-hero-dark py-0 pt-16 px-4">
+        <div class="container mx-auto text-white md:flex justify-around items-center">
+            <div class="md:w-1/2">
+                <h1 class="text-white text-center">Upcoming Webinars</h1>
+            </div>
+            <div class="md:w-1/2 md:ml-8">
+                <div class="text-center">
+                    <img class="inline-block w-56" src="/icons/icon-audience-devops.svg">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <img class="w-full h-20" src="/images/waves.svg">
+{{ end }}
+
+{{ define "main" }}
+    <div class="container mx-auto">
+        <div class="flex justify-between py-10 md:py-24 px-5 md:px-20">
+            <div class="w-full">
+                <h2 id="event-list-heading" class="mb-8">All Upcoming Webinars</h2>
+                <ul id="event-list" class="list-none md:flex md:flex-wrap pl-0">
+                    {{ $webinars := (where $.Pages "Type" "webinar") }}
+                    {{ range $index, $webinar := (sort $webinars ".Params.webinar.datetime") }}
+                        <li class="w-full m-0 p-0">
+                            <article class="rounded shadow-md bg-white border border-gray-200 p-4 mb-10">
+                                <h3>
+                                    <a class="text-2xl" href="/webinar/{{ .Params.url_slug }}/">
+                                        {{ .Params.title }}
+                                    </a>
+                                </h3>
+                                <div>
+                                    <i class="text-gray-800 far fa-calendar inline-block"></i>
+                                    <span class="ml-1 text-sm uppercase">
+                                        {{ dateFormat "Monday, Jan 2" .Params.main.datetime }}
+                                    </span>
+                                </div>
+                                <div>
+                                    <i class="text-gray-800 fas fa-map-marker-alt"></i>
+                                    <span class="ml-1 text-sm uppercase">
+                                        Location
+                                    </span>
+                                </div>
+                                <p class="my-4">
+                                    {{ .Params.main.description }}
+                                </p>
+                                <div class="flex mt-2">
+                                    <div class="w-full">
+                                        <div class="event-tags">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {{ partial "social.html" . }}
+
+    {{ partial "learnmore-contactus.html" . }}
+{{ end }}

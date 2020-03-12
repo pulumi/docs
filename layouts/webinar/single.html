@@ -1,5 +1,5 @@
 {{ define "hero" }}
-    <div class="bg-gray-200">
+    <div>
         <header class="header-hero-dark py-0 pt-16 px-4">
             {{ with .Params.hero }}
                 <div class="container mx-auto text-white md:flex justify-around items-center">
@@ -17,16 +17,6 @@
 
         <img class="w-full h-20" src="/images/waves.svg">
     </div>
-
-    <div class="bg-gray-200 py-2 px-4">
-        <ul class="container mx-auto flex list-none">
-            {{ range .Params.logos }}
-                <li class="mr-8">
-                    <img class="h-5 w-auto" src="{{ .image }}" alt="{{ .name }} logo">
-                </li>
-            {{ end }}
-        </ul>
-    </div>
 {{ end }}
 
 {{ define "main" }}
@@ -34,13 +24,22 @@
         <div class="container mx-auto max-w-6xl py-16 md:flex">
             <div class="md:w-1/2 md:mx-8">
                 {{ with .Params.main }}
-                    <h2>{{ .heading }}</h2>
+                    <h2>{{ .title }}</h2>
+                    <time class="uppercase text-orange text-sm font-bold" datetime="{{ .datetime }}">
+                        {{ dateFormat "Monday, Jan 2, 2006 at 15:04 PDT" .datetime }}
+                    </time>
                     <div class="text-gray-600">
                         {{ .description | markdownify }}
                     </div>
-                    <a data-track="cta-{{ .cta.label | urlize }}" class="inline-block btn btn-lg mt-4" href="{{ .cta.url }}">
-                        {{ .cta.label }}
-                    </a>
+                    <h6 class="uppercase">Presenters</h6>
+                    <ul class="list-none p-0">
+                        {{ range .presenters }}
+                            <li class="mb-4">
+                                <div class="text-purple">{{ .name }}</div>
+                                <div class="text-sm">{{ .role }}</div>
+                            </li>
+                        {{ end }}
+                    </ul>
                     <h3 class="text-orange">Join us to learn:</h3>
                     <ul class="text-gray-600">
                         {{ range .learn }}
@@ -51,27 +50,9 @@
             </div>
             <div class="md:w-1/2 md:mx-8 bg-gray-200 rounded p-6">
                 {{ with .Params.webinar }}
-                    <h3 class="text-orange">Webinar</h3>
-                    <time class="uppercase text-orange text-sm font-bold" datetime="{{ .datetime }}">
-                        {{ dateFormat "Monday, Jan 2, 2006 at 15:04 PDT" .datetime }}
-                    </time>
-                    <h5 class="text-purple font-bold">{{ .title }}</h5>
-                    <p class="text-gray-600">
-                        {{ .description }}
-                    </p>
-                    <h6 class="uppercase">Presenters</h6>
-                    <ul class="list-none p-0">
-                        {{ range .presenters }}
-                            <li class="mb-4">
-                                <div class="text-purple">{{ .name }}</div>
-                                <div class="text-sm">{{ .role }}</div>
-                            </li>
-                        {{ end }}
-                    </ul>
-                    <h6 class="uppercase">Who Should Attend</h6>
-                    <div class="text-gray-600 text-sm">
-                        {{ delimit .audience ", " }}
-                    </div>
+                    <h3 class="text-orange">Watch Now</h3>
+
+                    {{ partial "hubspot-form.html" (dict "hubspotFormID" "88fac9d7-6e56-4166-849d-e10a90892962") }}
                 {{ end }}
             </div>
         </div>

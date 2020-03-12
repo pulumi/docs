@@ -1,5 +1,5 @@
 ---
-private: true
 title: Webinars
-meta_desc: Learn best practices and innovating techniques when interacting with cloud resources.
+meta_desc: |
+    Webinars about moder cloud native topics to connect, collaborate, and learn new techniques and best practices.
 ---
