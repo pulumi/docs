@@ -21,7 +21,9 @@ The PostgreSQL provider supports several options for providing access to Postgre
 
 ## Example
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 const postgresql = require("@pulumi/postgresql")
@@ -29,17 +31,26 @@ const postgresql = require("@pulumi/postgresql")
 const myDb = new postgresql.Database("my-database");
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as postgresql from "@pulumi/postgresql";
 
 const myDb = new postgresql.Database("my-database");
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 import pulumi_postgresql as postgresql
 
 my_db = postgresql.Database("my-database")
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 import (
@@ -48,6 +59,9 @@ import (
 
 myDb, _ := postgresql.NewDatabase(ctx, "my-database", &postgresql.DatabaseArgs{})
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -63,6 +77,10 @@ class Program
         });
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Libraries
 

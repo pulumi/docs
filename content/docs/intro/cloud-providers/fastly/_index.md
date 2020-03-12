@@ -21,7 +21,9 @@ The Fastly provider supports several options for providing access to Fastly cred
 
 ## Example
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 const fastly = require("@pulumi/fastly")
@@ -40,6 +42,9 @@ const service = new fastly.Servicev1("my-service", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as fastly from "@pulumi/fastly";
 
@@ -57,6 +62,9 @@ const service = new fastly.Servicev1("my-service", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 import pulumi_fastly as fastly
 
@@ -73,6 +81,9 @@ service = fastly.Servicev1("my-service",
   force_destroy="true",
 )
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 import (
@@ -92,6 +103,9 @@ service, _ := fastly.NewServicev1(ctx, "test", &fastly.Servicev1Args{
   ForceDestroy: true,
 })
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -123,6 +137,10 @@ class Program
         });
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Libraries
 

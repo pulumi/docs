@@ -21,7 +21,9 @@ The Mailgun provider supports several options for providing access to Mailgun cr
 
 ## Example
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 const mailgun = require("@pulumi/mailgun")
@@ -37,6 +39,9 @@ const route = new mailgun.Route("test-route", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as mailgun from "@pulumi/mailgun";
 
@@ -51,6 +56,9 @@ const route = new mailgun.Route("test-route", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 import pulumi_mailgun as mailgun
 
@@ -63,6 +71,9 @@ route = mailgun.Route("test-route",
     "stop()"
 ])
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 import (
@@ -78,6 +89,9 @@ route, _ := mailgun.NewRoute(ctx, "test-route", &mailgun.RouteArgs{
     "stop()"
 ]})
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -102,6 +116,10 @@ class Program
         });
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Libraries
 

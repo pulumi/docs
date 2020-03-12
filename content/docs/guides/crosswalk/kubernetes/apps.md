@@ -11,11 +11,9 @@ menu:
 The following are examples of how to create and use various types of Kubernetes
 resources, and typical apps and workloads.
 
-{{< cloudchoose >}}
+{{< chooser cloud "aws,azure,gcp" >}}
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 The full code for the AWS apps stack is on [GitHub][gh-repo-stack].
 
@@ -23,12 +21,9 @@ The full code for the AWS apps stack is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/06-apps
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud azure %}}
 
 The full code for the Azure apps stack is on [GitHub][gh-repo-stack].
 
@@ -36,12 +31,9 @@ The full code for the Azure apps stack is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/06-apps
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud gcp %}}
 
 The full code for the GCP apps stack is on [GitHub][gh-repo-stack].
 
@@ -49,8 +41,9 @@ The full code for the GCP apps stack is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/06-apps
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 The full code for the apps is on [GitHub][gh-repo-stack].
 
@@ -79,9 +72,7 @@ Check out how to:
 Build a Docker container image, push it to the registry, and deploy it to
 Kubernetes.
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 The full code for this app stack is on [GitHub][gh-aws-deploy-stack].
 
@@ -89,10 +80,9 @@ The full code for this app stack is on [GitHub][gh-aws-deploy-stack].
 [gh-aws-deploy-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/06-apps/build-deploy-container
 <!-- markdownlint-enable url -->
 
-{{< k8s-language noyaml >}}
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{< chooser k8s-language "typescript,typescript-kx" >}}
+
+{{% choosable k8s-language typescript %}}
 
 ```ts
 import * as awsx from "@pulumi/awsx";
@@ -132,11 +122,9 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 }, { provider: provider });
 ```
 
-{{% /md %}}
-</div>
-<div class="k8s-language-prologue-typescript-kx"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable k8s-language typescript-kx %}}
 
 ```ts
 import * as awsx from "@pulumi/awsx";
@@ -171,14 +159,13 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
 }, { provider: provider });
 ```
 
-{{% /md %}}
-</div>
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{< /chooser >}}
+
+{{% /choosable %}}
+
+{{% choosable cloud azure %}}
 
 The full code for this app stack is on [GitHub][gh-azure-deploy-stack].
 
@@ -186,10 +173,9 @@ The full code for this app stack is on [GitHub][gh-azure-deploy-stack].
 [gh-azure-deploy-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/06-apps/build-deploy-container
 <!-- markdownlint-enable url -->
 
-{{< k8s-language noyaml >}}
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{< chooser k8s-language "typescript,typescript-kx" >}}
+
+{{% choosable k8s-language typescript %}}
 
 ```ts
 import * as azure from "@pulumi/azure";
@@ -248,12 +234,9 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 }, { provider: provider });
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="k8s-language-prologue-typescript-kx"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language typescript-kx %}}
 
 ```ts
 import * as azure from "@pulumi/azure";
@@ -307,14 +290,13 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
 }, { provider: provider });
 ```
 
-{{% /md %}}
-</div>
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{< /chooser >}}
+
+{{% /choosable %}}
+
+{{% choosable cloud gcp %}}
 
 The full code for this app stack is on [GitHub][gh-gcp-deploy-stack].
 
@@ -322,10 +304,9 @@ The full code for this app stack is on [GitHub][gh-gcp-deploy-stack].
 [gh-gcp-deploy-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/06-apps/build-deploy-container
 <!-- markdownlint-enable url -->
 
-{{< k8s-language noyaml >}}
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{< chooser k8s-language "typescript,typescript-kx" >}}
+
+{{% choosable k8s-language typescript %}}
 
 ```ts
 import * as docker from "@pulumi/docker";
@@ -372,12 +353,9 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 }, { provider: provider });
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="k8s-language-prologue-typescript-kx"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language typescript-kx %}}
 
 ```ts
 import * as docker from "@pulumi/docker";
@@ -419,11 +397,11 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
 }, { provider: provider });
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-{{% /md %}}
-</div>
+{{< /chooser >}}
+
+{{% /choosable %}}
 
 ## Deploy a Pod with a Sidecar
 
@@ -591,10 +569,9 @@ The full code for this app stack is on [GitHub][gh-deploy-secret-stack].
 [k8s-secret]: https://kubernetes.io/docs/concepts/configuration/secret/
 <!-- markdownlint-enable url -->
 
-{{< k8s-language noyaml >}}
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{< chooser k8s-language "typescript,typescript-kx" >}}
+
+{{% choosable k8s-language typescript %}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -652,11 +629,9 @@ const nginx = new k8s.apps.v1.Deployment(appName, {
 }, { provider: provider });
 ```
 
-{{% /md %}}
-</div>
-<div class="k8s-language-prologue-typescript-kx"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable k8s-language typescript-kx %}}
 
 ```ts
 import * as kx from "@pulumi/kubernetesx";
@@ -687,8 +662,9 @@ const nginxDeployment = new kx.Deployment(appName, {
 }, { provider: provider });
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Perform a ConfigMap Rollout on a Deployment
 
@@ -709,10 +685,9 @@ The full code for this app stack is on [GitHub][gh-job-stack].
 [k8s-job]: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion
 <!-- markdownlint-enable url -->
 
-{{< k8s-language noyaml >}}
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{< chooser k8s-language "typescript,typescript-kx" >}}
+
+{{% choosable k8s-language typescript %}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -736,11 +711,9 @@ const exampleJob = new k8s.batch.v1.Job("example-job", {
 }, { provider: provider });
 ```
 
-{{% /md %}}
-</div>
-<div class="k8s-language-prologue-typescript-kx"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable k8s-language typescript-kx %}}
 
 ```ts
 import * as kx from "@pulumi/kubernetesx";
@@ -761,8 +734,9 @@ const exampleJobKx = new kx.Job("example-job-kx", {
 }, { provider: provider });
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Deploy a DaemonSet
 
@@ -775,10 +749,9 @@ The full code for this app stack is on [GitHub][gh-ds-stack].
 [k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 <!-- markdownlint-enable url -->
 
-{{< k8s-language noyaml >}}
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{< chooser k8s-language "typescript,typescript-kx" >}}
+
+{{% choosable k8s-language typescript %}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -807,14 +780,15 @@ const nginx = new k8s.apps.v1.DaemonSet(appName, {
 }, { provider: provider });
 ```
 
-{{% /md %}}
-</div>
-<div class="k8s-language-prologue-typescript-kx"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable k8s-language typescript-kx %}}
+
 Coming Soon.
-{{% /md %}}
-</div>
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Deploy a CronJob
 
@@ -827,10 +801,9 @@ The full code for this app stack is on [GitHub][gh-cronjob-stack].
 [k8s-cj]: https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
 <!-- markdownlint-enable url -->
 
-{{< k8s-language noyaml >}}
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{< chooser k8s-language "typescript,typescript-kx" >}}
+
+{{% choosable k8s-language typescript %}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -859,14 +832,15 @@ const exampleCronJob = new k8s.batch.v1beta1.CronJob("example-cronjob", {
 }, { provider: provider });
 ```
 
-{{% /md %}}
-</div>
-<div class="k8s-language-prologue-typescript-kx"></div>
-<div class="mt">
-{{% md %}}
-Coming Soon.
-{{% /md %}}
-</div>
+{{% /choosable %}}
+
+{{% choosable k8s-language typescript-kx %}}
+
+Coming soon.
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Deploy a StatefulSet
 
@@ -880,10 +854,9 @@ The full code for this app stack is on [GitHub][gh-ss-stack].
 [mariadb]: https://mariadb.org/
 <!-- markdownlint-enable url -->
 
-{{< k8s-language noyaml >}}
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{< chooser k8s-language "typescript,typescript-kx" >}}
+
+{{% choosable k8s-language typescript %}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -1034,14 +1007,15 @@ const mariadb = new k8s.apps.v1.StatefulSet("mariadb", {
 }, { provider: provider });
 ```
 
-{{% /md %}}
-</div>
-<div class="k8s-language-prologue-typescript-kx"></div>
-<div class="mt">
-{{% md %}}
-Coming Soon.
-{{% /md %}}
-</div>
+{{% /choosable %}}
+
+{{% choosable k8s-language typescript-kx %}}
+
+Coming soon.
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Learn More
 

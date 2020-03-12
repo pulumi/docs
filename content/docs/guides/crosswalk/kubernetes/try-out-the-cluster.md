@@ -8,42 +8,35 @@ menu:
     weight: 4
 ---
 
-{{< cloudchoose >}}
+{{< chooser cloud "aws,azure,gcp" >}}
 
 After the cluster is created with a Pulumi update, there will be
 [outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) with fields like the cluster's `kubeconfig` file
 contents, and its cluster name for reference.
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
-{{% /md %}}
-</div>
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable cloud azure %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/03-cluster-configuration
-{{% /md %}}
-</div>
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable cloud gcp %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
 ## Overview
 
@@ -56,9 +49,8 @@ We'll explore how to:
 
 ## Access the Cluster
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
+
 In EKS, the account caller will be placed into the
 `system:masters` Kubernetes RBAC group by default. The `kubeconfig`
 generated will be specific to this primary cluster creator use-case, and it must be
@@ -195,11 +187,11 @@ Edit `kubeconfig-devs.json` to use a role for authentication in the
 [aws-cluster-config-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
 [crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
 <!-- markdownlint-enable url -->
-{{% /md %}}
-</div>
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+
+{{% /choosable %}}
+
+{{% choosable cloud azure %}}
+
 In AKS, the account caller will be placed into the
 `system:masters` Kubernetes RBAC group by default. Two `kubeconfig` files will
 be generated that will be specific to the admin and cluster user [use-cases][aks-cluster-roles].
@@ -240,11 +232,11 @@ $ export KUBECONFIG=`pwd`/kubeconfig-devs.json
 [aks-cluster-roles]: https://docs.microsoft.com/en-us/azure/aks/control-kubeconfig-access#available-cluster-roles-permissions
 [crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
 <!-- markdownlint-enable url -->
-{{% /md %}}
-</div>
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+
+{{% /choosable %}}
+
+{{% choosable cloud gcp %}}
+
 In GCP, the account caller will be placed into the
 `system:masters` Kubernetes RBAC group by default. The `kubeconfig`
 generated will be specific to this primary cluster creator use-case.
@@ -283,8 +275,9 @@ $ export KUBECONFIG=`pwd`/kubeconfig.json
 [gcp-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-admins" >}}
 [gcp-devs-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-developers" >}}
 [crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
-{{% /md %}}
-</div>
+
+{{% /choosable %}}
+
 <!-- markdownlint-enable no-duplicate-heading -->
 
 ## Query the Cluster
@@ -322,11 +315,10 @@ $ kubectl get cm -n kube-system
 
 ## Deploy a Workload
 
-{{< k8s-language nokx >}}
+{{< chooser k8s-language "typescript,yaml" >}}
 
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language yaml %}}
+
 Imperatively deploy a NGINX Pod and public load-balanced service:
 
 ```bash
@@ -335,38 +327,29 @@ $ kubectl run --generator=run-pod/v1 nginx --image=nginx --port=80 --expose --se
 
 After a few moments once it is deployed, visit the load balancer URL.
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 ```bash
 $ if ING_LB=$((kubectl get svc nginx -o template --template='{{(index .status.loadBalancer.ingress 0).hostname}}') 2>&1) ; then echo "http://$ING_LB"; else echo "LB is not ready yet."; fi
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud azure %}}
 
 ```bash
 $ if ING_LB=$((kubectl get svc nginx -o template --template='{{(index .status.loadBalancer.ingress 0).ip}}') 2>&1) ; then echo "http://$ING_LB"; else echo "LB is not ready yet."; fi
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud gcp %}}
 
 ```bash
 $ if ING_LB=$((kubectl get svc nginx -o template --template='{{(index .status.loadBalancer.ingress 0).ip}}') 2>&1) ; then echo "http://$ING_LB"; else echo "LB is not ready yet."; fi
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
 Delete the pod and service.
 
@@ -374,12 +357,10 @@ Delete the pod and service.
 $ kubectl delete pod/nginx svc/nginx
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language typescript %}}
+
 Declaratively deploy a NGINX Pod and public load-balanced service:
 
 ```ts
@@ -417,9 +398,8 @@ const service = new k8s.core.v1.Service(name,
 );
 ```
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
+
 ```ts
 // Export the Service name and public LoadBalancer Endpoint
 export const serviceName = service.metadata.name;
@@ -432,11 +412,10 @@ After a few moments, visit the load balancer listed in the `serviceHostname`.
 $ curl `pulumi stack output serviceHostname`
 ```
 
-{{% /md %}}
-</div>
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable cloud azure %}}
+
 ```ts
 // Export the Service name and public LoadBalancer Endpoint
 export const serviceName = service.metadata.name;
@@ -449,11 +428,10 @@ After a few moments, visit the load balancer listed in the `serviceIp`.
 $ curl `pulumi stack output serviceIp`
 ```
 
-{{% /md %}}
-</div>
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable cloud gcp %}}
+
 ```ts
 // Export the Service name and public LoadBalancer Endpoint
 export const serviceName = service.metadata.name;
@@ -466,11 +444,11 @@ After a few moments, visit the load balancer listed in the `serviceIp`.
 $ curl `pulumi stack output serviceIp`
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
+
 To tear down NGINX, delete its definition in the Pulumi program and run a Pulumi update.
-{{% /md %}}
-</div>
+
+{{% /choosable %}}
 
 ## Learn More
 

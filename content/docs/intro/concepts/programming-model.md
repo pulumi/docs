@@ -39,7 +39,9 @@ To declare new infrastructure in your program, allocate a [resource](#resources)
 
 For example, this complete program creates a new AWS EC2 security group and an instance that uses it:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let aws = require("@pulumi/aws");
@@ -56,6 +58,9 @@ let server = new aws.ec2.Instance("web-server", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as aws from "@pulumi/aws";
 
@@ -71,6 +76,9 @@ let server = new aws.ec2.Instance("web-server", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 import pulumi_aws as aws
 
@@ -85,6 +93,9 @@ server = aws.ec2.Instance('web-server',
     instance_type='t2.micro',
     security_groups=[group.name]) # reference the security group resource above
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 package main
@@ -123,6 +134,9 @@ func main() {
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 using Pulumi;
 using Pulumi.Aws.Ec2;
@@ -154,11 +168,17 @@ class Program
 }
 ```
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 In this example, the two resource objects, plus their names and properties, tells Pulumi everything it needs to create, update, or delete your infrastructure. For example, Pulumi now knows you'd like an EC2 security group named `web-sg`, with a single ingress rule, and a `t2.micro`-sized EC2 instance running AMI `ami-8689aa05` using that security group. Pulumi understands the dependencies between resources---thanks to [output properties](#outputs)---which maximizes parallelism and ensures correct ordering. When you run the `pulumi up` command, Pulumi will compute this desired state, compare it to the current infrastructure you already have (if any), show you the delta, and let you confirm and carry out the changes.
 
 You can export resulting infrastructure values that you wish to access outside your application. For example, adding this code to the example above exports the server's resulting IP address and DNS name:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 // ...
@@ -168,17 +188,26 @@ module.exports = {
 };
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 // ...
 export let publicIp = server.publicIp;
 export let publicDns = server.publicDns;
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 # ...
 pulumi.export('public_ip', server.public_ip)
 pulumi.export('public_dns', server.public_dns)
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 // ...
@@ -188,6 +217,9 @@ pulumi.export('public_dns', server.public_dns)
     })
 }
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 // ...
@@ -200,33 +232,55 @@ pulumi.export('public_dns', server.public_dns)
 }
 ```
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 The exported values are printed after you do a `pulumi up` and they are easy to access from the CLI's `pulumi stack output` command. To learn more, see [stack outputs](#stack-outputs) below.
 
 ## Pulumi SDK {#pulumipulumi}
 
 The Pulumi SDK library defines Pulumi's most fundamental types and functions:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let pulumi = require("@pulumi/pulumi");
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as aws from "@pulumi/pulumi";
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 import pulumi
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 import "github.com/pulumi/pulumi/sdk/go/pulumi"
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 using Pulumi;
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 These are the most essential concepts defined by the Pulumi SDK:
 
@@ -251,27 +305,45 @@ All infrastructure resources are described by subclasses of the {{< pulumi-resou
 
 A resource's desired state is declared by constructing an instance:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let res = new Resource(name, args, options);
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let res = new Resource(name, args, options);
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 res = Resource(name, args, options)
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 res, err := NewResource(ctx, name, args, opt1, opt2)
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var res = new Resource(name, args, options);
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 All resources have a required [`name`](#names) argument, which must be unique across resources of the same kind in a [stack]({{< relref "stack" >}}). This _logical name_ influences the _physical name_ assigned by your infrastructure's cloud provider, although [Pulumi auto-names resources](#autonaming) by default, so they may differ.
 
@@ -283,27 +355,45 @@ The `options` argument is optional, but [lets you control certain aspects of the
 
 Every resource managed by Pulumi has a logical name that you specify as an argument to its constructor. For instance, the logical name of this IAM role is `my-role`:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let role = new aws.iam.Role("my-role");
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let role = new aws.iam.Role("my-role");
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 role = iam.Role("my-role")
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 role, err := iam.NewRole(ctx, "my-role", &iam.RoleArgs{})
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var role = new Aws.Iam.Role("my-role");
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 This logical name is used by Pulumi to track the identity of a resource across multiple deployments of the same program and is how Pulumi knows to choose between creating new resources and updating existing ones.
 
@@ -326,7 +416,9 @@ This random suffix is added for two reasons:
 
 Auto-naming can be overridden by manually specifying a physical name on your resource for use cases that require precise names. Most resources offer this option by way of a `name` property that may be specified in the argument object to the constructor:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let role = new aws.iam.Role("my-role", {
@@ -334,11 +426,17 @@ let role = new aws.iam.Role("my-role", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let role = new aws.iam.Role("my-role", {
     name: "my-role-001",
 });
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 role = iam.Role('my-role', {
@@ -346,11 +444,17 @@ role = iam.Role('my-role', {
 })
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 role, err := iam.NewRole(ctx, "my-role", &iam.RoleArgs{
     Name: pulumi.String("my-role-001"),
 })
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 var role = new Aws.Iam.Role("my-role", new Aws.Iam.RoleArgs
@@ -359,13 +463,19 @@ var role = new Aws.Iam.Role("my-role", new Aws.Iam.RoleArgs
 });
 ```
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 > If `name` doesn't work, consult the documentation for the specific resource you are creating. Some resources use a different property to override the auto-naming. For instance, the `aws.s3.Bucket` type uses the property `bucket` instead of `name`. Other resources, like `aws.kms.Key`, don't even have physical names and instead use other auto-generated IDs to uniquely identify them.
 
 Overriding auto-naming opens your project up to naming collisions. As a result, for resources that may need to be replaced, you should specify [`deleteBeforeReplace: true` in the resources's options](#deletebeforereplace). This ensures old resources are deleted before new ones are recreated.
 
 The physical and logical names don't need to match. You may even elect to construct the name using your project and stack names. This protects you from naming collisions similar to auto-naming while still having nice names, although `deleteBeforeReplace` is still necessary:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let role = new aws.iam.Role("my-role", {
@@ -373,11 +483,17 @@ let role = new aws.iam.Role("my-role", {
 }, { deleteBeforeReplace: true });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let role = new aws.iam.Role("my-role", {
     name: `my-role-${pulumi.getProject()}-${pulumi.getStack()}`,
 }, { deleteBeforeReplace: true });
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 role = iam.Role('my-role', {
@@ -385,11 +501,17 @@ role = iam.Role('my-role', {
 }, opts=ResourceOptions(delete_before_replace=True))
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 role, _ := iam.NewRole(ctx, "my-role", &iam.RoleArgs{
     Name: fmt.Sprintf("my-role-%s-%s", ctx.Project(), ctx.Stack()),
 }, pulumi.DeleteBeforeReplace(true))
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 var role = new Aws.Iam.Role("my-role", new Aws.Iam.RoleArgs
@@ -399,6 +521,10 @@ var role = new Aws.Iam.Role("my-role", new Aws.Iam.RoleArgs
     new CustomResourceOptions { DeleteBeforeReplace = true }
 );
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ##### Resource URNs {#urns}
 
@@ -450,32 +576,50 @@ This option specifies a list of named output properties which should be treated 
 
 This example ensures the password generated for a database resource is an encrypted secret:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let db = new Database("new-name-for-db", { /*...*/ },
     { additionalSecretOutputs: ["password"] });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let db = new Database("new-name-for-db", { /*...*/ },
     { additionalSecretOutputs: ["password"] });
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 db = Database('db',
     opts=ResourceOptions(additional_secret_outputs=['password']))
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
     pulumi.AdditionalSecretOutputs([]string{"password"}))
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var db = new Database("new-name-for-db", new DatabaseArgs(),
     new CustomResourceOptions { AdditionalSecretOutputs = { "password" } });
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Only entire top-level resource properties can be marked secret, so if there is sensitive data nested inside of a property, the entire top-level output property must be marked as secret.
 
@@ -485,53 +629,82 @@ This option provides a list of aliases for a resource or component. If you're ch
 
 For example, imagine we changed our database resource's name from `"old-name-for-db"` to `"new-name-for-db"`. By default, when we run `pulumi up`, we will see that the old resource will be deleted, and the new one created. If we annotate that resource with the `aliases` option, however, it will be updated in-place instead:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let db = new Database("new-name-for-db", {/*...*/},
     { aliases: [{ name: "old-name-for-db" }] });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let db = new Database("new-name-for-db", {/*...*/},
     { aliases: [{ name: "old-name-for-db" }] });
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 db = Database('db',
     opts=ResourceOptions(aliases=[Alias(name='old-name-for-db')]))
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
     pulumi.Aliases(pulumi.Alias{Name: pulumi.String("old-name-for-db")}))
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 var db = new Database("new-name-for-db", new DatabaseArgs(),
     new CustomResourceOptions { Aliases = { new Alias { Name = "old-name-for-db"} } });
 ```
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 The `aliases` option accepts a list of old identifiers. If a resource has been renamed multiple times, it may contain many. This list may contain old `Alias` objects and/or old [resource URNs](#urns).
 
 The above example used `Alias` objects with the old resource names. These values may specify any combination of the old name, type, parent, stack, and/or project values. Alternatively, you can just specify the URN directly:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let db = new Database("new-name-for-db", {/*...*/},
     { aliases: [ "urn:pulumi:stackname::projectname::aws:rds/database:Database::old-name-for-db" ] });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let db = new Database("new-name-for-db", {/*...*/},
     { aliases: [ "urn:pulumi:stackname::projectname::aws:rds/database:Database::old-name-for-db" ] });
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 db = Database('db',
     opts=ResourceOptions(aliases=['urn:pulumi:stackname::projectname::aws:rds/database:Database::old-name-for-db']))
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
@@ -541,11 +714,18 @@ db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
 )
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var db = new Database("new-name-for-db", new DatabaseArgs(),
     new CustomResourceOptions { Aliases = { new Alias {
         Urn = "urn:pulumi:stackname::projectname::aws:rds/database:Database::old-name-for-db" } } });
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ###### `customTimeouts`
 
@@ -555,32 +735,50 @@ This option provides a set of custom timeouts for `create`, `update`, and `delet
 
 This example specifies that the create operation should wait up to 30 minutes to complete, before timing out:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let db = new Database("db", {/*...*/},
     { customTimeouts: { create: "30m" } });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let db = new Database("db", {/*...*/},
     { customTimeouts: { create: "30m" } });
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 db = Database('db',
     opts=ResourceOptions(custom_timeouts=CustomTimeouts(create='30m')))
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
     pulumi.Timeouts(&pulumi.CustomTimeouts{Create: "30m"}))
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var db = new Database("db", new DatabaseArgs(),
     new CustomResourceOptions { CustomTimeouts = new CustomTimeouts { Create = TimeSpan.FromMinutes(30) } });
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ###### `deleteBeforeReplace`
 
@@ -590,33 +788,51 @@ Setting the `deleteBeforeReplace` option to `true` specifies that replacements o
 
 This example requests that our database is deleted entirely before its replacement is created:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let db = new Database("db", {/*...*/},
     { deleteBeforeReplace: true});
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let db = new Database("db", {/*...*/},
     { deleteBeforeReplace: true});
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 db = Database("db",
     opts=ResourceOptions(delete_before_replace=True))
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
     pulumi.DeleteBeforeReplace(true))
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 // The resource will be deleted before it's replacement is created
 var db = new Database("db", new DatabaseArgs(),
     new CustomResourceOptions { DeleteBeforeReplace = true });
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ###### `dependsOn`
 
@@ -626,32 +842,50 @@ Pulumi automatically tracks dependencies between resources when you supply an in
 
 This example demonstrates making `res2` dependent on `res1`, even if there is no property-level dependency:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let res1 = new MyResource("res1", {/*...*/});
 let res2 = new MyResource("res2", {/*...*/}, { dependsOn: [res1] });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let res1 = new MyResource("res1", {/*...*/});
 let res2 = new MyResource("res2", {/*...*/}, { dependsOn: [res1] });
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 res1 = MyResource("res1");
 res2 = MyResource("res2", opts=ResourceOptions(depends_on=[res1]));
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 res1, _ := NewMyResource(ctx, "res1", &MyResourceArgs{/*...*/})
 res2, _ := NewMyResource(ctx, "res2", &MyResourceArgs{/*...*/}, pulumi.DependsOn([]Resource{res1}))
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var res1 = new MyResource("res1", new MyResourceArgs());
 var res2 = new MyResource("res2", new MyResourceArgs(), new CustomResourceOptions { DependsOn = { res1 } });
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ###### `ignoreChanges`
 
@@ -659,17 +893,25 @@ This option specifies a list of properties which will be ignored when updating e
 
 For instance, in this example, the resource's `prop` property will have its value of `"new-value"` set when initially creating resource, but from then on, any and all changes will be ignored:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let res = new MyResource("res",
     { prop: "new-value" }, { ignoreChanges: ["prop"] });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let res = new MyResource("res",
     { prop: "new-value" }, { ignoreChanges: ["prop"] });
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 res = MyResource("res",
@@ -677,17 +919,27 @@ res = MyResource("res",
     opts=ResourceOptions(ignore_changes=["prop"]))
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 res, _ := NewMyResource(ctx, "res",
     &MyResourceArgs{Prop: "new-value"},
     pulumi.IgnoreChanges([]string{"prop"}))
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var res = new MyResource("res",
     new MyResourceArgs { Prop = "new-value" },
     new CustomResourceOptions { IgnoreChanges = { "prop" } });
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 You would use the `ignoreChanges` option to avoid changes in properties leading to diffs or to change defaults for a property without forcing all existing deployed stacks to update or replace the affected resource. This is common after you've imported existing infrastructure provisioned by another method into Pulumi, where there may be historical drift that you'd prefer to retain than have to replace and reconstruct some critical parts of your infrastructure.
 
@@ -704,7 +956,9 @@ Next, you must also specify all required arguments to the resource constructor, 
 
 This example imports an existing EC2 security group with ID `sg-04aeda9a214730248` and instance with ID `i-06a1073de86f4adef`:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let aws = require("@pulumi/aws");
@@ -721,6 +975,9 @@ let server = new aws.ec2.Instance("web-server", {
 }, { import: "i-06a1073de86f4adef" });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as aws from "@pulumi/aws";
 
@@ -735,6 +992,9 @@ let server = new aws.ec2.Instance("web-server", {
     securityGroups: [ group.name ],
 }, { import: "i-06a1073de86f4adef" });
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 # IMPORTANT: Python appends an underscore (`import_`) to avoid conflicting with the keyword.
@@ -755,6 +1015,9 @@ server = aws.ec2.Instance('web-server',
     security_groups=[group.name],
     opts=ResourceOptions(import_='i-06a1073de86f4adef'))
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 group, err := ec2.NewSecurityGroup(ctx, "web-sg",
@@ -788,6 +1051,9 @@ if err != nil {
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var group = new SecurityGroup("web-sg",
     new SecurityGroupArgs {
@@ -818,6 +1084,10 @@ var server = new Instance("web-server",
 );
 ```
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 For this to work, your Pulumi stack must be configured correctly---e.g., in this case, the correct AWS region.
 
 If the resource's arguments differ from the imported state, the import will fail. This will result in a message, `warning: inputs to import do not match the existing resource; importing this resource will fail`; selecting "details" in the `pulumi up` preview will show you exactly what differs. Attempting to proceed will fail with a message, `error: inputs to import do not match the existing resource`. To fix these errors, ensure that your program computes state that matches the resource to be imported fully.
@@ -832,33 +1102,51 @@ This option specifies a parent for the resource. This is used to associate child
 
 For example, this code creates two resources, a `parent` and `child`, the latter of which is parented to the former:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let parent = new MyResource("parent", {/*...*/});
 let child = new MyResource("child", {/*...*/}, { parent: parent });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let parent = new MyResource("parent", {/*...*/});
 let child = new MyResource("child", {/*...*/}, { parent: parent });
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 parent = MyResource("parent");
 child = MyResource("child", opts=ResourceOptions(parent=parent));
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 parent, _ := NewMyResource(ctx, "parent", &MyResourceArgs{/*...*/})
 child, _ := NewMyResource(ctx, "child", &MyResourceArgs{/*...*/}, pulumi.Parent(parent))
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 var parent = new MyResource("parent", new MyResourceArgs());
 var child = new MyResource("child", new MyResourceArgs(),
     new CustomResourceOptions { Parent = parent });
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Using parents can help to understand causality; that is, why a given resource was created in the first place. For example, this `pulumi up` output shows that we have an AWS Virtual Private Cloud (VPC) with two subnets attached to it, and that this VPC directly belongs to the implicit `pulumi:pulumi:Stack` resource:
 
@@ -876,58 +1164,94 @@ Previewing update (dev):
 
 Marks a resource as protected. A protected resource cannot be deleted directly: First, you must set `protect: false` and run `pulumi up`. Then, you can delete the resource by removing the line of code or by running `pulumi destroy`.  The default is to inherit this value from the parent resource, and `false` for resources without a parent.
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let db = new Database("db", {}, { protect: true});
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let db = new Database("db", {}, { protect: true});
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 db = Database("db", opts=ResourceOptions(protect=True))
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 db, _ := NewDatabase(ctx, "db", &DatabaseArgs{}, pulumi.Protect(true));
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 var db = new Database("db", new DatabaseArgs(), new CustomResourceOptions { Protect = true });
 ```
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ###### `provider`
 
 A provider for the resource. See [Providers](#providers).  The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let provider = new aws.Provider("provider", { region: "us-west-2" });
 let vpc = new aws.ec2.Vpc("vpc", {}, { provider: provider });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let provider = new aws.Provider("provider", { region: "us-west-2" });
 let vpc = new aws.ec2.Vpc("vpc", {}, { provider: provider });
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 provider = Provider("provider", region="us-west-2")
 vpc = ec2.Vpc("vpc", opts=ResourceOptions(provider=provider))
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 provider, _ := aws.NewProvider(ctx, "provider", &aws.ProviderArgs{Region: pulumi.StringPtr("us-west-2")})
 vpc, _ := ec2.NewVpc(ctx, "vpc", &ec2.VpcArgs{}, pulumi.Provider(provider))
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var provider = new Aws.Provider("provider", new Aws.ProviderArgs { Region = "us-west-2" });
 var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(), new CustomResourceOptions { Provider = provider });
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ###### `transformations`
 
@@ -937,7 +1261,9 @@ Each transformation is a callback that gets invoked by the Pulumi runtime, and r
 
 This example looks for all VPC and Subnet resources inside of a component's child hierarchy, and adds an option to ignore any changes for `tags` properties on them (perhaps because we manage all VPC and Subnet tags outside of Pulumi):
 
-{{< langchoose >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 const vpc = new MyVpcComponent("vpc", {}, {
@@ -953,6 +1279,9 @@ const vpc = new MyVpcComponent("vpc", {}, {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 const vpc = new MyVpcComponent("vpc", {}, {
     transformations: [args => {
@@ -966,6 +1295,9 @@ const vpc = new MyVpcComponent("vpc", {}, {
     }],
 });
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 def transformation(args: ResourceTransformationArgs):
@@ -978,6 +1310,9 @@ def transformation(args: ResourceTransformationArgs):
 
 vpc = MyVpcComponent("vpc", opts=ResourceOptions(transformations=[transformation]))
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 transformation := func(args *pulumi.ResourceTransformationArgs) *pulumi.ResourceTransformationResult {
@@ -992,6 +1327,9 @@ transformation := func(args *pulumi.ResourceTransformationArgs) *pulumi.Resource
 
 vpc := MyVpcComponent("vpc", pulumi.Transformations([]pulumi.ResourceTransformation{transformation}))
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 var vpc = new MyVpcComponent("vpc", new ComponentResourceOptions
@@ -1018,6 +1356,10 @@ var vpc = new MyVpcComponent("vpc", new ComponentResourceOptions
 });
 ```
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 Transformations can also be applied in bulk to many resources in a stack by using the `registerStackTransformation` function.
 
 ##### Resource Getter Functions {#resource-get}
@@ -1026,7 +1368,9 @@ It's possible to look up an existing resource by its ID using the static `get` f
 
 This can be used to consume properties from a resource provisioned elsewhere. For example, this program reads an existing EC2 Security Group whose ID is `sg-0dfd33cdac25b1ec9` and uses it as input when creating an EC2 Instance:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let aws = require("@pulumi/aws");
@@ -1040,6 +1384,9 @@ let server = new aws.ec2.Instance("web-server", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as aws from "@pulumi/aws";
 
@@ -1052,6 +1399,9 @@ let server = new aws.ec2.Instance("web-server", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 import pulumi_aws as aws
 
@@ -1062,6 +1412,9 @@ server = aws.ec2.Instance('web-server',
     instance_type='t2.micro',
     security_groups=[group.name]) # reference the security group resource above
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 import (
@@ -1088,6 +1441,9 @@ func main() {
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 using Pulumi;
 using Pulumi.Aws.Ec2;
@@ -1110,6 +1466,10 @@ class Program
 }
 ```
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 Importantly, Pulumi will never attempt to modify the Security Group in this example. It simply reads back its state from your currently configured cloud account, and then uses it as input for the EC2 Instance.
 
 #### Component Resources {#components}
@@ -1130,7 +1490,9 @@ To author your own new component, either in a program or in a reusable library, 
 
 Here's a simple component example:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 class MyComponent extends pulumi.ComponentResource {
@@ -1140,6 +1502,9 @@ class MyComponent extends pulumi.ComponentResource {
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 class MyComponent extends pulumi.ComponentResource {
     constructor(name, opts) {
@@ -1148,11 +1513,17 @@ class MyComponent extends pulumi.ComponentResource {
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 class MyComponent(pulumi.ComponentResource):
     def __init__(self, name, opts = None):
         super().__init__('pkg:index:MyComponent', name, None, opts)
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 type MyComponent struct {
@@ -1170,6 +1541,9 @@ func NewMyComponent(ctx *pulumi.Context, name string, opts ...pulumi.ResourceOpt
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 class MyComponent : Pulumi.ComponentResource
 {
@@ -1183,6 +1557,10 @@ class MyComponent : Pulumi.ComponentResource
     }
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Upon creating a new instance of `MyComponent`, the call to the base constructor (using `super`/`base`) registers the component instance with the Pulumi engine. This records the resource's state and tracks it across program deployments so that you see diffs during updates like a regular resource (even though components have no provider logic associated with them). Since all resources must have a name, a component constructor should accept a name and pass it to `super`.
 
@@ -1198,32 +1576,50 @@ Components will often contain child resources. This entails two things. First, t
 
 This example demonstrates both:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let bucket = new aws.s3.Bucket(`${name}-bucket`,
     {/*...*/}, { parent: this });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let bucket = new aws.s3.Bucket(`${name}-bucket`,
     {/*...*/}, { parent: this });
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 bucket = s3.Bucket(f"{name}-bucket",
     opts=pulumi.ResourceOptions(parent=self))
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 bucket, err := s3.NewBucket(ctx, fmt.Sprintf("%s-bucket", name),
     &s3.BucketArgs{ /*...*/ }, pulumi.Parent(myComponent))
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var bucket = new Aws.S3.Bucket($"{name}-bucket",
     new Aws.S3.BucketArgs(/*...*/), new CustomResourceOptions { Parent = this });
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ##### Registering Component Outputs
 
@@ -1231,7 +1627,9 @@ Components can define their own output properties using {{< pulumi-componentreso
 
 For example, this registers an S3 bucket's computed domain name, which won't be known until the bucket is created:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 this.registerOutputs({
@@ -1239,11 +1637,17 @@ this.registerOutputs({
 })
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 this.registerOutputs({
     bucketDnsName: bucket.bucketDomainName,
 })
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 self.register_outputs({
@@ -1251,11 +1655,17 @@ self.register_outputs({
 })
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 ctx.RegisterResourceOutputs(myComponent, pulumi.Map{
     "bucketDnsName": bucket.BucketDomainName,
 })
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 this.RegisterOutputs(new Dictionary<string, object>
@@ -1263,6 +1673,10 @@ this.RegisterOutputs(new Dictionary<string, object>
     { "bucketDnsName", bucket.BucketDomainName }
 });
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 The call to register outputs typically happens at the very end of the component's constructor.
 
@@ -1274,7 +1688,9 @@ One option all resources have is the ability to pass an [explicit resource provi
 
 To support, this component resources accept a new `providers` option that other custom resources don't have. This value contains a map from provider name to the explicit provider instance to use for that package. This can then be used by a component to fetch the proper `provider` object to use for any child resources.
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let component = new MyComponent("...", {
@@ -1285,6 +1701,9 @@ let component = new MyComponent("...", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let component = new MyComponent("...", {
     providers: {
@@ -1294,12 +1713,18 @@ let component = new MyComponent("...", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 component = MyComponent('...', ResourceOptions(providers={
     'aws': useast1,
     'kubernetes': myk8s,
 }))
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 component, err := NewMyResource(ctx, "...", nil, pulumi.ProviderMap(
@@ -1310,6 +1735,9 @@ component, err := NewMyResource(ctx, "...", nil, pulumi.ProviderMap(
 ))
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var component = new MyResource("...", new ComponentResourceOptions {
     Providers = {
@@ -1318,6 +1746,10 @@ var component = new MyResource("...", new ComponentResourceOptions {
     }
 });
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 If a component is itself a child of another component, its set of providers is inherited from its parent by default.
 
@@ -1348,15 +1780,23 @@ To access the raw value of an output, and transform that value into a new value,
 
 For example, the following creates an HTTPS URL from the DNS name of a virtual machine:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let url = virtualmachine.dnsName.apply(dnsName => "https://" + dnsName);
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let url = virtualmachine.dnsName.apply(dnsName => "https://" + dnsName);
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 url = virtual_machine.dns_name.apply(
@@ -1364,15 +1804,25 @@ url = virtual_machine.dns_name.apply(
 )
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 url := vpc.DnsName.ApplyString(func(dnsName string) string {
     return "https://" + dnsName
 })
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var url = virtualmachine.DnsName.Apply(dnsName => "https://" + dnsName);
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 The result of the call to {{< pulumi-apply >}} is a new {{< pulumi-output >}}. So in this example, the `url` variable itself is also an {{< pulumi-output >}}. It will resolve to the new new value returned from the callback, and carries the dependencies of the original {{< pulumi-output >}}. If the callback itself returns an {{< pulumi-output >}}, the dependencies of that output are also kept in the resulting {{< pulumi-output >}}.
 
@@ -1386,7 +1836,9 @@ The {{< pulumi-all >}} function acts like an {{< pulumi-apply >}} over multiple 
 
 For example, let's take a server and database name, and use them to create a database connection string:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 var pulumi = require("@pulumi/pulumi");
@@ -1395,6 +1847,9 @@ let connectionString = pulumi.all([sqlServer.name, database.name])
     .apply(([server, db]) => `Server=tcp:${server}.database.windows.net;initial catalog=${db}...`);
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 // ...
@@ -1402,12 +1857,18 @@ let connectionString = pulumi.all([sqlServer.name, database.name])
     .apply(([server, db]) => `Server=tcp:${server}.database.windows.net;initial catalog=${db}...`);
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 from pulumi import Output
 # ...
 connection_string = Output.all(sql_server.name, database.name) \
     .apply(lambda args: f"Server=tcp:{args[0]}.database.windows.net;initial catalog={args[1]}...")
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 connectionString := pulumi.All(sqlServer.Name, database.Name).ApplyT(
@@ -1419,12 +1880,19 @@ connectionString := pulumi.All(sqlServer.Name, database.Name).ApplyT(
 )
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 // In .NET 'Output.Tuple' is used so that each unwrapped value will preserve their distinct type.
 // 'Output.All' can be used when all input values have the same type (i.e. all are Output<string>)
 var connectionString = Output.Tuple(sqlServer.name, database.name)
     .Apply(t => `Server=tcp:${t.Item1}.database.windows.net;initial catalog=${t.Item2}...`);
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Notice that {{< pulumi-all >}} works by itself returning an output that represents the combination of multiple outputs, so that within the callback, the raw values are available inside of [a tuple](https://en.wikipedia.org/wiki/Tuple).
 
@@ -1434,7 +1902,9 @@ If you just need to access a property of an {{< pulumi-output >}} value, in orde
 
 For example, if you need to read a domain record from an ACM certificates, that requires drilling into a resource's property value. Because that value is an output, we would normally need to use {{< pulumi-apply >}}:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let certCertificate = new aws.acm.Certificate("cert", {
@@ -1450,6 +1920,9 @@ let certValidation = new aws.route53.Record("cert_validation", {
 ...
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let certCertificate = new aws.acm.Certificate("cert", {
     domainName: "example.com",
@@ -1463,6 +1936,9 @@ let certValidation = new aws.route53.Record("cert_validation", {
     ],
 ...
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 certificate = aws.acm.Certificate('cert',
@@ -1480,17 +1956,29 @@ record = aws.route53.Record('validation',
 ...
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 // Helpers for accessing properties are not yet available in Go.
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 // Helpers for accessing properties are not yet available in .NET.
 ```
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 To ease simple property and array element access, an {{< pulumi-output >}} _lifts_ the properties of the underlying value, behaving very much like an instance of it. This allows you to access properties and elements directly from the {{< pulumi-output >}} itself without needing {{< pulumi-apply >}}. If we return to the above example, we can now simplify it:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let certCertificate = new aws.acm.Certificate("cert", {
@@ -1504,6 +1992,9 @@ let certValidation = new aws.route53.Record("cert_validation", {
 ...
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let certCertificate = new aws.acm.Certificate("cert", {
     domainName: "example.com",
@@ -1515,6 +2006,9 @@ let certValidation = new aws.route53.Record("cert_validation", {
     ],
 ...
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 certificate = aws.acm.Certificate('cert',
@@ -1529,13 +2023,23 @@ record = aws.route53.Record('validation',
 ...
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 // Helpers for accessing properties are not yet available in Go.
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 // Helpers for accessing properties are not yet available in .NET.
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 This approach is easier to read and write, while not losing any important dependency information that is needed to properly create and maintain the stack. This approach doesn't work in all cases, but when it does, it can be a great help.
 
@@ -1571,7 +2075,9 @@ Outputs containing strings cannot be used directly in operations like string con
 
 For example, say you want to create a URL from hostname and port output values:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let hostname = // get some Output
@@ -1581,6 +2087,9 @@ let port = // get some Output
 let url = // ?
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let hostname: Output<string> = // get some Output
 let port: Output<number> = // get some Output
@@ -1588,6 +2097,9 @@ let port: Output<number> = // get some Output
 // Would like to produce a string equivalent to: http://${hostname}:${port}/
 let url = // ?
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 hostname: Output[str] = # get some Output
@@ -1597,12 +2109,18 @@ port: Output[int] = # get some Output
 url = # ?
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 var hostname pulumi.StringOutput
 var port pulumi.NumberOutput
 
 url := // ?
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 Output<string> hostname = // get some Output
@@ -1612,21 +2130,36 @@ Output<int> port = // get some Output
 var url = // ?
 ```
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 It is possible to use [apply](#apply) and [all](#all) to do this, of course:
+
+{{% choosable language javascript %}}
 
 ```javascript
 let url = pulumi.all([hostname, port]).
     apply(([hostname, port]) => `http://${hostname}:${port}/`);
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let url: Output<string> = pulumi.all([hostname, port]).
     apply(([hostname, port]) => `http://${hostname}:${port}/`);
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 url = Output.all(hostname, port).apply(lambda l: f"http://{l[0]}:{l[1]}/")
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 url := pulumi.All(hostname, port).ApplyString(func (args []interface{}) string {
@@ -1634,11 +2167,18 @@ url := pulumi.All(hostname, port).ApplyString(func (args []interface{}) string {
 })
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var url = pulumi.Tuple(hostname, port).Apply(t => `http://{t.Item1}:{t.Item2}/`);
 ```
 
+{{% /choosable %}}
+
 This is verbose and unwieldy, however. To make this common task easier, Pulumi exposes helpers that allow you to create strings that contain outputs---internally hiding all of the messiness required to join them together:
+
+{{% choosable language javascript %}}
 
 ```javascript
 // concat takes a list of args and concatenates all of them into a single output:
@@ -1647,6 +2187,9 @@ const url1 = pulumi.concat("http://", hostname, ":", port, "/");
 const url2 = pulumi.interpolate `http://${hostname}:${port}/`;
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 // concat takes a list of args and concatenates all of them into a single output:
 const url1: Output<string> = pulumi.concat("http://", hostname, ":", port, "/");
@@ -1654,19 +2197,30 @@ const url1: Output<string> = pulumi.concat("http://", hostname, ":", port, "/");
 const url2: Output<string> = pulumi.interpolate `http://${hostname}:${port}/`;
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 # concat takes a list of args and concatenates all of them into a single output:
 url = Output.concat("http://", hostname, ":", port, "/")
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 url := pulumi.Sprintf("http://%s:%d/", hostname, port)
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 // Interpolate takes a JavaScript "template literal" and expands outputs correctly:
 var url = Output.Format($"http://{hostname}:{port}/");
 ```
+
+{{% /choosable %}}
 
 ##### Convert Input to Output {#frominput}
 
@@ -1674,7 +2228,9 @@ It is possible to turn an {{< pulumi-input >}} into an {{< pulumi-output >}} val
 
 For example, this code transforms an {{< pulumi-input >}} into an {{< pulumi-output >}} so that it can use the {{< pulumi-apply >}} function:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 function split(input) {
@@ -1683,6 +2239,9 @@ function split(input) {
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 function split(input: pulumi.Input<string>): pulumi.Output<string[]> {
     let output = pulumi.output(input);
@@ -1690,12 +2249,18 @@ function split(input: pulumi.Input<string>): pulumi.Output<string[]> {
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 def split(input):
     output = Output.from_input(input);
     return output.apply(lambda v: v.split());
 }
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 func split(input pulumi.StringInput) pulumi.StringArrayOutput {
@@ -1705,6 +2270,9 @@ func split(input pulumi.StringInput) pulumi.StringArrayOutput {
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 Output<string[]> Split(Input<string> input)
 {
@@ -1712,6 +2280,10 @@ Output<string[]> Split(Input<string> input)
     return output.Apply(v => v.Split(","));
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ### Secrets {#secrets}
 
@@ -1738,36 +2310,44 @@ As soon as an {{< pulumi-output >}} is marked secret, you can trust that the Pul
 
 There are two ways to programmatically create secret values:
 
-{{< langchoose csharp >}}
-
-<div class="language-prologue-javascript"></div>
-
-* Using [`getSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret" >}}) or [`requireSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret" >}}) when reading a value from config.
-* Calling [`pulumi.secret(value)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#secret" >}}) to construct a secret from an existing value.
-
-<div class="language-prologue-typescript"></div>
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{% choosable language javascript %}}
 
 * Using [`getSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret" >}}) or [`requireSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret" >}}) when reading a value from config.
 * Calling [`pulumi.secret(value)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#secret" >}}) to construct a secret from an existing value.
 
-<div class="language-prologue-python"></div>
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+* Using [`getSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret" >}}) or [`requireSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret" >}}) when reading a value from config.
+* Calling [`pulumi.secret(value)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#secret" >}}) to construct a secret from an existing value.
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 * Using [`get_secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Config.get_secret" >}}) or [`require_secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Config.require_secret" >}}) when reading a value from config.
 * Calling [`Output.secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Output.secret" >}}) to construct a secret from an existing value.
 
-<div class="language-prologue-go"></div>
+{{% /choosable %}}
+{{% choosable language go %}}
 
 * Using `config.GetSecret(key)` or `config.RequireSecret(key)` when reading a value from config.
 * Calling `pulumi.ToSecret(value)` to construct a secret from an existing value.
 
-<div class="language-prologue-csharp"></div>
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 * Using `Config.GetSecret(key)` or `Config.RequireSecret(key)` when reading a value from config.
 * Calling `Output.CreateSecret(value)` to construct a secret from an existing value.
 
+{{% /choosable %}}
+{{< /chooser >}}
+
 To illustrate using these functions, let's create an AWS Parameter Store secure value. To do so, we need to pass an argument to initialize its `value` property. Unfortunately, the obvious thing to do---passing a raw, unencrypted value---will lead to its value also being stored unencrypted in the Pulumi state! Instead, we will ensure that the value is a secret:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 const cfg = new pulumi.Config()
@@ -1777,6 +2357,9 @@ const param = new aws.ssm.Parameter("a-secret-param", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 const cfg = new pulumi.Config()
 const param = new aws.ssm.Parameter("a-secret-param", {
@@ -1785,12 +2368,18 @@ const param = new aws.ssm.Parameter("a-secret-param", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 cfg = pulumi.Config()
 param = ssm.Parameter("a-secret-param",
     type="SecureString",
     value=cfg.require_secret("my-secret-value"))
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 cfg := config.New(ctx, "")
@@ -1803,6 +2392,9 @@ if err != nil {
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var cfg = new Pulumi.Config()
 var param = new Aws.Ssm.Parameter("a-secret-param", new Aws.Ssm.ParameterArgs
@@ -1811,6 +2403,10 @@ var param = new Aws.Ssm.Parameter("a-secret-param", new Aws.Ssm.ParameterArgs
     value = cfg.RequireSecret("my-secret-value"),
 });
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 As written, the `Parameter` resource's `value` property will be encrypted in the state file.
 
@@ -1836,23 +2432,37 @@ A stack may export values as [stack outputs]({{< relref "stack#outputs" >}}). Th
 
 To export values from a stack, use the following definition in the top-level of the entrypoint for your project:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 exports.url = resource.url;
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 export let url = resource.url;
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 pulumi.export("url", resource.url)
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 ctx.Export("url", resource.Url)
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 // The dictionary returned by the function passed to Deployment.Run will be used to provide all the exported values.
@@ -1865,6 +2475,10 @@ static Task Main() =>
     });
 ```
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 From the CLI, you can then use [`pulumi stack output url`]({{< relref "/docs/reference/cli/pulumi_stack_output" >}}) to get the value and incorporate into other scripts or tools.
 
 The right-hand side of a stack export can be a regular value, an [Output](#outputs), or a `Promise` (effectively, the same as an [Input](#outputs)). The actual values are resolved at the end of `pulumi up`.
@@ -1873,22 +2487,33 @@ Stack exports are effectively JSON serialized, though quotes are removed when ex
 
 For example, this program:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 exports.x = "hello"
 exports.o = {num: 42}
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 export let x = "hello";
 export let o = {num: 42};
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 pulumi.export("x", "hello")
 pulumi.export("o", {'num': 42})
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 ctx.Export("x", pulumi.String("hello"))
@@ -1896,6 +2521,9 @@ ctx.Export("o", pulumi.Map(map[string]pulumi.Input{
     "num": pulumi.Int(42),
 }))
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 // The dictionary returned by the function passed to Deployment.Run will be used to provide all the exported values.
@@ -1909,6 +2537,10 @@ static Task Main() =>
         };
     });
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 will lead to the following stack outputs:
 
@@ -1941,7 +2573,9 @@ Stack references allow you to access the [outputs](#stack-outputs) of one stack 
 
 To reference values from another stack, create an instance of the `StackReference` type using the fully qualified name of the stack as an input, and then read exported stack outputs by their name:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 const pulumi = require("@pulumi/pulumi");
@@ -1949,11 +2583,17 @@ const other = new pulumi.StackReference("acmecorp/infra/other");
 const otherOutput = other.getOutput("x");
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 const other = new pulumi.StackReference("acmecorp/infra/other");
 const otherOutput = other.getOutput("x");
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 from pulumi import StackReference
@@ -1961,6 +2601,9 @@ from pulumi import StackReference
 other = StackReference(f"acmecorp/infra/other")
 other_output = other.get_output("x");
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 other, err := pulumi.NewStackReference(ctx, "acmecorp/infra/other", nil)
@@ -1970,11 +2613,18 @@ if err != nil {
 otherOutput := other.GetOutput(pulumi.String("x"))
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 // StackReference is not currently supported in .NET.
 //
 // https://github.com/pulumi/pulumi/issues/3406.
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Stack names must be fully qualified, including the organization, project, and stack name components, in the format `<organization>/<project>/<stack>`. For individual accounts, use your account name for the organization component.
 
@@ -1992,7 +2642,9 @@ Configuration values can be retrieved using either {{< pulumi-config-get >}} or 
 
 In this example, the name is required, and a lucky number is optional:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let config = new pulumi.Config();
@@ -2001,6 +2653,9 @@ let lucky = config.getNumber("lucky") || 42;
 console.log(`Hello, ${name} -- I see your lucky number is ${lucky}!`);
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let config = new pulumi.Config();
 let name = config.require("name");
@@ -2008,12 +2663,18 @@ let lucky = config.getNumber("lucky") || 42;
 console.log(`Hello, ${name} -- I see your lucky number is ${lucky}!`);
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 config = pulumi.Config();
 name = config.require('name');
 lucky = config.get_number('lucky') or 42
 print(f'Hello, {name} -- I see your lucky number is {lucky}!')
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 conf := config.New(ctx, "")
@@ -2025,12 +2686,19 @@ if err != nil {
 fmt.Printf("Hello, %v -- I see your lucky number is %v!", name, lucky)
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var config = new Pulumi.Config();
 var name = config.Require("name");
 var lucky = config.GetInt32("lucky") ?? 42;
 Console.WriteLine($"Hello, {name} -- I see your lucky number is {lucky}!");
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 In this example, we have created an instance of the {{< pulumi-config >}} class, which is a bag of key/value pairs. On that instance, a number of getter functions allow us to read the currently-set values.
 
@@ -2055,13 +2723,18 @@ $ pulumi config set --path data.nums[2] 3
 
 A program can read the `data` config into a rich object with:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let config = new pulumi.Config();
 let data = config.requireObject("data");
 console.log(`Active: ${data.active}`);
 ```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
 
 ```typescript
 interface Data {
@@ -2074,11 +2747,17 @@ let data = config.requireObject<Data>("data");
 console.log(`Active: ${data.active}`);
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 config = pulumi.Config()
 data = config.require_object("data")
 print(f"Active: ${data.active}")
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 type Data struct {
@@ -2097,11 +2776,18 @@ func main() {
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var config = new Pulumi.Config();
 var data = config.RequireObject<JsonElement>("data");
 Console.WriteLine($"Active: {data.GetProperty("active")}");
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ### Providers {#providers}
 
@@ -2127,7 +2813,9 @@ $ pulumi config set aws:region us-west-2
 
 Then deploying the following Pulumi program will create a single EC2 instance in the `us-west-2` region:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let aws = require("@pulumi/aws");
@@ -2138,6 +2826,9 @@ let instance = new aws.ec2.Instance("myInstance", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let aws = require("@pulumi/aws");
 
@@ -2147,11 +2838,17 @@ let instance = new aws.ec2.Instance("myInstance", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 from pulumi_aws import ec2
 
 instance = ec2.Instance("myInstance", instance_type="t2.micro", ami="myAMI")
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 vpc, err := ec2.NewInstance(ctx, "myInstance", &ec2.InstanceArgs{
@@ -2159,6 +2856,9 @@ vpc, err := ec2.NewInstance(ctx, "myInstance", &ec2.InstanceArgs{
     Ami:          pulumi.String("myAMI"),
 })
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using Pulumi.Aws;
@@ -2171,11 +2871,17 @@ var instance = new Aws.Ec2.Instance("myInstance", new Aws.Ec2.InstanceArgs
 });
 ```
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ##### Explicit Provider Configuration
 
 While this works for the majority of Pulumi programs, some programs may have special requirements. For example, it may require the ability to deploy to multiple AWS regions simultaneously, or to deploy to a Kubernetes cluster created earlier in the program that requires explicitly creating, configuring, and referencing providers. This is typically done by instantiating the relevant package's `Provider` type and passing in the options for each {{< pulumi-customresource >}} or {{< pulumi-componentresource >}} that needs to use it. For example, the following configuration and program will create an ACM certificate in the `us-east-1` region and a load balancer listener in the `us-west-2` region.
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let pulumi = require("@pulumi/pulumi");
@@ -2204,6 +2910,9 @@ let listener = new aws.lb.Listener("listener", {
 })
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let pulumi = require("@pulumi/pulumi");
 let aws = require("@pulumi/aws");
@@ -2230,6 +2939,9 @@ let listener = new aws.lb.Listener("listener", {
     },
 });
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 import pulumi
@@ -2256,6 +2968,9 @@ listener = aws.lb.Listener("listener",
         "type": "forward",
     })
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 // Create an AWS provider for the us-east-1 region.
@@ -2294,6 +3009,9 @@ if err != nil {
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 using Pulumi;
 using Pulumi.Aws;
@@ -2331,13 +3049,19 @@ class Program
 }
 ```
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ```bash
 $ pulumi config set aws:region us-west-2
 ```
 
 Component resources also accept a set of providers to use with their child resources. For example, the EC2 instance parented to `myResource` in the program below will be created in `us-east-1`, and the Kubernetes pod parented to `myResource` will be created in the cluster targeted by the "test-ci" context.
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 class MyResource extends pulumi.ComponentResource {
@@ -2352,6 +3076,9 @@ let myk8s = new kubernetes.Provider("myk8s", { context: "test-ci" });
 let myResource = new MyResource("myResource", { providers: { aws: useast1, kubernetes: myk8s } });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 class MyResource extends pulumi.ComponentResource {
     constructor(name, opts) {
@@ -2364,6 +3091,9 @@ let useast1 = new aws.Provider("useast1", { region: "us-east-1" });
 let myk8s = new kubernetes.Provider("myk8s", { context: "test-ci" });
 let myResource = new MyResource("myResource", { providers: { aws: useast1, kubernetes: myk8s } });
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 class MyResource(pulumi.ComponentResource):
@@ -2378,6 +3108,9 @@ my_resource = MyResource("myResource", pulumi.ResourceOptions(providers={
     "kubernetes": myk8s,
 })
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 useast1, err := aws.NewProvider(ctx, "useast1", &aws.ProviderArgs{
@@ -2400,6 +3133,9 @@ if err != nil {
     return err
 }
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using Pulumi;
@@ -2428,6 +3164,10 @@ class Program
 }
 ```
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 #### Dynamic Providers <span class="badge badge-preview">PREVIEW</span> {#dynamicproviders}
 
 Every {{< pulumi-customresource >}} has a provider associated with it which knows how to `create`, `read`, `update`, and `delete` instances of the custom resource in the backing cloud provider. This provider plugin is defined by implementing the Pulumi Resource Provider gRPC interface. Most resources implement this without you needing to know how.
@@ -2443,7 +3183,9 @@ You should consider implementing a dynamic provider if:
 
 Dynamic providers are defined by first implementing the `pulumi.dynamic.ResourceProvider` interface. This interface supports all CRUD operations, but only the create function is required. A minimal implementation might look like this:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 const myProvider = {
@@ -2453,6 +3195,9 @@ const myProvider = {
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 const myProvider: pulumi.dynamic.ResourceProvider = {
     async create(inputs) {
@@ -2460,6 +3205,9 @@ const myProvider: pulumi.dynamic.ResourceProvider = {
     }
 }
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 from pulumi.dynamic import ResourceProvider, CreateResult
@@ -2469,17 +3217,29 @@ class MyProvider(ResourceProvider):
         return CreateResult(id_="foo", outs={})
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 // Dynamic Providers are currently not supported in Go.
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 // Dynamic Providers are currently not supported in .NET.
 ```
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 This resource provider is then used to create a new kind of custom resource by inheriting from the `pulumi.dynamic.Resource` base class which is a subclass of `pulumi.CustomResource`:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 class MyResource extends pulumi.dynamic.Resource {
@@ -2489,6 +3249,9 @@ class MyResource extends pulumi.dynamic.Resource {
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 class MyResource extends pulumi.dynamic.Resource {
     constructor(name: string, props: {}, opts?: pulumi.CustomResourceOptions) {
@@ -2496,6 +3259,9 @@ class MyResource extends pulumi.dynamic.Resource {
     }
 }
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 from pulumi import ResourceOptions
@@ -2507,13 +3273,23 @@ class MyResource(Resource):
          super().__init__(MyProvider(), name, props, opts)
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 // Dynamic Providers are currently not supported in Go.
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 // Dynamic Providers are currently not supported in .NET.
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 We can now create instances of the new `MyResource` resource type in our program with `new MyResource("name", args)`, just like we would any ordinary resource. Pulumi understands how to use our custom provider logic at the right time.
 
@@ -2533,7 +3309,9 @@ The inputs to your `pulumi.dynamic.ResourceProvider`'s functions come from subcl
 
 For example, `props` in this code ends up becoming the inputs to the resource provider functions:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 class MyResource extends pulumi.dynamic.Resource {
@@ -2542,6 +3320,9 @@ class MyResource extends pulumi.dynamic.Resource {
     }
 }
 ```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
 
 ```typescript
 interface MyResourceInputs {
@@ -2556,6 +3337,9 @@ class MyResource extends pulumi.dynamic.Resource {
     }
 }
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 from pulumi import Input, ResourceOptions
@@ -2574,13 +3358,23 @@ class MyResource(Resource):
          super().__init__(MyProvider(), name, {**vars(props)}, opts)
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 // Dynamic Providers are currently not supported in Go.
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 // Dynamic Providers are currently not supported in .NET.
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ##### Resource Provider Interface
 
@@ -2588,7 +3382,9 @@ Implementing the `pulumi.dynamic.ResourceProvider` interface requires implementi
 
 Though the input properties passed to a `pulumi.dynamic.Resource` instance will usually be [`Input` values](#outputs) the dynamic provider's functions are invoked with the fully resolved input values in order to compose well with Pulumi resources. Strong typing for the inputs to your provider's functions can help clarify this. You can achieve this by creating a second interface with the same properties as your resource's inputs, but with fully unwrapped types.
 
-{{< langchoose csharp >}}
+{{< chooser language "typescript,python,go,csharp" >}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 // Exported type.
@@ -2623,6 +3419,9 @@ class MyResource extends pulumi.dynamic.Resource {
     }
 }
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 from pulumi import Input, Output, ResourceOptions
@@ -2663,13 +3462,22 @@ class MyResource(Resource):
         super().__init__(MyResourceProvider(), name, {**vars(props)}, opts)
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 // Dynamic Providers are currently not supported in Go.
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 // Dynamic Providers are currently not supported in .NET.
 ```
+
+{{% /choosable %}}
+{{< /chooser >}}
 
 ###### `check(olds, news)`
 
@@ -2711,7 +3519,16 @@ If you need to access the outputs of your custom resource outside it with strong
 
 > **Note:** The name of the class member must match the names of the output properties as returned by the `create` function.
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+JavaScript does not support types.
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
 
 ```typescript
 ...
@@ -2739,9 +3556,8 @@ export class MyResource extends pulumi.dynamic.Resource {
 }
 ```
 
-```javascript
-JavaScript does not support types.
-```
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 from pulumi import ResourceOptions, Input, Output
@@ -2763,13 +3579,23 @@ class MyResource(Resource):
          super().__init__(MyProvider(), name, { 'my_string_output': None, 'my_number_output': None, **vars(props) }, opts)
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 // Dynamic Providers are not yet supported in Go.
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 // Dynamic Providers are currently not supported in .NET.
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ##### Dynamic Provider Examples
 
@@ -2779,7 +3605,9 @@ This example generates a random number using a dynamic provider. It highlights u
 
 Implementing this example requires that we have a provider and resource type:
 
-{{< langchoose >}}
+{{< chooser language "javascript,typescript,python,go" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let pulumi = require("@pulumi/pulumi");
@@ -2800,6 +3628,9 @@ class Random extends pulumi.dynamic.Resource {
 exports.Random = Random;
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as crypto from "crypto";
@@ -2817,6 +3648,9 @@ export class Random extends pulumi.dynamic.Resource {
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 from pulumi import ResourceOptions
 from pulumi.dynamic import Resource, ResourceProvider, CreateResult
@@ -2833,9 +3667,16 @@ class Random(Resource):
          super().__init__(RandomProvider(), name, {}, opts)
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 // Dynamic Providers are currently not supported in Go.
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Now, with this, we can construct new `Random` resource instances, and Pulumi will drive the right calls at the right time.
 
@@ -2843,7 +3684,9 @@ Now, with this, we can construct new `Random` resource instances, and Pulumi wil
 
 This example highlights making REST API calls to some backing provider---the GitHub API in this case---to perform CRUD operations. Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and make calls to it local to each function.
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let pulumi = require("@pulumi/pulumi");
@@ -2878,6 +3721,9 @@ class Label extends pulumi.dynamic.Resource {
 
 exports.Label = Label;
 ```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -2926,6 +3772,9 @@ export class Label extends pulumi.dynamic.Resource {
     }
 }
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 from pulumi import ComponentResource, export, Input, Output
@@ -2981,13 +3830,23 @@ export("label_color", label.color)
 export("label_url", label.url)
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 // Dynamic Providers are not currently supported in Go.
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 // Dynamic Providers are currently not supported in .NET.
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 #### Additional Examples
 
@@ -3010,38 +3869,58 @@ The Pulumi SDK library also offers a number of helper functions.
 
 The {{< pulumi-getproject >}} and {{< pulumi-getstack >}} functions give you the currently deploying project and stack, respectively. This can be useful for naming or tagging resources.
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let project = pulumi.getProject();
 let stack = pulumi.getStack();
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let project = pulumi.getProject();
 let stack = pulumi.getStack();
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 project = pulumi.get_project()
 stack = pulumi.get_stack()
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 project := ctx.Project()
 stack := ctx.Stack()
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 var project = Deployment.Instance.ProjectName
 var stack = Deployment.Instance.StackName
 ```
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 #### Logging
 
 The {{< pulumi-log >}} collection of functions allows you to log diagnostics, warnings, or errors with the Pulumi engine. These will be displayed alongside all other Pulumi output in the CLI and in the Pulumi Console. They will also be logged and kept for historical purposes if you ever want to use them to audit or diagnose what has transpired.
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 pulumi.log.info("message")
@@ -3051,6 +3930,9 @@ pulumi.log.warn("warning")
 pulumi.log.error("fatal error")
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 pulumi.log.info("message")
 pulumi.log.info("message", resource)
@@ -3058,6 +3940,9 @@ pulumi.log.debug("hidden by default")
 pulumi.log.warn("warning")
 pulumi.log.error("fatal error")
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 log.info("message")
@@ -3066,6 +3951,9 @@ log.debug("hidden by default")
 log.warn("warning")
 log.error("fatal error")
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 // Optional arguments for logging.
@@ -3082,20 +3970,28 @@ ctx.Log.Warn("warning", nil)
 ctx.Log.Error("fatal error", nil)
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 Pulumi.Log.Info("message");
 Pulumi.Log.Info("message", resource);
 Pulumi.Log.Debug("hidden by default");
 Pulumi.Log.Warn("warning");
 Pulumi.Log.Error("fatal error");
-
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 #### Serializing Lambdas <span class="badge">NODE.JS ONLY</span> {#runtime}
 
 You can create libraries and components that allow the caller to pass in JavaScript callbacks to invoke at runtime. For example, you can create an AWS Lambda function or an Azure Function by providing a JavaScript callback to be used as its implementation.
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let bucket = new aws.s3.Bucket("mybucket");
@@ -3105,6 +4001,9 @@ bucket.onObjectCreated("onObject", async (ev) => {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 let bucket = new aws.s3.Bucket("mybucket");
 bucket.onObjectCreated("onObject", async (ev: aws.s3.BucketEvent) => {
@@ -3113,11 +4012,17 @@ bucket.onObjectCreated("onObject", async (ev: aws.s3.BucketEvent) => {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 # Runtime code provided via callbacks are currently not supported in Python.
 #
 # See https://github.com/pulumi/pulumi/issues/1535.
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 // Runtime code provided via callbacks are currently not supported in Go.
@@ -3125,11 +4030,18 @@ bucket.onObjectCreated("onObject", async (ev: aws.s3.BucketEvent) => {
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 // Runtime code provided via callbacks are currently not supported in .NET.
 //
 // See https://github.com/pulumi/pulumi/issues/3406.
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Libraries which use JavaScript callbacks as inputs to be provided as source text to resource construction---like the Lambda that is created by the `onObjectCreated` function in the previous example---are built on top of the [pulumi.runtime.serializeFunction]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/runtime#serializeFunction" >}}) API, which takes a JavaScript `Function` object as input, and returns a `Promise` containing the serialized form of that function.
 

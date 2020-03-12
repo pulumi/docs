@@ -1,19 +1,46 @@
 pulumi-chooser {
 
-    ul {
-        @apply flex;
+    > ul {
+        @apply m-0 flex;
+
         padding: 0 !important;
         list-style-type: none !important;
 
         li {
-            @apply uppercase text-xs;
+            @apply uppercase text-xs p-0 m-0 border-b-2 border-transparent;
+
+            @screen md {
+                @apply text-sm;
+            }
 
             &.active {
-                @apply bg-gray-200;
+                @apply border-purple-800;
+
+                a {
+                    @apply text-purple-800;
+                }
             }
 
             a {
-                @apply inline-block cursor-pointer py-4 px-8;
+                @apply inline-block text-gray-800 cursor-pointer py-2 px-2;
+
+                span {
+                    @apply hidden;
+                }
+
+                @screen md {
+                    @apply py-4 px-6;
+                }
+
+                @screen xl {
+                    span {
+                        @apply inline;
+                    }
+                }
+
+                &:hover {
+                    @apply text-gray-800;
+                }
             }
 
             span {

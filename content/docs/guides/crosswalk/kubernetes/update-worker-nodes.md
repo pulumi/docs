@@ -9,7 +9,7 @@ menu:
     weight: 10
 ---
 
-{{< cloudchoose >}}
+{{< chooser cloud "aws,azure,gcp" >}}
 
 Updating the worker nodes is a multi-step process that includes proper management
 of the nodes themselves, and the apps running on the them. Kubernetes is best
@@ -22,29 +22,23 @@ properly terminate, and should leverage capabilities such as [Node selectors][k8
 [affinity][k8s-affinity], and [probes][k8s-probes] to guarantee expected
 scheduling, and readiness during updates.
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
-The full code for this stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
-{{% /md %}}
-</div>
+{{% choosable cloud aws %}}
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
-The full code for this stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/03-cluster-configuration
-{{% /md %}}
-</div>
+The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration).
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
-The full code for this stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration
-{{% /md %}}
-</div>
+{{% /choosable %}}
+
+{{% choosable cloud azure %}}
+
+The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/azure/03-cluster-configuration).
+
+{{% /choosable %}}
+
+{{% choosable cloud gcp %}}
+
+The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration).
+
+{{% /choosable %}}
 
 ## Overview
 
@@ -55,9 +49,7 @@ We'll examine how to:
 
 ### Update an Existing Node Group
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 Updating an existing node group can be trivial for basic property changes.
 
@@ -77,12 +69,10 @@ See the [official AWS docs][aws-update-ng] for more details.
 
 [k8s-version-skew]: https://kubernetes.io/docs/setup/release/version-skew-policy/#supported-version-skew
 [aws-update-ng]: https://docs.aws.amazon.com/eks/latest/userguide/update-stack.html
-{{% /md %}}
-</div>
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable cloud azure %}}
 
 Updating an existing node group can be trivial for basic property changes.
 
@@ -103,12 +93,10 @@ See the official AKS [docs][aks-upgrade-docs] for more details.
 [aks-scaledown]: https://github.com/Azure/AKS/issues/1050
 [k8s-version-skew]: https://kubernetes.io/docs/setup/release/version-skew-policy/#supported-version-skew
 [aks-upgrade-docs]: https://docs.microsoft.com/en-us/azure/aks/upgrade-cluster
-{{% /md %}}
-</div>
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable cloud gcp %}}
 
 By default, GKE clusters and node pools have their versions upgraded automatically.
 
@@ -131,8 +119,8 @@ See the official GKE [docs][gke-upgrade-docs], and [cluster autoscaler docs][gke
 [k8s-version-skew]: https://kubernetes.io/docs/setup/release/version-skew-policy/#supported-version-skew
 [gke-upgrade-docs]: https://cloud.google.com/kubernetes-engine/docs/how-to/upgrading-a-cluster
 [gke-autoscaler]: https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler
-{{% /md %}}
-</div>
+
+{{% /choosable %}}
 
 ### Migrate to a New Node Group
 

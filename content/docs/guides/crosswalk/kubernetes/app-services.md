@@ -9,16 +9,14 @@ menu:
     weight: 8
 ---
 
-{{< cloudchoose >}}
+{{< chooser cloud "aws,azure,gcp" >}}
 
 App services are general services scoped at the Kubernetes application level.
 These services tend to include datastores, and managers for ingress, DNS, and TLS.
 They can be shared amongst several apps or be specific to workloads, and are
 usually a mix of cloud provider and custom services.
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 The full code for the AWS app services stack is on [GitHub][gh-repo-stack].
 
@@ -26,12 +24,9 @@ The full code for the AWS app services stack is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/05-app-services
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud azure %}}
 
 The full code for the Azure app services stack is on [GitHub][gh-repo-stack].
 
@@ -39,12 +34,9 @@ The full code for the Azure app services stack is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/05-app-services
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud gcp %}}
 
 The full code for the GCP app services stack is on [GitHub][gh-repo-stack].
 
@@ -52,8 +44,9 @@ The full code for the GCP app services stack is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/05-app-services
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 The full code for the general app services is on [GitHub][gh-repo-stack].
 
@@ -70,9 +63,9 @@ We'll explore how to setup:
 
 ## Prerequisites
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{< chooser cloud "aws,azure,gcp" >}}
+
+{{% choosable cloud aws %}}
 
 Authenticate as the `admins` role from the [Identity][aws-admin-identity-stack] stack.
 
@@ -82,11 +75,11 @@ $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
 
 [aws-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-admins" >}}
-{{% /md %}}
-</div>
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+
+{{% /choosable %}}
+
+{{% choosable cloud azure %}}
+
 Authenticate as the ServicePrincipal from the [Identity][azure-identity-stack] stack.
 
 ```bash
@@ -95,11 +88,10 @@ $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
 
 [azure-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#prerequisites" >}}
-{{% /md %}}
-</div>
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable cloud gcp %}}
+
 Authenticate as the `admins` ServiceAccount from the [Identity][gcp-admin-identity-stack] stack.
 
 ```bash
@@ -108,8 +100,10 @@ $ export KUBECONFIG=`pwd`/kubeconfig.json
 ```
 
 [gcp-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-admins" >}}
-{{% /md %}}
-</div>
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Datastores
 
@@ -117,9 +111,7 @@ Apps may want to persist data to databases or in-memory datastores. Often
 times these services are provisioned directly with the cloud provider to simplify
 running and managing their lifecycles.
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 ### Postgres Database
 
@@ -209,12 +201,9 @@ const cacheConn = new k8s.core.v1.ConfigMap("postgres-db-conn",
 [aws-rds]: https://aws.amazon.com/rds/
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud azure %}}
 
 ### MongoDB
 
@@ -267,12 +256,9 @@ const mongoConnStrings = new k8s.core.v1.Secret(
 [k8s-secret]: https://kubernetes.io/docs/concepts/configuration/secret/
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud gcp %}}
 
 ### Postgres Database
 
@@ -366,8 +352,7 @@ const cacheConn = new k8s.core.v1.ConfigMap(
 [gcp-cloudsql]: https://cloud.google.com/sql/
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
 ## General App Services
 
@@ -386,11 +371,9 @@ between external clients, and the servers in the cluster's apps.
 
 #### Install NGINX
 
-{{< k8s-language nokx >}}
+{{< chooser k8s-language "typescript,yaml" >}}
 
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language yaml %}}
 
 Deploy the [example YAML manifests][nginx-yaml] into the `ingress-nginx` namespace, and publicly expose it to the
 Internet using a [load balanced Service][k8s-lb-svc].
@@ -415,12 +398,9 @@ nginx-ingress-controller-7dcc95dfbf-k99k6   1/1     Running   0          21s
 [k8s-lb-svc]: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language typescript %}}
 
 Deploy the [Helm chart][nginx-helm] into the `app-svcs` namespace created in [Configure
 Cluster Defaults][crosswalk-k8s-defaults], and publicly expose it to the
@@ -459,8 +439,9 @@ const nginx = new k8s.helm.v2.Chart("nginx",
 [crosswalk-k8s-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults#namespaces" >}}
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 #### Deploy a Workload
 
@@ -477,11 +458,9 @@ endpoint provisioned for NGINX's service.
 Traffic is then routed to the app by inspecting the host headers and paths
 expected by NGINX onto the service that the kuard Pod runs.
 
-{{< k8s-language nokx >}}
+{{< chooser k8s-language "typescript,yaml" >}}
 
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language yaml %}}
 
 ```bash
 $ kubectl run --generator=run-pod/v1 kuard --namespace=`pulumi stack output appsNamespaceName` --image=gcr.io/kuar-demo/kuard-amd64:blue --port=8080 --expose
@@ -520,12 +499,9 @@ be set to the NGINX LoadBalancer Service address.
 $ kubectl describe ingress kuard --namespace=`pulumi stack output appsNamespaceName`
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language typescript %}}
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -610,8 +586,9 @@ be set to the NGINX LoadBalancer Service address.
 $ kubectl describe ingress kuard-<POD_SUFFIX> --namespace=`pulumi stack output appsNamespaceName`
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Use the NGINX LoadBalancer Service address to access kuard on its expected
 hosts & paths. We simulate the headers using `curl`.
@@ -622,11 +599,10 @@ $ curl -Lv -H 'Host: apps.example.com' <INGRESS_ADDRESS>
 
 #### Clean Up
 
-{{< k8s-language nokx >}}
+{{< chooser k8s-language "typescript,yaml" >}}
 
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language yaml %}}
+
 Delete the pod, service, and ingress controller.
 
 ```bash
@@ -634,15 +610,15 @@ $ kubectl delete pod/kuard svc/kuard ingress/kuard
 $ kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud-generic.yaml
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language typescript %}}
+
 Delete the nginx definition in the Pulumi program, and run a Pulumi update.
-{{% /md %}}
-</div>
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 <!-- markdownlint-disable url -->
 [k8s-kuard]: https://github.com/kubernetes-up-and-running/kuard

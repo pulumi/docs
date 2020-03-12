@@ -29,15 +29,22 @@ Use the navigation below to see detailed documentation, including sample code, f
 > anything, please consult the source [`terraform-providers/terraform-provider-aws` repo](https://github.com/terraform-providers/terraform-provider-aws/issues).
 
 
-{{< langchoose nodeonly >}}
+{{< chooser language "javascript,typescript" >}}
+{{% choosable language javascript %}}
 
 ```javascript
 var aws = require("@pulumi/aws");
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as aws from "@pulumi/aws";
 ```
+
+{{% /choosable %}}
+{{% /chooser %}}
 
 
 <h3>Modules</h3>

@@ -11,19 +11,21 @@ In this tutorial, we will show you how to use JavaScript or Python to deploy a s
 
 {{< multilang-tutorial-prereqs >}}
 
-{{< langchoose nogo csharp >}}
+{{< chooser language "javascript,typescript,python,csharp" >}}
 
-{{% lang nodejs %}}
+{{% choosable language "javascript,typescript" %}}
 {{< install-node >}}
-{{< /lang >}}
+{{% /choosable %}}
 
-{{% lang python %}}
+{{% choosable language python %}}
 {{< install-python >}}
-{{< /lang >}}
+{{% /choosable %}}
 
-{{% lang dotnet %}}
+{{% choosable language "csharp,fsharp,visualbasic" %}}
 {{< install-dotnet >}}
-{{< /lang >}}
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Deploy the App
 
@@ -31,41 +33,48 @@ In this tutorial, we will show you how to use JavaScript or Python to deploy a s
 
 Create a project directory, `webserver`, and change into it. Run [`pulumi new aws-<language> --name myproject`]({{< relref "/docs/reference/cli/pulumi_new" >}}) to create a new project using the AWS template for your chosen language. Replace `myproject` with your desired project name.
 
-{{< langchoose nogo csharp >}}
+{{< chooser language "javascript,typescript,python,csharp" / >}}
 
-<div class="language-prologue-javascript"></div>
+{{% choosable language javascript %}}
 
 ```bash
 $ mkdir webserver && cd webserver
 $ pulumi new aws-javascript --name myproject
 ```
 
-<div class="language-prologue-typescript"></div>
+{{% /choosable %}}
+{{% choosable language typescript %}}
 
 ```bash
 $ mkdir webserver && cd webserver
 $ pulumi new aws-typescript --name myproject
 ```
 
-<div class="language-prologue-python"></div>
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```bash
 $ mkdir webserver && cd webserver
 $ pulumi new aws-python --name myproject
 ```
 
-<div class="language-prologue-csharp"></div>
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```bash
 $ mkdir webserver && cd webserver
 $ pulumi new aws-csharp --name myproject
 ```
 
+{{% /choosable %}}
+
 ### Step 2: Create an EC2 instance with SSH access
 
 Open {{< langfile >}} and replace the contents with the following:
 
-{{< langchoose nogo csharp >}}
+{{< chooser language "javascript,typescript,python,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 const aws = require("@pulumi/aws");
@@ -96,6 +105,9 @@ exports.publicIp = server.publicIp;
 exports.publicHostName = server.publicDns;
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as aws from "@pulumi/aws";
 
@@ -125,6 +137,9 @@ export const publicIp = server.publicIp;
 export const publicHostName = server.publicDns;
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -148,6 +163,9 @@ server = aws.ec2.Instance('webserver-www',
 pulumi.export('publicIp', server.public_ip)
 pulumi.export('publicHostName', server.public_dns)
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -204,6 +222,8 @@ class Program
         });
 }
 ```
+
+{{% /choosable %}}
 
 > **Note:** The example configuration is designed to work on most EC2 accounts, with access to a default VPC. For EC2 Classic users, please use t1.micro for `size`.
 
@@ -293,7 +313,9 @@ Pulumi program to define the new state you want your infrastructure to be in, an
 Replace the creation of the two resources with the following code. This exposes an additional port, `80`, and adds a startup
 script to run a simple HTTP server at startup.
 
-{{< langchoose nogo csharp >}}
+{{< chooser language "javascript,typescript,python,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 ...
@@ -321,6 +343,9 @@ let server = new aws.ec2.Instance("web-server-www", {
 ...
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 ...
 
@@ -346,6 +371,9 @@ const server = new aws.ec2.Instance("webserver-www", {
 
 ...
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 ...
@@ -373,6 +401,9 @@ server = ec2.Instance('webserver-www',
 
 ...
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 //...
@@ -411,6 +442,10 @@ var server = new Aws.Ec2.Instance("webserver-www", new Aws.Ec2.InstanceArgs
     UserData = userData,             // <-- ADD THIS LINE
 });
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 > Note that the `userData` script is defined inline in a string. In this example, `index.html` will be created in the root directory `/`. Because you are using a programming language to write your Pulumi program, you could also read this from a file, construct this string programmatically, or even build up a string that depends on other resources
 defined in your program.  You'll see in later sections how to deploy and version the application code of your

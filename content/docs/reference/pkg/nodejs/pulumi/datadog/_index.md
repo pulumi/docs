@@ -16,15 +16,22 @@ git_sha: "9793a4744e5adeec4e5984b9fe55556f2f2cd3c4"
 > please consult the source [`terraform-providers/terraform-provider-datadog` repo](https://github.com/terraform-providers/terraform-provider-datadog/issues).
 
 
-{{< langchoose nodeonly >}}
+{{< chooser language "javascript,typescript" >}}
+{{% choosable language javascript %}}
 
 ```javascript
 var datadog = require("@pulumi/datadog");
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as datadog from "@pulumi/datadog";
 ```
+
+{{% /choosable %}}
+{{% /chooser %}}
 
 
 <h3>Modules</h3>

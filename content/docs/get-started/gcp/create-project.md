@@ -14,30 +14,33 @@ aliases: ["/docs/quickstart/gcp/create-project/"]
 
 Let's get started with a new project in a new directory.
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
-<div class="language-prologue-javascript"></div>
+{{% choosable language javascript %}}
 
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new gcp-javascript
 ```
 
-<div class="language-prologue-typescript"></div>
+{{% /choosable %}}
+{{% choosable language typescript %}}
 
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new gcp-typescript
 ```
 
-<div class="language-prologue-python"></div>
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new gcp-python
 ```
 
-<div class="language-prologue-go"></div>
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```bash
 # install the pulumi gcp plugin
@@ -48,12 +51,15 @@ $ mkdir quickstart && cd quickstart
 $ pulumi new gcp-go
 ```
 
-<div class="language-prologue-csharp"></div>
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new gcp-csharp
 ```
+
+{{% /choosable %}}
 
 {{< cli-note >}}
 
@@ -88,21 +94,21 @@ Next, you will be prompted for some configuration values for the stack.
 
 For GCP projects you will be prompted for the Google Cloud project to deploy into.
 
-{{% lang nodejs %}}
+{{% choosable language "javascript,typescript" %}}
 After some dependency installations from `npm`, the project and stack will be ready.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang python %}}
+{{% choosable language python %}}
 After the command completes, the project and stack will be ready.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 After the command completes, the project and stack will be ready.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang dotnet %}}
+{{% choosable language "csharp,fsharp,visualbasic" %}}
 After the command completes, the project and stack will be ready.
-{{% /lang %}}
+{{% /choosable %}}
 
 Next, we'll review the generated project files.
 
