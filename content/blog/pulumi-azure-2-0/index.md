@@ -1,12 +1,14 @@
 ---
 title: "Announcing Pulumi Azure Provider 2.0"
-authors: ["mikhail-shilkov"]
-tags: ["Azure"]
-date: "2020-03-11"
+date: 2020-03-12
 meta_desc: "Announcing the 2.0 release of Pulumi Azure provider and what's new in it."
+authors:
+    - mikhail-shilkov
+tags:
+    - Azure
 ---
 
-We are happy to announce the release of a new major version of Pulumi Azure provider. Pulumi Azure 2.0 is based on the [2.0 release](https://www.terraform.io/docs/providers/azurerm/guides/2.0-upgrade-guide.html) of the upstream provider and brings several improvements and breaking changes.
+We are happy to announce the release of a new major version of the Pulumi Azure provider. Pulumi Azure 2.0 is based on the [2.0 release](https://www.terraform.io/docs/providers/azurerm/guides/2.0-upgrade-guide.html) of the upstream provider and brings several improvements and breaking changes.
 
 <!--more-->
 
@@ -90,11 +92,11 @@ const vm = new azure.compute.LinuxVirtualMachine("server-vm", {
 
 Azure Active Directory has its [own Pulumi provider](https://github.com/pulumi/pulumi-azuread/), so all the AD resources were now removed from the `AD` namespace of the Azure provider 2.0.
 
-A bunch of other resources, invokes, and fields were removed too, following the changes in the upstream provider. You can see the full list in [this upgrade guide](https://www.terraform.io/docs/providers/azurerm/guides/2.0-upgrade-guide.html).
+A number of other resources, invokes, and fields were removed too, following the changes in the upstream provider. You can see the full list in [this upgrade guide](https://www.terraform.io/docs/providers/azurerm/guides/2.0-upgrade-guide.html).
 
 ## Default Versions in Callback Functions
 
-[Serverless as Callbacks](https://www.pulumi.com/blog/serverless-as-simple-callbacks-with-pulumi-and-azure-functions/) running on Azure Functions have bumped the default version of Azure Functions runtime to `~3` and `Node.js` to `~12`. As always, you can override the default to set the versions that you require.
+[Serverless as Callbacks](https://www.pulumi.com/blog/serverless-as-simple-callbacks-with-pulumi-and-azure-functions/) running on Azure Functions have bumped the default version of the Azure Functions runtime to `~3` and `Node.js` to `~12`. As always, you can override the default to set the versions that you require.
 
 Callback Functions also moved from `ZipBlob` to `Blob` deploy as described above, so expect another replacement operation while upgrading.
 
@@ -102,7 +104,7 @@ Callback Functions also moved from `ZipBlob` to `Blob` deploy as described above
 
 Some types of resources take longer to create than others. For instance, provisioning a new Cosmos DB account may take from 10 minutes to over an hour depending on the number of geo locations and other factors.
 
-If you find that creation of a target resource times out, you can override the default timeout using resource options:
+If the creation of a target resource times out, you can override the default timeout using resource options:
 
 ``` ts
 const cosmosdbAccount = new azure.cosmosdb.Account("cosmosdb", {
@@ -124,26 +126,34 @@ You shouldn't need this ability often, but it can be a lifesaver when you do.
 
 To get started with Azure provider 2.0, update the versions in your package manager:
 
-```
-// Node.js: package.json
+{{< langchoose csharp >}}
+
+```typescript
+// package.json
 "@pulumi/azure": "^2.0.0",
+```
 
-// .NET: csproj/fsproj/vbproj
-<PackageReference Include="Pulumi.Azure" Version="2.0.0-preview" />
+```csharp
+// csproj/fsproj/vbproj
+<PackageReference Include="Pulumi.Azure" Version="2.1.0-preview" />
+```
 
-// Python: requirements.txt
+```python
+# requirements.txt
 pulumi-azure>=2.0.0
+```
 
-// Go: Gopkg.toml
+```go
+// Gopkg.toml
 [constraint]]
   version = "v2.0.0"
   name = "github.com/pulumi/pulumi-azure"
 ```
 
-There are quite a few breaking changes, so you may need to adjust your code before you would be able to run the program successfully again.
+There are quite a few breaking changes, so you may need to adjust your code before you can run the program successfully again. Check [the upgrade guide](https://www.terraform.io/docs/providers/azurerm/guides/2.0-upgrade-guide.html) for details.
 
 To help with this process, we upgraded all our Azure [templates](https://github.com/pulumi/templates/) and [examples](https://github.com/pulumi/examples/) to 2.0.
 
-If you want to stick with 1.x version for a while, please pin your version to `^1.0.0` or `1.14.0` in the package manager.
+If you want to stay with the 1.x version, please pin your version to `^1.0.0` or `1.14.0` in the package manager.
 
-If you still have an issue or a question, reach out to us on [Pulumi Community Slack](https://slack.pulumi.com/), and we'll help you through migration.
+If you have issues or questions, reach out to us on [Pulumi Community Slack](https://slack.pulumi.com/), and we'll help you through migration.
