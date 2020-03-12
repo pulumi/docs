@@ -20,14 +20,14 @@ for PROVIDER in "aws" ; do \
     make provider && make tfgen && make install_plugins
 
     echo "Running ${TFGEN} to generate provider schema..."
-    ${TFGEN} schema --out ${ABSOLUTEPACKDIR}/${PROVIDER}/schema.json || exit 3
+    ${TFGEN} schema --out ${ABSOLUTEPACKDIR}/${PROVIDER}/schema || exit 3
 
     popd
 
     echo "Running docs generator from schema..."
-    ${TOOL_APIDOCGEN} ${ABSOLUTEPACKDIR}/${PROVIDER} ${ABSOLUTEPACKDIR}/${PROVIDER}/schema.json || exit 3
+    ${TOOL_APIDOCGEN} ${ABSOLUTEPACKDIR}/${PROVIDER} ${ABSOLUTEPACKDIR}/${PROVIDER}/schema/schema.json || exit 3
 
-    rm ${ABSOLUTEPACKDIR}/${PROVIDER}/schema.json
+    rm -rf ${ABSOLUTEPACKDIR}/${PROVIDER}/schema
 
     echo "Done generating resource docs for ${PROVIDER}\n"
 done
