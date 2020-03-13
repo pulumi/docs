@@ -3068,11 +3068,18 @@ log.error("fatal error")
 ```
 
 ```go
-ctx.Log.Info("message", nil, 0, false)
-ctx.Log.Info("message", resource, 0, false)
-ctx.Log.Debug("hidden by default", nil, 0, false)
-ctx.Log.Warn("warning", nil, 0, false)
-ctx.Log.Error("fatal error", nil, 0, false)
+// Optional arguments for logging.
+args := &pulumi.LogArgs{
+    Resource: resource,
+    StreamID: 0,
+    Ephemeral: false,
+}
+
+ctx.Log.Info("message", nil)
+ctx.Log.Info("message", args)
+ctx.Log.Debug("hidden by default", nil)
+ctx.Log.Warn("warning", nil)
+ctx.Log.Error("fatal error", nil)
 ```
 
 ```csharp
