@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.redis"></span><dl class="class">
 <dt id="pulumi_azure.redis.AwaitableGetCacheResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.redis.</code><code class="sig-name descname">AwaitableGetCacheResult</code><span class="sig-paren">(</span><em class="sig-param">capacity=None</em>, <em class="sig-param">enable_non_ssl_port=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">minimum_tls_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">patch_schedules=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">private_static_ip_address=None</em>, <em class="sig-param">redis_configurations=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">shard_count=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">ssl_port=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.AwaitableGetCacheResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.redis.</code><code class="sig-name descname">AwaitableGetCacheResult</code><span class="sig-paren">(</span><em class="sig-param">capacity=None</em>, <em class="sig-param">enable_non_ssl_port=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">minimum_tls_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">patch_schedules=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">private_static_ip_address=None</em>, <em class="sig-param">redis_configurations=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">shard_count=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">ssl_port=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.AwaitableGetCacheResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -79,6 +79,9 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><a class="reference external" href="https://azure.microsoft.com/en-us/documentation/articles/cache-configure/#advanced-settings">Azure Redis Cache: SKU specific configuration limitations</a></p></li>
 <li><p><a class="reference external" href="http://redis.io/topics/config">Redis: Available Configuration Settings</a></p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/redis_cache.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/redis_cache.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -126,9 +129,6 @@ create the Redis instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rdbBackupMaxSnapshotCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rdbStorageConnectionString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/redis_cache.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/redis_cache.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.redis.Cache.capacity">
 <code class="sig-name descname">capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.Cache.capacity" title="Permalink to this definition">¶</a></dt>
@@ -195,6 +195,12 @@ new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.redis.Cache.primary_connection_string">
+<code class="sig-name descname">primary_connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.Cache.primary_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primary connection string of the Redis Instance.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.redis.Cache.private_static_ip_address">
 <code class="sig-name descname">private_static_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.Cache.private_static_ip_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Static IP Address to assign to the Redis Cache when hosted inside the Virtual Network. Changing this forces a new resource to be created.</p>
@@ -236,6 +242,12 @@ create the Redis instance.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.redis.Cache.secondary_connection_string">
+<code class="sig-name descname">secondary_connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.Cache.secondary_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secondary connection string of the Redis Instance.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.redis.Cache.shard_count">
 <code class="sig-name descname">shard_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.Cache.shard_count" title="Permalink to this definition">¶</a></dt>
 <dd><p><em>Only available when using the Premium SKU</em> The number of Shards to create on the Redis Cluster.</p>
@@ -273,7 +285,7 @@ create the Redis instance.</p>
 
 <dl class="method">
 <dt id="pulumi_azure.redis.Cache.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">enable_non_ssl_port=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">minimum_tls_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">patch_schedules=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">private_static_ip_address=None</em>, <em class="sig-param">redis_configuration=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">shard_count=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">ssl_port=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.Cache.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">enable_non_ssl_port=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">minimum_tls_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">patch_schedules=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">private_static_ip_address=None</em>, <em class="sig-param">redis_configuration=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">shard_count=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">ssl_port=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.Cache.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cache resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -293,11 +305,13 @@ new resource to be created.</p></li>
 <li><p><strong>patch_schedules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of <code class="docutils literal notranslate"><span class="pre">patch_schedule</span></code> blocks as defined below - only available for Premium SKU’s.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The non-SSL Port of the Redis Instance</p></li>
 <li><p><strong>primary_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Primary Access Key for the Redis Instance</p></li>
+<li><p><strong>primary_connection_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The primary connection string of the Redis Instance.</p></li>
 <li><p><strong>private_static_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Static IP Address to assign to the Redis Cache when hosted inside the Virtual Network. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>redis_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">redis_configuration</span></code> as defined below - with some limitations by SKU - defaults/details are shown below.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the Redis instance.</p></li>
 <li><p><strong>secondary_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Secondary Access Key for the Redis Instance</p></li>
+<li><p><strong>secondary_connection_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secondary connection string of the Redis Instance.</p></li>
 <li><p><strong>shard_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <em>Only available when using the Premium SKU</em> The number of Shards to create on the Redis Cluster.</p></li>
 <li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU of Redis to use. Possible values are <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>.</p></li>
 <li><p><strong>ssl_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The SSL Port of the Redis Instance</p></li>
@@ -329,9 +343,6 @@ create the Redis instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rdbBackupMaxSnapshotCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rdbStorageConnectionString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/redis_cache.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/redis_cache.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -376,6 +387,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.redis.FirewallRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.redis.</code><code class="sig-name descname">FirewallRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">end_ip=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redis_cache_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">start_ip=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.FirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Firewall Rule associated with a Redis Cache.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/redis_firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/redis_firewall_rule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -389,9 +403,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/redis_firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/redis_firewall_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.redis.FirewallRule.end_ip">
 <code class="sig-name descname">end_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.FirewallRule.end_ip" title="Permalink to this definition">¶</a></dt>
@@ -441,9 +452,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/redis_firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/redis_firewall_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -486,7 +494,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.redis.GetCacheResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.redis.</code><code class="sig-name descname">GetCacheResult</code><span class="sig-paren">(</span><em class="sig-param">capacity=None</em>, <em class="sig-param">enable_non_ssl_port=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">minimum_tls_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">patch_schedules=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">private_static_ip_address=None</em>, <em class="sig-param">redis_configurations=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">shard_count=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">ssl_port=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.redis.</code><code class="sig-name descname">GetCacheResult</code><span class="sig-paren">(</span><em class="sig-param">capacity=None</em>, <em class="sig-param">enable_non_ssl_port=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">minimum_tls_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">patch_schedules=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">private_static_ip_address=None</em>, <em class="sig-param">redis_configurations=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">shard_count=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">ssl_port=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCache.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.redis.GetCacheResult.capacity">
@@ -510,6 +518,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.redis.GetCacheResult.hostname">
 <code class="sig-name descname">hostname</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.hostname" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Hostname of the Redis Instance</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -543,6 +557,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.primary_connection_string">
+<code class="sig-name descname">primary_connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.primary_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primary connection string of the Redis Instance.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.redis.GetCacheResult.redis_configurations">
 <code class="sig-name descname">redis_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.redis_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">redis_configuration</span></code> block as defined below.</p>
@@ -552,6 +572,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.redis.GetCacheResult.secondary_access_key">
 <code class="sig-name descname">secondary_access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.secondary_access_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Secondary Access Key for the Redis Instance</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.secondary_connection_string">
+<code class="sig-name descname">secondary_connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.secondary_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secondary connection string of the Redis Instance.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -566,18 +592,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The SSL Port of the Redis Instance</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.redis.GetCacheResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.redis.get_cache">
 <code class="sig-prename descclassname">pulumi_azure.redis.</code><code class="sig-name descname">get_cache</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.get_cache" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Redis Cache</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/redis_cache.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/redis_cache.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -586,9 +609,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/redis_cache.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/redis_cache.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

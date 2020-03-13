@@ -16,47 +16,47 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_azure.search"></span><dl class="class">
 <dt id="pulumi_azure.search.Service">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.search.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">partition_count=None</em>, <em class="sig-param">replica_count=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.search.Service" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows you to manage an Azure Search Service.</p>
+<dd><p>Manages a Search Service.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/search_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/search_service.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Search Service. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>partition_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Default is 1. Valid values include 1, 2, 3, 4, 6, or 12. Valid only when <code class="docutils literal notranslate"><span class="pre">sku</span></code> is <code class="docutils literal notranslate"><span class="pre">standard</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>replica_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Default is 1. Valid values include 1 through 12. Valid only when <code class="docutils literal notranslate"><span class="pre">sku</span></code> is <code class="docutils literal notranslate"><span class="pre">standard</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Search Service. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid values are <code class="docutils literal notranslate"><span class="pre">basic</span></code>, <code class="docutils literal notranslate"><span class="pre">free</span></code> and <code class="docutils literal notranslate"><span class="pre">standard</span></code>. <code class="docutils literal notranslate"><span class="pre">standard2</span></code> and <code class="docutils literal notranslate"><span class="pre">standard3</span></code> are also valid, but can only be used when it’s enabled on the backend by Microsoft support. <code class="docutils literal notranslate"><span class="pre">free</span></code> provisions the service in shared clusters. <code class="docutils literal notranslate"><span class="pre">standard</span></code> provisions the service in dedicated clusters.  Changing this forces a new resource to be created.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure Region where the Search Service should exist. Changing this forces a new Search Service to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name which should be used for this Search Service. Changing this forces a new Search Service to be created.</p></li>
+<li><p><strong>partition_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of partitions which should be created.</p></li>
+<li><p><strong>replica_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of replica’s which should be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group where the Search Service should exist. Changing this forces a new Search Service to be created.</p></li>
+<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU which should be used for this Search Service. Possible values are <code class="docutils literal notranslate"><span class="pre">basic</span></code>, <code class="docutils literal notranslate"><span class="pre">free</span></code>, <code class="docutils literal notranslate"><span class="pre">standard</span></code>, <code class="docutils literal notranslate"><span class="pre">standard2</span></code> and <code class="docutils literal notranslate"><span class="pre">standard3</span></code> Changing this forces a new Search Service to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags which should be assigned to the Search Service.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/search_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/search_service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.search.Service.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.search.Service.location" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+<dd><p>The Azure Region where the Search Service should exist. Changing this forces a new Search Service to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.search.Service.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.search.Service.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the Search Service. Changing this forces a new resource to be created.</p>
+<dd><p>The Name which should be used for this Search Service. Changing this forces a new Search Service to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.search.Service.partition_count">
 <code class="sig-name descname">partition_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.search.Service.partition_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default is 1. Valid values include 1, 2, 3, 4, 6, or 12. Valid only when <code class="docutils literal notranslate"><span class="pre">sku</span></code> is <code class="docutils literal notranslate"><span class="pre">standard</span></code>. Changing this forces a new resource to be created.</p>
+<dd><p>The number of partitions which should be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.search.Service.primary_key">
 <code class="sig-name descname">primary_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.search.Service.primary_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Search Service Administration primary key.</p>
+<dd><p>The Primary Key used for Search Service Administration.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -64,39 +64,39 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">query_keys</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.search.Service.query_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">query_keys</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the query key.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Search Service. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of this Query Key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name which should be used for this Search Service. Changing this forces a new Search Service to be created.</p></li>
 </ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.search.Service.replica_count">
 <code class="sig-name descname">replica_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.search.Service.replica_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default is 1. Valid values include 1 through 12. Valid only when <code class="docutils literal notranslate"><span class="pre">sku</span></code> is <code class="docutils literal notranslate"><span class="pre">standard</span></code>. Changing this forces a new resource to be created.</p>
+<dd><p>The number of replica’s which should be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.search.Service.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.search.Service.resource_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the resource group in which to create the Search Service. Changing this forces a new resource to be created.</p>
+<dd><p>The name of the Resource Group where the Search Service should exist. Changing this forces a new Search Service to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.search.Service.secondary_key">
 <code class="sig-name descname">secondary_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.search.Service.secondary_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Search Service Administration secondary key.</p>
+<dd><p>The Secondary Key used for Search Service Administration.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.search.Service.sku">
 <code class="sig-name descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.search.Service.sku" title="Permalink to this definition">¶</a></dt>
-<dd><p>Valid values are <code class="docutils literal notranslate"><span class="pre">basic</span></code>, <code class="docutils literal notranslate"><span class="pre">free</span></code> and <code class="docutils literal notranslate"><span class="pre">standard</span></code>. <code class="docutils literal notranslate"><span class="pre">standard2</span></code> and <code class="docutils literal notranslate"><span class="pre">standard3</span></code> are also valid, but can only be used when it’s enabled on the backend by Microsoft support. <code class="docutils literal notranslate"><span class="pre">free</span></code> provisions the service in shared clusters. <code class="docutils literal notranslate"><span class="pre">standard</span></code> provisions the service in dedicated clusters.  Changing this forces a new resource to be created.</p>
+<dd><p>The SKU which should be used for this Search Service. Possible values are <code class="docutils literal notranslate"><span class="pre">basic</span></code>, <code class="docutils literal notranslate"><span class="pre">free</span></code>, <code class="docutils literal notranslate"><span class="pre">standard</span></code>, <code class="docutils literal notranslate"><span class="pre">standard2</span></code> and <code class="docutils literal notranslate"><span class="pre">standard3</span></code> Changing this forces a new Search Service to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.search.Service.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.search.Service.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A mapping of tags which should be assigned to the Search Service.</p>
 </dd></dl>
 
 <dl class="method">
@@ -110,27 +110,24 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Search Service. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>partition_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Default is 1. Valid values include 1, 2, 3, 4, 6, or 12. Valid only when <code class="docutils literal notranslate"><span class="pre">sku</span></code> is <code class="docutils literal notranslate"><span class="pre">standard</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>primary_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Search Service Administration primary key.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure Region where the Search Service should exist. Changing this forces a new Search Service to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name which should be used for this Search Service. Changing this forces a new Search Service to be created.</p></li>
+<li><p><strong>partition_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of partitions which should be created.</p></li>
+<li><p><strong>primary_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Primary Key used for Search Service Administration.</p></li>
 <li><p><strong>query_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">query_keys</span></code> block as defined below.</p></li>
-<li><p><strong>replica_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Default is 1. Valid values include 1 through 12. Valid only when <code class="docutils literal notranslate"><span class="pre">sku</span></code> is <code class="docutils literal notranslate"><span class="pre">standard</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Search Service. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>secondary_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Search Service Administration secondary key.</p></li>
-<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid values are <code class="docutils literal notranslate"><span class="pre">basic</span></code>, <code class="docutils literal notranslate"><span class="pre">free</span></code> and <code class="docutils literal notranslate"><span class="pre">standard</span></code>. <code class="docutils literal notranslate"><span class="pre">standard2</span></code> and <code class="docutils literal notranslate"><span class="pre">standard3</span></code> are also valid, but can only be used when it’s enabled on the backend by Microsoft support. <code class="docutils literal notranslate"><span class="pre">free</span></code> provisions the service in shared clusters. <code class="docutils literal notranslate"><span class="pre">standard</span></code> provisions the service in dedicated clusters.  Changing this forces a new resource to be created.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>replica_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of replica’s which should be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group where the Search Service should exist. Changing this forces a new Search Service to be created.</p></li>
+<li><p><strong>secondary_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Secondary Key used for Search Service Administration.</p></li>
+<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU which should be used for this Search Service. Possible values are <code class="docutils literal notranslate"><span class="pre">basic</span></code>, <code class="docutils literal notranslate"><span class="pre">free</span></code>, <code class="docutils literal notranslate"><span class="pre">standard</span></code>, <code class="docutils literal notranslate"><span class="pre">standard2</span></code> and <code class="docutils literal notranslate"><span class="pre">standard3</span></code> Changing this forces a new Search Service to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags which should be assigned to the Search Service.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>query_keys</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the query key.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Search Service. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of this Query Key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this Search Service. Changing this forces a new Search Service to be created.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/search_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/search_service.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

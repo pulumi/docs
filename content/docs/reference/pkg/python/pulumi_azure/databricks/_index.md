@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.databricks.Workspace">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.databricks.</code><code class="sig-name descname">Workspace</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_parameters=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">managed_resource_group_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.databricks.Workspace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Databricks Workspace</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/databricks_workspace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/databricks_workspace.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -37,11 +40,8 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">noPublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Are public IP Addresses not allowed?</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateSubnetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Private Subnet within the Virtual Network. Required if <code class="docutils literal notranslate"><span class="pre">virtual_network_id</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicSubnetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Public Subnet within the Virtual Network. Required if <code class="docutils literal notranslate"><span class="pre">virtual_network_id</span></code> is set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Virtual Network where this Databricks Cluster should be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Virtual Network where this Databricks Cluster should be created.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/databricks_workspace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/databricks_workspace.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.databricks.Workspace.custom_parameters">
 <code class="sig-name descname">custom_parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.databricks.Workspace.custom_parameters" title="Permalink to this definition">¶</a></dt>
@@ -50,7 +50,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">noPublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Are public IP Addresses not allowed?</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateSubnetName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Private Subnet within the Virtual Network. Required if <code class="docutils literal notranslate"><span class="pre">virtual_network_id</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicSubnetName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Public Subnet within the Virtual Network. Required if <code class="docutils literal notranslate"><span class="pre">virtual_network_id</span></code> is set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of a Virtual Network where this Databricks Cluster should be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of a Virtual Network where this Databricks Cluster should be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -123,11 +123,8 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">noPublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Are public IP Addresses not allowed?</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateSubnetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Private Subnet within the Virtual Network. Required if <code class="docutils literal notranslate"><span class="pre">virtual_network_id</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicSubnetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Public Subnet within the Virtual Network. Required if <code class="docutils literal notranslate"><span class="pre">virtual_network_id</span></code> is set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Virtual Network where this Databricks Cluster should be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Virtual Network where this Databricks Cluster should be created.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/databricks_workspace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/databricks_workspace.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

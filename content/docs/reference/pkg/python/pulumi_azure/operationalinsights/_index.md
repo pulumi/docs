@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.operationalinsights.AnalyticsSolution">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.operationalinsights.</code><code class="sig-name descname">AnalyticsSolution</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">solution_name=None</em>, <em class="sig-param">workspace_name=None</em>, <em class="sig-param">workspace_resource_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsSolution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Log Analytics (formally Operational Insights) Solution.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_solution.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_solution.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -38,9 +41,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">promotionCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_solution.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_solution.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.operationalinsights.AnalyticsSolution.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsSolution.location" title="Permalink to this definition">¶</a></dt>
@@ -111,9 +111,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">promotionCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_solution.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_solution.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -158,6 +155,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.operationalinsights.AnalyticsWorkspace">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.operationalinsights.</code><code class="sig-name descname">AnalyticsWorkspace</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">retention_in_days=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Log Analytics (formally Operational Insights) Workspace.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_workspace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_workspace.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -172,9 +172,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_workspace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_workspace.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.operationalinsights.AnalyticsWorkspace.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspace.location" title="Permalink to this definition">¶</a></dt>
@@ -259,9 +256,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_workspace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_workspace.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -304,13 +298,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.operationalinsights.AwaitableGetAnalyticsWorkspaceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.operationalinsights.</code><code class="sig-name descname">AwaitableGetAnalyticsWorkspaceResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">portal_url=None</em>, <em class="sig-param">primary_shared_key=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">retention_in_days=None</em>, <em class="sig-param">secondary_shared_key=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">workspace_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AwaitableGetAnalyticsWorkspaceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.operationalinsights.</code><code class="sig-name descname">AwaitableGetAnalyticsWorkspaceResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">portal_url=None</em>, <em class="sig-param">primary_shared_key=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">retention_in_days=None</em>, <em class="sig-param">secondary_shared_key=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">workspace_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AwaitableGetAnalyticsWorkspaceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.operationalinsights.GetAnalyticsWorkspaceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.operationalinsights.</code><code class="sig-name descname">GetAnalyticsWorkspaceResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">portal_url=None</em>, <em class="sig-param">primary_shared_key=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">retention_in_days=None</em>, <em class="sig-param">secondary_shared_key=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">workspace_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.GetAnalyticsWorkspaceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.operationalinsights.</code><code class="sig-name descname">GetAnalyticsWorkspaceResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">portal_url=None</em>, <em class="sig-param">primary_shared_key=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">retention_in_days=None</em>, <em class="sig-param">secondary_shared_key=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">workspace_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.GetAnalyticsWorkspaceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAnalyticsWorkspace.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.operationalinsights.GetAnalyticsWorkspaceResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.operationalinsights.GetAnalyticsWorkspaceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azure.operationalinsights.GetAnalyticsWorkspaceResult.portal_url">
 <code class="sig-name descname">portal_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.operationalinsights.GetAnalyticsWorkspaceResult.portal_url" title="Permalink to this definition">¶</a></dt>
@@ -353,18 +353,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The Workspace (or Customer) ID for the Log Analytics Workspace.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.operationalinsights.GetAnalyticsWorkspaceResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.operationalinsights.GetAnalyticsWorkspaceResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.operationalinsights.get_analytics_workspace">
 <code class="sig-prename descclassname">pulumi_azure.operationalinsights.</code><code class="sig-name descname">get_analytics_workspace</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.get_analytics_workspace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Log Analytics (formally Operational Insights) Workspace.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/log_analytics_workspace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/log_analytics_workspace.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -373,9 +370,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/log_analytics_workspace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/log_analytics_workspace.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

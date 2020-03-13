@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.compute.AvailabilitySet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AvailabilitySet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">managed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain_count=None</em>, <em class="sig-param">platform_update_domain_count=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AvailabilitySet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Availability Set for Virtual Machines.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/availability_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/availability_set.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -33,9 +36,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/availability_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/availability_set.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.AvailabilitySet.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.AvailabilitySet.location" title="Permalink to this definition">¶</a></dt>
@@ -106,9 +106,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/availability_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/availability_set.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -151,62 +148,62 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.AwaitableGetAvailabilitySetResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetAvailabilitySetResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">managed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain_count=None</em>, <em class="sig-param">platform_update_domain_count=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetAvailabilitySetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetAvailabilitySetResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">managed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain_count=None</em>, <em class="sig-param">platform_update_domain_count=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetAvailabilitySetResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.AwaitableGetDedicatedHostGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetDedicatedHostGroupResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain_count=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetDedicatedHostGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetDedicatedHostGroupResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain_count=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetDedicatedHostGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.AwaitableGetDedicatedHostResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetDedicatedHostResult</code><span class="sig-paren">(</span><em class="sig-param">dedicated_host_group_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetDedicatedHostResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetDedicatedHostResult</code><span class="sig-paren">(</span><em class="sig-param">dedicated_host_group_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetDedicatedHostResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.AwaitableGetDiskEncryptionSetResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetDiskEncryptionSetResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetDiskEncryptionSetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetDiskEncryptionSetResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetDiskEncryptionSetResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.AwaitableGetImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetImageResult</code><span class="sig-paren">(</span><em class="sig-param">data_disks=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">os_disks=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sort_descending=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_resilient=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetImageResult</code><span class="sig-paren">(</span><em class="sig-param">data_disks=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">os_disks=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sort_descending=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_resilient=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetImageResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.AwaitableGetManagedDiskResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetManagedDiskResult</code><span class="sig-paren">(</span><em class="sig-param">create_option=None</em>, <em class="sig-param">disk_encryption_set_id=None</em>, <em class="sig-param">disk_iops_read_write=None</em>, <em class="sig-param">disk_mbps_read_write=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">storage_account_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetManagedDiskResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetManagedDiskResult</code><span class="sig-paren">(</span><em class="sig-param">create_option=None</em>, <em class="sig-param">disk_encryption_set_id=None</em>, <em class="sig-param">disk_iops_read_write=None</em>, <em class="sig-param">disk_mbps_read_write=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">storage_account_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetManagedDiskResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.AwaitableGetPlatformImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetPlatformImageResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">offer=None</em>, <em class="sig-param">publisher=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetPlatformImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetPlatformImageResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">offer=None</em>, <em class="sig-param">publisher=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetPlatformImageResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.AwaitableGetSharedImageGalleryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetSharedImageGalleryResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unique_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetSharedImageGalleryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetSharedImageGalleryResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unique_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetSharedImageGalleryResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.AwaitableGetSharedImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetSharedImageResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">eula=None</em>, <em class="sig-param">gallery_name=None</em>, <em class="sig-param">identifiers=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">privacy_statement_uri=None</em>, <em class="sig-param">release_note_uri=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetSharedImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetSharedImageResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">eula=None</em>, <em class="sig-param">gallery_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">identifiers=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">privacy_statement_uri=None</em>, <em class="sig-param">release_note_uri=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetSharedImageResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.AwaitableGetSharedImageVersionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetSharedImageVersionResult</code><span class="sig-paren">(</span><em class="sig-param">exclude_from_latest=None</em>, <em class="sig-param">gallery_name=None</em>, <em class="sig-param">image_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">managed_image_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_regions=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetSharedImageVersionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetSharedImageVersionResult</code><span class="sig-paren">(</span><em class="sig-param">exclude_from_latest=None</em>, <em class="sig-param">gallery_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">managed_image_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_regions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetSharedImageVersionResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.AwaitableGetSnapshotResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetSnapshotResult</code><span class="sig-paren">(</span><em class="sig-param">creation_option=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">encryption_settings=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">time_created=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetSnapshotResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetSnapshotResult</code><span class="sig-paren">(</span><em class="sig-param">creation_option=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">encryption_settings=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">time_created=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetSnapshotResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.AwaitableGetVirtualMachineResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetVirtualMachineResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetVirtualMachineResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetVirtualMachineResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetVirtualMachineResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -215,6 +212,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a Bastion Host.</p>
 <blockquote>
 <div><p><strong>Note:</strong> Bastion Hosts are a preview feature in Azure, and therefore are only supported in a select number of regions. <a class="reference external" href="https://docs.microsoft.com/en-us/azure/bastion/bastion-faq">Read more</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bastion_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bastion_host.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -235,9 +233,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bastion_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bastion_host.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.BastionHost.dns_name">
 <code class="sig-name descname">dns_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.BastionHost.dns_name" title="Permalink to this definition">¶</a></dt>
@@ -305,9 +300,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bastion_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bastion_host.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -355,6 +347,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Data Disks can be attached either directly on the <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">compute.DataDiskAttachment</span></code> resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.</p>
 <p><strong>Please Note:</strong> only Managed Disks are supported via this separate resource, Unmanaged Disks can be attached using the <code class="docutils literal notranslate"><span class="pre">storage_data_disk</span></code> block in the <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_data_disk_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_data_disk_attachment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -370,9 +363,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_data_disk_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_data_disk_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.DataDiskAttachment.caching">
 <code class="sig-name descname">caching</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.DataDiskAttachment.caching" title="Permalink to this definition">¶</a></dt>
@@ -430,9 +420,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_data_disk_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_data_disk_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -477,6 +464,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.DedicatedHost">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">DedicatedHost</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_replace_on_failure=None</em>, <em class="sig-param">dedicated_host_group_id=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.DedicatedHost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Dedicated Host within a Dedicated Host Group.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -493,9 +483,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.DedicatedHost.auto_replace_on_failure">
 <code class="sig-name descname">auto_replace_on_failure</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.DedicatedHost.auto_replace_on_failure" title="Permalink to this definition">¶</a></dt>
@@ -566,9 +553,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -613,6 +597,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.DedicatedHostGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">DedicatedHostGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain_count=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.DedicatedHostGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Dedicated Host Group.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host_group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -627,9 +614,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.DedicatedHostGroup.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.DedicatedHostGroup.location" title="Permalink to this definition">¶</a></dt>
@@ -686,9 +670,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -732,37 +713,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.compute.DiskEncryptionSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">DiskEncryptionSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">key_vault_key_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.DiskEncryptionSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DiskEncryptionSet resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block defined below.</p></li>
-<li><p><strong>key_vault_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the URL to a Key Vault Key (either from a Key Vault Key, or the Key URL for the Key Vault Secret).</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Azure Region where the Disk Encryption Set exists. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Disk Encryption Set. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Resource Group where the Disk Encryption Set should exist. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the Disk Encryption Set.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a DiskEncryptionSet resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] identity: A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block defined below.
+:param pulumi.Input[str] key_vault_key_id: Specifies the URL to a Key Vault Key (either from a Key Vault Key, or the Key URL for the Key Vault Secret).
+:param pulumi.Input[str] location: Specifies the Azure Region where the Disk Encryption Set exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: The name of the Disk Encryption Set. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: Specifies the name of the Resource Group where the Disk Encryption Set should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the Disk Encryption Set.</p>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The (Client) ID of the Service Principal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tenantId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Tenant the Service Principal is assigned in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Tenant the Service Principal is assigned in.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/disk_encryption_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/disk_encryption_set.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.DiskEncryptionSet.identity">
 <code class="sig-name descname">identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.DiskEncryptionSet.identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The (Client) ID of the Service Principal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tenantId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Tenant the Service Principal is assigned in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Tenant the Service Principal is assigned in.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -820,12 +792,9 @@ properties used to qualify the lookup.</p>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The (Client) ID of the Service Principal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tenantId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Tenant the Service Principal is assigned in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Tenant the Service Principal is assigned in.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/disk_encryption_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/disk_encryption_set.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -874,6 +843,7 @@ and run automated tasks.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Custom Script Extensions for Linux &amp; Windows require that the <code class="docutils literal notranslate"><span class="pre">commandToExecute</span></code> returns a <code class="docutils literal notranslate"><span class="pre">0</span></code> exit code to be classified as successfully deployed. You can achieve this by appending <code class="docutils literal notranslate"><span class="pre">exit</span> <span class="pre">0</span></code> to the end of your <code class="docutils literal notranslate"><span class="pre">commandToExecute</span></code>.</p>
 <p><strong>NOTE:</strong> Custom Script Extensions require that the Azure Virtual Machine Guest Agent is running on the Virtual Machine.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_extension.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_extension.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -899,9 +869,6 @@ use, available versions can be found using the Azure CLI.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_extension.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_extension.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.Extension.auto_upgrade_minor_version">
 <code class="sig-name descname">auto_upgrade_minor_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.Extension.auto_upgrade_minor_version" title="Permalink to this definition">¶</a></dt>
@@ -993,9 +960,6 @@ use, available versions can be found using the Azure CLI.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_extension.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_extension.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1038,8 +1002,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetAvailabilitySetResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetAvailabilitySetResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">managed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain_count=None</em>, <em class="sig-param">platform_update_domain_count=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetAvailabilitySetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetAvailabilitySetResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">managed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain_count=None</em>, <em class="sig-param">platform_update_domain_count=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetAvailabilitySetResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAvailabilitySet.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetAvailabilitySetResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetAvailabilitySetResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetAvailabilitySetResult.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetAvailabilitySetResult.location" title="Permalink to this definition">¶</a></dt>
@@ -1070,18 +1040,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags assigned to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.compute.GetAvailabilitySetResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetAvailabilitySetResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetDedicatedHostGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetDedicatedHostGroupResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain_count=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetDedicatedHostGroupResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain_count=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDedicatedHostGroup.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetDedicatedHostGroupResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostGroupResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetDedicatedHostGroupResult.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostGroupResult.location" title="Permalink to this definition">¶</a></dt>
@@ -1106,18 +1076,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The Availability Zones in which this Dedicated Host Group is located.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.compute.GetDedicatedHostGroupResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetDedicatedHostResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetDedicatedHostResult</code><span class="sig-paren">(</span><em class="sig-param">dedicated_host_group_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetDedicatedHostResult</code><span class="sig-paren">(</span><em class="sig-param">dedicated_host_group_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDedicatedHost.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetDedicatedHostResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetDedicatedHostResult.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostResult.location" title="Permalink to this definition">¶</a></dt>
@@ -1130,18 +1100,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags assigned to the Dedicated Host.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.compute.GetDedicatedHostResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetDiskEncryptionSetResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetDiskEncryptionSetResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetDiskEncryptionSetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetDiskEncryptionSetResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetDiskEncryptionSetResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDiskEncryptionSet.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetDiskEncryptionSetResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetDiskEncryptionSetResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetDiskEncryptionSetResult.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetDiskEncryptionSetResult.location" title="Permalink to this definition">¶</a></dt>
@@ -1154,22 +1124,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags assigned to the Disk Encryption Set.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.compute.GetDiskEncryptionSetResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetDiskEncryptionSetResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetImageResult</code><span class="sig-paren">(</span><em class="sig-param">data_disks=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">os_disks=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sort_descending=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_resilient=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetImageResult</code><span class="sig-paren">(</span><em class="sig-param">data_disks=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">os_disks=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sort_descending=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_resilient=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getImage.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetImageResult.data_disks">
 <code class="sig-name descname">data_disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetImageResult.data_disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>a collection of <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetImageResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetImageResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1202,17 +1172,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>is zone resiliency enabled?</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.compute.GetImageResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetImageResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetManagedDiskResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetManagedDiskResult</code><span class="sig-paren">(</span><em class="sig-param">create_option=None</em>, <em class="sig-param">disk_encryption_set_id=None</em>, <em class="sig-param">disk_iops_read_write=None</em>, <em class="sig-param">disk_mbps_read_write=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">storage_account_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetManagedDiskResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetManagedDiskResult</code><span class="sig-paren">(</span><em class="sig-param">create_option=None</em>, <em class="sig-param">disk_encryption_set_id=None</em>, <em class="sig-param">disk_iops_read_write=None</em>, <em class="sig-param">disk_mbps_read_write=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">storage_account_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetManagedDiskResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getManagedDisk.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetManagedDiskResult.disk_encryption_set_id">
@@ -1236,6 +1200,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.GetManagedDiskResult.disk_size_gb">
 <code class="sig-name descname">disk_size_gb</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetManagedDiskResult.disk_size_gb" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of the Managed Disk in gigabytes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetManagedDiskResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetManagedDiskResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1280,40 +1250,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of Availability Zones where the Managed Disk exists.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.compute.GetManagedDiskResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetManagedDiskResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetPlatformImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetPlatformImageResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">offer=None</em>, <em class="sig-param">publisher=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetPlatformImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetPlatformImageResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">offer=None</em>, <em class="sig-param">publisher=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetPlatformImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPlatformImage.</p>
-<dl class="attribute">
-<dt id="pulumi_azure.compute.GetPlatformImageResult.version">
-<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetPlatformImageResult.version" title="Permalink to this definition">¶</a></dt>
-<dd><p>The latest version of the Platform Image.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetPlatformImageResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetPlatformImageResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetPlatformImageResult.version">
+<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetPlatformImageResult.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The latest version of the Platform Image.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetSharedImageGalleryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetSharedImageGalleryResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unique_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageGalleryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetSharedImageGalleryResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unique_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageGalleryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSharedImageGallery.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetSharedImageGalleryResult.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageGalleryResult.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description for the Shared Image Gallery.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetSharedImageGalleryResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageGalleryResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1328,17 +1298,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The unique name assigned to the Shared Image Gallery.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.compute.GetSharedImageGalleryResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageGalleryResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetSharedImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetSharedImageResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">eula=None</em>, <em class="sig-param">gallery_name=None</em>, <em class="sig-param">identifiers=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">privacy_statement_uri=None</em>, <em class="sig-param">release_note_uri=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetSharedImageResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">eula=None</em>, <em class="sig-param">gallery_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">identifiers=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">privacy_statement_uri=None</em>, <em class="sig-param">release_note_uri=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSharedImage.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetSharedImageResult.description">
@@ -1350,6 +1314,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.GetSharedImageResult.eula">
 <code class="sig-name descname">eula</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageResult.eula" title="Permalink to this definition">¶</a></dt>
 <dd><p>The End User Licence Agreement for the Shared Image.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetSharedImageResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1388,22 +1358,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags assigned to the Shared Image.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.compute.GetSharedImageResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetSharedImageVersionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetSharedImageVersionResult</code><span class="sig-paren">(</span><em class="sig-param">exclude_from_latest=None</em>, <em class="sig-param">gallery_name=None</em>, <em class="sig-param">image_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">managed_image_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_regions=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageVersionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetSharedImageVersionResult</code><span class="sig-paren">(</span><em class="sig-param">exclude_from_latest=None</em>, <em class="sig-param">gallery_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">managed_image_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_regions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageVersionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSharedImageVersion.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetSharedImageVersionResult.exclude_from_latest">
 <code class="sig-name descname">exclude_from_latest</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageVersionResult.exclude_from_latest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Is this Image Version excluded from the <code class="docutils literal notranslate"><span class="pre">latest</span></code> filter?</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetSharedImageVersionResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageVersionResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1436,22 +1406,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">target_region</span></code> blocks as documented below.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.compute.GetSharedImageVersionResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageVersionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetSnapshotResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetSnapshotResult</code><span class="sig-paren">(</span><em class="sig-param">creation_option=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">encryption_settings=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">time_created=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSnapshotResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetSnapshotResult</code><span class="sig-paren">(</span><em class="sig-param">creation_option=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">encryption_settings=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">time_created=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSnapshotResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSnapshot.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetSnapshotResult.disk_size_gb">
 <code class="sig-name descname">disk_size_gb</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSnapshotResult.disk_size_gb" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of the Snapshotted Disk in GB.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetSnapshotResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSnapshotResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1472,17 +1442,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The ID of an storage account.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.compute.GetSnapshotResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSnapshotResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetVirtualMachineResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetVirtualMachineResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetVirtualMachineResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetVirtualMachineResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetVirtualMachineResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVirtualMachine.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetVirtualMachineResult.id">
@@ -1496,6 +1460,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.Image">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">Image</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">hyper_v_generation=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_virtual_machine_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_resilient=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a custom virtual machine image that can be used to create virtual machines.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/image.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/image.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1533,9 +1500,6 @@ the image. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of operating system contained in the virtual machine image. Possible values are: Windows or Linux.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sizeGb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the size of the image to be created. The target size can’t be smaller than the source size.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/image.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/image.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.Image.data_disks">
 <code class="sig-name descname">data_disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.Image.data_disks" title="Permalink to this definition">¶</a></dt>
@@ -1651,9 +1615,6 @@ the image. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of operating system contained in the virtual machine image. Possible values are: Windows or Linux.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sizeGb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the size of the image to be created. The target size can’t be smaller than the source size.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/image.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/image.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1697,43 +1658,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.compute.LinuxVirtualMachine">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">LinuxVirtualMachine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_ssh_keys=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">allow_extension_operations=None</em>, <em class="sig-param">availability_set_id=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">computer_name=None</em>, <em class="sig-param">custom_data=None</em>, <em class="sig-param">dedicated_host_id=None</em>, <em class="sig-param">disable_password_authentication=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_bid_price=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">provision_vm_agent=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secrets=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">source_image_id=None</em>, <em class="sig-param">source_image_reference=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachine" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a LinuxVirtualMachine resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>additional_capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.</p></li>
-<li><p><strong>admin_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>admin_ssh_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">admin_ssh_key</span></code> blocks as defined below.</p></li>
-<li><p><strong>admin_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username of the local administrator used for the Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>allow_extension_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Extension Operations be allowed on this Virtual Machine? Changing this forces a new resource to be created.</p></li>
-<li><p><strong>availability_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p></li>
-<li><p><strong>computer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>custom_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>dedicated_host_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Dedicated Host where this machine should be run on. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>disable_password_authentication</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Password Authentication be disabled on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>eviction_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies what should happen when the Virtual Machine is evicted for price reasons when using a Spot instance. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">Deallocate</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure location where the Linux Virtual Machine should exist. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>max_bid_price</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum price you’re willing to pay for this Virtual Machine, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machine will be evicted using the <code class="docutils literal notranslate"><span class="pre">eviction_policy</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which means that the Virtual Machine should not be evicted for price reasons.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Linux Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>network_interface_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – . A list of Network Interface ID’s which should be attached to this Virtual Machine. The first Network Interface ID in this list will be the Primary Network Interface on the Virtual Machine.</p></li>
-<li><p><strong>os_disk</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.</p></li>
-<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block as defined below. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>provision_vm_agent</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Azure VM Agent be provisioned on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Linux Virtual Machine should be exist. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>secrets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.</p></li>
-<li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU which should be used for this Virtual Machine, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
-<li><p><strong>source_image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Image which this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>source_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags which should be assigned to this Virtual Machine.</p></li>
-<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone in which this Virtual Machine should be created. Changing this forces a new resource to be created.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a LinuxVirtualMachine resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] additional_capabilities: A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.
+:param pulumi.Input[str] admin_password: The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.
+:param pulumi.Input[list] admin_ssh_keys: One or more <code class="docutils literal notranslate"><span class="pre">admin_ssh_key</span></code> blocks as defined below.
+:param pulumi.Input[str] admin_username: The username of the local administrator used for the Virtual Machine. Changing this forces a new resource to be created.
+:param pulumi.Input[bool] allow_extension_operations: Should Extension Operations be allowed on this Virtual Machine? Changing this forces a new resource to be created.
+:param pulumi.Input[str] availability_set_id: Specifies the ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] boot_diagnostics: A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.
+:param pulumi.Input[str] computer_name: Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. Changing this forces a new resource to be created.
+:param pulumi.Input[str] custom_data: The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.
+:param pulumi.Input[str] dedicated_host_id: The ID of a Dedicated Host where this machine should be run on. Changing this forces a new resource to be created.
+:param pulumi.Input[bool] disable_password_authentication: Should Password Authentication be disabled on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[str] eviction_policy: Specifies what should happen when the Virtual Machine is evicted for price reasons when using a Spot instance. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">Deallocate</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] identity: An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.
+:param pulumi.Input[str] location: The Azure location where the Linux Virtual Machine should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[float] max_bid_price: The maximum price you’re willing to pay for this Virtual Machine, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machine will be evicted using the <code class="docutils literal notranslate"><span class="pre">eviction_policy</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which means that the Virtual Machine should not be evicted for price reasons.
+:param pulumi.Input[str] name: The name of the Linux Virtual Machine. Changing this forces a new resource to be created.
+:param pulumi.Input[list] network_interface_ids: . A list of Network Interface ID’s which should be attached to this Virtual Machine. The first Network Interface ID in this list will be the Primary Network Interface on the Virtual Machine.
+:param pulumi.Input[dict] os_disk: A <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.
+:param pulumi.Input[dict] plan: A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block as defined below. Changing this forces a new resource to be created.
+:param pulumi.Input[bool] provision_vm_agent: Should the Azure VM Agent be provisioned on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[str] proximity_placement_group_id: The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the Linux Virtual Machine should be exist. Changing this forces a new resource to be created.
+:param pulumi.Input[list] secrets: One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.
+:param pulumi.Input[str] size: The SKU which should be used for this Virtual Machine, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.
+:param pulumi.Input[str] source_image_id: The ID of the Image which this Virtual Machine should be created from. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] source_image_reference: A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] tags: A mapping of tags which should be assigned to this Virtual Machine.
+:param pulumi.Input[str] zone: The Zone in which this Virtual Machine should be created. Changing this forces a new resource to be created.</p>
 <p>The <strong>additional_capabilities</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -1780,7 +1735,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>source_image_reference</strong> object supports the following:</p>
 <ul class="simple">
@@ -1789,9 +1744,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/linux_virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/linux_virtual_machine.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.LinuxVirtualMachine.additional_capabilities">
 <code class="sig-name descname">additional_capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachine.additional_capabilities" title="Permalink to this definition">¶</a></dt>
@@ -1991,7 +1943,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -2130,7 +2082,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>source_image_reference</strong> object supports the following:</p>
 <ul class="simple">
@@ -2139,9 +2091,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/linux_virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/linux_virtual_machine.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2185,50 +2134,44 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.compute.LinuxVirtualMachineScaleSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">LinuxVirtualMachineScaleSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_ssh_keys=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">automatic_os_upgrade_policy=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">computer_name_prefix=None</em>, <em class="sig-param">custom_data=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">disable_password_authentication=None</em>, <em class="sig-param">do_not_run_extensions_on_overprovisioned_machines=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">health_probe_id=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_bid_price=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">overprovision=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">provision_vm_agent=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rolling_upgrade_policy=None</em>, <em class="sig-param">secrets=None</em>, <em class="sig-param">single_placement_group=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">source_image_id=None</em>, <em class="sig-param">source_image_reference=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">zone_balance=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a LinuxVirtualMachineScaleSet resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>additional_capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.</p></li>
-<li><p><strong>admin_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>admin_ssh_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">admin_ssh_key</span></code> blocks as defined below.</p></li>
-<li><p><strong>admin_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username of the local administrator on each Virtual Machine Scale Set instance. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>automatic_os_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">automatic_os_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>.</p></li>
-<li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p></li>
-<li><p><strong>computer_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field.</p></li>
-<li><p><strong>custom_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.</p></li>
-<li><p><strong>data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.</p></li>
-<li><p><strong>disable_password_authentication</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Password Authentication be disabled on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><strong>do_not_run_extensions_on_overprovisioned_machines</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Virtual Machine Extensions be run on Overprovisioned Virtual Machines in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>eviction_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Policy which should be used Virtual Machines are Evicted from the Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>health_probe_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Load Balancer Probe which should be used to determine the health of an instance. Changing this forces a new resource to be created. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</p></li>
-<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
-<li><p><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of Virtual Machines in the Scale Set.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure location where the Linux Virtual Machine Scale Set should exist. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>max_bid_price</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum price you’re willing to pay for each Virtual Machine in this Scale Set, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machines in the Scale Set will be evicted using the <code class="docutils literal notranslate"><span class="pre">eviction_policy</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which means that each Virtual Machine in this Scale Set should not be evicted for price reasons.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>network_interfaces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">network_interface</span></code> blocks as defined below.</p></li>
-<li><p><strong>os_disk</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.</p></li>
-<li><p><strong>overprovision</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Azure over-provision Virtual Machines in this Scale Set? This means that multiple Virtual Machines will be provisioned and Azure will keep the instances which become available first - which improves provisioning success rates and improves deployment time. You’re not billed for these over-provisioned VM’s and they don’t count towards the Subscription Quota. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Priority of this Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">Regular</span></code> and <code class="docutils literal notranslate"><span class="pre">Spot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Changing this value forces a new resource.</p></li>
-<li><p><strong>provision_vm_agent</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Azure VM Agent be provisioned on each Virtual Machine in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this value forces a new resource to be created.</p></li>
-<li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group in which the Virtual Machine Scale Set should be assigned to. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Linux Virtual Machine Scale Set should be exist. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>rolling_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</p></li>
-<li><p><strong>secrets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.</p></li>
-<li><p><strong>single_placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should this Virtual Machine Scale Set be limited to a Single Placement Group, which means the number of instances will be capped at 100 Virtual Machines. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
-<li><p><strong>source_image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of an Image which each Virtual Machine in this Scale Set should be based on.</p></li>
-<li><p><strong>source_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags which should be assigned to this Virtual Machine Scale Set.</p></li>
-<li><p><strong>upgrade_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies how Upgrades (e.g. changing the Image/SKU) should be performed to Virtual Machine Instances. Possible values are <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>, <code class="docutils literal notranslate"><span class="pre">Manual</span></code> and <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Manual</span></code>.</p></li>
-<li><p><strong>zone_balance</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Availability Zones in which the Virtual Machines in this Scale Set should be created in. Changing this forces a new resource to be created.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a LinuxVirtualMachineScaleSet resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] additional_capabilities: A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.
+:param pulumi.Input[str] admin_password: The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.
+:param pulumi.Input[list] admin_ssh_keys: One or more <code class="docutils literal notranslate"><span class="pre">admin_ssh_key</span></code> blocks as defined below.
+:param pulumi.Input[str] admin_username: The username of the local administrator on each Virtual Machine Scale Set instance. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] automatic_os_upgrade_policy: A <code class="docutils literal notranslate"><span class="pre">automatic_os_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>.
+:param pulumi.Input[dict] boot_diagnostics: A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.
+:param pulumi.Input[str] computer_name_prefix: The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field.
+:param pulumi.Input[str] custom_data: The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.
+:param pulumi.Input[list] data_disks: One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.
+:param pulumi.Input[bool] disable_password_authentication: Should Password Authentication be disabled on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[bool] do_not_run_extensions_on_overprovisioned_machines: Should Virtual Machine Extensions be run on Overprovisioned Virtual Machines in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[str] eviction_policy: The Policy which should be used Virtual Machines are Evicted from the Scale Set. Changing this forces a new resource to be created.
+:param pulumi.Input[str] health_probe_id: The ID of a Load Balancer Probe which should be used to determine the health of an instance. Changing this forces a new resource to be created. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.
+:param pulumi.Input[dict] identity: A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.
+:param pulumi.Input[float] instances: The number of Virtual Machines in the Scale Set.
+:param pulumi.Input[str] location: The Azure location where the Linux Virtual Machine Scale Set should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[float] max_bid_price: The maximum price you’re willing to pay for each Virtual Machine in this Scale Set, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machines in the Scale Set will be evicted using the <code class="docutils literal notranslate"><span class="pre">eviction_policy</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which means that each Virtual Machine in this Scale Set should not be evicted for price reasons.
+:param pulumi.Input[str] name: The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.
+:param pulumi.Input[list] network_interfaces: One or more <code class="docutils literal notranslate"><span class="pre">network_interface</span></code> blocks as defined below.
+:param pulumi.Input[dict] os_disk: An <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.
+:param pulumi.Input[bool] overprovision: Should Azure over-provision Virtual Machines in this Scale Set? This means that multiple Virtual Machines will be provisioned and Azure will keep the instances which become available first - which improves provisioning success rates and improves deployment time. You’re not billed for these over-provisioned VM’s and they don’t count towards the Subscription Quota. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[str] priority: The Priority of this Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">Regular</span></code> and <code class="docutils literal notranslate"><span class="pre">Spot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Changing this value forces a new resource.
+:param pulumi.Input[bool] provision_vm_agent: Should the Azure VM Agent be provisioned on each Virtual Machine in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this value forces a new resource to be created.
+:param pulumi.Input[str] proximity_placement_group_id: The ID of the Proximity Placement Group in which the Virtual Machine Scale Set should be assigned to. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the Linux Virtual Machine Scale Set should be exist. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] rolling_upgrade_policy: A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.
+:param pulumi.Input[list] secrets: One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.
+:param pulumi.Input[bool] single_placement_group: Should this Virtual Machine Scale Set be limited to a Single Placement Group, which means the number of instances will be capped at 100 Virtual Machines. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[str] sku: The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.
+:param pulumi.Input[str] source_image_id: The ID of an Image which each Virtual Machine in this Scale Set should be based on.
+:param pulumi.Input[dict] source_image_reference: A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below.
+:param pulumi.Input[dict] tags: A mapping of tags which should be assigned to this Virtual Machine Scale Set.
+:param pulumi.Input[str] upgrade_mode: Specifies how Upgrades (e.g. changing the Image/SKU) should be performed to Virtual Machine Instances. Possible values are <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>, <code class="docutils literal notranslate"><span class="pre">Manual</span></code> and <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Manual</span></code>.
+:param pulumi.Input[bool] zone_balance: Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[list] zones: A list of Availability Zones in which the Virtual Machines in this Scale Set should be created in. Changing this forces a new resource to be created.</p>
 <p>The <strong>additional_capabilities</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -2264,10 +2207,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dnsServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableAcceleratedNetworking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIpForwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
@@ -2277,8 +2220,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">domainNameLabel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idleTimeoutInMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -2286,7 +2229,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpPrefixId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -2294,7 +2237,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkSecurityGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 <p>The <strong>os_disk</strong> object supports the following:</p>
@@ -2330,7 +2273,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>source_image_reference</strong> object supports the following:</p>
 <ul class="simple">
@@ -2339,9 +2282,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/linux_virtual_machine_scale_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/linux_virtual_machine_scale_set.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.LinuxVirtualMachineScaleSet.additional_capabilities">
 <code class="sig-name descname">additional_capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.additional_capabilities" title="Permalink to this definition">¶</a></dt>
@@ -2482,10 +2422,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">network_interfaces</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.network_interfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">network_interface</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dnsServers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableAcceleratedNetworking</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIpForwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
@@ -2495,8 +2435,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">domainNameLabel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idleTimeoutInMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -2504,7 +2444,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpPrefixId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -2512,7 +2452,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkSecurityGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -2587,7 +2527,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -2736,10 +2676,10 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dnsServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableAcceleratedNetworking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIpForwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
@@ -2749,8 +2689,8 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">domainNameLabel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idleTimeoutInMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -2758,7 +2698,7 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpPrefixId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -2766,7 +2706,7 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkSecurityGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 <p>The <strong>os_disk</strong> object supports the following:</p>
@@ -2802,7 +2742,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>source_image_reference</strong> object supports the following:</p>
 <ul class="simple">
@@ -2811,9 +2751,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/linux_virtual_machine_scale_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/linux_virtual_machine_scale_set.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2858,6 +2795,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.ManagedDisk">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">ManagedDisk</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_option=None</em>, <em class="sig-param">disk_encryption_set_id=None</em>, <em class="sig-param">disk_iops_read_write=None</em>, <em class="sig-param">disk_mbps_read_write=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">encryption_settings=None</em>, <em class="sig-param">image_reference_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">storage_account_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.ManagedDisk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a managed disk.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/managed_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/managed_disk.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2899,9 +2839,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/managed_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/managed_disk.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.ManagedDisk.create_option">
 <code class="sig-name descname">create_option</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.ManagedDisk.create_option" title="Permalink to this definition">¶</a></dt>
@@ -3066,9 +3003,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/managed_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/managed_disk.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3116,6 +3050,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> The <code class="docutils literal notranslate"><span class="pre">compute.ScaleSet</span></code> resource has been superseded by the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachineScaleSet</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachineScaleSet</span></code> resources. The existing <code class="docutils literal notranslate"><span class="pre">compute.ScaleSet</span></code> resource will continue to be available throughout the 2.x releases however is in a feature-frozen state to maintain compatibility - new functionality will instead be added to the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachineScaleSet</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachineScaleSet</span></code> resources.</p>
 <p><strong>NOTE:</strong> All arguments including the administrator login and password will be stored in the raw state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3179,10 +3114,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">acceleratedNetworking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether to enable accelerated networking or not. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dnsSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A dns_settings block as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">dnsServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of dns servers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of dns servers.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An ip_configuration block as documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An ip_configuration block as documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets can use the same application gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies up to <code class="docutils literal notranslate"><span class="pre">20</span></code> application security group IDs.</p></li>
@@ -3192,7 +3127,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if this ip_configuration is the primary one.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Describes a virtual machines scale set IP Configuration’s PublicIPAddress configuration. The public_ip_address_configuration is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">domainNameLabel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The domain name label for the dns settings.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The domain name label for the dns settings.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">idleTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The idle timeout in minutes. This value must be between 4 and 30.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
 </ul>
@@ -3202,7 +3137,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipForwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether IP forwarding is enabled on this NIC. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkSecurityGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identifier for the network security group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identifier for the network security group.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if this ip_configuration is the primary one.</p></li>
 </ul>
 <p>The <strong>os_profile</strong> object supports the following:</p>
@@ -3299,9 +3234,6 @@ When setting this field <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the operating system Type, valid values are windows, linux.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vhdContainers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the vhd uri. Cannot be used when <code class="docutils literal notranslate"><span class="pre">image</span></code> or <code class="docutils literal notranslate"><span class="pre">managed_disk_type</span></code> is specified.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.ScaleSet.automatic_os_upgrade">
 <code class="sig-name descname">automatic_os_upgrade</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.ScaleSet.automatic_os_upgrade" title="Permalink to this definition">¶</a></dt>
@@ -3372,10 +3304,10 @@ When setting this field <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">acceleratedNetworking</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether to enable accelerated networking or not. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dnsSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A dns_settings block as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">dnsServers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies an array of dns servers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies an array of dns servers.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An ip_configuration block as documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An ip_configuration block as documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets can use the same application gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies up to <code class="docutils literal notranslate"><span class="pre">20</span></code> application security group IDs.</p></li>
@@ -3385,7 +3317,7 @@ When setting this field <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies if this ip_configuration is the primary one.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Describes a virtual machines scale set IP Configuration’s PublicIPAddress configuration. The public_ip_address_configuration is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">domainNameLabel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The domain name label for the dns settings.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The domain name label for the dns settings.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">idleTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The idle timeout in minutes. This value must be between 4 and 30.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the image from the marketplace.</p></li>
 </ul>
@@ -3395,7 +3327,7 @@ When setting this field <code class="docutils literal notranslate"><span class="
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipForwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether IP forwarding is enabled on this NIC. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the image from the marketplace.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkSecurityGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the identifier for the network security group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the identifier for the network security group.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies if this ip_configuration is the primary one.</p></li>
 </ul>
 </dd></dl>
@@ -3661,10 +3593,10 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">acceleratedNetworking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether to enable accelerated networking or not. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dnsSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A dns_settings block as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">dnsServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of dns servers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of dns servers.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An ip_configuration block as documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An ip_configuration block as documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets can use the same application gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies up to <code class="docutils literal notranslate"><span class="pre">20</span></code> application security group IDs.</p></li>
@@ -3674,7 +3606,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if this ip_configuration is the primary one.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Describes a virtual machines scale set IP Configuration’s PublicIPAddress configuration. The public_ip_address_configuration is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">domainNameLabel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The domain name label for the dns settings.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The domain name label for the dns settings.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">idleTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The idle timeout in minutes. This value must be between 4 and 30.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
 </ul>
@@ -3684,7 +3616,7 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipForwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether IP forwarding is enabled on this NIC. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkSecurityGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identifier for the network security group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identifier for the network security group.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if this ip_configuration is the primary one.</p></li>
 </ul>
 <p>The <strong>os_profile</strong> object supports the following:</p>
@@ -3781,9 +3713,6 @@ When setting this field <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the operating system Type, valid values are windows, linux.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vhdContainers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the vhd uri. Cannot be used when <code class="docutils literal notranslate"><span class="pre">image</span></code> or <code class="docutils literal notranslate"><span class="pre">managed_disk_type</span></code> is specified.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3828,6 +3757,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.SharedImage">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">SharedImage</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">eula=None</em>, <em class="sig-param">gallery_name=None</em>, <em class="sig-param">identifier=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">privacy_statement_uri=None</em>, <em class="sig-param">release_note_uri=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.SharedImage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Shared Image within a Shared Image Gallery.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3853,9 +3785,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.SharedImage.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.SharedImage.description" title="Permalink to this definition">¶</a></dt>
@@ -3958,9 +3887,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4005,6 +3931,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.SharedImageGallery">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">SharedImageGallery</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.SharedImageGallery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Shared Image Gallery.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_gallery.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_gallery.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4018,9 +3947,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_gallery.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_gallery.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.SharedImageGallery.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.SharedImageGallery.description" title="Permalink to this definition">¶</a></dt>
@@ -4077,9 +4003,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_gallery.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_gallery.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4124,6 +4047,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.SharedImageVersion">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">SharedImageVersion</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">exclude_from_latest=None</em>, <em class="sig-param">gallery_name=None</em>, <em class="sig-param">image_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">managed_image_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_regions=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.SharedImageVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Version of a Shared Image within a Shared Image Gallery.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_version.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_version.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4147,9 +4073,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">regionalReplicaCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_version.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_version.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.SharedImageVersion.exclude_from_latest">
 <code class="sig-name descname">exclude_from_latest</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.SharedImageVersion.exclude_from_latest" title="Permalink to this definition">¶</a></dt>
@@ -4238,9 +4161,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">regionalReplicaCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_version.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_version.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4285,6 +4205,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.Snapshot">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">Snapshot</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_option=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">encryption_settings=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Disk Snapshot.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/snapshot.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4318,9 +4241,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/snapshot.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.Snapshot.create_option">
 <code class="sig-name descname">create_option</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.Snapshot.create_option" title="Permalink to this definition">¶</a></dt>
@@ -4414,9 +4334,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/snapshot.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4464,6 +4381,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> The <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource has been superseded by the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachine</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachine</span></code> resources. The existing <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource will continue to be available throughout the 2.x releases however is in a feature-frozen state to maintain compatibility - new functionality will instead be added to the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachine</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachine</span></code> resources.</p>
 <p><strong>Note:</strong> Data Disks can be attached either directly on the <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">compute.DataDiskAttachment</span></code> resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4598,9 +4516,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">vhdUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.VirtualMachine.additional_capabilities">
 <code class="sig-name descname">additional_capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.additional_capabilities" title="Permalink to this definition">¶</a></dt>
@@ -4975,9 +4890,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">vhdUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5024,6 +4936,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an Extension for a Virtual Machine Scale Set.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource is not intended to be used with the <code class="docutils literal notranslate"><span class="pre">compute.ScaleSet</span></code> resource - instead it’s intended for this to be used with the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachineScaleSet</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachineScaleSet</span></code> resources.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set_extension.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set_extension.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -5038,14 +4951,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>publisher</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Publisher of the Extension. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A JSON String which specifies Settings for the Extension.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Type of the Extension. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>type_handler_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of the Script Handler which should be used.</p></li>
+<li><p><strong>type_handler_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of the extension to use, available versions can be found using the Azure CLI.</p></li>
 <li><p><strong>virtual_machine_scale_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set_extension.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set_extension.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.VirtualMachineScaleSetExtension.auto_upgrade_minor_version">
 <code class="sig-name descname">auto_upgrade_minor_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachineScaleSetExtension.auto_upgrade_minor_version" title="Permalink to this definition">¶</a></dt>
@@ -5097,7 +5007,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.VirtualMachineScaleSetExtension.type_handler_version">
 <code class="sig-name descname">type_handler_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachineScaleSetExtension.type_handler_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the version of the Script Handler which should be used.</p>
+<dd><p>Specifies the version of the extension to use, available versions can be found using the Azure CLI.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5125,14 +5035,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>publisher</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Publisher of the Extension. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A JSON String which specifies Settings for the Extension.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Type of the Extension. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>type_handler_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of the Script Handler which should be used.</p></li>
+<li><p><strong>type_handler_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of the extension to use, available versions can be found using the Azure CLI.</p></li>
 <li><p><strong>virtual_machine_scale_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set_extension.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set_extension.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5176,46 +5083,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.compute.WindowsVirtualMachine">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">WindowsVirtualMachine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">additional_unattend_contents=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">allow_extension_operations=None</em>, <em class="sig-param">availability_set_id=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">computer_name=None</em>, <em class="sig-param">custom_data=None</em>, <em class="sig-param">dedicated_host_id=None</em>, <em class="sig-param">enable_automatic_updates=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_bid_price=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">provision_vm_agent=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secrets=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">source_image_id=None</em>, <em class="sig-param">source_image_reference=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">winrm_listeners=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachine" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WindowsVirtualMachine resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>additional_capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.</p></li>
-<li><p><strong>additional_unattend_contents</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">additional_unattend_content</span></code> blocks as defined below. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>admin_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>admin_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username of the local administrator used for the Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>allow_extension_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Extension Operations be allowed on this Virtual Machine? Changing this forces a new resource to be created.</p></li>
-<li><p><strong>availability_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p></li>
-<li><p><strong>computer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>custom_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>dedicated_host_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Dedicated Host where this machine should be run on. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>enable_automatic_updates</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if Automatic Updates are Enabled for the Windows Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>eviction_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies what should happen when the Virtual Machine is evicted for price reasons when using a Spot instance. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">Deallocate</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
-<li><p><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of on-premise license (also known as <a class="reference external" href="https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing">Azure Hybrid Use Benefit</a>) which should be used for this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows_Client</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows_Server</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure location where the Windows Virtual Machine should exist. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>max_bid_price</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum price you’re willing to pay for this Virtual Machine, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machine will be evicted using the <code class="docutils literal notranslate"><span class="pre">eviction_policy</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which means that the Virtual Machine should not be evicted for price reasons.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Windows Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>network_interface_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – . A list of Network Interface ID’s which should be attached to this Virtual Machine. The first Network Interface ID in this list will be the Primary Network Interface on the Virtual Machine.</p></li>
-<li><p><strong>os_disk</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.</p></li>
-<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block as defined below. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>provision_vm_agent</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Azure VM Agent be provisioned on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Windows Virtual Machine should be exist. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>secrets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.</p></li>
-<li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU which should be used for this Virtual Machine, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
-<li><p><strong>source_image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Image which this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>source_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags which should be assigned to this Virtual Machine.</p></li>
-<li><p><strong>timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Time Zone which should be used by the Virtual Machine, <a class="reference external" href="https://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/">the possible values are defined here</a>.</p></li>
-<li><p><strong>winrm_listeners</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">winrm_listener</span></code> blocks as defined below.</p></li>
-<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone in which this Virtual Machine should be created. Changing this forces a new resource to be created.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a WindowsVirtualMachine resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] additional_capabilities: A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.
+:param pulumi.Input[list] additional_unattend_contents: One or more <code class="docutils literal notranslate"><span class="pre">additional_unattend_content</span></code> blocks as defined below. Changing this forces a new resource to be created.
+:param pulumi.Input[str] admin_password: The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.
+:param pulumi.Input[str] admin_username: The username of the local administrator used for the Virtual Machine. Changing this forces a new resource to be created.
+:param pulumi.Input[bool] allow_extension_operations: Should Extension Operations be allowed on this Virtual Machine? Changing this forces a new resource to be created.
+:param pulumi.Input[str] availability_set_id: Specifies the ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] boot_diagnostics: A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.
+:param pulumi.Input[str] computer_name: Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. Changing this forces a new resource to be created.
+:param pulumi.Input[str] custom_data: The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.
+:param pulumi.Input[str] dedicated_host_id: The ID of a Dedicated Host where this machine should be run on. Changing this forces a new resource to be created.
+:param pulumi.Input[bool] enable_automatic_updates: Specifies if Automatic Updates are Enabled for the Windows Virtual Machine. Changing this forces a new resource to be created.
+:param pulumi.Input[str] eviction_policy: Specifies what should happen when the Virtual Machine is evicted for price reasons when using a Spot instance. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">Deallocate</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] identity: An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.
+:param pulumi.Input[str] license_type: Specifies the type of on-premise license (also known as <a class="reference external" href="https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing">Azure Hybrid Use Benefit</a>) which should be used for this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows_Client</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows_Server</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[str] location: The Azure location where the Windows Virtual Machine should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[float] max_bid_price: The maximum price you’re willing to pay for this Virtual Machine, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machine will be evicted using the <code class="docutils literal notranslate"><span class="pre">eviction_policy</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which means that the Virtual Machine should not be evicted for price reasons.
+:param pulumi.Input[str] name: The name of the Windows Virtual Machine. Changing this forces a new resource to be created.
+:param pulumi.Input[list] network_interface_ids: . A list of Network Interface ID’s which should be attached to this Virtual Machine. The first Network Interface ID in this list will be the Primary Network Interface on the Virtual Machine.
+:param pulumi.Input[dict] os_disk: A <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.
+:param pulumi.Input[dict] plan: A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block as defined below. Changing this forces a new resource to be created.
+:param pulumi.Input[bool] provision_vm_agent: Should the Azure VM Agent be provisioned on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[str] proximity_placement_group_id: The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the Windows Virtual Machine should be exist. Changing this forces a new resource to be created.
+:param pulumi.Input[list] secrets: One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.
+:param pulumi.Input[str] size: The SKU which should be used for this Virtual Machine, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.
+:param pulumi.Input[str] source_image_id: The ID of the Image which this Virtual Machine should be created from. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] source_image_reference: A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] tags: A mapping of tags which should be assigned to this Virtual Machine.
+:param pulumi.Input[str] timezone: Specifies the Time Zone which should be used by the Virtual Machine, <a class="reference external" href="https://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/">the possible values are defined here</a>.
+:param pulumi.Input[list] winrm_listeners: One or more <code class="docutils literal notranslate"><span class="pre">winrm_listener</span></code> blocks as defined below.
+:param pulumi.Input[str] zone: The Zone in which this Virtual Machine should be created. Changing this forces a new resource to be created.</p>
 <p>The <strong>additional_capabilities</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -5263,7 +5164,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>source_image_reference</strong> object supports the following:</p>
 <ul class="simple">
@@ -5277,9 +5178,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/windows_virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/windows_virtual_machine.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.WindowsVirtualMachine.additional_capabilities">
 <code class="sig-name descname">additional_capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachine.additional_capabilities" title="Permalink to this definition">¶</a></dt>
@@ -5486,7 +5384,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -5647,7 +5545,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>source_image_reference</strong> object supports the following:</p>
 <ul class="simple">
@@ -5661,9 +5559,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/windows_virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/windows_virtual_machine.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5707,55 +5602,47 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.compute.WindowsVirtualMachineScaleSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">WindowsVirtualMachineScaleSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">additional_unattend_contents=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">automatic_os_upgrade_policy=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">computer_name_prefix=None</em>, <em class="sig-param">custom_data=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">do_not_run_extensions_on_overprovisioned_machines=None</em>, <em class="sig-param">enable_automatic_updates=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">health_probe_id=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_bid_price=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">overprovision=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">provision_vm_agent=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rolling_upgrade_policy=None</em>, <em class="sig-param">secrets=None</em>, <em class="sig-param">single_placement_group=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">source_image_id=None</em>, <em class="sig-param">source_image_reference=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">winrm_listeners=None</em>, <em class="sig-param">zone_balance=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WindowsVirtualMachineScaleSet resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>additional_capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.</p></li>
-<li><p><strong>additional_unattend_contents</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">additional_unattend_content</span></code> blocks as defined below.</p></li>
-<li><p><strong>admin_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>admin_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username of the local administrator on each Virtual Machine Scale Set instance. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>automatic_os_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">automatic_os_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>.</p></li>
-<li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p></li>
-<li><p><strong>computer_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field.</p></li>
-<li><p><strong>custom_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.</p></li>
-<li><p><strong>data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.</p></li>
-<li><p><strong>do_not_run_extensions_on_overprovisioned_machines</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Virtual Machine Extensions be run on Overprovisioned Virtual Machines in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>enable_automatic_updates</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Are automatic updates enabled for this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><strong>eviction_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Policy which should be used Virtual Machines are Evicted from the Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>health_probe_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Load Balancer Probe which should be used to determine the health of an instance. Changing this forces a new resource to be created. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</p></li>
-<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
-<li><p><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of Virtual Machines in the Scale Set.</p></li>
-<li><p><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the type of on-premise license (also known as <a class="reference external" href="https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing">Azure Hybrid Use Benefit</a>) which should be used for this Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows_Client</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows_Server</span></code>. Changing this forces a new resource to be created.</p>
-</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure location where the Windows Virtual Machine Scale Set should exist. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>max_bid_price</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum price you’re willing to pay for each Virtual Machine in this Scale Set, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machines in the Scale Set will be evicted using the <code class="docutils literal notranslate"><span class="pre">eviction_policy</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which means that each Virtual Machine in the Scale Set should not be evicted for price reasons.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>network_interfaces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">network_interface</span></code> blocks as defined below.</p></li>
-<li><p><strong>os_disk</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.</p></li>
-<li><p><strong>overprovision</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Azure over-provision Virtual Machines in this Scale Set? This means that multiple Virtual Machines will be provisioned and Azure will keep the instances which become available first - which improves provisioning success rates and improves deployment time. You’re not billed for these over-provisioned VM’s and they don’t count towards the Subscription Quota. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Priority of this Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">Regular</span></code> and <code class="docutils literal notranslate"><span class="pre">Spot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Changing this value forces a new resource.</p></li>
-<li><p><strong>provision_vm_agent</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Azure VM Agent be provisioned on each Virtual Machine in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this value forces a new resource to be created.</p></li>
-<li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group in which the Virtual Machine Scale Set should be assigned to. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Windows Virtual Machine Scale Set should be exist. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>rolling_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</p></li>
-<li><p><strong>secrets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.</p></li>
-<li><p><strong>single_placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should this Virtual Machine Scale Set be limited to a Single Placement Group, which means the number of instances will be capped at 100 Virtual Machines. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
-<li><p><strong>source_image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of an Image which each Virtual Machine in this Scale Set should be based on.</p></li>
-<li><p><strong>source_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags which should be assigned to this Virtual Machine Scale Set.</p></li>
-<li><p><strong>timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the time zone of the virtual machine, <a class="reference external" href="https://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/">the possible values are defined here</a>.</p>
-</p></li>
-<li><p><strong>upgrade_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies how Upgrades (e.g. changing the Image/SKU) should be performed to Virtual Machine Instances. Possible values are <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>, <code class="docutils literal notranslate"><span class="pre">Manual</span></code> and <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Manual</span></code>.</p></li>
-<li><p><strong>winrm_listeners</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">winrm_listener</span></code> blocks as defined below.</p></li>
-<li><p><strong>zone_balance</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Availability Zones in which the Virtual Machines in this Scale Set should be created in. Changing this forces a new resource to be created.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a WindowsVirtualMachineScaleSet resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] additional_capabilities: A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.
+:param pulumi.Input[list] additional_unattend_contents: One or more <code class="docutils literal notranslate"><span class="pre">additional_unattend_content</span></code> blocks as defined below.
+:param pulumi.Input[str] admin_password: The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.
+:param pulumi.Input[str] admin_username: The username of the local administrator on each Virtual Machine Scale Set instance. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] automatic_os_upgrade_policy: A <code class="docutils literal notranslate"><span class="pre">automatic_os_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>.
+:param pulumi.Input[dict] boot_diagnostics: A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.
+:param pulumi.Input[str] computer_name_prefix: The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field.
+:param pulumi.Input[str] custom_data: The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.
+:param pulumi.Input[list] data_disks: One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.
+:param pulumi.Input[bool] do_not_run_extensions_on_overprovisioned_machines: Should Virtual Machine Extensions be run on Overprovisioned Virtual Machines in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[bool] enable_automatic_updates: Are automatic updates enabled for this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[str] eviction_policy: The Policy which should be used Virtual Machines are Evicted from the Scale Set. Changing this forces a new resource to be created.
+:param pulumi.Input[str] health_probe_id: The ID of a Load Balancer Probe which should be used to determine the health of an instance. Changing this forces a new resource to be created. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.
+:param pulumi.Input[dict] identity: A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.
+:param pulumi.Input[float] instances: The number of Virtual Machines in the Scale Set.
+:param pulumi.Input[str] license_type: Specifies the type of on-premise license (also known as <a class="reference external" href="https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing">Azure Hybrid Use Benefit</a>) which should be used for this Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows_Client</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows_Server</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[str] location: The Azure location where the Windows Virtual Machine Scale Set should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[float] max_bid_price: The maximum price you’re willing to pay for each Virtual Machine in this Scale Set, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machines in the Scale Set will be evicted using the <code class="docutils literal notranslate"><span class="pre">eviction_policy</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which means that each Virtual Machine in the Scale Set should not be evicted for price reasons.
+:param pulumi.Input[str] name: The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.
+:param pulumi.Input[list] network_interfaces: One or more <code class="docutils literal notranslate"><span class="pre">network_interface</span></code> blocks as defined below.
+:param pulumi.Input[dict] os_disk: An <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.
+:param pulumi.Input[bool] overprovision: Should Azure over-provision Virtual Machines in this Scale Set? This means that multiple Virtual Machines will be provisioned and Azure will keep the instances which become available first - which improves provisioning success rates and improves deployment time. You’re not billed for these over-provisioned VM’s and they don’t count towards the Subscription Quota. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[str] priority: The Priority of this Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">Regular</span></code> and <code class="docutils literal notranslate"><span class="pre">Spot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Changing this value forces a new resource.
+:param pulumi.Input[bool] provision_vm_agent: Should the Azure VM Agent be provisioned on each Virtual Machine in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this value forces a new resource to be created.
+:param pulumi.Input[str] proximity_placement_group_id: The ID of the Proximity Placement Group in which the Virtual Machine Scale Set should be assigned to. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the Windows Virtual Machine Scale Set should be exist. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] rolling_upgrade_policy: A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.
+:param pulumi.Input[list] secrets: One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.
+:param pulumi.Input[bool] single_placement_group: Should this Virtual Machine Scale Set be limited to a Single Placement Group, which means the number of instances will be capped at 100 Virtual Machines. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[str] sku: The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.
+:param pulumi.Input[str] source_image_id: The ID of an Image which each Virtual Machine in this Scale Set should be based on.
+:param pulumi.Input[dict] source_image_reference: A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below.
+:param pulumi.Input[dict] tags: A mapping of tags which should be assigned to this Virtual Machine Scale Set.
+:param pulumi.Input[str] timezone: Specifies the time zone of the virtual machine, <a class="reference external" href="https://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/">the possible values are defined here</a>.
+:param pulumi.Input[str] upgrade_mode: Specifies how Upgrades (e.g. changing the Image/SKU) should be performed to Virtual Machine Instances. Possible values are <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>, <code class="docutils literal notranslate"><span class="pre">Manual</span></code> and <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Manual</span></code>.
+:param pulumi.Input[list] winrm_listeners: One or more <code class="docutils literal notranslate"><span class="pre">winrm_listener</span></code> blocks as defined below.
+:param pulumi.Input[bool] zone_balance: Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[list] zones: A list of Availability Zones in which the Virtual Machines in this Scale Set should be created in. Changing this forces a new resource to be created.</p>
 <p>The <strong>additional_capabilities</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -5791,10 +5678,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dnsServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableAcceleratedNetworking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIpForwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
@@ -5804,8 +5691,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">domainNameLabel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idleTimeoutInMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -5813,7 +5700,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpPrefixId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -5821,7 +5708,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkSecurityGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 <p>The <strong>os_disk</strong> object supports the following:</p>
@@ -5858,7 +5745,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>source_image_reference</strong> object supports the following:</p>
 <ul class="simple">
@@ -5872,9 +5759,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/windows_virtual_machine_scale_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/windows_virtual_machine_scale_set.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.WindowsVirtualMachineScaleSet.additional_capabilities">
 <code class="sig-name descname">additional_capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.additional_capabilities" title="Permalink to this definition">¶</a></dt>
@@ -6021,10 +5905,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">network_interfaces</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.network_interfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">network_interface</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dnsServers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableAcceleratedNetworking</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIpForwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
@@ -6034,8 +5918,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">domainNameLabel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idleTimeoutInMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -6043,7 +5927,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpPrefixId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -6051,7 +5935,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkSecurityGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -6127,7 +6011,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -6297,10 +6181,10 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dnsServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableAcceleratedNetworking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIpForwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
@@ -6310,8 +6194,8 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">domainNameLabel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idleTimeoutInMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -6319,7 +6203,7 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpPrefixId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -6327,7 +6211,7 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkSecurityGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 <p>The <strong>os_disk</strong> object supports the following:</p>
@@ -6364,7 +6248,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>source_image_reference</strong> object supports the following:</p>
 <ul class="simple">
@@ -6378,9 +6262,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/windows_virtual_machine_scale_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/windows_virtual_machine_scale_set.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -6425,6 +6306,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.get_availability_set">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_availability_set</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_availability_set" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Availability Set.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/availability_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/availability_set.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6433,15 +6317,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/availability_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/availability_set.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_dedicated_host">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_dedicated_host</code><span class="sig-paren">(</span><em class="sig-param">dedicated_host_group_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_dedicated_host" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Dedicated Host.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dedicated_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dedicated_host.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6451,15 +6335,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dedicated_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dedicated_host.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_dedicated_host_group">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_dedicated_host_group</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_dedicated_host_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Dedicated Host Group.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dedicated_host_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dedicated_host_group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6468,15 +6352,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dedicated_host_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dedicated_host_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_disk_encryption_set">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_disk_encryption_set</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_disk_encryption_set" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Disk Encryption Set.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/disk_encryption_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/disk_encryption_set.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6485,15 +6369,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/disk_encryption_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/disk_encryption_set.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_image">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_image</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sort_descending=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Image.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/image.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/image.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6504,15 +6388,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/image.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/image.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_managed_disk">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_managed_disk</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_managed_disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Managed Disk.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/managed_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/managed_disk.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6521,15 +6405,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/managed_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/managed_disk.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_platform_image">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_platform_image</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">offer=None</em>, <em class="sig-param">publisher=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_platform_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about a Platform Image.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/platform_image.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/platform_image.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6540,15 +6424,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/platform_image.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/platform_image.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_shared_image">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_shared_image</code><span class="sig-paren">(</span><em class="sig-param">gallery_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Shared Image within a Shared Image Gallery.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/shared_image.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/shared_image.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6558,15 +6442,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/shared_image.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/shared_image.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_shared_image_gallery">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_shared_image_gallery</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image_gallery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Shared Image Gallery.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/shared_image_gallery.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/shared_image_gallery.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6575,15 +6459,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/shared_image_gallery.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/shared_image_gallery.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_shared_image_version">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_shared_image_version</code><span class="sig-paren">(</span><em class="sig-param">gallery_name=None</em>, <em class="sig-param">image_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Version of a Shared Image within a Shared Image Gallery.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/shared_image_version.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/shared_image_version.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6594,15 +6478,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/shared_image_version.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/shared_image_version.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_snapshot">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_snapshot</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Snapshot.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/snapshot.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6611,15 +6495,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/snapshot.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_virtual_machine">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_virtual_machine</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_virtual_machine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Virtual Machine.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/virtual_machine.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6628,9 +6512,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/virtual_machine.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>
