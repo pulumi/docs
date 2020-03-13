@@ -1,8 +1,7 @@
 ---
 title: "Announcing Pulumi Azure Provider 2.0"
-date: 2020-03-12
+date: 2020-03-13
 meta_desc: "Announcing the 2.0 release of Pulumi Azure provider and what's new in it."
-meta_image: azure20.png
 authors:
     - mikhail-shilkov
 tags:
@@ -91,7 +90,11 @@ const vm = new azure.compute.LinuxVirtualMachine("server-vm", {
 
 ## Removing Deprecated Resources, Invokes, and Fields
 
+<<<<<<< HEAD
 Azure Active Directory has its [own Pulumi provider](https://github.com/pulumi/pulumi-azuread/), so all the AD resources were now removed from the `AD` namespace of the Azure provider 2.0.
+=======
+Azure Active Directory now has its [own Pulumi provider](https://github.com/pulumi/pulumi-azuread/), so all the AD resources were removed from the `AD` namespace of the Azure Provider 2.0.
+>>>>>>> refs/remotes/origin/mikhailshilkov/azure20
 
 A number of other resources, invokes, and fields were removed too, following the changes in the upstream provider. You can see the full list in [this upgrade guide](https://www.terraform.io/docs/providers/azurerm/guides/2.0-upgrade-guide.html).
 
@@ -123,6 +126,17 @@ const cosmosdbAccount = new azure.cosmosdb.Account("cosmosdb", {
 
 You shouldn't need this ability often, but it can be a lifesaver when you do.
 
+<<<<<<< HEAD
+=======
+## Explicit Adoption
+
+Pulumi comes with a way [to adopt existing cloud resources]({{< relref "/blog/adopting-existing-cloud-resources-into-pulumi" >}}) by specifying `import` options.
+
+With the 1.x versions of the Azure provider, some resources could become adopted *accidentally*: if a name would match an existing resource, the upsert operation could succeed, and Pulumi would start managing the existing resource.
+
+The 2.0 version of the provider is rigorous in checking the presence of existing resources with matching names before attempting to create new ones. This measure prevents inadvertent adoption and undesired side effects.
+
+>>>>>>> refs/remotes/origin/mikhailshilkov/azure20
 ## Getting Started with Migration
 
 To get started with Azure provider 2.0, update the versions in your package manager:

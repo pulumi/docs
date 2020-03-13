@@ -264,6 +264,30 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             defaultTtl: oneHour,
             maxTtl: oneHour,
         },
+
+        // Web-component loaders must not be cached, because the names of the files they
+        // load will change between builds.
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/js/components.js",
+            defaultTtl: 0,
+            minTtl: 0,
+            maxTtl: 0,
+        },
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/js/components/components.js",
+            defaultTtl: 0,
+            minTtl: 0,
+            maxTtl: 0,
+        },
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/js/components/components.esm.js",
+            defaultTtl: 0,
+            minTtl: 0,
+            maxTtl: 0,
+        },
     ],
 
     // "All" is the most broad distribution, and also the most expensive.
