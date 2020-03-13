@@ -22,6 +22,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.iot.Certificate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">Certificate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active=None</em>, <em class="sig-param">csr=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.Certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates and manages an AWS IoT certificate.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_certificate.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -36,9 +39,6 @@ for more information on generating keys and a certificate.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_certificate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.iot.Certificate.active">
 <code class="sig-name descname">active</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.Certificate.active" title="Permalink to this definition">¶</a></dt>
@@ -104,9 +104,6 @@ for more information on generating keys and a certificate.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_certificate.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -176,18 +173,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iot.Policy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IoT policy.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.iot.Policy.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.Policy.arn" title="Permalink to this definition">¶</a></dt>
@@ -206,6 +204,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The name of the policy.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.iot.Policy.policy">
+<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.Policy.policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The policy document.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.iot.Policy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">default_version_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.Policy.get" title="Permalink to this definition">¶</a></dt>
@@ -220,12 +224,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN assigned by AWS to this policy.</p></li>
 <li><p><strong>default_version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default version of this policy.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -270,19 +272,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iot.PolicyAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">PolicyAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">target=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.PolicyAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IoT policy attachment.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy_attachment.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy to attach.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The name of the policy to attach.</p></li>
 <li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identity to which the policy is attached.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.iot.PolicyAttachment.policy">
 <code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.PolicyAttachment.policy" title="Permalink to this definition">¶</a></dt>
@@ -306,14 +308,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy to attach.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The name of the policy to attach.</p></li>
 <li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identity to which the policy is attached.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -358,6 +357,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iot.RoleAlias">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">RoleAlias</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">credential_duration=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.RoleAlias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IoT role alias.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_role_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_role_alias.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -369,9 +371,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_role_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_role_alias.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.iot.RoleAlias.alias">
 <code class="sig-name descname">alias</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.RoleAlias.alias" title="Permalink to this definition">¶</a></dt>
@@ -414,9 +413,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_role_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_role_alias.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -461,6 +457,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iot.Thing">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">Thing</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">thing_type_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.Thing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates and manages an AWS IoT Thing.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -472,9 +471,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.iot.Thing.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.Thing.arn" title="Permalink to this definition">¶</a></dt>
@@ -531,9 +527,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -578,6 +571,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iot.ThingPrincipalAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">ThingPrincipalAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">principal=None</em>, <em class="sig-param">thing=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.ThingPrincipalAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches Principal to AWS IoT Thing.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing_principal_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing_principal_attachment.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -588,9 +584,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing_principal_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing_principal_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.iot.ThingPrincipalAttachment.principal">
 <code class="sig-name descname">principal</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.ThingPrincipalAttachment.principal" title="Permalink to this definition">¶</a></dt>
@@ -619,9 +612,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing_principal_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing_principal_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -666,6 +656,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iot.ThingType">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">ThingType</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">deprecated=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.ThingType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates and manages an AWS IoT Thing Type.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing_type.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing_type.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -682,9 +675,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the thing type.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">searchableAttributes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of searchable thing attribute names.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing_type.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing_type.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.iot.ThingType.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.ThingType.arn" title="Permalink to this definition">¶</a></dt>
@@ -736,9 +726,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the thing type.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">searchableAttributes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of searchable thing attribute names.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing_type.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing_type.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -783,7 +770,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iot.TopicRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">TopicRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cloudwatch_alarm=None</em>, <em class="sig-param">cloudwatch_metric=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamodb=None</em>, <em class="sig-param">elasticsearch=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">firehose=None</em>, <em class="sig-param">kinesis=None</em>, <em class="sig-param">lambda_=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">republish=None</em>, <em class="sig-param">s3=None</em>, <em class="sig-param">sns=None</em>, <em class="sig-param">sql=None</em>, <em class="sig-param">sql_version=None</em>, <em class="sig-param">sqs=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.TopicRule" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Create a TopicRule resource with the given unique name, props, and options.
-
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
 :param pulumi.Input[str] description: The description of the rule.
@@ -845,7 +831,7 @@ The **firehose** object supports the following:
 
 The **lambda_** object supports the following:
 
-  * `functionArn` (`pulumi.Input[str]`) - The ARN of the Lambda function.
+  * `function_arn` (`pulumi.Input[str]`) - The ARN of the Lambda function.
 
 The **republish** object supports the following:
 
@@ -854,7 +840,7 @@ The **republish** object supports the following:
 
 The **s3** object supports the following:
 
-  * `bucketName` (`pulumi.Input[str]`) - The Amazon S3 bucket name.
+  * `bucket_name` (`pulumi.Input[str]`) - The Amazon S3 bucket name.
   * `key` (`pulumi.Input[str]`) - The object key.
   * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
 
@@ -866,11 +852,9 @@ The **sns** object supports the following:
 
 The **sqs** object supports the following:
 
-  * `queueUrl` (`pulumi.Input[str]`) - The URL of the Amazon SQS queue.
+  * `queue_url` (`pulumi.Input[str]`) - The URL of the Amazon SQS queue.
   * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
   * `useBase64` (`pulumi.Input[bool]`) - Specifies whether to use Base64 encoding.
-
-&gt; This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_topic_rule.html.markdown.
 </pre></div>
 </div>
 <dl class="attribute">
@@ -978,7 +962,7 @@ The **firehose** object supports the following:
 
 The **lambda_** object supports the following:
 
-  * `functionArn` (`pulumi.Input[str]`) - The ARN of the Lambda function.
+  * `function_arn` (`pulumi.Input[str]`) - The ARN of the Lambda function.
 
 The **republish** object supports the following:
 
@@ -987,7 +971,7 @@ The **republish** object supports the following:
 
 The **s3** object supports the following:
 
-  * `bucketName` (`pulumi.Input[str]`) - The Amazon S3 bucket name.
+  * `bucket_name` (`pulumi.Input[str]`) - The Amazon S3 bucket name.
   * `key` (`pulumi.Input[str]`) - The object key.
   * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
 
@@ -999,11 +983,9 @@ The **sns** object supports the following:
 
 The **sqs** object supports the following:
 
-  * `queueUrl` (`pulumi.Input[str]`) - The URL of the Amazon SQS queue.
+  * `queue_url` (`pulumi.Input[str]`) - The URL of the Amazon SQS queue.
   * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
   * `useBase64` (`pulumi.Input[bool]`) - Specifies whether to use Base64 encoding.
-
-&gt; This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_topic_rule.html.markdown.
 </pre></div>
 </div>
 </dd></dl>
@@ -1050,14 +1032,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iot.get_endpoint">
 <code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">get_endpoint</code><span class="sig-paren">(</span><em class="sig-param">endpoint_type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.get_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a unique endpoint specific to the AWS account making the call.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iot_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iot_endpoint.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>endpoint_type</strong> (<em>str</em>) – Endpoint type. Valid values: <code class="docutils literal notranslate"><span class="pre">iot:CredentialProvider</span></code>, <code class="docutils literal notranslate"><span class="pre">iot:Data</span></code>, <code class="docutils literal notranslate"><span class="pre">iot:Data-ATS</span></code>, <code class="docutils literal notranslate"><span class="pre">iot:Job</span></code>.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iot_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iot_endpoint.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

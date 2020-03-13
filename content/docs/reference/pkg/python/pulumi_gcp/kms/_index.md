@@ -15,38 +15,50 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.kms"></span><dl class="class">
 <dt id="pulumi_gcp.kms.AwaitableGetKMSCryptoKeyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">AwaitableGetKMSCryptoKeyResult</code><span class="sig-paren">(</span><em class="sig-param">key_ring=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">purpose=None</em>, <em class="sig-param">rotation_period=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">version_templates=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.AwaitableGetKMSCryptoKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">AwaitableGetKMSCryptoKeyResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">key_ring=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">purpose=None</em>, <em class="sig-param">rotation_period=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">version_templates=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.AwaitableGetKMSCryptoKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.kms.AwaitableGetKMSCryptoKeyVersionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">AwaitableGetKMSCryptoKeyVersionResult</code><span class="sig-paren">(</span><em class="sig-param">algorithm=None</em>, <em class="sig-param">crypto_key=None</em>, <em class="sig-param">protection_level=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.AwaitableGetKMSCryptoKeyVersionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">AwaitableGetKMSCryptoKeyVersionResult</code><span class="sig-paren">(</span><em class="sig-param">algorithm=None</em>, <em class="sig-param">crypto_key=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">protection_level=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.AwaitableGetKMSCryptoKeyVersionResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.kms.AwaitableGetKMSKeyRingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">AwaitableGetKMSKeyRingResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.AwaitableGetKMSKeyRingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">AwaitableGetKMSKeyRingResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">self_link=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.AwaitableGetKMSKeyRingResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.kms.AwaitableGetKMSSecretCiphertextResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">AwaitableGetKMSSecretCiphertextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext=None</em>, <em class="sig-param">crypto_key=None</em>, <em class="sig-param">plaintext=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.AwaitableGetKMSSecretCiphertextResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">AwaitableGetKMSSecretCiphertextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext=None</em>, <em class="sig-param">crypto_key=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">plaintext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.AwaitableGetKMSSecretCiphertextResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.kms.AwaitableGetKMSSecretResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">AwaitableGetKMSSecretResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext=None</em>, <em class="sig-param">crypto_key=None</em>, <em class="sig-param">plaintext=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.AwaitableGetKMSSecretResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">AwaitableGetKMSSecretResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext=None</em>, <em class="sig-param">crypto_key=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">plaintext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.AwaitableGetKMSSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.kms.CryptoKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">CryptoKey</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key_ring=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">purpose=None</em>, <em class="sig-param">rotation_period=None</em>, <em class="sig-param">version_template=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a CryptoKey resource with the given unique name, props, and options.</p>
+<dd><p>Create a CryptoKey resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] key_ring: The KeyRing that this key belongs to. Format: ‘’projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}’’.
+:param pulumi.Input[dict] labels: Labels with user-defined metadata to apply to this resource.
+:param pulumi.Input[str] name: The resource name for the CryptoKey.
+:param pulumi.Input[str] purpose: The immutable purpose of this CryptoKey. See the <a href="#id1"><span class="problematic" id="id2">`</span></a>purpose</p>
+<blockquote>
+<div><p>reference &lt;<a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose">https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose</a>&gt;`_
+for possible inputs.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>rotation_period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
+place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
+followed by the letter ‘s’ (seconds). It must be greater than a day (ie, 86400).</p></li>
+<li><p><strong>version_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A template describing settings for new crypto key versions.</p></li>
 </ul>
 </dd>
 </dl>
@@ -55,9 +67,50 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protectionLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.kms.CryptoKey.key_ring">
+<code class="sig-name descname">key_ring</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.key_ring" title="Permalink to this definition">¶</a></dt>
+<dd><p>The KeyRing that this key belongs to. Format: ‘’projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}’’.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.kms.CryptoKey.labels">
+<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Labels with user-defined metadata to apply to this resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.kms.CryptoKey.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name for the CryptoKey.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.kms.CryptoKey.purpose">
+<code class="sig-name descname">purpose</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.purpose" title="Permalink to this definition">¶</a></dt>
+<dd><p>The immutable purpose of this CryptoKey. See the <a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose">purpose
+reference</a>
+for possible inputs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.kms.CryptoKey.rotation_period">
+<code class="sig-name descname">rotation_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.rotation_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
+place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
+followed by the letter ‘s’ (seconds). It must be greater than a day (ie, 86400).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.kms.CryptoKey.version_template">
+<code class="sig-name descname">version_template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.version_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>A template describing settings for new crypto key versions.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protectionLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.kms.CryptoKey.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key_ring=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">purpose=None</em>, <em class="sig-param">rotation_period=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">version_template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.get" title="Permalink to this definition">¶</a></dt>
@@ -69,6 +122,17 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>key_ring</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The KeyRing that this key belongs to. Format: ‘’projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}’’.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels with user-defined metadata to apply to this resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the CryptoKey.</p></li>
+<li><p><strong>purpose</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The immutable purpose of this CryptoKey. See the <a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose">purpose
+reference</a>
+for possible inputs.</p>
+</p></li>
+<li><p><strong>rotation_period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
+place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
+followed by the letter ‘s’ (seconds). It must be greater than a day (ie, 86400).</p></li>
+<li><p><strong>version_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A template describing settings for new crypto key versions.</p></li>
 </ul>
 </dd>
 </dl>
@@ -77,9 +141,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protectionLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -131,6 +192,7 @@ an existing Google Cloud KMS crypto key.</p>
 your existing members are preserved.</p>
 </dd>
 </dl>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_crypto_key_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_crypto_key_iam_binding.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -154,9 +216,6 @@ In the second form, the provider’s project setting will be used as a fallback.
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.CryptoKeyIAMBinding.crypto_key_id">
 <code class="sig-name descname">crypto_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKeyIAMBinding.crypto_key_id" title="Permalink to this definition">¶</a></dt>
@@ -215,9 +274,6 @@ In the second form, the provider’s project setting will be used as a fallback.
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -261,14 +317,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.kms.CryptoKeyIAMMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">CryptoKeyIAMMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">crypto_key_id=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.CryptoKeyIAMMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a CryptoKeyIAMMember resource with the given unique name, props, and options.</p>
+<dd><p>Create a CryptoKeyIAMMember resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<blockquote>
+<div><p>Structure is documented below.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
-Structure is documented below.</p></li>
 <li><p><strong>crypto_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The crypto key ID, in the form
 <code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}</span></code> or
 <code class="docutils literal notranslate"><span class="pre">{location_name}/{key_ring_name}/{crypto_key_name}</span></code>. In the second form,
@@ -284,9 +342,6 @@ the provider’s project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.CryptoKeyIAMMember.condition">
 <code class="sig-name descname">condition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKeyIAMMember.condition" title="Permalink to this definition">¶</a></dt>
@@ -351,9 +406,6 @@ the provider’s project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -397,24 +449,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.kms.CryptoKeyIAMPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">CryptoKeyIAMPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">crypto_key_id=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.CryptoKeyIAMPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a CryptoKeyIAMPolicy resource with the given unique name, props, and options.</p>
+<dd><p>Create a CryptoKeyIAMPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] crypto_key_id: The crypto key ID, in the form</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}</span></code> or
+<code class="docutils literal notranslate"><span class="pre">{location_name}/{key_ring_name}/{crypto_key_name}</span></code>. In the second form,
+the provider’s project setting will be used as a fallback.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>crypto_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The crypto key ID, in the form
-<code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}</span></code> or
-<code class="docutils literal notranslate"><span class="pre">{location_name}/{key_ring_name}/{crypto_key_name}</span></code>. In the second form,
-the provider’s project setting will be used as a fallback.</p></li>
-<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
-a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.CryptoKeyIAMPolicy.crypto_key_id">
 <code class="sig-name descname">crypto_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKeyIAMPolicy.crypto_key_id" title="Permalink to this definition">¶</a></dt>
@@ -458,9 +507,6 @@ a <code class="docutils literal notranslate"><span class="pre">organizations.get
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -503,8 +549,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.kms.GetKMSCryptoKeyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">GetKMSCryptoKeyResult</code><span class="sig-paren">(</span><em class="sig-param">key_ring=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">purpose=None</em>, <em class="sig-param">rotation_period=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">version_templates=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">GetKMSCryptoKeyResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">key_ring=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">purpose=None</em>, <em class="sig-param">rotation_period=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">version_templates=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKMSCryptoKey.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.kms.GetKMSCryptoKeyResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.GetKMSCryptoKeyResult.purpose">
 <code class="sig-name descname">purpose</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyResult.purpose" title="Permalink to this definition">¶</a></dt>
@@ -525,22 +577,22 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 <dd><p>The self link of the created CryptoKey. Its format is <code class="docutils literal notranslate"><span class="pre">projects/{projectId}/locations/{location}/keyRings/{keyRingName}/cryptoKeys/{cryptoKeyName}</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_gcp.kms.GetKMSCryptoKeyResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.kms.GetKMSCryptoKeyVersionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">GetKMSCryptoKeyVersionResult</code><span class="sig-paren">(</span><em class="sig-param">algorithm=None</em>, <em class="sig-param">crypto_key=None</em>, <em class="sig-param">protection_level=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyVersionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">GetKMSCryptoKeyVersionResult</code><span class="sig-paren">(</span><em class="sig-param">algorithm=None</em>, <em class="sig-param">crypto_key=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">protection_level=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyVersionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKMSCryptoKeyVersion.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.GetKMSCryptoKeyVersionResult.algorithm">
 <code class="sig-name descname">algorithm</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyVersionResult.algorithm" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.kms.GetKMSCryptoKeyVersionResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyVersionResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -561,35 +613,29 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 <dd><p>The current state of the CryptoKeyVersion. See the <a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions#CryptoKeyVersion.CryptoKeyVersionState">state reference</a> for possible outputs.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_gcp.kms.GetKMSCryptoKeyVersionResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyVersionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.kms.GetKMSKeyRingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">GetKMSKeyRingResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSKeyRingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">GetKMSKeyRingResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">self_link=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSKeyRingResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKMSKeyRing.</p>
-<dl class="attribute">
-<dt id="pulumi_gcp.kms.GetKMSKeyRingResult.self_link">
-<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSKeyRingResult.self_link" title="Permalink to this definition">¶</a></dt>
-<dd><p>The self link of the created KeyRing. Its format is <code class="docutils literal notranslate"><span class="pre">projects/{projectId}/locations/{location}/keyRings/{keyRingName}</span></code>.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.GetKMSKeyRingResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSKeyRingResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_gcp.kms.GetKMSKeyRingResult.self_link">
+<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSKeyRingResult.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The self link of the created KeyRing. Its format is <code class="docutils literal notranslate"><span class="pre">projects/{projectId}/locations/{location}/keyRings/{keyRingName}</span></code>.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.kms.GetKMSSecretCiphertextResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">GetKMSSecretCiphertextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext=None</em>, <em class="sig-param">crypto_key=None</em>, <em class="sig-param">plaintext=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSSecretCiphertextResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">GetKMSSecretCiphertextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext=None</em>, <em class="sig-param">crypto_key=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">plaintext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSSecretCiphertextResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKMSSecretCiphertext.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.GetKMSSecretCiphertextResult.ciphertext">
@@ -607,18 +653,18 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
 <dl class="class">
 <dt id="pulumi_gcp.kms.GetKMSSecretResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">GetKMSSecretResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext=None</em>, <em class="sig-param">crypto_key=None</em>, <em class="sig-param">plaintext=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSSecretResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">GetKMSSecretResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext=None</em>, <em class="sig-param">crypto_key=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">plaintext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKMSSecret.</p>
-<dl class="attribute">
-<dt id="pulumi_gcp.kms.GetKMSSecretResult.plaintext">
-<code class="sig-name descname">plaintext</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSSecretResult.plaintext" title="Permalink to this definition">¶</a></dt>
-<dd><p>Contains the result of decrypting the provided ciphertext.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.GetKMSSecretResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSSecretResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.kms.GetKMSSecretResult.plaintext">
+<code class="sig-name descname">plaintext</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSSecretResult.plaintext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains the result of decrypting the provided ciphertext.</p>
 </dd></dl>
 
 </dd></dl>
@@ -626,20 +672,27 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 <dl class="class">
 <dt id="pulumi_gcp.kms.KeyRing">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">KeyRing</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.KeyRing" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a KeyRing resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a KeyRing resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] location: The location for the KeyRing. A full list of valid locations can be found by running ‘gcloud kms locations list’.
+:param pulumi.Input[str] name: The resource name for the KeyRing.
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring.html.markdown</a>.</p>
+<div><p>If it is not provided, the provider project is used.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.kms.KeyRing.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.KeyRing.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location for the KeyRing. A full list of valid locations can be found by running ‘gcloud kms locations list’.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.kms.KeyRing.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.KeyRing.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name for the KeyRing.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.KeyRing.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.KeyRing.project" title="Permalink to this definition">¶</a></dt>
@@ -658,14 +711,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location for the KeyRing. A full list of valid locations can be found by running ‘gcloud kms locations list’.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the KeyRing.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -718,6 +770,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_key_ring_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_key_ring_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -743,9 +796,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.KeyRingIAMBinding.condition">
 <code class="sig-name descname">condition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.KeyRingIAMBinding.condition" title="Permalink to this definition">¶</a></dt>
@@ -812,9 +862,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -867,6 +914,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_key_ring_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_key_ring_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -892,9 +940,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.KeyRingIAMMember.condition">
 <code class="sig-name descname">condition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.KeyRingIAMMember.condition" title="Permalink to this definition">¶</a></dt>
@@ -961,9 +1006,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1016,6 +1058,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">kms.KeyRingIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_key_ring_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_key_ring_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1031,9 +1074,6 @@ a <code class="docutils literal notranslate"><span class="pre">organizations.get
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.KeyRingIAMPolicy.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.KeyRingIAMPolicy.etag" title="Permalink to this definition">¶</a></dt>
@@ -1077,9 +1117,6 @@ a <code class="docutils literal notranslate"><span class="pre">organizations.get
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1128,6 +1165,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div></blockquote>
 <p><a class="reference external" href="https://cloud.google.com/iot/docs/">the official documentation</a> and
 <a class="reference external" href="https://cloud.google.com/iot/docs/reference/cloudiot/rest/v1/projects.locations.registries">API</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudiot_registry.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudiot_registry.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1172,9 +1212,6 @@ Changing this forces a new resource to be created.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">pubsub_topic_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudiot_registry.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudiot_registry.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.Registry.credentials">
 <code class="sig-name descname">credentials</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.Registry.credentials" title="Permalink to this definition">¶</a></dt>
@@ -1296,9 +1333,6 @@ Changing this forces a new resource to be created.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">pubsub_topic_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudiot_registry.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudiot_registry.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1342,18 +1376,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.kms.SecretCiphertext">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">SecretCiphertext</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">crypto_key=None</em>, <em class="sig-param">plaintext=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.SecretCiphertext" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretCiphertext resource with the given unique name, props, and options.</p>
+<dd><p>Create a SecretCiphertext resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] crypto_key: The full name of the CryptoKey that will be used to encrypt the provided plaintext. Format:</p>
+<blockquote>
+<div><p>‘’projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}’’</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>plaintext</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The plaintext to be encrypted.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_secret_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_secret_ciphertext.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.kms.SecretCiphertext.ciphertext">
+<code class="sig-name descname">ciphertext</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.SecretCiphertext.ciphertext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains the result of encrypting the provided plaintext, encoded in base64.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.kms.SecretCiphertext.crypto_key">
+<code class="sig-name descname">crypto_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.SecretCiphertext.crypto_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full name of the CryptoKey that will be used to encrypt the provided plaintext. Format:
+‘’projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}’’</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.kms.SecretCiphertext.plaintext">
+<code class="sig-name descname">plaintext</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.SecretCiphertext.plaintext" title="Permalink to this definition">¶</a></dt>
+<dd><p>The plaintext to be encrypted.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.kms.SecretCiphertext.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ciphertext=None</em>, <em class="sig-param">crypto_key=None</em>, <em class="sig-param">plaintext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.SecretCiphertext.get" title="Permalink to this definition">¶</a></dt>
@@ -1365,12 +1418,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>ciphertext</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Contains the result of encrypting the provided plaintext, encoded in base64.</p></li>
+<li><p><strong>crypto_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the CryptoKey that will be used to encrypt the provided plaintext. Format:
+‘’projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}’’</p></li>
+<li><p><strong>plaintext</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The plaintext to be encrypted.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_secret_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_secret_ciphertext.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1420,6 +1474,9 @@ and
 <a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys">API</a>.</p>
 <p>A CryptoKey is an interface to key material which can be used to encrypt and decrypt data. A CryptoKey belongs to a
 Google Cloud KMS KeyRing.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_kms_crypto_key.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_kms_crypto_key.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1429,9 +1486,6 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/kms_crypto_key.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/kms_crypto_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1442,6 +1496,9 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
 and
 <a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions">API</a>.</p>
 <p>A CryptoKeyVersion represents an individual cryptographic key, and the associated key material.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_kms_crypto_key_version.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_kms_crypto_key_version.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1450,9 +1507,6 @@ and
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/kms_crypto_key_version.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/kms_crypto_key_version.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1464,6 +1518,9 @@ and
 <a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings">API</a>.</p>
 <p>A KeyRing is a grouping of CryptoKeys for organizational purposes. A KeyRing belongs to a Google Cloud Platform Project
 and resides in a specific location.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_kms_key_ring.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_kms_key_ring.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1476,9 +1533,6 @@ is not provided, the provider project is used.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/kms_key_ring.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/kms_key_ring.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1493,6 +1547,7 @@ within your resource definitions.</p>
 resource definitions, but it does not take care of protecting that data in the
 logging output, plan output, or state output.  Please take care to secure your secret
 data outside of resource definitions.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_kms_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_kms_secret.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1504,9 +1559,6 @@ decrypt the provided ciphertext. This is represented by the format
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/kms_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/kms_secret.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1523,9 +1575,6 @@ encrypt the provided plaintext. This is represented by the format
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/kms_secret_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/kms_secret_ciphertext.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

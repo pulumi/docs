@@ -16,13 +16,20 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.firestore"></span><dl class="class">
 <dt id="pulumi_gcp.firestore.Index">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.firestore.</code><code class="sig-name descname">Index</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">collection=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">fields=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">query_scope=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.firestore.Index" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Index resource with the given unique name, props, and options.</p>
+<dd><p>Create a Index resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] collection: The collection being indexed.
+:param pulumi.Input[str] database: The Firestore database id. Defaults to ‘”(default)”’.
+:param pulumi.Input[list] fields: The fields supported by this index. The last field entry is always for the field path ‘<strong>name</strong>’. If, on creation,</p>
+<blockquote>
+<div><p>‘<strong>name</strong>’ was not specified as the last field, it will be added automatically with the same direction as that of the
+last field defined. If the final field in a composite index is not directional, the ‘<strong>name</strong>’ will be ordered
+‘“ASCENDING”’ (unless explicitly specified otherwise).</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>query_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which a query is run. One of ‘“COLLECTION”’ or ‘“COLLECTION_GROUP”’. Defaults to ‘“COLLECTION”’.</p>
 </dd>
 </dl>
 <p>The <strong>fields</strong> object supports the following:</p>
@@ -31,9 +38,45 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">fieldPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/firestore_index.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/firestore_index.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.firestore.Index.collection">
+<code class="sig-name descname">collection</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.firestore.Index.collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>The collection being indexed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.firestore.Index.database">
+<code class="sig-name descname">database</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.firestore.Index.database" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Firestore database id. Defaults to ‘”(default)”’.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.firestore.Index.fields">
+<code class="sig-name descname">fields</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.firestore.Index.fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fields supported by this index. The last field entry is always for the field path ‘<strong>name</strong>’. If, on creation,
+‘<strong>name</strong>’ was not specified as the last field, it will be added automatically with the same direction as that of the
+last field defined. If the final field in a composite index is not directional, the ‘<strong>name</strong>’ will be ordered
+‘“ASCENDING”’ (unless explicitly specified otherwise).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arrayConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.firestore.Index.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.firestore.Index.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A server defined name for this index. Format:
+‘projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}’</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.firestore.Index.query_scope">
+<code class="sig-name descname">query_scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.firestore.Index.query_scope" title="Permalink to this definition">¶</a></dt>
+<dd><p>The scope at which a query is run. One of ‘“COLLECTION”’ or ‘“COLLECTION_GROUP”’. Defaults to ‘“COLLECTION”’.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.firestore.Index.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">collection=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">fields=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">query_scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.firestore.Index.get" title="Permalink to this definition">¶</a></dt>
@@ -45,6 +88,15 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>collection</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The collection being indexed.</p></li>
+<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Firestore database id. Defaults to ‘”(default)”’.</p></li>
+<li><p><strong>fields</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The fields supported by this index. The last field entry is always for the field path ‘<strong>name</strong>’. If, on creation,
+‘<strong>name</strong>’ was not specified as the last field, it will be added automatically with the same direction as that of the
+last field defined. If the final field in a composite index is not directional, the ‘<strong>name</strong>’ will be ordered
+‘“ASCENDING”’ (unless explicitly specified otherwise).</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A server defined name for this index. Format:
+‘projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}’</p></li>
+<li><p><strong>query_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which a query is run. One of ‘“COLLECTION”’ or ‘“COLLECTION_GROUP”’. Defaults to ‘“COLLECTION”’.</p></li>
 </ul>
 </dd>
 </dl>
@@ -54,9 +106,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">fieldPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/firestore_index.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/firestore_index.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

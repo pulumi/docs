@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.sql.ActiveDirectoryAdministrator">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">ActiveDirectoryAdministrator</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.ActiveDirectoryAdministrator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to set a user or group as the AD administrator for an Azure SQL server</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_active_directory_administrator.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_active_directory_administrator.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -30,9 +33,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_active_directory_administrator.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_active_directory_administrator.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.sql.ActiveDirectoryAdministrator.login">
 <code class="sig-name descname">login</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.ActiveDirectoryAdministrator.login" title="Permalink to this definition">¶</a></dt>
@@ -82,9 +82,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_active_directory_administrator.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_active_directory_administrator.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -127,18 +124,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.sql.AwaitableGetDatabaseResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">AwaitableGetDatabaseResult</code><span class="sig-paren">(</span><em class="sig-param">collation=None</em>, <em class="sig-param">default_secondary_location=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">elastic_pool_name=None</em>, <em class="sig-param">failover_group_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_scale=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.AwaitableGetDatabaseResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">AwaitableGetDatabaseResult</code><span class="sig-paren">(</span><em class="sig-param">collation=None</em>, <em class="sig-param">default_secondary_location=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">elastic_pool_name=None</em>, <em class="sig-param">failover_group_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_scale=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.AwaitableGetDatabaseResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.sql.AwaitableGetServerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">AwaitableGetServerResult</code><span class="sig-paren">(</span><em class="sig-param">administrator_login=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">identities=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.AwaitableGetServerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">AwaitableGetServerResult</code><span class="sig-paren">(</span><em class="sig-param">administrator_login=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">identities=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.AwaitableGetServerResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.sql.Database">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">collation=None</em>, <em class="sig-param">create_mode=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">elastic_pool_name=None</em>, <em class="sig-param">import_=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_size_bytes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_scale=None</em>, <em class="sig-param">requested_service_objective_id=None</em>, <em class="sig-param">requested_service_objective_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">restore_point_in_time=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">source_database_deletion_date=None</em>, <em class="sig-param">source_database_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">threat_detection_policy=None</em>, <em class="sig-param">zone_redundant=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.Database" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">collation=None</em>, <em class="sig-param">create_mode=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">elastic_pool_name=None</em>, <em class="sig-param">import_=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_size_bytes=None</em>, <em class="sig-param">max_size_gb=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_scale=None</em>, <em class="sig-param">requested_service_objective_id=None</em>, <em class="sig-param">requested_service_objective_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">restore_point_in_time=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">source_database_deletion_date=None</em>, <em class="sig-param">source_database_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">threat_detection_policy=None</em>, <em class="sig-param">zone_redundant=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to manage an Azure SQL Database</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_database.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_database.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -197,9 +197,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">storage_endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the blob storage endpoint (e.g. <a class="reference external" href="https://MyAccount.blob.core.windows.net">https://MyAccount.blob.core.windows.net</a>). This blob storage will hold all Threat Detection audit logs. Required if <code class="docutils literal notranslate"><span class="pre">state</span></code> is <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useServerDefault</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Should the default server policy be used? Defaults to <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_database.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_database.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.sql.Database.collation">
 <code class="sig-name descname">collation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.Database.collation" title="Permalink to this definition">¶</a></dt>
@@ -348,7 +345,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.sql.Database.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">collation=None</em>, <em class="sig-param">create_mode=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">default_secondary_location=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">elastic_pool_name=None</em>, <em class="sig-param">encryption=None</em>, <em class="sig-param">import_=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_size_bytes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_scale=None</em>, <em class="sig-param">requested_service_objective_id=None</em>, <em class="sig-param">requested_service_objective_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">restore_point_in_time=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">source_database_deletion_date=None</em>, <em class="sig-param">source_database_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">threat_detection_policy=None</em>, <em class="sig-param">zone_redundant=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.Database.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">collation=None</em>, <em class="sig-param">create_mode=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">default_secondary_location=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">elastic_pool_name=None</em>, <em class="sig-param">encryption=None</em>, <em class="sig-param">import_=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_size_bytes=None</em>, <em class="sig-param">max_size_gb=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_scale=None</em>, <em class="sig-param">requested_service_objective_id=None</em>, <em class="sig-param">requested_service_objective_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">restore_point_in_time=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">source_database_deletion_date=None</em>, <em class="sig-param">source_database_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">threat_detection_policy=None</em>, <em class="sig-param">zone_redundant=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.Database.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Database resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -415,9 +412,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">storage_endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the blob storage endpoint (e.g. <a class="reference external" href="https://MyAccount.blob.core.windows.net">https://MyAccount.blob.core.windows.net</a>). This blob storage will hold all Threat Detection audit logs. Required if <code class="docutils literal notranslate"><span class="pre">state</span></code> is <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useServerDefault</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Should the default server policy be used? Defaults to <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_database.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_database.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -464,6 +458,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Allows you to manage an Azure SQL Elastic Pool.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> -  This version of the <code class="docutils literal notranslate"><span class="pre">Elasticpool</span></code> resource is being <strong>deprecated</strong> and should no longer be used. Please use the mssql.ElasticPool version instead.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_elasticpool.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_elasticpool.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -486,9 +481,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_elasticpool.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_elasticpool.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.sql.ElasticPool.creation_date">
 <code class="sig-name descname">creation_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.ElasticPool.creation_date" title="Permalink to this definition">¶</a></dt>
@@ -583,9 +575,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_elasticpool.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_elasticpool.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -630,6 +619,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.sql.FailoverGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">FailoverGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">databases=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">partner_servers=None</em>, <em class="sig-param">read_write_endpoint_failover_policy=None</em>, <em class="sig-param">readonly_endpoint_failover_policy=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.FailoverGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a failover group of databases on a collection of Azure SQL servers.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_failover_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_failover_group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -661,9 +653,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Failover policy for the read-only endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>, and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_failover_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_failover_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.sql.FailoverGroup.databases">
 <code class="sig-name descname">databases</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.FailoverGroup.databases" title="Permalink to this definition">¶</a></dt>
@@ -775,9 +764,6 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Failover policy for the read-only endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>, and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_failover_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_failover_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -822,6 +808,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.sql.FirewallRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">FirewallRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">end_ip_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">start_ip_address=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.FirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to manage an Azure SQL Firewall Rule</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_firewall_rule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -836,9 +825,6 @@ create the sql server.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_firewall_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.sql.FirewallRule.end_ip_address">
 <code class="sig-name descname">end_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.FirewallRule.end_ip_address" title="Permalink to this definition">¶</a></dt>
@@ -890,9 +876,6 @@ create the sql server.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_firewall_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -935,7 +918,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.sql.GetDatabaseResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">GetDatabaseResult</code><span class="sig-paren">(</span><em class="sig-param">collation=None</em>, <em class="sig-param">default_secondary_location=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">elastic_pool_name=None</em>, <em class="sig-param">failover_group_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_scale=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">GetDatabaseResult</code><span class="sig-paren">(</span><em class="sig-param">collation=None</em>, <em class="sig-param">default_secondary_location=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">elastic_pool_name=None</em>, <em class="sig-param">failover_group_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_scale=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDatabase.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.sql.GetDatabaseResult.collation">
@@ -965,6 +948,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.sql.GetDatabaseResult.failover_group_id">
 <code class="sig-name descname">failover_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult.failover_group_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the failover group the database belongs to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetDatabaseResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1003,17 +992,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags assigned to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.sql.GetDatabaseResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.sql.GetServerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">GetServerResult</code><span class="sig-paren">(</span><em class="sig-param">administrator_login=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">identities=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.GetServerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">GetServerResult</code><span class="sig-paren">(</span><em class="sig-param">administrator_login=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">identities=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.GetServerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServer.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.sql.GetServerResult.administrator_login">
@@ -1025,6 +1008,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.sql.GetServerResult.fqdn">
 <code class="sig-name descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetServerResult.fqdn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The fully qualified domain name of the SQL Server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetServerResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetServerResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1051,21 +1040,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The version of the SQL Server.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.sql.GetServerResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetServerResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.sql.SqlServer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">SqlServer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">administrator_login=None</em>, <em class="sig-param">administrator_login_password=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.SqlServer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">SqlServer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">administrator_login=None</em>, <em class="sig-param">administrator_login_password=None</em>, <em class="sig-param">extended_auditing_policy=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.SqlServer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a SQL Azure Database Server.</p>
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the administrator login and password will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_server.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_server.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1074,6 +1058,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>administrator_login</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The administrator login name for the new server. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>administrator_login_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password associated with the <code class="docutils literal notranslate"><span class="pre">administrator_login</span></code> user. Needs to comply with Azure’s <a class="reference external" href="https://msdn.microsoft.com/library/ms161959.aspx">Password Policy</a></p></li>
+<li><p><strong>extended_auditing_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">extended_auditing_policy</span></code> block as defined below.</p></li>
 <li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SQL Server. This needs to be globally unique within Azure.</p></li>
@@ -1083,15 +1068,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>extended_auditing_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_in_days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - (Optional) Specifies the number of days to retain logs for in the storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Required)  Specifies the access key to use for the auditing storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountAccessKeyIsSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - (Optional) Specifies whether <code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> value is the storage’s secondary key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Required) Specifies the blob storage endpoint (e.g. <a class="reference external" href="https://MyAccount.blob.core.windows.net">https://MyAccount.blob.core.windows.net</a>).</p></li>
+</ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_server.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_server.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.sql.SqlServer.administrator_login">
 <code class="sig-name descname">administrator_login</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.SqlServer.administrator_login" title="Permalink to this definition">¶</a></dt>
@@ -1102,6 +1091,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.sql.SqlServer.administrator_login_password">
 <code class="sig-name descname">administrator_login_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.SqlServer.administrator_login_password" title="Permalink to this definition">¶</a></dt>
 <dd><p>The password associated with the <code class="docutils literal notranslate"><span class="pre">administrator_login</span></code> user. Needs to comply with Azure’s <a class="reference external" href="https://msdn.microsoft.com/library/ms161959.aspx">Password Policy</a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.SqlServer.extended_auditing_policy">
+<code class="sig-name descname">extended_auditing_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.SqlServer.extended_auditing_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">extended_auditing_policy</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_in_days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - (Optional) Specifies the number of days to retain logs for in the storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - (Required)  Specifies the access key to use for the auditing storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountAccessKeyIsSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - (Optional) Specifies whether <code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> value is the storage’s secondary key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - (Required) Specifies the blob storage endpoint (e.g. <a class="reference external" href="https://MyAccount.blob.core.windows.net">https://MyAccount.blob.core.windows.net</a>).</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1153,7 +1154,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.sql.SqlServer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">administrator_login=None</em>, <em class="sig-param">administrator_login_password=None</em>, <em class="sig-param">fully_qualified_domain_name=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.SqlServer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">administrator_login=None</em>, <em class="sig-param">administrator_login_password=None</em>, <em class="sig-param">extended_auditing_policy=None</em>, <em class="sig-param">fully_qualified_domain_name=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.SqlServer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SqlServer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1165,6 +1166,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>administrator_login</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The administrator login name for the new server. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>administrator_login_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The password associated with the <code class="docutils literal notranslate"><span class="pre">administrator_login</span></code> user. Needs to comply with Azure’s <a class="reference external" href="https://msdn.microsoft.com/library/ms161959.aspx">Password Policy</a></p>
 </p></li>
+<li><p><strong>extended_auditing_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">extended_auditing_policy</span></code> block as defined below.</p></li>
 <li><p><strong>fully_qualified_domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified domain name of the Azure SQL Server (e.g. myServerName.database.windows.net)</p></li>
 <li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
@@ -1175,15 +1177,19 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>extended_auditing_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_in_days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - (Optional) Specifies the number of days to retain logs for in the storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Required)  Specifies the access key to use for the auditing storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountAccessKeyIsSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - (Optional) Specifies whether <code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> value is the storage’s secondary key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Required) Specifies the blob storage endpoint (e.g. <a class="reference external" href="https://MyAccount.blob.core.windows.net">https://MyAccount.blob.core.windows.net</a>).</p></li>
+</ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_server.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_server.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1228,6 +1234,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.sql.VirtualNetworkRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">VirtualNetworkRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ignore_missing_vnet_service_endpoint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.VirtualNetworkRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to add, update, or remove an Azure SQL server to a subnet of a virtual network.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_virtual_network_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_virtual_network_rule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1241,9 +1250,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_virtual_network_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_virtual_network_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.sql.VirtualNetworkRule.ignore_missing_vnet_service_endpoint">
 <code class="sig-name descname">ignore_missing_vnet_service_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.VirtualNetworkRule.ignore_missing_vnet_service_endpoint" title="Permalink to this definition">¶</a></dt>
@@ -1293,9 +1299,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_virtual_network_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_virtual_network_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1340,6 +1343,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.sql.get_database">
 <code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">get_database</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.get_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing SQL Azure Database.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/sql_database.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/sql_database.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1349,15 +1355,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/sql_database.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/sql_database.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.sql.get_server">
 <code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">get_server</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.get_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing SQL Azure Database Server.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/sql_server.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/sql_server.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1366,9 +1372,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/sql_server.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/sql_server.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

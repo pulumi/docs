@@ -27,11 +27,20 @@ along with a list of requirements necessary for the label to be applied.</p>
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_access_level.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_access_level.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>basic</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of predefined conditions for the access level and a combining function.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the AccessLevel and its use. Does not affect behavior.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name for the Access Level. The short<em>name component must begin with a letter and only include alphanumeric and
+‘</em>’. Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p></li>
+<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}</p></li>
+<li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable title. Must be unique within the Policy.</p></li>
 </ul>
 </dd>
 </dl>
@@ -62,9 +71,63 @@ along with a list of requirements necessary for the label to be applied.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_access_level.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_access_level.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.AccessLevel.basic">
+<code class="sig-name descname">basic</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel.basic" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of predefined conditions for the access level and a combining function.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">combiningFunction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">devicePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedDeviceManagementLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedEncryptionStatuses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">osConstraints</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">osType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireAdminApproval</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireCorpOwned</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireScreenLock</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipSubnetworks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requiredAccessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.AccessLevel.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of the AccessLevel and its use. Does not affect behavior.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.AccessLevel.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resource name for the Access Level. The short<em>name component must begin with a letter and only include alphanumeric and
+‘</em>’. Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.AccessLevel.parent">
+<code class="sig-name descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel.parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.AccessLevel.title">
+<code class="sig-name descname">title</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel.title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Human readable title. Must be unique within the Policy.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.accesscontextmanager.AccessLevel.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">basic=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel.get" title="Permalink to this definition">¶</a></dt>
@@ -76,6 +139,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>basic</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of predefined conditions for the access level and a combining function.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the AccessLevel and its use. Does not affect behavior.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name for the Access Level. The short<em>name component must begin with a letter and only include alphanumeric and
+‘</em>’. Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p></li>
+<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}</p></li>
+<li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable title. Must be unique within the Policy.</p></li>
 </ul>
 </dd>
 </dl>
@@ -106,9 +175,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_access_level.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_access_level.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -166,17 +232,49 @@ restrictions it specifies apply to all projects within an organization.</p>
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_access_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_access_policy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The parent of this AccessPolicy in the Cloud Resource Hierarchy. Format: organizations/{organization_id}</p></li>
+<li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable title. Does not affect behavior.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_access_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_access_policy.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.AccessPolicy.create_time">
+<code class="sig-name descname">create_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessPolicy.create_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time the AccessPolicy was created in UTC.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.AccessPolicy.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessPolicy.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resource name of the AccessPolicy. Format: {policy_id}</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.AccessPolicy.parent">
+<code class="sig-name descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessPolicy.parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parent of this AccessPolicy in the Cloud Resource Hierarchy. Format: organizations/{organization_id}</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.AccessPolicy.title">
+<code class="sig-name descname">title</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessPolicy.title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Human readable title. Does not affect behavior.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.AccessPolicy.update_time">
+<code class="sig-name descname">update_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessPolicy.update_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time the AccessPolicy was updated in UTC.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.accesscontextmanager.AccessPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">update_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessPolicy.get" title="Permalink to this definition">¶</a></dt>
@@ -188,12 +286,14 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>create_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time the AccessPolicy was created in UTC.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name of the AccessPolicy. Format: {policy_id}</p></li>
+<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The parent of this AccessPolicy in the Cloud Resource Hierarchy. Format: organizations/{organization_id}</p></li>
+<li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable title. Does not affect behavior.</p></li>
+<li><p><strong>update_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time the AccessPolicy was updated in UTC.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_access_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_access_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -257,11 +357,29 @@ project may belong to multiple Service Perimeter Bridges.</p></li>
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_service_perimeter.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_service_perimeter.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the ServicePerimeter and its use. Does not affect behavior.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name for the ServicePerimeter. The short<em>name component must begin with a letter and only include alphanumeric
+and ‘</em>’. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}</p></li>
+<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}</p></li>
+<li><p><strong>perimeter_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
+resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter. In
+addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A perimeter
+bridge only contains resources. Cross project operations are permitted if all effected resources share some perimeter
+(whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are governed entirely by
+the regular perimeter that resource is in. Perimeter Bridges are typically useful when building more complex topologies
+with many independent perimeters that need to share some data with a common perimeter, but should not be able to share
+data among themselves.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
+perimeter content and boundaries.</p></li>
+<li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable title. Must be unique within the Policy.</p></li>
 </ul>
 </dd>
 </dl>
@@ -271,9 +389,68 @@ project may belong to multiple Service Perimeter Bridges.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_service_perimeter.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_service_perimeter.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.create_time">
+<code class="sig-name descname">create_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.create_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time the AccessPolicy was created in UTC.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of the ServicePerimeter and its use. Does not affect behavior.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resource name for the ServicePerimeter. The short<em>name component must begin with a letter and only include alphanumeric
+and ‘</em>’. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.parent">
+<code class="sig-name descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.perimeter_type">
+<code class="sig-name descname">perimeter_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.perimeter_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
+resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter. In
+addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A perimeter
+bridge only contains resources. Cross project operations are permitted if all effected resources share some perimeter
+(whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are governed entirely by
+the regular perimeter that resource is in. Perimeter Bridges are typically useful when building more complex topologies
+with many independent perimeters that need to share some data with a common perimeter, but should not be able to share
+data among themselves.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
+perimeter content and boundaries.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.title">
+<code class="sig-name descname">title</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Human readable title. Must be unique within the Policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.update_time">
+<code class="sig-name descname">update_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.update_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time the AccessPolicy was updated in UTC.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">perimeter_type=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">update_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.get" title="Permalink to this definition">¶</a></dt>
@@ -285,6 +462,23 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>create_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time the AccessPolicy was created in UTC.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the ServicePerimeter and its use. Does not affect behavior.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name for the ServicePerimeter. The short<em>name component must begin with a letter and only include alphanumeric
+and ‘</em>’. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}</p></li>
+<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}</p></li>
+<li><p><strong>perimeter_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
+resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter. In
+addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A perimeter
+bridge only contains resources. Cross project operations are permitted if all effected resources share some perimeter
+(whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are governed entirely by
+the regular perimeter that resource is in. Perimeter Bridges are typically useful when building more complex topologies
+with many independent perimeters that need to share some data with a common perimeter, but should not be able to share
+data among themselves.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
+perimeter content and boundaries.</p></li>
+<li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable title. Must be unique within the Policy.</p></li>
+<li><p><strong>update_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time the AccessPolicy was updated in UTC.</p></li>
 </ul>
 </dd>
 </dl>
@@ -294,9 +488,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_service_perimeter.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_service_perimeter.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -358,17 +549,33 @@ they don’t fight over which resources should be in the policy.</p>
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_service_perimeter_resource.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_service_perimeter_resource.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>perimeter_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Service Perimeter to add this resource to.</p></li>
+<li><p><strong>resource</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GCP resource that is inside of the service perimeter. Currently only projects are allowed. Format:
+projects/{project_number}</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_service_perimeter_resource.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_service_perimeter_resource.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.ServicePerimeterResource.perimeter_name">
+<code class="sig-name descname">perimeter_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeterResource.perimeter_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Service Perimeter to add this resource to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.ServicePerimeterResource.resource">
+<code class="sig-name descname">resource</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeterResource.resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>A GCP resource that is inside of the service perimeter. Currently only projects are allowed. Format:
+projects/{project_number}</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.accesscontextmanager.ServicePerimeterResource.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">perimeter_name=None</em>, <em class="sig-param">resource=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeterResource.get" title="Permalink to this definition">¶</a></dt>
@@ -380,12 +587,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>perimeter_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Service Perimeter to add this resource to.</p></li>
+<li><p><strong>resource</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GCP resource that is inside of the service perimeter. Currently only projects are allowed. Format:
+projects/{project_number}</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_service_perimeter_resource.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_service_perimeter_resource.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

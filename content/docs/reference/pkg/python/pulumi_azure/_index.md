@@ -32,6 +32,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="core/">core</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cosmosdb/">cosmosdb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dashboard/">dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databasemigration/">databasemigration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="databricks/">databricks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datafactory/">datafactory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datalake/">datalake</a></li>
@@ -43,7 +44,9 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="frontdoor/">frontdoor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hdinsight/">hdinsight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="healthcare/">healthcare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc/">hpc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iot/">iot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iotcentral/">iotcentral</a></li>
 <li class="toctree-l1"><a class="reference internal" href="keyvault/">keyvault</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kusto/">kusto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lb/">lb</a></li>
@@ -56,6 +59,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="mariadb/">mariadb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="marketplace/">marketplace</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mediaservices/">mediaservices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mixedreality/">mixedreality</a></li>
 <li class="toctree-l1"><a class="reference internal" href="monitoring/">monitoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="msi/">msi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mssql/">mssql</a></li>

@@ -15,39 +15,33 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.ecs"></span><dl class="class">
 <dt id="pulumi_aws.ecs.AwaitableGetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">pending_tasks_count=None</em>, <em class="sig-param">registered_container_instances_count=None</em>, <em class="sig-param">running_tasks_count=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">pending_tasks_count=None</em>, <em class="sig-param">registered_container_instances_count=None</em>, <em class="sig-param">running_tasks_count=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.AwaitableGetContainerDefinitionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">AwaitableGetContainerDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">container_name=None</em>, <em class="sig-param">cpu=None</em>, <em class="sig-param">disable_networking=None</em>, <em class="sig-param">docker_labels=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">image_digest=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">task_definition=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.AwaitableGetContainerDefinitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">AwaitableGetContainerDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">container_name=None</em>, <em class="sig-param">cpu=None</em>, <em class="sig-param">disable_networking=None</em>, <em class="sig-param">docker_labels=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">image_digest=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">task_definition=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.AwaitableGetContainerDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.AwaitableGetServiceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">AwaitableGetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">cluster_arn=None</em>, <em class="sig-param">desired_count=None</em>, <em class="sig-param">launch_type=None</em>, <em class="sig-param">scheduling_strategy=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">task_definition=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.AwaitableGetServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">AwaitableGetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">cluster_arn=None</em>, <em class="sig-param">desired_count=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">launch_type=None</em>, <em class="sig-param">scheduling_strategy=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">task_definition=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.AwaitableGetServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.AwaitableGetTaskDefinitionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">AwaitableGetTaskDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">family=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">revision=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">task_definition=None</em>, <em class="sig-param">task_role_arn=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.AwaitableGetTaskDefinitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">AwaitableGetTaskDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">family=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">revision=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">task_definition=None</em>, <em class="sig-param">task_role_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.AwaitableGetTaskDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.CapacityProvider">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">CapacityProvider</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_scaling_group_provider=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.CapacityProvider" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a CapacityProvider resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>auto_scaling_group_provider</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument defining the provider for the ECS auto scaling group. Defined below.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the capacity provider.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a CapacityProvider resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] auto_scaling_group_provider: Nested argument defining the provider for the ECS auto scaling group. Defined below.
+:param pulumi.Input[str] name: The name of the capacity provider.
+:param pulumi.Input[dict] tags: Key-value mapping of resource tags.</p>
 <p>The <strong>auto_scaling_group_provider</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">autoScalingGroupArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -61,9 +55,6 @@ anything, please consult the source <a class="reference external" href="https://
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">managedTerminationProtection</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_capacity_provider.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_capacity_provider.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.CapacityProvider.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.CapacityProvider.arn" title="Permalink to this definition">¶</a></dt>
@@ -131,9 +122,6 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">managedTerminationProtection</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_capacity_provider.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_capacity_provider.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -189,6 +177,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Optional) The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> - (Optional) The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_cluster.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -213,9 +204,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.Cluster.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Cluster.arn" title="Permalink to this definition">¶</a></dt>
@@ -292,9 +280,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_cluster.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -337,12 +322,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.GetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">pending_tasks_count=None</em>, <em class="sig-param">registered_container_instances_count=None</em>, <em class="sig-param">running_tasks_count=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">pending_tasks_count=None</em>, <em class="sig-param">registered_container_instances_count=None</em>, <em class="sig-param">running_tasks_count=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.GetClusterResult.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetClusterResult.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the ECS Cluster</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ecs.GetClusterResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetClusterResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -375,17 +366,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The status of the ECS Cluster</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ecs.GetClusterResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetClusterResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.GetContainerDefinitionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">GetContainerDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">container_name=None</em>, <em class="sig-param">cpu=None</em>, <em class="sig-param">disable_networking=None</em>, <em class="sig-param">docker_labels=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">image_digest=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">task_definition=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.GetContainerDefinitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">GetContainerDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">container_name=None</em>, <em class="sig-param">cpu=None</em>, <em class="sig-param">disable_networking=None</em>, <em class="sig-param">docker_labels=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">image_digest=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">task_definition=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.GetContainerDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getContainerDefinition.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.GetContainerDefinitionResult.cpu">
@@ -412,6 +397,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ecs.GetContainerDefinitionResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetContainerDefinitionResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ecs.GetContainerDefinitionResult.image">
 <code class="sig-name descname">image</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetContainerDefinitionResult.image" title="Permalink to this definition">¶</a></dt>
 <dd><p>The docker image in use, including the digest</p>
@@ -435,17 +426,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The soft limit (in MiB) of memory to reserve for the container. When system memory is under contention, Docker attempts to keep the container memory to this soft limit</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ecs.GetContainerDefinitionResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetContainerDefinitionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.GetServiceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">GetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">cluster_arn=None</em>, <em class="sig-param">desired_count=None</em>, <em class="sig-param">launch_type=None</em>, <em class="sig-param">scheduling_strategy=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">task_definition=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.GetServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">GetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">cluster_arn=None</em>, <em class="sig-param">desired_count=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">launch_type=None</em>, <em class="sig-param">scheduling_strategy=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">task_definition=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.GetServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getService.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.GetServiceResult.arn">
@@ -457,6 +442,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ecs.GetServiceResult.desired_count">
 <code class="sig-name descname">desired_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetServiceResult.desired_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of tasks for the ECS Service</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ecs.GetServiceResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetServiceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -477,22 +468,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The family for the latest ACTIVE revision</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ecs.GetServiceResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetServiceResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.GetTaskDefinitionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">GetTaskDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">family=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">revision=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">task_definition=None</em>, <em class="sig-param">task_role_arn=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.GetTaskDefinitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">GetTaskDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">family=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">revision=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">task_definition=None</em>, <em class="sig-param">task_role_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.GetTaskDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTaskDefinition.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.GetTaskDefinitionResult.family">
 <code class="sig-name descname">family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetTaskDefinitionResult.family" title="Permalink to this definition">¶</a></dt>
 <dd><p>The family of this task definition</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ecs.GetTaskDefinitionResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetTaskDefinitionResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -517,12 +508,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ecs.GetTaskDefinitionResult.task_role_arn">
 <code class="sig-name descname">task_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetTaskDefinitionResult.task_role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the IAM role that containers in this task can assume</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.ecs.GetTaskDefinitionResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetTaskDefinitionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -589,6 +574,9 @@ Guide</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">container_port</span></code> - (Optional) The port value, already specified in the task definition, to be used for your service discovery service.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> - (Optional) The container name value, already specified in the task definition, to be used for your service discovery service.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -632,7 +620,7 @@ Guide</a>.</p></li>
 </ul>
 <p>The <strong>load_balancers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">elbName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -655,14 +643,11 @@ Guide</a>.</p></li>
 </ul>
 <p>The <strong>service_registries</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">registryArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.Service.capacity_provider_strategies">
 <code class="sig-name descname">capacity_provider_strategies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.capacity_provider_strategies" title="Permalink to this definition">¶</a></dt>
@@ -736,7 +721,7 @@ Guide</a>.</p></li>
 <code class="sig-name descname">load_balancers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.load_balancers" title="Permalink to this definition">¶</a></dt>
 <dd><p>A load balancer block. Load balancers documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">elbName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -804,7 +789,7 @@ Guide</a>.</p></li>
 <code class="sig-name descname">service_registries</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.service_registries" title="Permalink to this definition">¶</a></dt>
 <dd><p>The service discovery registries for the service. The maximum number of <code class="docutils literal notranslate"><span class="pre">service_registries</span></code> blocks is <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">registryArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -879,7 +864,7 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>load_balancers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">elbName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -902,14 +887,11 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>service_registries</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">registryArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -954,6 +936,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ecs.TaskDefinition">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">TaskDefinition</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">container_definitions=None</em>, <em class="sig-param">cpu=None</em>, <em class="sig-param">execution_role_arn=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">ipc_mode=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">pid_mode=None</em>, <em class="sig-param">placement_constraints=None</em>, <em class="sig-param">proxy_configuration=None</em>, <em class="sig-param">requires_compatibilities=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">task_role_arn=None</em>, <em class="sig-param">volumes=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a revision of an ECS task definition to be used in <code class="docutils literal notranslate"><span class="pre">ecs.Service</span></code>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -991,7 +976,7 @@ Guide</a>.</p></li>
 </ul>
 <p>The <strong>proxy_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the container that will serve as the App Mesh proxy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the container that will serve as the App Mesh proxy.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The proxy type. The default value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>. The only supported value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>.</p></li>
 </ul>
@@ -1008,7 +993,7 @@ Guide</a>.</p></li>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">efsVolumeConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Used to configure a EFS volume. Can be used only with an EC2 type task.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">fileSystemId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the EFS File System.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file_system_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the EFS File System.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rootDirectory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount on the host</p></li>
 </ul>
 </li>
@@ -1016,9 +1001,6 @@ Guide</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the volume. This name is referenced in the <code class="docutils literal notranslate"><span class="pre">sourceVolume</span></code>
 parameter of container definition in the <code class="docutils literal notranslate"><span class="pre">mountPoints</span></code> section.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.TaskDefinition.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition.arn" title="Permalink to this definition">¶</a></dt>
@@ -1096,7 +1078,7 @@ Guide</a>.</p></li>
 <code class="sig-name descname">proxy_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition.proxy_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The proxy configuration details for the App Mesh proxy.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the container that will serve as the App Mesh proxy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the container that will serve as the App Mesh proxy.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The proxy type. The default value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>. The only supported value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>.</p></li>
 </ul>
@@ -1142,7 +1124,7 @@ Guide</a>.</p></li>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">efsVolumeConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Used to configure a EFS volume. Can be used only with an EC2 type task.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">fileSystemId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the EFS File System.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file_system_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the EFS File System.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rootDirectory</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to mount on the host</p></li>
 </ul>
 </li>
@@ -1198,7 +1180,7 @@ Guide</a>.</p></li>
 </ul>
 <p>The <strong>proxy_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the container that will serve as the App Mesh proxy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the container that will serve as the App Mesh proxy.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The proxy type. The default value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>. The only supported value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>.</p></li>
 </ul>
@@ -1215,7 +1197,7 @@ Guide</a>.</p></li>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">efsVolumeConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Used to configure a EFS volume. Can be used only with an EC2 type task.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">fileSystemId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the EFS File System.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file_system_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the EFS File System.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rootDirectory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount on the host</p></li>
 </ul>
 </li>
@@ -1223,9 +1205,6 @@ Guide</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the volume. This name is referenced in the <code class="docutils literal notranslate"><span class="pre">sourceVolume</span></code>
 parameter of container definition in the <code class="docutils literal notranslate"><span class="pre">mountPoints</span></code> section.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1271,14 +1250,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">cluster_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS Cluster data source allows access to details of a specific
 cluster within an AWS ECS service.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_cluster.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>cluster_name</strong> (<em>str</em>) – The name of the ECS Cluster</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_cluster.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1286,6 +1265,9 @@ cluster within an AWS ECS service.</p>
 <code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">get_container_definition</code><span class="sig-paren">(</span><em class="sig-param">container_name=None</em>, <em class="sig-param">task_definition=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_container_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS container definition data source allows access to details of
 a specific container within an AWS ECS service.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_container_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_container_definition.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1294,9 +1276,6 @@ a specific container within an AWS ECS service.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_container_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_container_definition.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1304,6 +1283,9 @@ a specific container within an AWS ECS service.</p>
 <code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param">cluster_arn=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS Service data source allows access to details of a specific
 Service within a AWS ECS Cluster.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_service.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1312,9 +1294,6 @@ Service within a AWS ECS Cluster.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_service.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1322,14 +1301,14 @@ Service within a AWS ECS Cluster.</p>
 <code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">get_task_definition</code><span class="sig-paren">(</span><em class="sig-param">task_definition=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_task_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS task definition data source allows access to details of
 a specific AWS ECS task definition.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_task_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_task_definition.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>task_definition</strong> (<em>str</em>) – The family for the latest ACTIVE revision, family and revision (family:revision) for a specific revision in the family, the ARN of the task definition to access to.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_task_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_task_definition.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

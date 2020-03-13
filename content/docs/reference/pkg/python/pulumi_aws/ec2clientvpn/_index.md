@@ -18,6 +18,9 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2clientvpn.</code><code class="sig-name descname">Endpoint</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authentication_options=None</em>, <em class="sig-param">client_cidr_block=None</em>, <em class="sig-param">connection_log_options=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dns_servers=None</em>, <em class="sig-param">server_certificate_arn=None</em>, <em class="sig-param">split_tunnel=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">transport_protocol=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2clientvpn.Endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Client VPN endpoint for OpenVPN clients. For more information on usage, please see the
 <a class="reference external" href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html">AWS Client VPN Administrator’s Guide</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_endpoint.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -37,7 +40,7 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <p>The <strong>authentication_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">activeDirectoryId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Active Directory to be used for authentication if type is <code class="docutils literal notranslate"><span class="pre">directory-service-authentication</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">active_directory_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Active Directory to be used for authentication if type is <code class="docutils literal notranslate"><span class="pre">directory-service-authentication</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rootCertificateChainArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to <code class="docutils literal notranslate"><span class="pre">certificate-authentication</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of client authentication to be used. Specify <code class="docutils literal notranslate"><span class="pre">certificate-authentication</span></code> to use certificate-based authentication, or <code class="docutils literal notranslate"><span class="pre">directory-service-authentication</span></code> to use Active Directory authentication.</p></li>
 </ul>
@@ -47,15 +50,12 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogStream</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the CloudWatch Logs log stream to which the connection data is published.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether connection logging is enabled.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_endpoint.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2clientvpn.Endpoint.authentication_options">
 <code class="sig-name descname">authentication_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2clientvpn.Endpoint.authentication_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Information about the authentication method to be used to authenticate clients.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">activeDirectoryId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Active Directory to be used for authentication if type is <code class="docutils literal notranslate"><span class="pre">directory-service-authentication</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">active_directory_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Active Directory to be used for authentication if type is <code class="docutils literal notranslate"><span class="pre">directory-service-authentication</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rootCertificateChainArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to <code class="docutils literal notranslate"><span class="pre">certificate-authentication</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of client authentication to be used. Specify <code class="docutils literal notranslate"><span class="pre">certificate-authentication</span></code> to use certificate-based authentication, or <code class="docutils literal notranslate"><span class="pre">directory-service-authentication</span></code> to use Active Directory authentication.</p></li>
 </ul>
@@ -153,7 +153,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>authentication_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">activeDirectoryId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Active Directory to be used for authentication if type is <code class="docutils literal notranslate"><span class="pre">directory-service-authentication</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">active_directory_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Active Directory to be used for authentication if type is <code class="docutils literal notranslate"><span class="pre">directory-service-authentication</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rootCertificateChainArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to <code class="docutils literal notranslate"><span class="pre">certificate-authentication</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of client authentication to be used. Specify <code class="docutils literal notranslate"><span class="pre">certificate-authentication</span></code> to use certificate-based authentication, or <code class="docutils literal notranslate"><span class="pre">directory-service-authentication</span></code> to use Active Directory authentication.</p></li>
 </ul>
@@ -163,9 +163,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogStream</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the CloudWatch Logs log stream to which the connection data is published.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether connection logging is enabled.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_endpoint.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -211,6 +208,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2clientvpn.</code><code class="sig-name descname">NetworkAssociation</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_vpn_endpoint_id=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2clientvpn.NetworkAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides network associations for AWS Client VPN endpoints. For more information on usage, please see the 
 <a class="reference external" href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html">AWS Client VPN Administrator’s Guide</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_network_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_network_association.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -221,9 +221,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_network_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_network_association.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2clientvpn.NetworkAssociation.client_vpn_endpoint_id">
 <code class="sig-name descname">client_vpn_endpoint_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2clientvpn.NetworkAssociation.client_vpn_endpoint_id" title="Permalink to this definition">¶</a></dt>
@@ -273,9 +270,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_network_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_network_association.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

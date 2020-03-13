@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.authorization.Assignment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">Assignment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">principal_id=None</em>, <em class="sig-param">role_definition_id=None</em>, <em class="sig-param">role_definition_name=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">skip_service_principal_aad_check=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.Assignment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Assigns a given Principal (User or Application) to a given Role.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/role_assignment.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/role_assignment.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -31,9 +34,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/role_assignment.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/role_assignment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.authorization.Assignment.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.authorization.Assignment.name" title="Permalink to this definition">¶</a></dt>
@@ -97,9 +97,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/role_assignment.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/role_assignment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -142,17 +139,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.authorization.AwaitableGetRoleDefinitionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">AwaitableGetRoleDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">assignable_scopes=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">role_definition_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.AwaitableGetRoleDefinitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">AwaitableGetRoleDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">assignable_scopes=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">role_definition_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.AwaitableGetRoleDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.authorization.AwaitableGetUserAssignedIdentityResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">AwaitableGetUserAssignedIdentityResult</code><span class="sig-paren">(</span><em class="sig-param">client_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">principal_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.AwaitableGetUserAssignedIdentityResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">AwaitableGetUserAssignedIdentityResult</code><span class="sig-paren">(</span><em class="sig-param">client_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">principal_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.AwaitableGetUserAssignedIdentityResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.authorization.GetRoleDefinitionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">GetRoleDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">assignable_scopes=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">role_definition_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.GetRoleDefinitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">GetRoleDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">assignable_scopes=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">role_definition_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.GetRoleDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRoleDefinition.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.authorization.GetRoleDefinitionResult.assignable_scopes">
@@ -167,6 +164,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.authorization.GetRoleDefinitionResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.authorization.GetRoleDefinitionResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.authorization.GetRoleDefinitionResult.permissions">
 <code class="sig-name descname">permissions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.authorization.GetRoleDefinitionResult.permissions" title="Permalink to this definition">¶</a></dt>
 <dd><p>a <code class="docutils literal notranslate"><span class="pre">permissions</span></code> block as documented below.</p>
@@ -178,22 +181,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>the Type of the Role.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.authorization.GetRoleDefinitionResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.authorization.GetRoleDefinitionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.authorization.GetUserAssignedIdentityResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">GetUserAssignedIdentityResult</code><span class="sig-paren">(</span><em class="sig-param">client_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">principal_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.GetUserAssignedIdentityResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">GetUserAssignedIdentityResult</code><span class="sig-paren">(</span><em class="sig-param">client_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">principal_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.GetUserAssignedIdentityResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getUserAssignedIdentity.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.authorization.GetUserAssignedIdentityResult.client_id">
 <code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.authorization.GetUserAssignedIdentityResult.client_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Client ID of the User Assigned Identity.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.authorization.GetUserAssignedIdentityResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.authorization.GetUserAssignedIdentityResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -214,18 +217,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags assigned to the User Assigned Identity.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.authorization.GetUserAssignedIdentityResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.authorization.GetUserAssignedIdentityResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.authorization.RoleDefinition">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">RoleDefinition</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">assignable_scopes=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">role_definition_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.RoleDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a custom Role Definition, used to assign Roles to Users/Principals. See <a class="reference external" href="https://docs.microsoft.com/en-us/azure/role-based-access-control/role-definitions">‘Understand role definitions’</a> in the Azure documentation for more details.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/role_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/role_definition.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -236,7 +236,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Role Definition. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">permissions</span></code> block as defined below.</p></li>
 <li><p><strong>role_definition_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique UUID/GUID which identifies this role - one will be generated if not specified. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which the Role Definition applies too, such as <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333</span></code>, <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup</span></code>, or <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which the Role Definition applies too, such as <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333</span></code>, <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup</span></code>, or <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM</span></code>. It is recommended to use the first entry of the <code class="docutils literal notranslate"><span class="pre">assignable_scopes</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -247,9 +247,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">notActions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notDataActions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/role_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/role_definition.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.authorization.RoleDefinition.assignable_scopes">
 <code class="sig-name descname">assignable_scopes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.authorization.RoleDefinition.assignable_scopes" title="Permalink to this definition">¶</a></dt>
@@ -289,7 +286,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.authorization.RoleDefinition.scope">
 <code class="sig-name descname">scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.authorization.RoleDefinition.scope" title="Permalink to this definition">¶</a></dt>
-<dd><p>The scope at which the Role Definition applies too, such as <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333</span></code>, <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup</span></code>, or <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM</span></code>. Changing this forces a new resource to be created.</p>
+<dd><p>The scope at which the Role Definition applies too, such as <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333</span></code>, <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup</span></code>, or <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM</span></code>. It is recommended to use the first entry of the <code class="docutils literal notranslate"><span class="pre">assignable_scopes</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="method">
@@ -308,7 +305,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Role Definition. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">permissions</span></code> block as defined below.</p></li>
 <li><p><strong>role_definition_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique UUID/GUID which identifies this role - one will be generated if not specified. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which the Role Definition applies too, such as <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333</span></code>, <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup</span></code>, or <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which the Role Definition applies too, such as <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333</span></code>, <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup</span></code>, or <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM</span></code>. It is recommended to use the first entry of the <code class="docutils literal notranslate"><span class="pre">assignable_scopes</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -319,9 +316,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">notActions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notDataActions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/role_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/role_definition.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -366,6 +360,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.authorization.UserAssignedIdentity">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">UserAssignedIdentity</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.UserAssignedIdentity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a user assigned identity.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/user_assigned_identity.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/user_assigned_identity.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -381,9 +378,6 @@ create the user assigned identity.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/user_assigned_identity.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/user_assigned_identity.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.authorization.UserAssignedIdentity.client_id">
 <code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.authorization.UserAssignedIdentity.client_id" title="Permalink to this definition">¶</a></dt>
@@ -446,9 +440,6 @@ create the user assigned identity.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/user_assigned_identity.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/user_assigned_identity.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -493,6 +484,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.authorization.get_role_definition">
 <code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">get_role_definition</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">role_definition_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.get_role_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Role Definition.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/role_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/role_definition.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -502,15 +496,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/role_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/role_definition.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.authorization.get_user_assigned_identity">
 <code class="sig-prename descclassname">pulumi_azure.authorization.</code><code class="sig-name descname">get_user_assigned_identity</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.authorization.get_user_assigned_identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing User Assigned Identity.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/user_assigned_identity.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/user_assigned_identity.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -519,9 +513,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/user_assigned_identity.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/user_assigned_identity.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>
