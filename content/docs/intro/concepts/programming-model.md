@@ -3068,9 +3068,18 @@ log.error("fatal error")
 ```
 
 ```go
-// The Pulumi logging functions are not yet available in Go.
-//
-// See https://github.com/pulumi/pulumi/issues/3801.
+// Optional arguments for logging.
+args := &pulumi.LogArgs{
+    Resource: resource,
+    StreamID: 0,
+    Ephemeral: false,
+}
+
+ctx.Log.Info("message", nil)
+ctx.Log.Info("message", args)
+ctx.Log.Debug("hidden by default", nil)
+ctx.Log.Warn("warning", nil)
+ctx.Log.Error("fatal error", nil)
 ```
 
 ```csharp
