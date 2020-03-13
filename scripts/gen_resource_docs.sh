@@ -29,5 +29,6 @@ for PROVIDER in "aws" ; do \
 
     rm -rf ${ABSOLUTEPACKDIR}/${PROVIDER}/schema
 
-    echo "Done generating resource docs for ${PROVIDER}\n"
+    echo "Done generating resource docs for ${PROVIDER}"
+    echo ""
 done
