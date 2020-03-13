@@ -50,7 +50,9 @@ module.exports = {
                 // files that significantly impacts build time (~25 seconds vs. many minutes). Instead, we'll only look
                 // for CSS classes in a subset of packages for NodeJS and Python, which should be representative of all
                 // the other packages.
-                ...require("glob").sync("./content/**/*.md", { ignore: "./content/docs/reference/pkg/**/*" }),
+                ...require("glob").sync("./content/**/*.md", {
+                    ignore: "./content/docs/reference/pkg/**/*"
+                }),
                 "./content/docs/reference/pkg/nodejs/pulumi/aws/**/*.md",
                 "./content/docs/reference/pkg/python/pulumi/**/*.md",
             ],

@@ -1,8 +1,8 @@
 #!/bin/bash
 set -o nounset -o errexit -o pipefail
 
-PACKDIR="./content/docs/reference/providers"
-ABSOLUTEPACKDIR="$(pwd)/content/docs/reference/providers"
+PACKDIR="./content/docs/reference/pkg"
+ABSOLUTEPACKDIR="$(pwd)/content/docs/reference/pkg"
 TOOL_APIDOCGEN="go run ./tools/resourcedocsgen/*.go"
 
 echo "Generating docs templates bundle in pulumi/pulumi"
