@@ -2,6 +2,7 @@
 title: "Announcing Pulumi Azure Provider 2.0"
 date: 2020-03-12
 meta_desc: "Announcing the 2.0 release of Pulumi Azure provider and what's new in it."
+meta_image: azure20.png
 authors:
     - mikhail-shilkov
 tags:
