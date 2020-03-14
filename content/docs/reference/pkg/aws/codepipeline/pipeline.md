@@ -17,6 +17,9 @@ Provides a CodePipeline.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const codepipelineBucket = new aws.s3.Bucket("codepipeline_bucket", {
+    acl: "private",
+});
 const codepipelineRole = new aws.iam.Role("codepipeline_role", {
     assumeRolePolicy: `{
   "Version": "2012-10-17",
@@ -32,8 +35,35 @@ const codepipelineRole = new aws.iam.Role("codepipeline_role", {
 }
 `,
 });
-const codepipelineBucket = new aws.s3.Bucket("codepipeline_bucket", {
-    acl: "private",
+const codepipelinePolicy = new aws.iam.RolePolicy("codepipeline_policy", {
+    policy: pulumi.interpolate`{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect":"Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:GetObjectVersion",
+        "s3:GetBucketVersioning",
+        "s3:PutObject"
+      ],
+      "Resource": [
+        "${codepipelineBucket.arn}",
+        "${codepipelineBucket.arn}/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "codebuild:BatchGetBuilds",
+        "codebuild:StartBuild"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+`,
+    role: codepipelineRole.id,
 });
 const s3kmskey = aws.kms.getAlias({
     name: "alias/myKmsKey",
@@ -99,36 +129,6 @@ const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
             name: "Deploy",
         },
     ],
-});
-const codepipelinePolicy = new aws.iam.RolePolicy("codepipeline_policy", {
-    policy: pulumi.interpolate`{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect":"Allow",
-      "Action": [
-        "s3:GetObject",
-        "s3:GetObjectVersion",
-        "s3:GetBucketVersioning",
-        "s3:PutObject"
-      ],
-      "Resource": [
-        "${codepipelineBucket.arn}",
-        "${codepipelineBucket.arn}/*"
-      ]
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "codebuild:BatchGetBuilds",
-        "codebuild:StartBuild"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
-`,
-    role: codepipelineRole.id,
 });
 ```
 

@@ -36,6 +36,10 @@ const ecsInstanceRoleRole = new aws.iam.Role("ecs_instance_role", {
 }
 `,
 });
+const ecsInstanceRoleRolePolicyAttachment = new aws.iam.RolePolicyAttachment("ecs_instance_role", {
+    policyArn: "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role",
+    role: ecsInstanceRoleRole.name,
+});
 const ecsInstanceRoleInstanceProfile = new aws.iam.InstanceProfile("ecs_instance_role", {
     role: ecsInstanceRoleRole.name,
 });
@@ -87,10 +91,6 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
     serviceRole: awsBatchServiceRoleRole.arn,
     type: "MANAGED",
 }, {dependsOn: [awsBatchServiceRoleRolePolicyAttachment]});
-const ecsInstanceRoleRolePolicyAttachment = new aws.iam.RolePolicyAttachment("ecs_instance_role", {
-    policyArn: "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role",
-    role: ecsInstanceRoleRole.name,
-});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_compute_environment.html.markdown.

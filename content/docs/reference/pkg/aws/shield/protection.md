@@ -18,15 +18,15 @@ The resource can be an Amazon CloudFront distribution, Elastic Load Balancing lo
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const available = aws.getAvailabilityZones();
+const currentRegion = aws.getRegion();
+const currentCallerIdentity = aws.getCallerIdentity();
 const fooEip = new aws.ec2.Eip("foo", {
     vpc: true,
 });
-const currentCallerIdentity = aws.getCallerIdentity();
-const currentRegion = aws.getRegion();
 const fooProtection = new aws.shield.Protection("foo", {
     resourceArn: pulumi.interpolate`arn:aws:ec2:${currentRegion.name!}:${currentCallerIdentity.accountId}:eip-allocation/${fooEip.id}`,
 });
-const available = aws.getAvailabilityZones();
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/shield_protection.html.markdown.

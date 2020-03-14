@@ -42,8 +42,8 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const domain = config.get("domain") || "tf-test";
 
-const currentCallerIdentity = aws.getCallerIdentity();
 const currentRegion = aws.getRegion();
+const currentCallerIdentity = aws.getCallerIdentity();
 const example = new aws.elasticsearch.Domain("example", {
     accessPolicies: `{
   "Version": "2012-10-17",
@@ -106,14 +106,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const config = new pulumi.Config();
-const domain = config.get("domain") || "tf-test";
 const vpc = config.require("vpc");
+const domain = config.get("domain") || "tf-test";
 
-const esServiceLinkedRole = new aws.iam.ServiceLinkedRole("es", {
-    awsServiceName: "es.amazonaws.com",
-});
-const currentCallerIdentity = aws.getCallerIdentity();
-const currentRegion = aws.getRegion();
 const selectedVpc = aws.ec2.getVpc({
     tags: {
         Name: vpc,
@@ -124,6 +119,21 @@ const selectedSubnetIds = aws.ec2.getSubnetIds({
         Tier: "private",
     },
     vpcId: selectedVpc.id!,
+});
+const currentRegion = aws.getRegion();
+const currentCallerIdentity = aws.getCallerIdentity();
+const esSecurityGroup = new aws.ec2.SecurityGroup("es", {
+    description: "Managed by Pulumi",
+    ingress: [{
+        cidrBlocks: [selectedVpc.cidrBlock!],
+        fromPort: 443,
+        protocol: "tcp",
+        toPort: 443,
+    }],
+    vpcId: selectedVpc.id!,
+});
+const esServiceLinkedRole = new aws.iam.ServiceLinkedRole("es", {
+    awsServiceName: "es.amazonaws.com",
 });
 const esDomain = new aws.elasticsearch.Domain("es", {
     accessPolicies: `{
@@ -159,16 +169,6 @@ const esDomain = new aws.elasticsearch.Domain("es", {
         ],
     },
 }, {dependsOn: [esServiceLinkedRole]});
-const esSecurityGroup = new aws.ec2.SecurityGroup("es", {
-    description: "Managed by Pulumi",
-    ingress: [{
-        cidrBlocks: [selectedVpc.cidrBlock!],
-        fromPort: 443,
-        protocol: "tcp",
-        toPort: 443,
-    }],
-    vpcId: selectedVpc.id!,
-});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown.

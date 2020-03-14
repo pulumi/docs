@@ -17,22 +17,6 @@ Attaches a Managed IAM Policy to an IAM role
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const policy = new aws.iam.Policy("policy", {
-    description: "A test policy",
-    policy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "ec2:Describe*"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    }
-  ]
-}
-`,
-});
 const role = new aws.iam.Role("role", {
     assumeRolePolicy: `    {
       "Version": "2012-10-17",
@@ -47,6 +31,22 @@ const role = new aws.iam.Role("role", {
         }
       ]
     }
+`,
+});
+const policy = new aws.iam.Policy("policy", {
+    description: "A test policy",
+    policy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "ec2:Describe*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
 `,
 });
 const test_attach = new aws.iam.RolePolicyAttachment("test-attach", {

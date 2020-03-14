@@ -21,9 +21,6 @@ pre-existing or distributed to customers or users and therefore cannot be change
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = new aws.ec2.Eip("example", {
-    vpc: true,
-});
 const web = new aws.ec2.Instance("web", {
     ami: "ami-21f78e11",
     availabilityZone: "us-west-2a",
@@ -31,6 +28,9 @@ const web = new aws.ec2.Instance("web", {
     tags: {
         Name: "HelloWorld",
     },
+});
+const example = new aws.ec2.Eip("example", {
+    vpc: true,
 });
 const eipAssoc = new aws.ec2.EipAssociation("eip_assoc", {
     allocationId: example.id,

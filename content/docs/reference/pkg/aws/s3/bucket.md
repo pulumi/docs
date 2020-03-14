@@ -293,7 +293,7 @@ import * as aws from "@pulumi/aws";
 
 const currentUser = aws.getCanonicalUserId();
 const bucket = new aws.s3.Bucket("bucket", {
-    grants: [
+    grant: [
         {
             id: currentUser.id,
             permission: ["FULL_ACCESS"],

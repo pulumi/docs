@@ -80,6 +80,7 @@ const exampleOpenIdConnectProvider = new aws.iam.OpenIdConnectProvider("example"
     thumbprintLists: [],
     url: exampleCluster.identities[0].oidcs[0].issuer,
 });
+const current = aws.getCallerIdentity();
 const exampleAssumeRolePolicy = pulumi.all([exampleOpenIdConnectProvider.url, exampleOpenIdConnectProvider.arn]).apply(([url, arn]) => aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRoleWithWebIdentity"],
@@ -98,7 +99,6 @@ const exampleAssumeRolePolicy = pulumi.all([exampleOpenIdConnectProvider.url, ex
 const exampleRole = new aws.iam.Role("example", {
     assumeRolePolicy: exampleAssumeRolePolicy.json,
 });
-const current = aws.getCallerIdentity();
 ```
 
 After adding inline IAM Policies (e.g. [`aws.iam.RolePolicy` resource](https://www.terraform.io/docs/providers/aws/r/iam_role_policy.html)) or attaching IAM Policies (e.g. [`aws.iam.Policy` resource](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) and [`aws.iam.RolePolicyAttachment` resource](https://www.terraform.io/docs/providers/aws/r/iam_policy.html)) with the desired permissions to the IAM Role, annotate the Kubernetes service account (e.g. [`kubernetes_service_account` resource](https://www.terraform.io/docs/providers/kubernetes/r/service_account.html)) and recreate any pods.

@@ -17,9 +17,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const accepter = new aws.Provider("accepter", {});
+const accepterCallerIdentity = aws.getCallerIdentity({provider: accepter});
 // Accepter's side of the VIF.
 const vpnGw = new aws.ec2.VpnGateway("vpn_gw", {}, {provider: accepter});
-const accepterCallerIdentity = aws.getCallerIdentity({provider: accepter});
 // Creator's side of the VIF
 const creator = new aws.directconnect.HostedPrivateVirtualInterface("creator", {
     addressFamily: "ipv4",

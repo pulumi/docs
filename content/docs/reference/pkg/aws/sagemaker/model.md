@@ -17,6 +17,12 @@ Basic usage:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const model = new aws.sagemaker.Model("m", {
+    executionRoleArn: aws_iam_role_foo.arn,
+    primaryContainer: {
+        image: "174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1",
+    },
+});
 const assumeRole = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
@@ -28,12 +34,6 @@ const assumeRole = aws.iam.getPolicyDocument({
 });
 const role = new aws.iam.Role("r", {
     assumeRolePolicy: assumeRole.json,
-});
-const model = new aws.sagemaker.Model("m", {
-    executionRoleArn: aws_iam_role_foo.arn,
-    primaryContainer: {
-        image: "174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1",
-    },
 });
 ```
 

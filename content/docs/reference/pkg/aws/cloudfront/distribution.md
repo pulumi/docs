@@ -27,13 +27,13 @@ The following example below creates a CloudFront distribution with an S3 origin.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const s3OriginId = "myS3Origin";
 const bucket = new aws.s3.Bucket("b", {
     acl: "private",
     tags: {
         Name: "My bucket",
     },
 });
+const s3OriginId = "myS3Origin";
 const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
     aliases: [
         "mysite.example.com",

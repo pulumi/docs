@@ -25,14 +25,14 @@ To work around this you can either create each environment in a separate AWS acc
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultApplication = new aws.elasticbeanstalk.Application("default", {
-    description: "tf-test-desc",
-});
 const defaultBucket = new aws.s3.Bucket("default", {});
 const defaultBucketObject = new aws.s3.BucketObject("default", {
     bucket: defaultBucket.id,
     key: "beanstalk/go-v1.zip",
     source: new pulumi.asset.FileAsset("go-v1.zip"),
+});
+const defaultApplication = new aws.elasticbeanstalk.Application("default", {
+    description: "tf-test-desc",
 });
 const defaultApplicationVersion = new aws.elasticbeanstalk.ApplicationVersion("default", {
     application: "tf-test-name",

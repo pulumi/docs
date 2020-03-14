@@ -57,9 +57,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const config = new pulumi.Config();
-const accountId = config.require("accountId");
 // Variables
 const myregion = config.require("myregion");
+const accountId = config.require("accountId");
 
 // API Gateway
 const api = new aws.apigateway.RestApi("api", {});
@@ -124,6 +124,14 @@ const config = new pulumi.Config();
 const name = config.require("name");
 const subnetId = config.require("subnetId");
 
+const testLoadBalancer = new aws.lb.LoadBalancer("test", {
+    internal: true,
+    loadBalancerType: "network",
+    subnets: [subnetId],
+});
+const testVpcLink = new aws.apigateway.VpcLink("test", {
+    targetArn: testLoadBalancer.arn,
+});
 const testRestApi = new aws.apigateway.RestApi("test", {});
 const testResource = new aws.apigateway.Resource("test", {
     parentId: testRestApi.rootResourceId,
@@ -138,14 +146,6 @@ const testMethod = new aws.apigateway.Method("test", {
     },
     resourceId: testResource.id,
     restApi: testRestApi.id,
-});
-const testLoadBalancer = new aws.lb.LoadBalancer("test", {
-    internal: true,
-    loadBalancerType: "network",
-    subnets: [subnetId],
-});
-const testVpcLink = new aws.apigateway.VpcLink("test", {
-    targetArn: testLoadBalancer.arn,
 });
 const testIntegration = new aws.apigateway.Integration("test", {
     connectionId: testVpcLink.id,

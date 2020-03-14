@@ -63,7 +63,7 @@ const example = new aws.elasticache.ReplicationGroup("example", {
     parameterGroupName: "default.redis3.2",
     port: 6379,
     replicationGroupDescription: "test description",
-});
+}, {ignoreChanges: ["numberCacheClusters"]});
 const replica = new aws.elasticache.Cluster("replica", {
     replicationGroupId: example.id,
 });

@@ -53,14 +53,13 @@ const bar = new aws.autoscaling.Group("bar", {
             value: "ipsum",
         },
     ],
-    timeouts: [{
-        delete: "15m",
-    }],
     vpcZoneIdentifiers: [
         aws_subnet_example1.id,
         aws_subnet_example2.id,
     ],
-});
+}, {timeouts: {
+    delete: "15m",
+}});
 ```
 
 ### With Latest Version Of Launch Template

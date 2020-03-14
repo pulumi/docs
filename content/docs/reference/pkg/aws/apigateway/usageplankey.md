@@ -15,7 +15,6 @@ Provides an API Gateway Usage Plan Key.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const mykey = new aws.apigateway.ApiKey("mykey", {});
 const test = new aws.apigateway.RestApi("test", {});
 const myusageplan = new aws.apigateway.UsagePlan("myusageplan", {
     apiStages: [{
@@ -23,6 +22,7 @@ const myusageplan = new aws.apigateway.UsagePlan("myusageplan", {
         stage: aws_api_gateway_deployment_foo.stageName,
     }],
 });
+const mykey = new aws.apigateway.ApiKey("mykey", {});
 const main = new aws.apigateway.UsagePlanKey("main", {
     keyId: mykey.id,
     keyType: "API_KEY",

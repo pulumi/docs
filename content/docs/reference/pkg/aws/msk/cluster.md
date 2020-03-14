@@ -15,14 +15,8 @@ Manages AWS Managed Streaming for Kafka cluster
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const kms = new aws.kms.Key("kms", {
-    description: "example",
-});
 const vpc = new aws.ec2.Vpc("vpc", {
     cidrBlock: "192.168.0.0/22",
-});
-const sg = new aws.ec2.SecurityGroup("sg", {
-    vpcId: vpc.id,
 });
 const azs = aws.getAvailabilityZones({
     state: "available",
@@ -41,6 +35,12 @@ const subnetAz3 = new aws.ec2.Subnet("subnet_az3", {
     availabilityZone: azs.names[2],
     cidrBlock: "192.168.2.0/24",
     vpcId: vpc.id,
+});
+const sg = new aws.ec2.SecurityGroup("sg", {
+    vpcId: vpc.id,
+});
+const kms = new aws.kms.Key("kms", {
+    description: "example",
 });
 const example = new aws.msk.Cluster("example", {
     brokerNodeGroupInfo: {
@@ -74,9 +74,9 @@ const example = new aws.msk.Cluster("example", {
     },
 });
 
+export const zookeeperConnectString = example.zookeeperConnectString;
 export const bootstrapBrokers = example.bootstrapBrokers;
 export const bootstrapBrokersTls = example.bootstrapBrokersTls;
-export const zookeeperConnectString = example.zookeeperConnectString;
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/msk_cluster.html.markdown.

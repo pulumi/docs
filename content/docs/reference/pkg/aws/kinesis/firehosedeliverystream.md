@@ -19,6 +19,9 @@ For more details, see the [Amazon Kinesis Firehose Documentation][1].
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const bucket = new aws.s3.Bucket("bucket", {
+    acl: "private",
+});
 const firehoseRole = new aws.iam.Role("firehose_role", {
     assumeRolePolicy: `{
   "Version": "2012-10-17",
@@ -57,9 +60,6 @@ const lambdaProcessor = new aws.lambda.Function("lambda_processor", {
     role: lambdaIam.arn,
     runtime: "nodejs8.10",
 });
-const bucket = new aws.s3.Bucket("bucket", {
-    acl: "private",
-});
 const extendedS3Stream = new aws.kinesis.FirehoseDeliveryStream("extended_s3_stream", {
     destination: "extended_s3",
     extendedS3Configuration: {
@@ -85,6 +85,9 @@ const extendedS3Stream = new aws.kinesis.FirehoseDeliveryStream("extended_s3_str
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const bucket = new aws.s3.Bucket("bucket", {
+    acl: "private",
+});
 const firehoseRole = new aws.iam.Role("firehose_role", {
     assumeRolePolicy: `{
   "Version": "2012-10-17",
@@ -100,9 +103,6 @@ const firehoseRole = new aws.iam.Role("firehose_role", {
   ]
 }
 `,
-});
-const bucket = new aws.s3.Bucket("bucket", {
-    acl: "private",
 });
 const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
     destination: "s3",

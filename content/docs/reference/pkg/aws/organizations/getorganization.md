@@ -17,8 +17,8 @@ Get information about the organization that the user's account belongs to
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const snsTopic = new aws.sns.Topic("sns_topic", {});
 const example = aws.organizations.getOrganization();
+const snsTopic = new aws.sns.Topic("sns_topic", {});
 const snsTopicPolicyPolicyDocument = snsTopic.arn.apply(arn => aws.iam.getPolicyDocument({
     statements: [{
         actions: [

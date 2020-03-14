@@ -17,7 +17,6 @@ Provides a CodeDeploy Deployment Group for a CodeDeploy Application
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleApplication = new aws.codedeploy.Application("example", {});
 const exampleRole = new aws.iam.Role("example", {
     assumeRolePolicy: `{
   "Version": "2012-10-17",
@@ -34,6 +33,11 @@ const exampleRole = new aws.iam.Role("example", {
 }
 `,
 });
+const aWSCodeDeployRole = new aws.iam.RolePolicyAttachment("AWSCodeDeployRole", {
+    policyArn: "arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole",
+    role: exampleRole.name,
+});
+const exampleApplication = new aws.codedeploy.Application("example", {});
 const exampleTopic = new aws.sns.Topic("example", {});
 const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
     alarmConfiguration: {
@@ -66,10 +70,6 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
         triggerName: "example-trigger",
         triggerTargetArn: exampleTopic.arn,
     }],
-});
-const aWSCodeDeployRole = new aws.iam.RolePolicyAttachment("AWSCodeDeployRole", {
-    policyArn: "arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole",
-    role: exampleRole.name,
 });
 ```
 

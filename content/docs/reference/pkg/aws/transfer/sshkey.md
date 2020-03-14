@@ -14,6 +14,12 @@ Provides a AWS Transfer User SSH Key resource.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const fooServer = new aws.transfer.Server("foo", {
+    identityProviderType: "SERVICE_MANAGED",
+    tags: {
+        NAME: "tf-acc-test-transfer-server",
+    },
+});
 const fooRole = new aws.iam.Role("foo", {
     assumeRolePolicy: `{
 	"Version": "2012-10-17",
@@ -45,12 +51,6 @@ const fooRolePolicy = new aws.iam.RolePolicy("foo", {
 }
 `,
     role: fooRole.id,
-});
-const fooServer = new aws.transfer.Server("foo", {
-    identityProviderType: "SERVICE_MANAGED",
-    tags: {
-        NAME: "tf-acc-test-transfer-server",
-    },
 });
 const fooUser = new aws.transfer.User("foo", {
     role: fooRole.arn,

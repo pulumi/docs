@@ -17,8 +17,8 @@ Provides a S3 bucket [inventory configuration](https://docs.aws.amazon.com/Amazo
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const inventory = new aws.s3.Bucket("inventory", {});
 const testBucket = new aws.s3.Bucket("test", {});
+const inventory = new aws.s3.Bucket("inventory", {});
 const testInventory = new aws.s3.Inventory("test", {
     bucket: testBucket.id,
     destination: {
@@ -40,8 +40,8 @@ const testInventory = new aws.s3.Inventory("test", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const inventory = new aws.s3.Bucket("inventory", {});
 const test = new aws.s3.Bucket("test", {});
+const inventory = new aws.s3.Bucket("inventory", {});
 const test_prefix = new aws.s3.Inventory("test-prefix", {
     bucket: test.id,
     destination: {

@@ -67,13 +67,13 @@ fetching an external instance, possibly not managed by this provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const instance = aws.ec2.getInstance({
+    instanceId: "i-1234567890abcdef0",
+});
 const sg = new aws.ec2.SecurityGroup("sg", {
     tags: {
         type: "test-security-group",
     },
-});
-const instance = aws.ec2.getInstance({
-    instanceId: "i-1234567890abcdef0",
 });
 const sgAttachment = new aws.ec2.NetworkInterfaceSecurityGroupAttachment("sg_attachment", {
     networkInterfaceId: instance.networkInterfaceId,

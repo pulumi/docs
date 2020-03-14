@@ -15,6 +15,7 @@ Provides a resource-based access control mechanism for a KMS customer master key
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const key = new aws.kms.Key("a", {});
 const role = new aws.iam.Role("a", {
     assumeRolePolicy: `{
   "Version": "2012-10-17",
@@ -31,7 +32,6 @@ const role = new aws.iam.Role("a", {
 }
 `,
 });
-const key = new aws.kms.Key("a", {});
 const grant = new aws.kms.Grant("a", {
     constraints: [{
         encryptionContextEquals: {

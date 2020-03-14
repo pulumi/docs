@@ -58,6 +58,7 @@ const allowCloudwatch = new aws.lambda.Permission("allow_cloudwatch", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const defaultTopic = new aws.sns.Topic("default", {});
 const defaultRole = new aws.iam.Role("default", {
     assumeRolePolicy: `{
   "Version": "2012-10-17",
@@ -80,7 +81,6 @@ const func = new aws.lambda.Function("func", {
     role: defaultRole.arn,
     runtime: "python2.7",
 });
-const defaultTopic = new aws.sns.Topic("default", {});
 const withSns = new aws.lambda.Permission("with_sns", {
     action: "lambda:InvokeFunction",
     function: func.functionName,

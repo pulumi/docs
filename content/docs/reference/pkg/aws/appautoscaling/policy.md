@@ -80,7 +80,7 @@ const ecsService = new aws.ecs.Service("ecs_service", {
     cluster: "clusterName",
     desiredCount: 2,
     taskDefinition: "taskDefinitionFamily:1",
-});
+}, {ignoreChanges: ["desiredCount"]});
 ```
 
 ### Aurora Read Replica Autoscaling

@@ -26,7 +26,7 @@ import * as aws from "@pulumi/aws";
 const example = new aws.ecs.Service("example", {
     // Example: Create service with 2 instances to start
     desiredCount: 2,
-});
+}, {ignoreChanges: ["desiredCount"]});
 ```
 
 ### Daemon Scheduling Strategy

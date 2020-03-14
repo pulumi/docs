@@ -24,11 +24,11 @@ Basic usage:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bar = new aws.ec2.Vpc("bar", {
-    cidrBlock: "10.1.0.0/16",
-});
 const fooVpc = new aws.ec2.Vpc("foo", {
     cidrBlock: "10.0.0.0/16",
+});
+const bar = new aws.ec2.Vpc("bar", {
+    cidrBlock: "10.1.0.0/16",
 });
 const fooVpcPeeringConnection = new aws.ec2.VpcPeeringConnection("foo", {
     autoAccept: true,
@@ -53,8 +53,8 @@ Basic cross-account usage:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const accepter = new aws.Provider("accepter", {});
 const requester = new aws.Provider("requester", {});
+const accepter = new aws.Provider("accepter", {});
 const main = new aws.ec2.Vpc("main", {
     cidrBlock: "10.0.0.0/16",
     enableDnsHostnames: true,
@@ -84,12 +84,6 @@ const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepte
     },
     vpcPeeringConnectionId: peerVpcPeeringConnection.id,
 }, {provider: accepter});
-const accepterPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("accepter", {
-    accepter: {
-        allowRemoteVpcDnsResolution: true,
-    },
-    vpcPeeringConnectionId: peerVpcPeeringConnectionAccepter.id,
-}, {provider: accepter});
 const requesterPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("requester", {
     requester: {
         allowRemoteVpcDnsResolution: true,
@@ -98,6 +92,12 @@ const requesterPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("
     // create an explicit dependency on the accepter.
     vpcPeeringConnectionId: peerVpcPeeringConnectionAccepter.id,
 }, {provider: requester});
+const accepterPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("accepter", {
+    accepter: {
+        allowRemoteVpcDnsResolution: true,
+    },
+    vpcPeeringConnectionId: peerVpcPeeringConnectionAccepter.id,
+}, {provider: accepter});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown.

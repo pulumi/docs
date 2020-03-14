@@ -15,6 +15,10 @@ Provides a Pinpoint Event Stream resource.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const app = new aws.pinpoint.App("app", {});
+const testStream = new aws.kinesis.Stream("test_stream", {
+    shardCount: 1,
+});
 const testRole = new aws.iam.Role("test_role", {
     assumeRolePolicy: `{
   "Version": "2012-10-17",
@@ -30,6 +34,11 @@ const testRole = new aws.iam.Role("test_role", {
   ]
 }
 `,
+});
+const stream = new aws.pinpoint.EventStream("stream", {
+    applicationId: app.applicationId,
+    destinationStreamArn: testStream.arn,
+    roleArn: testRole.arn,
 });
 const testRolePolicy = new aws.iam.RolePolicy("test_role_policy", {
     policy: `{
@@ -47,15 +56,6 @@ const testRolePolicy = new aws.iam.RolePolicy("test_role_policy", {
 }
 `,
     role: testRole.id,
-});
-const testStream = new aws.kinesis.Stream("test_stream", {
-    shardCount: 1,
-});
-const app = new aws.pinpoint.App("app", {});
-const stream = new aws.pinpoint.EventStream("stream", {
-    applicationId: app.applicationId,
-    destinationStreamArn: testStream.arn,
-    roleArn: testRole.arn,
 });
 ```
 

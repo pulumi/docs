@@ -17,6 +17,8 @@ configured in the provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+// Declare the data source
+const rules = aws.inspector.getRulesPackages();
 // e.g. Use in aws.inspector.AssessmentTemplate
 const group = new aws.inspector.ResourceGroup("group", {
     tags: {
@@ -26,8 +28,6 @@ const group = new aws.inspector.ResourceGroup("group", {
 const assessmentAssessmentTarget = new aws.inspector.AssessmentTarget("assessment", {
     resourceGroupArn: group.arn,
 });
-// Declare the data source
-const rules = aws.inspector.getRulesPackages();
 const assessmentAssessmentTemplate = new aws.inspector.AssessmentTemplate("assessment", {
     duration: 60,
     rulesPackageArns: rules.arns,

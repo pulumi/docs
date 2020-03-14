@@ -17,52 +17,27 @@ Provides a Load Balancer Listener Rule resource.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const pool = new aws.cognito.UserPool("pool", {});
-const client = new aws.cognito.UserPoolClient("client", {});
-const domain = new aws.cognito.UserPoolDomain("domain", {});
 const frontEndLoadBalancer = new aws.lb.LoadBalancer("front_end", {});
 const frontEndListener = new aws.lb.Listener("front_end", {});
-const admin = new aws.lb.ListenerRule("admin", {
-    actions: [
+const static = new aws.lb.ListenerRule("static", {
+    actions: [{
+        targetGroupArn: aws_lb_target_group_static.arn,
+        type: "forward",
+    }],
+    conditions: [
         {
-            authenticateOidc: {
-                authorizationEndpoint: "https://example.com/authorization_endpoint",
-                clientId: "client_id",
-                clientSecret: "client_secret",
-                issuer: "https://example.com",
-                tokenEndpoint: "https://example.com/token_endpoint",
-                userInfoEndpoint: "https://example.com/user_info_endpoint",
+            pathPattern: {
+                values: ["/static/*"],
             },
-            type: "authenticate-oidc",
         },
         {
-            targetGroupArn: aws_lb_target_group_static.arn,
-            type: "forward",
+            hostHeader: {
+                values: ["example.com"],
+            },
         },
     ],
     listenerArn: frontEndListener.arn,
-});
-const healthCheck = new aws.lb.ListenerRule("health_check", {
-    actions: [{
-        fixedResponse: {
-            contentType: "text/plain",
-            messageBody: "HEALTHY",
-            statusCode: "200",
-        },
-        type: "fixed-response",
-    }],
-    conditions: [{
-        queryStrings: [
-            {
-                key: "health",
-                value: "check",
-            },
-            {
-                value: "bar",
-            },
-        ],
-    }],
-    listenerArn: frontEndListener.arn,
+    priority: 100,
 });
 const hostBasedRouting = new aws.lb.ListenerRule("host_based_routing", {
     actions: [{
@@ -94,25 +69,50 @@ const redirectHttpToHttps = new aws.lb.ListenerRule("redirect_http_to_https", {
     }],
     listenerArn: frontEndListener.arn,
 });
-const static = new aws.lb.ListenerRule("static", {
+const healthCheck = new aws.lb.ListenerRule("health_check", {
     actions: [{
-        targetGroupArn: aws_lb_target_group_static.arn,
-        type: "forward",
+        fixedResponse: {
+            contentType: "text/plain",
+            messageBody: "HEALTHY",
+            statusCode: "200",
+        },
+        type: "fixed-response",
     }],
-    conditions: [
-        {
-            pathPattern: {
-                values: ["/static/*"],
+    conditions: [{
+        queryStrings: [
+            {
+                key: "health",
+                value: "check",
             },
+            {
+                value: "bar",
+            },
+        ],
+    }],
+    listenerArn: frontEndListener.arn,
+});
+const pool = new aws.cognito.UserPool("pool", {});
+const client = new aws.cognito.UserPoolClient("client", {});
+const domain = new aws.cognito.UserPoolDomain("domain", {});
+const admin = new aws.lb.ListenerRule("admin", {
+    actions: [
+        {
+            authenticateOidc: {
+                authorizationEndpoint: "https://example.com/authorization_endpoint",
+                clientId: "client_id",
+                clientSecret: "client_secret",
+                issuer: "https://example.com",
+                tokenEndpoint: "https://example.com/token_endpoint",
+                userInfoEndpoint: "https://example.com/user_info_endpoint",
+            },
+            type: "authenticate-oidc",
         },
         {
-            hostHeader: {
-                values: ["example.com"],
-            },
+            targetGroupArn: aws_lb_target_group_static.arn,
+            type: "forward",
         },
     ],
     listenerArn: frontEndListener.arn,
-    priority: 100,
 });
 ```
 

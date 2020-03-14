@@ -17,6 +17,9 @@ Provides an AWS Config Delivery Channel.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const bucket = new aws.s3.Bucket("b", {
+    forceDestroy: true,
+});
 const role = new aws.iam.Role("r", {
     assumeRolePolicy: `{
   "Version": "2012-10-17",
@@ -35,9 +38,6 @@ const role = new aws.iam.Role("r", {
 });
 const fooRecorder = new aws.cfg.Recorder("foo", {
     roleArn: role.arn,
-});
-const bucket = new aws.s3.Bucket("b", {
-    forceDestroy: true,
 });
 const fooDeliveryChannel = new aws.cfg.DeliveryChannel("foo", {
     s3BucketName: bucket.bucket,

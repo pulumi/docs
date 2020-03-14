@@ -84,11 +84,11 @@ const frontEndListener = new aws.lb.Listener("front_end", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const frontEndLoadBalancer = new aws.lb.LoadBalancer("front_end", {});
+const frontEndTargetGroup = new aws.lb.TargetGroup("front_end", {});
 const pool = new aws.cognito.UserPool("pool", {});
 const client = new aws.cognito.UserPoolClient("client", {});
 const domain = new aws.cognito.UserPoolDomain("domain", {});
-const frontEndLoadBalancer = new aws.lb.LoadBalancer("front_end", {});
-const frontEndTargetGroup = new aws.lb.TargetGroup("front_end", {});
 const frontEndListener = new aws.lb.Listener("front_end", {
     defaultActions: [
         {

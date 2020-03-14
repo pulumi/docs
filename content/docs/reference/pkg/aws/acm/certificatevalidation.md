@@ -68,6 +68,10 @@ const zone = aws.route53.getZone({
     name: "example.com.",
     privateZone: false,
 });
+const zoneAlt = aws.route53.getZone({
+    name: "example.org.",
+    privateZone: false,
+});
 const certValidation = new aws.route53.Record("cert_validation", {
     name: certCertificate.domainValidationOptions[0].resourceRecordName,
     records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
@@ -81,10 +85,6 @@ const certValidationAlt1 = new aws.route53.Record("cert_validation_alt1", {
     ttl: 60,
     type: certCertificate.domainValidationOptions[1].resourceRecordType,
     zoneId: zone.id,
-});
-const zoneAlt = aws.route53.getZone({
-    name: "example.org.",
-    privateZone: false,
 });
 const certValidationAlt2 = new aws.route53.Record("cert_validation_alt2", {
     name: certCertificate.domainValidationOptions[2].resourceRecordName,

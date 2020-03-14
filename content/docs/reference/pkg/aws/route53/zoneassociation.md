@@ -24,6 +24,11 @@ const primary = new aws.ec2.Vpc("primary", {
     enableDnsHostnames: true,
     enableDnsSupport: true,
 });
+const secondaryVpc = new aws.ec2.Vpc("secondary", {
+    cidrBlock: "10.7.0.0/16",
+    enableDnsHostnames: true,
+    enableDnsSupport: true,
+});
 const example = new aws.route53.Zone("example", {
     // NOTE: The aws.route53.Zone vpc argument accepts multiple configuration
     //       blocks. The below usage of the single vpc configuration, the
@@ -33,12 +38,7 @@ const example = new aws.route53.Zone("example", {
     vpcs: [{
         vpcId: primary.id,
     }],
-});
-const secondaryVpc = new aws.ec2.Vpc("secondary", {
-    cidrBlock: "10.7.0.0/16",
-    enableDnsHostnames: true,
-    enableDnsSupport: true,
-});
+}, {ignoreChanges: ["vpcId", "vpcRegion", "vpcs"]});
 const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
     vpcId: secondaryVpc.id,
     zoneId: example.zoneId,

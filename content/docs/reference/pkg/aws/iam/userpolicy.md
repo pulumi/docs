@@ -18,9 +18,6 @@ import * as aws from "@pulumi/aws";
 const lbUser = new aws.iam.User("lb", {
     path: "/system/",
 });
-const lbAccessKey = new aws.iam.AccessKey("lb", {
-    user: lbUser.name,
-});
 const lbRo = new aws.iam.UserPolicy("lb_ro", {
     policy: `{
   "Version": "2012-10-17",
@@ -35,6 +32,9 @@ const lbRo = new aws.iam.UserPolicy("lb_ro", {
   ]
 }
 `,
+    user: lbUser.name,
+});
+const lbAccessKey = new aws.iam.AccessKey("lb", {
     user: lbUser.name,
 });
 ```

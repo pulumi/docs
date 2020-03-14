@@ -19,9 +19,9 @@ Basic usage:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const example = new aws.sns.Topic("example", {});
 const bar = new aws.autoscaling.Group("bar", {});
 const foo = new aws.autoscaling.Group("foo", {});
-const example = new aws.sns.Topic("example", {});
 const exampleNotifications = new aws.autoscaling.Notification("example_notifications", {
     groupNames: [
         bar.name,

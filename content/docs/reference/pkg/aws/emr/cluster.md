@@ -156,7 +156,7 @@ const example = new aws.emr.Cluster("example", {
         },
         name: "Setup Hadoop Debugging",
     }],
-});
+}, {ignoreChanges: ["stepConcurrencyLevel", "steps"]});
 ```
 
 ### Multiple Node Master Instance Group
