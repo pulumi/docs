@@ -14,20 +14,8 @@ for PROVIDER in "aws" ; do \
     echo "Removing the ${PACKDIR}/${PROVIDER} dir..."
     rm -rf "${PACKDIR}/${PROVIDER}"
 
-    TFGEN=pulumi-tfgen-${PROVIDER}
-    pushd ../pulumi-${PROVIDER}
-
-    make provider && make tfgen && make install_plugins
-
-    echo "Running ${TFGEN} to generate provider schema..."
-    ${TFGEN} schema --out ${ABSOLUTEPACKDIR}/${PROVIDER}/schema || exit 3
-
-    popd
-
     echo "Running docs generator from schema..."
-    ${TOOL_APIDOCGEN} ${ABSOLUTEPACKDIR}/${PROVIDER} ${ABSOLUTEPACKDIR}/${PROVIDER}/schema/schema.json || exit 3
-
-    rm -rf ${ABSOLUTEPACKDIR}/${PROVIDER}/schema
+    ${TOOL_APIDOCGEN} ${ABSOLUTEPACKDIR}/${PROVIDER} ../pulumi-${PROVIDER}/cmd/pulumi-resource-${PROVIDER}/schema.json || exit 3
 
     echo "Done generating resource docs for ${PROVIDER}"
     echo ""
