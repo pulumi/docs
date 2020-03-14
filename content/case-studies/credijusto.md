@@ -1,10 +1,10 @@
 ---
 title: Credijusto
 description: |
-    See how Credijusto used Pulumi to help its development team scale to support rapid growth
+    Credijusto used Pulumi to help its development team scale to support rapid growth
     while enforcing best practices for their infrastructure.
 meta_desc: |
-    See how Credijusto used Pulumi to help its development team scale to support rapid growth
+    Credijusto used Pulumi to help its development team scale to support rapid growth
     while enforcing best practices for their infrastructure.
 
 customer_name: Credijusto
