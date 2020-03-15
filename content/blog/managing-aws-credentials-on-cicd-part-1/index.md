@@ -45,7 +45,7 @@ to deploy AWS resources using Pulumi:
 
 - [Create a dedicated IAM User for your CI/CD](#create-new-iam-user)
 - _Provide the IAM User’s credentials to your CI/CD system_ (coming soon!)
-- _Automating IAM credential rotation using Pulumi_  
+- _Automating IAM credential rotation using Pulumi_
 - _Assuming IAM Roles for performing updates_
 - _Securing sensitive data using Pulumi_
 - _Comparison with using hosted secret managers_
@@ -68,7 +68,7 @@ const user = new aws.iam.User("cicdUser", {
 ```
 
 By default, that IAM User doesn't have permissions to do anything. The recommended best practice
-is to [use groups to assign permissions to IAM Users]((https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#use-groups-for-permissions)).
+is to [use groups to assign permissions to IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#use-groups-for-permissions).
 So next, we will create a "Pulumi Stack updaters" IAM Group, and add our robot account as a member.
 
 ```ts
