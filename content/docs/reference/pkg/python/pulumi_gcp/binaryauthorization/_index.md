@@ -16,15 +16,12 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.binaryauthorization"></span><dl class="class">
 <dt id="pulumi_gcp.binaryauthorization.Attestor">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.binaryauthorization.</code><code class="sig-name descname">Attestor</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attestation_authority_note=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Attestor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Attestor resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Attestor resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] attestation_authority_note: A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+:param pulumi.Input[str] description: A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
+:param pulumi.Input[str] name: The resource name.</p>
 <p>The <strong>attestation_authority_note</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">delegationServiceAccountEmail</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -43,9 +40,41 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.binaryauthorization.Attestor.attestation_authority_note">
+<code class="sig-name descname">attestation_authority_note</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Attestor.attestation_authority_note" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">delegationServiceAccountEmail</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noteReference</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">asciiArmoredPgpPublicKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - an identifier for the resource with format <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/attestors/{{name}}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pkixPublicKey</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicKeyPem</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">signatureAlgorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.binaryauthorization.Attestor.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Attestor.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.binaryauthorization.Attestor.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Attestor.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.binaryauthorization.Attestor.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attestation_authority_note=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Attestor.get" title="Permalink to this definition">¶</a></dt>
@@ -57,6 +86,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>attestation_authority_note</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name.</p></li>
 </ul>
 </dd>
 </dl>
@@ -78,9 +110,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -124,19 +153,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.binaryauthorization.AttestorIamBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.binaryauthorization.</code><code class="sig-name descname">AttestorIamBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attestor=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.AttestorIamBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AttestorIamBinding resource with the given unique name, props, and options.</p>
+<dd><p>Create a AttestorIamBinding resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] attestor: Used to find the parent resource to bind the IAM policy to
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div><p>If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>attestor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-</ul>
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
@@ -145,9 +174,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.binaryauthorization.AttestorIamBinding.attestor">
 <code class="sig-name descname">attestor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.binaryauthorization.AttestorIamBinding.attestor" title="Permalink to this definition">¶</a></dt>
@@ -202,9 +228,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -248,19 +271,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.binaryauthorization.AttestorIamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.binaryauthorization.</code><code class="sig-name descname">AttestorIamMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attestor=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.AttestorIamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AttestorIamMember resource with the given unique name, props, and options.</p>
+<dd><p>Create a AttestorIamMember resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] attestor: Used to find the parent resource to bind the IAM policy to
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div><p>If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>attestor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">binaryauthorization.AttestorIamBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-</ul>
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
@@ -269,9 +292,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.binaryauthorization.AttestorIamMember.attestor">
 <code class="sig-name descname">attestor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.binaryauthorization.AttestorIamMember.attestor" title="Permalink to this definition">¶</a></dt>
@@ -326,9 +346,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -372,23 +389,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.binaryauthorization.AttestorIamPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.binaryauthorization.</code><code class="sig-name descname">AttestorIamPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attestor=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.AttestorIamPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AttestorIamPolicy resource with the given unique name, props, and options.</p>
+<dd><p>Create a AttestorIamPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] attestor: Used to find the parent resource to bind the IAM policy to
+:param pulumi.Input[str] policy_data: The policy data generated by</p>
+<blockquote>
+<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>attestor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
-a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.binaryauthorization.AttestorIamPolicy.attestor">
 <code class="sig-name descname">attestor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.binaryauthorization.AttestorIamPolicy.attestor" title="Permalink to this definition">¶</a></dt>
@@ -435,9 +449,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -481,12 +492,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.binaryauthorization.Policy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.binaryauthorization.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admission_whitelist_patterns=None</em>, <em class="sig-param">cluster_admission_rules=None</em>, <em class="sig-param">default_admission_rule=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">global_policy_evaluation_mode=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Policy resource with the given unique name, props, and options.</p>
+<dd><p>Create a Policy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] admission_whitelist_patterns: A whitelist of image patterns to exclude from admission rules. If an image’s name matches a whitelist pattern, the</p>
+<blockquote>
+<div><p>image’s admission requests will always be permitted regardless of your admission rules.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster_admission_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation request
+must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be
+denied. There can be at most one admission rule per cluster spec. Identifier format: ‘{{location}}.{{clusterId}}’. A
+location is either a compute zone (e.g. ‘us-central1-a’) or a region (e.g. ‘us-central1’).</p></li>
+<li><p><strong>default_admission_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Default admission rule for a cluster without a per-cluster admission rule.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A descriptive comment.</p></li>
+<li><p><strong>global_policy_evaluation_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Controls the evaluation of a Google-maintained global admission policy for common system-level images. Images not
+covered by the global policy will be subject to the project admission policy.</p></li>
 </ul>
 </dd>
 </dl>
@@ -507,9 +530,55 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">evaluationMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireAttestationsBies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_policy.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.binaryauthorization.Policy.admission_whitelist_patterns">
+<code class="sig-name descname">admission_whitelist_patterns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Policy.admission_whitelist_patterns" title="Permalink to this definition">¶</a></dt>
+<dd><p>A whitelist of image patterns to exclude from admission rules. If an image’s name matches a whitelist pattern, the
+image’s admission requests will always be permitted regardless of your admission rules.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">namePattern</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.binaryauthorization.Policy.cluster_admission_rules">
+<code class="sig-name descname">cluster_admission_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Policy.cluster_admission_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation request
+must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be
+denied. There can be at most one admission rule per cluster spec. Identifier format: ‘{{location}}.{{clusterId}}’. A
+location is either a compute zone (e.g. ‘us-central1-a’) or a region (e.g. ‘us-central1’).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enforcementMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">evaluationMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireAttestationsBies</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.binaryauthorization.Policy.default_admission_rule">
+<code class="sig-name descname">default_admission_rule</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Policy.default_admission_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default admission rule for a cluster without a per-cluster admission rule.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enforcementMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">evaluationMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireAttestationsBies</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.binaryauthorization.Policy.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Policy.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A descriptive comment.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.binaryauthorization.Policy.global_policy_evaluation_mode">
+<code class="sig-name descname">global_policy_evaluation_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Policy.global_policy_evaluation_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls the evaluation of a Google-maintained global admission policy for common system-level images. Images not
+covered by the global policy will be subject to the project admission policy.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.binaryauthorization.Policy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admission_whitelist_patterns=None</em>, <em class="sig-param">cluster_admission_rules=None</em>, <em class="sig-param">default_admission_rule=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">global_policy_evaluation_mode=None</em>, <em class="sig-param">project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Policy.get" title="Permalink to this definition">¶</a></dt>
@@ -521,6 +590,16 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>admission_whitelist_patterns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A whitelist of image patterns to exclude from admission rules. If an image’s name matches a whitelist pattern, the
+image’s admission requests will always be permitted regardless of your admission rules.</p></li>
+<li><p><strong>cluster_admission_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation request
+must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be
+denied. There can be at most one admission rule per cluster spec. Identifier format: ‘{{location}}.{{clusterId}}’. A
+location is either a compute zone (e.g. ‘us-central1-a’) or a region (e.g. ‘us-central1’).</p></li>
+<li><p><strong>default_admission_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Default admission rule for a cluster without a per-cluster admission rule.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A descriptive comment.</p></li>
+<li><p><strong>global_policy_evaluation_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Controls the evaluation of a Google-maintained global admission policy for common system-level images. Images not
+covered by the global policy will be subject to the project admission policy.</p></li>
 </ul>
 </dd>
 </dl>
@@ -541,9 +620,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">evaluationMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireAttestationsBies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

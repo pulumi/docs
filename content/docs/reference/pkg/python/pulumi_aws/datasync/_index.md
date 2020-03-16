@@ -19,6 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages an AWS DataSync Agent deployed on premises.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> One of <code class="docutils literal notranslate"><span class="pre">activation_key</span></code> or <code class="docutils literal notranslate"><span class="pre">ip_address</span></code> must be provided for resource creation (agent activation). Neither is required for resource import. If using <code class="docutils literal notranslate"><span class="pre">ip_address</span></code>, this provider must be able to make an HTTP (port 80) GET request to the specified IP address from where it is running. The agent will turn off that HTTP server after activation.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_agent.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_agent.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -32,9 +33,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_agent.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_agent.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.datasync.Agent.activation_key">
 <code class="sig-name descname">activation_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.Agent.activation_key" title="Permalink to this definition">¶</a></dt>
@@ -84,9 +82,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_agent.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_agent.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -133,6 +128,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an AWS DataSync EFS Location.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The EFS File System must have a mounted EFS Mount Target before creating this resource.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_efs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_efs.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -151,9 +147,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">securityGroupArns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnetArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the EC2 Subnet that is associated with the EFS Mount Target.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_efs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_efs.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.datasync.EfsLocation.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.EfsLocation.arn" title="Permalink to this definition">¶</a></dt>
@@ -212,9 +205,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">securityGroupArns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnetArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the EC2 Subnet that is associated with the EFS Mount Target.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_efs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_efs.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -261,6 +251,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a SMB Location within AWS DataSync.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The DataSync Agents must be available before creating this resource.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_smb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_smb.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -282,9 +273,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The specific SMB version that you want DataSync to use for mounting your SMB share. Valid values: <code class="docutils literal notranslate"><span class="pre">AUTOMATIC</span></code>, <code class="docutils literal notranslate"><span class="pre">SMB2</span></code>, and <code class="docutils literal notranslate"><span class="pre">SMB3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">AUTOMATIC</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_smb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_smb.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.datasync.LocationSmb.agent_arns">
 <code class="sig-name descname">agent_arns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.LocationSmb.agent_arns" title="Permalink to this definition">¶</a></dt>
@@ -369,9 +357,6 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The specific SMB version that you want DataSync to use for mounting your SMB share. Valid values: <code class="docutils literal notranslate"><span class="pre">AUTOMATIC</span></code>, <code class="docutils literal notranslate"><span class="pre">SMB2</span></code>, and <code class="docutils literal notranslate"><span class="pre">SMB3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">AUTOMATIC</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_smb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_smb.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -418,6 +403,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an NFS Location within AWS DataSync.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The DataSync Agents must be available before creating this resource.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -435,9 +421,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">agent_arns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.datasync.NfsLocation.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.NfsLocation.arn" title="Permalink to this definition">¶</a></dt>
@@ -494,9 +477,6 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">agent_arns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -541,6 +521,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.datasync.S3Location">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.datasync.</code><code class="sig-name descname">S3Location</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">s3_bucket_arn=None</em>, <em class="sig-param">s3_config=None</em>, <em class="sig-param">subdirectory=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.S3Location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an S3 Location within AWS DataSync.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_s3.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_s3.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -557,9 +540,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bucketAccessRoleArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Names (ARN) of the IAM Role used to connect to the S3 Bucket.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_s3.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_s3.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.datasync.S3Location.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.S3Location.arn" title="Permalink to this definition">¶</a></dt>
@@ -616,9 +596,6 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bucketAccessRoleArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Names (ARN) of the IAM Role used to connect to the S3 Bucket.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_s3.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_s3.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -663,6 +640,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.datasync.Task">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.datasync.</code><code class="sig-name descname">Task</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cloudwatch_log_group_arn=None</em>, <em class="sig-param">destination_location_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">options=None</em>, <em class="sig-param">source_location_arn=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.Task" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS DataSync Task, which represents a configuration for synchronization. Starting an execution of these DataSync Tasks (actually synchronizing files) is performed outside of this resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_task.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_task.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -689,9 +669,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - User identifier of the file’s owners. Valid values: <code class="docutils literal notranslate"><span class="pre">BOTH</span></code>, <code class="docutils literal notranslate"><span class="pre">INT_VALUE</span></code>, <code class="docutils literal notranslate"><span class="pre">NAME</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">INT_VALUE</span></code> (preserve integer value of the ID).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">verifyMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred. Valid values: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">POINT_IN_TIME_CONSISTENT</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">POINT_IN_TIME_CONSISTENT</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_task.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_task.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.datasync.Task.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.Task.arn" title="Permalink to this definition">¶</a></dt>
@@ -778,9 +755,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - User identifier of the file’s owners. Valid values: <code class="docutils literal notranslate"><span class="pre">BOTH</span></code>, <code class="docutils literal notranslate"><span class="pre">INT_VALUE</span></code>, <code class="docutils literal notranslate"><span class="pre">NAME</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">INT_VALUE</span></code> (preserve integer value of the ID).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">verifyMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred. Valid values: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">POINT_IN_TIME_CONSISTENT</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">POINT_IN_TIME_CONSISTENT</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_task.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_task.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

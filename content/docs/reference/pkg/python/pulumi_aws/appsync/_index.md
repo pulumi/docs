@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.appsync.ApiKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">ApiKey</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expires=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.ApiKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync API Key.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_api_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_api_key.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -28,9 +31,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_api_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_api_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.appsync.ApiKey.api_id">
 <code class="sig-name descname">api_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.ApiKey.api_id" title="Permalink to this definition">¶</a></dt>
@@ -73,9 +73,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_api_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_api_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -120,6 +117,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.DataSource">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">DataSource</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamodb_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">http_config=None</em>, <em class="sig-param">lambda_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">service_role_arn=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.DataSource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync DataSource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_datasource.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_datasource.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -140,7 +140,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>dynamodb_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS region of Elasticsearch domain. Defaults to current region.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tableName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the DynamoDB table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the DynamoDB table.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCallerCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to use Amazon Cognito credentials with this data source.</p></li>
 </ul>
 <p>The <strong>elasticsearch_config</strong> object supports the following:</p>
@@ -154,11 +154,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>lambda_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">functionArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN for the Lambda function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">function_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN for the Lambda function.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_datasource.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_datasource.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.appsync.DataSource.api_id">
 <code class="sig-name descname">api_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.DataSource.api_id" title="Permalink to this definition">¶</a></dt>
@@ -183,7 +180,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>DynamoDB settings. See below</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - AWS region of Elasticsearch domain. Defaults to current region.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tableName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the DynamoDB table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the DynamoDB table.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCallerCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to use Amazon Cognito credentials with this data source.</p></li>
 </ul>
 </dd></dl>
@@ -212,7 +209,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">lambda_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.DataSource.lambda_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>AWS Lambda settings. See below</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">functionArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN for the Lambda function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">function_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN for the Lambda function.</p></li>
 </ul>
 </dd></dl>
 
@@ -261,7 +258,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>dynamodb_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS region of Elasticsearch domain. Defaults to current region.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tableName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the DynamoDB table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the DynamoDB table.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCallerCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to use Amazon Cognito credentials with this data source.</p></li>
 </ul>
 <p>The <strong>elasticsearch_config</strong> object supports the following:</p>
@@ -275,11 +272,8 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>lambda_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">functionArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN for the Lambda function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">function_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN for the Lambda function.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_datasource.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_datasource.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -324,6 +318,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.Function">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">Function</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">data_source=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">function_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">request_mapping_template=None</em>, <em class="sig-param">response_mapping_template=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync Function.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_function.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_function.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -339,9 +336,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_function.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_function.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.appsync.Function.api_id">
 <code class="sig-name descname">api_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Function.api_id" title="Permalink to this definition">¶</a></dt>
@@ -419,9 +413,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_function.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_function.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -466,6 +457,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.GraphQLApi">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">GraphQLApi</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_authentication_providers=None</em>, <em class="sig-param">authentication_type=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">openid_connect_config=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_pool_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync GraphQL API.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_graphql_api.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_graphql_api.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -488,7 +482,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">openid_connect_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Nested argument containing OpenID Connect configuration. Defined below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">authTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of milliseconds a token is valid after being authenticated.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iatTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of milliseconds a token is valid after being issued to a user.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Issuer for the OpenID Connect configuration. The issuer returned by discovery MUST exactly match the value of iss in the ID Token.</p></li>
 </ul>
@@ -497,7 +491,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">appIdClientRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A regular expression for validating the incoming Amazon Cognito User Pool app client ID.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">awsRegion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The AWS region in which the user pool was created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userPoolId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user pool ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_pool_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user pool ID.</p></li>
 </ul>
 </li>
 </ul>
@@ -509,7 +503,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>openid_connect_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">authTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of milliseconds a token is valid after being authenticated.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iatTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of milliseconds a token is valid after being issued to a user.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Issuer for the OpenID Connect configuration. The issuer returned by discovery MUST exactly match the value of iss in the ID Token.</p></li>
 </ul>
@@ -517,12 +511,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">appIdClientRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A regular expression for validating the incoming Amazon Cognito User Pool app client ID.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">awsRegion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The AWS region in which the user pool was created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action that you want your GraphQL API to take when a request that uses Amazon Cognito User Pool authentication doesn’t match the Amazon Cognito User Pool configuration. Valid: <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code> and <code class="docutils literal notranslate"><span class="pre">DENY</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userPoolId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user pool ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action that you want your GraphQL API to take when a request that uses Amazon Cognito User Pool authentication doesn’t match the Amazon Cognito User Pool configuration. Valid: <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code> and <code class="docutils literal notranslate"><span class="pre">DENY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_pool_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user pool ID.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_graphql_api.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_graphql_api.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.appsync.GraphQLApi.additional_authentication_providers">
 <code class="sig-name descname">additional_authentication_providers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.additional_authentication_providers" title="Permalink to this definition">¶</a></dt>
@@ -532,7 +523,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">openid_connect_config</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Nested argument containing OpenID Connect configuration. Defined below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">authTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of milliseconds a token is valid after being authenticated.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iatTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of milliseconds a token is valid after being issued to a user.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Issuer for the OpenID Connect configuration. The issuer returned by discovery MUST exactly match the value of iss in the ID Token.</p></li>
 </ul>
@@ -541,7 +532,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">appIdClientRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A regular expression for validating the incoming Amazon Cognito User Pool app client ID.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">awsRegion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The AWS region in which the user pool was created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userPoolId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The user pool ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_pool_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The user pool ID.</p></li>
 </ul>
 </li>
 </ul>
@@ -581,7 +572,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Nested argument containing OpenID Connect configuration. Defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">authTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of milliseconds a token is valid after being authenticated.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iatTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of milliseconds a token is valid after being issued to a user.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Issuer for the OpenID Connect configuration. The issuer returned by discovery MUST exactly match the value of iss in the ID Token.</p></li>
 </ul>
@@ -612,8 +603,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">appIdClientRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A regular expression for validating the incoming Amazon Cognito User Pool app client ID.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">awsRegion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The AWS region in which the user pool was created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The action that you want your GraphQL API to take when a request that uses Amazon Cognito User Pool authentication doesn’t match the Amazon Cognito User Pool configuration. Valid: <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code> and <code class="docutils literal notranslate"><span class="pre">DENY</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userPoolId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The user pool ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The action that you want your GraphQL API to take when a request that uses Amazon Cognito User Pool authentication doesn’t match the Amazon Cognito User Pool configuration. Valid: <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code> and <code class="docutils literal notranslate"><span class="pre">DENY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_pool_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The user pool ID.</p></li>
 </ul>
 </dd></dl>
 
@@ -647,7 +638,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">openid_connect_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Nested argument containing OpenID Connect configuration. Defined below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">authTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of milliseconds a token is valid after being authenticated.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iatTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of milliseconds a token is valid after being issued to a user.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Issuer for the OpenID Connect configuration. The issuer returned by discovery MUST exactly match the value of iss in the ID Token.</p></li>
 </ul>
@@ -656,7 +647,7 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">appIdClientRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A regular expression for validating the incoming Amazon Cognito User Pool app client ID.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">awsRegion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The AWS region in which the user pool was created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userPoolId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user pool ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_pool_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user pool ID.</p></li>
 </ul>
 </li>
 </ul>
@@ -668,7 +659,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>openid_connect_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">authTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of milliseconds a token is valid after being authenticated.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iatTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of milliseconds a token is valid after being issued to a user.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Issuer for the OpenID Connect configuration. The issuer returned by discovery MUST exactly match the value of iss in the ID Token.</p></li>
 </ul>
@@ -676,12 +667,9 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">appIdClientRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A regular expression for validating the incoming Amazon Cognito User Pool app client ID.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">awsRegion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The AWS region in which the user pool was created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action that you want your GraphQL API to take when a request that uses Amazon Cognito User Pool authentication doesn’t match the Amazon Cognito User Pool configuration. Valid: <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code> and <code class="docutils literal notranslate"><span class="pre">DENY</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userPoolId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user pool ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action that you want your GraphQL API to take when a request that uses Amazon Cognito User Pool authentication doesn’t match the Amazon Cognito User Pool configuration. Valid: <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code> and <code class="docutils literal notranslate"><span class="pre">DENY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_pool_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user pool ID.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_graphql_api.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_graphql_api.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -726,6 +714,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.Resolver">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">Resolver</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">data_source=None</em>, <em class="sig-param">field=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">pipeline_config=None</em>, <em class="sig-param">request_template=None</em>, <em class="sig-param">response_template=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Resolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync Resolver.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_resolver.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_resolver.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -746,9 +737,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">functions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_resolver.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_resolver.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.appsync.Resolver.api_id">
 <code class="sig-name descname">api_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Resolver.api_id" title="Permalink to this definition">¶</a></dt>
@@ -833,9 +821,6 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">functions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_resolver.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_resolver.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

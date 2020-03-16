@@ -19,6 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages an Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">owned</span> <span class="pre">by</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -70,9 +71,6 @@ anything, please consult the source <a class="reference external" href="https://
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resourceAppId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azuread.Application.app_roles">
 <code class="sig-name descname">app_roles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.Application.app_roles" title="Permalink to this definition">¶</a></dt>
@@ -242,9 +240,6 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resourceAppId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -291,6 +286,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a Password associated with an Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application_password.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application_password.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -306,9 +302,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application_password.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application_password.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azuread.ApplicationPassword.application_object_id">
 <code class="sig-name descname">application_object_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ApplicationPassword.application_object_id" title="Permalink to this definition">¶</a></dt>
@@ -365,9 +358,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application_password.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application_password.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -410,42 +400,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azuread.AwaitableGetApplicationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetApplicationResult</code><span class="sig-paren">(</span><em class="sig-param">app_roles=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">available_to_other_tenants=None</em>, <em class="sig-param">group_membership_claims=None</em>, <em class="sig-param">homepage=None</em>, <em class="sig-param">identifier_uris=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oauth2_allow_implicit_flow=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">reply_urls=None</em>, <em class="sig-param">required_resource_accesses=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetApplicationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetApplicationResult</code><span class="sig-paren">(</span><em class="sig-param">app_roles=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">available_to_other_tenants=None</em>, <em class="sig-param">group_membership_claims=None</em>, <em class="sig-param">homepage=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">identifier_uris=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oauth2_allow_implicit_flow=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">reply_urls=None</em>, <em class="sig-param">required_resource_accesses=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetApplicationResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azuread.AwaitableGetDomainsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetDomainsResult</code><span class="sig-paren">(</span><em class="sig-param">domains=None</em>, <em class="sig-param">include_unverified=None</em>, <em class="sig-param">only_default=None</em>, <em class="sig-param">only_initial=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetDomainsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetDomainsResult</code><span class="sig-paren">(</span><em class="sig-param">domains=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">include_unverified=None</em>, <em class="sig-param">only_default=None</em>, <em class="sig-param">only_initial=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetDomainsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azuread.AwaitableGetGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">members=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">owners=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azuread.AwaitableGetGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">names=None</em>, <em class="sig-param">object_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">object_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azuread.AwaitableGetServicePrincipalResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetServicePrincipalResult</code><span class="sig-paren">(</span><em class="sig-param">app_roles=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetServicePrincipalResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetServicePrincipalResult</code><span class="sig-paren">(</span><em class="sig-param">app_roles=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetServicePrincipalResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azuread.AwaitableGetUserResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetUserResult</code><span class="sig-paren">(</span><em class="sig-param">account_enabled=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">mail=None</em>, <em class="sig-param">mail_nickname=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">usage_location=None</em>, <em class="sig-param">user_principal_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetUserResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetUserResult</code><span class="sig-paren">(</span><em class="sig-param">account_enabled=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">mail=None</em>, <em class="sig-param">mail_nickname=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">usage_location=None</em>, <em class="sig-param">user_principal_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetUserResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azuread.AwaitableGetUsersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetUsersResult</code><span class="sig-paren">(</span><em class="sig-param">mail_nicknames=None</em>, <em class="sig-param">object_ids=None</em>, <em class="sig-param">user_principal_names=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetUsersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetUsersResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">mail_nicknames=None</em>, <em class="sig-param">object_ids=None</em>, <em class="sig-param">user_principal_names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetUsersResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azuread.GetApplicationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetApplicationResult</code><span class="sig-paren">(</span><em class="sig-param">app_roles=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">available_to_other_tenants=None</em>, <em class="sig-param">group_membership_claims=None</em>, <em class="sig-param">homepage=None</em>, <em class="sig-param">identifier_uris=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oauth2_allow_implicit_flow=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">reply_urls=None</em>, <em class="sig-param">required_resource_accesses=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetApplicationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetApplicationResult</code><span class="sig-paren">(</span><em class="sig-param">app_roles=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">available_to_other_tenants=None</em>, <em class="sig-param">group_membership_claims=None</em>, <em class="sig-param">homepage=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">identifier_uris=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oauth2_allow_implicit_flow=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">reply_urls=None</em>, <em class="sig-param">required_resource_accesses=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetApplicationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getApplication.</p>
 <dl class="attribute">
 <dt id="pulumi_azuread.GetApplicationResult.app_roles">
@@ -469,6 +459,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azuread.GetApplicationResult.group_membership_claims">
 <code class="sig-name descname">group_membership_claims</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetApplicationResult.group_membership_claims" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">groups</span></code> claim issued in a user or OAuth 2.0 access token that the app expects.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azuread.GetApplicationResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetApplicationResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -513,17 +509,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The type of the permission</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azuread.GetApplicationResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetApplicationResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azuread.GetDomainsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetDomainsResult</code><span class="sig-paren">(</span><em class="sig-param">domains=None</em>, <em class="sig-param">include_unverified=None</em>, <em class="sig-param">only_default=None</em>, <em class="sig-param">only_initial=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetDomainsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetDomainsResult</code><span class="sig-paren">(</span><em class="sig-param">domains=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">include_unverified=None</em>, <em class="sig-param">only_default=None</em>, <em class="sig-param">only_initial=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetDomainsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDomains.</p>
 <dl class="attribute">
 <dt id="pulumi_azuread.GetDomainsResult.domains">
@@ -541,7 +531,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azuread.GetGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">members=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">owners=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_azuread.GetGroupResult.id">
@@ -553,8 +543,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azuread.GetGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">names=None</em>, <em class="sig-param">object_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">object_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGroups.</p>
+<dl class="attribute">
+<dt id="pulumi_azuread.GetGroupsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetGroupsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azuread.GetGroupsResult.names">
 <code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetGroupsResult.names" title="Permalink to this definition">¶</a></dt>
@@ -567,17 +563,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The Object IDs of the Azure AD Groups.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azuread.GetGroupsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetGroupsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azuread.GetServicePrincipalResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetServicePrincipalResult</code><span class="sig-paren">(</span><em class="sig-param">app_roles=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetServicePrincipalResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetServicePrincipalResult</code><span class="sig-paren">(</span><em class="sig-param">app_roles=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetServicePrincipalResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServicePrincipal.</p>
 <dl class="attribute">
 <dt id="pulumi_azuread.GetServicePrincipalResult.display_name">
@@ -595,7 +585,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azuread.GetUserResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetUserResult</code><span class="sig-paren">(</span><em class="sig-param">account_enabled=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">mail=None</em>, <em class="sig-param">mail_nickname=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">usage_location=None</em>, <em class="sig-param">user_principal_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetUserResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetUserResult</code><span class="sig-paren">(</span><em class="sig-param">account_enabled=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">mail=None</em>, <em class="sig-param">mail_nickname=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">usage_location=None</em>, <em class="sig-param">user_principal_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetUserResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getUser.</p>
 <dl class="attribute">
 <dt id="pulumi_azuread.GetUserResult.account_enabled">
@@ -607,6 +597,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azuread.GetUserResult.display_name">
 <code class="sig-name descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetUserResult.display_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Display Name of the Azure AD User.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azuread.GetUserResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetUserResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -633,18 +629,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The User Principal Name of the Azure AD User.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azuread.GetUserResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetUserResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azuread.GetUsersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetUsersResult</code><span class="sig-paren">(</span><em class="sig-param">mail_nicknames=None</em>, <em class="sig-param">object_ids=None</em>, <em class="sig-param">user_principal_names=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetUsersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetUsersResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">mail_nicknames=None</em>, <em class="sig-param">object_ids=None</em>, <em class="sig-param">user_principal_names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetUsersResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getUsers.</p>
+<dl class="attribute">
+<dt id="pulumi_azuread.GetUsersResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetUsersResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azuread.GetUsersResult.mail_nicknames">
 <code class="sig-name descname">mail_nicknames</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetUsersResult.mail_nicknames" title="Permalink to this definition">¶</a></dt>
@@ -663,12 +659,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The User Principal Names of the Azure AD Users.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azuread.GetUsersResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetUsersResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -677,6 +667,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a Group within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">groups</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API. In addition it must also have either the <code class="docutils literal notranslate"><span class="pre">Company</span> <span class="pre">Administrator</span></code> or <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Account</span> <span class="pre">Administrator</span></code> Azure Active Directory roles assigned in order to be able to delete groups. You can assign one of the required Azure Active Directory Roles with the <strong>AzureAD PowerShell Module</strong>, which is available for Windows PowerShell or in the Azure Cloud Shell. Please refer to <a class="reference external" href="https://docs.microsoft.com/en-us/powershell/module/azuread/add-azureaddirectoryrolemember">this documentation</a> for more details.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -689,9 +680,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azuread.Group.members">
 <code class="sig-name descname">members</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.Group.members" title="Permalink to this definition">¶</a></dt>
@@ -727,9 +715,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -776,6 +761,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a single Group Membership within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Do not use this resource at the same time as <code class="docutils literal notranslate"><span class="pre">azuread_group.members</span></code>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group_member.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group_member.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -787,9 +773,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group_member.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group_member.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azuread.GroupMember.group_object_id">
 <code class="sig-name descname">group_object_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GroupMember.group_object_id" title="Permalink to this definition">¶</a></dt>
@@ -818,9 +801,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group_member.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group_member.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -868,6 +848,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/index.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -876,28 +859,6 @@ construction to achieve fine-grained programmatic control over provider settings
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
-<dl class="method">
-<dt id="pulumi_azuread.Provider.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.Provider.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_azuread.Provider.translate_output_property">
 <code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -942,6 +903,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a Service Principal associated with an Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API. Please see The Granting a Service Principal permission to manage AAD for the required steps.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/service_principal.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/service_principal.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -966,9 +928,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">userConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The display name of the user consent.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of this permission.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/service_principal.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/service_principal.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azuread.ServicePrincipal.app_role_assignment_required">
 <code class="sig-name descname">app_role_assignment_required</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ServicePrincipal.app_role_assignment_required" title="Permalink to this definition">¶</a></dt>
@@ -1046,9 +1005,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">userConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The display name of the user consent.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of this permission.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/service_principal.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/service_principal.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1095,6 +1051,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a Password associated with a Service Principal within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/service_principal_password.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/service_principal_password.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1110,9 +1067,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/service_principal_password.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/service_principal_password.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azuread.ServicePrincipalPassword.end_date">
 <code class="sig-name descname">end_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ServicePrincipalPassword.end_date" title="Permalink to this definition">¶</a></dt>
@@ -1169,9 +1123,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/service_principal_password.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/service_principal_password.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1218,6 +1169,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a User within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Directory.ReadWrite.All</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/user.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/user.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1242,9 +1194,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/user.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/user.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azuread.User.account_enabled">
 <code class="sig-name descname">account_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.User.account_enabled" title="Permalink to this definition">¶</a></dt>
@@ -1327,9 +1276,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/user.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/user.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1376,6 +1322,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to access information about an existing Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">(or</span> <span class="pre">owned</span> <span class="pre">by)</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/application.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/application.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1396,9 +1343,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">userConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The display name of the user consent</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the value of the roles claim that the application should expect in the authentication and access tokens.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/application.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/application.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1407,6 +1351,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to access information about an existing Domains within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Directory.Read.All</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/domains.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/domains.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1417,9 +1362,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/domains.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/domains.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1428,6 +1370,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Gets information about an Azure Active Directory group.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">directory</span> <span class="pre">data</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/group.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1437,9 +1380,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/group.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1448,6 +1388,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Gets Object IDs or Display Names for multiple Azure Active Directory groups.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">directory</span> <span class="pre">data</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/groups.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/groups.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1457,9 +1398,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/groups.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/groups.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1468,6 +1406,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Gets information about an existing Service Principal associated with an Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/service_principal.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/service_principal.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1490,9 +1429,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">userConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The display name of the user consent</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the value of the roles claim that the application should expect in the authentication and access tokens.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/service_principal.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/service_principal.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1501,6 +1437,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Gets information about an Azure Active Directory user.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">directory</span> <span class="pre">data</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/user.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/user.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1511,9 +1448,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/user.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/user.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1522,6 +1456,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Gets Object IDs or UPNs for multiple Azure Active Directory users.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">directory</span> <span class="pre">data</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/users.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/users.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1532,9 +1467,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/users.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/users.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

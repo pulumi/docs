@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.cfg.AggregateAuthorization">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cfg.</code><code class="sig-name descname">AggregateAuthorization</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cfg.AggregateAuthorization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Config Aggregate Authorization</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_aggregate_authorization.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_aggregate_authorization.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -28,9 +31,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_aggregate_authorization.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_aggregate_authorization.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cfg.AggregateAuthorization.account_id">
 <code class="sig-name descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cfg.AggregateAuthorization.account_id" title="Permalink to this definition">¶</a></dt>
@@ -73,9 +73,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_aggregate_authorization.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_aggregate_authorization.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -120,6 +117,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cfg.ConfigurationAggregator">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cfg.</code><code class="sig-name descname">ConfigurationAggregator</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_aggregation_source=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">organization_aggregation_source=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cfg.ConfigurationAggregator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Config Configuration Aggregator</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_aggregator.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_aggregator.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -134,7 +134,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>account_aggregation_source</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accountIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of 12-digit account IDs of the account(s) being aggregated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">account_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of 12-digit account IDs of the account(s) being aggregated.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allRegions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, aggregate existing AWS Config regions and future regions.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of source regions being aggregated.</p></li>
 </ul>
@@ -144,15 +144,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of source regions being aggregated.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_aggregator.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_aggregator.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cfg.ConfigurationAggregator.account_aggregation_source">
 <code class="sig-name descname">account_aggregation_source</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cfg.ConfigurationAggregator.account_aggregation_source" title="Permalink to this definition">¶</a></dt>
 <dd><p>The account(s) to aggregate config data from as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accountIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of 12-digit account IDs of the account(s) being aggregated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">account_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of 12-digit account IDs of the account(s) being aggregated.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allRegions</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, aggregate existing AWS Config regions and future regions.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of source regions being aggregated.</p></li>
 </ul>
@@ -208,7 +205,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>account_aggregation_source</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accountIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of 12-digit account IDs of the account(s) being aggregated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">account_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of 12-digit account IDs of the account(s) being aggregated.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allRegions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, aggregate existing AWS Config regions and future regions.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of source regions being aggregated.</p></li>
 </ul>
@@ -218,9 +215,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of source regions being aggregated.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_aggregator.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_aggregator.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -267,6 +261,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides an AWS Config Delivery Channel.</p>
 <blockquote>
 <div><p><strong>Note:</strong> Delivery Channel requires a <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html">Configuration Recorder</a> to be present. Use of <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> (as shown below) is recommended to avoid race conditions.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_delivery_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_delivery_channel.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -287,9 +282,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 e.g. <code class="docutils literal notranslate"><span class="pre">One_Hour</span></code> or <code class="docutils literal notranslate"><span class="pre">Three_Hours</span></code>.
 Valid values are listed <a class="reference external" href="https://docs.aws.amazon.com/config/latest/APIReference/API_ConfigSnapshotDeliveryProperties.html#API_ConfigSnapshotDeliveryProperties_Contents">here</a>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_delivery_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_delivery_channel.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cfg.DeliveryChannel.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cfg.DeliveryChannel.name" title="Permalink to this definition">¶</a></dt>
@@ -350,9 +342,6 @@ properties used to qualify the lookup.</p>
 e.g. <code class="docutils literal notranslate"><span class="pre">One_Hour</span></code> or <code class="docutils literal notranslate"><span class="pre">Three_Hours</span></code>.
 Valid values are listed <a class="reference external" href="https://docs.aws.amazon.com/config/latest/APIReference/API_ConfigSnapshotDeliveryProperties.html#API_ConfigSnapshotDeliveryProperties_Contents">here</a>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_delivery_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_delivery_channel.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -400,6 +389,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource must be created in the Organization master account and rules will include the master account unless its ID is added to the <code class="docutils literal notranslate"><span class="pre">excluded_accounts</span></code> argument.</p>
 <p><strong>NOTE:</strong> The proper Lambda permission to allow the AWS Config service invoke the Lambda Function must be in place before the rule will successfully create or update. See also the <cite>``lambda.Permission`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_custom_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_custom_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -420,9 +410,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_custom_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_custom_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cfg.OrganizationCustomRule.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cfg.OrganizationCustomRule.arn" title="Permalink to this definition">¶</a></dt>
@@ -521,9 +508,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_custom_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_custom_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -571,6 +555,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource must be created in the Organization master account and rules will include the master account unless its ID is added to the <code class="docutils literal notranslate"><span class="pre">excluded_accounts</span></code> argument.</p>
 <p><strong>NOTE:</strong> Every Organization account except those configured in the <code class="docutils literal notranslate"><span class="pre">excluded_accounts</span></code> argument must have a Configuration Recorder with proper IAM permissions before the rule will successfully create or update. See also the <cite>``cfg.Recorder`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html">https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html</a>&gt;`_.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_managed_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_managed_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -590,9 +575,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_managed_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_managed_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cfg.OrganizationManagedRule.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cfg.OrganizationManagedRule.arn" title="Permalink to this definition">¶</a></dt>
@@ -685,9 +667,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_managed_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_managed_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -734,6 +713,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides an AWS Config Configuration Recorder. Please note that this resource <strong>does not start</strong> the created recorder automatically.</p>
 <blockquote>
 <div><p><strong>Note:</strong> <em>Starting</em> the Configuration Recorder requires a <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_delivery_channel.html">delivery channel</a> (while delivery channel creation requires Configuration Recorder). This is why <cite>``cfg.RecorderStatus`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder_status.html">https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder_status.html</a>&gt;`_ is a separate resource.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -759,9 +739,6 @@ with the resources that it records. Requires <code class="docutils literal notra
 AWS Config records configuration changes (for example, <code class="docutils literal notranslate"><span class="pre">AWS::EC2::Instance</span></code> or <code class="docutils literal notranslate"><span class="pre">AWS::CloudTrail::Trail</span></code>).
 See <a class="reference external" href="http://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html#config-Type-ResourceIdentifier-resourceType">relevant part of AWS Docs</a> for available types.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cfg.Recorder.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cfg.Recorder.name" title="Permalink to this definition">¶</a></dt>
@@ -823,9 +800,6 @@ with the resources that it records. Requires <code class="docutils literal notra
 AWS Config records configuration changes (for example, <code class="docutils literal notranslate"><span class="pre">AWS::EC2::Instance</span></code> or <code class="docutils literal notranslate"><span class="pre">AWS::CloudTrail::Trail</span></code>).
 See <a class="reference external" href="http://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html#config-Type-ResourceIdentifier-resourceType">relevant part of AWS Docs</a> for available types.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -872,6 +846,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages status (recording / stopped) of an AWS Config Configuration Recorder.</p>
 <blockquote>
 <div><p><strong>Note:</strong> Starting Configuration Recorder requires a <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_delivery_channel.html">Delivery Channel</a> to be present. Use of <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> (as shown below) is recommended to avoid race conditions.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder_status.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder_status.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -883,9 +858,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder_status.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder_status.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cfg.RecorderStatus.is_enabled">
 <code class="sig-name descname">is_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cfg.RecorderStatus.is_enabled" title="Permalink to this definition">¶</a></dt>
@@ -914,9 +886,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder_status.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder_status.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -963,6 +932,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides an AWS Config Rule.</p>
 <blockquote>
 <div><p><strong>Note:</strong> Config Rule requires an existing <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html">Configuration Recorder</a> to be present. Use of <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> is recommended (as shown below) to avoid race conditions.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_config_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_config_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1006,9 +976,6 @@ is triggered periodically. If specified, requires <code class="docutils literal 
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceIdentifier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - For AWS Config managed rules, a predefined identifier, e.g <code class="docutils literal notranslate"><span class="pre">IAM_PASSWORD_POLICY</span></code>. For custom Lambda rules, the identifier is the ARN of the Lambda Function, such as <code class="docutils literal notranslate"><span class="pre">arn:aws:lambda:us-east-1:123456789012:function:custom_rule_name</span></code> or the <cite>``arn`</cite> attribute of the <code class="docutils literal notranslate"><span class="pre">lambda.Function</span></code> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_function.html#arn">https://www.terraform.io/docs/providers/aws/r/lambda_function.html#arn</a>&gt;`_.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_config_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_config_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cfg.Rule.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cfg.Rule.arn" title="Permalink to this definition">¶</a></dt>
@@ -1138,9 +1105,6 @@ is triggered periodically. If specified, requires <code class="docutils literal 
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceIdentifier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - For AWS Config managed rules, a predefined identifier, e.g <code class="docutils literal notranslate"><span class="pre">IAM_PASSWORD_POLICY</span></code>. For custom Lambda rules, the identifier is the ARN of the Lambda Function, such as <code class="docutils literal notranslate"><span class="pre">arn:aws:lambda:us-east-1:123456789012:function:custom_rule_name</span></code> or the <cite>``arn`</cite> attribute of the <code class="docutils literal notranslate"><span class="pre">lambda.Function</span></code> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_function.html#arn">https://www.terraform.io/docs/providers/aws/r/lambda_function.html#arn</a>&gt;`_.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_config_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_config_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.backup.Plan">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">Plan</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Backup plan resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_plan.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_plan.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -38,14 +41,11 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recoveryPointTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Metadata that you can assign to help organize the resources that you create.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An display name for a backup rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rule_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An display name for a backup rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">schedule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A CRON expression specifying when AWS Backup initiates a backup job.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">startWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time in minutes before beginning a backup.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetVaultName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of a logical container where backups are stored.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_plan.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_plan.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.backup.Plan.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Plan.arn" title="Permalink to this definition">¶</a></dt>
@@ -71,7 +71,7 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recoveryPointTags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Metadata that you can assign to help organize the resources that you create.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An display name for a backup rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rule_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An display name for a backup rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">schedule</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A CRON expression specifying when AWS Backup initiates a backup job.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">startWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of time in minutes before beginning a backup.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetVaultName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of a logical container where backups are stored.</p></li>
@@ -119,14 +119,11 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recoveryPointTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Metadata that you can assign to help organize the resources that you create.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An display name for a backup rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rule_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An display name for a backup rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">schedule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A CRON expression specifying when AWS Backup initiates a backup job.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">startWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time in minutes before beginning a backup.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetVaultName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of a logical container where backups are stored.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_plan.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_plan.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -171,6 +168,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.backup.Selection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">Selection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">iam_role_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">plan_id=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">selection_tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Selection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages selection conditions for AWS Backup plan resources.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_selection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_selection.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -190,9 +190,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An operation, such as <code class="docutils literal notranslate"><span class="pre">StringEquals</span></code>, that is applied to a key-value pair used to filter resources in a selection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value in a key-value pair.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_selection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_selection.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.backup.Selection.iam_role_arn">
 <code class="sig-name descname">iam_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Selection.iam_role_arn" title="Permalink to this definition">¶</a></dt>
@@ -254,9 +251,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An operation, such as <code class="docutils literal notranslate"><span class="pre">StringEquals</span></code>, that is applied to a key-value pair used to filter resources in a selection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value in a key-value pair.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_selection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_selection.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -301,6 +295,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.backup.Vault">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">Vault</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Vault" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Backup vault resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_vault.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_vault.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -312,9 +309,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_vault.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_vault.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.backup.Vault.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Vault.arn" title="Permalink to this definition">¶</a></dt>
@@ -364,9 +358,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_vault.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_vault.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

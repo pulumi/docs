@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.appconfiguration.ConfigurationStore">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appconfiguration.</code><code class="sig-name descname">ConfigurationStore</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appconfiguration.ConfigurationStore" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure App Configuration.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_configuration.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -30,9 +33,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_configuration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.appconfiguration.ConfigurationStore.endpoint">
 <code class="sig-name descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appconfiguration.ConfigurationStore.endpoint" title="Permalink to this definition">¶</a></dt>
@@ -56,7 +56,7 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">primary_read_keys</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appconfiguration.ConfigurationStore.primary_read_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">access_key</span></code> block as defined below containing the primary read access key.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">connectionString</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The connection string including the endpoint, id and secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connection_string</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The connection string including the endpoint, id and secret.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the access key.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The secret of the access key.</p></li>
 </ul>
@@ -67,7 +67,7 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">primary_write_keys</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appconfiguration.ConfigurationStore.primary_write_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">access_key</span></code> block as defined below containing the primary write access key.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">connectionString</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The connection string including the endpoint, id and secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connection_string</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The connection string including the endpoint, id and secret.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the access key.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The secret of the access key.</p></li>
 </ul>
@@ -84,7 +84,7 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">secondary_read_keys</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appconfiguration.ConfigurationStore.secondary_read_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">access_key</span></code> block as defined below containing the secondary read access key.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">connectionString</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The connection string including the endpoint, id and secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connection_string</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The connection string including the endpoint, id and secret.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the access key.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The secret of the access key.</p></li>
 </ul>
@@ -95,7 +95,7 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">secondary_write_keys</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appconfiguration.ConfigurationStore.secondary_write_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">access_key</span></code> block as defined below containing the secondary write access key.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">connectionString</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The connection string including the endpoint, id and secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connection_string</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The connection string including the endpoint, id and secret.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the access key.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The secret of the access key.</p></li>
 </ul>
@@ -139,31 +139,28 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>primary_read_keys</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">connectionString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The connection string including the endpoint, id and secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connection_string</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The connection string including the endpoint, id and secret.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the access key.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The secret of the access key.</p></li>
 </ul>
 <p>The <strong>primary_write_keys</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">connectionString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The connection string including the endpoint, id and secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connection_string</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The connection string including the endpoint, id and secret.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the access key.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The secret of the access key.</p></li>
 </ul>
 <p>The <strong>secondary_read_keys</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">connectionString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The connection string including the endpoint, id and secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connection_string</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The connection string including the endpoint, id and secret.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the access key.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The secret of the access key.</p></li>
 </ul>
 <p>The <strong>secondary_write_keys</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">connectionString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The connection string including the endpoint, id and secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connection_string</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The connection string including the endpoint, id and secret.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the access key.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The secret of the access key.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_configuration.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
