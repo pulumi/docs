@@ -3,13 +3,28 @@
 title: "Name of the Webinar"
 meta_desc: "Search Description"
 
+# If the video is pre-recorded or live.
+pre_recorded: false
+
+# The preview image will be shown on the list page.
+preview_image: ""
+
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
+
+# Gated webinars will have a registration form and the user will need
+# to fill out the form before viewing.
+gated: false
 
 # The layout of the landing page.
 type: webinar
 
-# The url slug for the webinar landing page.
+# External webinars will link to an external page instead of a webinar
+# landing/registration page.
+external: false
+
+# The url slug for the webinar landing page. If this is an external
+# webinar, use the external URL as the value here.
 url_slug: "{{ .Name }}"
 
 # The content of the hero section.
@@ -21,24 +36,12 @@ hero:
 
 # Content for the left hand side section of the page.
 main:
-    heading: ""
-
-    description: ""
-
-    cta:
-        label: ""
-        url: ""
-
-    # A bullet point list containing what the user will learn during the webinar.
-    learn:
-        - ""
-
-# The right hand side webinar setion.
-webinar:
     # Webinar title.
     title: ""
+    # URL for embedding a URL for ungated webinars.
+    youtube_url: ""
     # Datetime of the webinar.
-    datetime: ""
+    datetime: 2019-02-05 10:00:00 -07:00
     # Description of the webinar.
     description: ""
 
@@ -46,4 +49,14 @@ webinar:
     presenters:
         - name: ""
           role: ""
+
+    # A bullet point list containing what the user will learn during the webinar.
+    learn:
+        - ""
+
+# The right hand side webinar setion.
+webinar:
+    cta:
+        label: ""
+        url: ""
 ---

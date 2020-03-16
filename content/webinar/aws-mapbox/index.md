@@ -1,7 +1,13 @@
 ---
 # Name of the webinar.
-title: "Pulumi in IoT Webinar: AWS, Mapbox and Pulumi"
+title: "Pulumi in IoT: AWS, Mapbox and Pulumi"
 meta_desc: "Join us in the webinar to see how Pulumi supercharges Mapbox’s IoT asset tracking architecture on AWS, from API Gateway, Amazon Kinesis, to DynamoDB and S3."
+
+# If the video is pre-recorded or live.
+pre_recorded: true
+
+# The preview image will be shown on the list page.
+preview_image: "/logos/customers/mapbox_logo.png"
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
@@ -9,13 +15,18 @@ unlisted: false
 # The layout of the landing page.
 type: webinar
 
-# The url slug for the webinar landing page.
-url_slug: "aws-mapbox"
+# External webinars will link to an external page instead of a webinar
+# landing/registration page.
+external: true
+
+# The url slug for the webinar landing page. If this is an external
+# webinar, use the external URL as the value here.
+url_slug: "https://event.on24.com/wcc/r/2000709/49822D39F0E9038AA2A3A84E04BF575D?partnerref=pulumi"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Pulumi in IoT: Serverless Asset Tracking Solution"
+    title: "Pulumi in IoT: AWS, Mapbox and Pulumi"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
