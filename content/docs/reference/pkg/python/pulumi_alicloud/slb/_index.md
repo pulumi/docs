@@ -37,6 +37,9 @@ when you create a listener or change access control configuration after a listen
 <li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code> - (Required) An IP addresses or CIDR blocks.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> - (Optional) the comment of the entry.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_acl.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -55,9 +58,6 @@ when you create a listener or change access control configuration after a listen
 <li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_acl.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.Acl.entry_lists">
 <code class="sig-name descname">entry_lists</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.Acl.entry_lists" title="Permalink to this definition">¶</a></dt>
@@ -116,9 +116,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_acl.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -162,24 +159,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.slb.Attachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">Attachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend_servers=None</em>, <em class="sig-param">delete_protection_validation=None</em>, <em class="sig-param">instance_ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">server_type=None</em>, <em class="sig-param">weight=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.Attachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Attachment resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>backend_servers</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The backend servers of the load balancer.</p></li>
-<li><p><strong>delete_protection_validation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Checking DeleteProtection of SLB instance before deleting. If true, this resource will not be deleted when its SLB instance enabled DeleteProtection. Default to false.</p></li>
-<li><p><strong>instance_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of instance ids to added backend server in the SLB.</p></li>
-<li><p><strong>load_balancer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the load balancer.</p></li>
-<li><p><strong>server_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of the instances. Valid value ecs, eni. Default to ecs.</p></li>
-<li><p><strong>weight</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Weight of the instances. Valid value range: [0-100]. Default to 100.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_attachment.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Attachment resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] backend_servers: The backend servers of the load balancer.
+:param pulumi.Input[bool] delete_protection_validation: Checking DeleteProtection of SLB instance before deleting. If true, this resource will not be deleted when its SLB instance enabled DeleteProtection. Default to false.
+:param pulumi.Input[list] instance_ids: A list of instance ids to added backend server in the SLB.
+:param pulumi.Input[str] load_balancer_id: ID of the load balancer.
+:param pulumi.Input[str] server_type: Type of the instances. Valid value ecs, eni. Default to ecs.
+:param pulumi.Input[float] weight: Weight of the instances. Valid value range: [0-100]. Default to 100.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.Attachment.backend_servers">
 <code class="sig-name descname">backend_servers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.Attachment.backend_servers" title="Permalink to this definition">¶</a></dt>
@@ -236,9 +224,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -281,57 +266,57 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.AwaitableGetAclsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetAclsResult</code><span class="sig-paren">(</span><em class="sig-param">acls=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetAclsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetAclsResult</code><span class="sig-paren">(</span><em class="sig-param">acls=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetAclsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.AwaitableGetAttachmentsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetAttachmentsResult</code><span class="sig-paren">(</span><em class="sig-param">instance_ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">slb_attachments=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetAttachmentsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetAttachmentsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">instance_ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">slb_attachments=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetAttachmentsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.AwaitableGetBackendServersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetBackendServersResult</code><span class="sig-paren">(</span><em class="sig-param">backend_servers=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetBackendServersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetBackendServersResult</code><span class="sig-paren">(</span><em class="sig-param">backend_servers=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetBackendServersResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.AwaitableGetCaCertificatesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetCaCertificatesResult</code><span class="sig-paren">(</span><em class="sig-param">certificates=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetCaCertificatesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetCaCertificatesResult</code><span class="sig-paren">(</span><em class="sig-param">certificates=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetCaCertificatesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.AwaitableGetDomainExtensionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetDomainExtensionsResult</code><span class="sig-paren">(</span><em class="sig-param">extensions=None</em>, <em class="sig-param">frontend_port=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetDomainExtensionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetDomainExtensionsResult</code><span class="sig-paren">(</span><em class="sig-param">extensions=None</em>, <em class="sig-param">frontend_port=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetDomainExtensionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.AwaitableGetListenersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetListenersResult</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">frontend_port=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">slb_listeners=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetListenersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetListenersResult</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">frontend_port=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">slb_listeners=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetListenersResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.AwaitableGetLoadBalancersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetLoadBalancersResult</code><span class="sig-paren">(</span><em class="sig-param">address=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">master_availability_zone=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">slave_availability_zone=None</em>, <em class="sig-param">slbs=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetLoadBalancersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetLoadBalancersResult</code><span class="sig-paren">(</span><em class="sig-param">address=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">master_availability_zone=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">slave_availability_zone=None</em>, <em class="sig-param">slbs=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetLoadBalancersResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.AwaitableGetMasterSlaveServerGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetMasterSlaveServerGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetMasterSlaveServerGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetMasterSlaveServerGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetMasterSlaveServerGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.AwaitableGetRulesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetRulesResult</code><span class="sig-paren">(</span><em class="sig-param">frontend_port=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">slb_rules=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetRulesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetRulesResult</code><span class="sig-paren">(</span><em class="sig-param">frontend_port=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">slb_rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetRulesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.AwaitableGetServerCertificatesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetServerCertificatesResult</code><span class="sig-paren">(</span><em class="sig-param">certificates=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetServerCertificatesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetServerCertificatesResult</code><span class="sig-paren">(</span><em class="sig-param">certificates=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetServerCertificatesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.AwaitableGetServerGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetServerGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">slb_server_groups=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetServerGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetServerGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">slb_server_groups=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetServerGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -347,6 +332,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Optional) Weight of the backend server. Valid value range: [0-100].</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Optional) Type of the backend server. Valid value ecs, eni. Default to eni.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_backend_server.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_backend_server.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -364,9 +352,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_backend_server.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_backend_server.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.BackendServer.backend_servers">
 <code class="sig-name descname">backend_servers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.BackendServer.backend_servers" title="Permalink to this definition">¶</a></dt>
@@ -413,9 +398,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_backend_server.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_backend_server.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -462,6 +444,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A Load Balancer CA Certificate is used by the listener of the protocol https.</p>
 <p>For information about slb and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/27539.htm">What is Server Load Balancer</a>.</p>
 <p>For information about CA Certificate and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/85968.htm">Configure CA Certificate</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_ca_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_ca_certificate.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -474,9 +459,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_ca_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_ca_certificate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.CaCertificate.ca_certificate">
 <code class="sig-name descname">ca_certificate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.CaCertificate.ca_certificate" title="Permalink to this definition">¶</a></dt>
@@ -519,9 +501,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_ca_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_ca_certificate.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -570,6 +549,7 @@ Please refer to the <a class="reference external" href="https://www.alibabacloud
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.60.0+</p>
 <p><strong>NOTE:</strong> The instance with shared loadBalancerSpec doesn’t support domainExtension.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_domain_extension.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_domain_extension.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -584,9 +564,6 @@ Please refer to the <a class="reference external" href="https://www.alibabacloud
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_domain_extension.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_domain_extension.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.DomainExtension.delete_protection_validation">
 <code class="sig-name descname">delete_protection_validation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.DomainExtension.delete_protection_validation" title="Permalink to this definition">¶</a></dt>
@@ -636,9 +613,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_domain_extension.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_domain_extension.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -681,12 +655,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.GetAclsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetAclsResult</code><span class="sig-paren">(</span><em class="sig-param">acls=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetAclsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetAclsResult</code><span class="sig-paren">(</span><em class="sig-param">acls=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetAclsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAcls.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.GetAclsResult.acls">
 <code class="sig-name descname">acls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetAclsResult.acls" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of SLB  acls. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.slb.GetAclsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetAclsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -713,35 +693,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.slb.GetAclsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetAclsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.GetAttachmentsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetAttachmentsResult</code><span class="sig-paren">(</span><em class="sig-param">instance_ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">slb_attachments=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetAttachmentsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetAttachmentsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">instance_ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">slb_attachments=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetAttachmentsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAttachments.</p>
-<dl class="attribute">
-<dt id="pulumi_alicloud.slb.GetAttachmentsResult.slb_attachments">
-<code class="sig-name descname">slb_attachments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetAttachmentsResult.slb_attachments" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of SLB attachments. Each element contains the following attributes:</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.GetAttachmentsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetAttachmentsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_alicloud.slb.GetAttachmentsResult.slb_attachments">
+<code class="sig-name descname">slb_attachments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetAttachmentsResult.slb_attachments" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of SLB attachments. Each element contains the following attributes:</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.GetBackendServersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetBackendServersResult</code><span class="sig-paren">(</span><em class="sig-param">backend_servers=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetBackendServersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetBackendServersResult</code><span class="sig-paren">(</span><em class="sig-param">backend_servers=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetBackendServersResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBackendServers.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.GetBackendServersResult.id">
@@ -753,12 +727,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.GetCaCertificatesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetCaCertificatesResult</code><span class="sig-paren">(</span><em class="sig-param">certificates=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetCaCertificatesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetCaCertificatesResult</code><span class="sig-paren">(</span><em class="sig-param">certificates=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetCaCertificatesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCaCertificates.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.GetCaCertificatesResult.certificates">
 <code class="sig-name descname">certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetCaCertificatesResult.certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of SLB ca certificates. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.slb.GetCaCertificatesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetCaCertificatesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -785,17 +765,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Available in v1.66.0+) A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.slb.GetCaCertificatesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetCaCertificatesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.GetDomainExtensionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetDomainExtensionsResult</code><span class="sig-paren">(</span><em class="sig-param">extensions=None</em>, <em class="sig-param">frontend_port=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetDomainExtensionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetDomainExtensionsResult</code><span class="sig-paren">(</span><em class="sig-param">extensions=None</em>, <em class="sig-param">frontend_port=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetDomainExtensionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDomainExtensions.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.GetDomainExtensionsResult.extensions">
@@ -813,12 +787,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.GetListenersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetListenersResult</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">frontend_port=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">slb_listeners=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetListenersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetListenersResult</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">frontend_port=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">slb_listeners=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetListenersResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getListeners.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.GetListenersResult.frontend_port">
 <code class="sig-name descname">frontend_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetListenersResult.frontend_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Frontend port used to receive incoming traffic and distribute it to the backend servers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.slb.GetListenersResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetListenersResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -833,22 +813,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of SLB listeners. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.slb.GetListenersResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetListenersResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.GetLoadBalancersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetLoadBalancersResult</code><span class="sig-paren">(</span><em class="sig-param">address=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">master_availability_zone=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">slave_availability_zone=None</em>, <em class="sig-param">slbs=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetLoadBalancersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetLoadBalancersResult</code><span class="sig-paren">(</span><em class="sig-param">address=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">master_availability_zone=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">slave_availability_zone=None</em>, <em class="sig-param">slbs=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetLoadBalancersResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLoadBalancers.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.GetLoadBalancersResult.address">
 <code class="sig-name descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetLoadBalancersResult.address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Service address of the SLB.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.slb.GetLoadBalancersResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetLoadBalancersResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -905,22 +885,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>ID of the VSwitch the SLB belongs to.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.slb.GetLoadBalancersResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetLoadBalancersResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.GetMasterSlaveServerGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetMasterSlaveServerGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetMasterSlaveServerGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetMasterSlaveServerGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetMasterSlaveServerGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getMasterSlaveServerGroups.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.GetMasterSlaveServerGroupsResult.groups">
 <code class="sig-name descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetMasterSlaveServerGroupsResult.groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of SLB master slave server groups. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.slb.GetMasterSlaveServerGroupsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetMasterSlaveServerGroupsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -935,18 +915,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of SLB master slave server groups names.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.slb.GetMasterSlaveServerGroupsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetMasterSlaveServerGroupsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.GetRulesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetRulesResult</code><span class="sig-paren">(</span><em class="sig-param">frontend_port=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">slb_rules=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetRulesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetRulesResult</code><span class="sig-paren">(</span><em class="sig-param">frontend_port=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">slb_rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetRulesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRules.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.slb.GetRulesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetRulesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.GetRulesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetRulesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -965,22 +945,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of SLB listener rules. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.slb.GetRulesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetRulesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.GetServerCertificatesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetServerCertificatesResult</code><span class="sig-paren">(</span><em class="sig-param">certificates=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetServerCertificatesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetServerCertificatesResult</code><span class="sig-paren">(</span><em class="sig-param">certificates=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetServerCertificatesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServerCertificates.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.GetServerCertificatesResult.certificates">
 <code class="sig-name descname">certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetServerCertificatesResult.certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of SLB server certificates. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.slb.GetServerCertificatesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetServerCertificatesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1007,18 +987,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Available in v1.66.0+) A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.slb.GetServerCertificatesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetServerCertificatesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.slb.GetServerGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetServerGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">slb_server_groups=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetServerGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetServerGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">slb_server_groups=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetServerGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServerGroups.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.slb.GetServerGroupsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetServerGroupsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.GetServerGroupsResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetServerGroupsResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -1037,12 +1017,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of SLB VServer groups. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.slb.GetServerGroupsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetServerGroupsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -1059,6 +1033,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>load balance support 4 protocal to listen on, they are <code class="docutils literal notranslate"><span class="pre">http</span></code>,<code class="docutils literal notranslate"><span class="pre">https</span></code>,<code class="docutils literal notranslate"><span class="pre">tcp</span></code>,<code class="docutils literal notranslate"><span class="pre">udp</span></code>, the every listener support which portocal following:</p>
 <p>The listener mapping supports the following:</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_listener.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_listener.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1113,9 +1090,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">retriveSlbIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use the XForwardedFor_SLBIP header to obtain the public IP address of the SLB instance. Default to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retriveSlbProto</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use the XForwardedFor_proto header to obtain the protocol used by the listener. Default to false.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_listener.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_listener.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.Listener.acl_id">
 <code class="sig-name descname">acl_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.Listener.acl_id" title="Permalink to this definition">¶</a></dt>
@@ -1416,9 +1390,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">retriveSlbIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use the XForwardedFor_SLBIP header to obtain the public IP address of the SLB instance. Default to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retriveSlbProto</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use the XForwardedFor_proto header to obtain the protocol used by the listener. Default to false.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_listener.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_listener.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1467,6 +1438,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> At present, to avoid some unnecessary regulation confusion, SLB can not support alicloud international account to create “paybybandwidth” instance.</p>
 <p><strong>NOTE:</strong> The supported specifications vary by region. Currently not all regions support guaranteed-performance instances.
 For more details about guaranteed-performance instance, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/27657.htm">Guaranteed-performance instances</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1506,9 +1478,6 @@ Launching “<a class="reference external" href="https://www.alibabacloud.com/he
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.LoadBalancer.address">
 <code class="sig-name descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.LoadBalancer.address" title="Permalink to this definition">¶</a></dt>
@@ -1653,9 +1622,6 @@ Launching “<a class="reference external" href="https://www.alibabacloud.com/he
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1718,6 +1684,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">server_type</span></code> - (Optional) The server type of the backend server. Valid value Master, Slave.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_backup</span></code> - (Removed from v1.63.0) Determine if the server is executing. Valid value 0, 1.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_master_slave_server_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_master_slave_server_group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1738,9 +1707,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_master_slave_server_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_master_slave_server_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.MasterSlaveServerGroup.delete_protection_validation">
 <code class="sig-name descname">delete_protection_validation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.MasterSlaveServerGroup.delete_protection_validation" title="Permalink to this definition">¶</a></dt>
@@ -1798,9 +1764,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_master_slave_server_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_master_slave_server_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1852,6 +1815,7 @@ You can add forwarding rules to a listener to forward requests based on the doma
 <p><strong>NOTE:</strong> Having the same ‘Domain’ and ‘Url’ rule can not be created repeatedly in the one listener.</p>
 <p><strong>NOTE:</strong> Rule only be created in the <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> listener.</p>
 <p><strong>NOTE:</strong> Only rule’s virtual server group can be modified.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1895,9 +1859,6 @@ and characters ‘-‘ ‘/’ ‘?’ ‘%’ ‘#’ and ‘&amp;’ are allow
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.Rule.cookie">
 <code class="sig-name descname">cookie</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.Rule.cookie" title="Permalink to this definition">¶</a></dt>
@@ -2084,9 +2045,6 @@ and characters ‘-‘ ‘/’ ‘?’ ‘%’ ‘#’ and ‘&amp;’ are allow
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2133,6 +2091,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A Load Balancer Server Certificate is an ssl Certificate used by the listener of the protocol https.</p>
 <p>For information about slb and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/27539.htm">What is Server Load Balancer</a>.</p>
 <p>For information about Server Certificate and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/85968.htm">Configure Server Certificate</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_certificate.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2149,9 +2110,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_certificate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.ServerCertificate.alicloud_certificate_id">
 <code class="sig-name descname">alicloud_certificate_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.ServerCertificate.alicloud_certificate_id" title="Permalink to this definition">¶</a></dt>
@@ -2222,9 +2180,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_certificate.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2284,6 +2239,9 @@ and to meet the personalized requirements of domain name and URL forwarding.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Optional) Weight of the backend server. Valid value range: [0-100]. Default to 100.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Optional, Available in 1.51.0+) Type of the backend server. Valid value ecs, eni. Default to eni.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2303,9 +2261,6 @@ and to meet the personalized requirements of domain name and URL forwarding.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.slb.ServerGroup.delete_protection_validation">
 <code class="sig-name descname">delete_protection_validation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.ServerGroup.delete_protection_validation" title="Permalink to this definition">¶</a></dt>
@@ -2361,9 +2316,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2420,6 +2372,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code>      - the listener protocol (such as tcp/udp/http/https, etc).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">acl_type</span></code>      - the type of acl (such as white/black).</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_acls.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_acls.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2430,15 +2385,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_acls.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_acls.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.slb.get_attachments">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_attachments</code><span class="sig-paren">(</span><em class="sig-param">instance_ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_attachments" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the server load balancer attachments of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_attachments.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_attachments.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2447,9 +2402,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_attachments.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_attachments.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2458,6 +2410,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides the server load balancer backend servers related to a server load balancer..</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.53.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_backend_servers.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_backend_servers.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2467,15 +2420,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_backend_servers.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_backend_servers.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.slb.get_ca_certificates">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_ca_certificates</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_ca_certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the CA certificate list.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_ca_certificates.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_ca_certificates.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2486,9 +2439,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_ca_certificates.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_ca_certificates.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2497,6 +2447,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides the domain extensions associated with a server load balancer listener.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.60.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_domain_extensions.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_domain_extensions.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2507,15 +2458,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_domain_extensions.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_domain_extensions.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.slb.get_listeners">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_listeners</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">frontend_port=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_listeners" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the listeners related to a server load balancer of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_listeners.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_listeners.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2526,15 +2477,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_listeners.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_listeners.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.slb.get_load_balancers">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_load_balancers</code><span class="sig-paren">(</span><em class="sig-param">address=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">master_availability_zone=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">slave_availability_zone=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_load_balancers" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the server load balancers of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slbs.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slbs.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2567,9 +2518,6 @@ tagKey2 = &quot;tagValue2&quot;
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slbs.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slbs.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2578,6 +2526,7 @@ tagKey2 = &quot;tagValue2&quot;
 <dd><p>This data source provides the master slave server groups related to a server load balancer.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.54.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_master_slave_server_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_master_slave_server_groups.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2588,15 +2537,15 @@ tagKey2 = &quot;tagValue2&quot;
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_master_slave_server_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_master_slave_server_groups.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.slb.get_rules">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_rules</code><span class="sig-paren">(</span><em class="sig-param">frontend_port=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the rules associated with a server load balancer listener.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_rules.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2607,15 +2556,15 @@ tagKey2 = &quot;tagValue2&quot;
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_rules.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.slb.get_server_certificates">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_server_certificates</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_server_certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the server certificate list.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_server_certificates.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_server_certificates.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2626,15 +2575,15 @@ tagKey2 = &quot;tagValue2&quot;
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_server_certificates.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_server_certificates.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.slb.get_server_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_server_groups</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_server_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the VServer groups related to a server load balancer.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_server_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_server_groups.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2644,9 +2593,6 @@ tagKey2 = &quot;tagValue2&quot;
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_server_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_server_groups.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

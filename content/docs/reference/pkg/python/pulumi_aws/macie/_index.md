@@ -19,6 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Associates an AWS account with Amazon Macie as a member account.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Before using Amazon Macie for the first time it must be enabled manually. Instructions are <a class="reference external" href="https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable">here</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_member_account_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_member_account_association.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -29,9 +30,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_member_account_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_member_account_association.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.macie.MemberAccountAssociation.member_account_id">
 <code class="sig-name descname">member_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation.member_account_id" title="Permalink to this definition">¶</a></dt>
@@ -53,9 +51,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_member_account_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_member_account_association.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -102,6 +97,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Associates an S3 resource with Amazon Macie for monitoring and data classification.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Before using Amazon Macie for the first time it must be enabled manually. Instructions are <a class="reference external" href="https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable">here</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_s3_bucket_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_s3_bucket_association.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -122,9 +118,6 @@ The only valid value is the default value, <code class="docutils literal notrans
 <li><p><code class="docutils literal notranslate"><span class="pre">oneTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A string value indicating whether or not Macie performs a one-time classification of all of the existing objects in the bucket.
 Valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> and <code class="docutils literal notranslate"><span class="pre">FULL</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">NONE</span></code> indicating that Macie only classifies objects that are added after the association was created.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_s3_bucket_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_s3_bucket_association.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.macie.S3BucketAssociation.bucket_name">
 <code class="sig-name descname">bucket_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.bucket_name" title="Permalink to this definition">¶</a></dt>
@@ -180,9 +173,6 @@ The only valid value is the default value, <code class="docutils literal notrans
 <li><p><code class="docutils literal notranslate"><span class="pre">oneTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A string value indicating whether or not Macie performs a one-time classification of all of the existing objects in the bucket.
 Valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> and <code class="docutils literal notranslate"><span class="pre">FULL</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">NONE</span></code> indicating that Macie only classifies objects that are added after the association was created.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_s3_bucket_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_s3_bucket_association.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

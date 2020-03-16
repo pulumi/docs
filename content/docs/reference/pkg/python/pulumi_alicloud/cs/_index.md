@@ -24,6 +24,7 @@ Each application can contain one or more services.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Application orchestration template must be a valid Docker Compose YAML template.</p>
 <p><strong>NOTE:</strong> At present, this resource only support swarm cluster.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_application.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_application.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -42,9 +43,6 @@ Each application can contain one or more services.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_application.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_application.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.Application.blue_green">
 <code class="sig-name descname">blue_green</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Application.blue_green" title="Permalink to this definition">¶</a></dt>
@@ -150,9 +148,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The current status of service.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The application deploying version. Each updating, it must be different with current. Default to “1.0”</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_application.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_application.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -195,34 +190,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.cs.AwaitableGetKubernetesClustersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">AwaitableGetKubernetesClustersResult</code><span class="sig-paren">(</span><em class="sig-param">clusters=None</em>, <em class="sig-param">enable_details=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.AwaitableGetKubernetesClustersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">AwaitableGetKubernetesClustersResult</code><span class="sig-paren">(</span><em class="sig-param">clusters=None</em>, <em class="sig-param">enable_details=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.AwaitableGetKubernetesClustersResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.cs.AwaitableGetManagedKubernetesClustersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">AwaitableGetManagedKubernetesClustersResult</code><span class="sig-paren">(</span><em class="sig-param">clusters=None</em>, <em class="sig-param">enable_details=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.AwaitableGetManagedKubernetesClustersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">AwaitableGetManagedKubernetesClustersResult</code><span class="sig-paren">(</span><em class="sig-param">clusters=None</em>, <em class="sig-param">enable_details=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.AwaitableGetManagedKubernetesClustersResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.cs.AwaitableGetServerlessKubernetesClustersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">AwaitableGetServerlessKubernetesClustersResult</code><span class="sig-paren">(</span><em class="sig-param">clusters=None</em>, <em class="sig-param">enable_details=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.AwaitableGetServerlessKubernetesClustersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">AwaitableGetServerlessKubernetesClustersResult</code><span class="sig-paren">(</span><em class="sig-param">clusters=None</em>, <em class="sig-param">enable_details=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.AwaitableGetServerlessKubernetesClustersResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.cs.Cluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cidr_block=None</em>, <em class="sig-param">disk_category=None</em>, <em class="sig-param">disk_size=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">is_outdated=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">need_slb=None</em>, <em class="sig-param">node_number=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">release_eip=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.Cluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Cluster resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/container_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/container_cluster.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Cluster resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_alicloud.cs.Cluster.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">agent_version=None</em>, <em class="sig-param">cidr_block=None</em>, <em class="sig-param">disk_category=None</em>, <em class="sig-param">disk_size=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">is_outdated=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">need_slb=None</em>, <em class="sig-param">node_number=None</em>, <em class="sig-param">nodes=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">release_eip=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">slb_id=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.Cluster.get" title="Permalink to this definition">¶</a></dt>
@@ -242,12 +228,9 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">eip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/container_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/container_cluster.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -290,12 +273,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.cs.GetKubernetesClustersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">GetKubernetesClustersResult</code><span class="sig-paren">(</span><em class="sig-param">clusters=None</em>, <em class="sig-param">enable_details=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.GetKubernetesClustersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">GetKubernetesClustersResult</code><span class="sig-paren">(</span><em class="sig-param">clusters=None</em>, <em class="sig-param">enable_details=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.GetKubernetesClustersResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKubernetesClusters.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.GetKubernetesClustersResult.clusters">
 <code class="sig-name descname">clusters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetKubernetesClustersResult.clusters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of matched Kubernetes clusters. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.cs.GetKubernetesClustersResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetKubernetesClustersResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -310,22 +299,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of matched Kubernetes clusters’ names.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.cs.GetKubernetesClustersResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetKubernetesClustersResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.cs.GetManagedKubernetesClustersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">GetManagedKubernetesClustersResult</code><span class="sig-paren">(</span><em class="sig-param">clusters=None</em>, <em class="sig-param">enable_details=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.GetManagedKubernetesClustersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">GetManagedKubernetesClustersResult</code><span class="sig-paren">(</span><em class="sig-param">clusters=None</em>, <em class="sig-param">enable_details=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.GetManagedKubernetesClustersResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getManagedKubernetesClusters.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.GetManagedKubernetesClustersResult.clusters">
 <code class="sig-name descname">clusters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetManagedKubernetesClustersResult.clusters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of matched Kubernetes clusters. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.cs.GetManagedKubernetesClustersResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetManagedKubernetesClustersResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -340,22 +329,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of matched Kubernetes clusters’ names.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.cs.GetManagedKubernetesClustersResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetManagedKubernetesClustersResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.cs.GetServerlessKubernetesClustersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">GetServerlessKubernetesClustersResult</code><span class="sig-paren">(</span><em class="sig-param">clusters=None</em>, <em class="sig-param">enable_details=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.GetServerlessKubernetesClustersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">GetServerlessKubernetesClustersResult</code><span class="sig-paren">(</span><em class="sig-param">clusters=None</em>, <em class="sig-param">enable_details=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.GetServerlessKubernetesClustersResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServerlessKubernetesClusters.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.GetServerlessKubernetesClustersResult.clusters">
 <code class="sig-name descname">clusters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetServerlessKubernetesClustersResult.clusters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of matched Kubernetes clusters. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.cs.GetServerlessKubernetesClustersResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetServerlessKubernetesClustersResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -370,49 +359,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of matched Kubernetes clusters’ names.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.cs.GetServerlessKubernetesClustersResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetServerlessKubernetesClustersResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.cs.Kubernetes">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">Kubernetes</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">client_cert=None</em>, <em class="sig-param">client_key=None</em>, <em class="sig-param">cluster_ca_cert=None</em>, <em class="sig-param">cluster_network_type=None</em>, <em class="sig-param">enable_ssh=None</em>, <em class="sig-param">force_update=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">install_cloud_monitor=None</em>, <em class="sig-param">is_outdated=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">master_auto_renew=None</em>, <em class="sig-param">master_auto_renew_period=None</em>, <em class="sig-param">master_disk_category=None</em>, <em class="sig-param">master_disk_size=None</em>, <em class="sig-param">master_instance_charge_type=None</em>, <em class="sig-param">master_instance_type=None</em>, <em class="sig-param">master_instance_types=None</em>, <em class="sig-param">master_period=None</em>, <em class="sig-param">master_period_unit=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">new_nat_gateway=None</em>, <em class="sig-param">node_cidr_mask=None</em>, <em class="sig-param">nodes=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">pod_cidr=None</em>, <em class="sig-param">service_cidr=None</em>, <em class="sig-param">slb_internet_enabled=None</em>, <em class="sig-param">user_ca=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">vswitch_ids=None</em>, <em class="sig-param">worker_auto_renew=None</em>, <em class="sig-param">worker_auto_renew_period=None</em>, <em class="sig-param">worker_data_disk_category=None</em>, <em class="sig-param">worker_data_disk_size=None</em>, <em class="sig-param">worker_disk_category=None</em>, <em class="sig-param">worker_disk_size=None</em>, <em class="sig-param">worker_instance_charge_type=None</em>, <em class="sig-param">worker_instance_type=None</em>, <em class="sig-param">worker_instance_types=None</em>, <em class="sig-param">worker_number=None</em>, <em class="sig-param">worker_numbers=None</em>, <em class="sig-param">worker_period=None</em>, <em class="sig-param">worker_period_unit=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Kubernetes resource with the given unique name, props, and options.</p>
+<dd><p>Create a Kubernetes resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] availability_zone: The Zone where new kubernetes cluster will be located. If it is not be specified, the <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code> should be set, its value will be vswitch’s zone.
+:param pulumi.Input[str] client_cert: The path of client certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-cert.pem</span></code>.
+:param pulumi.Input[str] client_key: The path of client key, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-key.pem</span></code>.
+:param pulumi.Input[str] cluster_ca_cert: The path of cluster ca certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/cluster-ca-cert.pem</span></code>
+:param pulumi.Input[str] cluster_network_type: The network that cluster uses, use <code class="docutils literal notranslate"><span class="pre">flannel</span></code> or <code class="docutils literal notranslate"><span class="pre">terway</span></code>.
+:param pulumi.Input[bool] enable_ssh: Whether to allow to SSH login kubernetes. Default to false.
+:param pulumi.Input[bool] force_update: Whether to force the update of kubernetes cluster arguments. Default to false.
+:param pulumi.Input[bool] install_cloud_monitor: Whether to install cloud monitor for the kubernetes’ node.
+:param pulumi.Input[bool] is_outdated: Whether to use outdated instance type. Default to false.
+:param pulumi.Input[str] key_name: The keypair of ssh login cluster node, you have to create it first.
+:param pulumi.Input[str] kms_encrypted_password: An KMS encrypts password used to a cs kubernetes. It is conflicted with <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.
+:param pulumi.Input[dict] kms_encryption_context: An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating a cs kubernetes with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.
+:param pulumi.Input[str] kube_config: The path of kube config, like <code class="docutils literal notranslate"><span class="pre">~/.kube/config</span></code>.
+:param pulumi.Input[dict] log_config: A list of one element containing information about the associated log store. It contains the following attributes:
+:param pulumi.Input[bool] master_auto_renew: Enable master payment auto-renew, defaults to false.
+:param pulumi.Input[float] master_auto_renew_period: Master payment auto-renew period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”}.
+:param pulumi.Input[str] master_disk_category: The system disk category of master node. Its valid value are <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.
+:param pulumi.Input[float] master_disk_size: The system disk size of master node. Its valid value range [20~500] in GB. Default to 20.
+:param pulumi.Input[str] master_instance_charge_type: Master payment type. <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code> or <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.
+:param pulumi.Input[str] master_instance_type: (Required, Force new resource) The instance type of master node.
+:param pulumi.Input[float] master_period: Master payment period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”, “4”}.
+:param pulumi.Input[str] master_period_unit: Master payment period unit. <code class="docutils literal notranslate"><span class="pre">Month</span></code> or <code class="docutils literal notranslate"><span class="pre">Week</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">Month</span></code>.
+:param pulumi.Input[str] name: The kubernetes cluster’s name. It is the only in one Alicloud account.
+:param pulumi.Input[bool] new_nat_gateway: Whether to create a new nat gateway while creating kubernetes cluster. Default to true.
+:param pulumi.Input[float] node_cidr_mask: The network mask used on pods for each node, ranging from <code class="docutils literal notranslate"><span class="pre">24</span></code> to <code class="docutils literal notranslate"><span class="pre">28</span></code>.</p>
+<blockquote>
+<div><p>Larger this number is, less pods can be allocated on each node. Default value is <code class="docutils literal notranslate"><span class="pre">24</span></code>, means you can allocate 256 pods on each node.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone where new kubernetes cluster will be located. If it is not be specified, the <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code> should be set, its value will be vswitch’s zone.</p></li>
-<li><p><strong>client_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of client certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-cert.pem</span></code>.</p></li>
-<li><p><strong>client_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of client key, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-key.pem</span></code>.</p></li>
-<li><p><strong>cluster_ca_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of cluster ca certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/cluster-ca-cert.pem</span></code></p></li>
-<li><p><strong>cluster_network_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network that cluster uses, use <code class="docutils literal notranslate"><span class="pre">flannel</span></code> or <code class="docutils literal notranslate"><span class="pre">terway</span></code>.</p></li>
-<li><p><strong>enable_ssh</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow to SSH login kubernetes. Default to false.</p></li>
-<li><p><strong>force_update</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to force the update of kubernetes cluster arguments. Default to false.</p></li>
-<li><p><strong>install_cloud_monitor</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install cloud monitor for the kubernetes’ node.</p></li>
-<li><p><strong>is_outdated</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use outdated instance type. Default to false.</p></li>
-<li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The keypair of ssh login cluster node, you have to create it first.</p></li>
-<li><p><strong>kms_encrypted_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An KMS encrypts password used to a cs kubernetes. It is conflicted with <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.</p></li>
-<li><p><strong>kms_encryption_context</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating a cs kubernetes with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.</p></li>
-<li><p><strong>kube_config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of kube config, like <code class="docutils literal notranslate"><span class="pre">~/.kube/config</span></code>.</p></li>
-<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of one element containing information about the associated log store. It contains the following attributes:</p></li>
-<li><p><strong>master_auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable master payment auto-renew, defaults to false.</p></li>
-<li><p><strong>master_auto_renew_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Master payment auto-renew period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”}.</p></li>
-<li><p><strong>master_disk_category</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The system disk category of master node. Its valid value are <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.</p></li>
-<li><p><strong>master_disk_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The system disk size of master node. Its valid value range [20~500] in GB. Default to 20.</p></li>
-<li><p><strong>master_instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Master payment type. <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code> or <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
-<li><p><strong>master_instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Required, Force new resource) The instance type of master node.</p></li>
-<li><p><strong>master_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Master payment period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”, “4”}.</p></li>
-<li><p><strong>master_period_unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Master payment period unit. <code class="docutils literal notranslate"><span class="pre">Month</span></code> or <code class="docutils literal notranslate"><span class="pre">Week</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">Month</span></code>.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
-<li><p><strong>new_nat_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create a new nat gateway while creating kubernetes cluster. Default to true.</p></li>
-<li><p><strong>node_cidr_mask</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The network mask used on pods for each node, ranging from <code class="docutils literal notranslate"><span class="pre">24</span></code> to <code class="docutils literal notranslate"><span class="pre">28</span></code>.
-Larger this number is, less pods can be allocated on each node. Default value is <code class="docutils literal notranslate"><span class="pre">24</span></code>, means you can allocate 256 pods on each node.</p></li>
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password of ssh login cluster node. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.</p></li>
 <li><p><strong>pod_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the pod network. It will be allocated automatically when <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code> is not specified.
 It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
@@ -443,9 +428,6 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <li><p><code class="docutils literal notranslate"><span class="pre">project</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Log Service project name, cluster logs will output to this project.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of collecting logs, only <code class="docutils literal notranslate"><span class="pre">SLS</span></code> are supported currently.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_kubernetes.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_kubernetes.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.Kubernetes.availability_zone">
 <code class="sig-name descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.availability_zone" title="Permalink to this definition">¶</a></dt>
@@ -589,7 +571,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The private IP address of node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The private IP address of node.</p></li>
 </ul>
 </dd></dl>
 
@@ -754,7 +736,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The private IP address of node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The private IP address of node.</p></li>
 </ul>
 </dd></dl>
 
@@ -863,17 +845,14 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address of node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address of node.</p></li>
 </ul>
 <p>The <strong>worker_nodes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address of node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address of node.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_kubernetes.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_kubernetes.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -923,6 +902,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> The cluster-autoscaler can only use the same size of instanceTypes in one scaling group.</p>
 <p><strong>NOTE:</strong> Add Policy to RAM role of the node to deploy cluster-autoscaler if you need.</p>
 <p><strong>NOTE:</strong> Available in 1.65.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_kubernetes_autoscaler.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_kubernetes_autoscaler.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -952,9 +932,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">taints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_kubernetes_autoscaler.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_kubernetes_autoscaler.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.KubernetesAutoscaler.cluster_id">
 <code class="sig-name descname">cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.KubernetesAutoscaler.cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -1029,9 +1006,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">taints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_kubernetes_autoscaler.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_kubernetes_autoscaler.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1075,33 +1049,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">ManagedKubernetes</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">client_cert=None</em>, <em class="sig-param">client_key=None</em>, <em class="sig-param">cluster_ca_cert=None</em>, <em class="sig-param">cluster_network_type=None</em>, <em class="sig-param">force_update=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">install_cloud_monitor=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">new_nat_gateway=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">pod_cidr=None</em>, <em class="sig-param">service_cidr=None</em>, <em class="sig-param">slb_internet_enabled=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vswitch_ids=None</em>, <em class="sig-param">worker_auto_renew=None</em>, <em class="sig-param">worker_auto_renew_period=None</em>, <em class="sig-param">worker_data_disk_category=None</em>, <em class="sig-param">worker_data_disk_size=None</em>, <em class="sig-param">worker_disk_category=None</em>, <em class="sig-param">worker_disk_size=None</em>, <em class="sig-param">worker_instance_charge_type=None</em>, <em class="sig-param">worker_instance_types=None</em>, <em class="sig-param">worker_number=None</em>, <em class="sig-param">worker_numbers=None</em>, <em class="sig-param">worker_period=None</em>, <em class="sig-param">worker_period_unit=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ManagedKubernetes resource with the given unique name, props, and options.</p>
+<dd><p>Create a ManagedKubernetes resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] availability_zone: The Zone where new kubernetes cluster will be located. If it is not be specified, the <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code> should be set, the value will be vswitch’s zone.
+:param pulumi.Input[str] client_cert: The path of client certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-cert.pem</span></code>.
+:param pulumi.Input[str] client_key: The path of client key, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-key.pem</span></code>.
+:param pulumi.Input[str] cluster_ca_cert: The path of cluster ca certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/cluster-ca-cert.pem</span></code>
+:param pulumi.Input[str] cluster_network_type: The network that cluster uses, use <code class="docutils literal notranslate"><span class="pre">flannel</span></code> or <code class="docutils literal notranslate"><span class="pre">terway</span></code>.
+:param pulumi.Input[bool] force_update: Default false, when you want to change <code class="docutils literal notranslate"><span class="pre">worker_instance_types</span></code> and <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code>, you have to set this field to true, then the cluster will be recreated.
+:param pulumi.Input[str] image_id: The ID of node image.
+:param pulumi.Input[bool] install_cloud_monitor: Whether to install cloud monitor for the kubernetes’ node.
+:param pulumi.Input[str] key_name: The keypair of ssh login cluster node, you have to create it first.
+:param pulumi.Input[str] kms_encrypted_password: An KMS encrypts password used to a cs managed kubernetes. It is conflicted with <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.
+:param pulumi.Input[dict] kms_encryption_context: An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating a cs managed kubernetes with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.
+:param pulumi.Input[str] kube_config: The path of kube config, like <code class="docutils literal notranslate"><span class="pre">~/.kube/config</span></code>.
+:param pulumi.Input[dict] log_config: A list of one element containing information about the associated log store. It contains the following attributes:
+:param pulumi.Input[str] name: The kubernetes cluster’s name. It is the only in one Alicloud account.
+:param pulumi.Input[bool] new_nat_gateway: Whether to create a new nat gateway while creating kubernetes cluster. Default to true.
+:param pulumi.Input[str] password: The password of ssh login cluster node. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.
+:param pulumi.Input[str] pod_cidr: The CIDR block for the pod network. When <code class="docutils literal notranslate"><span class="pre">cluster_network_type</span></code> is  set to <code class="docutils literal notranslate"><span class="pre">flanne</span></code>, you must set value to this filed .</p>
+<blockquote>
+<div><p>It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
+Maximum number of hosts allowed in the cluster: 256. Refer to <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/64530.htm">Plan Kubernetes CIDR blocks under VPC</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone where new kubernetes cluster will be located. If it is not be specified, the <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code> should be set, the value will be vswitch’s zone.</p></li>
-<li><p><strong>client_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of client certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-cert.pem</span></code>.</p></li>
-<li><p><strong>client_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of client key, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-key.pem</span></code>.</p></li>
-<li><p><strong>cluster_ca_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of cluster ca certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/cluster-ca-cert.pem</span></code></p></li>
-<li><p><strong>cluster_network_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network that cluster uses, use <code class="docutils literal notranslate"><span class="pre">flannel</span></code> or <code class="docutils literal notranslate"><span class="pre">terway</span></code>.</p></li>
-<li><p><strong>force_update</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Default false, when you want to change <code class="docutils literal notranslate"><span class="pre">worker_instance_types</span></code> and <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code>, you have to set this field to true, then the cluster will be recreated.</p></li>
-<li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of node image.</p></li>
-<li><p><strong>install_cloud_monitor</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install cloud monitor for the kubernetes’ node.</p></li>
-<li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The keypair of ssh login cluster node, you have to create it first.</p></li>
-<li><p><strong>kms_encrypted_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An KMS encrypts password used to a cs managed kubernetes. It is conflicted with <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.</p></li>
-<li><p><strong>kms_encryption_context</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating a cs managed kubernetes with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.</p>
-</p></li>
-<li><p><strong>kube_config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of kube config, like <code class="docutils literal notranslate"><span class="pre">~/.kube/config</span></code>.</p></li>
-<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of one element containing information about the associated log store. It contains the following attributes:</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
-<li><p><strong>new_nat_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create a new nat gateway while creating kubernetes cluster. Default to true.</p></li>
-<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password of ssh login cluster node. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.</p></li>
-<li><p><strong>pod_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The CIDR block for the pod network. When <code class="docutils literal notranslate"><span class="pre">cluster_network_type</span></code> is  set to <code class="docutils literal notranslate"><span class="pre">flanne</span></code>, you must set value to this filed .
-It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
-Maximum number of hosts allowed in the cluster: 256. Refer to <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/64530.htm">Plan Kubernetes CIDR blocks under VPC</a>.</p>
-</p></li>
 <li><p><strong>service_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the service network.<span class="raw-html-m2r"><br></span>
 It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p></li>
 <li><p><strong>slb_internet_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create internet load balancer for API Server. Default to false.</p></li>
@@ -1126,9 +1100,6 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <li><p><code class="docutils literal notranslate"><span class="pre">project</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Log Service project name, cluster logs will output to this project.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of collecting logs, only <code class="docutils literal notranslate"><span class="pre">SLS</span></code> are supported currently.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_managed_kubernetes.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_managed_kubernetes.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.availability_zone">
 <code class="sig-name descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.availability_zone" title="Permalink to this definition">¶</a></dt>
@@ -1323,7 +1294,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The private IP address of node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The private IP address of node.</p></li>
 </ul>
 </dd></dl>
 
@@ -1414,11 +1385,8 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address of node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address of node.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_managed_kubernetes.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_managed_kubernetes.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1462,19 +1430,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.cs.ServerlessKubernetes">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">ServerlessKubernetes</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_cert=None</em>, <em class="sig-param">client_key=None</em>, <em class="sig-param">cluster_ca_cert=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">endpoint_public_access_enabled=None</em>, <em class="sig-param">force_update=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">new_nat_gateway=None</em>, <em class="sig-param">private_zone=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.ServerlessKubernetes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ServerlessKubernetes resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>client_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of client certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-cert.pem</span></code>.</p></li>
-<li><p><strong>client_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of client key, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-key.pem</span></code>.</p></li>
-<li><p><strong>cluster_ca_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of cluster ca certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/cluster-ca-cert.pem</span></code></p></li>
-<li><p><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether enable the deletion protection or not.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ServerlessKubernetes resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] client_cert: The path of client certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-cert.pem</span></code>.
+:param pulumi.Input[str] client_key: The path of client key, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-key.pem</span></code>.
+:param pulumi.Input[str] cluster_ca_cert: The path of cluster ca certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/cluster-ca-cert.pem</span></code>
+:param pulumi.Input[bool] deletion_protection: Whether enable the deletion protection or not.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">true</span><span class="p">:</span> <span class="n">Enable</span> <span class="n">deletion</span> <span class="n">protection</span><span class="o">.</span>
 <span class="o">-</span> <span class="n">false</span><span class="p">:</span> <span class="n">Disable</span> <span class="n">deletion</span> <span class="n">protection</span><span class="o">.</span>
 </pre></div>
@@ -1494,9 +1456,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_serverless_kubernetes.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_serverless_kubernetes.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.ServerlessKubernetes.client_cert">
 <code class="sig-name descname">client_cert</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ServerlessKubernetes.client_cert" title="Permalink to this definition">¶</a></dt>
@@ -1616,9 +1575,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_serverless_kubernetes.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_serverless_kubernetes.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1668,6 +1624,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>This resource will help you to manager a Swarm Cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Swarm cluster only supports VPC network and you can specify a VPC network by filed <code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_swarm.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_swarm.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1710,9 +1667,6 @@ Valid value:</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_swarm.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_swarm.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.Swarm.agent_version">
 <code class="sig-name descname">agent_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Swarm.agent_version" title="Permalink to this definition">¶</a></dt>
@@ -1781,7 +1735,7 @@ Valid value:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">eip</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Elastic IP address of node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The container cluster’s name. It is the only in one Alicloud account.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The private IP address of node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The private IP address of node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The node current status. It is different with instance status.</p></li>
 </ul>
 </dd></dl>
@@ -1888,12 +1842,9 @@ Valid value:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">eip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Elastic IP address of node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The container cluster’s name. It is the only in one Alicloud account.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address of node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address of node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The node current status. It is different with instance status.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_swarm.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_swarm.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1940,6 +1891,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list Container Service Kubernetes Clusters on Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.34.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_kubernetes_clusters.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_kubernetes_clusters.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1949,9 +1901,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_kubernetes_clusters.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_kubernetes_clusters.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1960,6 +1909,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list Container Service Managed Kubernetes Clusters on Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.35.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_managed_kubernetes_clusters.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_managed_kubernetes_clusters.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1969,9 +1919,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_managed_kubernetes_clusters.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_managed_kubernetes_clusters.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1980,6 +1927,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list Container Service Serverless Kubernetes Clusters on Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.58.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_serverless_kubernetes_clusters.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_serverless_kubernetes_clusters.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1989,9 +1937,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_serverless_kubernetes_clusters.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_serverless_kubernetes_clusters.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

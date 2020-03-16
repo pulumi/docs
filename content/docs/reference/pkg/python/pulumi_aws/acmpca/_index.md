@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.acmpca"></span><dl class="class">
 <dt id="pulumi_aws.acmpca.AwaitableGetCertificateAuthorityResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.acmpca.</code><code class="sig-name descname">AwaitableGetCertificateAuthorityResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_chain=None</em>, <em class="sig-param">certificate_signing_request=None</em>, <em class="sig-param">not_after=None</em>, <em class="sig-param">not_before=None</em>, <em class="sig-param">revocation_configurations=None</em>, <em class="sig-param">serial=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.AwaitableGetCertificateAuthorityResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.acmpca.</code><code class="sig-name descname">AwaitableGetCertificateAuthorityResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_chain=None</em>, <em class="sig-param">certificate_signing_request=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">not_after=None</em>, <em class="sig-param">not_before=None</em>, <em class="sig-param">revocation_configurations=None</em>, <em class="sig-param">serial=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.AwaitableGetCertificateAuthorityResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -24,6 +24,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a resource to manage AWS Certificate Manager Private Certificate Authorities (ACM PCA Certificate Authorities).</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Creating this resource will leave the certificate authority in a <code class="docutils literal notranslate"><span class="pre">PENDING_CERTIFICATE</span></code> status, which means it cannot yet issue certificates. To complete this setup, you must fully sign the certificate authority CSR available in the <code class="docutils literal notranslate"><span class="pre">certificate_signing_request</span></code> attribute and import the signed certificate using the AWS SDK, CLI or Console. This provider can support another resource to manage that workflow automatically in the future.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acmpca_certificate_authority.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acmpca_certificate_authority.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -68,13 +69,10 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">customCname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don’t want the name of your S3 bucket to be public.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expirationInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of days until a certificate expires. Must be between 1 and 5000.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3BucketName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the S3 bucket that contains the CRL. If you do not provide a value for the <code class="docutils literal notranslate"><span class="pre">custom_cname</span></code> argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the S3 bucket that contains the CRL. If you do not provide a value for the <code class="docutils literal notranslate"><span class="pre">custom_cname</span></code> argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket.</p></li>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acmpca_certificate_authority.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acmpca_certificate_authority.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.arn" title="Permalink to this definition">¶</a></dt>
@@ -160,7 +158,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">customCname</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don’t want the name of your S3 bucket to be public.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expirationInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of days until a certificate expires. Must be between 1 and 5000.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3BucketName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the S3 bucket that contains the CRL. If you do not provide a value for the <code class="docutils literal notranslate"><span class="pre">custom_cname</span></code> argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the S3 bucket that contains the CRL. If you do not provide a value for the <code class="docutils literal notranslate"><span class="pre">custom_cname</span></code> argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket.</p></li>
 </ul>
 </li>
 </ul>
@@ -247,13 +245,10 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">customCname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don’t want the name of your S3 bucket to be public.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expirationInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of days until a certificate expires. Must be between 1 and 5000.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3BucketName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the S3 bucket that contains the CRL. If you do not provide a value for the <code class="docutils literal notranslate"><span class="pre">custom_cname</span></code> argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the S3 bucket that contains the CRL. If you do not provide a value for the <code class="docutils literal notranslate"><span class="pre">custom_cname</span></code> argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket.</p></li>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acmpca_certificate_authority.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acmpca_certificate_authority.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -296,7 +291,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.acmpca.</code><code class="sig-name descname">GetCertificateAuthorityResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_chain=None</em>, <em class="sig-param">certificate_signing_request=None</em>, <em class="sig-param">not_after=None</em>, <em class="sig-param">not_before=None</em>, <em class="sig-param">revocation_configurations=None</em>, <em class="sig-param">serial=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.acmpca.</code><code class="sig-name descname">GetCertificateAuthorityResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_chain=None</em>, <em class="sig-param">certificate_signing_request=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">not_after=None</em>, <em class="sig-param">not_before=None</em>, <em class="sig-param">revocation_configurations=None</em>, <em class="sig-param">serial=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCertificateAuthority.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.certificate">
@@ -314,6 +309,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.certificate_signing_request">
 <code class="sig-name descname">certificate_signing_request</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult.certificate_signing_request" title="Permalink to this definition">¶</a></dt>
 <dd><p>The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -365,18 +366,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The type of the certificate authority.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.acmpca.get_certificate_authority">
 <code class="sig-prename descclassname">pulumi_aws.acmpca.</code><code class="sig-name descname">get_certificate_authority</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">revocation_configurations=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.get_certificate_authority" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on a AWS Certificate Manager Private Certificate Authority (ACM PCA Certificate Authority).</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/acmpca_certificate_authority.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/acmpca_certificate_authority.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>arn</strong> (<em>str</em>) – Amazon Resource Name (ARN) of the certificate authority.</p>
@@ -389,13 +387,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">customCname</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expirationInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3BucketName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/acmpca_certificate_authority.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/acmpca_certificate_authority.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

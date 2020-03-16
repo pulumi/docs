@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.cloudfunctions"></span><dl class="class">
 <dt id="pulumi_gcp.cloudfunctions.AwaitableGetFunctionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudfunctions.</code><code class="sig-name descname">AwaitableGetFunctionResult</code><span class="sig-paren">(</span><em class="sig-param">available_memory_mb=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">entry_point=None</em>, <em class="sig-param">environment_variables=None</em>, <em class="sig-param">event_triggers=None</em>, <em class="sig-param">https_trigger_url=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_instances=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">source_archive_bucket=None</em>, <em class="sig-param">source_archive_object=None</em>, <em class="sig-param">source_repositories=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">trigger_http=None</em>, <em class="sig-param">vpc_connector=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.AwaitableGetFunctionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudfunctions.</code><code class="sig-name descname">AwaitableGetFunctionResult</code><span class="sig-paren">(</span><em class="sig-param">available_memory_mb=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">entry_point=None</em>, <em class="sig-param">environment_variables=None</em>, <em class="sig-param">event_triggers=None</em>, <em class="sig-param">https_trigger_url=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_instances=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">source_archive_bucket=None</em>, <em class="sig-param">source_archive_object=None</em>, <em class="sig-param">source_repositories=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">trigger_http=None</em>, <em class="sig-param">vpc_connector=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.AwaitableGetFunctionResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -31,6 +31,7 @@ private-by-default and will require <a class="reference external" href="https://
 to be invoked. See below examples for how to set up the appropriate permissions,
 or view the <a class="reference external" href="https://www.terraform.io/docs/providers/google/r/cloudfunctions_cloud_function_iam.html">Cloud Functions IAM resources</a>
 for Cloud Functions.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -76,9 +77,6 @@ Cannot be set alongside <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">deployedUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudfunctions.Function.available_memory_mb">
 <code class="sig-name descname">available_memory_mb</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.available_memory_mb" title="Permalink to this definition">¶</a></dt>
@@ -258,9 +256,6 @@ Cannot be set alongside <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">deployedUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -304,15 +299,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.cloudfunctions.FunctionIamBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudfunctions.</code><code class="sig-name descname">FunctionIamBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cloud_function=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.FunctionIamBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a FunctionIamBinding resource with the given unique name, props, and options.</p>
+<dd><p>Create a FunctionIamBinding resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cloud_function: Used to find the parent resource to bind the IAM policy to
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div><p>If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>cloud_function</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of this cloud function. Used to find the parent resource to bind the IAM policy to. If not specified,
 the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
 region is specified, it is taken from the provider configuration.</p></li>
@@ -328,9 +325,6 @@ region is specified, it is taken from the provider configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudfunctions.FunctionIamBinding.cloud_function">
 <code class="sig-name descname">cloud_function</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.FunctionIamBinding.cloud_function" title="Permalink to this definition">¶</a></dt>
@@ -396,9 +390,6 @@ region is specified, it is taken from the provider configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -442,15 +433,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.cloudfunctions.FunctionIamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudfunctions.</code><code class="sig-name descname">FunctionIamMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cloud_function=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.FunctionIamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a FunctionIamMember resource with the given unique name, props, and options.</p>
+<dd><p>Create a FunctionIamMember resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cloud_function: Used to find the parent resource to bind the IAM policy to
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div><p>If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>cloud_function</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of this cloud function. Used to find the parent resource to bind the IAM policy to. If not specified,
 the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
 region is specified, it is taken from the provider configuration.</p></li>
@@ -466,9 +459,6 @@ region is specified, it is taken from the provider configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudfunctions.FunctionIamMember.cloud_function">
 <code class="sig-name descname">cloud_function</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.FunctionIamMember.cloud_function" title="Permalink to this definition">¶</a></dt>
@@ -534,9 +524,6 @@ region is specified, it is taken from the provider configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -580,15 +567,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.cloudfunctions.FunctionIamPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudfunctions.</code><code class="sig-name descname">FunctionIamPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cloud_function=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.FunctionIamPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a FunctionIamPolicy resource with the given unique name, props, and options.</p>
+<dd><p>Create a FunctionIamPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cloud_function: Used to find the parent resource to bind the IAM policy to
+:param pulumi.Input[str] policy_data: The policy data generated by</p>
+<blockquote>
+<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>cloud_function</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
-a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of this cloud function. Used to find the parent resource to bind the IAM policy to. If not specified,
@@ -597,9 +586,6 @@ region is specified, it is taken from the provider configuration.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudfunctions.FunctionIamPolicy.cloud_function">
 <code class="sig-name descname">cloud_function</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.FunctionIamPolicy.cloud_function" title="Permalink to this definition">¶</a></dt>
@@ -657,9 +643,6 @@ region is specified, it is taken from the provider configuration.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -702,7 +685,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.cloudfunctions.GetFunctionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudfunctions.</code><code class="sig-name descname">GetFunctionResult</code><span class="sig-paren">(</span><em class="sig-param">available_memory_mb=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">entry_point=None</em>, <em class="sig-param">environment_variables=None</em>, <em class="sig-param">event_triggers=None</em>, <em class="sig-param">https_trigger_url=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_instances=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">source_archive_bucket=None</em>, <em class="sig-param">source_archive_object=None</em>, <em class="sig-param">source_repositories=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">trigger_http=None</em>, <em class="sig-param">vpc_connector=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudfunctions.</code><code class="sig-name descname">GetFunctionResult</code><span class="sig-paren">(</span><em class="sig-param">available_memory_mb=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">entry_point=None</em>, <em class="sig-param">environment_variables=None</em>, <em class="sig-param">event_triggers=None</em>, <em class="sig-param">https_trigger_url=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_instances=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">source_archive_bucket=None</em>, <em class="sig-param">source_archive_object=None</em>, <em class="sig-param">source_repositories=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">trigger_http=None</em>, <em class="sig-param">vpc_connector=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFunction.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudfunctions.GetFunctionResult.available_memory_mb">
@@ -732,6 +715,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.cloudfunctions.GetFunctionResult.https_trigger_url">
 <code class="sig-name descname">https_trigger_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult.https_trigger_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>If function is triggered by HTTP, trigger URL is set here.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudfunctions.GetFunctionResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -782,12 +771,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>If function is triggered by HTTP, this boolean is set.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_gcp.cloudfunctions.GetFunctionResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="function">
@@ -796,6 +779,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Get information about a Google Cloud Function. For more information see
 the <a class="reference external" href="https://cloud.google.com/functions/docs/">official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/functions/docs/apis">API</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_cloudfunctions_function.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_cloudfunctions_function.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -807,9 +793,6 @@ is not provided, the provider region is used.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/cloudfunctions_function.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/cloudfunctions_function.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

@@ -22,6 +22,9 @@ anything, please consult the source <a class="reference external" href="https://
 region, it’s better to use <code class="docutils literal notranslate"><span class="pre">ec2.AmiCopy</span></code> instead.</p>
 <p>If you just want to share an existing AMI with another AWS account,
 it’s better to use <code class="docutils literal notranslate"><span class="pre">ec2.AmiLaunchPermission</span></code> instead.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -66,9 +69,6 @@ changes the set of further arguments that are required, as described below.</p><
 <li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Ami.architecture">
 <code class="sig-name descname">architecture</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Ami.architecture" title="Permalink to this definition">¶</a></dt>
@@ -225,9 +225,6 @@ changes the set of further arguments that are required, as described below.</p><
 <li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -279,6 +276,9 @@ along with the AMI.</p>
 it available in another for a multi-region deployment.</p>
 <p>Copying an AMI can take several minutes. The creation of this resource will
 block until the new AMI is available for use on new instances.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_copy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_copy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -315,9 +315,6 @@ same as the AWS provider region in order to create a copy within the same region
 <li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_copy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_copy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.AmiCopy.architecture">
 <code class="sig-name descname">architecture</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiCopy.architecture" title="Permalink to this definition">¶</a></dt>
@@ -499,9 +496,6 @@ changes the set of further arguments that are required, as described below.</p><
 <li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_copy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_copy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -559,6 +553,9 @@ downtime.</p>
 resource. Ongoing updates to the referenced instance will not be propagated into
 the generated AMI. Users may taint or otherwise recreate the resource in order
 to produce a fresh snapshot.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_from_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_from_instance.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -594,9 +591,6 @@ guarantees that no filesystem writes will be underway at the time of snapshot.</
 <li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_from_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_from_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.AmiFromInstance.architecture">
 <code class="sig-name descname">architecture</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiFromInstance.architecture" title="Permalink to this definition">¶</a></dt>
@@ -766,9 +760,6 @@ changes the set of further arguments that are required, as described below.</p><
 <li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_from_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_from_instance.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -813,6 +804,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.AmiLaunchPermission">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AmiLaunchPermission</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AmiLaunchPermission" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds launch permission to Amazon Machine Image (AMI) from another AWS account.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_launch_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_launch_permission.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -823,9 +817,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_launch_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_launch_permission.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.AmiLaunchPermission.account_id">
 <code class="sig-name descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiLaunchPermission.account_id" title="Permalink to this definition">¶</a></dt>
@@ -854,9 +845,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_launch_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_launch_permission.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -904,37 +892,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetInstanceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param">ami=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">credit_specifications=None</em>, <em class="sig-param">disable_api_termination=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">get_password_data=None</em>, <em class="sig-param">get_user_data=None</em>, <em class="sig-param">host_id=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">instance_state=None</em>, <em class="sig-param">instance_tags=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">password_data=None</em>, <em class="sig-param">placement_group=None</em>, <em class="sig-param">private_dns=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">public_dns=None</em>, <em class="sig-param">public_ip=None</em>, <em class="sig-param">root_block_devices=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">source_dest_check=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenancy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">user_data_base64=None</em>, <em class="sig-param">vpc_security_group_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInstanceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param">ami=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">credit_specifications=None</em>, <em class="sig-param">disable_api_termination=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">get_password_data=None</em>, <em class="sig-param">get_user_data=None</em>, <em class="sig-param">host_id=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">instance_state=None</em>, <em class="sig-param">instance_tags=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">password_data=None</em>, <em class="sig-param">placement_group=None</em>, <em class="sig-param">private_dns=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">public_dns=None</em>, <em class="sig-param">public_ip=None</em>, <em class="sig-param">root_block_devices=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">source_dest_check=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenancy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">user_data_base64=None</em>, <em class="sig-param">vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInstanceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetInstanceTypeOfferingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInstanceTypeOfferingResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">location_type=None</em>, <em class="sig-param">preferred_instance_types=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInstanceTypeOfferingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInstanceTypeOfferingResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">location_type=None</em>, <em class="sig-param">preferred_instance_types=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInstanceTypeOfferingResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetInstanceTypeOfferingsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInstanceTypeOfferingsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">instance_types=None</em>, <em class="sig-param">location_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInstanceTypeOfferingsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInstanceTypeOfferingsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_types=None</em>, <em class="sig-param">location_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInstanceTypeOfferingsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetInstancesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_state_names=None</em>, <em class="sig-param">instance_tags=None</em>, <em class="sig-param">private_ips=None</em>, <em class="sig-param">public_ips=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_state_names=None</em>, <em class="sig-param">instance_tags=None</em>, <em class="sig-param">private_ips=None</em>, <em class="sig-param">public_ips=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetInternetGatewayResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInternetGatewayResult</code><span class="sig-paren">(</span><em class="sig-param">attachments=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">internet_gateway_id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInternetGatewayResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInternetGatewayResult</code><span class="sig-paren">(</span><em class="sig-param">attachments=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">internet_gateway_id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInternetGatewayResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetLaunchConfigurationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetLaunchConfigurationResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">enable_monitoring=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">placement_tenancy=None</em>, <em class="sig-param">root_block_devices=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">spot_price=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">vpc_classic_link_id=None</em>, <em class="sig-param">vpc_classic_link_security_groups=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetLaunchConfigurationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetLaunchConfigurationResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">enable_monitoring=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">placement_tenancy=None</em>, <em class="sig-param">root_block_devices=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">spot_price=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">vpc_classic_link_id=None</em>, <em class="sig-param">vpc_classic_link_security_groups=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetLaunchConfigurationResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetLaunchTemplateResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetLaunchTemplateResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">block_device_mappings=None</em>, <em class="sig-param">credit_specifications=None</em>, <em class="sig-param">default_version=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disable_api_termination=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">elastic_gpu_specifications=None</em>, <em class="sig-param">iam_instance_profiles=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_initiated_shutdown_behavior=None</em>, <em class="sig-param">instance_market_options=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">kernel_id=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">latest_version=None</em>, <em class="sig-param">monitorings=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">placements=None</em>, <em class="sig-param">ram_disk_id=None</em>, <em class="sig-param">security_group_names=None</em>, <em class="sig-param">tag_specifications=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">vpc_security_group_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetLaunchTemplateResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetLaunchTemplateResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">block_device_mappings=None</em>, <em class="sig-param">credit_specifications=None</em>, <em class="sig-param">default_version=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disable_api_termination=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">elastic_gpu_specifications=None</em>, <em class="sig-param">iam_instance_profiles=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_initiated_shutdown_behavior=None</em>, <em class="sig-param">instance_market_options=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">kernel_id=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">latest_version=None</em>, <em class="sig-param">monitorings=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">placements=None</em>, <em class="sig-param">ram_disk_id=None</em>, <em class="sig-param">security_group_names=None</em>, <em class="sig-param">tag_specifications=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetLaunchTemplateResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -944,7 +932,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetNetworkAclsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetNetworkAclsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetNetworkAclsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetNetworkAclsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetNetworkAclsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -954,22 +942,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetNetworkInterfacesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetNetworkInterfacesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetNetworkInterfacesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetNetworkInterfacesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetNetworkInterfacesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetRouteResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetRouteResult</code><span class="sig-paren">(</span><em class="sig-param">destination_cidr_block=None</em>, <em class="sig-param">destination_ipv6_cidr_block=None</em>, <em class="sig-param">egress_only_gateway_id=None</em>, <em class="sig-param">gateway_id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">nat_gateway_id=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">transit_gateway_id=None</em>, <em class="sig-param">vpc_peering_connection_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetRouteResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetRouteResult</code><span class="sig-paren">(</span><em class="sig-param">destination_cidr_block=None</em>, <em class="sig-param">destination_ipv6_cidr_block=None</em>, <em class="sig-param">egress_only_gateway_id=None</em>, <em class="sig-param">gateway_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">nat_gateway_id=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">transit_gateway_id=None</em>, <em class="sig-param">vpc_peering_connection_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetRouteResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetRouteTableResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetRouteTableResult</code><span class="sig-paren">(</span><em class="sig-param">associations=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">gateway_id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">routes=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetRouteTableResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetRouteTableResult</code><span class="sig-paren">(</span><em class="sig-param">associations=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">gateway_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">routes=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetRouteTableResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetRouteTablesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetRouteTablesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetRouteTablesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetRouteTablesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetRouteTablesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -979,12 +967,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetSecurityGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetSecurityGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetSecurityGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetSecurityGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetSecurityGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetSubnetIdsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetSubnetIdsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetSubnetIdsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetSubnetIdsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetSubnetIdsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -994,7 +982,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetVpcDhcpOptionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetVpcDhcpOptionsResult</code><span class="sig-paren">(</span><em class="sig-param">dhcp_options_id=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">domain_name_servers=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">netbios_name_servers=None</em>, <em class="sig-param">netbios_node_type=None</em>, <em class="sig-param">ntp_servers=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetVpcDhcpOptionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetVpcDhcpOptionsResult</code><span class="sig-paren">(</span><em class="sig-param">dhcp_options_id=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">domain_name_servers=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">netbios_name_servers=None</em>, <em class="sig-param">netbios_node_type=None</em>, <em class="sig-param">ntp_servers=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetVpcDhcpOptionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1004,7 +992,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetVpcEndpointServiceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetVpcEndpointServiceResult</code><span class="sig-paren">(</span><em class="sig-param">acceptance_required=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">base_endpoint_dns_names=None</em>, <em class="sig-param">manages_vpc_endpoints=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">private_dns_name=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">service_id=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">service_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_endpoint_policy_supported=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetVpcEndpointServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetVpcEndpointServiceResult</code><span class="sig-paren">(</span><em class="sig-param">acceptance_required=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">base_endpoint_dns_names=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">manages_vpc_endpoints=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">private_dns_name=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">service_id=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">service_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_endpoint_policy_supported=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetVpcEndpointServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1019,7 +1007,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetVpcsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetVpcsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetVpcsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetVpcsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetVpcsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1031,6 +1019,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.CapacityReservation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">CapacityReservation</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">end_date=None</em>, <em class="sig-param">end_date_type=None</em>, <em class="sig-param">ephemeral_storage=None</em>, <em class="sig-param">instance_count=None</em>, <em class="sig-param">instance_match_criteria=None</em>, <em class="sig-param">instance_platform=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenancy=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 Capacity Reservation. This allows you to reserve capacity for your Amazon EC2 instances in a specific Availability Zone for any duration.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_capacity_reservation.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_capacity_reservation.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1050,9 +1041,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_capacity_reservation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_capacity_reservation.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.CapacityReservation.availability_zone">
 <code class="sig-name descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation.availability_zone" title="Permalink to this definition">¶</a></dt>
@@ -1145,9 +1133,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_capacity_reservation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_capacity_reservation.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1192,6 +1177,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.CustomerGateway">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">CustomerGateway</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bgp_asn=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.CustomerGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a customer gateway inside a VPC. These objects can be connected to VPN gateways via VPN connections, and allow you to establish tunnels between your network and the VPC.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/customer_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/customer_gateway.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1205,9 +1193,6 @@ supports at this time is “ipsec.1”.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/customer_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/customer_gateway.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.CustomerGateway.bgp_asn">
 <code class="sig-name descname">bgp_asn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.CustomerGateway.bgp_asn" title="Permalink to this definition">¶</a></dt>
@@ -1252,9 +1237,6 @@ supports at this time is “ipsec.1”.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/customer_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/customer_gateway.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1317,6 +1299,9 @@ result in diffs being shown. For these reasons, this resource is incompatible wi
 <code class="docutils literal notranslate"><span class="pre">ec2.NetworkAclRule</span></code> resource.</p>
 <p>For more information about Network ACLs, see the AWS Documentation on
 [Network ACLs][aws-network-acls].</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_network_acl.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1360,9 +1345,6 @@ protocol, you must specify a from and to port of 0.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ruleNo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The rule number. Used for ordering.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The to port to match.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_network_acl.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultNetworkAcl.default_network_acl_id">
 <code class="sig-name descname">default_network_acl_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultNetworkAcl.default_network_acl_id" title="Permalink to this definition">¶</a></dt>
@@ -1484,9 +1466,6 @@ protocol, you must specify a from and to port of 0.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ruleNo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The rule number. Used for ordering.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The to port to match.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_network_acl.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1555,6 +1534,7 @@ provides both a standalone Route resource and a Route Table resource with routes
 defined in-line. At this time you cannot use a Route Table with in-line routes
 in conjunction with any Route resources. Doing so will cause
 a conflict of rule settings and will overwrite routes.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_route_table.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1581,9 +1561,6 @@ This argument is processed in <a class="reference external" href="https://www.te
 <li><p><code class="docutils literal notranslate"><span class="pre">transit_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 Transit Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_peering_connection_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC peering connection.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_route_table.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultRouteTable.default_route_table_id">
 <code class="sig-name descname">default_route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultRouteTable.default_route_table_id" title="Permalink to this definition">¶</a></dt>
@@ -1659,9 +1636,6 @@ This argument is processed in <a class="reference external" href="https://www.te
 <li><p><code class="docutils literal notranslate"><span class="pre">transit_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 Transit Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_peering_connection_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC peering connection.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_route_table.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1734,6 +1708,9 @@ manage this Security Group, but this provider cannot destroy it. Removing this r
 from your configuration will remove it from your statefile and management, but
 will not destroy the Security Group. All ingress or egress rules will be left as
 they are at the time of removal. You can resume managing them via the AWS Console.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1774,9 +1751,6 @@ modified, added, or removed.</strong> It will be left in its current state</p></
 <li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultSecurityGroup.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultSecurityGroup.description" title="Permalink to this definition">¶</a></dt>
@@ -1894,9 +1868,6 @@ modified, added, or removed.</strong> It will be left in its current state</p></
 <li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1945,6 +1916,9 @@ in the current region.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">ec2.DefaultSubnet</span></code> behaves differently from normal resources, in that
 this provider does not <em>create</em> this resource, but instead “adopts” it
 into management.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_subnet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_subnet.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1957,9 +1931,6 @@ a public IP address.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_subnet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_subnet.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultSubnet.cidr_block">
 <code class="sig-name descname">cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultSubnet.cidr_block" title="Permalink to this definition">¶</a></dt>
@@ -2020,9 +1991,6 @@ a public IP address.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_subnet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_subnet.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2074,6 +2042,9 @@ using it. Please read this document in its entirety before using this resource.<
 <p>The <code class="docutils literal notranslate"><span class="pre">ec2.DefaultVpc</span></code> behaves differently from normal resources, in that
 this provider does not <em>create</em> this resource, but instead “adopts” it
 into management.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2088,9 +2059,6 @@ See the [ClassicLink documentation][1] for more information. Defaults false.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultVpc.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpc.arn" title="Permalink to this definition">¶</a></dt>
@@ -2220,9 +2188,6 @@ this VPC. Note that you can change a VPC’s main route table by using an
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2274,6 +2239,9 @@ using it. Please read this document in its entirety before using this resource.<
 <p>The <code class="docutils literal notranslate"><span class="pre">ec2.DefaultVpcDhcpOptions</span></code> behaves differently from normal resources, in that
 this provider does not <em>create</em> this resource, but instead “adopts” it
 into management.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc_dhcp_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc_dhcp_options.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2285,9 +2253,6 @@ into management.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc_dhcp_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc_dhcp_options.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultVpcDhcpOptions.netbios_name_servers">
 <code class="sig-name descname">netbios_name_servers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpcDhcpOptions.netbios_name_servers" title="Permalink to this definition">¶</a></dt>
@@ -2331,9 +2296,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc_dhcp_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc_dhcp_options.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2381,6 +2343,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 An egress-only Internet gateway is used to enable outbound communication
 over IPv6 from instances in your VPC to the Internet, and prevents hosts
 outside of your VPC from initiating an IPv6 connection with your instance.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/egress_only_internet_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/egress_only_internet_gateway.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2390,9 +2355,6 @@ outside of your VPC from initiating an IPv6 connection with your instance.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/egress_only_internet_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/egress_only_internet_gateway.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.EgressOnlyInternetGateway.vpc_id">
 <code class="sig-name descname">vpc_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.EgressOnlyInternetGateway.vpc_id" title="Permalink to this definition">¶</a></dt>
@@ -2414,9 +2376,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/egress_only_internet_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/egress_only_internet_gateway.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2464,6 +2423,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> EIP may require IGW to exist prior to association. Use <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> to set an explicit dependency on the IGW.</p>
 <p><strong>Note:</strong> Do not use <code class="docutils literal notranslate"><span class="pre">network_interface</span></code> to associate the EIP to <code class="docutils literal notranslate"><span class="pre">lb.LoadBalancer</span></code> or <code class="docutils literal notranslate"><span class="pre">ec2.NatGateway</span></code> resources. Instead use the <code class="docutils literal notranslate"><span class="pre">allocation_id</span></code> available in those resources to allow AWS to manage the association, otherwise you will see <code class="docutils literal notranslate"><span class="pre">AuthFailure</span></code> errors.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2481,9 +2441,6 @@ the Elastic IP address is associated with the primary private IP address.</p></l
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Eip.associate_with_private_ip">
 <code class="sig-name descname">associate_with_private_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Eip.associate_with_private_ip" title="Permalink to this definition">¶</a></dt>
@@ -2572,9 +2529,6 @@ the Elastic IP address is associated with the primary private IP address.</p></l
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2624,6 +2578,7 @@ disassociate Elastic IPs from AWS Instances and Network Interfaces.</p>
 <div><p><strong>NOTE:</strong> Do not use this resource to associate an EIP to <code class="docutils literal notranslate"><span class="pre">lb.LoadBalancer</span></code> or <code class="docutils literal notranslate"><span class="pre">ec2.NatGateway</span></code> resources. Instead use the <code class="docutils literal notranslate"><span class="pre">allocation_id</span></code> available in those resources to allow AWS to manage the association, otherwise you will see <code class="docutils literal notranslate"><span class="pre">AuthFailure</span></code> errors.</p>
 <p><strong>NOTE:</strong> <code class="docutils literal notranslate"><span class="pre">ec2.EipAssociation</span></code> is useful in scenarios where EIPs are either
 pre-existing or distributed to customers or users and therefore cannot be changed.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip_association.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2648,9 +2603,6 @@ address.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip_association.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.EipAssociation.allocation_id">
 <code class="sig-name descname">allocation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.EipAssociation.allocation_id" title="Permalink to this definition">¶</a></dt>
@@ -2725,9 +2677,6 @@ address.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip_association.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2772,6 +2721,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.Fleet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">Fleet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">excess_capacity_termination_policy=None</em>, <em class="sig-param">launch_template_config=None</em>, <em class="sig-param">on_demand_options=None</em>, <em class="sig-param">replace_unhealthy_instances=None</em>, <em class="sig-param">spot_options=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_capacity_specification=None</em>, <em class="sig-param">terminate_instances=None</em>, <em class="sig-param">terminate_instances_with_expiration=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Fleet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage EC2 Fleets.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_fleet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_fleet.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2827,9 +2779,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">spotTargetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of Spot units to request.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">totalTargetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of units to request, filled using <code class="docutils literal notranslate"><span class="pre">default_target_capacity_type</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_fleet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_fleet.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Fleet.excess_capacity_termination_policy">
 <code class="sig-name descname">excess_capacity_termination_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Fleet.excess_capacity_termination_policy" title="Permalink to this definition">¶</a></dt>
@@ -2984,9 +2933,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">spotTargetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of Spot units to request.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">totalTargetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of units to request, filled using <code class="docutils literal notranslate"><span class="pre">default_target_capacity_type</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_fleet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_fleet.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3032,6 +2978,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">FlowLog</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">eni_id=None</em>, <em class="sig-param">iam_role_arn=None</em>, <em class="sig-param">log_destination=None</em>, <em class="sig-param">log_destination_type=None</em>, <em class="sig-param">log_format=None</em>, <em class="sig-param">log_group_name=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">traffic_type=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.FlowLog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VPC/Subnet/ENI Flow Log to capture IP traffic for a specific network
 interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucket.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/flow_log.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/flow_log.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3049,9 +2998,6 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/flow_log.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/flow_log.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.FlowLog.eni_id">
 <code class="sig-name descname">eni_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.FlowLog.eni_id" title="Permalink to this definition">¶</a></dt>
@@ -3129,9 +3075,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/flow_log.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/flow_log.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3204,7 +3147,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetInstanceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param">ami=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">credit_specifications=None</em>, <em class="sig-param">disable_api_termination=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">get_password_data=None</em>, <em class="sig-param">get_user_data=None</em>, <em class="sig-param">host_id=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">instance_state=None</em>, <em class="sig-param">instance_tags=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">password_data=None</em>, <em class="sig-param">placement_group=None</em>, <em class="sig-param">private_dns=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">public_dns=None</em>, <em class="sig-param">public_ip=None</em>, <em class="sig-param">root_block_devices=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">source_dest_check=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenancy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">user_data_base64=None</em>, <em class="sig-param">vpc_security_group_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param">ami=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">credit_specifications=None</em>, <em class="sig-param">disable_api_termination=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">get_password_data=None</em>, <em class="sig-param">get_user_data=None</em>, <em class="sig-param">host_id=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">instance_state=None</em>, <em class="sig-param">instance_tags=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">password_data=None</em>, <em class="sig-param">placement_group=None</em>, <em class="sig-param">private_dns=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">public_dns=None</em>, <em class="sig-param">public_ip=None</em>, <em class="sig-param">root_block_devices=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">source_dest_check=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenancy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">user_data_base64=None</em>, <em class="sig-param">vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstance.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInstanceResult.ami">
@@ -3264,6 +3207,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.GetInstanceResult.iam_instance_profile">
 <code class="sig-name descname">iam_instance_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult.iam_instance_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the instance profile associated with the Instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetInstanceResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3392,54 +3341,54 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 <dd><p>The associated security groups in a non-default VPC.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetInstanceResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetInstanceTypeOfferingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetInstanceTypeOfferingResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">location_type=None</em>, <em class="sig-param">preferred_instance_types=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetInstanceTypeOfferingResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">location_type=None</em>, <em class="sig-param">preferred_instance_types=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstanceTypeOffering.</p>
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetInstanceTypeOfferingResult.instance_type">
-<code class="sig-name descname">instance_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingResult.instance_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>EC2 Instance Type.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInstanceTypeOfferingResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetInstanceTypeOfferingResult.instance_type">
+<code class="sig-name descname">instance_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingResult.instance_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>EC2 Instance Type.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetInstanceTypeOfferingsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetInstanceTypeOfferingsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">instance_types=None</em>, <em class="sig-param">location_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetInstanceTypeOfferingsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_types=None</em>, <em class="sig-param">location_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstanceTypeOfferings.</p>
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetInstanceTypeOfferingsResult.instance_types">
-<code class="sig-name descname">instance_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingsResult.instance_types" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set of EC2 Instance Types.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInstanceTypeOfferingsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetInstanceTypeOfferingsResult.instance_types">
+<code class="sig-name descname">instance_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingsResult.instance_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of EC2 Instance Types.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetInstancesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_state_names=None</em>, <em class="sig-param">instance_tags=None</em>, <em class="sig-param">private_ips=None</em>, <em class="sig-param">public_ips=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_state_names=None</em>, <em class="sig-param">instance_tags=None</em>, <em class="sig-param">private_ips=None</em>, <em class="sig-param">public_ips=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstances.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetInstancesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInstancesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstancesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -3458,35 +3407,29 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 <dd><p>Public IP addresses of instances found through the filter</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetInstancesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetInternetGatewayResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetInternetGatewayResult</code><span class="sig-paren">(</span><em class="sig-param">attachments=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">internet_gateway_id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInternetGatewayResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetInternetGatewayResult</code><span class="sig-paren">(</span><em class="sig-param">attachments=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">internet_gateway_id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInternetGatewayResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInternetGateway.</p>
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetInternetGatewayResult.owner_id">
-<code class="sig-name descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInternetGatewayResult.owner_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the AWS account that owns the internet gateway.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInternetGatewayResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInternetGatewayResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetInternetGatewayResult.owner_id">
+<code class="sig-name descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInternetGatewayResult.owner_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the AWS account that owns the internet gateway.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetLaunchConfigurationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetLaunchConfigurationResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">enable_monitoring=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">placement_tenancy=None</em>, <em class="sig-param">root_block_devices=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">spot_price=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">vpc_classic_link_id=None</em>, <em class="sig-param">vpc_classic_link_security_groups=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchConfigurationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetLaunchConfigurationResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">enable_monitoring=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">placement_tenancy=None</em>, <em class="sig-param">root_block_devices=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">spot_price=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">vpc_classic_link_id=None</em>, <em class="sig-param">vpc_classic_link_security_groups=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchConfigurationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLaunchConfiguration.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetLaunchConfigurationResult.arn">
@@ -3528,6 +3471,12 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 <dt id="pulumi_aws.ec2.GetLaunchConfigurationResult.iam_instance_profile">
 <code class="sig-name descname">iam_instance_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchConfigurationResult.iam_instance_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IAM Instance Profile to associate with launched instances.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetLaunchConfigurationResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchConfigurationResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3596,17 +3545,11 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 <dd><p>The IDs of one or more Security Groups for the specified ClassicLink-enabled VPC.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetLaunchConfigurationResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchConfigurationResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetLaunchTemplateResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetLaunchTemplateResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">block_device_mappings=None</em>, <em class="sig-param">credit_specifications=None</em>, <em class="sig-param">default_version=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disable_api_termination=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">elastic_gpu_specifications=None</em>, <em class="sig-param">iam_instance_profiles=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_initiated_shutdown_behavior=None</em>, <em class="sig-param">instance_market_options=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">kernel_id=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">latest_version=None</em>, <em class="sig-param">monitorings=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">placements=None</em>, <em class="sig-param">ram_disk_id=None</em>, <em class="sig-param">security_group_names=None</em>, <em class="sig-param">tag_specifications=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">vpc_security_group_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchTemplateResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetLaunchTemplateResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">block_device_mappings=None</em>, <em class="sig-param">credit_specifications=None</em>, <em class="sig-param">default_version=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disable_api_termination=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">elastic_gpu_specifications=None</em>, <em class="sig-param">iam_instance_profiles=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_initiated_shutdown_behavior=None</em>, <em class="sig-param">instance_market_options=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">kernel_id=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">latest_version=None</em>, <em class="sig-param">monitorings=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">placements=None</em>, <em class="sig-param">ram_disk_id=None</em>, <em class="sig-param">security_group_names=None</em>, <em class="sig-param">tag_specifications=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchTemplateResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLaunchTemplate.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetLaunchTemplateResult.arn">
@@ -3664,6 +3607,12 @@ below for more details.</p>
 <code class="sig-name descname">iam_instance_profiles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchTemplateResult.iam_instance_profiles" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetLaunchTemplateResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchTemplateResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3766,12 +3715,6 @@ Interfaces below for more details.</p>
 <dd><p>A list of security group IDs to associate with.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetLaunchTemplateResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchTemplateResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -3806,18 +3749,18 @@ Interfaces below for more details.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetNetworkAclsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetNetworkAclsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkAclsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetNetworkAclsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkAclsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNetworkAcls.</p>
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetNetworkAclsResult.ids">
-<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkAclsResult.ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of all the network ACL ids found. This data source will fail if none are found.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetNetworkAclsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkAclsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetNetworkAclsResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkAclsResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of all the network ACL ids found. This data source will fail if none are found.</p>
 </dd></dl>
 
 </dd></dl>
@@ -3920,25 +3863,25 @@ Interfaces below for more details.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetNetworkInterfacesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetNetworkInterfacesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkInterfacesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetNetworkInterfacesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkInterfacesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNetworkInterfaces.</p>
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetNetworkInterfacesResult.ids">
-<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkInterfacesResult.ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of all the network interface ids found. This data source will fail if none are found.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetNetworkInterfacesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkInterfacesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetNetworkInterfacesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkInterfacesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of all the network interface ids found. This data source will fail if none are found.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetRouteResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetRouteResult</code><span class="sig-paren">(</span><em class="sig-param">destination_cidr_block=None</em>, <em class="sig-param">destination_ipv6_cidr_block=None</em>, <em class="sig-param">egress_only_gateway_id=None</em>, <em class="sig-param">gateway_id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">nat_gateway_id=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">transit_gateway_id=None</em>, <em class="sig-param">vpc_peering_connection_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetRouteResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetRouteResult</code><span class="sig-paren">(</span><em class="sig-param">destination_cidr_block=None</em>, <em class="sig-param">destination_ipv6_cidr_block=None</em>, <em class="sig-param">egress_only_gateway_id=None</em>, <em class="sig-param">gateway_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">nat_gateway_id=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">transit_gateway_id=None</em>, <em class="sig-param">vpc_peering_connection_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetRouteResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRoute.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetRouteResult.id">
@@ -3950,12 +3893,18 @@ Interfaces below for more details.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetRouteTableResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetRouteTableResult</code><span class="sig-paren">(</span><em class="sig-param">associations=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">gateway_id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">routes=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTableResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetRouteTableResult</code><span class="sig-paren">(</span><em class="sig-param">associations=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">gateway_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">routes=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTableResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRouteTable.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetRouteTableResult.gateway_id">
 <code class="sig-name descname">gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTableResult.gateway_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Gateway ID. Only set when associated with an Internet Gateway or Virtual Private Gateway.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetRouteTableResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTableResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3976,28 +3925,22 @@ Interfaces below for more details.</p>
 <dd><p>The Subnet ID. Only set when associated with a Subnet.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetRouteTableResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTableResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetRouteTablesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetRouteTablesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTablesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetRouteTablesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTablesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRouteTables.</p>
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetRouteTablesResult.ids">
-<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTablesResult.ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of all the route table ids found. This data source will fail if none are found.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetRouteTablesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTablesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetRouteTablesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTablesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of all the route table ids found. This data source will fail if none are found.</p>
 </dd></dl>
 
 </dd></dl>
@@ -4022,8 +3965,14 @@ Interfaces below for more details.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetSecurityGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetSecurityGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetSecurityGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetSecurityGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetSecurityGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecurityGroups.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetSecurityGroupsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetSecurityGroupsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetSecurityGroupsResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetSecurityGroupsResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -4037,28 +3986,22 @@ Interfaces below for more details.</p>
 unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</span></code> filter is also used.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetSecurityGroupsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetSecurityGroupsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetSubnetIdsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetSubnetIdsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetSubnetIdsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetSubnetIdsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetSubnetIdsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSubnetIds.</p>
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetSubnetIdsResult.ids">
-<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetSubnetIdsResult.ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>A set of all the subnet ids found. This data source will fail if none are found.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetSubnetIdsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetSubnetIdsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetSubnetIdsResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetSubnetIdsResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of all the subnet ids found. This data source will fail if none are found.</p>
 </dd></dl>
 
 </dd></dl>
@@ -4083,7 +4026,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetVpcDhcpOptionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetVpcDhcpOptionsResult</code><span class="sig-paren">(</span><em class="sig-param">dhcp_options_id=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">domain_name_servers=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">netbios_name_servers=None</em>, <em class="sig-param">netbios_node_type=None</em>, <em class="sig-param">ntp_servers=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcDhcpOptionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetVpcDhcpOptionsResult</code><span class="sig-paren">(</span><em class="sig-param">dhcp_options_id=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">domain_name_servers=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">netbios_name_servers=None</em>, <em class="sig-param">netbios_node_type=None</em>, <em class="sig-param">ntp_servers=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcDhcpOptionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpcDhcpOptions.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcDhcpOptionsResult.dhcp_options_id">
@@ -4101,6 +4044,12 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 <dt id="pulumi_aws.ec2.GetVpcDhcpOptionsResult.domain_name_servers">
 <code class="sig-name descname">domain_name_servers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcDhcpOptionsResult.domain_name_servers" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of name servers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetVpcDhcpOptionsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcDhcpOptionsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4131,12 +4080,6 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 <dt id="pulumi_aws.ec2.GetVpcDhcpOptionsResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcDhcpOptionsResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags assigned to the resource.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetVpcDhcpOptionsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcDhcpOptionsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -4221,7 +4164,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetVpcEndpointServiceResult</code><span class="sig-paren">(</span><em class="sig-param">acceptance_required=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">base_endpoint_dns_names=None</em>, <em class="sig-param">manages_vpc_endpoints=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">private_dns_name=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">service_id=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">service_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_endpoint_policy_supported=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetVpcEndpointServiceResult</code><span class="sig-paren">(</span><em class="sig-param">acceptance_required=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">base_endpoint_dns_names=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">manages_vpc_endpoints=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">private_dns_name=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">service_id=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">service_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_endpoint_policy_supported=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpcEndpointService.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.acceptance_required">
@@ -4239,6 +4182,12 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 <dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.base_endpoint_dns_names">
 <code class="sig-name descname">base_endpoint_dns_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult.base_endpoint_dns_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DNS names for the service.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4281,12 +4230,6 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 <dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.vpc_endpoint_policy_supported">
 <code class="sig-name descname">vpc_endpoint_policy_supported</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult.vpc_endpoint_policy_supported" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether or not the service supports endpoint policies - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -4380,18 +4323,18 @@ selected VPC. May be any of <code class="docutils literal notranslate"><span cla
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetVpcsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetVpcsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetVpcsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpcs.</p>
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetVpcsResult.ids">
-<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcsResult.ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of all the VPC Ids found. This data source will fail if none are found.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetVpcsResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcsResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of all the VPC Ids found. This data source will fail if none are found.</p>
 </dd></dl>
 
 </dd></dl>
@@ -4407,6 +4350,9 @@ selected VPC. May be any of <code class="docutils literal notranslate"><span cla
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ami=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">cpu_core_count=None</em>, <em class="sig-param">cpu_threads_per_core=None</em>, <em class="sig-param">credit_specification=None</em>, <em class="sig-param">disable_api_termination=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">get_password_data=None</em>, <em class="sig-param">hibernation=None</em>, <em class="sig-param">host_id=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">instance_initiated_shutdown_behavior=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">ipv6_address_count=None</em>, <em class="sig-param">ipv6_addresses=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">placement_group=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">root_block_device=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">source_dest_check=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenancy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">user_data_base64=None</em>, <em class="sig-param">volume_tags=None</em>, <em class="sig-param">vpc_security_group_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 instance resource. This allows instances to be created, updated,
 and deleted. Instances also support <a class="reference external" href="https://www.terraform.io/docs/provisioners/index.html">provisioning</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/instance.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4436,7 +4382,7 @@ See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/l
 </p></li>
 <li><p><strong>hibernation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the launched EC2 instance will support hibernation.</p></li>
 <li><p><strong>host_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.</p></li>
-<li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM Instance Profile to
+<li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">EC2 documentation</a>, notably <code class="docutils literal notranslate"><span class="pre">iam:PassRole</span></code>.</p></li>
 </ul>
 </dd>
@@ -4527,9 +4473,6 @@ This must be set with a <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
 or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>).</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Instance.ami">
 <code class="sig-name descname">ami</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.ami" title="Permalink to this definition">¶</a></dt>
@@ -4877,7 +4820,7 @@ See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/l
 </p></li>
 <li><p><strong>hibernation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the launched EC2 instance will support hibernation.</p></li>
 <li><p><strong>host_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.</p></li>
-<li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The IAM Instance Profile to
+<li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">EC2 documentation</a>, notably <code class="docutils literal notranslate"><span class="pre">iam:PassRole</span></code>.</p>
 </p></li>
 </ul>
@@ -4985,9 +4928,6 @@ This must be set with a <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
 or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>).</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/instance.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5032,6 +4972,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.InternetGateway">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">InternetGateway</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.InternetGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a VPC Internet Gateway.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/internet_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/internet_gateway.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5042,9 +4985,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/internet_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/internet_gateway.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.InternetGateway.owner_id">
 <code class="sig-name descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.InternetGateway.owner_id" title="Permalink to this definition">¶</a></dt>
@@ -5080,9 +5020,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/internet_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/internet_gateway.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5134,6 +5071,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Base64 encoded DER format</p></li>
 <li><p>SSH public key file format as specified in RFC4716</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/key_pair.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/key_pair.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5146,9 +5086,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/key_pair.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/key_pair.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.KeyPair.fingerprint">
 <code class="sig-name descname">fingerprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.KeyPair.fingerprint" title="Permalink to this definition">¶</a></dt>
@@ -5205,9 +5142,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/key_pair.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/key_pair.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5302,6 +5236,7 @@ identified by the <code class="docutils literal notranslate"><span class="pre">v
 cannot currently be detected by this provider. After updating to block device
 configuration, resource recreation can be manually triggered by using the
 <cite>``taint`</cite> command &lt;<a class="reference external" href="https://www.terraform.io/docs/commands/taint.html">https://www.terraform.io/docs/commands/taint.html</a>&gt;`_.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_configuration.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -5315,7 +5250,7 @@ instance.  See Block Devices below for details.</p></li>
 <li><p><strong>enable_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables/disables detailed monitoring. This is enabled by default.</p></li>
 <li><p><strong>ephemeral_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Customize Ephemeral (also known as
 “Instance Store”) volumes on the instance. See Block Devices below for details.</p></li>
-<li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name attribute of the IAM instance profile to associate
+<li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The name attribute of the IAM instance profile to associate
 with launched instances.</p></li>
 <li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 image ID to launch.</p></li>
 <li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The size of instance to launch.</p></li>
@@ -5362,9 +5297,6 @@ device of the instance. See Block Devices below for details.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_configuration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchConfiguration.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration.arn" title="Permalink to this definition">¶</a></dt>
@@ -5533,7 +5465,7 @@ instance.  See Block Devices below for details.</p></li>
 <li><p><strong>enable_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables/disables detailed monitoring. This is enabled by default.</p></li>
 <li><p><strong>ephemeral_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Customize Ephemeral (also known as
 “Instance Store”) volumes on the instance. See Block Devices below for details.</p></li>
-<li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name attribute of the IAM instance profile to associate
+<li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The name attribute of the IAM instance profile to associate
 with launched instances.</p></li>
 <li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 image ID to launch.</p></li>
 <li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The size of instance to launch.</p></li>
@@ -5581,9 +5513,6 @@ device of the instance. See Block Devices below for details.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_configuration.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5628,6 +5557,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.LaunchTemplate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">LaunchTemplate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">block_device_mappings=None</em>, <em class="sig-param">capacity_reservation_specification=None</em>, <em class="sig-param">cpu_options=None</em>, <em class="sig-param">credit_specification=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disable_api_termination=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">elastic_gpu_specifications=None</em>, <em class="sig-param">elastic_inference_accelerator=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_initiated_shutdown_behavior=None</em>, <em class="sig-param">instance_market_options=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">kernel_id=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">license_specifications=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">placement=None</em>, <em class="sig-param">ram_disk_id=None</em>, <em class="sig-param">security_group_names=None</em>, <em class="sig-param">tag_specifications=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">vpc_security_group_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 launch template resource. Can be used to create instances or auto scaling groups.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_template.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5739,7 +5671,7 @@ Name</a>
 </ul>
 <p>The <strong>license_specifications</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">licenseConfigurationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">license_configuration_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>monitoring</strong> object supports the following:</p>
 <ul class="simple">
@@ -5764,19 +5696,16 @@ Name</a>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">affinity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">groupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">host_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spreadDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenancy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>tag_specifications</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tags to assign to the launch template.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_template.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchTemplate.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.arn" title="Permalink to this definition">¶</a></dt>
@@ -5958,7 +5887,7 @@ below for details.</p>
 <code class="sig-name descname">license_specifications</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.license_specifications" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of license specifications to associate with. See License Specification below for more details.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">licenseConfigurationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">license_configuration_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -6011,7 +5940,7 @@ Interfaces below for more details.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">affinity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">groupName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">host_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spreadDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenancy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -6036,7 +5965,7 @@ Interfaces below for more details.</p>
 <code class="sig-name descname">tag_specifications</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.tag_specifications" title="Permalink to this definition">¶</a></dt>
 <dd><p>The tags to apply to the resources during launch. See Tag Specifications below for more details.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A mapping of tags to assign to the launch template.</p></li>
 </ul>
 </dd></dl>
@@ -6179,7 +6108,7 @@ Name</a>
 </ul>
 <p>The <strong>license_specifications</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">licenseConfigurationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">license_configuration_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>monitoring</strong> object supports the following:</p>
 <ul class="simple">
@@ -6204,19 +6133,16 @@ Name</a>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">affinity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">groupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">host_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spreadDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenancy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>tag_specifications</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tags to assign to the launch template.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_template.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -6267,6 +6193,9 @@ The “Delete” action for a <code class="docutils literal notranslate"><span c
 this original table as the Main Route Table for the VPC. You’ll see this
 additional Route Table in the AWS console; it must remain intact in order for
 the <code class="docutils literal notranslate"><span class="pre">main_route_table_association</span></code> delete to work properly.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/main_route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/main_route_table_association.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6278,9 +6207,6 @@ main route table for the target VPC</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/main_route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/main_route_table_association.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.MainRouteTableAssociation.original_route_table_id">
 <code class="sig-name descname">original_route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.MainRouteTableAssociation.original_route_table_id" title="Permalink to this definition">¶</a></dt>
@@ -6318,9 +6244,6 @@ main route table for the target VPC</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/main_route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/main_route_table_association.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -6365,6 +6288,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.NatGateway">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">NatGateway</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocation_id=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NatGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a VPC NAT Gateway.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/nat_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/nat_gateway.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6376,9 +6302,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/nat_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/nat_gateway.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NatGateway.allocation_id">
 <code class="sig-name descname">allocation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NatGateway.allocation_id" title="Permalink to this definition">¶</a></dt>
@@ -6435,9 +6358,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/nat_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/nat_gateway.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -6489,6 +6409,7 @@ provides both a standalone Network ACL Rule resource and a Network ACL resource 
 defined in-line. At this time you cannot use a Network ACL with in-line rules
 in conjunction with any Network ACL Rule resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -6535,9 +6456,6 @@ protocol, you must specify a from and to port of 0.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ruleNo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The rule number. Used for ordering.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The to port to match.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkAcl.egress">
 <code class="sig-name descname">egress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkAcl.egress" title="Permalink to this definition">¶</a></dt>
@@ -6654,9 +6572,6 @@ protocol, you must specify a from and to port of 0.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ruleNo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The rule number. Used for ordering.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The to port to match.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -6707,6 +6622,7 @@ provides both a standalone Network ACL Rule resource and a Network ACL resource 
 defined in-line. At this time you cannot use a Network ACL with in-line rules
 in conjunction with any Network ACL Rule resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -6727,9 +6643,6 @@ a conflict of rule settings and will overwrite rules.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkAclRule.cidr_block">
 <code class="sig-name descname">cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkAclRule.cidr_block" title="Permalink to this definition">¶</a></dt>
@@ -6821,9 +6734,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -6868,6 +6778,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.NetworkInterface">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">NetworkInterface</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attachments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">private_ips=None</em>, <em class="sig-param">private_ips_count=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">source_dest_check=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic network interface (ENI) resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6890,9 +6803,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkInterface.attachments">
 <code class="sig-name descname">attachments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface.attachments" title="Permalink to this definition">¶</a></dt>
@@ -6988,9 +6898,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -7035,6 +6942,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.NetworkInterfaceAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">NetworkInterfaceAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">device_index=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterfaceAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attach an Elastic network interface (ENI) resource with EC2 instance.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_attachment.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7046,9 +6956,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkInterfaceAttachment.attachment_id">
 <code class="sig-name descname">attachment_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterfaceAttachment.attachment_id" title="Permalink to this definition">¶</a></dt>
@@ -7098,9 +7005,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -7156,6 +7060,9 @@ conflicts, and will lead to spurious diffs and undefined behavior - please use
 one or the other.</p>
 </div></blockquote>
 <p>There are no outputs for this resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_sg_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_sg_attachment.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7166,9 +7073,6 @@ one or the other.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_sg_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_sg_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkInterfaceSecurityGroupAttachment.network_interface_id">
 <code class="sig-name descname">network_interface_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterfaceSecurityGroupAttachment.network_interface_id" title="Permalink to this definition">¶</a></dt>
@@ -7197,9 +7101,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_sg_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_sg_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -7256,6 +7157,9 @@ cross-account scenarios.</p>
 </div></blockquote>
 <p>Basic usage:</p>
 <p>Basic cross-account usage:</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7293,9 +7197,6 @@ private IP addresses when queried from instances in the peer VPC.</p></li>
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection. This option is not supported for inter-region VPC peering.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.PeeringConnectionOptions.accepter">
 <code class="sig-name descname">accepter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.PeeringConnectionOptions.accepter" title="Permalink to this definition">¶</a></dt>
@@ -7381,9 +7282,6 @@ private IP addresses when queried from instances in the peer VPC.</p></li>
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection. This option is not supported for inter-region VPC peering.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -7429,6 +7327,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">PlacementGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">strategy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.PlacementGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 placement group. Read more about placement groups
 in <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">AWS Docs</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/placement_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/placement_group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7440,9 +7341,6 @@ in <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/placement_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/placement_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.PlacementGroup.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.PlacementGroup.name" title="Permalink to this definition">¶</a></dt>
@@ -7485,9 +7383,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/placement_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/placement_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -7532,6 +7427,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.ProxyProtocolPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">ProxyProtocolPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">instance_ports=None</em>, <em class="sig-param">load_balancer=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.ProxyProtocolPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a proxy protocol policy, which allows an ELB to carry a client connection information to a backend.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/proxy_protocol_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/proxy_protocol_policy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7544,9 +7442,6 @@ should be attached.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/proxy_protocol_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/proxy_protocol_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.ProxyProtocolPolicy.instance_ports">
 <code class="sig-name descname">instance_ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.ProxyProtocolPolicy.instance_ports" title="Permalink to this definition">¶</a></dt>
@@ -7579,9 +7474,6 @@ should be attached.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/proxy_protocol_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/proxy_protocol_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -7632,6 +7524,7 @@ provides both a standalone Route resource and a Route Table resource with routes
 defined in-line. At this time you cannot use a Route Table with in-line routes
 in conjunction with any Route resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -7651,9 +7544,6 @@ a conflict of rule settings and will overwrite rules.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Route.destination_cidr_block">
 <code class="sig-name descname">destination_cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Route.destination_cidr_block" title="Permalink to this definition">¶</a></dt>
@@ -7738,9 +7628,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -7802,6 +7689,7 @@ define route propagations using <code class="docutils literal notranslate"><span
 this resource will delete any propagating gateways not explicitly listed in
 <code class="docutils literal notranslate"><span class="pre">propagating_vgws</span></code>. Omit this argument when defining route propagation using
 the separate resource.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -7828,9 +7716,6 @@ the separate resource.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">transit_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 Transit Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_peering_connection_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC peering connection.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.RouteTable.owner_id">
 <code class="sig-name descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.RouteTable.owner_id" title="Permalink to this definition">¶</a></dt>
@@ -7904,9 +7789,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">transit_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 Transit Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_peering_connection_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC peering connection.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -7952,6 +7834,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">RouteTableAssociation</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">gateway_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.RouteTableAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create an association between a route table and a subnet or a route table and an
 internet gateway or virtual private gateway.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table_association.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7963,9 +7848,6 @@ internet gateway or virtual private gateway.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table_association.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.RouteTableAssociation.gateway_id">
 <code class="sig-name descname">gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.RouteTableAssociation.gateway_id" title="Permalink to this definition">¶</a></dt>
@@ -8001,9 +7883,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table_association.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -8047,16 +7926,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.SecurityGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">SecurityGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">egress=None</em>, <em class="sig-param">ingress=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">revoke_rules_on_delete=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecurityGroup resource with the given unique name, props, and options.</p>
+<dd><p>Create a SecurityGroup resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: The security group description. Defaults to</p>
+<blockquote>
+<div><p>“Managed by Pulumi”. Cannot be “”. <strong>NOTE</strong>: This field maps to the AWS
+<code class="docutils literal notranslate"><span class="pre">GroupDescription</span></code> attribute, for which there is no Update API. If you’d like
+to classify your security groups in a way that can be updated, use <code class="docutils literal notranslate"><span class="pre">tags</span></code>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group description. Defaults to
-“Managed by Pulumi”. Cannot be “”. <strong>NOTE</strong>: This field maps to the AWS
-<code class="docutils literal notranslate"><span class="pre">GroupDescription</span></code> attribute, for which there is no Update API. If you’d like
-to classify your security groups in a way that can be updated, use <code class="docutils literal notranslate"><span class="pre">tags</span></code>.</p></li>
 <li><p><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
 This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
@@ -8111,9 +7992,6 @@ to classify your security groups in a way that can be updated, use <code class="
 <li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SecurityGroup.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup.arn" title="Permalink to this definition">¶</a></dt>
@@ -8288,9 +8166,6 @@ to classify your security groups in a way that can be updated, use <code class="
 <li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -8345,6 +8220,7 @@ in conjunction with any Security Group Rule resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.</p>
 <p><strong>NOTE:</strong> Setting <code class="docutils literal notranslate"><span class="pre">protocol</span> <span class="pre">=</span> <span class="pre">&quot;all&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">protocol</span> <span class="pre">=</span> <span class="pre">-1</span></code> with <code class="docutils literal notranslate"><span class="pre">from_port</span></code> and <code class="docutils literal notranslate"><span class="pre">to_port</span></code> will result in the EC2 API creating a security group rule with all ports open. This API behavior cannot be controlled by this provider and may generate warnings in the future.</p>
 <p><strong>NOTE:</strong> Referencing Security Groups across VPC peering has certain restrictions. More information is available in the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html">VPC Peering User Guide</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -8369,9 +8245,6 @@ or <code class="docutils literal notranslate"><span class="pre">egress</span></c
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SecurityGroupRule.cidr_blocks">
 <code class="sig-name descname">cidr_blocks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule.cidr_blocks" title="Permalink to this definition">¶</a></dt>
@@ -8472,9 +8345,6 @@ or <code class="docutils literal notranslate"><span class="pre">egress</span></c
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -8519,6 +8389,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.SnapshotCreateVolumePermission">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">SnapshotCreateVolumePermission</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SnapshotCreateVolumePermission" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds permission to create volumes off of a given EBS Snapshot.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/snapshot_create_volume_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/snapshot_create_volume_permission.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -8529,9 +8402,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/snapshot_create_volume_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/snapshot_create_volume_permission.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SnapshotCreateVolumePermission.account_id">
 <code class="sig-name descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SnapshotCreateVolumePermission.account_id" title="Permalink to this definition">¶</a></dt>
@@ -8560,9 +8430,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/snapshot_create_volume_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/snapshot_create_volume_permission.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -8611,6 +8478,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div></blockquote>
 <p>To help you understand the charges for your Spot instances, Amazon EC2 provides a data feed that describes your Spot instance usage and pricing.
 This data feed is sent to an Amazon S3 bucket that you specify when you subscribe to the data feed.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_datafeed_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_datafeed_subscription.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -8621,9 +8491,6 @@ This data feed is sent to an Amazon S3 bucket that you specify when you subscrib
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_datafeed_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_datafeed_subscription.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotDatafeedSubscription.bucket">
 <code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotDatafeedSubscription.bucket" title="Permalink to this definition">¶</a></dt>
@@ -8652,9 +8519,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_datafeed_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_datafeed_subscription.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -8700,6 +8564,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">SpotFleetRequest</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocation_strategy=None</em>, <em class="sig-param">excess_capacity_termination_policy=None</em>, <em class="sig-param">fleet_type=None</em>, <em class="sig-param">iam_fleet_role=None</em>, <em class="sig-param">instance_interruption_behaviour=None</em>, <em class="sig-param">instance_pools_to_use_count=None</em>, <em class="sig-param">launch_specifications=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">replace_unhealthy_instances=None</em>, <em class="sig-param">spot_price=None</em>, <em class="sig-param">target_capacity=None</em>, <em class="sig-param">target_group_arns=None</em>, <em class="sig-param">terminate_instances_with_expiration=None</em>, <em class="sig-param">valid_from=None</em>, <em class="sig-param">valid_until=None</em>, <em class="sig-param">wait_for_fulfillment=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 Spot Fleet Request resource. This allows a fleet of Spot
 instances to be requested on the Spot market.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_fleet_request.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_fleet_request.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -8776,7 +8643,7 @@ timeout of 10m is reached.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">monitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">placement_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">placement_tenancy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rootBlockDevices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">root_block_devices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -8793,9 +8660,6 @@ timeout of 10m is reached.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_fleet_request.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_fleet_request.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotFleetRequest.allocation_strategy">
 <code class="sig-name descname">allocation_strategy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.allocation_strategy" title="Permalink to this definition">¶</a></dt>
@@ -8881,7 +8745,7 @@ across different markets and instance types.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">monitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">placement_group</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">placement_tenancy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rootBlockDevices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">root_block_devices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
@@ -9049,7 +8913,7 @@ timeout of 10m is reached.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">monitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">placement_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">placement_tenancy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rootBlockDevices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">root_block_devices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -9066,9 +8930,6 @@ timeout of 10m is reached.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_fleet_request.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_fleet_request.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -9131,6 +8992,7 @@ guarantee</strong> that a Spot Instance exists to fulfill the request at any giv
 point in time. See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html">AWS Spot Instance
 documentation</a>
 for more information.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_instance_request.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_instance_request.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -9273,9 +9135,6 @@ This must be set with a <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
 or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>).</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_instance_request.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_instance_request.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.ami">
 <code class="sig-name descname">ami</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.ami" title="Permalink to this definition">¶</a></dt>
@@ -9800,9 +9659,6 @@ This must be set with a <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
 or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>).</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_instance_request.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_instance_request.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -9846,15 +9702,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.Subnet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">Subnet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">assign_ipv6_address_on_creation=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">availability_zone_id=None</em>, <em class="sig-param">cidr_block=None</em>, <em class="sig-param">ipv6_cidr_block=None</em>, <em class="sig-param">map_public_ip_on_launch=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Subnet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Subnet resource with the given unique name, props, and options.</p>
+<dd><p>Create a Subnet resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] assign_ipv6_address_on_creation: Specify true to indicate</p>
+<blockquote>
+<div><p>that network interfaces created in the specified subnet should be
+assigned an IPv6 address. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>assign_ipv6_address_on_creation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specify true to indicate
-that network interfaces created in the specified subnet should be
-assigned an IPv6 address. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ for the subnet.</p></li>
 <li><p><strong>availability_zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ ID of the subnet.</p></li>
 <li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the subnet.</p></li>
@@ -9868,9 +9726,6 @@ a public IP address. Default is <code class="docutils literal notranslate"><span
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/subnet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/subnet.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Subnet.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Subnet.arn" title="Permalink to this definition">¶</a></dt>
@@ -9972,9 +9827,6 @@ a public IP address. Default is <code class="docutils literal notranslate"><span
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/subnet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/subnet.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -10020,6 +9872,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">TrafficMirrorFilter</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">network_services=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Traffic mirror filter.<span class="raw-html-m2r"><br></span>
 Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10030,9 +9885,6 @@ Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.TrafficMirrorFilter.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilter.description" title="Permalink to this definition">¶</a></dt>
@@ -10061,9 +9913,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -10109,6 +9958,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">TrafficMirrorFilterRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">destination_cidr_block=None</em>, <em class="sig-param">destination_port_range=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">rule_action=None</em>, <em class="sig-param">rule_number=None</em>, <em class="sig-param">source_cidr_block=None</em>, <em class="sig-param">source_port_range=None</em>, <em class="sig-param">traffic_direction=None</em>, <em class="sig-param">traffic_mirror_filter_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Traffic mirror filter rule.<span class="raw-html-m2r"><br></span>
 Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter_rule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10137,9 +9989,6 @@ Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/
 <li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Starting port of the range</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Ending port of the range</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.TrafficMirrorFilterRule.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule.description" title="Permalink to this definition">¶</a></dt>
@@ -10243,9 +10092,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Starting port of the range</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Ending port of the range</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -10291,6 +10137,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">TrafficMirrorSession</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">packet_length=None</em>, <em class="sig-param">session_number=None</em>, <em class="sig-param">traffic_mirror_filter_id=None</em>, <em class="sig-param">traffic_mirror_target_id=None</em>, <em class="sig-param">virtual_network_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorSession" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Traffic mirror session.<span class="raw-html-m2r"><br></span>
 Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_session.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_session.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10312,9 +10161,6 @@ Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_session.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_session.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.TrafficMirrorSession.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorSession.description" title="Permalink to this definition">¶</a></dt>
@@ -10388,9 +10234,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_session.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_session.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -10436,6 +10279,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">TrafficMirrorTarget</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">network_load_balancer_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Traffic mirror target.<span class="raw-html-m2r"><br></span>
 Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_target.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10447,9 +10293,6 @@ Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_target.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.TrafficMirrorTarget.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorTarget.description" title="Permalink to this definition">¶</a></dt>
@@ -10485,9 +10328,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_target.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -10535,6 +10375,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 detach volumes from AWS Instances.</p>
 <blockquote>
 <div><p><strong>NOTE on EBS block devices:</strong> If you use <code class="docutils literal notranslate"><span class="pre">ebs_block_device</span></code> on an <code class="docutils literal notranslate"><span class="pre">ec2.Instance</span></code>, this provider will assume management over the full set of non-root EBS block devices for the instance, and treats additional block devices as drift. For this reason, <code class="docutils literal notranslate"><span class="pre">ebs_block_device</span></code> cannot be mixed with external <code class="docutils literal notranslate"><span class="pre">ebs.Volume</span></code> + <code class="docutils literal notranslate"><span class="pre">aws_ebs_volume_attachment</span></code> resources for a given instance.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/volume_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/volume_attachment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -10557,9 +10398,6 @@ means attached.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/volume_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/volume_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VolumeAttachment.device_name">
 <code class="sig-name descname">device_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VolumeAttachment.device_name" title="Permalink to this definition">¶</a></dt>
@@ -10625,9 +10463,6 @@ means attached.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/volume_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/volume_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -10672,6 +10507,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.Vpc">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">Vpc</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">assign_generated_ipv6_cidr_block=None</em>, <em class="sig-param">cidr_block=None</em>, <em class="sig-param">enable_classiclink=None</em>, <em class="sig-param">enable_classiclink_dns_support=None</em>, <em class="sig-param">enable_dns_hostnames=None</em>, <em class="sig-param">enable_dns_support=None</em>, <em class="sig-param">instance_tenancy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Vpc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VPC resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10693,9 +10531,6 @@ Only valid in regions and accounts that support EC2 Classic.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Vpc.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Vpc.arn" title="Permalink to this definition">¶</a></dt>
@@ -10836,9 +10671,6 @@ this VPC. Note that you can change a VPC’s main route table by using an
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -10890,6 +10722,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>If you delete a DHCP Options Set, all VPCs using it will be associated to AWS’s <code class="docutils literal notranslate"><span class="pre">default</span></code> DHCP Option Set.</p></li>
 <li><p>In most cases unless you’re configuring your own DNS you’ll want to set <code class="docutils literal notranslate"><span class="pre">domain_name_servers</span></code> to <code class="docutils literal notranslate"><span class="pre">AmazonProvidedDNS</span></code>.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10905,9 +10740,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcDhcpOptions.domain_name">
 <code class="sig-name descname">domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptions.domain_name" title="Permalink to this definition">¶</a></dt>
@@ -10972,9 +10804,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -11023,6 +10852,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>You can only associate one DHCP Options Set to a given VPC ID.</p></li>
 <li><p>Removing the DHCP Options Association automatically sets AWS’s <code class="docutils literal notranslate"><span class="pre">default</span></code> DHCP Options Set to the VPC.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options_association.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11033,9 +10865,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options_association.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcDhcpOptionsAssociation.dhcp_options_id">
 <code class="sig-name descname">dhcp_options_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptionsAssociation.dhcp_options_id" title="Permalink to this definition">¶</a></dt>
@@ -11064,9 +10893,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options_association.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -11118,6 +10944,7 @@ Subnets - (an association between a VPC endpoint and a single <code class="docut
 a VPC Endpoint resource with <code class="docutils literal notranslate"><span class="pre">route_table_ids</span></code> and <code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> attributes.
 Do not use the same resource ID in both a VPC Endpoint resource and a VPC Endpoint Association resource.
 Doing so will cause a conflict of associations and will overwrite the association.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -11137,9 +10964,6 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpoint.auto_accept">
 <code class="sig-name descname">auto_accept</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.auto_accept" title="Permalink to this definition">¶</a></dt>
@@ -11277,9 +11101,6 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 <li><p><code class="docutils literal notranslate"><span class="pre">dns_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DNS name.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hosted_zone_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the private hosted zone.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -11325,6 +11146,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">VpcEndpointConnectionNotification</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">connection_events=None</em>, <em class="sig-param">connection_notification_arn=None</em>, <em class="sig-param">vpc_endpoint_id=None</em>, <em class="sig-param">vpc_endpoint_service_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointConnectionNotification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VPC Endpoint connection notification resource.
 Connection notifications notify subscribers of VPC Endpoint events.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_connection_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_connection_notification.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11337,9 +11161,6 @@ Connection notifications notify subscribers of VPC Endpoint events.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_connection_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_connection_notification.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpointConnectionNotification.connection_events">
 <code class="sig-name descname">connection_events</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointConnectionNotification.connection_events" title="Permalink to this definition">¶</a></dt>
@@ -11397,9 +11218,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_connection_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_connection_notification.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -11444,6 +11262,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.VpcEndpointRouteTableAssociation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">VpcEndpointRouteTableAssociation</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">vpc_endpoint_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointRouteTableAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a VPC Endpoint Route Table Association</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_route_table_association.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11454,9 +11275,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_route_table_association.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpointRouteTableAssociation.route_table_id">
 <code class="sig-name descname">route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointRouteTableAssociation.route_table_id" title="Permalink to this definition">¶</a></dt>
@@ -11485,9 +11303,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_route_table_association.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -11539,6 +11354,7 @@ both a standalone VPC Endpoint Service Allowed Principal resource
 and a VPC Endpoint Service resource with an <code class="docutils literal notranslate"><span class="pre">allowed_principals</span></code> attribute. Do not use the same principal ARN in both
 a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal resource. Doing so will cause a conflict
 and will overwrite the association.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -11552,9 +11368,6 @@ and will overwrite the association.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpointService.acceptance_required">
 <code class="sig-name descname">acceptance_required</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointService.acceptance_required" title="Permalink to this definition">¶</a></dt>
@@ -11646,9 +11459,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -11699,6 +11509,7 @@ both a standalone VPC Endpoint Service Allowed Principal resource
 and a VPC Endpoint Service resource with an <code class="docutils literal notranslate"><span class="pre">allowed_principals</span></code> attribute. Do not use the same principal ARN in both
 a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal resource. Doing so will cause a conflict
 and will overwrite the association.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service_allowed_principal.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service_allowed_principal.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -11710,9 +11521,6 @@ and will overwrite the association.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service_allowed_principal.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service_allowed_principal.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpointServiceAllowedPrinciple.principal_arn">
 <code class="sig-name descname">principal_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointServiceAllowedPrinciple.principal_arn" title="Permalink to this definition">¶</a></dt>
@@ -11741,9 +11549,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service_allowed_principal.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service_allowed_principal.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -11794,6 +11599,7 @@ both a standalone VPC Endpoint Subnet Association (an association between a VPC 
 and a single <code class="docutils literal notranslate"><span class="pre">subnet_id</span></code>) and a VPC Endpoint resource with a <code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code>
 attribute. Do not use the same subnet ID in both a VPC Endpoint resource and a VPC Endpoint Subnet
 Association resource. Doing so will cause a conflict of associations and will overwrite the association.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_subnet_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_subnet_association.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -11805,9 +11611,6 @@ Association resource. Doing so will cause a conflict of associations and will ov
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_subnet_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_subnet_association.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpointSubnetAssociation.subnet_id">
 <code class="sig-name descname">subnet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointSubnetAssociation.subnet_id" title="Permalink to this definition">¶</a></dt>
@@ -11836,9 +11639,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_subnet_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_subnet_association.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -11885,6 +11685,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a resource to associate additional IPv4 CIDR blocks with a VPC.</p>
 <p>When a VPC is created, a primary IPv4 CIDR block for the VPC must be specified.
 The <code class="docutils literal notranslate"><span class="pre">ec2.VpcIpv4CidrBlockAssociation</span></code> resource allows further IPv4 CIDR blocks to be added to the VPC.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_ipv4_cidr_block_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_ipv4_cidr_block_association.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11895,9 +11698,6 @@ The <code class="docutils literal notranslate"><span class="pre">ec2.VpcIpv4Cidr
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_ipv4_cidr_block_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_ipv4_cidr_block_association.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcIpv4CidrBlockAssociation.cidr_block">
 <code class="sig-name descname">cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcIpv4CidrBlockAssociation.cidr_block" title="Permalink to this definition">¶</a></dt>
@@ -11926,9 +11726,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_ipv4_cidr_block_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_ipv4_cidr_block_association.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -11988,6 +11785,9 @@ connection and use the <code class="docutils literal notranslate"><span class="p
 <p>If both VPCs are not in the same AWS account do not enable the <code class="docutils literal notranslate"><span class="pre">auto_accept</span></code> attribute.
 The accepter can manage its side of the connection using the <code class="docutils literal notranslate"><span class="pre">ec2.VpcPeeringConnectionAccepter</span></code> resource
 or accept the connection manually using the AWS Management Console, AWS CLI, through SDKs, etc.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12036,9 +11836,6 @@ inter-region VPC peering.</p></li>
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcPeeringConnection.accept_status">
 <code class="sig-name descname">accept_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnection.accept_status" title="Permalink to this definition">¶</a></dt>
@@ -12178,9 +11975,6 @@ inter-region VPC peering.</p></li>
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -12231,6 +12025,9 @@ accepter’s account.
 The requester can use the <code class="docutils literal notranslate"><span class="pre">ec2.VpcPeeringConnection</span></code> resource to manage its side of the connection
 and the accepter can use the <code class="docutils literal notranslate"><span class="pre">ec2.VpcPeeringConnectionAccepter</span></code> resource to “adopt” its side of the
 connection into management.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_accepter.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12264,9 +12061,6 @@ private IP addresses when queried from instances in a peer VPC.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a local VPC can communicate with a ClassicLink
 connection in the peer VPC over the VPC Peering Connection.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_accepter.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcPeeringConnectionAccepter.accept_status">
 <code class="sig-name descname">accept_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnectionAccepter.accept_status" title="Permalink to this definition">¶</a></dt>
@@ -12389,9 +12183,6 @@ private IP addresses when queried from instances in a peer VPC.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a local VPC can communicate with a ClassicLink
 connection in the peer VPC over the VPC Peering Connection.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_accepter.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -12441,6 +12232,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 <p><strong>Note:</strong> The CIDR blocks in the arguments <code class="docutils literal notranslate"><span class="pre">tunnel1_inside_cidr</span></code> and <code class="docutils literal notranslate"><span class="pre">tunnel2_inside_cidr</span></code> must have a prefix of /30 and be a part of a specific range.
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html">Read more about this in the AWS documentation</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -12460,9 +12252,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpnConnection.customer_gateway_configuration">
 <code class="sig-name descname">customer_gateway_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnConnection.customer_gateway_configuration" title="Permalink to this definition">¶</a></dt>
@@ -12645,9 +12434,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">statusMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -12692,6 +12478,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.VpnConnectionRoute">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">VpnConnectionRoute</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">destination_cidr_block=None</em>, <em class="sig-param">vpn_connection_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnConnectionRoute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a static route between a VPN connection and a customer gateway.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection_route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection_route.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12702,9 +12491,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection_route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection_route.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpnConnectionRoute.destination_cidr_block">
 <code class="sig-name descname">destination_cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnConnectionRoute.destination_cidr_block" title="Permalink to this definition">¶</a></dt>
@@ -12733,9 +12519,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection_route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection_route.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -12780,6 +12563,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.VpnGateway">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">VpnGateway</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">amazon_side_asn=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a VPC VPN Gateway.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12792,9 +12578,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpnGateway.amazon_side_asn">
 <code class="sig-name descname">amazon_side_asn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnGateway.amazon_side_asn" title="Permalink to this definition">¶</a></dt>
@@ -12837,9 +12620,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -12889,6 +12669,7 @@ hardware VPN gateway to be attached and/or detached from a VPC.</p>
 <div><p><strong>Note:</strong> The <code class="docutils literal notranslate"><span class="pre">ec2.VpnGateway</span></code>
 resource can also automatically attach the Virtual Private Gateway it creates
 to an existing VPC by setting the <code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> attribute accordingly.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_attachment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -12900,9 +12681,6 @@ to an existing VPC by setting the <code class="docutils literal notranslate"><sp
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpnGatewayAttachment.vpc_id">
 <code class="sig-name descname">vpc_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnGatewayAttachment.vpc_id" title="Permalink to this definition">¶</a></dt>
@@ -12931,9 +12709,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -12982,6 +12757,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> This resource should not be used with a route table that has
 the <code class="docutils literal notranslate"><span class="pre">propagating_vgws</span></code> argument set. If that argument is set, any route
 propagation not explicitly listed in its value will be removed.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_route_propagation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_route_propagation.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -12993,9 +12769,6 @@ propagation not explicitly listed in its value will be removed.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_route_propagation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_route_propagation.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpnGatewayRoutePropagation.route_table_id">
 <code class="sig-name descname">route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnGatewayRoutePropagation.route_table_id" title="Permalink to this definition">¶</a></dt>
@@ -13024,9 +12797,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_route_propagation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_route_propagation.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -13071,6 +12841,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.get_customer_gateway">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_customer_gateway</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_customer_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AWS Customer Gateway.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/customer_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/customer_gateway.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13084,9 +12857,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/customer_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/customer_gateway.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13094,6 +12864,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_instance</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">get_password_data=None</em>, <em class="sig-param">get_user_data=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">instance_tags=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an Amazon EC2 Instance for use in other
 resources.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instance.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13114,15 +12887,15 @@ exactly match a pair on the desired Instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instance.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_instance_type_offering">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_instance_type_offering</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">location_type=None</em>, <em class="sig-param">preferred_instance_types=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instance_type_offering" title="Permalink to this definition">¶</a></dt>
 <dd><p>Information about single EC2 Instance Type Offering.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_instance_type_offering.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_instance_type_offering.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13137,15 +12910,15 @@ exactly match a pair on the desired Instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the filter. The <code class="docutils literal notranslate"><span class="pre">location</span></code> filter depends on the top-level <code class="docutils literal notranslate"><span class="pre">location_type</span></code> argument and if not specified, defaults to the current region.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of one or more values for the filter.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_instance_type_offering.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_instance_type_offering.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_instance_type_offerings">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_instance_type_offerings</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">location_type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instance_type_offerings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Information about EC2 Instance Type Offerings.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_instance_type_offerings.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_instance_type_offerings.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13160,9 +12933,6 @@ exactly match a pair on the desired Instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the filter. The <code class="docutils literal notranslate"><span class="pre">location</span></code> filter depends on the top-level <code class="docutils literal notranslate"><span class="pre">location_type</span></code> argument and if not specified, defaults to the current region.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of one or more values for the filter.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_instance_type_offerings.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_instance_type_offerings.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13186,15 +12956,15 @@ exactly match a pair on desired instances.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instances.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instances.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_internet_gateway">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_internet_gateway</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">internet_gateway_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_internet_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ec2.InternetGateway</span></code> provides details about a specific Internet Gateway.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/internet_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/internet_gateway.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13212,43 +12982,43 @@ a pair on the desired Internet Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
 An Internet Gateway will be selected if any one of the given values matches.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/internet_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/internet_gateway.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_launch_configuration">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_launch_configuration</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_launch_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Launch Configuration.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_configuration.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the launch configuration.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_configuration.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_launch_template">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_launch_template</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_launch_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Launch Template.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_template.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the launch template.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_template.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_nat_gateway">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_nat_gateway</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_nat_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific Nat Gateway.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/nat_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/nat_gateway.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13269,9 +13039,6 @@ a pair on the desired Nat Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
 An Nat Gateway will be selected if any one of the given values matches.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/nat_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/nat_gateway.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13295,15 +13062,15 @@ a pair on the desired network ACLs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
 A VPC will be selected if any one of the given values matches.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_acls.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_acls.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_network_interface">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_network_interface</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_network_interface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Network Interface.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_interface.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13317,9 +13084,6 @@ A VPC will be selected if any one of the given values matches.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_interface.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13341,9 +13105,6 @@ a pair on the desired network interfaces.</p></li>
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeNetworkInterfaces.html">the underlying AWS API</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_interfaces.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_interfaces.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13353,6 +13114,9 @@ a pair on the desired network interfaces.</p></li>
 <p>This resource can prove useful when finding the resource
 associated with a CIDR. For example, finding the peering
 connection associated with a CIDR value.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13369,9 +13133,6 @@ connection associated with a CIDR value.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13381,6 +13142,9 @@ connection associated with a CIDR value.</p>
 <p>This resource can prove useful when a module accepts a Subnet id as
 an input variable and needs to, for example, add a route in
 the Route Table.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_table.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13401,15 +13165,15 @@ a pair on the desired Route Table.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
 A Route Table will be selected if any one of the given values matches.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_table.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_route_tables">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_route_tables</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_route_tables" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource can be useful for getting back a list of route table ids to be referenced elsewhere.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_tables.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_tables.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13427,9 +13191,6 @@ a pair on the desired route tables.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
 A Route Table will be selected if any one of the given values matches.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_tables.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_tables.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13439,6 +13200,9 @@ A Route Table will be selected if any one of the given values matches.</p></li>
 <p>This resource can prove useful when a module accepts a Security Group id as
 an input variable and needs to, for example, determine the id of the
 VPC that the security group belongs to.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13460,9 +13224,6 @@ a pair on the desired security group.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
 A Security Group will be selected if any one of the given values matches.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13470,6 +13231,9 @@ A Security Group will be selected if any one of the given values matches.</p></l
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_security_groups</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_security_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get IDs and VPC membership of Security Groups that are created
 outside of this provider.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_groups.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13486,9 +13250,6 @@ desired security groups.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_groups.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13498,6 +13259,9 @@ desired security groups.</p></li>
 <p>This resource can prove useful when a module accepts a subnet id as
 an input variable and needs to, for example, determine the id of the
 VPC that the subnet belongs to.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13525,9 +13289,6 @@ For example, if matching against tag <code class="docutils literal notranslate">
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
 A subnet will be selected if any one of the given values matches.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13535,6 +13296,9 @@ A subnet will be selected if any one of the given values matches.</p></li>
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_subnet_ids</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_subnet_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ec2.getSubnetIds</span></code> provides a set of ids for a vpc_id</p>
 <p>This resource can be useful for getting back a set of subnet ids for a vpc.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet_ids.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet_ids.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13553,9 +13317,6 @@ For example, if matching against tag <code class="docutils literal notranslate">
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
 Subnet IDs will be selected if any one of the given values match.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet_ids.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet_ids.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13565,6 +13326,9 @@ Subnet IDs will be selected if any one of the given values match.</p></li>
 <p>This resource can prove useful when a module accepts a vpc id as
 an input variable and needs to, for example, determine the CIDR block of that
 VPC.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13588,15 +13352,15 @@ a pair on the desired VPC.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
 A VPC will be selected if any one of the given values matches.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_vpc_dhcp_options">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpc_dhcp_options</code><span class="sig-paren">(</span><em class="sig-param">dhcp_options_id=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_dhcp_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about an EC2 DHCP Options configuration.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_dhcp_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_dhcp_options.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13610,9 +13374,6 @@ A VPC will be selected if any one of the given values matches.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values for filtering.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_dhcp_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_dhcp_options.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13620,6 +13381,9 @@ A VPC will be selected if any one of the given values matches.</p></li>
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpc_endpoint</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Endpoint data source provides details about
 a specific VPC endpoint.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13640,9 +13404,6 @@ a pair on the specific VPC Endpoint to retrieve.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
 A VPC Endpoint will be selected if any one of the given values matches.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13650,6 +13411,9 @@ A VPC Endpoint will be selected if any one of the given values matches.</p></li>
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpc_endpoint_service</code><span class="sig-paren">(</span><em class="sig-param">service=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Endpoint Service data source details about a specific service that
 can be specified when creating a VPC endpoint within the region configured in the provider.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint_service.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13658,9 +13422,6 @@ can be specified when creating a VPC endpoint within the region configured in th
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint_service.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13668,6 +13429,9 @@ can be specified when creating a VPC endpoint within the region configured in th
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpc_peering_connection</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">peer_cidr_block=None</em>, <em class="sig-param">peer_owner_id=None</em>, <em class="sig-param">peer_region=None</em>, <em class="sig-param">peer_vpc_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_peering_connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Peering Connection data source provides details about
 a specific VPC peering connection.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_peering_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_peering_connection.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13694,9 +13458,6 @@ a pair on the desired VPC Peering Connection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
 A VPC Peering Connection will be selected if any one of the given values matches.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_peering_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_peering_connection.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13704,6 +13465,9 @@ A VPC Peering Connection will be selected if any one of the given values matches
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpcs</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpcs" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource can be useful for getting back a list of VPC Ids for a region.</p>
 <p>The following example retrieves a list of VPC Ids with a custom tag of <code class="docutils literal notranslate"><span class="pre">service</span></code> set to a value of “production”.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpcs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpcs.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13720,9 +13484,6 @@ a pair on the desired vpcs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
 A VPC will be selected if any one of the given values matches.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpcs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpcs.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13730,6 +13491,9 @@ A VPC will be selected if any one of the given values matches.</p></li>
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpn_gateway</code><span class="sig-paren">(</span><em class="sig-param">amazon_side_asn=None</em>, <em class="sig-param">attached_vpc_id=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpn_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPN Gateway data source provides details about
 a specific VPN gateway.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpn_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpn_gateway.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13751,9 +13515,6 @@ a pair on the desired VPN Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
 A VPN Gateway will be selected if any one of the given values matches.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpn_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpn_gateway.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

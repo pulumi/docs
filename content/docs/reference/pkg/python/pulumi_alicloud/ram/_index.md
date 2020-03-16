@@ -19,6 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a RAM User access key resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong>  You should set the <code class="docutils literal notranslate"><span class="pre">secret_file</span></code> if you want to get the access key.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_access_key.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_access_key.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -33,9 +34,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_access_key.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_access_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.AccessKey.key_fingerprint">
 <code class="sig-name descname">key_fingerprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.AccessKey.key_fingerprint" title="Permalink to this definition">¶</a></dt>
@@ -86,9 +84,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_access_key.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_access_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -133,6 +128,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.AccountAlias">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">AccountAlias</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_alias=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.AccountAlias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a RAM cloud account alias.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_account_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_account_alias.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -142,9 +140,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_account_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_account_alias.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.AccountAlias.account_alias">
 <code class="sig-name descname">account_alias</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.AccountAlias.account_alias" title="Permalink to this definition">¶</a></dt>
@@ -166,9 +161,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_account_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_account_alias.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -212,27 +204,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.ram.AccountPasswordPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">AccountPasswordPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">hard_expiry=None</em>, <em class="sig-param">max_login_attempts=None</em>, <em class="sig-param">max_password_age=None</em>, <em class="sig-param">minimum_password_length=None</em>, <em class="sig-param">password_reuse_prevention=None</em>, <em class="sig-param">require_lowercase_characters=None</em>, <em class="sig-param">require_numbers=None</em>, <em class="sig-param">require_symbols=None</em>, <em class="sig-param">require_uppercase_characters=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.AccountPasswordPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AccountPasswordPolicy resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>hard_expiry</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if a password can expire in a hard way. Default to false.</p></li>
-<li><p><strong>max_login_attempts</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum logon attempts with an incorrect password within an hour. Valid value range: [0-32]. Default to 5.</p></li>
-<li><p><strong>max_password_age</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of days after which password expires. A value of 0 indicates that the password never expires. Valid value range: [0-1095]. Default to 0.</p></li>
-<li><p><strong>minimum_password_length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimal required length of password for a user. Valid value range: [8-32]. Default to 12.</p></li>
-<li><p><strong>password_reuse_prevention</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – User is not allowed to use the latest number of passwords specified in this parameter. A value of 0 indicates the password history check policy is disabled. Valid value range: [0-24]. Default to 0.</p></li>
-<li><p><strong>require_lowercase_characters</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the occurrence of a lowercase character in the password is mandatory. Default to true.</p></li>
-<li><p><strong>require_numbers</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the occurrence of a number in the password is mandatory. Default to true.</p></li>
-<li><p><strong>require_symbols</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (Optional Specifies if the occurrence of a special character in the password is mandatory. Default to true.</p></li>
-<li><p><strong>require_uppercase_characters</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the occurrence of an uppercase character in the password is mandatory. Default to true.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_account_password_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_account_password_policy.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a AccountPasswordPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] hard_expiry: Specifies if a password can expire in a hard way. Default to false.
+:param pulumi.Input[float] max_login_attempts: Maximum logon attempts with an incorrect password within an hour. Valid value range: [0-32]. Default to 5.
+:param pulumi.Input[float] max_password_age: The number of days after which password expires. A value of 0 indicates that the password never expires. Valid value range: [0-1095]. Default to 0.
+:param pulumi.Input[float] minimum_password_length: Minimal required length of password for a user. Valid value range: [8-32]. Default to 12.
+:param pulumi.Input[float] password_reuse_prevention: User is not allowed to use the latest number of passwords specified in this parameter. A value of 0 indicates the password history check policy is disabled. Valid value range: [0-24]. Default to 0.
+:param pulumi.Input[bool] require_lowercase_characters: Specifies if the occurrence of a lowercase character in the password is mandatory. Default to true.
+:param pulumi.Input[bool] require_numbers: Specifies if the occurrence of a number in the password is mandatory. Default to true.
+:param pulumi.Input[bool] require_symbols: (Optional Specifies if the occurrence of a special character in the password is mandatory. Default to true.
+:param pulumi.Input[bool] require_uppercase_characters: Specifies if the occurrence of an uppercase character in the password is mandatory. Default to true.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.AccountPasswordPolicy.hard_expiry">
 <code class="sig-name descname">hard_expiry</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.AccountPasswordPolicy.hard_expiry" title="Permalink to this definition">¶</a></dt>
@@ -310,9 +293,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_account_password_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_account_password_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -356,18 +336,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.ram.Alias">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">Alias</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_alias=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.Alias" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Alias resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_alias.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Alias resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_alicloud.ram.Alias.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_alias=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.Alias.get" title="Permalink to this definition">¶</a></dt>
@@ -382,9 +353,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_alias.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -427,37 +395,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.ram.AwaitableGetAccountAliasResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">AwaitableGetAccountAliasResult</code><span class="sig-paren">(</span><em class="sig-param">account_alias=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.AwaitableGetAccountAliasResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">AwaitableGetAccountAliasResult</code><span class="sig-paren">(</span><em class="sig-param">account_alias=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.AwaitableGetAccountAliasResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ram.AwaitableGetAccountAliasesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">AwaitableGetAccountAliasesResult</code><span class="sig-paren">(</span><em class="sig-param">account_alias=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.AwaitableGetAccountAliasesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">AwaitableGetAccountAliasesResult</code><span class="sig-paren">(</span><em class="sig-param">account_alias=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.AwaitableGetAccountAliasesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ram.AwaitableGetGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">AwaitableGetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">user_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.AwaitableGetGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">AwaitableGetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">user_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.AwaitableGetGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ram.AwaitableGetPoliciesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">AwaitableGetPoliciesResult</code><span class="sig-paren">(</span><em class="sig-param">group_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">role_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.AwaitableGetPoliciesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">AwaitableGetPoliciesResult</code><span class="sig-paren">(</span><em class="sig-param">group_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">role_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.AwaitableGetPoliciesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ram.AwaitableGetRolesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">AwaitableGetRolesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.AwaitableGetRolesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">AwaitableGetRolesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">roles=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.AwaitableGetRolesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ram.AwaitableGetUsersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">AwaitableGetUsersResult</code><span class="sig-paren">(</span><em class="sig-param">group_name=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.AwaitableGetUsersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">AwaitableGetUsersResult</code><span class="sig-paren">(</span><em class="sig-param">group_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.AwaitableGetUsersResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ram.GetAccountAliasResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">GetAccountAliasResult</code><span class="sig-paren">(</span><em class="sig-param">account_alias=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.GetAccountAliasResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">GetAccountAliasResult</code><span class="sig-paren">(</span><em class="sig-param">account_alias=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.GetAccountAliasResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAccountAlias.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.GetAccountAliasResult.id">
@@ -469,7 +437,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.ram.GetAccountAliasesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">GetAccountAliasesResult</code><span class="sig-paren">(</span><em class="sig-param">account_alias=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.GetAccountAliasesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">GetAccountAliasesResult</code><span class="sig-paren">(</span><em class="sig-param">account_alias=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.GetAccountAliasesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAccountAliases.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.GetAccountAliasesResult.account_alias">
@@ -487,7 +455,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.ram.GetGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">GetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">user_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.GetGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">GetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">user_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.GetGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGroups.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.GetGroupsResult.groups">
@@ -496,23 +464,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.ram.GetGroupsResult.names">
-<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetGroupsResult.names" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of ram group names.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_alicloud.ram.GetGroupsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetGroupsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.ram.GetGroupsResult.names">
+<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetGroupsResult.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of ram group names.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ram.GetPoliciesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">GetPoliciesResult</code><span class="sig-paren">(</span><em class="sig-param">group_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">role_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.GetPoliciesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">GetPoliciesResult</code><span class="sig-paren">(</span><em class="sig-param">group_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">role_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.GetPoliciesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPolicies.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.ram.GetPoliciesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetPoliciesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.GetPoliciesResult.names">
 <code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetPoliciesResult.names" title="Permalink to this definition">¶</a></dt>
@@ -531,18 +505,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Type of the policy.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ram.GetPoliciesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetPoliciesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ram.GetRolesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">GetRolesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.GetRolesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">GetRolesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">roles=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.GetRolesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRoles.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.ram.GetRolesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetRolesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.GetRolesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetRolesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -561,18 +535,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of roles. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ram.GetRolesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetRolesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ram.GetUsersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">GetUsersResult</code><span class="sig-paren">(</span><em class="sig-param">group_name=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.GetUsersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">GetUsersResult</code><span class="sig-paren">(</span><em class="sig-param">group_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.GetUsersResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getUsers.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.ram.GetUsersResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetUsersResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.GetUsersResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetUsersResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -591,32 +565,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of users. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ram.GetUsersResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetUsersResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ram.Group">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">comments=None</em>, <em class="sig-param">force=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.Group" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Group resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>comments</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Comment of the RAM group. This parameter can have a string of 1 to 128 characters.</p></li>
-<li><p><strong>force</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – This parameter is used for resource destroy. Default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the RAM group. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen “-“, and must not begin with a hyphen.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Group resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] comments: Comment of the RAM group. This parameter can have a string of 1 to 128 characters.
+:param pulumi.Input[bool] force: This parameter is used for resource destroy. Default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[str] name: Name of the RAM group. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen “-“, and must not begin with a hyphen.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.Group.comments">
 <code class="sig-name descname">comments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.Group.comments" title="Permalink to this definition">¶</a></dt>
@@ -652,9 +611,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -699,6 +655,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.GroupMembership">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">GroupMembership</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">user_names=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.GroupMembership" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a RAM Group membership resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group_membership.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group_membership.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -710,9 +669,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group_membership.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group_membership.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.GroupMembership.group_name">
 <code class="sig-name descname">group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GroupMembership.group_name" title="Permalink to this definition">¶</a></dt>
@@ -742,9 +698,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group_membership.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group_membership.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -789,6 +742,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.GroupPolicyAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">GroupPolicyAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.GroupPolicyAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a RAM Group Policy attachment resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group_policy_attachment.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -800,9 +756,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group_policy_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.GroupPolicyAttachment.group_name">
 <code class="sig-name descname">group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GroupPolicyAttachment.group_name" title="Permalink to this definition">¶</a></dt>
@@ -838,9 +791,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group_policy_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -885,6 +835,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.LoginProfile">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">LoginProfile</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">mfa_bind_required=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">password_reset_required=None</em>, <em class="sig-param">user_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.LoginProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a RAM User Login Profile resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_login_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_login_profile.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -898,9 +851,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_login_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_login_profile.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.LoginProfile.mfa_bind_required">
 <code class="sig-name descname">mfa_bind_required</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.LoginProfile.mfa_bind_required" title="Permalink to this definition">¶</a></dt>
@@ -944,9 +894,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_login_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_login_profile.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -990,30 +937,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.ram.Policy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">document=None</em>, <em class="sig-param">force=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">statements=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.Policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Policy resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the RAM policy. This name can have a string of 1 to 1024 characters.</p></li>
-<li><p><strong>document</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Document of the RAM policy. It is required when the <code class="docutils literal notranslate"><span class="pre">statement</span></code> is not specified.</p></li>
-<li><p><strong>force</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – This parameter is used for resource destroy. Default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen “-“, and must not begin with a hyphen.</p></li>
-<li><p><strong>statements</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (It has been deprecated from version 1.49.0, and use field ‘document’ to replace.) Statements of the RAM policy document. It is required when the <code class="docutils literal notranslate"><span class="pre">document</span></code> is not specified.</p></li>
-<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (It has been deprecated from version 1.49.0, and use field ‘document’ to replace.) Version of the RAM policy document. Valid value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Policy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: Description of the RAM policy. This name can have a string of 1 to 1024 characters.
+:param pulumi.Input[str] document: Document of the RAM policy. It is required when the <code class="docutils literal notranslate"><span class="pre">statement</span></code> is not specified.
+:param pulumi.Input[bool] force: This parameter is used for resource destroy. Default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[str] name: Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen “-“, and must not begin with a hyphen.
+:param pulumi.Input[list] statements: (It has been deprecated from version 1.49.0, and use field ‘document’ to replace.) Statements of the RAM policy document. It is required when the <code class="docutils literal notranslate"><span class="pre">document</span></code> is not specified.
+:param pulumi.Input[str] version: (It has been deprecated from version 1.49.0, and use field ‘document’ to replace.) Version of the RAM policy document. Valid value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 <p>The <strong>statements</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">actions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - (It has been deprecated from version 1.49.0, and use field ‘document’ to replace.) List of operations for the <code class="docutils literal notranslate"><span class="pre">resource</span></code>. The format of each item in this list is <code class="docutils literal notranslate"><span class="pre">${service}:${action_name}</span></code>, such as <code class="docutils literal notranslate"><span class="pre">oss:ListBuckets</span></code> and <code class="docutils literal notranslate"><span class="pre">ecs:Describe*</span></code>. The <code class="docutils literal notranslate"><span class="pre">${service}</span></code> can be <code class="docutils literal notranslate"><span class="pre">ecs</span></code>, <code class="docutils literal notranslate"><span class="pre">oss</span></code>, <code class="docutils literal notranslate"><span class="pre">ots</span></code> and so on, the <code class="docutils literal notranslate"><span class="pre">${action_name}</span></code> refers to the name of an api interface which related to the <code class="docutils literal notranslate"><span class="pre">${service}</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (It has been deprecated from version 1.49.0, and use field ‘document’ to replace.) This parameter indicates whether or not the <code class="docutils literal notranslate"><span class="pre">action</span></code> is allowed. Valid values are <code class="docutils literal notranslate"><span class="pre">Allow</span></code> and <code class="docutils literal notranslate"><span class="pre">Deny</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - (It has been deprecated from version 1.49.0, and use field ‘document’ to replace.) List of specific objects which will be authorized. The format of each item in this list is <code class="docutils literal notranslate"><span class="pre">acs:${service}:${region}:${account_id}:${relative_id}</span></code>, such as <code class="docutils literal notranslate"><span class="pre">acs:ecs:*:*:instance/inst-002</span></code> and <code class="docutils literal notranslate"><span class="pre">acs:oss:*:1234567890000:mybucket</span></code>. The <code class="docutils literal notranslate"><span class="pre">${service}</span></code> can be <code class="docutils literal notranslate"><span class="pre">ecs</span></code>, <code class="docutils literal notranslate"><span class="pre">oss</span></code>, <code class="docutils literal notranslate"><span class="pre">ots</span></code> and so on, the <code class="docutils literal notranslate"><span class="pre">${region}</span></code> is the region info which can use <code class="docutils literal notranslate"><span class="pre">*</span></code> replace when it is not supplied, the <code class="docutils literal notranslate"><span class="pre">${account_id}</span></code> refers to someone’s Alicloud account id or you can use <code class="docutils literal notranslate"><span class="pre">*</span></code> to replace, the <code class="docutils literal notranslate"><span class="pre">${relative_id}</span></code> is the resource description section which related to the <code class="docutils literal notranslate"><span class="pre">${service}</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.Policy.attachment_count">
 <code class="sig-name descname">attachment_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.Policy.attachment_count" title="Permalink to this definition">¶</a></dt>
@@ -1095,9 +1033,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (It has been deprecated from version 1.49.0, and use field ‘document’ to replace.) This parameter indicates whether or not the <code class="docutils literal notranslate"><span class="pre">action</span></code> is allowed. Valid values are <code class="docutils literal notranslate"><span class="pre">Allow</span></code> and <code class="docutils literal notranslate"><span class="pre">Deny</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - (It has been deprecated from version 1.49.0, and use field ‘document’ to replace.) List of specific objects which will be authorized. The format of each item in this list is <code class="docutils literal notranslate"><span class="pre">acs:${service}:${region}:${account_id}:${relative_id}</span></code>, such as <code class="docutils literal notranslate"><span class="pre">acs:ecs:*:*:instance/inst-002</span></code> and <code class="docutils literal notranslate"><span class="pre">acs:oss:*:1234567890000:mybucket</span></code>. The <code class="docutils literal notranslate"><span class="pre">${service}</span></code> can be <code class="docutils literal notranslate"><span class="pre">ecs</span></code>, <code class="docutils literal notranslate"><span class="pre">oss</span></code>, <code class="docutils literal notranslate"><span class="pre">ots</span></code> and so on, the <code class="docutils literal notranslate"><span class="pre">${region}</span></code> is the region info which can use <code class="docutils literal notranslate"><span class="pre">*</span></code> replace when it is not supplied, the <code class="docutils literal notranslate"><span class="pre">${account_id}</span></code> refers to someone’s Alicloud account id or you can use <code class="docutils literal notranslate"><span class="pre">*</span></code> to replace, the <code class="docutils literal notranslate"><span class="pre">${relative_id}</span></code> is the resource description section which related to the <code class="docutils literal notranslate"><span class="pre">${service}</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1141,25 +1076,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.ram.Role">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">Role</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">document=None</em>, <em class="sig-param">force=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ram_users=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.Role" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Role resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the RAM role. This name can have a string of 1 to 1024 characters.</p></li>
-<li><p><strong>document</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Authorization strategy of the RAM role. It is required when the <code class="docutils literal notranslate"><span class="pre">services</span></code> and <code class="docutils literal notranslate"><span class="pre">ram_users</span></code> are not specified.</p></li>
-<li><p><strong>force</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – This parameter is used for resource destroy. Default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the RAM role. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as “-“, “_”, and must not begin with a hyphen.</p></li>
-<li><p><strong>ram_users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (It has been deprecated from version 1.49.0, and use field ‘document’ to replace.) List of ram users who can assume the RAM role. The format of each item in this list is <code class="docutils literal notranslate"><span class="pre">acs:ram::${account_id}:root</span></code> or <code class="docutils literal notranslate"><span class="pre">acs:ram::${account_id}:user/${user_name}</span></code>, such as <code class="docutils literal notranslate"><span class="pre">acs:ram::1234567890000:root</span></code> and <code class="docutils literal notranslate"><span class="pre">acs:ram::1234567890001:user/Mary</span></code>. The <code class="docutils literal notranslate"><span class="pre">${user_name}</span></code> is the name of a RAM user which must exists in the Alicloud account indicated by the <code class="docutils literal notranslate"><span class="pre">${account_id}</span></code>.</p></li>
-<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (It has been deprecated from version 1.49.0, and use field ‘document’ to replace.) List of services which can assume the RAM role. The format of each item in this list is <code class="docutils literal notranslate"><span class="pre">${service}.aliyuncs.com</span></code> or <code class="docutils literal notranslate"><span class="pre">${account_id}&#64;${service}.aliyuncs.com</span></code>, such as <code class="docutils literal notranslate"><span class="pre">ecs.aliyuncs.com</span></code> and <code class="docutils literal notranslate"><span class="pre">1234567890000&#64;ots.aliyuncs.com</span></code>. The <code class="docutils literal notranslate"><span class="pre">${service}</span></code> can be <code class="docutils literal notranslate"><span class="pre">ecs</span></code>, <code class="docutils literal notranslate"><span class="pre">log</span></code>, <code class="docutils literal notranslate"><span class="pre">apigateway</span></code> and so on, the <code class="docutils literal notranslate"><span class="pre">${account_id}</span></code> refers to someone’s Alicloud account id.</p></li>
-<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (It has been deprecated from version 1.49.0, and use field ‘document’ to replace.) Version of the RAM role policy document. Valid value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Role resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: Description of the RAM role. This name can have a string of 1 to 1024 characters.
+:param pulumi.Input[str] document: Authorization strategy of the RAM role. It is required when the <code class="docutils literal notranslate"><span class="pre">services</span></code> and <code class="docutils literal notranslate"><span class="pre">ram_users</span></code> are not specified.
+:param pulumi.Input[bool] force: This parameter is used for resource destroy. Default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[str] name: Name of the RAM role. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as “-“, “_”, and must not begin with a hyphen.
+:param pulumi.Input[list] ram_users: (It has been deprecated from version 1.49.0, and use field ‘document’ to replace.) List of ram users who can assume the RAM role. The format of each item in this list is <code class="docutils literal notranslate"><span class="pre">acs:ram::${account_id}:root</span></code> or <code class="docutils literal notranslate"><span class="pre">acs:ram::${account_id}:user/${user_name}</span></code>, such as <code class="docutils literal notranslate"><span class="pre">acs:ram::1234567890000:root</span></code> and <code class="docutils literal notranslate"><span class="pre">acs:ram::1234567890001:user/Mary</span></code>. The <code class="docutils literal notranslate"><span class="pre">${user_name}</span></code> is the name of a RAM user which must exists in the Alicloud account indicated by the <code class="docutils literal notranslate"><span class="pre">${account_id}</span></code>.
+:param pulumi.Input[list] services: (It has been deprecated from version 1.49.0, and use field ‘document’ to replace.) List of services which can assume the RAM role. The format of each item in this list is <code class="docutils literal notranslate"><span class="pre">${service}.aliyuncs.com</span></code> or <code class="docutils literal notranslate"><span class="pre">${account_id}&#64;${service}.aliyuncs.com</span></code>, such as <code class="docutils literal notranslate"><span class="pre">ecs.aliyuncs.com</span></code> and <code class="docutils literal notranslate"><span class="pre">1234567890000&#64;ots.aliyuncs.com</span></code>. The <code class="docutils literal notranslate"><span class="pre">${service}</span></code> can be <code class="docutils literal notranslate"><span class="pre">ecs</span></code>, <code class="docutils literal notranslate"><span class="pre">log</span></code>, <code class="docutils literal notranslate"><span class="pre">apigateway</span></code> and so on, the <code class="docutils literal notranslate"><span class="pre">${account_id}</span></code> refers to someone’s Alicloud account id.
+:param pulumi.Input[str] version: (It has been deprecated from version 1.49.0, and use field ‘document’ to replace.) Version of the RAM role policy document. Valid value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.Role.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.Role.arn" title="Permalink to this definition">¶</a></dt>
@@ -1237,9 +1163,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1284,6 +1207,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.RoleAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">RoleAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">instance_ids=None</em>, <em class="sig-param">role_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.RoleAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a RAM role attachment resource to bind role for several ECS instances.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role_attachment.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1295,9 +1221,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.RoleAttachment.instance_ids">
 <code class="sig-name descname">instance_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.RoleAttachment.instance_ids" title="Permalink to this definition">¶</a></dt>
@@ -1327,9 +1250,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1374,6 +1294,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.RolePolicyAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">RolePolicyAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">role_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.RolePolicyAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a RAM Role attachment resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role_policy_attachment.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1386,9 +1309,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role_policy_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.RolePolicyAttachment.policy_name">
 <code class="sig-name descname">policy_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.RolePolicyAttachment.policy_name" title="Permalink to this definition">¶</a></dt>
@@ -1425,9 +1345,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role_policy_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1471,25 +1388,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.ram.User">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">comments=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">force=None</em>, <em class="sig-param">mobile=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.User" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a User resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>comments</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Comment of the RAM user. This parameter can have a string of 1 to 128 characters.</p></li>
-<li><p><strong>display*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the RAM user which for display. This name can have a string of 1 to 128 characters or Chinese characters, must contain only alphanumeric characters or Chinese characters or hyphens, such as “-“,”.”, and must not end with a hyphen.</p>
-</p></li>
-<li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Email of the RAM user.</p></li>
-<li><p><strong>force</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – This parameter is used for resource destroy. Default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>mobile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Phone number of the RAM user. This number must contain an international area code prefix, just look like this: 86-18600008888.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id43"><span class="problematic" id="id44">*</span></a>”, and must not begin with a hyphen.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_user.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_user.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a User resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] comments: Comment of the RAM user. This parameter can have a string of 1 to 128 characters.
+:param pulumi.Input[str] display<em>name: Name of the RAM user which for display. This name can have a string of 1 to 128 characters or Chinese characters, must contain only alphanumeric characters or Chinese characters or hyphens, such as “-“,”.”, and must not end with a hyphen.
+:param pulumi.Input[str] email: Email of the RAM user.
+:param pulumi.Input[bool] force: This parameter is used for resource destroy. Default value is ``false``.
+:param pulumi.Input[str] mobile: Phone number of the RAM user. This number must contain an international area code prefix, just look like this: 86-18600008888.
+:param pulumi.Input[str] name: Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”</em>”, and must not begin with a hyphen.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.User.comments">
 <code class="sig-name descname">comments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.User.comments" title="Permalink to this definition">¶</a></dt>
@@ -1543,13 +1450,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Email of the RAM user.</p></li>
 <li><p><strong>force</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – This parameter is used for resource destroy. Default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>mobile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Phone number of the RAM user. This number must contain an international area code prefix, just look like this: 86-18600008888.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id47"><span class="problematic" id="id48">*</span></a>”, and must not begin with a hyphen.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id43"><span class="problematic" id="id44">*</span></a>”, and must not begin with a hyphen.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_user.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_user.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1594,6 +1498,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.UserPolicyAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">UserPolicyAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">user_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.UserPolicyAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a RAM User Policy attachment resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_user_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_user_policy_attachment.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1601,14 +1508,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>policy_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen “-“, and must not begin with a hyphen.</p></li>
 <li><p><strong>policy_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of the RAM policy. It must be <code class="docutils literal notranslate"><span class="pre">Custom</span></code> or <code class="docutils literal notranslate"><span class="pre">System</span></code>.</p></li>
-<li><p><strong>user*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id51"><span class="problematic" id="id52">*</span></a>”, and must not begin with a hyphen.</p>
+<li><p><strong>user*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id47"><span class="problematic" id="id48">*</span></a>”, and must not begin with a hyphen.</p>
 </p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_user_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_user_policy_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ram.UserPolicyAttachment.policy_name">
 <code class="sig-name descname">policy_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.UserPolicyAttachment.policy_name" title="Permalink to this definition">¶</a></dt>
@@ -1640,14 +1544,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>policy_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen “-“, and must not begin with a hyphen.</p></li>
 <li><p><strong>policy_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of the RAM policy. It must be <code class="docutils literal notranslate"><span class="pre">Custom</span></code> or <code class="docutils literal notranslate"><span class="pre">System</span></code>.</p></li>
-<li><p><strong>user*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id55"><span class="problematic" id="id56">*</span></a>”, and must not begin with a hyphen.</p>
+<li><p><strong>user*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id51"><span class="problematic" id="id52">*</span></a>”, and must not begin with a hyphen.</p>
 </p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_user_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_user_policy_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1707,6 +1608,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.get_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">get_groups</code><span class="sig-paren">(</span><em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">user_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.get_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of RAM Groups in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_groups.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1717,15 +1621,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_groups.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.ram.get_policies">
 <code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">get_policies</code><span class="sig-paren">(</span><em class="sig-param">group_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">role_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.get_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of RAM policies in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_policies.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_policies.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1737,15 +1641,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_policies.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_policies.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.ram.get_roles">
 <code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">get_roles</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.get_roles" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of RAM Roles in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_roles.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_roles.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by the role name.</p>
@@ -1762,15 +1666,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_roles.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_roles.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.ram.get_users">
 <code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">get_users</code><span class="sig-paren">(</span><em class="sig-param">group_name=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.get_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of RAM users in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_users.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_users.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1790,9 +1694,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_users.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_users.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

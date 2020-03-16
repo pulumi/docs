@@ -15,39 +15,33 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.vpn"></span><dl class="class">
 <dt id="pulumi_alicloud.vpn.AwaitableGetConnectionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">AwaitableGetConnectionsResult</code><span class="sig-paren">(</span><em class="sig-param">connections=None</em>, <em class="sig-param">customer_gateway_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpn_gateway_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.AwaitableGetConnectionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">AwaitableGetConnectionsResult</code><span class="sig-paren">(</span><em class="sig-param">connections=None</em>, <em class="sig-param">customer_gateway_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.AwaitableGetConnectionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpn.AwaitableGetCustomerGatewaysResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">AwaitableGetCustomerGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param">gateways=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.AwaitableGetCustomerGatewaysResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">AwaitableGetCustomerGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param">gateways=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.AwaitableGetCustomerGatewaysResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpn.AwaitableGetGatewaysResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">AwaitableGetGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param">business_status=None</em>, <em class="sig-param">gateways=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.AwaitableGetGatewaysResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">AwaitableGetGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param">business_status=None</em>, <em class="sig-param">gateways=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.AwaitableGetGatewaysResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpn.Connection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">Connection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">customer_gateway_id=None</em>, <em class="sig-param">effect_immediately=None</em>, <em class="sig-param">ike_configs=None</em>, <em class="sig-param">ipsec_configs=None</em>, <em class="sig-param">local_subnets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">remote_subnets=None</em>, <em class="sig-param">vpn_gateway_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Connection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Connection resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>customer_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the customer gateway.</p></li>
-<li><p><strong>effect_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to delete a successfully negotiated IPsec tunnel and initiate a negotiation again. Valid value:true,false.</p></li>
-<li><p><strong>ike_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The configurations of phase-one negotiation.</p></li>
-<li><p><strong>ipsec_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The configurations of phase-two negotiation.</p></li>
-<li><p><strong>local_subnets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the IPsec connection.</p></li>
-<li><p><strong>remote_subnets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The CIDR block of the local data center. This parameter is used for phase-two negotiation.</p></li>
-<li><p><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPN gateway.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Connection resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] customer_gateway_id: The ID of the customer gateway.
+:param pulumi.Input[bool] effect_immediately: Whether to delete a successfully negotiated IPsec tunnel and initiate a negotiation again. Valid value:true,false.
+:param pulumi.Input[list] ike_configs: The configurations of phase-one negotiation.
+:param pulumi.Input[list] ipsec_configs: The configurations of phase-two negotiation.
+:param pulumi.Input[list] local_subnets: The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.
+:param pulumi.Input[str] name: The name of the IPsec connection.
+:param pulumi.Input[list] remote_subnets: The CIDR block of the local data center. This parameter is used for phase-two negotiation.
+:param pulumi.Input[str] vpn_gateway_id: The ID of the VPN gateway.</p>
 <p>The <strong>ike_configs</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ikeAuthAlg</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The authentication algorithm of phase-one negotiation. Valid value: md5 | sha1 | sha256 | sha384 | sha512 <a href="#id1"><span class="problematic" id="id2">|</span></a>. Default value: sha1</p></li>
@@ -67,9 +61,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">ipsecLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The SA lifecycle as the result of phase-two negotiation. The valid value is [0, 86400], the unit is second and the default value is 86400.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipsecPfs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Diffie-Hellman key exchange algorithm used by phase-two negotiation. Valid value: group1 | group2 | group5 | group14 | group24| disabled. Default value: group2</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpn_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpn_connection.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpn.Connection.customer_gateway_id">
 <code class="sig-name descname">customer_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.customer_gateway_id" title="Permalink to this definition">¶</a></dt>
@@ -183,9 +174,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipsecLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The SA lifecycle as the result of phase-two negotiation. The valid value is [0, 86400], the unit is second and the default value is 86400.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipsecPfs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Diffie-Hellman key exchange algorithm used by phase-two negotiation. Valid value: group1 | group2 | group5 | group14 | group24| disabled. Default value: group2</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpn_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpn_connection.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -229,21 +217,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.vpn.CustomerGateway">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">CustomerGateway</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.CustomerGateway" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a CustomerGateway resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the VPN customer gateway instance.</p></li>
-<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address of the customer gateway.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the VPN customer gateway. Defaults to null.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpn_customer_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpn_customer_gateway.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a CustomerGateway resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: The description of the VPN customer gateway instance.
+:param pulumi.Input[str] ip_address: The IP address of the customer gateway.
+:param pulumi.Input[str] name: The name of the VPN customer gateway. Defaults to null.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpn.CustomerGateway.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.CustomerGateway.description" title="Permalink to this definition">¶</a></dt>
@@ -279,9 +258,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpn_customer_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpn_customer_gateway.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -325,17 +301,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.vpn.Gateway">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">Gateway</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bandwidth=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_ipsec=None</em>, <em class="sig-param">enable_ssl=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">ssl_connections=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Gateway resource with the given unique name, props, and options.</p>
+<dd><p>Create a Gateway resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: The description of the VPN instance.
+:param pulumi.Input[bool] enable_ipsec: Enable or Disable IPSec VPN. At least one type of VPN should be enabled.
+:param pulumi.Input[bool] enable_ssl: Enable or Disable SSL VPN.  At least one type of VPN should be enabled.
+:param pulumi.Input[str] instance_charge_type: The charge type for instance. If it is an international site account, the valid value is PostPaid, otherwise PrePaid.</p>
+<blockquote>
+<div><p>Default to PostPaid.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the VPN instance.</p></li>
-<li><p><strong>enable_ipsec</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or Disable IPSec VPN. At least one type of VPN should be enabled.</p></li>
-<li><p><strong>enable_ssl</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or Disable SSL VPN.  At least one type of VPN should be enabled.</p></li>
-<li><p><strong>instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The charge type for instance. If it is an international site account, the valid value is PostPaid, otherwise PrePaid. 
-Default to PostPaid.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the VPN. Defaults to null.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The filed is only required while the InstanceChargeType is PrePaid. Valid values: [1-9, 12, 24, 36]. Default to 1.</p></li>
 <li><p><strong>ssl_connections</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The max connections of SSL VPN. Default to 5. The number of connections supported by each account is different. 
@@ -345,9 +323,6 @@ This field is ignored when enable_ssl is false.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpn_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpn_gateway.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpn.Gateway.business_status">
 <code class="sig-name descname">business_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.business_status" title="Permalink to this definition">¶</a></dt>
@@ -450,9 +425,6 @@ This field is ignored when enable_ssl is false.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpn_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpn_gateway.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -495,7 +467,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpn.GetConnectionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">GetConnectionsResult</code><span class="sig-paren">(</span><em class="sig-param">connections=None</em>, <em class="sig-param">customer_gateway_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpn_gateway_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.GetConnectionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">GetConnectionsResult</code><span class="sig-paren">(</span><em class="sig-param">connections=None</em>, <em class="sig-param">customer_gateway_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.GetConnectionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getConnections.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpn.GetConnectionsResult.connections">
@@ -507,6 +479,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.vpn.GetConnectionsResult.customer_gateway_id">
 <code class="sig-name descname">customer_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetConnectionsResult.customer_gateway_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID of the VPN customer gateway.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.vpn.GetConnectionsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetConnectionsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -527,17 +505,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>ID of the VPN gateway.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.vpn.GetConnectionsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetConnectionsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpn.GetCustomerGatewaysResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">GetCustomerGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param">gateways=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.GetCustomerGatewaysResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">GetCustomerGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param">gateways=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.GetCustomerGatewaysResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCustomerGateways.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpn.GetCustomerGatewaysResult.gateways">
@@ -555,7 +527,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpn.GetGatewaysResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">GetGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param">business_status=None</em>, <em class="sig-param">gateways=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.GetGatewaysResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">GetGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param">business_status=None</em>, <em class="sig-param">gateways=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.GetGatewaysResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGateways.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpn.GetGatewaysResult.business_status">
@@ -567,6 +539,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.vpn.GetGatewaysResult.gateways">
 <code class="sig-name descname">gateways</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetGatewaysResult.gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of VPN gateways. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.vpn.GetGatewaysResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetGatewaysResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -593,34 +571,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>ID of the VPC that the VPN belongs.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.vpn.GetGatewaysResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetGatewaysResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpn.RouteEntry">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">RouteEntry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">next_hop=None</em>, <em class="sig-param">publish_vpc=None</em>, <em class="sig-param">route_dest=None</em>, <em class="sig-param">vpn_gateway_id=None</em>, <em class="sig-param">weight=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a RouteEntry resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>next_hop</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The next hop of the destination route.</p></li>
-<li><p><strong>publish_vpc</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to issue the destination route to the VPC.</p></li>
-<li><p><strong>route_dest</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination network segment of the destination route.</p></li>
-<li><p><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the vpn gateway.</p></li>
-<li><p><strong>weight</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The value should be 0 or 100.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpn_route_entry.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpn_route_entry.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a RouteEntry resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] next_hop: The next hop of the destination route.
+:param pulumi.Input[bool] publish_vpc: Whether to issue the destination route to the VPC.
+:param pulumi.Input[str] route_dest: The destination network segment of the destination route.
+:param pulumi.Input[str] vpn_gateway_id: The id of the vpn gateway.
+:param pulumi.Input[float] weight: The value should be 0 or 100.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpn.RouteEntry.next_hop">
 <code class="sig-name descname">next_hop</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.next_hop" title="Permalink to this definition">¶</a></dt>
@@ -670,9 +633,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpn_route_entry.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpn_route_entry.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -716,18 +676,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.vpn.SslVpnClientCert">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">SslVpnClientCert</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ssl_vpn_server_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnClientCert" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SslVpnClientCert resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ssl_vpn_client_cert.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ssl_vpn_client_cert.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a SslVpnClientCert resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_alicloud.vpn.SslVpnClientCert.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ca_cert=None</em>, <em class="sig-param">client_cert=None</em>, <em class="sig-param">client_config=None</em>, <em class="sig-param">client_key=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ssl_vpn_server_id=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnClientCert.get" title="Permalink to this definition">¶</a></dt>
@@ -742,9 +693,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ssl_vpn_client_cert.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ssl_vpn_client_cert.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -788,26 +736,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.vpn.SslVpnServer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">SslVpnServer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cipher=None</em>, <em class="sig-param">client_ip_pool=None</em>, <em class="sig-param">compress=None</em>, <em class="sig-param">local_subnet=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">vpn_gateway_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SslVpnServer resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>cipher</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encryption algorithm used by the SSL-VPN server. Valid value: AES-128-CBC (default)| AES-192-CBC | AES-256-CBC | none</p></li>
-<li><p><strong>client_ip_pool</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block from which access addresses are allocated to the virtual network interface card of the client.</p></li>
-<li><p><strong>compress</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specify whether to compress the communication. Valid value: true (default) | false</p></li>
-<li><p><strong>local_subnet</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block to be accessed by the client through the SSL-VPN connection. It supports to set multi CIDRs by comma join ways, like <code class="docutils literal notranslate"><span class="pre">10.0.1.0/24,10.0.2.0/24,10.0.3.0/24</span></code>.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSL-VPN server.</p></li>
-<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port used by the SSL-VPN server. The default value is 1194.The following ports cannot be used: [22, 2222, 22222, 9000, 9001, 9002, 7505, 80, 443, 53, 68, 123, 4510, 4560, 500, 4500].</p></li>
-<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol used by the SSL-VPN server. Valid value: UDP(default) <a href="#id13"><span class="problematic" id="id14">|</span></a>TCP</p></li>
-<li><p><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPN gateway.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ssl_vpn_server.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ssl_vpn_server.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a SslVpnServer resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cipher: The encryption algorithm used by the SSL-VPN server. Valid value: AES-128-CBC (default)| AES-192-CBC | AES-256-CBC | none
+:param pulumi.Input[str] client_ip_pool: The CIDR block from which access addresses are allocated to the virtual network interface card of the client.
+:param pulumi.Input[bool] compress: Specify whether to compress the communication. Valid value: true (default) | false
+:param pulumi.Input[str] local_subnet: The CIDR block to be accessed by the client through the SSL-VPN connection. It supports to set multi CIDRs by comma join ways, like <code class="docutils literal notranslate"><span class="pre">10.0.1.0/24,10.0.2.0/24,10.0.3.0/24</span></code>.
+:param pulumi.Input[str] name: The name of the SSL-VPN server.
+:param pulumi.Input[float] port: The port used by the SSL-VPN server. The default value is 1194.The following ports cannot be used: [22, 2222, 22222, 9000, 9001, 9002, 7505, 80, 443, 53, 68, 123, 4510, 4560, 500, 4500].
+:param pulumi.Input[str] protocol: The protocol used by the SSL-VPN server. Valid value: UDP(default) <a href="#id13"><span class="problematic" id="id14">|</span></a>TCP
+:param pulumi.Input[str] vpn_gateway_id: The ID of the VPN gateway.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpn.SslVpnServer.cipher">
 <code class="sig-name descname">cipher</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.cipher" title="Permalink to this definition">¶</a></dt>
@@ -899,9 +838,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ssl_vpn_server.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ssl_vpn_server.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -946,6 +882,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.vpn.get_connections">
 <code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">get_connections</code><span class="sig-paren">(</span><em class="sig-param">customer_gateway_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpn_gateway_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.get_connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPN connections data source lists lots of VPN connections resource information owned by an Alicloud account.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpn_connections.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpn_connections.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -957,15 +896,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpn_connections.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpn_connections.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.vpn.get_customer_gateways">
 <code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">get_customer_gateways</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.get_customer_gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPN customers gateways data source lists a number of VPN customer gateways resource information owned by an Alicloud account.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpn_customer_gateways.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpn_customer_gateways.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -975,15 +914,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpn_customer_gateways.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpn_customer_gateways.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.vpn.get_gateways">
 <code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">get_gateways</code><span class="sig-paren">(</span><em class="sig-param">business_status=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.get_gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPNs data source lists a number of VPNs resource information owned by an Alicloud account.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpn_gateways.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpn_gateways.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -996,9 +935,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpn_gateways.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpn_gateways.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

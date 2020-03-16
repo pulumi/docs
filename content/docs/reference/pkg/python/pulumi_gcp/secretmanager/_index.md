@@ -14,14 +14,42 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.secretmanager"></span><dl class="class">
+<dt id="pulumi_gcp.secretmanager.AwaitableGetSecretVersionResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.secretmanager.</code><code class="sig-name descname">AwaitableGetSecretVersionResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">destroy_time=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">secret=None</em>, <em class="sig-param">secret_data=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.secretmanager.AwaitableGetSecretVersionResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.secretmanager.GetSecretVersionResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.secretmanager.</code><code class="sig-name descname">GetSecretVersionResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">destroy_time=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">secret=None</em>, <em class="sig-param">secret_data=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.secretmanager.GetSecretVersionResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getSecretVersion.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.secretmanager.GetSecretVersionResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.GetSecretVersionResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.secretmanager.Secret">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.secretmanager.</code><code class="sig-name descname">Secret</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">replication=None</em>, <em class="sig-param">secret_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.secretmanager.Secret" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Secret resource with the given unique name, props, and options.</p>
+<dd><p>Create a Secret resource with the given unique name, props, and options.
+:param str resource<a href="#id1"><span class="problematic" id="id2">*</span></a>name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] labels: The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of</p>
+<blockquote>
+<div><p>maximum 128 bytes, and must conform to the following PCRE regular expression: [p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62}
+Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to
+the following PCRE regular expression: [p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be assigned to a given
+resource. An object containing a list of “key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3”
+}.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>replication</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been
+created.</p></li>
+<li><p><strong>secret_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This must be unique within the project.</p></li>
 </ul>
 </dd>
 </dl>
@@ -38,9 +66,54 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.secretmanager.Secret.create_time">
+<code class="sig-name descname">create_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.Secret.create_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time at which the Secret was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.secretmanager.Secret.labels">
+<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.Secret.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of
+maximum 128 bytes, and must conform to the following PCRE regular expression: [p{Ll}p{Lo}][p{Ll}p{Lo}p{N}<em>-]{0,62}
+Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to
+the following PCRE regular expression: [p{Ll}p{Lo}p{N}</em>-]{0,63} No more than 64 labels can be assigned to a given
+resource. An object containing a list of “key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3”
+}.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.secretmanager.Secret.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.Secret.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name of the Secret. Format: ‘projects/{{project}}/secrets/{{secret_id}}’</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.secretmanager.Secret.replication">
+<code class="sig-name descname">replication</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.Secret.replication" title="Permalink to this definition">¶</a></dt>
+<dd><p>The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been
+created.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">automatic</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userManaged</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicas</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.secretmanager.Secret.secret_id">
+<code class="sig-name descname">secret_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.Secret.secret_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>This must be unique within the project.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.secretmanager.Secret.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">replication=None</em>, <em class="sig-param">secret_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.secretmanager.Secret.get" title="Permalink to this definition">¶</a></dt>
@@ -52,6 +125,18 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>create*time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The time at which the Secret was created.</p>
+</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of
+maximum 128 bytes, and must conform to the following PCRE regular expression: [p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62}
+Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to
+the following PCRE regular expression: [p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be assigned to a given
+resource. An object containing a list of “key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3”
+}.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the Secret. Format: ‘projects/{{project}}/secrets/{{secret_id}}’</p></li>
+<li><p><strong>replication</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been
+created.</p></li>
+<li><p><strong>secret_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This must be unique within the project.</p></li>
 </ul>
 </dd>
 </dl>
@@ -68,9 +153,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -114,18 +196,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.secretmanager.SecretIamBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.secretmanager.</code><code class="sig-name descname">SecretIamBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">secret_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.secretmanager.SecretIamBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretIamBinding resource with the given unique name, props, and options.</p>
+<dd><p>Create a SecretIamBinding resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div><p>If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-</ul>
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
@@ -134,9 +216,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.secretmanager.SecretIamBinding.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.SecretIamBinding.etag" title="Permalink to this definition">¶</a></dt>
@@ -184,9 +263,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -230,18 +306,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.secretmanager.SecretIamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.secretmanager.</code><code class="sig-name descname">SecretIamMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">secret_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.secretmanager.SecretIamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretIamMember resource with the given unique name, props, and options.</p>
+<dd><p>Create a SecretIamMember resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div><p>If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">secretmanager.SecretIamBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-</ul>
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
@@ -250,9 +326,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.secretmanager.SecretIamMember.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.SecretIamMember.etag" title="Permalink to this definition">¶</a></dt>
@@ -300,9 +373,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -346,22 +416,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.secretmanager.SecretIamPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.secretmanager.</code><code class="sig-name descname">SecretIamPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">secret_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.secretmanager.SecretIamPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretIamPolicy resource with the given unique name, props, and options.</p>
+<dd><p>Create a SecretIamPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] policy_data: The policy data generated by</p>
+<blockquote>
+<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
-a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.secretmanager.SecretIamPolicy.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.SecretIamPolicy.etag" title="Permalink to this definition">¶</a></dt>
@@ -401,9 +468,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -447,18 +511,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.secretmanager.SecretVersion">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.secretmanager.</code><code class="sig-name descname">SecretVersion</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">secret=None</em>, <em class="sig-param">secret_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.secretmanager.SecretVersion" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretVersion resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret_version.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret_version.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a SecretVersion resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] enabled: The current state of the SecretVersion.
+:param pulumi.Input[str] secret: Secret Manager secret resource
+:param pulumi.Input[str] secret_data: The secret data. Must be no larger than 64KiB.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.secretmanager.SecretVersion.create_time">
+<code class="sig-name descname">create_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.SecretVersion.create_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time at which the Secret was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.secretmanager.SecretVersion.destroy_time">
+<code class="sig-name descname">destroy_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.SecretVersion.destroy_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time at which the Secret was destroyed. Only present if state is DESTROYED.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.secretmanager.SecretVersion.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.SecretVersion.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current state of the SecretVersion.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.secretmanager.SecretVersion.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.SecretVersion.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name of the SecretVersion. Format: ‘projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}’</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.secretmanager.SecretVersion.secret">
+<code class="sig-name descname">secret</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.SecretVersion.secret" title="Permalink to this definition">¶</a></dt>
+<dd><p>Secret Manager secret resource</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.secretmanager.SecretVersion.secret_data">
+<code class="sig-name descname">secret_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.SecretVersion.secret_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secret data. Must be no larger than 64KiB.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.secretmanager.SecretVersion.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">destroy_time=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">secret=None</em>, <em class="sig-param">secret_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.secretmanager.SecretVersion.get" title="Permalink to this definition">¶</a></dt>
@@ -470,12 +564,15 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>create_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time at which the Secret was created.</p></li>
+<li><p><strong>destroy_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time at which the Secret was destroyed. Only present if state is DESTROYED.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The current state of the SecretVersion.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the SecretVersion. Format: ‘projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}’</p></li>
+<li><p><strong>secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Secret Manager secret resource</p></li>
+<li><p><strong>secret_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secret data. Must be no larger than 64KiB.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret_version.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/secret_manager_secret_version.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -514,6 +611,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_gcp.secretmanager.get_secret_version">
+<code class="sig-prename descclassname">pulumi_gcp.secretmanager.</code><code class="sig-name descname">get_secret_version</code><span class="sig-paren">(</span><em class="sig-param">project=None</em>, <em class="sig-param">secret=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.secretmanager.get_secret_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
 </dd></dl>
 
 </div>

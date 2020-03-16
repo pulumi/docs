@@ -16,29 +16,23 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_alicloud.apigateway"></span><dl class="class">
 <dt id="pulumi_alicloud.apigateway.Api">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">Api</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_type=None</em>, <em class="sig-param">constant_parameters=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">fc_service_config=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">http_service_config=None</em>, <em class="sig-param">http_vpc_service_config=None</em>, <em class="sig-param">mock_service_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">request_config=None</em>, <em class="sig-param">request_parameters=None</em>, <em class="sig-param">service_type=None</em>, <em class="sig-param">stage_names=None</em>, <em class="sig-param">system_parameters=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.Api" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Api resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>auth_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authorization Type including APP and ANONYMOUS. Defaults to null.</p></li>
-<li><p><strong>constant_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – constant_parameters defines the constant parameters of the api.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of Constant parameter.</p></li>
-<li><p><strong>fc_service_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – fc_service_config defines the config when service_type selected ‘FunctionCompute’.</p></li>
-<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The api gateway that the api belongs to. Defaults to null.</p></li>
-<li><p><strong>http_service_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – http_service_config defines the config when service_type selected ‘HTTP’.</p></li>
-<li><p><strong>http_vpc_service_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – http_vpc_service_config defines the config when service_type selected ‘HTTP-VPC’.</p></li>
-<li><p><strong>mock_service_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – http_service_config defines the config when service_type selected ‘MOCK’.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – System parameter name which supports values including in <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/43677.html">system parameter list</a></p></li>
-<li><p><strong>request_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Request_config defines how users can send requests to your API.</p></li>
-<li><p><strong>request_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – request_parameters defines the request parameters of the api.</p></li>
-<li><p><strong>service_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.</p></li>
-<li><p><strong>stage_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.</p></li>
-<li><p><strong>system_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – system_parameters defines the system parameters of the api.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Api resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] auth_type: The authorization Type including APP and ANONYMOUS. Defaults to null.
+:param pulumi.Input[list] constant_parameters: constant_parameters defines the constant parameters of the api.
+:param pulumi.Input[str] description: The description of Constant parameter.
+:param pulumi.Input[dict] fc_service_config: fc_service_config defines the config when service_type selected ‘FunctionCompute’.
+:param pulumi.Input[str] group_id: The api gateway that the api belongs to. Defaults to null.
+:param pulumi.Input[dict] http_service_config: http_service_config defines the config when service_type selected ‘HTTP’.
+:param pulumi.Input[dict] http_vpc_service_config: http_vpc_service_config defines the config when service_type selected ‘HTTP-VPC’.
+:param pulumi.Input[dict] mock_service_config: http_service_config defines the config when service_type selected ‘MOCK’.
+:param pulumi.Input[str] name: System parameter name which supports values including in <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/43677.html">system parameter list</a>
+:param pulumi.Input[dict] request_config: Request_config defines how users can send requests to your API.
+:param pulumi.Input[list] request_parameters: request_parameters defines the request parameters of the api.
+:param pulumi.Input[str] service_type: The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
+:param pulumi.Input[list] stage_names: Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
+:param pulumi.Input[list] system_parameters: system_parameters defines the system parameters of the api.</p>
 <p>The <strong>constant_parameters</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of Constant parameter.</p></li>
@@ -49,7 +43,7 @@ anything, please consult the source <a class="reference external" href="https://
 <p>The <strong>fc_service_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">arnRole</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/52885.htm">User Permissions</a> for more details.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">functionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The function name of function compute service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">function_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The function name of function compute service.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The region that the function compute service belongs to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service name of function compute service.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Backend service time-out time; unit: millisecond.</p></li>
@@ -100,9 +94,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - System parameter name which supports values including in <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/43677.html">system parameter list</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nameService</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Backend service’s parameter name.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_api.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_api.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.apigateway.Api.api_id">
 <code class="sig-name descname">api_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.apigateway.Api.api_id" title="Permalink to this definition">¶</a></dt>
@@ -139,7 +130,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>fc_service_config defines the config when service_type selected ‘FunctionCompute’.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">arnRole</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/52885.htm">User Permissions</a> for more details.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">functionName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The function name of function compute service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">function_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The function name of function compute service.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The region that the function compute service belongs to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The service name of function compute service.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Backend service time-out time; unit: millisecond.</p></li>
@@ -286,7 +277,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>fc_service_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">arnRole</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/52885.htm">User Permissions</a> for more details.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">functionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The function name of function compute service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">function_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The function name of function compute service.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The region that the function compute service belongs to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service name of function compute service.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Backend service time-out time; unit: millisecond.</p></li>
@@ -337,9 +328,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - System parameter name which supports values including in <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/43677.html">system parameter list</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nameService</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Backend service’s parameter name.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_api.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_api.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -383,21 +371,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.apigateway.App">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">App</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.App" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a App resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the app. Defaults to null.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the app.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_app.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_app.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a App resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: The description of the app. Defaults to null.
+:param pulumi.Input[str] name: The name of the app. 
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.apigateway.App.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.apigateway.App.description" title="Permalink to this definition">¶</a></dt>
@@ -433,9 +412,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_app.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_app.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -479,22 +455,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.apigateway.AppAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">AppAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">stage_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.AppAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AppAttachment resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The api_id that app apply to access.</p></li>
-<li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The app that apply to the authorization.</p></li>
-<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The group that the api belongs to.</p></li>
-<li><p><strong>stage_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Stage that the app apply to access.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_app_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_app_attachment.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a AppAttachment resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_id: The api_id that app apply to access.
+:param pulumi.Input[str] app_id: The app that apply to the authorization.
+:param pulumi.Input[str] group_id: The group that the api belongs to.
+:param pulumi.Input[str] stage_name: Stage that the app apply to access.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.apigateway.AppAttachment.api_id">
 <code class="sig-name descname">api_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.apigateway.AppAttachment.api_id" title="Permalink to this definition">¶</a></dt>
@@ -537,9 +504,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_app_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_app_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -582,22 +546,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.apigateway.AwaitableGetApisResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">AwaitableGetApisResult</code><span class="sig-paren">(</span><em class="sig-param">api_id=None</em>, <em class="sig-param">apis=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.AwaitableGetApisResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">AwaitableGetApisResult</code><span class="sig-paren">(</span><em class="sig-param">api_id=None</em>, <em class="sig-param">apis=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.AwaitableGetApisResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.apigateway.AwaitableGetAppsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">AwaitableGetAppsResult</code><span class="sig-paren">(</span><em class="sig-param">apps=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.AwaitableGetAppsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">AwaitableGetAppsResult</code><span class="sig-paren">(</span><em class="sig-param">apps=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.AwaitableGetAppsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.apigateway.AwaitableGetGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">AwaitableGetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.AwaitableGetGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">AwaitableGetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.AwaitableGetGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.apigateway.GetApisResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">GetApisResult</code><span class="sig-paren">(</span><em class="sig-param">api_id=None</em>, <em class="sig-param">apis=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.GetApisResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">GetApisResult</code><span class="sig-paren">(</span><em class="sig-param">api_id=None</em>, <em class="sig-param">apis=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.GetApisResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getApis.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.apigateway.GetApisResult.apis">
@@ -612,6 +576,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_alicloud.apigateway.GetApisResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.apigateway.GetApisResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_alicloud.apigateway.GetApisResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.apigateway.GetApisResult.ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of api IDs.</p>
@@ -623,22 +593,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of api names.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.apigateway.GetApisResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.apigateway.GetApisResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.apigateway.GetAppsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">GetAppsResult</code><span class="sig-paren">(</span><em class="sig-param">apps=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.GetAppsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">GetAppsResult</code><span class="sig-paren">(</span><em class="sig-param">apps=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.GetAppsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getApps.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.apigateway.GetAppsResult.apps">
 <code class="sig-name descname">apps</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.apigateway.GetAppsResult.apps" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of apps. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.apigateway.GetAppsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.apigateway.GetAppsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -653,22 +623,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of app names.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.apigateway.GetAppsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.apigateway.GetAppsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.apigateway.GetGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">GetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.GetGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">GetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.GetGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGroups.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.apigateway.GetGroupsResult.groups">
 <code class="sig-name descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.apigateway.GetGroupsResult.groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of api groups. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.apigateway.GetGroupsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.apigateway.GetGroupsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -683,31 +653,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of api group names.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.apigateway.GetGroupsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.apigateway.GetGroupsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.apigateway.Group">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.Group" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Group resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the api gateway group. Defaults to null.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the api gateway group. Defaults to null.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_group.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Group resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: The description of the api gateway group. Defaults to null.
+:param pulumi.Input[str] name: The name of the api gateway group. Defaults to null.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.apigateway.Group.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.apigateway.Group.description" title="Permalink to this definition">¶</a></dt>
@@ -750,9 +705,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -796,22 +748,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.apigateway.VpcAccess">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">VpcAccess</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.VpcAccess" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a VpcAccess resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the instance in VPC (ECS/Server Load Balance).</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the vpc authorization.</p></li>
-<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – ID of the port corresponding to the instance.</p></li>
-<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The vpc id of the vpc authorization.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_vpc_access.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_vpc_access.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a VpcAccess resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] instance_id: ID of the instance in VPC (ECS/Server Load Balance).
+:param pulumi.Input[str] name: The name of the vpc authorization. 
+:param pulumi.Input[float] port: ID of the port corresponding to the instance.
+:param pulumi.Input[str] vpc_id: The vpc id of the vpc authorization.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.apigateway.VpcAccess.instance_id">
 <code class="sig-name descname">instance_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.apigateway.VpcAccess.instance_id" title="Permalink to this definition">¶</a></dt>
@@ -854,9 +797,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_vpc_access.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/api_gateway_vpc_access.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -901,6 +841,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.apigateway.get_apis">
 <code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">get_apis</code><span class="sig-paren">(</span><em class="sig-param">api_id=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.get_apis" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the apis of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/api_gateway_apis.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/api_gateway_apis.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -911,15 +854,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/api_gateway_apis.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/api_gateway_apis.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.apigateway.get_apps">
 <code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">get_apps</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.get_apps" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the apps of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/api_gateway_apps.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/api_gateway_apps.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -929,15 +872,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/api_gateway_apps.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/api_gateway_apps.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.apigateway.get_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">get_groups</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.get_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the api groups of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/api_gateway_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/api_gateway_groups.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -946,9 +889,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/api_gateway_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/api_gateway_groups.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

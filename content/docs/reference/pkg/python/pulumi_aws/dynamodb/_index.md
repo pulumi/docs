@@ -15,12 +15,12 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.dynamodb"></span><dl class="class">
 <dt id="pulumi_aws.dynamodb.AwaitableGetTableResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dynamodb.</code><code class="sig-name descname">AwaitableGetTableResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">billing_mode=None</em>, <em class="sig-param">global_secondary_indexes=None</em>, <em class="sig-param">hash_key=None</em>, <em class="sig-param">local_secondary_indexes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">point_in_time_recovery=None</em>, <em class="sig-param">range_key=None</em>, <em class="sig-param">read_capacity=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">stream_arn=None</em>, <em class="sig-param">stream_enabled=None</em>, <em class="sig-param">stream_label=None</em>, <em class="sig-param">stream_view_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">write_capacity=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.AwaitableGetTableResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dynamodb.</code><code class="sig-name descname">AwaitableGetTableResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">billing_mode=None</em>, <em class="sig-param">global_secondary_indexes=None</em>, <em class="sig-param">hash_key=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">local_secondary_indexes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">point_in_time_recovery=None</em>, <em class="sig-param">range_key=None</em>, <em class="sig-param">read_capacity=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">stream_arn=None</em>, <em class="sig-param">stream_enabled=None</em>, <em class="sig-param">stream_label=None</em>, <em class="sig-param">stream_view_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">write_capacity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.AwaitableGetTableResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.dynamodb.GetTableResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dynamodb.</code><code class="sig-name descname">GetTableResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">billing_mode=None</em>, <em class="sig-param">global_secondary_indexes=None</em>, <em class="sig-param">hash_key=None</em>, <em class="sig-param">local_secondary_indexes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">point_in_time_recovery=None</em>, <em class="sig-param">range_key=None</em>, <em class="sig-param">read_capacity=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">stream_arn=None</em>, <em class="sig-param">stream_enabled=None</em>, <em class="sig-param">stream_label=None</em>, <em class="sig-param">stream_view_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">write_capacity=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.GetTableResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dynamodb.</code><code class="sig-name descname">GetTableResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">billing_mode=None</em>, <em class="sig-param">global_secondary_indexes=None</em>, <em class="sig-param">hash_key=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">local_secondary_indexes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">point_in_time_recovery=None</em>, <em class="sig-param">range_key=None</em>, <em class="sig-param">read_capacity=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">stream_arn=None</em>, <em class="sig-param">stream_enabled=None</em>, <em class="sig-param">stream_label=None</em>, <em class="sig-param">stream_view_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">write_capacity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.GetTableResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTable.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.dynamodb.GetTableResult.id">
@@ -36,6 +36,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a resource to manage a DynamoDB Global Table. These are layered on top of existing DynamoDB Tables.</p>
 <blockquote>
 <div><p>Note: There are many restrictions before you can properly create DynamoDB Global Tables in multiple regions. See the <a class="reference external" href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables_reqs_bestpractices.html">AWS DynamoDB Global Table Requirements</a> for more information.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_global_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_global_table.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -51,9 +52,6 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">regionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS region name of replica DynamoDB Table. e.g. <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_global_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_global_table.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.dynamodb.GlobalTable.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.GlobalTable.arn" title="Permalink to this definition">¶</a></dt>
@@ -96,9 +94,6 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">regionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS region name of replica DynamoDB Table. e.g. <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_global_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_global_table.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -145,6 +140,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a DynamoDB table resource</p>
 <blockquote>
 <div><p><strong>Note:</strong> It is recommended to use <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> <cite>``ignore_changes`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#ignore_changes">https://www.terraform.io/docs/configuration/resources.html#ignore_changes</a>&gt;`_ for <code class="docutils literal notranslate"><span class="pre">read_capacity</span></code> and/or <code class="docutils literal notranslate"><span class="pre">write_capacity</span></code> if there’s <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_policy.html">autoscaling policy</a> attached to the table.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -224,9 +220,6 @@ This attribute should only be specified if the key is different from the default
 <li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the table attribute to store the TTL timestamp in.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.dynamodb.Table.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.Table.arn" title="Permalink to this definition">¶</a></dt>
@@ -477,9 +470,6 @@ This attribute should only be specified if the key is different from the default
 <li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the table attribute to store the TTL timestamp in.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -529,6 +519,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt><strong>Note:</strong> This resource is not meant to be used for managing large amounts of data in your table, it is not designed to scale.</dt><dd><p>You should perform <strong>regular backups</strong> of all data in the table, see <a class="reference external" href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/BackupRestore.html">AWS docs for more</a>.</p>
 </dd>
 </dl>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table_item.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table_item.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -543,9 +534,6 @@ Only the primary key attributes are required; you can optionally provide other a
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table_item.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table_item.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.dynamodb.TableItem.hash_key">
 <code class="sig-name descname">hash_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.TableItem.hash_key" title="Permalink to this definition">¶</a></dt>
@@ -590,9 +578,6 @@ Only the primary key attributes are required; you can optionally provide other a
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table_item.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table_item.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -637,6 +622,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dynamodb.get_table">
 <code class="sig-prename descclassname">pulumi_aws.dynamodb.</code><code class="sig-name descname">get_table</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.get_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a DynamoDB table.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/dynamodb_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/dynamodb_table.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the DynamoDB table.</p>
@@ -647,9 +635,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/dynamodb_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/dynamodb_table.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

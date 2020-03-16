@@ -15,22 +15,22 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.applicationloadbalancing"></span><dl class="class">
 <dt id="pulumi_aws.applicationloadbalancing.AwaitableGetListenerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.applicationloadbalancing.</code><code class="sig-name descname">AwaitableGetListenerResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">certificate_arn=None</em>, <em class="sig-param">default_actions=None</em>, <em class="sig-param">load_balancer_arn=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">ssl_policy=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.AwaitableGetListenerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.applicationloadbalancing.</code><code class="sig-name descname">AwaitableGetListenerResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">certificate_arn=None</em>, <em class="sig-param">default_actions=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">load_balancer_arn=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">ssl_policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.AwaitableGetListenerResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.applicationloadbalancing.AwaitableGetLoadBalancerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.applicationloadbalancing.</code><code class="sig-name descname">AwaitableGetLoadBalancerResult</code><span class="sig-paren">(</span><em class="sig-param">access_logs=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">arn_suffix=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">enable_deletion_protection=None</em>, <em class="sig-param">idle_timeout=None</em>, <em class="sig-param">internal=None</em>, <em class="sig-param">load_balancer_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_mappings=None</em>, <em class="sig-param">subnets=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.AwaitableGetLoadBalancerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.applicationloadbalancing.</code><code class="sig-name descname">AwaitableGetLoadBalancerResult</code><span class="sig-paren">(</span><em class="sig-param">access_logs=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">arn_suffix=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">enable_deletion_protection=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">idle_timeout=None</em>, <em class="sig-param">internal=None</em>, <em class="sig-param">load_balancer_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_mappings=None</em>, <em class="sig-param">subnets=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.AwaitableGetLoadBalancerResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.applicationloadbalancing.AwaitableGetTargetGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.applicationloadbalancing.</code><code class="sig-name descname">AwaitableGetTargetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">arn_suffix=None</em>, <em class="sig-param">deregistration_delay=None</em>, <em class="sig-param">health_check=None</em>, <em class="sig-param">lambda_multi_value_headers_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">proxy_protocol_v2=None</em>, <em class="sig-param">slow_start=None</em>, <em class="sig-param">stickiness=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_type=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.AwaitableGetTargetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.applicationloadbalancing.</code><code class="sig-name descname">AwaitableGetTargetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">arn_suffix=None</em>, <em class="sig-param">deregistration_delay=None</em>, <em class="sig-param">health_check=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lambda_multi_value_headers_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">proxy_protocol_v2=None</em>, <em class="sig-param">slow_start=None</em>, <em class="sig-param">stickiness=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_type=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.AwaitableGetTargetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.applicationloadbalancing.GetListenerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.applicationloadbalancing.</code><code class="sig-name descname">GetListenerResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">certificate_arn=None</em>, <em class="sig-param">default_actions=None</em>, <em class="sig-param">load_balancer_arn=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">ssl_policy=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.GetListenerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.applicationloadbalancing.</code><code class="sig-name descname">GetListenerResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">certificate_arn=None</em>, <em class="sig-param">default_actions=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">load_balancer_arn=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">ssl_policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.GetListenerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getListener.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.applicationloadbalancing.GetListenerResult.id">
@@ -42,7 +42,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_aws.applicationloadbalancing.GetLoadBalancerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.applicationloadbalancing.</code><code class="sig-name descname">GetLoadBalancerResult</code><span class="sig-paren">(</span><em class="sig-param">access_logs=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">arn_suffix=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">enable_deletion_protection=None</em>, <em class="sig-param">idle_timeout=None</em>, <em class="sig-param">internal=None</em>, <em class="sig-param">load_balancer_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_mappings=None</em>, <em class="sig-param">subnets=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.GetLoadBalancerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.applicationloadbalancing.</code><code class="sig-name descname">GetLoadBalancerResult</code><span class="sig-paren">(</span><em class="sig-param">access_logs=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">arn_suffix=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">enable_deletion_protection=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">idle_timeout=None</em>, <em class="sig-param">internal=None</em>, <em class="sig-param">load_balancer_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_mappings=None</em>, <em class="sig-param">subnets=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.GetLoadBalancerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLoadBalancer.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.applicationloadbalancing.GetLoadBalancerResult.id">
@@ -54,7 +54,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_aws.applicationloadbalancing.GetTargetGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.applicationloadbalancing.</code><code class="sig-name descname">GetTargetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">arn_suffix=None</em>, <em class="sig-param">deregistration_delay=None</em>, <em class="sig-param">health_check=None</em>, <em class="sig-param">lambda_multi_value_headers_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">proxy_protocol_v2=None</em>, <em class="sig-param">slow_start=None</em>, <em class="sig-param">stickiness=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_type=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.GetTargetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.applicationloadbalancing.</code><code class="sig-name descname">GetTargetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">arn_suffix=None</em>, <em class="sig-param">deregistration_delay=None</em>, <em class="sig-param">health_check=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lambda_multi_value_headers_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">proxy_protocol_v2=None</em>, <em class="sig-param">slow_start=None</em>, <em class="sig-param">stickiness=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_type=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.GetTargetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTargetGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.applicationloadbalancing.GetTargetGroupResult.id">
@@ -70,6 +70,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a Load Balancer Listener resource.</p>
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.Listener</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.Listener</span></code>. The functionality is identical.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_listener.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_listener.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -103,8 +104,8 @@ anything, please consult the source <a class="reference external" href="https://
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">authorizationEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The authorization endpoint of the IdP.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client identifier.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client secret.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OIDC issuer identifier of the IdP.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The set of user claims to be requested from the IdP.</p></li>
@@ -135,9 +136,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Target Group to which to route traffic. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">forward</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of routing action. Valid values are <code class="docutils literal notranslate"><span class="pre">forward</span></code>, <code class="docutils literal notranslate"><span class="pre">redirect</span></code>, <code class="docutils literal notranslate"><span class="pre">fixed-response</span></code>, <code class="docutils literal notranslate"><span class="pre">authenticate-cognito</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate-oidc</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_legacy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.applicationloadbalancing.Listener.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.Listener.arn" title="Permalink to this definition">¶</a></dt>
@@ -171,8 +169,8 @@ anything, please consult the source <a class="reference external" href="https://
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">authorizationEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The authorization endpoint of the IdP.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OAuth 2.0 client identifier.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OAuth 2.0 client secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OAuth 2.0 client identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OAuth 2.0 client secret.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OIDC issuer identifier of the IdP.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The set of user claims to be requested from the IdP.</p></li>
@@ -268,8 +266,8 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">authorizationEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The authorization endpoint of the IdP.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client identifier.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client secret.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OIDC issuer identifier of the IdP.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The set of user claims to be requested from the IdP.</p></li>
@@ -300,9 +298,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Target Group to which to route traffic. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">forward</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of routing action. Valid values are <code class="docutils literal notranslate"><span class="pre">forward</span></code>, <code class="docutils literal notranslate"><span class="pre">redirect</span></code>, <code class="docutils literal notranslate"><span class="pre">fixed-response</span></code>, <code class="docutils literal notranslate"><span class="pre">authenticate-cognito</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate-oidc</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_legacy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -350,6 +345,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>This resource is for additional certificates and does not replace the default certificate on the listener.</p>
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.ListenerCertificate</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.ListenerCertificate</span></code>. The functionality is identical.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_listener_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_listener_certificate.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -361,9 +357,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_certificate_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_certificate_legacy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.applicationloadbalancing.ListenerCertificate.certificate_arn">
 <code class="sig-name descname">certificate_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.ListenerCertificate.certificate_arn" title="Permalink to this definition">¶</a></dt>
@@ -392,9 +385,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_certificate_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_certificate_legacy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -441,6 +431,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Load Balancer Listener Rule resource.</p>
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.ListenerRule</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.ListenerRule</span></code>. The functionality is identical.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_listener_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_listener_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -472,8 +463,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">authorizationEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The authorization endpoint of the IdP.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client identifier.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client secret.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OIDC issuer identifier of the IdP.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The set of user claims to be requested from the IdP.</p></li>
@@ -541,9 +532,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Query string pairs or values to match. Query String Value blocks documented below. Multiple <code class="docutils literal notranslate"><span class="pre">values</span></code> blocks can be specified, see example above. Maximum size of each string is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). To search for a literal ‘*’ or ‘?’ character in a query string, escape the character with a backslash (). Only one pair needs to match for the condition to be satisfied.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_rule_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_rule_legacy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.applicationloadbalancing.ListenerRule.actions">
 <code class="sig-name descname">actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.ListenerRule.actions" title="Permalink to this definition">¶</a></dt>
@@ -565,8 +553,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">authorizationEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The authorization endpoint of the IdP.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OAuth 2.0 client identifier.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OAuth 2.0 client secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OAuth 2.0 client identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OAuth 2.0 client secret.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OIDC issuer identifier of the IdP.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The set of user claims to be requested from the IdP.</p></li>
@@ -696,8 +684,8 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">authorizationEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The authorization endpoint of the IdP.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client identifier.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client secret.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OIDC issuer identifier of the IdP.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The set of user claims to be requested from the IdP.</p></li>
@@ -765,9 +753,6 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Query string pairs or values to match. Query String Value blocks documented below. Multiple <code class="docutils literal notranslate"><span class="pre">values</span></code> blocks can be specified, see example above. Maximum size of each string is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). To search for a literal ‘*’ or ‘?’ character in a query string, escape the character with a backslash (). Only one pair needs to match for the condition to be satisfied.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_rule_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_rule_legacy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -814,6 +799,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Load Balancer resource.</p>
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.LoadBalancer</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.LoadBalancer</span></code>. The functionality is identical.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -851,12 +837,9 @@ for load balancers of type <code class="docutils literal notranslate"><span clas
 </ul>
 <p>The <strong>subnet_mappings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allocationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The allocation ID of the Elastic IP address.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allocation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The allocation ID of the Elastic IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_legacy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.applicationloadbalancing.LoadBalancer.access_logs">
 <code class="sig-name descname">access_logs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.LoadBalancer.access_logs" title="Permalink to this definition">¶</a></dt>
@@ -955,8 +938,8 @@ this provider will autogenerate a name beginning with <code class="docutils lite
 <code class="sig-name descname">subnet_mappings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.LoadBalancer.subnet_mappings" title="Permalink to this definition">¶</a></dt>
 <dd><p>A subnet mapping block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allocationId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The allocation ID of the Elastic IP address.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allocation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The allocation ID of the Elastic IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.</p></li>
 </ul>
 </dd></dl>
 
@@ -1026,12 +1009,9 @@ for load balancers of type <code class="docutils literal notranslate"><span clas
 </ul>
 <p>The <strong>subnet_mappings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allocationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The allocation ID of the Elastic IP address.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allocation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The allocation ID of the Elastic IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_legacy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1078,6 +1058,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Target Group resource for use with Load Balancer resources.</p>
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.TargetGroup</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.TargetGroup</span></code>. The functionality is identical.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_target_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_target_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1128,9 +1109,6 @@ You can’t specify publicly routable IP addresses.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether  health checks are enabled. Defaults to true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of sticky sessions. The only current possible value is <code class="docutils literal notranslate"><span class="pre">lb_cookie</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_target_group_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_target_group_legacy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.applicationloadbalancing.TargetGroup.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.TargetGroup.arn" title="Permalink to this definition">¶</a></dt>
@@ -1310,9 +1288,6 @@ You can’t specify publicly routable IP addresses.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether  health checks are enabled. Defaults to true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of sticky sessions. The only current possible value is <code class="docutils literal notranslate"><span class="pre">lb_cookie</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_target_group_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_target_group_legacy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1359,6 +1334,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides the ability to register instances and containers with an Application Load Balancer (ALB) or Network Load Balancer (NLB) target group. For attaching resources with Elastic Load Balancer (ELB), see the <cite>``elb.Attachment`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/elb_attachment.html">https://www.terraform.io/docs/providers/aws/r/elb_attachment.html</a>&gt;`_.</p>
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.TargetGroupAttachment</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.TargetGroupAttachment</span></code>. The functionality is identical.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_target_group_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_target_group_attachment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1372,9 +1348,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_target_group_attachment_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_target_group_attachment_legacy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.applicationloadbalancing.TargetGroupAttachment.availability_zone">
 <code class="sig-name descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.TargetGroupAttachment.availability_zone" title="Permalink to this definition">¶</a></dt>
@@ -1417,9 +1390,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_target_group_attachment_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_target_group_attachment_legacy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1470,6 +1440,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>This data source can prove useful when a module accepts an LB Listener as an
 input variable and needs to know the LB it is attached to, or other
 information specific to the listener in question.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lb_listener.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lb_listener.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1479,9 +1452,6 @@ information specific to the listener in question.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/alb_listener_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/alb_listener_legacy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1494,6 +1464,9 @@ information specific to the listener in question.</p>
 <p>This data source can prove useful when a module accepts an LB as an input
 variable and needs to, for example, determine the security groups associated
 with it, etc.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lb.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1502,9 +1475,6 @@ with it, etc.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/alb_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/alb_legacy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1517,6 +1487,9 @@ with it, etc.</p>
 <p>This data source can prove useful when a module accepts an LB Target Group as an
 input variable and needs to know its attributes. It can also be used to get the ARN of
 an LB Target Group for use in other resources, given LB Target Group name.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lb_target_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lb_target_group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1525,9 +1498,6 @@ an LB Target Group for use in other resources, given LB Target Group name.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/alb_target_group_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/alb_target_group_legacy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>
