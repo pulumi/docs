@@ -12,6 +12,22 @@ menu:
 aliases: ["/docs/quickstart/aws/install-pulumi/"]
 ---
 
+{{% examples %}}
+
+```typescript
+import foo from "bar";
+```
+
+```typescript
+import bar from "baz";
+```
+
+```typescript
+import qux from "quux";
+```
+
+{{% /examples %}}
+
 {{< install-pulumi >}}
 
 Next, we'll install the required language runtime.
