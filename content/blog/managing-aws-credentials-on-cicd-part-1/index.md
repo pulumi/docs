@@ -68,7 +68,7 @@ const user = new aws.iam.User("cicdUser", {
 ```
 
 By default, that IAM User doesn't have permissions to do anything. The recommended best practice
-is to [use groups to assign permissions to IAM Users]((https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#use-groups-for-permissions)).
+is to [use groups to assign permissions to IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#use-groups-for-permissions).
 So next, we will create a "Pulumi Stack updaters" IAM Group, and add our robot account as a member.
 
 ```ts
