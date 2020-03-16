@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.ebs"></span><dl class="class">
 <dt id="pulumi_aws.ebs.AwaitableGetDefaultKmsKeyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">AwaitableGetDefaultKmsKeyResult</code><span class="sig-paren">(</span><em class="sig-param">key_arn=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.AwaitableGetDefaultKmsKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">AwaitableGetDefaultKmsKeyResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">key_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.AwaitableGetDefaultKmsKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -25,17 +25,17 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.AwaitableGetSnapshotIdsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">AwaitableGetSnapshotIdsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">restorable_by_user_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.AwaitableGetSnapshotIdsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">AwaitableGetSnapshotIdsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">restorable_by_user_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.AwaitableGetSnapshotIdsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.AwaitableGetSnapshotResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">AwaitableGetSnapshotResult</code><span class="sig-paren">(</span><em class="sig-param">data_encryption_key_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">owner_alias=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">restorable_by_user_ids=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">snapshot_ids=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">volume_size=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.AwaitableGetSnapshotResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">AwaitableGetSnapshotResult</code><span class="sig-paren">(</span><em class="sig-param">data_encryption_key_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">owner_alias=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">restorable_by_user_ids=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">snapshot_ids=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">volume_size=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.AwaitableGetSnapshotResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.AwaitableGetVolumeResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">AwaitableGetVolumeResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">iops=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">volume_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.AwaitableGetVolumeResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">AwaitableGetVolumeResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">iops=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">volume_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.AwaitableGetVolumeResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -47,6 +47,7 @@ By using the <code class="docutils literal notranslate"><span class="pre">ebs.De
 <blockquote>
 <div><p><strong>NOTE:</strong> Creating an <code class="docutils literal notranslate"><span class="pre">ebs.DefaultKmsKey</span></code> resource does not enable default EBS encryption. Use the <code class="docutils literal notranslate"><span class="pre">ebs.EncryptionByDefault</span></code> to enable default EBS encryption.</p>
 <p><strong>NOTE:</strong> Destroying this resource will reset the default CMK to the account’s AWS-managed default CMK for EBS.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_default_kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_default_kms_key.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -57,9 +58,6 @@ By using the <code class="docutils literal notranslate"><span class="pre">ebs.De
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_default_kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_default_kms_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.DefaultKmsKey.key_arn">
 <code class="sig-name descname">key_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.DefaultKmsKey.key_arn" title="Permalink to this definition">¶</a></dt>
@@ -81,9 +79,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_default_kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_default_kms_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -130,6 +125,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a resource to manage whether default EBS encryption is enabled for your AWS account in the current AWS region. To manage the default KMS key for the region, see the <cite>``ebs.DefaultKmsKey`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/ebs_default_kms_key.html">https://www.terraform.io/docs/providers/aws/r/ebs_default_kms_key.html</a>&gt;`_.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Removing this resource disables default EBS encryption.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_encryption_by_default.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_encryption_by_default.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -140,9 +136,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_encryption_by_default.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_encryption_by_default.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.EncryptionByDefault.enabled">
 <code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.EncryptionByDefault.enabled" title="Permalink to this definition">¶</a></dt>
@@ -164,9 +157,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_encryption_by_default.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_encryption_by_default.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -209,18 +199,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.GetDefaultKmsKeyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">GetDefaultKmsKeyResult</code><span class="sig-paren">(</span><em class="sig-param">key_arn=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetDefaultKmsKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">GetDefaultKmsKeyResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">key_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetDefaultKmsKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDefaultKmsKey.</p>
-<dl class="attribute">
-<dt id="pulumi_aws.ebs.GetDefaultKmsKeyResult.key_arn">
-<code class="sig-name descname">key_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetDefaultKmsKeyResult.key_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>Amazon Resource Name (ARN) of the default KMS key uses to encrypt an EBS volume in this region when no key is specified in an API call that creates the volume and encryption by default is enabled.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.GetDefaultKmsKeyResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetDefaultKmsKeyResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ebs.GetDefaultKmsKeyResult.key_arn">
+<code class="sig-name descname">key_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetDefaultKmsKeyResult.key_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of the default KMS key uses to encrypt an EBS volume in this region when no key is specified in an API call that creates the volume and encryption by default is enabled.</p>
 </dd></dl>
 
 </dd></dl>
@@ -245,7 +235,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.GetSnapshotIdsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">GetSnapshotIdsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">restorable_by_user_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetSnapshotIdsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">GetSnapshotIdsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">restorable_by_user_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetSnapshotIdsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSnapshotIds.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.GetSnapshotIdsResult.id">
@@ -257,7 +247,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.GetSnapshotResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">GetSnapshotResult</code><span class="sig-paren">(</span><em class="sig-param">data_encryption_key_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">owner_alias=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">restorable_by_user_ids=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">snapshot_ids=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">volume_size=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetSnapshotResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">GetSnapshotResult</code><span class="sig-paren">(</span><em class="sig-param">data_encryption_key_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">owner_alias=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">restorable_by_user_ids=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">snapshot_ids=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">volume_size=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetSnapshotResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSnapshot.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.GetSnapshotResult.data_encryption_key_id">
@@ -275,6 +265,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ebs.GetSnapshotResult.encrypted">
 <code class="sig-name descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetSnapshotResult.encrypted" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the snapshot is encrypted.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ebs.GetSnapshotResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetSnapshotResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -325,17 +321,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The size of the drive in GiBs.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ebs.GetSnapshotResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetSnapshotResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.GetVolumeResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">GetVolumeResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">iops=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">volume_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetVolumeResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">GetVolumeResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">iops=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">volume_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetVolumeResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVolume.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.GetVolumeResult.arn">
@@ -353,6 +343,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ebs.GetVolumeResult.encrypted">
 <code class="sig-name descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetVolumeResult.encrypted" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the disk is encrypted.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ebs.GetVolumeResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetVolumeResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -397,18 +393,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The type of EBS volume.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ebs.GetVolumeResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetVolumeResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.Snapshot">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">Snapshot</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.Snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Snapshot of an EBS Volume.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -420,9 +413,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.Snapshot.data_encryption_key_id">
 <code class="sig-name descname">data_encryption_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.Snapshot.data_encryption_key_id" title="Permalink to this definition">¶</a></dt>
@@ -500,9 +490,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -547,6 +534,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ebs.SnapshotCopy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">SnapshotCopy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">source_region=None</em>, <em class="sig-param">source_snapshot_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.SnapshotCopy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Snapshot of a snapshot.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot_copy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot_copy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -567,9 +557,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags for the snapshot.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot_copy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot_copy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.SnapshotCopy.data_encryption_key_id">
 <code class="sig-name descname">data_encryption_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.SnapshotCopy.data_encryption_key_id" title="Permalink to this definition">¶</a></dt>
@@ -668,9 +655,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot_copy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot_copy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -715,6 +699,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ebs.Volume">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">Volume</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">iops=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a single EBS volume.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_volume.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -731,9 +718,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_volume.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.Volume.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.Volume.arn" title="Permalink to this definition">¶</a></dt>
@@ -811,9 +795,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_volume.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -876,6 +857,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ebs.get_snapshot">
 <code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">get_snapshot</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">restorable_by_user_ids=None</em>, <em class="sig-param">snapshot_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an EBS Snapshot for use when provisioning EBS Volumes</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_snapshot.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -894,9 +878,6 @@ several valid keys, for a full reference, check out
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_snapshot.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -904,6 +885,9 @@ several valid keys, for a full reference, check out
 <code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">get_snapshot_ids</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">restorable_by_user_ids=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_snapshot_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of EBS Snapshot IDs matching the specified
 criteria.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_snapshot_ids.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_snapshot_ids.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -920,9 +904,6 @@ several valid keys, for a full reference, check out
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_snapshot_ids.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_snapshot_ids.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -930,6 +911,9 @@ several valid keys, for a full reference, check out
 <code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">get_volume</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an EBS volume for use in other
 resources.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_volume.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -946,9 +930,6 @@ recent Volume.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_volume.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

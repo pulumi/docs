@@ -21,6 +21,9 @@ anything, please consult the source <a class="reference external" href="https://
 <a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
 granted to the credentials used with this provider.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_exclusion.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -37,9 +40,6 @@ write a filter.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_exclusion.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.BillingAccountExclusion.billing_account">
 <code class="sig-name descname">billing_account</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountExclusion.billing_account" title="Permalink to this definition">¶</a></dt>
@@ -96,9 +96,6 @@ write a filter.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_exclusion.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -150,6 +147,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/billingAccounts/getIamPolicy">granted on the billing account</a> to
 the credentials used with this provider. <a class="reference external" href="https://cloud.google.com/billing/docs/how-to/billing-access">IAM roles granted on a billing account</a> are separate from the
 typical IAM roles granted on a project.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_sink.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_sink.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -173,9 +171,6 @@ write a filter.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_sink.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_sink.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.BillingAccountSink.bigquery_options">
 <code class="sig-name descname">bigquery_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountSink.bigquery_options" title="Permalink to this definition">¶</a></dt>
@@ -250,9 +245,6 @@ configured <code class="docutils literal notranslate"><span class="pre">destinat
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_sink.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_sink.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -301,6 +293,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
 granted to the credentials used with this provider.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_folder_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_folder_exclusion.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -319,9 +314,6 @@ accepted.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_folder_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_folder_exclusion.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.FolderExclusion.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.FolderExclusion.description" title="Permalink to this definition">¶</a></dt>
@@ -380,9 +372,6 @@ accepted.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_folder_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_folder_exclusion.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -426,16 +415,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.logging.FolderSink">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.logging.</code><code class="sig-name descname">FolderSink</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bigquery_options=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">include_children=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.FolderSink" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a FolderSink resource with the given unique name, props, and options.</p>
+<dd><p>Create a FolderSink resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] bigquery_options: Options that affect sinks exporting data to BigQuery. Structure documented below.
+:param pulumi.Input[str] destination: The destination of the sink (or, in other words, where logs are written to). Can be a</p>
+<blockquote>
+<div><p>Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
+The writer associated with the sink must have access to write to the above resource.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bigquery_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Options that affect sinks exporting data to BigQuery. Structure documented below.</p></li>
-<li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p></li>
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
@@ -452,9 +443,6 @@ associated with child projects are also exported; otherwise only logs relating t
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_folder_sink.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_folder_sink.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.FolderSink.bigquery_options">
 <code class="sig-name descname">bigquery_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.FolderSink.bigquery_options" title="Permalink to this definition">¶</a></dt>
@@ -540,9 +528,6 @@ configured <code class="docutils literal notranslate"><span class="pre">destinat
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_folder_sink.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_folder_sink.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -586,12 +571,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.logging.Metric">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.logging.</code><code class="sig-name descname">Metric</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket_options=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">label_extractors=None</em>, <em class="sig-param">metric_descriptor=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">value_extractor=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.Metric" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Metric resource with the given unique name, props, and options.</p>
+<dd><p>Create a Metric resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] bucket_options: The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket</p>
+<blockquote>
+<div><p>boundaries used to create a histogram of the extracted values.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.</p></li>
+<li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An advanced logs filter (<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) which is used to match log
+entries.</p></li>
+<li><p><strong>label_extractors</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
+as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
+map. The syntax of the extractor expression is the same as for the valueExtractor field.</p></li>
+<li><p><strong>metric_descriptor</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The metric descriptor associated with the logs-based metric.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The client-assigned metric identifier. Examples - “error<em>count”, “nginx/requests”. Metric identifiers are limited to 100
+characters and can include only the following characters A-Z, a-z, 0-9, and the special characters *-.,+!</em>’,()%/. The
+forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be the first character of the name.</p></li>
+<li><p><strong>value_extractor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
+entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
+are 1. field - The name of the log entry field from which the value is to be extracted. 2. regex - A regular expression
+using the Google RE2 syntax (<a class="reference external" href="https://github.com/google/re2/wiki/Syntax">https://github.com/google/re2/wiki/Syntax</a>) with a single capture group to extract data from
+the specified log entry field. The value of the field is converted to a string before applying the regex. It is an error
+to specify a regex that does not include exactly one capture group.</p></li>
 </ul>
 </dd>
 </dl>
@@ -631,9 +636,93 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">valueType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_metric.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_metric.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.logging.Metric.bucket_options">
+<code class="sig-name descname">bucket_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.Metric.bucket_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
+boundaries used to create a histogram of the extracted values.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">explicitBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">bounds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exponentialBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">growthFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numFiniteBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scale</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linearBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">numFiniteBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offset</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">width</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.logging.Metric.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.Metric.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.logging.Metric.filter">
+<code class="sig-name descname">filter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.Metric.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>An advanced logs filter (<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) which is used to match log
+entries.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.logging.Metric.label_extractors">
+<code class="sig-name descname">label_extractors</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.Metric.label_extractors" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
+as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
+map. The syntax of the extractor expression is the same as for the valueExtractor field.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.logging.Metric.metric_descriptor">
+<code class="sig-name descname">metric_descriptor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.Metric.metric_descriptor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The metric descriptor associated with the logs-based metric.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">valueType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricKind</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">valueType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.logging.Metric.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.Metric.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The client-assigned metric identifier. Examples - “error<em>count”, “nginx/requests”. Metric identifiers are limited to 100
+characters and can include only the following characters A-Z, a-z, 0-9, and the special characters *-.,+!</em>’,()%/. The
+forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be the first character of the name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.logging.Metric.value_extractor">
+<code class="sig-name descname">value_extractor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.Metric.value_extractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
+entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
+are 1. field - The name of the log entry field from which the value is to be extracted. 2. regex - A regular expression
+using the Google RE2 syntax (<a class="reference external" href="https://github.com/google/re2/wiki/Syntax">https://github.com/google/re2/wiki/Syntax</a>) with a single capture group to extract data from
+the specified log entry field. The value of the field is converted to a string before applying the regex. It is an error
+to specify a regex that does not include exactly one capture group.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.logging.Metric.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket_options=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">label_extractors=None</em>, <em class="sig-param">metric_descriptor=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">value_extractor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.Metric.get" title="Permalink to this definition">¶</a></dt>
@@ -645,6 +734,24 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bucket_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
+boundaries used to create a histogram of the extracted values.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.</p></li>
+<li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An advanced logs filter (<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) which is used to match log
+entries.</p></li>
+<li><p><strong>label_extractors</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
+as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
+map. The syntax of the extractor expression is the same as for the valueExtractor field.</p></li>
+<li><p><strong>metric_descriptor</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The metric descriptor associated with the logs-based metric.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The client-assigned metric identifier. Examples - “error<em>count”, “nginx/requests”. Metric identifiers are limited to 100
+characters and can include only the following characters A-Z, a-z, 0-9, and the special characters *-.,+!</em>’,()%/. The
+forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be the first character of the name.</p></li>
+<li><p><strong>value_extractor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
+entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
+are 1. field - The name of the log entry field from which the value is to be extracted. 2. regex - A regular expression
+using the Google RE2 syntax (<a class="reference external" href="https://github.com/google/re2/wiki/Syntax">https://github.com/google/re2/wiki/Syntax</a>) with a single capture group to extract data from
+the specified log entry field. The value of the field is converted to a string before applying the regex. It is an error
+to specify a regex that does not include exactly one capture group.</p></li>
 </ul>
 </dd>
 </dl>
@@ -684,9 +791,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">valueType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_metric.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_metric.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -735,6 +839,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
 granted to the credentials used with this provider.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_organization_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_organization_exclusion.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -752,9 +859,6 @@ write a filter.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_organization_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_organization_exclusion.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.OrganizationExclusion.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.OrganizationExclusion.description" title="Permalink to this definition">¶</a></dt>
@@ -811,9 +915,6 @@ write a filter.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_organization_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_organization_exclusion.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -857,16 +958,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.logging.OrganizationSink">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.logging.</code><code class="sig-name descname">OrganizationSink</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bigquery_options=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">include_children=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.OrganizationSink" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a OrganizationSink resource with the given unique name, props, and options.</p>
+<dd><p>Create a OrganizationSink resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] bigquery_options: Options that affect sinks exporting data to BigQuery. Structure documented below.
+:param pulumi.Input[str] destination: The destination of the sink (or, in other words, where logs are written to). Can be a</p>
+<blockquote>
+<div><p>Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
+The writer associated with the sink must have access to write to the above resource.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bigquery_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Options that affect sinks exporting data to BigQuery. Structure documented below.</p></li>
-<li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p></li>
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
@@ -882,9 +985,6 @@ associated with child projects are also exported; otherwise only logs relating t
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_organization_sink.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_organization_sink.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.OrganizationSink.bigquery_options">
 <code class="sig-name descname">bigquery_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.OrganizationSink.bigquery_options" title="Permalink to this definition">¶</a></dt>
@@ -968,9 +1068,6 @@ configured <code class="docutils literal notranslate"><span class="pre">destinat
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_organization_sink.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_organization_sink.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1019,6 +1116,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
 granted to the credentials used with this provider.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_project_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_project_exclusion.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1037,9 +1137,6 @@ used.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_project_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_project_exclusion.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.ProjectExclusion.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.ProjectExclusion.description" title="Permalink to this definition">¶</a></dt>
@@ -1098,9 +1195,6 @@ used.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_project_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_project_exclusion.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1144,16 +1238,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.logging.ProjectSink">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.logging.</code><code class="sig-name descname">ProjectSink</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bigquery_options=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">unique_writer_identity=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.ProjectSink" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ProjectSink resource with the given unique name, props, and options.</p>
+<dd><p>Create a ProjectSink resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] bigquery_options: Options that affect sinks exporting data to BigQuery. Structure documented below.
+:param pulumi.Input[str] destination: The destination of the sink (or, in other words, where logs are written to). Can be a</p>
+<blockquote>
+<div><p>Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
+The writer associated with the sink must have access to write to the above resource.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bigquery_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Options that affect sinks exporting data to BigQuery. Structure documented below.</p></li>
-<li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p></li>
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
@@ -1172,9 +1268,6 @@ must set <code class="docutils literal notranslate"><span class="pre">unique_wri
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_project_sink.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_project_sink.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.ProjectSink.bigquery_options">
 <code class="sig-name descname">bigquery_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.ProjectSink.bigquery_options" title="Permalink to this definition">¶</a></dt>
@@ -1264,9 +1357,6 @@ configured <code class="docutils literal notranslate"><span class="pre">destinat
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_project_sink.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_project_sink.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

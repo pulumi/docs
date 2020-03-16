@@ -16,15 +16,18 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.datastore"></span><dl class="class">
 <dt id="pulumi_gcp.datastore.DataStoreIndex">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.datastore.</code><code class="sig-name descname">DataStoreIndex</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ancestor=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datastore.DataStoreIndex" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DataStoreIndex resource with the given unique name, props, and options.</p>
+<dd><p>Create a DataStoreIndex resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] ancestor: Policy for including ancestors in the index. Either ‘ALL_ANCESTORS’ or ‘NONE’, the default is ‘NONE’.
+:param pulumi.Input[str] kind: The entity kind which the index applies to.
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div><p>If it is not provided, the provider project is used.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>properties</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An ordered list of properties to index on.</p>
 </dd>
 </dl>
 <p>The <strong>properties</strong> object supports the following:</p>
@@ -32,14 +35,39 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/datastore_index.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/datastore_index.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.datastore.DataStoreIndex.ancestor">
+<code class="sig-name descname">ancestor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datastore.DataStoreIndex.ancestor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Policy for including ancestors in the index. Either ‘ALL_ANCESTORS’ or ‘NONE’, the default is ‘NONE’.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.datastore.DataStoreIndex.index_id">
+<code class="sig-name descname">index_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datastore.DataStoreIndex.index_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The index id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.datastore.DataStoreIndex.kind">
+<code class="sig-name descname">kind</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datastore.DataStoreIndex.kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>The entity kind which the index applies to.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.datastore.DataStoreIndex.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datastore.DataStoreIndex.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.datastore.DataStoreIndex.properties">
+<code class="sig-name descname">properties</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datastore.DataStoreIndex.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>An ordered list of properties to index on.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -53,8 +81,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>ancestor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy for including ancestors in the index. Either ‘ALL_ANCESTORS’ or ‘NONE’, the default is ‘NONE’.</p></li>
+<li><p><strong>index_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The index id.</p></li>
+<li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity kind which the index applies to.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>properties</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An ordered list of properties to index on.</p></li>
 </ul>
 </dd>
 </dl>
@@ -63,9 +95,6 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/datastore_index.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/datastore_index.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

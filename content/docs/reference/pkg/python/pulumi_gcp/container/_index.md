@@ -15,22 +15,22 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.container"></span><dl class="class">
 <dt id="pulumi_gcp.container.AwaitableGetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">additional_zones=None</em>, <em class="sig-param">addons_configs=None</em>, <em class="sig-param">authenticator_groups_configs=None</em>, <em class="sig-param">cluster_autoscalings=None</em>, <em class="sig-param">cluster_ipv4_cidr=None</em>, <em class="sig-param">database_encryptions=None</em>, <em class="sig-param">default_max_pods_per_node=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_binary_authorization=None</em>, <em class="sig-param">enable_intranode_visibility=None</em>, <em class="sig-param">enable_kubernetes_alpha=None</em>, <em class="sig-param">enable_legacy_abac=None</em>, <em class="sig-param">enable_shielded_nodes=None</em>, <em class="sig-param">enable_tpu=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">instance_group_urls=None</em>, <em class="sig-param">ip_allocation_policies=None</em>, <em class="sig-param">label_fingerprint=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">logging_service=None</em>, <em class="sig-param">maintenance_policies=None</em>, <em class="sig-param">master_auths=None</em>, <em class="sig-param">master_authorized_networks_configs=None</em>, <em class="sig-param">master_version=None</em>, <em class="sig-param">min_master_version=None</em>, <em class="sig-param">monitoring_service=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">network_policies=None</em>, <em class="sig-param">node_configs=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">node_pools=None</em>, <em class="sig-param">node_version=None</em>, <em class="sig-param">operation=None</em>, <em class="sig-param">pod_security_policy_configs=None</em>, <em class="sig-param">private_cluster_configs=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">release_channels=None</em>, <em class="sig-param">remove_default_node_pool=None</em>, <em class="sig-param">resource_labels=None</em>, <em class="sig-param">resource_usage_export_configs=None</em>, <em class="sig-param">services_ipv4_cidr=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">tpu_ipv4_cidr_block=None</em>, <em class="sig-param">vertical_pod_autoscalings=None</em>, <em class="sig-param">workload_identity_configs=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">additional_zones=None</em>, <em class="sig-param">addons_configs=None</em>, <em class="sig-param">authenticator_groups_configs=None</em>, <em class="sig-param">cluster_autoscalings=None</em>, <em class="sig-param">cluster_ipv4_cidr=None</em>, <em class="sig-param">database_encryptions=None</em>, <em class="sig-param">default_max_pods_per_node=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_binary_authorization=None</em>, <em class="sig-param">enable_intranode_visibility=None</em>, <em class="sig-param">enable_kubernetes_alpha=None</em>, <em class="sig-param">enable_legacy_abac=None</em>, <em class="sig-param">enable_shielded_nodes=None</em>, <em class="sig-param">enable_tpu=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">instance_group_urls=None</em>, <em class="sig-param">ip_allocation_policies=None</em>, <em class="sig-param">label_fingerprint=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">logging_service=None</em>, <em class="sig-param">maintenance_policies=None</em>, <em class="sig-param">master_authorized_networks_configs=None</em>, <em class="sig-param">master_auths=None</em>, <em class="sig-param">master_version=None</em>, <em class="sig-param">min_master_version=None</em>, <em class="sig-param">monitoring_service=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">network_policies=None</em>, <em class="sig-param">node_configs=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">node_pools=None</em>, <em class="sig-param">node_version=None</em>, <em class="sig-param">operation=None</em>, <em class="sig-param">pod_security_policy_configs=None</em>, <em class="sig-param">private_cluster_configs=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">release_channels=None</em>, <em class="sig-param">remove_default_node_pool=None</em>, <em class="sig-param">resource_labels=None</em>, <em class="sig-param">resource_usage_export_configs=None</em>, <em class="sig-param">services_ipv4_cidr=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">tpu_ipv4_cidr_block=None</em>, <em class="sig-param">vertical_pod_autoscalings=None</em>, <em class="sig-param">workload_identity_configs=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.container.AwaitableGetEngineVersionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetEngineVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">default_cluster_version=None</em>, <em class="sig-param">latest_master_version=None</em>, <em class="sig-param">latest_node_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">valid_master_versions=None</em>, <em class="sig-param">valid_node_versions=None</em>, <em class="sig-param">version_prefix=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetEngineVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetEngineVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">default_cluster_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">latest_master_version=None</em>, <em class="sig-param">latest_node_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">valid_master_versions=None</em>, <em class="sig-param">valid_node_versions=None</em>, <em class="sig-param">version_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetEngineVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.container.AwaitableGetRegistryImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetRegistryImageResult</code><span class="sig-paren">(</span><em class="sig-param">digest=None</em>, <em class="sig-param">image_url=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetRegistryImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetRegistryImageResult</code><span class="sig-paren">(</span><em class="sig-param">digest=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image_url=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetRegistryImageResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.container.AwaitableGetRegistryRepositoryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetRegistryRepositoryResult</code><span class="sig-paren">(</span><em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">repository_url=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetRegistryRepositoryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetRegistryRepositoryResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">repository_url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetRegistryRepositoryResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -43,6 +43,7 @@ and <a class="reference external" href="https://cloud.google.com/kubernetes-engi
 <div><p><strong>Note:</strong> All arguments and attributes, including basic auth username and
 passwords as well as certificate outputs will be stored in the raw state as
 plaintext. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_cluster.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -293,7 +294,7 @@ Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cidrBlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">cidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
@@ -471,9 +472,6 @@ a zonal cluster, omit the cluster’s zone.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">identityNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.addons_config">
 <code class="sig-name descname">addons_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.addons_config" title="Permalink to this definition">¶</a></dt>
@@ -745,7 +743,7 @@ external access (except the cluster node IPs, which GKE automatically whitelists
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cidrBlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">cidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
@@ -1378,7 +1376,7 @@ Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cidrBlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">cidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
@@ -1556,9 +1554,6 @@ a zonal cluster, omit the cluster’s zone.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">identityNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_cluster.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1601,7 +1596,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.container.GetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">additional_zones=None</em>, <em class="sig-param">addons_configs=None</em>, <em class="sig-param">authenticator_groups_configs=None</em>, <em class="sig-param">cluster_autoscalings=None</em>, <em class="sig-param">cluster_ipv4_cidr=None</em>, <em class="sig-param">database_encryptions=None</em>, <em class="sig-param">default_max_pods_per_node=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_binary_authorization=None</em>, <em class="sig-param">enable_intranode_visibility=None</em>, <em class="sig-param">enable_kubernetes_alpha=None</em>, <em class="sig-param">enable_legacy_abac=None</em>, <em class="sig-param">enable_shielded_nodes=None</em>, <em class="sig-param">enable_tpu=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">instance_group_urls=None</em>, <em class="sig-param">ip_allocation_policies=None</em>, <em class="sig-param">label_fingerprint=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">logging_service=None</em>, <em class="sig-param">maintenance_policies=None</em>, <em class="sig-param">master_auths=None</em>, <em class="sig-param">master_authorized_networks_configs=None</em>, <em class="sig-param">master_version=None</em>, <em class="sig-param">min_master_version=None</em>, <em class="sig-param">monitoring_service=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">network_policies=None</em>, <em class="sig-param">node_configs=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">node_pools=None</em>, <em class="sig-param">node_version=None</em>, <em class="sig-param">operation=None</em>, <em class="sig-param">pod_security_policy_configs=None</em>, <em class="sig-param">private_cluster_configs=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">release_channels=None</em>, <em class="sig-param">remove_default_node_pool=None</em>, <em class="sig-param">resource_labels=None</em>, <em class="sig-param">resource_usage_export_configs=None</em>, <em class="sig-param">services_ipv4_cidr=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">tpu_ipv4_cidr_block=None</em>, <em class="sig-param">vertical_pod_autoscalings=None</em>, <em class="sig-param">workload_identity_configs=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">additional_zones=None</em>, <em class="sig-param">addons_configs=None</em>, <em class="sig-param">authenticator_groups_configs=None</em>, <em class="sig-param">cluster_autoscalings=None</em>, <em class="sig-param">cluster_ipv4_cidr=None</em>, <em class="sig-param">database_encryptions=None</em>, <em class="sig-param">default_max_pods_per_node=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_binary_authorization=None</em>, <em class="sig-param">enable_intranode_visibility=None</em>, <em class="sig-param">enable_kubernetes_alpha=None</em>, <em class="sig-param">enable_legacy_abac=None</em>, <em class="sig-param">enable_shielded_nodes=None</em>, <em class="sig-param">enable_tpu=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">instance_group_urls=None</em>, <em class="sig-param">ip_allocation_policies=None</em>, <em class="sig-param">label_fingerprint=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">logging_service=None</em>, <em class="sig-param">maintenance_policies=None</em>, <em class="sig-param">master_authorized_networks_configs=None</em>, <em class="sig-param">master_auths=None</em>, <em class="sig-param">master_version=None</em>, <em class="sig-param">min_master_version=None</em>, <em class="sig-param">monitoring_service=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">network_policies=None</em>, <em class="sig-param">node_configs=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">node_pools=None</em>, <em class="sig-param">node_version=None</em>, <em class="sig-param">operation=None</em>, <em class="sig-param">pod_security_policy_configs=None</em>, <em class="sig-param">private_cluster_configs=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">release_channels=None</em>, <em class="sig-param">remove_default_node_pool=None</em>, <em class="sig-param">resource_labels=None</em>, <em class="sig-param">resource_usage_export_configs=None</em>, <em class="sig-param">services_ipv4_cidr=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">tpu_ipv4_cidr_block=None</em>, <em class="sig-param">vertical_pod_autoscalings=None</em>, <em class="sig-param">workload_identity_configs=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.GetClusterResult.id">
@@ -1613,12 +1608,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.container.GetEngineVersionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetEngineVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">default_cluster_version=None</em>, <em class="sig-param">latest_master_version=None</em>, <em class="sig-param">latest_node_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">valid_master_versions=None</em>, <em class="sig-param">valid_node_versions=None</em>, <em class="sig-param">version_prefix=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetEngineVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">default_cluster_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">latest_master_version=None</em>, <em class="sig-param">latest_node_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">valid_master_versions=None</em>, <em class="sig-param">valid_node_versions=None</em>, <em class="sig-param">version_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getEngineVersions.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.GetEngineVersionsResult.default_cluster_version">
 <code class="sig-name descname">default_cluster_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult.default_cluster_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Version of Kubernetes the service deploys by default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.container.GetEngineVersionsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1645,17 +1646,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of versions available in the given zone for use with node instances.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_gcp.container.GetEngineVersionsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.container.GetRegistryImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetRegistryImageResult</code><span class="sig-paren">(</span><em class="sig-param">digest=None</em>, <em class="sig-param">image_url=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetRegistryImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetRegistryImageResult</code><span class="sig-paren">(</span><em class="sig-param">digest=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image_url=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetRegistryImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRegistryImage.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.GetRegistryImageResult.id">
@@ -1667,7 +1662,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.container.GetRegistryRepositoryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetRegistryRepositoryResult</code><span class="sig-paren">(</span><em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">repository_url=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetRegistryRepositoryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetRegistryRepositoryResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">repository_url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetRegistryRepositoryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRegistryRepository.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.GetRegistryRepositoryResult.id">
@@ -1683,6 +1678,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a node pool in a Google Kubernetes Engine (GKE) cluster separately from
 the cluster control plane. For more information see <a class="reference external" href="https://cloud.google.com/container-engine/docs/node-pools">the official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters.nodePools">the API reference</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_node_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_node_pool.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1788,9 +1786,6 @@ when fuzzy versions are used. See the <code class="docutils literal notranslate"
 <li><p><code class="docutils literal notranslate"><span class="pre">maxSurge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_node_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_node_pool.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.NodePool.autoscaling">
 <code class="sig-name descname">autoscaling</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.autoscaling" title="Permalink to this definition">¶</a></dt>
@@ -2061,9 +2056,6 @@ when fuzzy versions are used. See the <code class="docutils literal notranslate"
 <li><p><code class="docutils literal notranslate"><span class="pre">maxSurge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_node_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_node_pool.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2109,6 +2101,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">Registry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Registry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ensures that the Google Cloud Storage bucket that backs Google Container Registry exists. Creating this resource will create the backing bucket if it does not exist, or do nothing if the bucket already exists. Destroying this resource does <em>NOT</em> destroy the backing bucket. For more information see <a class="reference external" href="https://cloud.google.com/container-registry/docs/overview">the official documentation</a></p>
 <p>This resource can be used to ensure that the GCS bucket exists prior to assigning permissions. For more information see the <a class="reference external" href="https://cloud.google.com/container-registry/docs/access-control">access control page</a> for GCR.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_registry.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_registry.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2120,9 +2115,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_registry.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_registry.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Registry.bucket_self_link">
 <code class="sig-name descname">bucket_self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Registry.bucket_self_link" title="Permalink to this definition">¶</a></dt>
@@ -2159,9 +2151,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_registry.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_registry.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2206,6 +2195,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.container.get_cluster">
 <code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get info about a GKE cluster from its name and location.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_container_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_container_cluster.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2222,9 +2214,6 @@ favour of <code class="docutils literal notranslate"><span class="pre">location<
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/container_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/container_cluster.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2245,6 +2234,7 @@ regional cluster, ensure that you have provided a region as the <code class="doc
 the datasource. A region can have a different set of supported versions than
 its component zones, and not all zones in a region are guaranteed to
 support the same version.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_container_engine_versions.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_container_engine_versions.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2264,9 +2254,6 @@ for full details on how version strings are formatted.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/container_engine_versions.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/container_engine_versions.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2275,7 +2262,7 @@ for full details on how version strings are formatted.</p></li>
 <dd><p>This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.</p>
 <p>The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.</p>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/container_registry_image.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/container_registry_image.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_container_registry_image.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_container_registry_image.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -2285,7 +2272,7 @@ for full details on how version strings are formatted.</p></li>
 <dd><p>This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.</p>
 <p>The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.</p>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/container_registry_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/container_registry_repository.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_container_registry_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_container_registry_repository.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

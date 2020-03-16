@@ -15,23 +15,23 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.pricing"></span><dl class="class">
 <dt id="pulumi_aws.pricing.AwaitableGetProductResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.pricing.</code><code class="sig-name descname">AwaitableGetProductResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">result=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pricing.AwaitableGetProductResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.pricing.</code><code class="sig-name descname">AwaitableGetProductResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">result=None</em>, <em class="sig-param">service_code=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pricing.AwaitableGetProductResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.pricing.GetProductResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.pricing.</code><code class="sig-name descname">GetProductResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">result=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pricing.GetProductResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.pricing.</code><code class="sig-name descname">GetProductResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">result=None</em>, <em class="sig-param">service_code=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pricing.GetProductResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProduct.</p>
-<dl class="attribute">
-<dt id="pulumi_aws.pricing.GetProductResult.result">
-<code class="sig-name descname">result</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pricing.GetProductResult.result" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set to the product returned from the API.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.pricing.GetProductResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pricing.GetProductResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.pricing.GetProductResult.result">
+<code class="sig-name descname">result</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pricing.GetProductResult.result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set to the product returned from the API.</p>
 </dd></dl>
 
 </dd></dl>
@@ -41,6 +41,9 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-prename descclassname">pulumi_aws.pricing.</code><code class="sig-name descname">get_product</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pricing.get_product" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the pricing information of all products in AWS.
 This data source is only available in a us-east-1 or ap-south-1 provider.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/pricing_product.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/pricing_product.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -54,9 +57,6 @@ This data source is only available in a us-east-1 or ap-south-1 provider.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The product attribute name that you want to filter on.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The product attribute value that you want to filter on.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/pricing_product.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/pricing_product.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

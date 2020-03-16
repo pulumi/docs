@@ -15,19 +15,22 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.elasticsearch"></span><dl class="class">
 <dt id="pulumi_aws.elasticsearch.AwaitableGetDomainResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">AwaitableGetDomainResult</code><span class="sig-paren">(</span><em class="sig-param">access_policies=None</em>, <em class="sig-param">advanced_options=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">cluster_configs=None</em>, <em class="sig-param">cognito_options=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">deleted=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">ebs_options=None</em>, <em class="sig-param">elasticsearch_version=None</em>, <em class="sig-param">encryption_at_rests=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">kibana_endpoint=None</em>, <em class="sig-param">log_publishing_options=None</em>, <em class="sig-param">node_to_node_encryptions=None</em>, <em class="sig-param">processing=None</em>, <em class="sig-param">snapshot_options=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_options=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.AwaitableGetDomainResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">AwaitableGetDomainResult</code><span class="sig-paren">(</span><em class="sig-param">access_policies=None</em>, <em class="sig-param">advanced_options=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">cluster_configs=None</em>, <em class="sig-param">cognito_options=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">deleted=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">ebs_options=None</em>, <em class="sig-param">elasticsearch_version=None</em>, <em class="sig-param">encryption_at_rests=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kibana_endpoint=None</em>, <em class="sig-param">log_publishing_options=None</em>, <em class="sig-param">node_to_node_encryptions=None</em>, <em class="sig-param">processing=None</em>, <em class="sig-param">snapshot_options=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.AwaitableGetDomainResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.elasticsearch.Domain">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">Domain</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_policies=None</em>, <em class="sig-param">advanced_options=None</em>, <em class="sig-param">cluster_config=None</em>, <em class="sig-param">cognito_options=None</em>, <em class="sig-param">domain_endpoint_options=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">ebs_options=None</em>, <em class="sig-param">elasticsearch_version=None</em>, <em class="sig-param">encrypt_at_rest=None</em>, <em class="sig-param">log_publishing_options=None</em>, <em class="sig-param">node_to_node_encryption=None</em>, <em class="sig-param">snapshot_options=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_options=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Elasticsearch Domain.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>access_policies</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM policy document specifying the access policies for the domain</p></li>
+<li><p><strong>access_policies</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – IAM policy document specifying the access policies for the domain</p></li>
 <li><p><strong>advanced_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value string pairs to specify advanced configuration options.
 Note that the values for these configuration options must be strings (wrapped in quotes) or they
 may be wrong and cause a perpetual diff, causing this provider to want to recreate your Elasticsearch
@@ -70,7 +73,7 @@ domain on every apply.</p></li>
 <p>The <strong>domain_endpoint_options</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enforceHttps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether or not to require HTTPS</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tlsSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tlsSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>ebs_options</strong> object supports the following:</p>
 <ul class="simple">
@@ -108,9 +111,6 @@ snapshot of the indices in the domain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of VPC Subnet IDs for the Elasticsearch domain endpoints to be created in.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticsearch.Domain.access_policies">
 <code class="sig-name descname">access_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain.access_policies" title="Permalink to this definition">¶</a></dt>
@@ -157,7 +157,7 @@ domain on every apply.</p>
 <dd><p>Domain endpoint HTTP(S) related options. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enforceHttps</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether or not to require HTTPS</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tlsSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tlsSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -278,7 +278,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>access_policies</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM policy document specifying the access policies for the domain</p></li>
+<li><p><strong>access_policies</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – IAM policy document specifying the access policies for the domain</p></li>
 <li><p><strong>advanced_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value string pairs to specify advanced configuration options.
 Note that the values for these configuration options must be strings (wrapped in quotes) or they
 may be wrong and cause a perpetual diff, causing this provider to want to recreate your Elasticsearch
@@ -338,7 +338,7 @@ domain on every apply.</p></li>
 <p>The <strong>domain_endpoint_options</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enforceHttps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether or not to require HTTPS</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tlsSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tlsSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>ebs_options</strong> object supports the following:</p>
 <ul class="simple">
@@ -376,9 +376,6 @@ snapshot of the indices in the domain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of VPC Subnet IDs for the Elasticsearch domain endpoints to be created in.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -423,19 +420,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticsearch.DomainPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">DomainPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_policies=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.DomainPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows setting policy to an Elasticsearch domain while referencing domain attributes (e.g. ARN)</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain_policy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>access_policies</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM policy document specifying the access policies for the domain</p></li>
+<li><p><strong>access_policies</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – IAM policy document specifying the access policies for the domain</p></li>
 <li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the domain.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticsearch.DomainPolicy.access_policies">
 <code class="sig-name descname">access_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.DomainPolicy.access_policies" title="Permalink to this definition">¶</a></dt>
@@ -459,14 +456,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>access_policies</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM policy document specifying the access policies for the domain</p></li>
+<li><p><strong>access_policies</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – IAM policy document specifying the access policies for the domain</p></li>
 <li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the domain.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -509,7 +503,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticsearch.GetDomainResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">GetDomainResult</code><span class="sig-paren">(</span><em class="sig-param">access_policies=None</em>, <em class="sig-param">advanced_options=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">cluster_configs=None</em>, <em class="sig-param">cognito_options=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">deleted=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">ebs_options=None</em>, <em class="sig-param">elasticsearch_version=None</em>, <em class="sig-param">encryption_at_rests=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">kibana_endpoint=None</em>, <em class="sig-param">log_publishing_options=None</em>, <em class="sig-param">node_to_node_encryptions=None</em>, <em class="sig-param">processing=None</em>, <em class="sig-param">snapshot_options=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_options=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">GetDomainResult</code><span class="sig-paren">(</span><em class="sig-param">access_policies=None</em>, <em class="sig-param">advanced_options=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">cluster_configs=None</em>, <em class="sig-param">cognito_options=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">deleted=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">ebs_options=None</em>, <em class="sig-param">elasticsearch_version=None</em>, <em class="sig-param">encryption_at_rests=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kibana_endpoint=None</em>, <em class="sig-param">log_publishing_options=None</em>, <em class="sig-param">node_to_node_encryptions=None</em>, <em class="sig-param">processing=None</em>, <em class="sig-param">snapshot_options=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDomain.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticsearch.GetDomainResult.access_policies">
@@ -584,6 +578,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.elasticsearch.GetDomainResult.kibana_endpoint">
 <code class="sig-name descname">kibana_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.kibana_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Domain-specific endpoint used to access the Kibana application.</p>
@@ -622,26 +622,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>VPC Options for private Elasticsearch domains.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.elasticsearch.GetDomainResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.elasticsearch.get_domain">
 <code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">get_domain</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.get_domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an Elasticsearch Domain</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticsearch_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticsearch_domain.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>domain_name</strong> (<em>str</em>) – Name of the domain.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticsearch_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticsearch_domain.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

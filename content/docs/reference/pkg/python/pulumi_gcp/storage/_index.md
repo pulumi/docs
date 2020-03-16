@@ -15,22 +15,22 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.storage"></span><dl class="class">
 <dt id="pulumi_gcp.storage.AwaitableGetBucketObjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">AwaitableGetBucketObjectResult</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">crc32c=None</em>, <em class="sig-param">detect_md5hash=None</em>, <em class="sig-param">md5hash=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">output_name=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.AwaitableGetBucketObjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">AwaitableGetBucketObjectResult</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">crc32c=None</em>, <em class="sig-param">detect_md5hash=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">md5hash=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">output_name=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">storage_class=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.AwaitableGetBucketObjectResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.AwaitableGetObjectSignedUrlResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">AwaitableGetObjectSignedUrlResult</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">content_md5=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">credentials=None</em>, <em class="sig-param">duration=None</em>, <em class="sig-param">extension_headers=None</em>, <em class="sig-param">http_method=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">signed_url=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.AwaitableGetObjectSignedUrlResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">AwaitableGetObjectSignedUrlResult</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">content_md5=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">credentials=None</em>, <em class="sig-param">duration=None</em>, <em class="sig-param">extension_headers=None</em>, <em class="sig-param">http_method=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">signed_url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.AwaitableGetObjectSignedUrlResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.AwaitableGetProjectServiceAccountResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">AwaitableGetProjectServiceAccountResult</code><span class="sig-paren">(</span><em class="sig-param">email_address=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">user_project=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.AwaitableGetProjectServiceAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">AwaitableGetProjectServiceAccountResult</code><span class="sig-paren">(</span><em class="sig-param">email_address=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">user_project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.AwaitableGetProjectServiceAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.AwaitableGetTransferProjectServieAccountResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">AwaitableGetTransferProjectServieAccountResult</code><span class="sig-paren">(</span><em class="sig-param">email=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.AwaitableGetTransferProjectServieAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">AwaitableGetTransferProjectServieAccountResult</code><span class="sig-paren">(</span><em class="sig-param">email=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.AwaitableGetTransferProjectServieAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -46,6 +46,9 @@ and
 <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/buckets">API</a>.</p>
 <p><strong>Note</strong>: If the project id is not set on the resource or in the provider block it will be dynamically
 determined which will require enabling the compute api.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -120,9 +123,6 @@ is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mainPageSuffix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notFoundPage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.Bucket.bucket_policy_only">
 <code class="sig-name descname">bucket_policy_only</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.Bucket.bucket_policy_only" title="Permalink to this definition">¶</a></dt>
@@ -359,9 +359,6 @@ is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mainPageSuffix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notFoundPage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -405,22 +402,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.storage.BucketACL">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">BucketACL</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">default_acl=None</em>, <em class="sig-param">predefined_acl=None</em>, <em class="sig-param">role_entities=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketACL" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a BucketACL resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket it applies to.</p></li>
-<li><p><strong>default_acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Configure this ACL to be the default ACL.</p></li>
-<li><p><strong>predefined_acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://cloud.google.com/storage/docs/access-control/lists#predefined-acl">canned GCS ACL</a> to apply. Must be set if <code class="docutils literal notranslate"><span class="pre">role_entity</span></code> is not.</p></li>
-<li><p><strong>role_entities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of role/entity pairs in the form <code class="docutils literal notranslate"><span class="pre">ROLE:entity</span></code>. See <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/bucketAccessControls">GCS Bucket ACL documentation</a>  for more details. Must be set if <code class="docutils literal notranslate"><span class="pre">predefined_acl</span></code> is not.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_acl.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a BucketACL resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] bucket: The name of the bucket it applies to.
+:param pulumi.Input[str] default_acl: Configure this ACL to be the default ACL.
+:param pulumi.Input[str] predefined_acl: The <a class="reference external" href="https://cloud.google.com/storage/docs/access-control/lists#predefined-acl">canned GCS ACL</a> to apply. Must be set if <code class="docutils literal notranslate"><span class="pre">role_entity</span></code> is not.
+:param pulumi.Input[list] role_entities: List of role/entity pairs in the form <code class="docutils literal notranslate"><span class="pre">ROLE:entity</span></code>. See <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/bucketAccessControls">GCS Bucket ACL documentation</a>  for more details. Must be set if <code class="docutils literal notranslate"><span class="pre">predefined_acl</span></code> is not.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.BucketACL.bucket">
 <code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketACL.bucket" title="Permalink to this definition">¶</a></dt>
@@ -465,9 +453,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_acl.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -511,18 +496,54 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.storage.BucketAccessControl">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">BucketAccessControl</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">entity=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketAccessControl" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a BucketAccessControl resource with the given unique name, props, and options.</p>
+<dd><p>Create a BucketAccessControl resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] bucket: The name of the bucket.
+:param pulumi.Input[str] entity: The entity holding the permission, in one of the following forms: user-userId user-email group-groupId group-email</p>
+<blockquote>
+<div><p>domain-domain project-team-projectId allUsers allAuthenticatedUsers Examples: The user <a class="reference external" href="mailto:liz&#37;&#52;&#48;example&#46;com">liz<span>&#64;</span>example<span>&#46;</span>com</a> would be
+<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>. The group <a class="reference external" href="mailto:example&#37;&#52;&#48;googlegroups&#46;com">example<span>&#64;</span>googlegroups<span>&#46;</span>com</a> would be <a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>. To refer to all
+members of the Google Apps for Business domain example.com, the entity would be domain-example.com.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access permission for the entity.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_access_control.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_access_control.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.BucketAccessControl.bucket">
+<code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketAccessControl.bucket" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the bucket.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.BucketAccessControl.domain">
+<code class="sig-name descname">domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketAccessControl.domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>The domain associated with the entity.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.BucketAccessControl.email">
+<code class="sig-name descname">email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketAccessControl.email" title="Permalink to this definition">¶</a></dt>
+<dd><p>The email address associated with the entity.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.BucketAccessControl.entity">
+<code class="sig-name descname">entity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketAccessControl.entity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The entity holding the permission, in one of the following forms: user-userId user-email group-groupId group-email
+domain-domain project-team-projectId allUsers allAuthenticatedUsers Examples: The user <a class="reference external" href="mailto:liz&#37;&#52;&#48;example&#46;com">liz<span>&#64;</span>example<span>&#46;</span>com</a> would be
+<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>. The group <a class="reference external" href="mailto:example&#37;&#52;&#48;googlegroups&#46;com">example<span>&#64;</span>googlegroups<span>&#46;</span>com</a> would be <a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>. To refer to all
+members of the Google Apps for Business domain example.com, the entity would be domain-example.com.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.BucketAccessControl.role">
+<code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketAccessControl.role" title="Permalink to this definition">¶</a></dt>
+<dd><p>The access permission for the entity.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.storage.BucketAccessControl.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">entity=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketAccessControl.get" title="Permalink to this definition">¶</a></dt>
@@ -534,12 +555,17 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket.</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain associated with the entity.</p></li>
+<li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address associated with the entity.</p></li>
+<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms: user-userId user-email group-groupId group-email
+domain-domain project-team-projectId allUsers allAuthenticatedUsers Examples: The user <a class="reference external" href="mailto:liz&#37;&#52;&#48;example&#46;com">liz<span>&#64;</span>example<span>&#46;</span>com</a> would be
+<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>. The group <a class="reference external" href="mailto:example&#37;&#52;&#48;googlegroups&#46;com">example<span>&#64;</span>googlegroups<span>&#46;</span>com</a> would be <a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>. To refer to all
+members of the Google Apps for Business domain example.com, the entity would be domain-example.com.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access permission for the entity.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_access_control.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_access_control.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -583,19 +609,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.storage.BucketIAMBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">BucketIAMBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a BucketIAMBinding resource with the given unique name, props, and options.</p>
+<dd><p>Create a BucketIAMBinding resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] bucket: Used to find the parent resource to bind the IAM policy to
+:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<blockquote>
+<div><p>Structure is documented below.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
-Structure is documented below.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">storage.BucketIAMBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-</ul>
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
@@ -604,9 +630,6 @@ Structure is documented below.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.BucketIAMBinding.bucket">
 <code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMBinding.bucket" title="Permalink to this definition">¶</a></dt>
@@ -667,9 +690,6 @@ Structure is documented below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -713,20 +733,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.storage.BucketIAMMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">BucketIAMMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a BucketIAMMember resource with the given unique name, props, and options.</p>
+<dd><p>Create a BucketIAMMember resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] bucket: Used to find the parent resource to bind the IAM policy to
+:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<blockquote>
+<div><p>Structure is documented below.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
-Structure is documented below.</p>
-</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">storage.BucketIAMBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-</ul>
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
@@ -735,9 +754,6 @@ Structure is documented below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.BucketIAMMember.bucket">
 <code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMMember.bucket" title="Permalink to this definition">¶</a></dt>
@@ -798,9 +814,6 @@ Structure is documented below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -844,20 +857,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.storage.BucketIAMPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">BucketIAMPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a BucketIAMPolicy resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
-a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a BucketIAMPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] bucket: Used to find the parent resource to bind the IAM policy to
+:param pulumi.Input[str] policy_data: The policy data generated by</p>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_policy.html.markdown</a>.</p>
+<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.BucketIAMPolicy.bucket">
@@ -896,9 +902,6 @@ a <code class="docutils literal notranslate"><span class="pre">organizations.get
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -950,6 +953,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><a class="reference external" href="https://cloud.google.com/storage/docs/key-terms#objects">the official documentation</a> 
 and 
 <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/objects">API</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_object.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -973,9 +979,6 @@ storage class or to a <a class="reference external" href="https://cloud.google.c
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_object.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.BucketObject.bucket">
 <code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketObject.bucket" title="Permalink to this definition">¶</a></dt>
@@ -1112,9 +1115,6 @@ storage class or to a <a class="reference external" href="https://cloud.google.c
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_object.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1171,6 +1171,7 @@ and
 <blockquote>
 <div><p>Want fine-grained control over default object ACLs? Use <code class="docutils literal notranslate"><span class="pre">storage.DefaultObjectAccessControl</span></code>
 to control individual role entity pairs.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_acl.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1184,9 +1185,6 @@ Omitting the field is the same as providing an empty list.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_acl.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.DefaultObjectACL.bucket">
 <code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectACL.bucket" title="Permalink to this definition">¶</a></dt>
@@ -1220,9 +1218,6 @@ Omitting the field is the same as providing an empty list.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_acl.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1286,17 +1281,83 @@ uses READER and OWNER instead of READ and FULL_CONTROL.</p>
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_access_control.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_access_control.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket.</p></li>
+<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
+“<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>”) * group-{{groupId}} * group-{{email}} (such as “<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>”) *
+domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}} * allUsers * allAuthenticatedUsers</p></li>
+<li><p><strong>object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object, if applied to an object.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access permission for the entity.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_access_control.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_access_control.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.DefaultObjectAccessControl.bucket">
+<code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectAccessControl.bucket" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the bucket.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.DefaultObjectAccessControl.domain">
+<code class="sig-name descname">domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectAccessControl.domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>The domain associated with the entity.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.DefaultObjectAccessControl.email">
+<code class="sig-name descname">email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectAccessControl.email" title="Permalink to this definition">¶</a></dt>
+<dd><p>The email address associated with the entity.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.DefaultObjectAccessControl.entity">
+<code class="sig-name descname">entity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectAccessControl.entity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
+“<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>”) * group-{{groupId}} * group-{{email}} (such as “<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>”) *
+domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}} * allUsers * allAuthenticatedUsers</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.DefaultObjectAccessControl.entity_id">
+<code class="sig-name descname">entity_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectAccessControl.entity_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID for the entity</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.DefaultObjectAccessControl.generation">
+<code class="sig-name descname">generation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectAccessControl.generation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The content generation of the object, if applied to an object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.DefaultObjectAccessControl.object">
+<code class="sig-name descname">object</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectAccessControl.object" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the object, if applied to an object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.DefaultObjectAccessControl.project_team">
+<code class="sig-name descname">project_team</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectAccessControl.project_team" title="Permalink to this definition">¶</a></dt>
+<dd><p>The project team associated with the entity</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">projectNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">team</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.DefaultObjectAccessControl.role">
+<code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectAccessControl.role" title="Permalink to this definition">¶</a></dt>
+<dd><p>The access permission for the entity.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.storage.DefaultObjectAccessControl.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">entity=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">generation=None</em>, <em class="sig-param">object=None</em>, <em class="sig-param">project_team=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectAccessControl.get" title="Permalink to this definition">¶</a></dt>
@@ -1308,6 +1369,17 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket.</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain associated with the entity.</p></li>
+<li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address associated with the entity.</p></li>
+<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
+“<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>”) * group-{{groupId}} * group-{{email}} (such as “<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>”) *
+domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}} * allUsers * allAuthenticatedUsers</p></li>
+<li><p><strong>entity_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for the entity</p></li>
+<li><p><strong>generation</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The content generation of the object, if applied to an object.</p></li>
+<li><p><strong>object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object, if applied to an object.</p></li>
+<li><p><strong>project_team</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project team associated with the entity</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access permission for the entity.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1316,9 +1388,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">projectNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">team</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_access_control.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_access_control.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1361,7 +1430,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.GetBucketObjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">GetBucketObjectResult</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">crc32c=None</em>, <em class="sig-param">detect_md5hash=None</em>, <em class="sig-param">md5hash=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">output_name=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">GetBucketObjectResult</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">crc32c=None</em>, <em class="sig-param">detect_md5hash=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">md5hash=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">output_name=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">storage_class=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBucketObject.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.GetBucketObjectResult.cache_control">
@@ -1401,6 +1470,12 @@ directive to specify caching behavior of object data. If omitted and object is a
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.storage.GetBucketObjectResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.storage.GetBucketObjectResult.md5hash">
 <code class="sig-name descname">md5hash</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult.md5hash" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Base 64 MD5 hash of the uploaded data.</p>
@@ -1420,35 +1495,29 @@ Supported values include: <code class="docutils literal notranslate"><span class
 storage class or to a <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes#standard">standard</a> class.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_gcp.storage.GetBucketObjectResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.GetObjectSignedUrlResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">GetObjectSignedUrlResult</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">content_md5=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">credentials=None</em>, <em class="sig-param">duration=None</em>, <em class="sig-param">extension_headers=None</em>, <em class="sig-param">http_method=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">signed_url=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetObjectSignedUrlResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">GetObjectSignedUrlResult</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">content_md5=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">credentials=None</em>, <em class="sig-param">duration=None</em>, <em class="sig-param">extension_headers=None</em>, <em class="sig-param">http_method=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">signed_url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetObjectSignedUrlResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getObjectSignedUrl.</p>
-<dl class="attribute">
-<dt id="pulumi_gcp.storage.GetObjectSignedUrlResult.signed_url">
-<code class="sig-name descname">signed_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetObjectSignedUrlResult.signed_url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The signed URL that can be used to access the storage object without authentication.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.GetObjectSignedUrlResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetObjectSignedUrlResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.GetObjectSignedUrlResult.signed_url">
+<code class="sig-name descname">signed_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetObjectSignedUrlResult.signed_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The signed URL that can be used to access the storage object without authentication.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.GetProjectServiceAccountResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">GetProjectServiceAccountResult</code><span class="sig-paren">(</span><em class="sig-param">email_address=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">user_project=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetProjectServiceAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">GetProjectServiceAccountResult</code><span class="sig-paren">(</span><em class="sig-param">email_address=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">user_project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetProjectServiceAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProjectServiceAccount.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.GetProjectServiceAccountResult.email_address">
@@ -1467,7 +1536,7 @@ in order to grant IAM permissions.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.GetTransferProjectServieAccountResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">GetTransferProjectServieAccountResult</code><span class="sig-paren">(</span><em class="sig-param">email=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetTransferProjectServieAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">GetTransferProjectServieAccountResult</code><span class="sig-paren">(</span><em class="sig-param">email=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetTransferProjectServieAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTransferProjectServieAccount.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.GetTransferProjectServieAccountResult.email">
@@ -1486,25 +1555,62 @@ in order to grant IAM permissions.</p>
 <dl class="class">
 <dt id="pulumi_gcp.storage.HmacKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">HmacKey</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.HmacKey" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a HmacKey resource with the given unique name, props, and options.</p>
+<dd><p>Create a HmacKey resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div><p>If it is not provided, the provider project is used.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.</p></li>
+<li><p><strong>service_account_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address of the key’s associated service account.</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of the key. Can be set to one of ACTIVE, INACTIVE.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_hmac_key.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_hmac_key.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.HmacKey.access_id">
+<code class="sig-name descname">access_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.HmacKey.access_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The access ID of the HMAC Key.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.HmacKey.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.HmacKey.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.HmacKey.secret">
+<code class="sig-name descname">secret</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.HmacKey.secret" title="Permalink to this definition">¶</a></dt>
+<dd><p>HMAC secret key material.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.HmacKey.service_account_email">
+<code class="sig-name descname">service_account_email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.HmacKey.service_account_email" title="Permalink to this definition">¶</a></dt>
+<dd><p>The email address of the key’s associated service account.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.HmacKey.state">
+<code class="sig-name descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.HmacKey.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>The state of the key. Can be set to one of ACTIVE, INACTIVE.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.HmacKey.time_created">
+<code class="sig-name descname">time_created</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.HmacKey.time_created" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘The creation time of the HMAC key in RFC 3339 format. ‘</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.HmacKey.updated">
+<code class="sig-name descname">updated</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.HmacKey.updated" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘The last modification time of the HMAC key metadata in RFC 3339 format.’</p>
 </dd></dl>
 
 <dl class="method">
@@ -1518,14 +1624,17 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access ID of the HMAC Key.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – HMAC secret key material.</p></li>
+<li><p><strong>service_account_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address of the key’s associated service account.</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of the key. Can be set to one of ACTIVE, INACTIVE.</p></li>
+<li><p><strong>time_created</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ‘The creation time of the HMAC key in RFC 3339 format. ‘</p></li>
+<li><p><strong>updated</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ‘The last modification time of the HMAC key metadata in RFC 3339 format.’</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_hmac_key.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_hmac_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1581,6 +1690,9 @@ must have the IAM permission “projects.topics.publish” for a Cloud Pub/Sub t
 account’s email address, use the <code class="docutils literal notranslate"><span class="pre">storage.getProjectServiceAccount</span></code> datasource’s <code class="docutils literal notranslate"><span class="pre">email_address</span></code> value, and see below
 for an example of enabling notifications by granting the correct IAM permission. See
 <a class="reference external" href="https://cloud.google.com/storage/docs/gsutil/commands/notification">the notifications documentation</a> for more details.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_notification.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1598,9 +1710,6 @@ you will need to use the project-level name.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_notification.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.Notification.bucket">
 <code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.Notification.bucket" title="Permalink to this definition">¶</a></dt>
@@ -1677,9 +1786,6 @@ you will need to use the project-level name.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_notification.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1733,6 +1839,7 @@ and
 <blockquote>
 <div><p>Want fine-grained control over object ACLs? Use <code class="docutils literal notranslate"><span class="pre">storage.ObjectAccessControl</span></code> to control individual
 role entity pairs.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_object_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_object_acl.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1749,9 +1856,6 @@ Must be set if <code class="docutils literal notranslate"><span class="pre">pred
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_object_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_object_acl.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.ObjectACL.bucket">
 <code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.ObjectACL.bucket" title="Permalink to this definition">¶</a></dt>
@@ -1798,9 +1902,6 @@ Must be set if <code class="docutils literal notranslate"><span class="pre">pred
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_object_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_object_acl.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1863,17 +1964,83 @@ uses READER and OWNER instead of READ and FULL_CONTROL.</p>
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_object_access_control.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_object_access_control.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket.</p></li>
+<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
+“<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>”) * group-{{groupId}} * group-{{email}} (such as “<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>”) *
+domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}} * allUsers * allAuthenticatedUsers</p></li>
+<li><p><strong>object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object to apply the access control to.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access permission for the entity.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_object_access_control.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_object_access_control.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.ObjectAccessControl.bucket">
+<code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.ObjectAccessControl.bucket" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the bucket.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.ObjectAccessControl.domain">
+<code class="sig-name descname">domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.ObjectAccessControl.domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>The domain associated with the entity.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.ObjectAccessControl.email">
+<code class="sig-name descname">email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.ObjectAccessControl.email" title="Permalink to this definition">¶</a></dt>
+<dd><p>The email address associated with the entity.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.ObjectAccessControl.entity">
+<code class="sig-name descname">entity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.ObjectAccessControl.entity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
+“<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>”) * group-{{groupId}} * group-{{email}} (such as “<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>”) *
+domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}} * allUsers * allAuthenticatedUsers</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.ObjectAccessControl.entity_id">
+<code class="sig-name descname">entity_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.ObjectAccessControl.entity_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID for the entity</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.ObjectAccessControl.generation">
+<code class="sig-name descname">generation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.ObjectAccessControl.generation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The content generation of the object, if applied to an object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.ObjectAccessControl.object">
+<code class="sig-name descname">object</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.ObjectAccessControl.object" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the object to apply the access control to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.ObjectAccessControl.project_team">
+<code class="sig-name descname">project_team</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.ObjectAccessControl.project_team" title="Permalink to this definition">¶</a></dt>
+<dd><p>The project team associated with the entity</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">projectNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">team</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.ObjectAccessControl.role">
+<code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.ObjectAccessControl.role" title="Permalink to this definition">¶</a></dt>
+<dd><p>The access permission for the entity.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.storage.ObjectAccessControl.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">entity=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">generation=None</em>, <em class="sig-param">object=None</em>, <em class="sig-param">project_team=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.ObjectAccessControl.get" title="Permalink to this definition">¶</a></dt>
@@ -1885,6 +2052,17 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket.</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain associated with the entity.</p></li>
+<li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address associated with the entity.</p></li>
+<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
+“<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>”) * group-{{groupId}} * group-{{email}} (such as “<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>”) *
+domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}} * allUsers * allAuthenticatedUsers</p></li>
+<li><p><strong>entity_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for the entity</p></li>
+<li><p><strong>generation</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The content generation of the object, if applied to an object.</p></li>
+<li><p><strong>object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object to apply the access control to.</p></li>
+<li><p><strong>project_team</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project team associated with the entity</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access permission for the entity.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1893,9 +2071,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">projectNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">team</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_object_access_control.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_object_access_control.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1950,6 +2125,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_transfer_job.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_transfer_job.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2033,9 +2211,6 @@ is not provided, the provider project is used.</p></li>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_transfer_job.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_transfer_job.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.TransferJob.creation_time">
 <code class="sig-name descname">creation_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.TransferJob.creation_time" title="Permalink to this definition">¶</a></dt>
@@ -2251,9 +2426,6 @@ is not provided, the provider project is used.</p></li>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_transfer_job.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_transfer_job.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2301,6 +2473,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 See <a class="reference external" href="https://cloud.google.com/storage/docs/key-terms#objects">the official documentation</a>
 and
 <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/objects">API</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/storage_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/storage_bucket_object.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2309,9 +2484,6 @@ and
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/storage_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/storage_bucket_object.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2319,6 +2491,9 @@ and
 <code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">get_object_signed_url</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">content_md5=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">credentials=None</em>, <em class="sig-param">duration=None</em>, <em class="sig-param">extension_headers=None</em>, <em class="sig-param">http_method=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.get_object_signed_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Google Cloud storage signed URL data source generates a signed URL for a given storage object. Signed URLs provide a way to give time-limited read or write access to anyone in possession of the URL, regardless of whether they have a Google account.</p>
 <p>For more info about signed URL’s is available <a class="reference external" href="https://cloud.google.com/storage/docs/access-control/signed-urls">here</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/signed_url.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/signed_url.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2339,9 +2514,6 @@ Any header starting with <code class="docutils literal notranslate"><span class=
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/storage_object_signed_url.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/storage_object_signed_url.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2352,6 +2524,9 @@ Any header starting with <code class="docutils literal notranslate"><span class=
 special service account can be used to set up <code class="docutils literal notranslate"><span class="pre">storage.Notification</span></code> resources.</p>
 <p>For more information see
 <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/projects/serviceAccount">the API reference</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_storage_project_service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_storage_project_service_account.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2361,23 +2536,20 @@ from a different account than the one you are finding the service account for.</
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/storage_project_service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/storage_project_service_account.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.storage.get_transfer_project_servie_account">
 <code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">get_transfer_project_servie_account</code><span class="sig-paren">(</span><em class="sig-param">project=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.get_transfer_project_servie_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve Storage Transfer service account for this project</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_storage_transfer_project_service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_storage_transfer_project_service_account.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>project</strong> (<em>str</em>) – The project ID. If it is not provided, the provider project is used.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/storage_transfer_project_service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/storage_transfer_project_service_account.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

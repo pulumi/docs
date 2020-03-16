@@ -16,14 +16,24 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.cloudtasks"></span><dl class="class">
 <dt id="pulumi_gcp.cloudtasks.Queue">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudtasks.</code><code class="sig-name descname">Queue</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_engine_routing_override=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">rate_limits=None</em>, <em class="sig-param">retry_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudtasks.Queue" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Queue resource with the given unique name, props, and options.</p>
+<dd><p>Create a Queue resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] app_engine_routing_override: Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue
+:param pulumi.Input[str] location: The location of the queue
+:param pulumi.Input[str] name: The queue name.
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div><p>If it is not provided, the provider project is used.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.</p></li>
+<li><p><strong>rate_limits</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Rate limits for task dispatches. The queue’s actual dispatch rate is the result of: * Number of tasks in the queue *
+User-specified throttling: rateLimits, retryConfig, and the queue’s state. * System throttling due to 429 (Too Many
+Requests) or 503 (Service Unavailable) responses from the worker, high error rates, or to smooth sudden large traffic
+spikes.</p></li>
+<li><p><strong>retry_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings that determine the retry behavior.</p></li>
 </ul>
 </dd>
 </dl>
@@ -48,14 +58,62 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxRetryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minBackoff</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_tasks_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_tasks_queue.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudtasks.Queue.app_engine_routing_override">
+<code class="sig-name descname">app_engine_routing_override</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudtasks.Queue.app_engine_routing_override" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudtasks.Queue.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudtasks.Queue.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location of the queue</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudtasks.Queue.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudtasks.Queue.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The queue name.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudtasks.Queue.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudtasks.Queue.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudtasks.Queue.rate_limits">
+<code class="sig-name descname">rate_limits</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudtasks.Queue.rate_limits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rate limits for task dispatches. The queue’s actual dispatch rate is the result of: * Number of tasks in the queue *
+User-specified throttling: rateLimits, retryConfig, and the queue’s state. * System throttling due to 429 (Too Many
+Requests) or 503 (Service Unavailable) responses from the worker, high error rates, or to smooth sudden large traffic
+spikes.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBurstSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConcurrentDispatches</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxDispatchesPerSecond</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudtasks.Queue.retry_config">
+<code class="sig-name descname">retry_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudtasks.Queue.retry_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settings that determine the retry behavior.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBackoff</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxDoublings</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRetryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minBackoff</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -69,8 +127,16 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_engine_routing_override</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the queue</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The queue name.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>rate_limits</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Rate limits for task dispatches. The queue’s actual dispatch rate is the result of: * Number of tasks in the queue *
+User-specified throttling: rateLimits, retryConfig, and the queue’s state. * System throttling due to 429 (Too Many
+Requests) or 503 (Service Unavailable) responses from the worker, high error rates, or to smooth sudden large traffic
+spikes.</p></li>
+<li><p><strong>retry_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings that determine the retry behavior.</p></li>
 </ul>
 </dd>
 </dl>
@@ -95,9 +161,6 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxRetryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minBackoff</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_tasks_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_tasks_queue.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

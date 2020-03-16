@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.emr"></span><dl class="class">
 <dt id="pulumi_aws.emr.Cluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.emr.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_info=None</em>, <em class="sig-param">applications=None</em>, <em class="sig-param">autoscaling_role=None</em>, <em class="sig-param">bootstrap_actions=None</em>, <em class="sig-param">configurations=None</em>, <em class="sig-param">configurations_json=None</em>, <em class="sig-param">core_instance_count=None</em>, <em class="sig-param">core_instance_group=None</em>, <em class="sig-param">core_instance_type=None</em>, <em class="sig-param">custom_ami_id=None</em>, <em class="sig-param">ebs_root_volume_size=None</em>, <em class="sig-param">ec2_attributes=None</em>, <em class="sig-param">instance_groups=None</em>, <em class="sig-param">keep_job_flow_alive_when_no_steps=None</em>, <em class="sig-param">kerberos_attributes=None</em>, <em class="sig-param">log_uri=None</em>, <em class="sig-param">master_instance_group=None</em>, <em class="sig-param">master_instance_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">release_label=None</em>, <em class="sig-param">scale_down_behavior=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">service_role=None</em>, <em class="sig-param">steps=None</em>, <em class="sig-param">step_concurrency_level=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">termination_protection=None</em>, <em class="sig-param">visible_to_all_users=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.emr.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_info=None</em>, <em class="sig-param">applications=None</em>, <em class="sig-param">autoscaling_role=None</em>, <em class="sig-param">bootstrap_actions=None</em>, <em class="sig-param">configurations=None</em>, <em class="sig-param">configurations_json=None</em>, <em class="sig-param">core_instance_count=None</em>, <em class="sig-param">core_instance_group=None</em>, <em class="sig-param">core_instance_type=None</em>, <em class="sig-param">custom_ami_id=None</em>, <em class="sig-param">ebs_root_volume_size=None</em>, <em class="sig-param">ec2_attributes=None</em>, <em class="sig-param">instance_groups=None</em>, <em class="sig-param">keep_job_flow_alive_when_no_steps=None</em>, <em class="sig-param">kerberos_attributes=None</em>, <em class="sig-param">log_uri=None</em>, <em class="sig-param">master_instance_group=None</em>, <em class="sig-param">master_instance_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">release_label=None</em>, <em class="sig-param">scale_down_behavior=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">service_role=None</em>, <em class="sig-param">step_concurrency_level=None</em>, <em class="sig-param">steps=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">termination_protection=None</em>, <em class="sig-param">visible_to_all_users=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic MapReduce Cluster, a web service that makes it easy to
 process large amounts of data efficiently. See <a class="reference external" href="https://aws.amazon.com/documentation/elastic-mapreduce/">Amazon Elastic MapReduce Documentation</a>
 for more information.</p>
@@ -110,6 +110,9 @@ for more information about the EMR-managed security group rules.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">main_class</span></code> - (Optional) Name of the main class in the specified Java file. If not specified, the JAR file should specify a Main-Class in its manifest file.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> - (Optional) Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_cluster.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -139,8 +142,8 @@ for more information about the EMR-managed security group rules.</p>
 <li><p><strong>scale_down_behavior</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an <code class="docutils literal notranslate"><span class="pre">instance</span> <span class="pre">group</span></code> is resized.</p></li>
 <li><p><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with <code class="docutils literal notranslate"><span class="pre">release_label</span></code> 4.8.0 or greater</p></li>
 <li><p><strong>service_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM role that will be assumed by the Amazon EMR service to access AWS resources</p></li>
-<li><p><strong>steps</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize the <a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html">lifecycle configuration block</a> with <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> if other steps are being managed outside of this provider. This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p></li>
 <li><p><strong>step_concurrency_level</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with <code class="docutils literal notranslate"><span class="pre">release_label</span></code> 5.28.0 or greater. (default is 1)</p></li>
+<li><p><strong>steps</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize the <a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html">lifecycle configuration block</a> with <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> if other steps are being managed outside of this provider. This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – list of tags to apply to the EMR Cluster</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Switch on/off termination protection (default is <code class="docutils literal notranslate"><span class="pre">false</span></code>, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>visible_to_all_users</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
@@ -236,9 +239,6 @@ for more information about the EMR-managed security group rules.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job flow</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.emr.Cluster.additional_info">
 <code class="sig-name descname">additional_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.Cluster.additional_info" title="Permalink to this definition">¶</a></dt>
@@ -457,6 +457,12 @@ for more information about the EMR-managed security group rules.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.emr.Cluster.step_concurrency_level">
+<code class="sig-name descname">step_concurrency_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.Cluster.step_concurrency_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with <code class="docutils literal notranslate"><span class="pre">release_label</span></code> 5.28.0 or greater. (default is 1)</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.emr.Cluster.steps">
 <code class="sig-name descname">steps</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.Cluster.steps" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize the <a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html">lifecycle configuration block</a> with <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> if other steps are being managed outside of this provider. This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
@@ -472,12 +478,6 @@ for more information about the EMR-managed security group rules.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job flow</p></li>
 </ul>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.emr.Cluster.step_concurrency_level">
-<code class="sig-name descname">step_concurrency_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.Cluster.step_concurrency_level" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with <code class="docutils literal notranslate"><span class="pre">release_label</span></code> 5.28.0 or greater. (default is 1)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -500,7 +500,7 @@ for more information about the EMR-managed security group rules.</p>
 
 <dl class="method">
 <dt id="pulumi_aws.emr.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_info=None</em>, <em class="sig-param">applications=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">autoscaling_role=None</em>, <em class="sig-param">bootstrap_actions=None</em>, <em class="sig-param">cluster_state=None</em>, <em class="sig-param">configurations=None</em>, <em class="sig-param">configurations_json=None</em>, <em class="sig-param">core_instance_count=None</em>, <em class="sig-param">core_instance_group=None</em>, <em class="sig-param">core_instance_type=None</em>, <em class="sig-param">custom_ami_id=None</em>, <em class="sig-param">ebs_root_volume_size=None</em>, <em class="sig-param">ec2_attributes=None</em>, <em class="sig-param">instance_groups=None</em>, <em class="sig-param">keep_job_flow_alive_when_no_steps=None</em>, <em class="sig-param">kerberos_attributes=None</em>, <em class="sig-param">log_uri=None</em>, <em class="sig-param">master_instance_group=None</em>, <em class="sig-param">master_instance_type=None</em>, <em class="sig-param">master_public_dns=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">release_label=None</em>, <em class="sig-param">scale_down_behavior=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">service_role=None</em>, <em class="sig-param">steps=None</em>, <em class="sig-param">step_concurrency_level=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">termination_protection=None</em>, <em class="sig-param">visible_to_all_users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_info=None</em>, <em class="sig-param">applications=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">autoscaling_role=None</em>, <em class="sig-param">bootstrap_actions=None</em>, <em class="sig-param">cluster_state=None</em>, <em class="sig-param">configurations=None</em>, <em class="sig-param">configurations_json=None</em>, <em class="sig-param">core_instance_count=None</em>, <em class="sig-param">core_instance_group=None</em>, <em class="sig-param">core_instance_type=None</em>, <em class="sig-param">custom_ami_id=None</em>, <em class="sig-param">ebs_root_volume_size=None</em>, <em class="sig-param">ec2_attributes=None</em>, <em class="sig-param">instance_groups=None</em>, <em class="sig-param">keep_job_flow_alive_when_no_steps=None</em>, <em class="sig-param">kerberos_attributes=None</em>, <em class="sig-param">log_uri=None</em>, <em class="sig-param">master_instance_group=None</em>, <em class="sig-param">master_instance_type=None</em>, <em class="sig-param">master_public_dns=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">release_label=None</em>, <em class="sig-param">scale_down_behavior=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">service_role=None</em>, <em class="sig-param">step_concurrency_level=None</em>, <em class="sig-param">steps=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">termination_protection=None</em>, <em class="sig-param">visible_to_all_users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -544,9 +544,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>scale_down_behavior</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an <code class="docutils literal notranslate"><span class="pre">instance</span> <span class="pre">group</span></code> is resized.</p></li>
 <li><p><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with <code class="docutils literal notranslate"><span class="pre">release_label</span></code> 4.8.0 or greater</p></li>
 <li><p><strong>service_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM role that will be assumed by the Amazon EMR service to access AWS resources</p></li>
+<li><p><strong>step_concurrency_level</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with <code class="docutils literal notranslate"><span class="pre">release_label</span></code> 5.28.0 or greater. (default is 1)</p></li>
 <li><p><strong>steps</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize the <a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html">lifecycle configuration block</a> with <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> if other steps are being managed outside of this provider. This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
 </p></li>
-<li><p><strong>step_concurrency_level</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with <code class="docutils literal notranslate"><span class="pre">release_label</span></code> 5.28.0 or greater. (default is 1)</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – list of tags to apply to the EMR Cluster</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Switch on/off termination protection (default is <code class="docutils literal notranslate"><span class="pre">false</span></code>, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>visible_to_all_users</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
@@ -642,9 +642,6 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job flow</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_cluster.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -694,6 +691,7 @@ See <a class="reference external" href="https://aws.amazon.com/documentation/emr
 <div><p><strong>NOTE:</strong> At this time, Instance Groups cannot be destroyed through the API nor
 web interface. Instance Groups are destroyed when the EMR Cluster is destroyed.
 this provider will resize any Instance Group to zero when destroying the resource.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_instance_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_instance_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -720,9 +718,6 @@ this provider will resize any Instance Group to zero when destroying the resourc
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The volume type. Valid options are ‘gp2’, ‘io1’ and ‘standard’.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volumesPerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of EBS Volumes to attach per instance.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_instance_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_instance_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.emr.InstanceGroup.autoscaling_policy">
 <code class="sig-name descname">autoscaling_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.InstanceGroup.autoscaling_policy" title="Permalink to this definition">¶</a></dt>
@@ -814,9 +809,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The volume type. Valid options are ‘gp2’, ‘io1’ and ‘standard’.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volumesPerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of EBS Volumes to attach per instance.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_instance_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_instance_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -861,6 +853,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.emr.SecurityConfiguration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.emr.</code><code class="sig-name descname">SecurityConfiguration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.SecurityConfiguration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage AWS EMR Security Configurations</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_security_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_security_configuration.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -873,9 +868,6 @@ prefix. Conflicts with <code class="docutils literal notranslate"><span class="p
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_security_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_security_configuration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.emr.SecurityConfiguration.configuration">
 <code class="sig-name descname">configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.SecurityConfiguration.configuration" title="Permalink to this definition">¶</a></dt>
@@ -920,9 +912,6 @@ prefix. Conflicts with <code class="docutils literal notranslate"><span class="p
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_security_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_security_configuration.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
