@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.cas"></span><dl class="class">
 <dt id="pulumi_alicloud.cas.AwaitableGetCertificatesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cas.</code><code class="sig-name descname">AwaitableGetCertificatesResult</code><span class="sig-paren">(</span><em class="sig-param">certificates=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cas.AwaitableGetCertificatesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cas.</code><code class="sig-name descname">AwaitableGetCertificatesResult</code><span class="sig-paren">(</span><em class="sig-param">certificates=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cas.AwaitableGetCertificatesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -26,6 +26,7 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>NOTE:</strong> The Certificate name which you want to add must be already registered and had not added by another account. Every Certificate name can only exist in a unique group.</p>
 <p><strong>NOTE:</strong> The Cas Certificate region only support cn-hangzhou, ap-south-1, me-east-1, eu-central-1, ap-northeast-1, ap-southeast-2.</p>
 <p><strong>NOTE:</strong> Available in 1.35.0+ .</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cas_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cas_certificate.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -38,9 +39,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cas_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cas_certificate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cas.Certificate.cert">
 <code class="sig-name descname">cert</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cas.Certificate.cert" title="Permalink to this definition">¶</a></dt>
@@ -76,9 +74,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cas_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cas_certificate.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -121,12 +116,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.cas.GetCertificatesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cas.</code><code class="sig-name descname">GetCertificatesResult</code><span class="sig-paren">(</span><em class="sig-param">certificates=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cas.GetCertificatesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cas.</code><code class="sig-name descname">GetCertificatesResult</code><span class="sig-paren">(</span><em class="sig-param">certificates=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cas.GetCertificatesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCertificates.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cas.GetCertificatesResult.certificates">
 <code class="sig-name descname">certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cas.GetCertificatesResult.certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of apis. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.cas.GetCertificatesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cas.GetCertificatesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -141,18 +142,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of cert names.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.cas.GetCertificatesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cas.GetCertificatesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.cas.get_certificates">
 <code class="sig-prename descclassname">pulumi_alicloud.cas.</code><code class="sig-name descname">get_certificates</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cas.get_certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of CAS Certificates in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cas_certificates.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cas_certificates.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -161,9 +159,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cas_certificates.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cas_certificates.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

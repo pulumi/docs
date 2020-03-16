@@ -20,23 +20,26 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_aws.route53.AwaitableGetResolverRuleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">AwaitableGetResolverRuleResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">resolver_rule_id=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">share_status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.AwaitableGetResolverRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">AwaitableGetResolverRuleResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">resolver_rule_id=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">share_status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.AwaitableGetResolverRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.route53.AwaitableGetResolverRulesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">AwaitableGetResolverRulesResult</code><span class="sig-paren">(</span><em class="sig-param">owner_id=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">resolver_rule_ids=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">share_status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.AwaitableGetResolverRulesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">AwaitableGetResolverRulesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">resolver_rule_ids=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">share_status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.AwaitableGetResolverRulesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.route53.AwaitableGetZoneResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">AwaitableGetZoneResult</code><span class="sig-paren">(</span><em class="sig-param">caller_reference=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">linked_service_description=None</em>, <em class="sig-param">linked_service_principal=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">private_zone=None</em>, <em class="sig-param">resource_record_set_count=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.AwaitableGetZoneResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">AwaitableGetZoneResult</code><span class="sig-paren">(</span><em class="sig-param">caller_reference=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">linked_service_description=None</em>, <em class="sig-param">linked_service_principal=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">private_zone=None</em>, <em class="sig-param">resource_record_set_count=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.AwaitableGetZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.route53.DelegationSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">DelegationSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">reference_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.DelegationSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a <a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/APIReference/API-actions-by-function.html#actions-by-function-reusable-delegation-sets">Route53 Delegation Set</a> resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_delegation_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_delegation_set.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -47,9 +50,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_delegation_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_delegation_set.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.DelegationSet.name_servers">
 <code class="sig-name descname">name_servers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.DelegationSet.name_servers" title="Permalink to this definition">¶</a></dt>
@@ -82,9 +82,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_delegation_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_delegation_set.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -133,12 +130,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.route53.GetResolverRuleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">GetResolverRuleResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">resolver_rule_id=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">share_status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.GetResolverRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">GetResolverRuleResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">resolver_rule_id=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">share_status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.GetResolverRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getResolverRule.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.GetResolverRuleResult.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetResolverRuleResult.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN (Amazon Resource Name) for the resolver rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.route53.GetResolverRuleResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetResolverRuleResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -160,35 +163,29 @@ Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHAR
 <dd><p>A mapping of tags assigned to the resolver rule.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.route53.GetResolverRuleResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetResolverRuleResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.route53.GetResolverRulesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">GetResolverRulesResult</code><span class="sig-paren">(</span><em class="sig-param">owner_id=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">resolver_rule_ids=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">share_status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.GetResolverRulesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">GetResolverRulesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">resolver_rule_ids=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">share_status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.GetResolverRulesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getResolverRules.</p>
-<dl class="attribute">
-<dt id="pulumi_aws.route53.GetResolverRulesResult.resolver_rule_ids">
-<code class="sig-name descname">resolver_rule_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetResolverRulesResult.resolver_rule_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>The IDs of the matched resolver rules.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.route53.GetResolverRulesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetResolverRulesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.route53.GetResolverRulesResult.resolver_rule_ids">
+<code class="sig-name descname">resolver_rule_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetResolverRulesResult.resolver_rule_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IDs of the matched resolver rules.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.route53.GetZoneResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">GetZoneResult</code><span class="sig-paren">(</span><em class="sig-param">caller_reference=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">linked_service_description=None</em>, <em class="sig-param">linked_service_principal=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">private_zone=None</em>, <em class="sig-param">resource_record_set_count=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.GetZoneResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">GetZoneResult</code><span class="sig-paren">(</span><em class="sig-param">caller_reference=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">linked_service_description=None</em>, <em class="sig-param">linked_service_principal=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">private_zone=None</em>, <em class="sig-param">resource_record_set_count=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.GetZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getZone.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.GetZoneResult.caller_reference">
@@ -200,6 +197,12 @@ Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHAR
 <dt id="pulumi_aws.route53.GetZoneResult.comment">
 <code class="sig-name descname">comment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetZoneResult.comment" title="Permalink to this definition">¶</a></dt>
 <dd><p>The comment field of the Hosted Zone.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.route53.GetZoneResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetZoneResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -226,18 +229,15 @@ Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHAR
 <dd><p>The number of Record Set in the Hosted Zone.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.route53.GetZoneResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetZoneResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.route53.HealthCheck">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">HealthCheck</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">child_health_threshold=None</em>, <em class="sig-param">child_healthchecks=None</em>, <em class="sig-param">cloudwatch_alarm_name=None</em>, <em class="sig-param">cloudwatch_alarm_region=None</em>, <em class="sig-param">enable_sni=None</em>, <em class="sig-param">failure_threshold=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">insufficient_data_health_status=None</em>, <em class="sig-param">invert_healthcheck=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">measure_latency=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">reference_name=None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">request_interval=None</em>, <em class="sig-param">resource_path=None</em>, <em class="sig-param">search_string=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.HealthCheck" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Route53 health check.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_health_check.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_health_check.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -266,9 +266,6 @@ Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHAR
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_health_check.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_health_check.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.HealthCheck.child_health_threshold">
 <code class="sig-name descname">child_health_threshold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.HealthCheck.child_health_threshold" title="Permalink to this definition">¶</a></dt>
@@ -418,9 +415,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_health_check.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_health_check.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -471,6 +465,7 @@ the CloudWatch log group must be in the <code class="docutils literal notranslat
 a permissive CloudWatch log resource policy must be in place, and
 the Route53 hosted zone must be public.
 See <a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/query-logs.html?console_help=true#query-logs-configuring">Configuring Logging for DNS Queries</a> for additional details.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_query_log.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_query_log.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -482,9 +477,6 @@ See <a class="reference external" href="https://docs.aws.amazon.com/Route53/late
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_query_log.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_query_log.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.QueryLog.cloudwatch_log_group_arn">
 <code class="sig-name descname">cloudwatch_log_group_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.QueryLog.cloudwatch_log_group_arn" title="Permalink to this definition">¶</a></dt>
@@ -513,9 +505,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_query_log.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_query_log.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -560,6 +549,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.route53.Record">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">Record</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aliases=None</em>, <em class="sig-param">allow_overwrite=None</em>, <em class="sig-param">failover_routing_policies=None</em>, <em class="sig-param">geolocation_routing_policies=None</em>, <em class="sig-param">health_check_id=None</em>, <em class="sig-param">latency_routing_policies=None</em>, <em class="sig-param">multivalue_answer_routing_policy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">set_identifier=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">weighted_routing_policies=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.Record" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Route53 record resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_record.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_record.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -577,7 +569,7 @@ Alias record documented below.</p></li>
 <li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> inside the configuration string (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;first255characters&quot;&quot;morecharacters&quot;</span></code>).</p></li>
 <li><p><strong>set_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier to differentiate records with routing policies from one another. Required if using <code class="docutils literal notranslate"><span class="pre">failover</span></code>, <code class="docutils literal notranslate"><span class="pre">geolocation</span></code>, <code class="docutils literal notranslate"><span class="pre">latency</span></code>, or <code class="docutils literal notranslate"><span class="pre">weighted</span></code> routing policies documented below.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The TTL of the record.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> or <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>. A <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> record will be served if its healthcheck is passing, otherwise the <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code> will be served. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets</a></p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> or <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>. A <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> record will be served if its healthcheck is passing, otherwise the <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code> will be served. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets</a></p></li>
 <li><p><strong>weighted_routing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See <cite>``resource_elb.zone_id`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/elb.html#zone_id">https://www.terraform.io/docs/providers/aws/r/elb.html#zone_id</a>&gt;`_ for example.</p></li>
 </ul>
@@ -607,9 +599,6 @@ Alias record documented below.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - A numeric value indicating the relative weight of the record. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted</a>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_record.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_record.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.Record.aliases">
 <code class="sig-name descname">aliases</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.Record.aliases" title="Permalink to this definition">¶</a></dt>
@@ -745,7 +734,7 @@ Alias record documented below.</p></li>
 <li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> inside the configuration string (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;first255characters&quot;&quot;morecharacters&quot;</span></code>).</p></li>
 <li><p><strong>set_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier to differentiate records with routing policies from one another. Required if using <code class="docutils literal notranslate"><span class="pre">failover</span></code>, <code class="docutils literal notranslate"><span class="pre">geolocation</span></code>, <code class="docutils literal notranslate"><span class="pre">latency</span></code>, or <code class="docutils literal notranslate"><span class="pre">weighted</span></code> routing policies documented below.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The TTL of the record.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> or <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>. A <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> record will be served if its healthcheck is passing, otherwise the <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code> will be served. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets</a></p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> or <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>. A <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> record will be served if its healthcheck is passing, otherwise the <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code> will be served. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets</a></p></li>
 <li><p><strong>weighted_routing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See <cite>``resource_elb.zone_id`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/elb.html#zone_id">https://www.terraform.io/docs/providers/aws/r/elb.html#zone_id</a>&gt;`_ for example.</p></li>
 </ul>
@@ -775,9 +764,6 @@ Alias record documented below.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - A numeric value indicating the relative weight of the record. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted</a>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_record.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_record.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -822,6 +808,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.route53.ResolverEndpoint">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">ResolverEndpoint</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">direction=None</em>, <em class="sig-param">ip_addresses=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.ResolverEndpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Route 53 Resolver endpoint resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_endpoint.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -844,9 +833,6 @@ to your network (for outbound endpoints) or on the way from your network to your
 <li><p><code class="docutils literal notranslate"><span class="pre">ipId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the subnet that contains the IP address.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_endpoint.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.ResolverEndpoint.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.ResolverEndpoint.arn" title="Permalink to this definition">¶</a></dt>
@@ -927,9 +913,6 @@ to your network (for outbound endpoints) or on the way from your network to your
 <li><p><code class="docutils literal notranslate"><span class="pre">ipId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the subnet that contains the IP address.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_endpoint.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -974,6 +957,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.route53.ResolverRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">ResolverRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_ips=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.ResolverRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Route53 Resolver rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -995,9 +981,6 @@ This argument should only be specified for <code class="docutils literal notrans
 <li><p><code class="docutils literal notranslate"><span class="pre">ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port at <code class="docutils literal notranslate"><span class="pre">ip</span></code> that you want to forward DNS queries to. Default value is <code class="docutils literal notranslate"><span class="pre">53</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.ResolverRule.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.ResolverRule.arn" title="Permalink to this definition">¶</a></dt>
@@ -1090,9 +1073,6 @@ This argument should only be specified for <code class="docutils literal notrans
 <li><p><code class="docutils literal notranslate"><span class="pre">ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port at <code class="docutils literal notranslate"><span class="pre">ip</span></code> that you want to forward DNS queries to. Default value is <code class="docutils literal notranslate"><span class="pre">53</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1137,6 +1117,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.route53.ResolverRuleAssociation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">ResolverRuleAssociation</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resolver_rule_id=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.ResolverRuleAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Route53 Resolver rule association.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule_association.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1148,9 +1131,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule_association.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.ResolverRuleAssociation.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.ResolverRuleAssociation.name" title="Permalink to this definition">¶</a></dt>
@@ -1186,9 +1166,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule_association.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1233,6 +1210,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.route53.Zone">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">Zone</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">delegation_set_id=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpcs=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.Zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Route53 Hosted Zone.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1252,9 +1232,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the VPC to associate.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Region of the VPC to associate. Defaults to AWS provider region.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.Zone.comment">
 <code class="sig-name descname">comment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.Zone.comment" title="Permalink to this definition">¶</a></dt>
@@ -1337,9 +1314,6 @@ Find more about delegation sets in <a class="reference external" href="https://d
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the VPC to associate.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Region of the VPC to associate. Defaults to AWS provider region.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1387,6 +1361,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Unless explicit association ordering is required (e.g. a separate cross-account association authorization), usage of this resource is not recommended. Use the <code class="docutils literal notranslate"><span class="pre">vpc</span></code> configuration blocks available within the <cite>``route53.Zone`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html">https://www.terraform.io/docs/providers/aws/r/route53_zone.html</a>&gt;`_ instead.</p>
 <p><strong>NOTE:</strong> This provider provides both this standalone Zone VPC Association resource and exclusive VPC associations defined in-line in the <cite>``route53.Zone`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html">https://www.terraform.io/docs/providers/aws/r/route53_zone.html</a>&gt;`_ via <code class="docutils literal notranslate"><span class="pre">vpc</span></code> configuration blocks. At this time, you cannot use those in-line VPC associations in conjunction with this resource and the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use the generic this provider resource <a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#lifecycle">lifecycle configuration block</a> with <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> in the <code class="docutils literal notranslate"><span class="pre">route53.Zone</span></code> resource to manage additional associations via this resource.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone_association.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1399,9 +1374,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone_association.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.ZoneAssociation.vpc_id">
 <code class="sig-name descname">vpc_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.ZoneAssociation.vpc_id" title="Permalink to this definition">¶</a></dt>
@@ -1437,9 +1409,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone_association.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1485,20 +1454,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">get_delegation_set</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_delegation_set" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">route53.DelegationSet</span></code> provides details about a specific Route 53 Delegation Set.</p>
 <p>This data source allows to find a list of name servers associated with a specific delegation set.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_delegation_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_delegation_set.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The Hosted Zone id of the desired delegation set.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_delegation_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_delegation_set.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.route53.get_resolver_rule">
 <code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">get_resolver_rule</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">resolver_rule_id=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_resolver_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">route53.ResolverRule</span></code> provides details about a specific Route53 Resolver rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_resolver_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_resolver_rule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1510,15 +1482,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_resolver_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_resolver_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.route53.get_resolver_rules">
 <code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">get_resolver_rules</code><span class="sig-paren">(</span><em class="sig-param">owner_id=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">share_status=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_resolver_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">route53.getResolverRules</span></code> provides details about a set of Route53 Resolver rules.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_resolver_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_resolver_rules.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1530,9 +1502,6 @@ Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHAR
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_resolver_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_resolver_rules.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1540,6 +1509,9 @@ Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHAR
 <code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">get_zone</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">private_zone=None</em>, <em class="sig-param">resource_record_set_count=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">route53.Zone</span></code> provides details about a specific Route 53 Hosted Zone.</p>
 <p>This data source allows to find a Hosted Zone ID given Hosted Zone name and certain search criteria.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_zone.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_zone.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1551,9 +1523,6 @@ Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHAR
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_zone.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_zone.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

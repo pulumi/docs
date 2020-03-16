@@ -15,12 +15,12 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.qldb"></span><dl class="class">
 <dt id="pulumi_aws.qldb.AwaitableGetLedgerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.qldb.</code><code class="sig-name descname">AwaitableGetLedgerResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.qldb.AwaitableGetLedgerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.qldb.</code><code class="sig-name descname">AwaitableGetLedgerResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.qldb.AwaitableGetLedgerResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.qldb.GetLedgerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.qldb.</code><code class="sig-name descname">GetLedgerResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.qldb.GetLedgerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.qldb.</code><code class="sig-name descname">GetLedgerResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.qldb.GetLedgerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLedger.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.qldb.GetLedgerResult.arn">
@@ -45,19 +45,10 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="class">
 <dt id="pulumi_aws.qldb.Ledger">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.qldb.</code><code class="sig-name descname">Ledger</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.qldb.Ledger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Ledger resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/qldb_ledger.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/qldb_ledger.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Ledger resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] tags: Key-value mapping of resource tags</p>
 <dl class="attribute">
 <dt id="pulumi_aws.qldb.Ledger.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.qldb.Ledger.arn" title="Permalink to this definition">¶</a></dt>
@@ -86,9 +77,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/qldb_ledger.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/qldb_ledger.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -133,14 +121,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.qldb.get_ledger">
 <code class="sig-prename descclassname">pulumi_aws.qldb.</code><code class="sig-name descname">get_ledger</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.qldb.get_ledger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to fetch information about a Quantum Ledger Database.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/qldb_ledger.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/qldb_ledger.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The friendly name of the ledger to match.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/qldb_ledger.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/qldb_ledger.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

@@ -15,47 +15,44 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.fc"></span><dl class="class">
 <dt id="pulumi_alicloud.fc.AwaitableGetFunctionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">AwaitableGetFunctionsResult</code><span class="sig-paren">(</span><em class="sig-param">functions=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.AwaitableGetFunctionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">AwaitableGetFunctionsResult</code><span class="sig-paren">(</span><em class="sig-param">functions=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">service_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.AwaitableGetFunctionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.fc.AwaitableGetServicesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">AwaitableGetServicesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.AwaitableGetServicesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">AwaitableGetServicesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">services=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.AwaitableGetServicesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.fc.AwaitableGetTriggersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">AwaitableGetTriggersResult</code><span class="sig-paren">(</span><em class="sig-param">function_name=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">triggers=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.AwaitableGetTriggersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">AwaitableGetTriggersResult</code><span class="sig-paren">(</span><em class="sig-param">function_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">triggers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.AwaitableGetTriggersResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.fc.Function">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">Function</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">code_checksum=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">environment_variables=None</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">handler=None</em>, <em class="sig-param">memory_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">oss_bucket=None</em>, <em class="sig-param">oss_key=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.Function" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Function resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function Compute function description.</p></li>
-<li><p><strong>environment*variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A map that defines environment variables for the function.</p>
-</p></li>
-<li><p><strong>filename</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to the function’s deployment package within the local filesystem. It is conflict with the <cite>oss*`</cite>-prefixed options.</p></li>
-<li><p><strong>handler</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The function [entry point](<a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/62213.htm">https://www.alibabacloud.com/help/doc-detail/62213.htm</a>) in your code.</p></li>
-<li><p><strong>memory_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of memory in MB your Function can use at runtime. Defaults to``128<a href="#id3"><span class="problematic" id="id4">``</span></a>. Limits to [128, 3072].</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function Compute function name. It is the only in one service and is conflict with “name_prefix”.</p></li>
-<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Setting a prefix to get a only function name. It is conflict with “name”.</p></li>
-<li><p><strong>oss_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The OSS bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id5"><span class="problematic" id="id6">``</span></a>. This bucket must reside in the same Alibaba Cloud region where you are creating the function.</p></li>
-<li><p><strong>oss_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The OSS key of an object containing the function’s deployment package. Conflicts with``filename`.</p></li>
-<li><p><strong>runtime</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – See [Runtimes][<a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/52077.htm">https://www.alibabacloud.com/help/doc-detail/52077.htm</a>] for valid values.</p></li>
-<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function Compute service name.</p></li>
-<li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time your Function has to run in seconds.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/fc_function.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/fc_function.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Function resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] code_checksum: The checksum (crc64) of the function code.
+:param pulumi.Input[str] description: The Function Compute function description.
+:param pulumi.Input[dict] environment<em>variables: A map that defines environment variables for the function.
+:param pulumi.Input[str] filename: The path to the function’s deployment package within the local filesystem. It is conflict with the `oss</em><code class="docutils literal notranslate"><span class="pre">-prefixed</span> <span class="pre">options.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">handler:</span> <span class="pre">The</span> <span class="pre">function</span> <span class="pre">[entry</span> <span class="pre">point](https://www.alibabacloud.com/help/doc-detail/62213.htm)</span> <span class="pre">in</span> <span class="pre">your</span> <span class="pre">code.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[float]</span> <span class="pre">memory_size:</span> <span class="pre">Amount</span> <span class="pre">of</span> <span class="pre">memory</span> <span class="pre">in</span> <span class="pre">MB</span> <span class="pre">your</span> <span class="pre">Function</span> <span class="pre">can</span> <span class="pre">use</span> <span class="pre">at</span> <span class="pre">runtime.</span> <span class="pre">Defaults</span> <span class="pre">to</span></code>128<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">Limits</span> <span class="pre">to</span> <span class="pre">[128,</span> <span class="pre">3072].</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">name:</span> <span class="pre">The</span> <span class="pre">Function</span> <span class="pre">Compute</span> <span class="pre">function</span> <span class="pre">name.</span> <span class="pre">It</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">only</span> <span class="pre">in</span> <span class="pre">one</span> <span class="pre">service</span> <span class="pre">and</span> <span class="pre">is</span> <span class="pre">conflict</span> <span class="pre">with</span> <span class="pre">&quot;name_prefix&quot;.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">name_prefix:</span> <span class="pre">Setting</span> <span class="pre">a</span> <span class="pre">prefix</span> <span class="pre">to</span> <span class="pre">get</span> <span class="pre">a</span> <span class="pre">only</span> <span class="pre">function</span> <span class="pre">name.</span> <span class="pre">It</span> <span class="pre">is</span> <span class="pre">conflict</span> <span class="pre">with</span> <span class="pre">&quot;name&quot;.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">oss_bucket:</span> <span class="pre">The</span> <span class="pre">OSS</span> <span class="pre">bucket</span> <span class="pre">location</span> <span class="pre">containing</span> <span class="pre">the</span> <span class="pre">function's</span> <span class="pre">deployment</span> <span class="pre">package.</span> <span class="pre">Conflicts</span> <span class="pre">with</span></code>filename<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">This</span> <span class="pre">bucket</span> <span class="pre">must</span> <span class="pre">reside</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">same</span> <span class="pre">Alibaba</span> <span class="pre">Cloud</span> <span class="pre">region</span> <span class="pre">where</span> <span class="pre">you</span> <span class="pre">are</span> <span class="pre">creating</span> <span class="pre">the</span> <span class="pre">function.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">oss_key:</span> <span class="pre">The</span> <span class="pre">OSS</span> <span class="pre">key</span> <span class="pre">of</span> <span class="pre">an</span> <span class="pre">object</span> <span class="pre">containing</span> <span class="pre">the</span> <span class="pre">function's</span> <span class="pre">deployment</span> <span class="pre">package.</span> <span class="pre">Conflicts</span> <span class="pre">with</span></code>filename`.
+:param pulumi.Input[str] runtime: See [Runtimes][<a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/52077.htm">https://www.alibabacloud.com/help/doc-detail/52077.htm</a>] for valid values.
+:param pulumi.Input[str] service: The Function Compute service name.
+:param pulumi.Input[float] timeout: The amount of time your Function has to run in seconds.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.fc.Function.code_checksum">
+<code class="sig-name descname">code_checksum</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.Function.code_checksum" title="Permalink to this definition">¶</a></dt>
+<dd><p>The checksum (crc64) of the function code.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.fc.Function.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.Function.description" title="Permalink to this definition">¶</a></dt>
@@ -151,6 +148,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>code_checksum</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The checksum (crc64) of the function code.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function Compute function description.</p></li>
 <li><p><strong>environment*variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A map that defines environment variables for the function.</p>
 </p></li>
@@ -158,10 +156,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>function_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function Compute service ID.</p></li>
 <li><p><strong>handler</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The function [entry point](<a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/62213.htm">https://www.alibabacloud.com/help/doc-detail/62213.htm</a>) in your code.</p></li>
 <li><p><strong>last_modified</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date this resource was last modified.</p></li>
-<li><p><strong>memory_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of memory in MB your Function can use at runtime. Defaults to``128<a href="#id9"><span class="problematic" id="id10">``</span></a>. Limits to [128, 3072].</p></li>
+<li><p><strong>memory_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of memory in MB your Function can use at runtime. Defaults to``128<a href="#id3"><span class="problematic" id="id4">``</span></a>. Limits to [128, 3072].</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function Compute function name. It is the only in one service and is conflict with “name_prefix”.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Setting a prefix to get a only function name. It is conflict with “name”.</p></li>
-<li><p><strong>oss_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The OSS bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id11"><span class="problematic" id="id12">``</span></a>. This bucket must reside in the same Alibaba Cloud region where you are creating the function.</p></li>
+<li><p><strong>oss_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The OSS bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id5"><span class="problematic" id="id6">``</span></a>. This bucket must reside in the same Alibaba Cloud region where you are creating the function.</p></li>
 <li><p><strong>oss_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The OSS key of an object containing the function’s deployment package. Conflicts with``filename`.</p></li>
 <li><p><strong>runtime</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – See [Runtimes][<a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/52077.htm">https://www.alibabacloud.com/help/doc-detail/52077.htm</a>] for valid values.</p></li>
 <li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function Compute service name.</p></li>
@@ -169,9 +167,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/fc_function.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/fc_function.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -214,12 +209,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.fc.GetFunctionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">GetFunctionsResult</code><span class="sig-paren">(</span><em class="sig-param">functions=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.GetFunctionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">GetFunctionsResult</code><span class="sig-paren">(</span><em class="sig-param">functions=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">service_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.GetFunctionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFunctions.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.fc.GetFunctionsResult.functions">
 <code class="sig-name descname">functions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetFunctionsResult.functions" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of functions. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.fc.GetFunctionsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetFunctionsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -234,18 +235,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of functions names.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.fc.GetFunctionsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetFunctionsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.fc.GetServicesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">GetServicesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.GetServicesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">GetServicesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">services=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.GetServicesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServices.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.fc.GetServicesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetServicesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.fc.GetServicesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetServicesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -264,18 +265,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of FC services. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.fc.GetServicesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetServicesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.fc.GetTriggersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">GetTriggersResult</code><span class="sig-paren">(</span><em class="sig-param">function_name=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">triggers=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.GetTriggersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">GetTriggersResult</code><span class="sig-paren">(</span><em class="sig-param">function_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">triggers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.GetTriggersResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTriggers.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.fc.GetTriggersResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetTriggersResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.fc.GetTriggersResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetTriggersResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -294,33 +295,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of FC triggers. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.fc.GetTriggersResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetTriggersResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.fc.Service">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">internet_access=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">vpc_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.Service" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Service resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The function compute service description.</p></li>
-<li><p><strong>internet_access</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow the service to access Internet. Default to “true”.</p></li>
-<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Provide this to store your FC service logs. Fields documented below. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/51924.htm">Create a Service</a>.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function Compute service name. It is the only in one Alicloud account and is conflict with “name_prefix”.</p></li>
-<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Setting a prefix to get a only name. It is conflict with “name”.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/52885.htm">User Permissions</a> for more details.</p></li>
-<li><p><strong>vpc_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Provide this to allow your FC service to access your VPC. Fields documented below. See <a class="reference external" href="https://www.alibabacloud.com/help/faq-detail/72959.htm">Function Compute Service in VPC</a>.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Service resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: The function compute service description.
+:param pulumi.Input[bool] internet_access: Whether to allow the service to access Internet. Default to “true”.
+:param pulumi.Input[dict] log_config: Provide this to store your FC service logs. Fields documented below. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/51924.htm">Create a Service</a>.
+:param pulumi.Input[str] name: The Function Compute service name. It is the only in one Alicloud account and is conflict with “name_prefix”.
+:param pulumi.Input[str] name_prefix: Setting a prefix to get a only name. It is conflict with “name”.
+:param pulumi.Input[str] role: RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/52885.htm">User Permissions</a> for more details.
+:param pulumi.Input[dict] vpc_config: Provide this to allow your FC service to access your VPC. Fields documented below. See <a class="reference external" href="https://www.alibabacloud.com/help/faq-detail/72959.htm">Function Compute Service in VPC</a>.</p>
 <p>The <strong>log_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">logstore</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The log store name of Logs service.</p></li>
@@ -332,9 +321,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of vswitch IDs associated with the FC service.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/fc_service.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/fc_service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.fc.Service.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.Service.description" title="Permalink to this definition">¶</a></dt>
@@ -435,9 +421,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of vswitch IDs associated with the FC service.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/fc_service.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/fc_service.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -481,28 +464,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.fc.Trigger">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">Trigger</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">config=None</em>, <em class="sig-param">config_mns=None</em>, <em class="sig-param">function=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">source_arn=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.Trigger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Trigger resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The config of Function Compute trigger.It is valid when <code class="docutils literal notranslate"><span class="pre">type</span></code> is not “mns_topic”.See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/70140.htm">Configure triggers and events</a> for more details.</p></li>
-<li><p><strong>config_mns</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The config of Function Compute trigger when the type is “mns_topic”.It is conflict with <code class="docutils literal notranslate"><span class="pre">config</span></code>.</p></li>
-<li><p><strong>function</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function Compute function name.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function Compute trigger name. It is the only in one service and is conflict with “name_prefix”.</p></li>
-<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Setting a prefix to get a only trigger name. It is conflict with “name”.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – RAM role arn attached to the Function Compute trigger. Role used by the event source to call the function. The value format is “acs:ram::$account-id:role/$role-name”. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/53102.htm">Create a trigger</a> for more details.</p></li>
-<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function Compute service name.</p></li>
-<li><p><strong>source_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Event source resource address. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/53102.htm">Create a trigger</a> for more details.</p>
-</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Type of the trigger. Valid values: [“oss”, “log”, “timer”, “http”, “mns_topic”, “cdn_events”].</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/fc_trigger.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/fc_trigger.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Trigger resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] config: The config of Function Compute trigger.It is valid when <code class="docutils literal notranslate"><span class="pre">type</span></code> is not “mns_topic”.See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/70140.htm">Configure triggers and events</a> for more details.
+:param pulumi.Input[str] config_mns: The config of Function Compute trigger when the type is “mns_topic”.It is conflict with <code class="docutils literal notranslate"><span class="pre">config</span></code>.
+:param pulumi.Input[str] function: The Function Compute function name.
+:param pulumi.Input[str] name: The Function Compute trigger name. It is the only in one service and is conflict with “name_prefix”.
+:param pulumi.Input[str] name_prefix: Setting a prefix to get a only trigger name. It is conflict with “name”.
+:param pulumi.Input[str] role: RAM role arn attached to the Function Compute trigger. Role used by the event source to call the function. The value format is “acs:ram::$account-id:role/$role-name”. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/53102.htm">Create a trigger</a> for more details.
+:param pulumi.Input[str] service: The Function Compute service name.
+:param pulumi.Input[str] source_arn: Event source resource address. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/53102.htm">Create a trigger</a> for more details.
+:param pulumi.Input[str] type: The Type of the trigger. Valid values: [“oss”, “log”, “timer”, “http”, “mns_topic”, “cdn_events”].</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.fc.Trigger.config">
 <code class="sig-name descname">config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.Trigger.config" title="Permalink to this definition">¶</a></dt>
@@ -597,9 +570,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/fc_trigger.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/fc_trigger.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -644,6 +614,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.fc.get_functions">
 <code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">get_functions</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.get_functions" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the Function Compute functions of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_functions.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_functions.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by function name.</p>
@@ -657,15 +630,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p><strong>service_name</strong> (<em>str</em>) – Name of the service that contains the functions to find.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_functions.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_functions.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.fc.get_services">
 <code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">get_services</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.get_services" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the Function Compute services of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_services.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_services.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by FC service name.</p>
@@ -674,15 +647,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `ids` (Optional, Available in 1.53.0+) - A list of FC services ids.
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_services.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_services.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.fc.get_triggers">
 <code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">get_triggers</code><span class="sig-paren">(</span><em class="sig-param">function_name=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.get_triggers" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the Function Compute triggers of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_triggers.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_triggers.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -699,9 +672,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p><strong>service_name</strong> (<em>str</em>) – FC service name.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_triggers.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_triggers.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

@@ -19,6 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The project is the basic unit of resource management in Datahub Service and is used to isolate and control resources. It contains a set of Topics. You can manage the datahub sources of an application by using projects. <a class="reference external" href="https://help.aliyun.com/document_detail/47440.html">Refer to details</a>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Currently Datahub service only can be supported in the regions: cn-beijing, cn-hangzhou, cn-shanghai, cn-shenzhen,  ap-southeast-1.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_project.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_project.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -31,9 +32,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_project.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_project.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.datahub.Project.comment">
 <code class="sig-name descname">comment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.datahub.Project.comment" title="Permalink to this definition">¶</a></dt>
@@ -76,9 +74,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_project.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_project.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -123,6 +118,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.datahub.Subscription">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.datahub.</code><code class="sig-name descname">Subscription</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">topic_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.datahub.Subscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>The subscription is the basic unit of resource usage in Datahub Service under Publish/Subscribe model. You can manage the relationships between user and topics by using subscriptions. <a class="reference external" href="https://help.aliyun.com/document_detail/47440.html">Refer to details</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_subscription.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -136,9 +134,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_subscription.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.datahub.Subscription.comment">
 <code class="sig-name descname">comment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.datahub.Subscription.comment" title="Permalink to this definition">¶</a></dt>
@@ -197,9 +192,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_subscription.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -243,21 +235,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.datahub.Topic">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.datahub.</code><code class="sig-name descname">Topic</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">life_cycle=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">record_schema=None</em>, <em class="sig-param">record_type=None</em>, <em class="sig-param">shard_count=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.datahub.Topic" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Topic resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Comment of the datahub topic. It cannot be longer than 255 characters.</p></li>
-<li><p><strong>life*cycle</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.</p>
-</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and ‘<a href="#id24"><span class="problematic" id="id25">*</span></a>’ are allowed. It is case-insensitive.</p></li>
-<li><p><strong>project_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the datahub project that this topic belongs to. It is case-insensitive.</p></li>
-<li><p><strong>record_schema</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Schema of this topic, required only for TUPLE topic. Supported data types (case-insensitive) are:</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Topic resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] comment: Comment of the datahub topic. It cannot be longer than 255 characters.
+:param pulumi.Input[float] life<em>cycle: How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.
+:param pulumi.Input[str] name: The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and ‘</em>’ are allowed. It is case-insensitive.
+:param pulumi.Input[str] project_name: The name of the datahub project that this topic belongs to. It is case-insensitive.
+:param pulumi.Input[dict] record_schema: Schema of this topic, required only for TUPLE topic. Supported data types (case-insensitive) are:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">BIGINT</span>
 <span class="o">-</span> <span class="n">STRING</span>
 <span class="o">-</span> <span class="n">BOOLEAN</span>
@@ -273,9 +258,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_topic.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.datahub.Topic.comment">
 <code class="sig-name descname">comment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.datahub.Topic.comment" title="Permalink to this definition">¶</a></dt>
@@ -353,7 +335,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>last_modify_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Last modify time of the datahub topic. It is the same as <em>create_time</em> at the beginning. It is also a human-readable string rather than 64-bits UTC.</p></li>
 <li><p><strong>life*cycle</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.</p>
 </p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and ‘<a href="#id28"><span class="problematic" id="id29">*</span></a>’ are allowed. It is case-insensitive.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and ‘<a href="#id24"><span class="problematic" id="id25">*</span></a>’ are allowed. It is case-insensitive.</p></li>
 <li><p><strong>project_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the datahub project that this topic belongs to. It is case-insensitive.</p></li>
 <li><p><strong>record_schema</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Schema of this topic, required only for TUPLE topic. Supported data types (case-insensitive) are:</p></li>
 </ul>
@@ -374,9 +356,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_topic.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

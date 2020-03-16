@@ -15,13 +15,19 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.iam"></span><dl class="class">
 <dt id="pulumi_gcp.iam.AwaitableGetRuleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iam.</code><code class="sig-name descname">AwaitableGetRuleResult</code><span class="sig-paren">(</span><em class="sig-param">included_permissions=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stage=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iam.AwaitableGetRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iam.</code><code class="sig-name descname">AwaitableGetRuleResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">included_permissions=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stage=None</em>, <em class="sig-param">title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iam.AwaitableGetRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.iam.GetRuleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iam.</code><code class="sig-name descname">GetRuleResult</code><span class="sig-paren">(</span><em class="sig-param">included_permissions=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stage=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iam.GetRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iam.</code><code class="sig-name descname">GetRuleResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">included_permissions=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stage=None</em>, <em class="sig-param">title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iam.GetRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRule.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.iam.GetRuleResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.iam.GetRuleResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.iam.GetRuleResult.included_permissions">
 <code class="sig-name descname">included_permissions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.iam.GetRuleResult.included_permissions" title="Permalink to this definition">¶</a></dt>
@@ -40,26 +46,20 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>is a friendly title for the role, such as “Role Viewer”</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_gcp.iam.GetRuleResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.iam.GetRuleResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.iam.get_rule">
 <code class="sig-prename descclassname">pulumi_gcp.iam.</code><code class="sig-name descname">get_rule</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iam.get_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Google IAM Role.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_iam_role.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_iam_role.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the Role to lookup in the form <code class="docutils literal notranslate"><span class="pre">roles/{ROLE_NAME}</span></code>, <code class="docutils literal notranslate"><span class="pre">organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}</span></code> or <code class="docutils literal notranslate"><span class="pre">projects/{PROJECT_ID}/roles/{ROLE_NAME}</span></code></p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/iam_role.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/iam_role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

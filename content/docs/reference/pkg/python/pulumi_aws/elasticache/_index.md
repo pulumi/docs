@@ -15,12 +15,12 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.elasticache"></span><dl class="class">
 <dt id="pulumi_aws.elasticache.AwaitableGetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticache.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">cache_nodes=None</em>, <em class="sig-param">cluster_address=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">configuration_endpoint=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">maintenance_window=None</em>, <em class="sig-param">node_type=None</em>, <em class="sig-param">notification_topic_arn=None</em>, <em class="sig-param">num_cache_nodes=None</em>, <em class="sig-param">parameter_group_name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">replication_group_id=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">security_group_names=None</em>, <em class="sig-param">snapshot_retention_limit=None</em>, <em class="sig-param">snapshot_window=None</em>, <em class="sig-param">subnet_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticache.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">cache_nodes=None</em>, <em class="sig-param">cluster_address=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">configuration_endpoint=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">maintenance_window=None</em>, <em class="sig-param">node_type=None</em>, <em class="sig-param">notification_topic_arn=None</em>, <em class="sig-param">num_cache_nodes=None</em>, <em class="sig-param">parameter_group_name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">replication_group_id=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">security_group_names=None</em>, <em class="sig-param">snapshot_retention_limit=None</em>, <em class="sig-param">snapshot_window=None</em>, <em class="sig-param">subnet_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.elasticache.AwaitableGetReplicationGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticache.</code><code class="sig-name descname">AwaitableGetReplicationGroupResult</code><span class="sig-paren">(</span><em class="sig-param">auth_token_enabled=None</em>, <em class="sig-param">automatic_failover_enabled=None</em>, <em class="sig-param">configuration_endpoint_address=None</em>, <em class="sig-param">member_clusters=None</em>, <em class="sig-param">node_type=None</em>, <em class="sig-param">number_cache_clusters=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">primary_endpoint_address=None</em>, <em class="sig-param">replication_group_description=None</em>, <em class="sig-param">replication_group_id=None</em>, <em class="sig-param">snapshot_retention_limit=None</em>, <em class="sig-param">snapshot_window=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.AwaitableGetReplicationGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticache.</code><code class="sig-name descname">AwaitableGetReplicationGroupResult</code><span class="sig-paren">(</span><em class="sig-param">auth_token_enabled=None</em>, <em class="sig-param">automatic_failover_enabled=None</em>, <em class="sig-param">configuration_endpoint_address=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">member_clusters=None</em>, <em class="sig-param">node_type=None</em>, <em class="sig-param">number_cache_clusters=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">primary_endpoint_address=None</em>, <em class="sig-param">replication_group_description=None</em>, <em class="sig-param">replication_group_id=None</em>, <em class="sig-param">snapshot_retention_limit=None</em>, <em class="sig-param">snapshot_window=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.AwaitableGetReplicationGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -36,6 +36,7 @@ a difference in its planning phase because the actual modification has not yet t
 place. You can use the <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> flag to instruct the service to apply the
 change immediately. Using <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> can result in a brief downtime as the server reboots.
 See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more information.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -94,9 +95,6 @@ for the cache cluster.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticache.Cluster.apply_immediately">
 <code class="sig-name descname">apply_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.apply_immediately" title="Permalink to this definition">¶</a></dt>
@@ -357,9 +355,6 @@ for the cache cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379. Cannot be provided with <code class="docutils literal notranslate"><span class="pre">replication_group_id</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -402,7 +397,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticache.GetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticache.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">cache_nodes=None</em>, <em class="sig-param">cluster_address=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">configuration_endpoint=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">maintenance_window=None</em>, <em class="sig-param">node_type=None</em>, <em class="sig-param">notification_topic_arn=None</em>, <em class="sig-param">num_cache_nodes=None</em>, <em class="sig-param">parameter_group_name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">replication_group_id=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">security_group_names=None</em>, <em class="sig-param">snapshot_retention_limit=None</em>, <em class="sig-param">snapshot_window=None</em>, <em class="sig-param">subnet_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticache.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">cache_nodes=None</em>, <em class="sig-param">cluster_address=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">configuration_endpoint=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">maintenance_window=None</em>, <em class="sig-param">node_type=None</em>, <em class="sig-param">notification_topic_arn=None</em>, <em class="sig-param">num_cache_nodes=None</em>, <em class="sig-param">parameter_group_name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">replication_group_id=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">security_group_names=None</em>, <em class="sig-param">snapshot_retention_limit=None</em>, <em class="sig-param">snapshot_window=None</em>, <em class="sig-param">subnet_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticache.GetClusterResult.availability_zone">
@@ -439,6 +434,12 @@ Referenceable e.g. as <code class="docutils literal notranslate"><span class="pr
 <dt id="pulumi_aws.elasticache.GetClusterResult.engine_version">
 <code class="sig-name descname">engine_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.engine_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Version number of the cache engine.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -524,17 +525,11 @@ begin taking a daily snapshot of the cache cluster.</p>
 <dd><p>The tags assigned to the resource</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.elasticache.GetClusterResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.elasticache.GetReplicationGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticache.</code><code class="sig-name descname">GetReplicationGroupResult</code><span class="sig-paren">(</span><em class="sig-param">auth_token_enabled=None</em>, <em class="sig-param">automatic_failover_enabled=None</em>, <em class="sig-param">configuration_endpoint_address=None</em>, <em class="sig-param">member_clusters=None</em>, <em class="sig-param">node_type=None</em>, <em class="sig-param">number_cache_clusters=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">primary_endpoint_address=None</em>, <em class="sig-param">replication_group_description=None</em>, <em class="sig-param">replication_group_id=None</em>, <em class="sig-param">snapshot_retention_limit=None</em>, <em class="sig-param">snapshot_window=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticache.</code><code class="sig-name descname">GetReplicationGroupResult</code><span class="sig-paren">(</span><em class="sig-param">auth_token_enabled=None</em>, <em class="sig-param">automatic_failover_enabled=None</em>, <em class="sig-param">configuration_endpoint_address=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">member_clusters=None</em>, <em class="sig-param">node_type=None</em>, <em class="sig-param">number_cache_clusters=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">primary_endpoint_address=None</em>, <em class="sig-param">replication_group_description=None</em>, <em class="sig-param">replication_group_id=None</em>, <em class="sig-param">snapshot_retention_limit=None</em>, <em class="sig-param">snapshot_window=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getReplicationGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticache.GetReplicationGroupResult.auth_token_enabled">
@@ -552,6 +547,12 @@ begin taking a daily snapshot of the cache cluster.</p>
 <dt id="pulumi_aws.elasticache.GetReplicationGroupResult.configuration_endpoint_address">
 <code class="sig-name descname">configuration_endpoint_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.configuration_endpoint_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration endpoint address to allow host discovery.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetReplicationGroupResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -608,12 +609,6 @@ begin taking a daily snapshot of the cache cluster.</p>
 <dd><p>The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard).</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.elasticache.GetReplicationGroupResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -622,6 +617,7 @@ begin taking a daily snapshot of the cache cluster.</p>
 <dd><p>Provides an ElastiCache parameter group resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Attempting to remove the <code class="docutils literal notranslate"><span class="pre">reserved-memory</span></code> parameter when <code class="docutils literal notranslate"><span class="pre">family</span></code> is set to <code class="docutils literal notranslate"><span class="pre">redis2.6</span></code> or <code class="docutils literal notranslate"><span class="pre">redis2.8</span></code> may show a perpetual difference in this provider due to an Elasticache API limitation. Leave that parameter configured with any value to workaround the issue.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_parameter_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -640,9 +636,6 @@ begin taking a daily snapshot of the cache cluster.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the ElastiCache parameter.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the ElastiCache parameter.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_parameter_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticache.ParameterGroup.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ParameterGroup.description" title="Permalink to this definition">¶</a></dt>
@@ -694,9 +687,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the ElastiCache parameter.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the ElastiCache parameter.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_parameter_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -751,6 +741,7 @@ actual modification has not yet taken place. You can use the
 <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> flag to instruct the service to apply the change
 immediately. Using <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> can result in a brief downtime as
 servers reboots.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -803,9 +794,6 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <li><p><code class="docutils literal notranslate"><span class="pre">numNodeGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specify the number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">replicasPerNodeGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specify the number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will force a new resource.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticache.ReplicationGroup.apply_immediately">
 <code class="sig-name descname">apply_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.apply_immediately" title="Permalink to this definition">¶</a></dt>
@@ -1061,9 +1049,6 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <li><p><code class="docutils literal notranslate"><span class="pre">numNodeGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specify the number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">replicasPerNodeGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specify the number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will force a new resource.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1113,6 +1098,7 @@ clusters.</p>
 <div><p><strong>NOTE:</strong> ElastiCache Security Groups are for use only when working with an
 ElastiCache cluster <strong>outside</strong> of a VPC. If you are using a VPC, see the
 ElastiCache Subnet Group resource.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_security_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1126,9 +1112,6 @@ authorized for ingress to the cache security group</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_security_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticache.SecurityGroup.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.SecurityGroup.description" title="Permalink to this definition">¶</a></dt>
@@ -1166,9 +1149,6 @@ authorized for ingress to the cache security group</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_security_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1217,6 +1197,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> ElastiCache Subnet Groups are only for use when working with an
 ElastiCache cluster <strong>inside</strong> of a VPC. If you are on EC2 Classic, see the
 ElastiCache Security Group resource.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_subnet_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1229,9 +1210,6 @@ ElastiCache Security Group resource.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_subnet_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticache.SubnetGroup.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.SubnetGroup.description" title="Permalink to this definition">¶</a></dt>
@@ -1267,9 +1245,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_subnet_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1314,28 +1289,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticache.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.elasticache.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an Elasticache Cluster</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_cluster.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>cluster_id</strong> (<em>str</em>) – Group identifier.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_cluster.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.elasticache.get_replication_group">
 <code class="sig-prename descclassname">pulumi_aws.elasticache.</code><code class="sig-name descname">get_replication_group</code><span class="sig-paren">(</span><em class="sig-param">replication_group_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.get_replication_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an Elasticache Replication Group.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_replication_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_replication_group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>replication_group_id</strong> (<em>str</em>) – The identifier for the replication group.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_replication_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_replication_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

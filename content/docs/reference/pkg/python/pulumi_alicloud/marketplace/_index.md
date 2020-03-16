@@ -15,40 +15,46 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.marketplace"></span><dl class="class">
 <dt id="pulumi_alicloud.marketplace.AwaitableGetProductResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">AwaitableGetProductResult</code><span class="sig-paren">(</span><em class="sig-param">available_region=None</em>, <em class="sig-param">products=None</em>, <em class="sig-param">product_code=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.AwaitableGetProductResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">AwaitableGetProductResult</code><span class="sig-paren">(</span><em class="sig-param">available_region=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">product_code=None</em>, <em class="sig-param">products=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.AwaitableGetProductResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.marketplace.AwaitableGetProductsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">AwaitableGetProductsResult</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">product_type=None</em>, <em class="sig-param">products=None</em>, <em class="sig-param">search_term=None</em>, <em class="sig-param">sort=None</em>, <em class="sig-param">suggested_price=None</em>, <em class="sig-param">supplier_id=None</em>, <em class="sig-param">supplier_name_keyword=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.AwaitableGetProductsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">AwaitableGetProductsResult</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">product_type=None</em>, <em class="sig-param">products=None</em>, <em class="sig-param">search_term=None</em>, <em class="sig-param">sort=None</em>, <em class="sig-param">suggested_price=None</em>, <em class="sig-param">supplier_id=None</em>, <em class="sig-param">supplier_name_keyword=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.AwaitableGetProductsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.marketplace.GetProductResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">GetProductResult</code><span class="sig-paren">(</span><em class="sig-param">available_region=None</em>, <em class="sig-param">products=None</em>, <em class="sig-param">product_code=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">GetProductResult</code><span class="sig-paren">(</span><em class="sig-param">available_region=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">product_code=None</em>, <em class="sig-param">products=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProduct.</p>
-<dl class="attribute">
-<dt id="pulumi_alicloud.marketplace.GetProductResult.products">
-<code class="sig-name descname">products</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductResult.products" title="Permalink to this definition">¶</a></dt>
-<dd><p>A product. It contains the following attributes:</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_alicloud.marketplace.GetProductResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_alicloud.marketplace.GetProductResult.products">
+<code class="sig-name descname">products</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductResult.products" title="Permalink to this definition">¶</a></dt>
+<dd><p>A product. It contains the following attributes:</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.marketplace.GetProductsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">GetProductsResult</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">product_type=None</em>, <em class="sig-param">products=None</em>, <em class="sig-param">search_term=None</em>, <em class="sig-param">sort=None</em>, <em class="sig-param">suggested_price=None</em>, <em class="sig-param">supplier_id=None</em>, <em class="sig-param">supplier_name_keyword=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">GetProductsResult</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">product_type=None</em>, <em class="sig-param">products=None</em>, <em class="sig-param">search_term=None</em>, <em class="sig-param">sort=None</em>, <em class="sig-param">suggested_price=None</em>, <em class="sig-param">supplier_id=None</em>, <em class="sig-param">supplier_name_keyword=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProducts.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.marketplace.GetProductsResult.category_id">
 <code class="sig-name descname">category_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductsResult.category_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The category id of the product.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.marketplace.GetProductsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -75,37 +81,22 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The supplier id of the product.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.marketplace.GetProductsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.marketplace.GetProductsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.marketplace.Order">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.marketplace.</code><code class="sig-name descname">Order</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">components=None</em>, <em class="sig-param">coupon_id=None</em>, <em class="sig-param">duration=None</em>, <em class="sig-param">package_version=None</em>, <em class="sig-param">pay_type=None</em>, <em class="sig-param">pricing_cycle=None</em>, <em class="sig-param">product_code=None</em>, <em class="sig-param">quantity=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.marketplace.Order" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Order resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Service providers customize additional components.</p></li>
-<li><p><strong>coupon_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The coupon id of the market product.</p></li>
-<li><p><strong>duration</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of purchase cycles.</p></li>
-<li><p><strong>package_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The package version of the market product.</p></li>
-<li><p><strong>pay_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid values are <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>, <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>,System default to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
-<li><p><strong>pricing_cycle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The purchase cycle of the product, valid values are <code class="docutils literal notranslate"><span class="pre">Day</span></code>, <code class="docutils literal notranslate"><span class="pre">Month</span></code> and <code class="docutils literal notranslate"><span class="pre">Year</span></code>.</p></li>
-<li><p><strong>product_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The product_code of market place product.</p></li>
-<li><p><strong>quantity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The quantity of the market product will be purchased.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/market_order.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/market_order.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Order resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] components: Service providers customize additional components.
+:param pulumi.Input[str] coupon_id: The coupon id of the market product.
+:param pulumi.Input[float] duration: The number of purchase cycles.
+:param pulumi.Input[str] package_version: The package version of the market product.
+:param pulumi.Input[str] pay_type: Valid values are <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>, <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>,System default to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.
+:param pulumi.Input[str] pricing_cycle: The purchase cycle of the product, valid values are <code class="docutils literal notranslate"><span class="pre">Day</span></code>, <code class="docutils literal notranslate"><span class="pre">Month</span></code> and <code class="docutils literal notranslate"><span class="pre">Year</span></code>.
+:param pulumi.Input[str] product_code: The product_code of market place product.
+:param pulumi.Input[float] quantity: The quantity of the market product will be purchased.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.marketplace.Order.components">
 <code class="sig-name descname">components</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.marketplace.Order.components" title="Permalink to this definition">¶</a></dt>
@@ -176,9 +167,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/market_order.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/market_order.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -225,6 +213,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides the Market product item details of Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.69.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/market_product.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/market_product.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -234,9 +223,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/market_product.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/market_product.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -245,6 +231,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides the Market product items of Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.64.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/market_products.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/market_products.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -261,9 +248,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/market_products.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/market_products.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>
