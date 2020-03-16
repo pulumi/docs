@@ -22,8 +22,8 @@
             <div class="w-full">
                 <h2 id="event-list-heading" class="mb-8">Upcoming Webinars</h2>
                 <ul id="event-list" class="list-none md:flex md:flex-wrap pl-0">
-                    {{ $live_webinars := (where $webinars ".Params.pre_recorded" "false")}}
-                    {{ range $index, $webinar := (sort $live_webinars ".Params.webinar.datetime") }}
+                    {{ $live_webinars := (where $webinars ".Params.pre_recorded" false)}}
+                    {{ range $index, $webinar := (sort $live_webinars ".Params.main.datetime") }}
                         <li class="w-1/3 m-0 mx-5 p-0">
                             <article class="rounded shadow-md bg-white border border-gray-200 mb-10 flex flex-col" style="height: 410px;">
                                 <div style="height: 278px;">
@@ -59,7 +59,7 @@
                 <h2 id="event-list-heading" class="mb-8">Previous Webinars</h2>
                 <ul id="event-list" class="list-none md:flex md:flex-wrap pl-0">
                     {{ $recorded_webinars := (where $webinars ".Params.pre_recorded" true)}}
-                    {{ range $index, $webinar := (sort $recorded_webinars ".Params.webinar.datetime") }}
+                    {{ range $index, $webinar := (sort $recorded_webinars ".Params.main.datetime") }}
                         <li class="w-1/3 m-0 mx-5 p-0">
                             <article class="rounded shadow-md bg-white border border-gray-200 mb-10 flex flex-col" style="height: 410px;">
                                 <div style="height: 278px;">

@@ -26,6 +26,7 @@
                 <div class="md:w-1/2 md:mx-8">
                     {{ with .Params.main }}
                         <h2>{{ .title }}</h2>
+                        <p><a href="#webinarRegistrationForm" class="btn md:hidden">REGISTER NOW</a></p>
                         <time class="uppercase text-orange text-sm font-bold" datetime="{{ .datetime }}">
                             {{ dateFormat "Monday, Jan 2, 2006 at 15:04 PDT" .datetime }}
                         </time>
@@ -49,11 +50,11 @@
                         </ul>
                     {{ end }}
                 </div>
-                <div class="md:w-1/2 md:mx-8 bg-gray-200 rounded p-6">
-                    {{ with .Params.webinar }}
-                        <h3 class="text-orange">Watch Now</h3>
+                <div id="webinarRegistrationForm" class="mt-10 md:mt-0 md:w-1/2 md:mx-8 bg-gray-200 rounded p-6">
+                    {{ with .Params.form }}
+                        <h3 class="text-orange">Register Here</h3>
 
-                        {{ partial "hubspot-form.html" (dict "hubspotFormID" "88fac9d7-6e56-4166-849d-e10a90892962") }}
+                        {{ partial "hubspot-form.html" (dict "hubspotFormID" .hubspot_form_id "goToWebinarKey" .gotowebinar_key) }}
                     {{ end }}
                 </div>
             {{ else }}

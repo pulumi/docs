@@ -14,8 +14,8 @@
         }
 
         .hs-input {
-            @apply block text-gray-700;
-            width: 100% !important;
+            //@apply block text-gray-700;
+            //width: 100% !important;
         }
 
         .hs-form-required {
@@ -30,7 +30,7 @@
             }
         }
 
-        input, textarea {
+        input, textarea, select {
             @apply border border-gray-300 rounded p-2 bg-white;
             &:focus {
                 @apply outline-none shadow-outline;
@@ -97,5 +97,13 @@
                 @apply outline-none;
             }
         }
+    }
+
+    .hs-recaptcha {
+        @apply mb-5;
+    }
+
+    .legal-consent-container ul {
+        @apply list-none pl-0;
     }
 }
