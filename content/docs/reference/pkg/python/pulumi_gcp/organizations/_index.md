@@ -15,17 +15,17 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.organizations"></span><dl class="class">
 <dt id="pulumi_gcp.organizations.AwaitableGetActiveFolderResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetActiveFolderResult</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetActiveFolderResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetActiveFolderResult</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetActiveFolderResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.AwaitableGetBillingAccountResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetBillingAccountResult</code><span class="sig-paren">(</span><em class="sig-param">billing_account=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">open=None</em>, <em class="sig-param">project_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetBillingAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetBillingAccountResult</code><span class="sig-paren">(</span><em class="sig-param">billing_account=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">open=None</em>, <em class="sig-param">project_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetBillingAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.AwaitableGetClientConfigResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetClientConfigResult</code><span class="sig-paren">(</span><em class="sig-param">access_token=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetClientConfigResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetClientConfigResult</code><span class="sig-paren">(</span><em class="sig-param">access_token=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetClientConfigResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -35,22 +35,22 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.AwaitableGetFolderResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetFolderResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">lookup_organization=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetFolderResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetFolderResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">lookup_organization=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetFolderResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.AwaitableGetIAMPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetIAMPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">audit_configs=None</em>, <em class="sig-param">bindings=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetIAMPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetIAMPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">audit_configs=None</em>, <em class="sig-param">bindings=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">policy_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetIAMPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.AwaitableGetOrganizationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetOrganizationResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">directory_customer_id=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetOrganizationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetOrganizationResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">directory_customer_id=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">organization=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetOrganizationResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.AwaitableGetProjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">auto_create_network=None</em>, <em class="sig-param">billing_account=None</em>, <em class="sig-param">folder_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">skip_delete=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">auto_create_network=None</em>, <em class="sig-param">billing_account=None</em>, <em class="sig-param">folder_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">skip_delete=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -66,6 +66,9 @@ and
 resource must have <code class="docutils literal notranslate"><span class="pre">roles/resourcemanager.folderCreator</span></code>. See the
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/access-control-folders">Access Control for Folders Using IAM</a>
 doc for more information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_folder.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_folder.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -78,9 +81,6 @@ Must be of the form <code class="docutils literal notranslate"><span class="pre"
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/folder.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/folder.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.Folder.create_time">
 <code class="sig-name descname">create_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Folder.create_time" title="Permalink to this definition">¶</a></dt>
@@ -136,9 +136,6 @@ Must be of the form <code class="docutils literal notranslate"><span class="pre"
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/folder.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/folder.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -181,26 +178,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetActiveFolderResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetActiveFolderResult</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetActiveFolderResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetActiveFolderResult</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetActiveFolderResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getActiveFolder.</p>
-<dl class="attribute">
-<dt id="pulumi_gcp.organizations.GetActiveFolderResult.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetActiveFolderResult.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource name of the Folder. This uniquely identifies the folder.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetActiveFolderResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetActiveFolderResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_gcp.organizations.GetActiveFolderResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetActiveFolderResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name of the Folder. This uniquely identifies the folder.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetBillingAccountResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetBillingAccountResult</code><span class="sig-paren">(</span><em class="sig-param">billing_account=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">open=None</em>, <em class="sig-param">project_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetBillingAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetBillingAccountResult</code><span class="sig-paren">(</span><em class="sig-param">billing_account=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">open=None</em>, <em class="sig-param">project_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetBillingAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBillingAccount.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.organizations.GetBillingAccountResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetBillingAccountResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetBillingAccountResult.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetBillingAccountResult.name" title="Permalink to this definition">¶</a></dt>
@@ -213,22 +216,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The IDs of any projects associated with the billing account.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_gcp.organizations.GetBillingAccountResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetBillingAccountResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetClientConfigResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetClientConfigResult</code><span class="sig-paren">(</span><em class="sig-param">access_token=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetClientConfigResult</code><span class="sig-paren">(</span><em class="sig-param">access_token=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClientConfig.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetClientConfigResult.access_token">
 <code class="sig-name descname">access_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult.access_token" title="Permalink to this definition">¶</a></dt>
 <dd><p>The OAuth2 access token used by the client to authenticate against the Google Cloud API.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.organizations.GetClientConfigResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -247,12 +250,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.organizations.GetClientConfigResult.zone">
 <code class="sig-name descname">zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult.zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>The zone to operate under.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.organizations.GetClientConfigResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -277,7 +274,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetFolderResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetFolderResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">lookup_organization=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetFolderResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">lookup_organization=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFolder.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetFolderResult.create_time">
@@ -289,6 +286,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.organizations.GetFolderResult.display_name">
 <code class="sig-name descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult.display_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The folder’s display name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.organizations.GetFolderResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -315,18 +318,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The resource name of the parent Folder or Organization.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_gcp.organizations.GetFolderResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetIAMPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetIAMPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">audit_configs=None</em>, <em class="sig-param">bindings=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetIAMPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetIAMPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">audit_configs=None</em>, <em class="sig-param">bindings=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">policy_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetIAMPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getIAMPolicy.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.organizations.GetIAMPolicyResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetIAMPolicyResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetIAMPolicyResult.policy_data">
 <code class="sig-name descname">policy_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetIAMPolicyResult.policy_data" title="Permalink to this definition">¶</a></dt>
@@ -334,17 +337,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 referencing from a resource that supports IAM.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_gcp.organizations.GetIAMPolicyResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetIAMPolicyResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetOrganizationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetOrganizationResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">directory_customer_id=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetOrganizationResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">directory_customer_id=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">organization=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getOrganization.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetOrganizationResult.create_time">
@@ -356,6 +353,12 @@ referencing from a resource that supports IAM.</p>
 <dt id="pulumi_gcp.organizations.GetOrganizationResult.directory_customer_id">
 <code class="sig-name descname">directory_customer_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult.directory_customer_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Google for Work customer ID of the Organization.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.organizations.GetOrganizationResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -376,17 +379,11 @@ referencing from a resource that supports IAM.</p>
 <dd><p>The Organization ID.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_gcp.organizations.GetOrganizationResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetProjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">auto_create_network=None</em>, <em class="sig-param">billing_account=None</em>, <em class="sig-param">folder_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">skip_delete=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">auto_create_network=None</em>, <em class="sig-param">billing_account=None</em>, <em class="sig-param">folder_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">skip_delete=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProject.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetProjectResult.id">
@@ -410,6 +407,7 @@ what your policy should be.</p>
 your existing members are preserved.</p>
 </dd>
 </dl>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_binding.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -430,9 +428,6 @@ your existing members are preserved.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.IAMBinding.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.etag" title="Permalink to this definition">¶</a></dt>
@@ -485,9 +480,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -544,6 +536,7 @@ made available again. This means a deleted role that has been deleted for more t
 by this provider, and new roles cannot share that name.</p>
 </dd>
 </dl>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_custom_role.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_custom_role.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -561,9 +554,6 @@ List of possible stages is <a class="reference external" href="https://cloud.goo
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_custom_role.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_custom_role.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.IAMCustomRole.deleted">
 <code class="sig-name descname">deleted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.deleted" title="Permalink to this definition">¶</a></dt>
@@ -632,9 +622,6 @@ List of possible stages is <a class="reference external" href="https://cloud.goo
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_custom_role.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_custom_role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -686,6 +673,7 @@ the IAM policy for an existing Google Cloud Platform Organization.</p>
 what your policy should be.</p>
 </dd>
 </dl>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_member.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -705,9 +693,6 @@ what your policy should be.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.IAMMember.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.etag" title="Permalink to this definition">¶</a></dt>
@@ -758,9 +743,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -821,6 +803,7 @@ by importing your existing policy, and examining the diff very closely.</p>
 or they will fight over what your policy should be.</p>
 </dd>
 </dl>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_policy.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -834,9 +817,6 @@ policy applied to the organization.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.IAMPolicy.org_id">
 <code class="sig-name descname">org_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy.org_id" title="Permalink to this definition">¶</a></dt>
@@ -869,9 +849,6 @@ policy applied to the organization.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -915,26 +892,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.organizations.IamAuditConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">IamAuditConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">audit_log_configs=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a IamAuditConfig resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>audit_log_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.</p></li>
-<li><p><strong>org_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The numeric ID of the organization in which you want to manage the audit logging config.</p></li>
-<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service which will be enabled for audit logging.  The special value <code class="docutils literal notranslate"><span class="pre">allServices</span></code> covers all services.  Note that if there are google_organization_iam_audit_config resources covering both <code class="docutils literal notranslate"><span class="pre">allServices</span></code> and a specific service then the union of the two AuditConfigs is used for that service: the <code class="docutils literal notranslate"><span class="pre">log_types</span></code> specified in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are enabled, and the <code class="docutils literal notranslate"><span class="pre">exempted_members</span></code> in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are exempted.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a IamAuditConfig resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] audit_log_configs: The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
+:param pulumi.Input[str] org_id: The numeric ID of the organization in which you want to manage the audit logging config.
+:param pulumi.Input[str] service: Service which will be enabled for audit logging.  The special value <code class="docutils literal notranslate"><span class="pre">allServices</span></code> covers all services.  Note that if there are google_organization_iam_audit_config resources covering both <code class="docutils literal notranslate"><span class="pre">allServices</span></code> and a specific service then the union of the two AuditConfigs is used for that service: the <code class="docutils literal notranslate"><span class="pre">log_types</span></code> specified in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are enabled, and the <code class="docutils literal notranslate"><span class="pre">exempted_members</span></code> in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are exempted.</p>
 <p>The <strong>audit_log_configs</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_audit_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_audit_config.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.IamAuditConfig.audit_log_configs">
 <code class="sig-name descname">audit_log_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.audit_log_configs" title="Permalink to this definition">¶</a></dt>
@@ -979,9 +947,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_audit_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_audit_config.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1029,6 +994,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">the official
 documentation</a> and
 <a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v1/organizations/setOrgPolicy">API</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_policy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1068,9 +1036,6 @@ documentation</a> and
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.Policy.boolean_policy">
 <code class="sig-name descname">boolean_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.boolean_policy" title="Permalink to this definition">¶</a></dt>
@@ -1189,9 +1154,6 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1260,6 +1222,7 @@ made outside this provider.</p></li>
 <div><p>It’s important to note that any project resources that were added to your config
 prior to 0.8.5 will continue to function as they always have, and will not be managed by
 this provider. Only newly added projects are affected.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1294,9 +1257,6 @@ without deleting the Project via the Google API.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.Project.auto_create_network">
 <code class="sig-name descname">auto_create_network</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.auto_create_network" title="Permalink to this definition">¶</a></dt>
@@ -1409,9 +1369,6 @@ without deleting the Project via the Google API.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1456,6 +1413,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.organizations.get_active_folder">
 <code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_active_folder</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_active_folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an active folder within GCP by <code class="docutils literal notranslate"><span class="pre">display_name</span></code> and <code class="docutils literal notranslate"><span class="pre">parent</span></code>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_active_folder.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_active_folder.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1464,15 +1424,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/active_folder.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/active_folder.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.organizations.get_billing_account">
 <code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_billing_account</code><span class="sig-paren">(</span><em class="sig-param">billing_account=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">open=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_billing_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Google Billing Account.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_billing_account.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_billing_account.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1482,9 +1442,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/billing_account.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/billing_account.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1492,7 +1449,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_client_config</code><span class="sig-paren">(</span><em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_client_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the configuration of the Google Cloud provider.</p>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/client_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/client_config.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_client_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_client_config.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -1509,7 +1466,7 @@ authentication with GKE and configure an RBAC role for the email used.</p>
 <div><p>This resource will only work as expected if the provider is configured to
 use the <code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/auth/userinfo.email</span></code> scope! You will
 receive an error otherwise.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/client_openid_userinfo.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/client_openid_userinfo.html.markdown</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_client_openid_userinfo.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_client_openid_userinfo.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -1517,6 +1474,9 @@ receive an error otherwise.</p>
 <dt id="pulumi_gcp.organizations.get_folder">
 <code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_folder</code><span class="sig-paren">(</span><em class="sig-param">folder=None</em>, <em class="sig-param">lookup_organization=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Google Cloud Folder.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_folder.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_folder.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1525,9 +1485,6 @@ receive an error otherwise.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/folder.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/folder.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1541,6 +1498,9 @@ for a list of these restrictions.</p>
 <p>This data source is used to define IAM policies to apply to other resources.
 Currently, defining a policy through a datasource and referencing that policy
 from another resource is the only way to apply an IAM policy to a resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_iam_policy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1585,15 +1545,15 @@ Each entry can have one of the following values:</p>
 See the <a class="reference external" href="https://cloud.google.com/compute/docs/access/iam">IAM Roles</a> documentation for a complete list of roles.
 Note that custom roles must be of the format <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.organizations.get_organization">
 <code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_organization</code><span class="sig-paren">(</span><em class="sig-param">domain=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_organization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Google Cloud Organization.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_organization.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_organization.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1602,9 +1562,6 @@ Note that custom roles must be of the format <code class="docutils literal notra
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/organization.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/organization.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1613,14 +1570,14 @@ Note that custom roles must be of the format <code class="docutils literal notra
 <dd><p>Use this data source to get project details.
 For more information see
 <a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v1/projects#Project">API</a></p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_project.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>project_id</strong> (<em>str</em>) – The project ID. If it is not provided, the provider project is used.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/project.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

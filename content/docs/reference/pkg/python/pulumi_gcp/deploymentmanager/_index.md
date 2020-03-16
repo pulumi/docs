@@ -16,12 +16,29 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.deploymentmanager"></span><dl class="class">
 <dt id="pulumi_gcp.deploymentmanager.Deployment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.deploymentmanager.</code><code class="sig-name descname">Deployment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_policy=None</em>, <em class="sig-param">delete_policy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">preview=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">target=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Deployment resource with the given unique name, props, and options.</p>
+<dd><p>Create a Deployment resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] create_policy: Set the policy to use for creating new resources. Only used on create and update. Valid values are ‘CREATE_OR_ACQUIRE’</p>
+<blockquote>
+<div><p>(default) or ‘ACQUIRE’. If set to ‘ACQUIRE’ and resources do not already exist, the deployment will fail. Note that
+updating this field does not actually affect the deployment, just how it is updated.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>delete_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set the policy to use for deleting new resources on update/delete. Valid values are ‘DELETE’ (default) or ‘ABANDON’. If
+‘DELETE’, resource is deleted after removal from Deployment Manager. If ‘ABANDON’, the resource is only removed from
+Deployment Manager and is not actually deleted. Note that updating this field does not actually change the deployment,
+just how it is updated.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Optional user-provided description of deployment.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Key-value pairs to apply to this labels.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique name for the deployment</p></li>
+<li><p><strong>preview</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to true, a deployment is created with “shell” resources that are not actually instantiated. This allows you to
+preview a deployment. It can be updated to false to actually deploy with real resources. ~&gt;<strong>NOTE</strong>: Deployment Manager
+does not allow update of a deployment in preview (unless updating to preview=false). Thus, Terraform will force-recreate
+deployments if either preview is updated to true or if other fields are updated while preview is true.</p></li>
+<li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Parameters that define your deployment, including the deployment configuration and relevant templates.</p></li>
 </ul>
 </dd>
 </dl>
@@ -44,9 +61,91 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/deployment_manager_deployment.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/deployment_manager_deployment.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.deploymentmanager.Deployment.create_policy">
+<code class="sig-name descname">create_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.create_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the policy to use for creating new resources. Only used on create and update. Valid values are ‘CREATE_OR_ACQUIRE’
+(default) or ‘ACQUIRE’. If set to ‘ACQUIRE’ and resources do not already exist, the deployment will fail. Note that
+updating this field does not actually affect the deployment, just how it is updated.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.deploymentmanager.Deployment.delete_policy">
+<code class="sig-name descname">delete_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.delete_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the policy to use for deleting new resources on update/delete. Valid values are ‘DELETE’ (default) or ‘ABANDON’. If
+‘DELETE’, resource is deleted after removal from Deployment Manager. If ‘ABANDON’, the resource is only removed from
+Deployment Manager and is not actually deleted. Note that updating this field does not actually change the deployment,
+just how it is updated.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.deploymentmanager.Deployment.deployment_id">
+<code class="sig-name descname">deployment_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.deployment_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifier for deployment. Output only.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.deploymentmanager.Deployment.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional user-provided description of deployment.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.deploymentmanager.Deployment.labels">
+<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value pairs to apply to this labels.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.deploymentmanager.Deployment.manifest">
+<code class="sig-name descname">manifest</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.manifest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output only. URL of the manifest representing the last manifest that was successfully deployed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.deploymentmanager.Deployment.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique name for the deployment</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.deploymentmanager.Deployment.preview">
+<code class="sig-name descname">preview</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.preview" title="Permalink to this definition">¶</a></dt>
+<dd><p>If set to true, a deployment is created with “shell” resources that are not actually instantiated. This allows you to
+preview a deployment. It can be updated to false to actually deploy with real resources. ~&gt;<strong>NOTE</strong>: Deployment Manager
+does not allow update of a deployment in preview (unless updating to preview=false). Thus, Terraform will force-recreate
+deployments if either preview is updated to true or if other fields are updated while preview is true.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.deploymentmanager.Deployment.self_link">
+<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output only. Server defined URL for the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.deploymentmanager.Deployment.target">
+<code class="sig-name descname">target</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameters that define your deployment, including the deployment configuration and relevant templates.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">config</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">imports</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.deploymentmanager.Deployment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_policy=None</em>, <em class="sig-param">delete_policy=None</em>, <em class="sig-param">deployment_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">manifest=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">preview=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">target=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.get" title="Permalink to this definition">¶</a></dt>
@@ -58,6 +157,24 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>create_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set the policy to use for creating new resources. Only used on create and update. Valid values are ‘CREATE_OR_ACQUIRE’
+(default) or ‘ACQUIRE’. If set to ‘ACQUIRE’ and resources do not already exist, the deployment will fail. Note that
+updating this field does not actually affect the deployment, just how it is updated.</p></li>
+<li><p><strong>delete_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set the policy to use for deleting new resources on update/delete. Valid values are ‘DELETE’ (default) or ‘ABANDON’. If
+‘DELETE’, resource is deleted after removal from Deployment Manager. If ‘ABANDON’, the resource is only removed from
+Deployment Manager and is not actually deleted. Note that updating this field does not actually change the deployment,
+just how it is updated.</p></li>
+<li><p><strong>deployment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier for deployment. Output only.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Optional user-provided description of deployment.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Key-value pairs to apply to this labels.</p></li>
+<li><p><strong>manifest</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Output only. URL of the manifest representing the last manifest that was successfully deployed.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique name for the deployment</p></li>
+<li><p><strong>preview</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to true, a deployment is created with “shell” resources that are not actually instantiated. This allows you to
+preview a deployment. It can be updated to false to actually deploy with real resources. ~&gt;<strong>NOTE</strong>: Deployment Manager
+does not allow update of a deployment in preview (unless updating to preview=false). Thus, Terraform will force-recreate
+deployments if either preview is updated to true or if other fields are updated while preview is true.</p></li>
+<li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Output only. Server defined URL for the resource.</p></li>
+<li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Parameters that define your deployment, including the deployment configuration and relevant templates.</p></li>
 </ul>
 </dd>
 </dl>
@@ -80,9 +197,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/deployment_manager_deployment.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/deployment_manager_deployment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

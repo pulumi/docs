@@ -20,13 +20,16 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_docker.AwaitableGetRegistryImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">AwaitableGetRegistryImageResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">sha256_digest=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.AwaitableGetRegistryImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">AwaitableGetRegistryImageResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">sha256_digest=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.AwaitableGetRegistryImageResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_docker.Container">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">Container</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attach=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">cpu_set=None</em>, <em class="sig-param">cpu_shares=None</em>, <em class="sig-param">destroy_grace_seconds=None</em>, <em class="sig-param">devices=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">dns_opts=None</em>, <em class="sig-param">dns_searches=None</em>, <em class="sig-param">domainname=None</em>, <em class="sig-param">entrypoints=None</em>, <em class="sig-param">envs=None</em>, <em class="sig-param">group_adds=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">hosts=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ipc_mode=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">links=None</em>, <em class="sig-param">log_driver=None</em>, <em class="sig-param">log_opts=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">max_retry_count=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_swap=None</em>, <em class="sig-param">mounts=None</em>, <em class="sig-param">must_run=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_aliases=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">networks_advanced=None</em>, <em class="sig-param">pid_mode=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">privileged=None</em>, <em class="sig-param">publish_all_ports=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">restart=None</em>, <em class="sig-param">rm=None</em>, <em class="sig-param">shm_size=None</em>, <em class="sig-param">start=None</em>, <em class="sig-param">sysctls=None</em>, <em class="sig-param">tmpfs=None</em>, <em class="sig-param">ulimits=None</em>, <em class="sig-param">uploads=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">userns_mode=None</em>, <em class="sig-param">volumes=None</em>, <em class="sig-param">working_dir=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Container" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">Container</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attach=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">cpu_set=None</em>, <em class="sig-param">cpu_shares=None</em>, <em class="sig-param">destroy_grace_seconds=None</em>, <em class="sig-param">devices=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">dns_opts=None</em>, <em class="sig-param">dns_searches=None</em>, <em class="sig-param">domainname=None</em>, <em class="sig-param">entrypoints=None</em>, <em class="sig-param">envs=None</em>, <em class="sig-param">group_adds=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">hosts=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ipc_mode=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">links=None</em>, <em class="sig-param">log_driver=None</em>, <em class="sig-param">log_opts=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">max_retry_count=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_swap=None</em>, <em class="sig-param">mounts=None</em>, <em class="sig-param">must_run=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_aliases=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">networks_advanced=None</em>, <em class="sig-param">pid_mode=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">privileged=None</em>, <em class="sig-param">publish_all_ports=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">restart=None</em>, <em class="sig-param">rm=None</em>, <em class="sig-param">shm_size=None</em>, <em class="sig-param">start=None</em>, <em class="sig-param">sysctls=None</em>, <em class="sig-param">tmpfs=None</em>, <em class="sig-param">ulimits=None</em>, <em class="sig-param">uploads=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">userns_mode=None</em>, <em class="sig-param">volumes=None</em>, <em class="sig-param">working_dir=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the lifecycle of a Docker container.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/container.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/container.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -53,8 +56,8 @@ when starting a container, set the entrypoint to be
 <li><p><strong>envs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Environment variables to set.</p></li>
 <li><p><strong>group_adds</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Add additional groups to run as.</p></li>
 <li><p><strong>healthcheck</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See Healthcheck below for details.</p></li>
-<li><p><strong>hosts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Hostname to add.</p></li>
 <li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Hostname of the container.</p></li>
+<li><p><strong>hosts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Hostname to add.</p></li>
 <li><p><strong>image</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the image to back this container.
 The easiest way to get this value is to use the <code class="docutils literal notranslate"><span class="pre">.RemoteImage</span></code> resource
 as is shown in the example above.</p></li>
@@ -206,7 +209,7 @@ defaults to <code class="docutils literal notranslate"><span class="pre">tcp</sp
 <p>The <strong>uploads</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">contentBase64</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentBase64</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">executable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, the file will be uploaded with user
 executable permission.
 Defaults to false.</p></li>
@@ -227,9 +230,6 @@ Defaults to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volumeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the docker volume which
 should be mounted.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/container.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/container.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_docker.Container.attach">
 <code class="sig-name descname">attach</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Container.attach" title="Permalink to this definition">¶</a></dt>
@@ -372,6 +372,12 @@ NetworkSettings.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_docker.Container.hostname">
+<code class="sig-name descname">hostname</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Container.hostname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hostname of the container.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_docker.Container.hosts">
 <code class="sig-name descname">hosts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Container.hosts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Hostname to add.</p>
@@ -379,12 +385,6 @@ NetworkSettings.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Hostname to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - IP address this hostname should resolve to.</p></li>
 </ul>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_docker.Container.hostname">
-<code class="sig-name descname">hostname</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Container.hostname" title="Permalink to this definition">¶</a></dt>
-<dd><p>Hostname of the container.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -646,7 +646,7 @@ details.</p>
 <dd><p>See File Upload below for details.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">contentBase64</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentBase64</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">executable</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, the file will be uploaded with user
 executable permission.
 Defaults to false.</p></li>
@@ -690,7 +690,7 @@ should be mounted.</p></li>
 
 <dl class="method">
 <dt id="pulumi_docker.Container.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attach=None</em>, <em class="sig-param">bridge=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">container_logs=None</em>, <em class="sig-param">cpu_set=None</em>, <em class="sig-param">cpu_shares=None</em>, <em class="sig-param">destroy_grace_seconds=None</em>, <em class="sig-param">devices=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">dns_opts=None</em>, <em class="sig-param">dns_searches=None</em>, <em class="sig-param">domainname=None</em>, <em class="sig-param">entrypoints=None</em>, <em class="sig-param">envs=None</em>, <em class="sig-param">exit_code=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">group_adds=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">hosts=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">ip_prefix_length=None</em>, <em class="sig-param">ipc_mode=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">links=None</em>, <em class="sig-param">log_driver=None</em>, <em class="sig-param">log_opts=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">max_retry_count=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_swap=None</em>, <em class="sig-param">mounts=None</em>, <em class="sig-param">must_run=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_aliases=None</em>, <em class="sig-param">network_datas=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">networks_advanced=None</em>, <em class="sig-param">pid_mode=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">privileged=None</em>, <em class="sig-param">publish_all_ports=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">restart=None</em>, <em class="sig-param">rm=None</em>, <em class="sig-param">shm_size=None</em>, <em class="sig-param">start=None</em>, <em class="sig-param">sysctls=None</em>, <em class="sig-param">tmpfs=None</em>, <em class="sig-param">ulimits=None</em>, <em class="sig-param">uploads=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">userns_mode=None</em>, <em class="sig-param">volumes=None</em>, <em class="sig-param">working_dir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Container.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attach=None</em>, <em class="sig-param">bridge=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">container_logs=None</em>, <em class="sig-param">cpu_set=None</em>, <em class="sig-param">cpu_shares=None</em>, <em class="sig-param">destroy_grace_seconds=None</em>, <em class="sig-param">devices=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">dns_opts=None</em>, <em class="sig-param">dns_searches=None</em>, <em class="sig-param">domainname=None</em>, <em class="sig-param">entrypoints=None</em>, <em class="sig-param">envs=None</em>, <em class="sig-param">exit_code=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">group_adds=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">hosts=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">ip_prefix_length=None</em>, <em class="sig-param">ipc_mode=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">links=None</em>, <em class="sig-param">log_driver=None</em>, <em class="sig-param">log_opts=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">max_retry_count=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_swap=None</em>, <em class="sig-param">mounts=None</em>, <em class="sig-param">must_run=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_aliases=None</em>, <em class="sig-param">network_datas=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">networks_advanced=None</em>, <em class="sig-param">pid_mode=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">privileged=None</em>, <em class="sig-param">publish_all_ports=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">restart=None</em>, <em class="sig-param">rm=None</em>, <em class="sig-param">shm_size=None</em>, <em class="sig-param">start=None</em>, <em class="sig-param">sysctls=None</em>, <em class="sig-param">tmpfs=None</em>, <em class="sig-param">ulimits=None</em>, <em class="sig-param">uploads=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">userns_mode=None</em>, <em class="sig-param">volumes=None</em>, <em class="sig-param">working_dir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Container.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Container resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -725,8 +725,8 @@ when starting a container, set the entrypoint to be
 NetworkSettings.</p></li>
 <li><p><strong>group_adds</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Add additional groups to run as.</p></li>
 <li><p><strong>healthcheck</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See Healthcheck below for details.</p></li>
-<li><p><strong>hosts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Hostname to add.</p></li>
 <li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Hostname of the container.</p></li>
+<li><p><strong>hosts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Hostname to add.</p></li>
 <li><p><strong>image</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the image to back this container.
 The easiest way to get this value is to use the <code class="docutils literal notranslate"><span class="pre">.RemoteImage</span></code> resource
 as is shown in the example above.</p></li>
@@ -892,7 +892,7 @@ defaults to <code class="docutils literal notranslate"><span class="pre">tcp</sp
 <p>The <strong>uploads</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">contentBase64</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentBase64</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">executable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, the file will be uploaded with user
 executable permission.
 Defaults to false.</p></li>
@@ -913,9 +913,6 @@ Defaults to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volumeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the docker volume which
 should be mounted.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/container.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/container.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -984,7 +981,7 @@ See [docker docs][networkdocs] for more details.</p>
 
 <dl class="class">
 <dt id="pulumi_docker.GetRegistryImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">GetRegistryImageResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">sha256_digest=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.GetRegistryImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">GetRegistryImageResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">sha256_digest=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.GetRegistryImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRegistryImage.</p>
 <dl class="attribute">
 <dt id="pulumi_docker.GetRegistryImageResult.id">
@@ -1000,6 +997,9 @@ See [docker docs][networkdocs] for more details.</p>
 <dd><p>Manages a Docker Network. This can be used alongside
 <a class="reference external" href="https://www.terraform.io/docs/providers/docker/r/container.html">docker_container</a>
 to create virtual networks within the docker environment.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/network.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/network.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1044,9 +1044,6 @@ the drivers.</p></li>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/network.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/network.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_docker.Network.attachable">
 <code class="sig-name descname">attachable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Network.attachable" title="Permalink to this definition">¶</a></dt>
@@ -1186,9 +1183,6 @@ the drivers.</p></li>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/network.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/network.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1236,11 +1230,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/index.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>ca_material</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – PEM-encoded content of Docker host CA certificate</p></li>
+<li><p><strong>cert_material</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – PEM-encoded content of Docker client certificate</p></li>
+<li><p><strong>cert_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path to directory with Docker TLS config</p></li>
+<li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Docker daemon address</p></li>
+<li><p><strong>key_material</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – PEM-encoded content of Docker client private key</p></li>
 </ul>
 </dd>
 </dl>
@@ -1252,28 +1254,6 @@ construction to achieve fine-grained programmatic control over provider settings
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
-<dl class="method">
-<dt id="pulumi_docker.Provider.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Provider.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_docker.Provider.translate_output_property">
 <code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1319,6 +1299,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>This resource will <em>not</em> pull new layers of the image automatically unless used in
 conjunction with <cite>`</cite>.getRegistryImage`` &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/docker/d/registry_image.html">https://www.terraform.io/docs/providers/docker/d/registry_image.html</a>&gt;`_
 data source to update the <code class="docutils literal notranslate"><span class="pre">pull_triggers</span></code> field.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/image.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/image.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1336,9 +1319,6 @@ to trigger an image update.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/image.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/image.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_docker.RemoteImage.keep_locally">
 <code class="sig-name descname">keep_locally</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.RemoteImage.keep_locally" title="Permalink to this definition">¶</a></dt>
@@ -1392,9 +1372,6 @@ to trigger an image update.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/image.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/image.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1439,6 +1416,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_docker.Secret">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">Secret</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the secrets of a Docker service in a swarm.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/secret.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/secret.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1459,9 +1439,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/secret.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/secret.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_docker.Secret.data">
 <code class="sig-name descname">data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Secret.data" title="Permalink to this definition">¶</a></dt>
@@ -1514,9 +1491,6 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/secret.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/secret.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1560,23 +1534,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_docker.Service">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth=None</em>, <em class="sig-param">converge_config=None</em>, <em class="sig-param">endpoint_spec=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rollback_config=None</em>, <em class="sig-param">task_spec=None</em>, <em class="sig-param">update_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Service" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Service resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>auth</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See Auth below for details.</p></li>
-<li><p><strong>converge_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See Converge Config below for details.</p></li>
-<li><p><strong>endpoint_spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See EndpointSpec below for details.</p></li>
-<li><p><strong>mode</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The mode of resolution to use for internal load balancing between tasks. <code class="docutils literal notranslate"><span class="pre">(vip|dnsrr)</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">vip</span></code>.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A random name for the port.</p></li>
-<li><p><strong>rollback_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See RollbackConfig below for details.</p></li>
-<li><p><strong>task_spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See TaskSpec below for details.</p></li>
-<li><p><strong>update_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See UpdateConfig below for details.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Service resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] auth: See Auth below for details.
+:param pulumi.Input[dict] converge_config: See Converge Config below for details.
+:param pulumi.Input[dict] endpoint_spec: See EndpointSpec below for details.
+:param pulumi.Input[list] labels: User-defined key/value metadata
+:param pulumi.Input[dict] mode: The mode of resolution to use for internal load balancing between tasks. <code class="docutils literal notranslate"><span class="pre">(vip|dnsrr)</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">vip</span></code>.
+:param pulumi.Input[str] name: A random name for the port.
+:param pulumi.Input[dict] rollback_config: See RollbackConfig below for details.
+:param pulumi.Input[dict] task_spec: See TaskSpec below for details.
+:param pulumi.Input[dict] update_config: See UpdateConfig below for details.</p>
 <p>The <strong>auth</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to use for authenticating to the registry. If this is blank, the <code class="docutils literal notranslate"><span class="pre">DOCKER_REGISTRY_PASS</span></code> is also be checked.</p></li>
@@ -1808,9 +1777,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">parallelism</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/service.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_docker.Service.auth">
 <code class="sig-name descname">auth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Service.auth" title="Permalink to this definition">¶</a></dt>
@@ -1847,6 +1813,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">targetPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Port inside the container.</p></li>
 </ul>
 </li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_docker.Service.labels">
+<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Service.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>User-defined key/value metadata</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -2092,6 +2068,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>auth</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See Auth below for details.</p></li>
 <li><p><strong>converge_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See Converge Config below for details.</p></li>
 <li><p><strong>endpoint_spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See EndpointSpec below for details.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – User-defined key/value metadata</p></li>
 <li><p><strong>mode</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The mode of resolution to use for internal load balancing between tasks. <code class="docutils literal notranslate"><span class="pre">(vip|dnsrr)</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">vip</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A random name for the port.</p></li>
 <li><p><strong>rollback_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See RollbackConfig below for details.</p></li>
@@ -2331,9 +2308,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">parallelism</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/service.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/service.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2378,6 +2352,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_docker.ServiceConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">ServiceConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.ServiceConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the configuration of a Docker service in a swarm.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/config.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/config.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2388,9 +2365,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/config.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/config.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_docker.ServiceConfig.data">
 <code class="sig-name descname">data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.ServiceConfig.data" title="Permalink to this definition">¶</a></dt>
@@ -2419,9 +2393,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/config.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/config.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2468,6 +2439,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Creates and destroys a volume in Docker. This can be used alongside
 <a class="reference external" href="https://www.terraform.io/docs/providers/docker/r/container.html">docker_container</a>
 to prepare volumes that can be shared across containers.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/volume.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2486,9 +2460,6 @@ provided).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/volume.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_docker.Volume.driver">
 <code class="sig-name descname">driver</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Volume.driver" title="Permalink to this definition">¶</a></dt>
@@ -2542,9 +2513,6 @@ provided).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/volume.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2589,6 +2557,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_docker.get_network">
 <code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">get_network</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.get_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds a specific docker network and returns information about it.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/d/docker_network.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/d/docker_network.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2597,9 +2568,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/d/network.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/d/network.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2608,14 +2576,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Reads the image metadata from a Docker Registry. Used in conjunction with the
 <a class="reference external" href="https://www.terraform.io/docs/providers/docker/r/image.html">docker_image</a> resource to keep an image up
 to date on the latest available version of the tag.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/d/registry_image.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/d/registry_image.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the Docker image, including any tags. e.g. <code class="docutils literal notranslate"><span class="pre">alpine:latest</span></code></p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/d/registry_image.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/d/registry_image.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

@@ -22,6 +22,7 @@ Compute Service (ECS) instances in real time in the Log Service console. <a clas
 <p>This resource amis to attach one logtail configure to a machine group.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> One logtail configure can be attached to multiple machine groups and one machine group can attach several logtail configures.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/logtail_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/logtail_attachment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -34,9 +35,6 @@ Compute Service (ECS) instances in real time in the Log Service console. <a clas
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/logtail_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/logtail_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.log.LogTailAttachment.logtail_config_name">
 <code class="sig-name descname">logtail_config_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.LogTailAttachment.logtail_config_name" title="Permalink to this definition">¶</a></dt>
@@ -72,9 +70,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/logtail_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/logtail_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -118,26 +113,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.log.LogTailConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.log.</code><code class="sig-name descname">LogTailConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">input_detail=None</em>, <em class="sig-param">input_type=None</em>, <em class="sig-param">log_sample=None</em>, <em class="sig-param">logstore=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">output_type=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.LogTailConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a LogTailConfig resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>input_detail</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The logtail configure the required JSON files. (<a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/29058.htm">Refer to details</a>)</p>
-</p></li>
-<li><p><strong>input_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The input type. Currently only two types of files and plugin are supported.</p></li>
-<li><p><strong>log_sample</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – （Optional）The log sample of the Logtail configuration. The log size cannot exceed 1,000 bytes.</p></li>
-<li><p><strong>logstore</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The log store name to the query index belongs.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Logtail configuration name, which is unique in the same project.</p></li>
-<li><p><strong>output_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The output type. Currently, only LogService is supported.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project name to the log store belongs.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/logtail_config.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/logtail_config.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a LogTailConfig resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] input_detail: The logtail configure the required JSON files. (<a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/29058.htm">Refer to details</a>)
+:param pulumi.Input[str] input_type: The input type. Currently only two types of files and plugin are supported.
+:param pulumi.Input[str] log_sample: （Optional）The log sample of the Logtail configuration. The log size cannot exceed 1,000 bytes.
+:param pulumi.Input[str] logstore: The log store name to the query index belongs.
+:param pulumi.Input[str] name: The Logtail configuration name, which is unique in the same project.
+:param pulumi.Input[str] output_type: The output type. Currently, only LogService is supported.
+:param pulumi.Input[str] project: The project name to the log store belongs.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.log.LogTailConfig.input_detail">
 <code class="sig-name descname">input_detail</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.LogTailConfig.input_detail" title="Permalink to this definition">¶</a></dt>
@@ -202,9 +187,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/logtail_config.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/logtail_config.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -248,17 +230,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.log.MachineGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.log.</code><code class="sig-name descname">MachineGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">identify_lists=None</em>, <em class="sig-param">identify_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">topic=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.MachineGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a MachineGroup resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>identify_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The machine identification.</p></li>
-<li><p><strong>identify_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The machine identification type, including IP and user-defined identity. Valid values are “ip” and “userdefined”. Default to “ip”.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a MachineGroup resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] identify_lists: The machine identification.
+:param pulumi.Input[str] identify_type: The machine identification type, including IP and user-defined identity. Valid values are “ip” and “userdefined”. Default to “ip”.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `identify_list`- (Required) The specific machine identification, which can be an IP address or user-defined identity.
 </pre></div>
 </div>
@@ -271,9 +247,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/log_machine_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/log_machine_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.log.MachineGroup.identify_lists">
 <code class="sig-name descname">identify_lists</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.MachineGroup.identify_lists" title="Permalink to this definition">¶</a></dt>
@@ -335,9 +308,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/log_machine_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/log_machine_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -381,20 +351,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.log.Project">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.log.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.Project" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Project resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the log project.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the log project. It is the only in one Alicloud account.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/log_project.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/log_project.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Project resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: Description of the log project.
+:param pulumi.Input[str] name: The name of the log project. It is the only in one Alicloud account.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.log.Project.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Project.description" title="Permalink to this definition">¶</a></dt>
@@ -423,9 +384,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/log_project.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/log_project.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -469,27 +427,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.log.Store">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.log.</code><code class="sig-name descname">Store</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">append_meta=None</em>, <em class="sig-param">auto_split=None</em>, <em class="sig-param">enable_web_tracking=None</em>, <em class="sig-param">max_split_shard_count=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">retention_period=None</em>, <em class="sig-param">shard_count=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.Store" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Store resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>append_meta</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines whether to append log meta automatically. The meta includes log receive time and client IP address. Default to true.</p></li>
-<li><p><strong>auto_split</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines whether to automatically split a shard. Default to true.</p></li>
-<li><p><strong>enable_web_tracking</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines whether to enable Web Tracking. Default false.</p></li>
-<li><p><strong>max_split_shard_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of shards for automatic split, which is in the range of 1 to 64. You must specify this parameter when autoSplit is true.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The log store, which is unique in the same project.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project name to the log store belongs.</p></li>
-<li><p><strong>retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The data retention time (in days). Valid values: [1-3650]. Default to 30. Log store data will be stored permanently when the value is “3650”.</p></li>
-<li><p><strong>shard_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>The number of shards in this log store. Default to 2. You can modify it by “Split” or “Merge” operations. <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28976.htm">Refer to details</a></p>
-</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/log_store.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/log_store.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Store resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] append_meta: Determines whether to append log meta automatically. The meta includes log receive time and client IP address. Default to true.
+:param pulumi.Input[bool] auto_split: Determines whether to automatically split a shard. Default to true.
+:param pulumi.Input[bool] enable_web_tracking: Determines whether to enable Web Tracking. Default false.
+:param pulumi.Input[float] max_split_shard_count: The maximum number of shards for automatic split, which is in the range of 1 to 64. You must specify this parameter when autoSplit is true.
+:param pulumi.Input[str] name: The log store, which is unique in the same project.
+:param pulumi.Input[str] project: The project name to the log store belongs.
+:param pulumi.Input[float] retention_period: The data retention time (in days). Valid values: [1-3650]. Default to 30. Log store data will be stored permanently when the value is “3650”.
+:param pulumi.Input[float] shard_count: The number of shards in this log store. Default to 2. You can modify it by “Split” or “Merge” operations. <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28976.htm">Refer to details</a></p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.log.Store.append_meta">
 <code class="sig-name descname">append_meta</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Store.append_meta" title="Permalink to this definition">¶</a></dt>
@@ -568,9 +516,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the log project. It formats of <code class="docutils literal notranslate"><span class="pre">&lt;project&gt;:&lt;name&gt;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/log_store.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/log_store.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -615,7 +560,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.log.StoreIndex">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.log.</code><code class="sig-name descname">StoreIndex</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">field_searches=None</em>, <em class="sig-param">full_text=None</em>, <em class="sig-param">logstore=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.StoreIndex" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Create a StoreIndex resource with the given unique name, props, and options.
-
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
 :param pulumi.Input[list] field_searches: List configurations of field search index. Valid item as follows:
@@ -630,7 +574,6 @@ The **field_searches** object supports the following:
   * `enableAnalytics` (`pulumi.Input[bool]`) - Whether to enable field analytics. Default to true.
   * `includeChinese` (`pulumi.Input[bool]`) - Whether includes the chinese for the field. Default to false. It is valid when &quot;type&quot; is &quot;text&quot; or &quot;json&quot;.
   * `jsonKeys` (`pulumi.Input[list]`) - Use nested index when type is json
-
     * `alias` (`pulumi.Input[str]`) - The alias of one field.
     * `docValue` (`pulumi.Input[bool]`) - Whether to enable statistics. default to true.
     * `name` (`pulumi.Input[str]`) - When using the json_keys field, this field is required.
@@ -651,9 +594,6 @@ The **full_text** object supports the following:
 </pre></div>
 </div>
 <p>“, “#”. It is valid when “type” is “text” or “json”.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">This</span> <span class="n">content</span> <span class="ow">is</span> <span class="n">derived</span> <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">terraform</span><span class="o">-</span><span class="n">providers</span><span class="o">/</span><span class="n">terraform</span><span class="o">-</span><span class="n">provider</span><span class="o">-</span><span class="n">alicloud</span><span class="o">/</span><span class="n">blob</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">website</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">r</span><span class="o">/</span><span class="n">log_store_index</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">markdown</span><span class="o">.</span>
-</pre></div>
-</div>
 <dl class="attribute">
 <dt id="pulumi_alicloud.log.StoreIndex.field_searches">
 <code class="sig-name descname">field_searches</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.StoreIndex.field_searches" title="Permalink to this definition">¶</a></dt>
@@ -723,7 +663,6 @@ The **field_searches** object supports the following:
   * `enableAnalytics` (`pulumi.Input[bool]`) - Whether to enable field analytics. Default to true.
   * `includeChinese` (`pulumi.Input[bool]`) - Whether includes the chinese for the field. Default to false. It is valid when &quot;type&quot; is &quot;text&quot; or &quot;json&quot;.
   * `jsonKeys` (`pulumi.Input[list]`) - Use nested index when type is json
-
     * `alias` (`pulumi.Input[str]`) - The alias of one field.
     * `docValue` (`pulumi.Input[bool]`) - Whether to enable statistics. default to true.
     * `name` (`pulumi.Input[str]`) - When using the json_keys field, this field is required.
@@ -744,9 +683,6 @@ The **full_text** object supports the following:
 </pre></div>
 </div>
 <p>“, “#”. It is valid when “type” is “text” or “json”.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">This</span> <span class="n">content</span> <span class="ow">is</span> <span class="n">derived</span> <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">terraform</span><span class="o">-</span><span class="n">providers</span><span class="o">/</span><span class="n">terraform</span><span class="o">-</span><span class="n">provider</span><span class="o">-</span><span class="n">alicloud</span><span class="o">/</span><span class="n">blob</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">website</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">r</span><span class="o">/</span><span class="n">log_store_index</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">markdown</span><span class="o">.</span>
-</pre></div>
-</div>
 </dd></dl>
 
 <dl class="method">

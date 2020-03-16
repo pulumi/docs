@@ -16,30 +16,86 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.bigquery"></span><dl class="class">
 <dt id="pulumi_gcp.bigquery.AppProfile">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">AppProfile</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_profile_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ignore_warnings=None</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">multi_cluster_routing_use_any=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">single_cluster_routing=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AppProfile resource with the given unique name, props, and options.</p>
+<dd><p>Create a AppProfile resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] app_profile_id: The unique name of the app profile in the form ‘[<em>a-zA-Z0-9][-</em>.a-zA-Z0-9]*’.
+:param pulumi.Input[str] description: Long form description of the use case for this app profile.
+:param pulumi.Input[bool] ignore_warnings: If true, ignore safety checks when deleting/updating the app profile.
+:param pulumi.Input[str] instance: The name of the instance to create the app profile within.
+:param pulumi.Input[bool] multi_cluster_routing_use_any: If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest</p>
+<blockquote>
+<div><p>cluster that is available in the event of transient errors or delays. Clusters in a region are considered equidistant.
+Choosing this option sacrifices read-your-writes consistency to improve availability.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>single_cluster_routing</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Use a single-cluster routing policy.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>single_cluster_routing</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowTransactionalWrites</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clusterId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_app_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_app_profile.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.AppProfile.app_profile_id">
+<code class="sig-name descname">app_profile_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.app_profile_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique name of the app profile in the form ‘[<em>a-zA-Z0-9][-</em>.a-zA-Z0-9]*’.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.AppProfile.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Long form description of the use case for this app profile.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.AppProfile.ignore_warnings">
+<code class="sig-name descname">ignore_warnings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.ignore_warnings" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, ignore safety checks when deleting/updating the app profile.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.AppProfile.instance">
+<code class="sig-name descname">instance</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the instance to create the app profile within.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.AppProfile.multi_cluster_routing_use_any">
+<code class="sig-name descname">multi_cluster_routing_use_any</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.multi_cluster_routing_use_any" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest
+cluster that is available in the event of transient errors or delays. Clusters in a region are considered equidistant.
+Choosing this option sacrifices read-your-writes consistency to improve availability.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.AppProfile.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique name of the requested app profile. Values are of the form
+‘projects/<span class="raw-html-m2r"><project></span>/instances/<span class="raw-html-m2r"><instance></span>/appProfiles/<span class="raw-html-m2r"><appProfileId></span>’.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.AppProfile.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.AppProfile.single_cluster_routing">
+<code class="sig-name descname">single_cluster_routing</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.single_cluster_routing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use a single-cluster routing policy.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowTransactionalWrites</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -53,19 +109,26 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_profile_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the app profile in the form ‘[<em>a-zA-Z0-9][-</em>.a-zA-Z0-9]*’.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Long form description of the use case for this app profile.</p></li>
+<li><p><strong>ignore_warnings</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, ignore safety checks when deleting/updating the app profile.</p></li>
+<li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance to create the app profile within.</p></li>
+<li><p><strong>multi_cluster_routing_use_any</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest
+cluster that is available in the event of transient errors or delays. Clusters in a region are considered equidistant.
+Choosing this option sacrifices read-your-writes consistency to improve availability.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the requested app profile. Values are of the form
+‘projects/<span class="raw-html-m2r"><project></span>/instances/<span class="raw-html-m2r"><instance></span>/appProfiles/<span class="raw-html-m2r"><appProfileId></span>’.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>single_cluster_routing</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Use a single-cluster routing policy.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>single_cluster_routing</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowTransactionalWrites</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clusterId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_app_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_app_profile.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -108,31 +171,108 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.bigquery.AwaitableGetDefaultServiceAccountResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">AwaitableGetDefaultServiceAccountResult</code><span class="sig-paren">(</span><em class="sig-param">email=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.AwaitableGetDefaultServiceAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">AwaitableGetDefaultServiceAccountResult</code><span class="sig-paren">(</span><em class="sig-param">email=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.AwaitableGetDefaultServiceAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">DataTransferConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_refresh_window_days=None</em>, <em class="sig-param">data_source_id=None</em>, <em class="sig-param">destination_dataset_id=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">params=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DataTransferConfig resource with the given unique name, props, and options.</p>
+<dd><p>Create a DataTransferConfig resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] data_refresh_window_days: The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then</p>
+<blockquote>
+<div><p>every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if
+the data source supports the feature. Set the value to 0 to use the default value.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>data_source_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The data source id. Cannot be changed once the transfer config is created.</p></li>
+<li><p><strong>destination_dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The BigQuery target dataset id.</p></li>
+<li><p><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When set to true, no runs are scheduled for a given transfer.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user specified display name for the transfer config.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
+US.</p></li>
+<li><p><strong>params</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – These parameters are specific to each data source.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the
+default value for the data source will be used. The specified times are in UTC. Examples of valid format: 1st,3rd monday
+of month 15:30, every wed,fri of jan, jun 13:15, and first sunday of quarter 00:00. See more explanation about the
+format here: <a class="reference external" href="https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format">https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format</a>
+NOTE: the granularity should be at least 8 hours, or less frequent.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_data_transfer_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_data_transfer_config.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DataTransferConfig.data_refresh_window_days">
+<code class="sig-name descname">data_refresh_window_days</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.data_refresh_window_days" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then
+every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if
+the data source supports the feature. Set the value to 0 to use the default value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DataTransferConfig.data_source_id">
+<code class="sig-name descname">data_source_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.data_source_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The data source id. Cannot be changed once the transfer config is created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DataTransferConfig.destination_dataset_id">
+<code class="sig-name descname">destination_dataset_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.destination_dataset_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The BigQuery target dataset id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DataTransferConfig.disabled">
+<code class="sig-name descname">disabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.disabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>When set to true, no runs are scheduled for a given transfer.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DataTransferConfig.display_name">
+<code class="sig-name descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The user specified display name for the transfer config.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DataTransferConfig.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
+US.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DataTransferConfig.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name of the transfer config. Transfer config names have the form
+projects/{projectId}/locations/{location}/transferConfigs/{configId}. Where configId is usually a uuid, but this is not
+required. The name is ignored when creating a transfer config.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DataTransferConfig.params">
+<code class="sig-name descname">params</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.params" title="Permalink to this definition">¶</a></dt>
+<dd><p>These parameters are specific to each data source.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DataTransferConfig.schedule">
+<code class="sig-name descname">schedule</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.schedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the
+default value for the data source will be used. The specified times are in UTC. Examples of valid format: 1st,3rd monday
+of month 15:30, every wed,fri of jan, jun 13:15, and first sunday of quarter 00:00. See more explanation about the
+format here: <a class="reference external" href="https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format">https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format</a>
+NOTE: the granularity should be at least 8 hours, or less frequent.</p>
 </dd></dl>
 
 <dl class="method">
@@ -146,14 +286,29 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>data_refresh_window_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then
+every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if
+the data source supports the feature. Set the value to 0 to use the default value.</p></li>
+<li><p><strong>data_source_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The data source id. Cannot be changed once the transfer config is created.</p></li>
+<li><p><strong>destination_dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The BigQuery target dataset id.</p></li>
+<li><p><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When set to true, no runs are scheduled for a given transfer.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user specified display name for the transfer config.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
+US.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the transfer config. Transfer config names have the form
+projects/{projectId}/locations/{location}/transferConfigs/{configId}. Where configId is usually a uuid, but this is not
+required. The name is ignored when creating a transfer config.</p></li>
+<li><p><strong>params</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – These parameters are specific to each data source.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the
+default value for the data source will be used. The specified times are in UTC. Examples of valid format: 1st,3rd monday
+of month 15:30, every wed,fri of jan, jun 13:15, and first sunday of quarter 00:00. See more explanation about the
+format here: <a class="reference external" href="https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format">https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format</a>
+NOTE: the granularity should be at least 8 hours, or less frequent.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_data_transfer_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_data_transfer_config.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -197,15 +352,47 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.bigquery.Dataset">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Dataset</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accesses=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">default_encryption_configuration=None</em>, <em class="sig-param">default_partition_expiration_ms=None</em>, <em class="sig-param">default_table_expiration_ms=None</em>, <em class="sig-param">delete_contents_on_destroy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Dataset resource with the given unique name, props, and options.</p>
+<dd><p>Create a Dataset resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] accesses: An array of objects that define dataset access for one or more entities.
+:param pulumi.Input[str] dataset<a href="#id1"><span class="problematic" id="id2">*</span></a>id: A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or</p>
+<blockquote>
+<div><p>underscores (<a href="#id3"><span class="problematic" id="id4">*</span></a>). The maximum length is 1,024 characters.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>default_encryption_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
+tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
+key.</p></li>
+<li><p><strong>default_partition_expiration_ms</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set,
+all newly-created partitioned tables in the dataset will have an ‘expirationMs’ property in the ‘timePartitioning’
+settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a
+partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of
+‘defaultTableExpirationMs’ for partitioned tables: only one of ‘defaultTableExpirationMs’ and
+‘defaultPartitionExpirationMs’ will be used for any new partitioned table. If you provide an explicit
+‘timePartitioning.expirationMs’ when creating or updating a partitioned table, that value takes precedence over the
+default partition expiration time indicated by this property.</p></li>
+<li><p><strong>default_table_expiration_ms</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one
+hour). Once this property is set, all newly-created tables in the dataset will have an ‘expirationTime’ property set to
+the creation time plus the value in this property, and changing the value will only affect new tables, not existing
+ones. When the ‘expirationTime’ for a given table is reached, that table will be deleted automatically. If a table’s
+‘expirationTime’ is modified or removed before the table expires, or if you provide an explicit ‘expirationTime’ when
+creating a table, that value takes precedence over the default expiration time indicated by this property.</p></li>
 <li><p><strong>delete_contents_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, delete all the tables in the
 dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-friendly description of the dataset</p></li>
+<li><p><strong>friendly_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A descriptive name for the dataset</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this dataset. You can use these to organize and group your datasets</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location where the dataset should reside. See <a class="reference external" href="https://cloud.google.com/bigquery/docs/dataset-locations">official
+docs</a>. There are two types of locations, regional or
+multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a
+large geographic area, such as the United States, that contains at least two geographic places. Possible regional values
+include: ‘asia-east1’, ‘asia-northeast1’, ‘asia-southeast1’, ‘australia-southeast1’, ‘europe-north1’, ‘europe-west2’ and
+‘us-east4’. Possible multi-regional values: ‘EU’ and ‘US’. The default value is multi-regional location ‘US’. Changing
+this forces a new resource to be created.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 </ul>
@@ -221,24 +408,131 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">view</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">projectId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>default_encryption_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_dataset.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_dataset.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.Dataset.accesses">
+<code class="sig-name descname">accesses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.accesses" title="Permalink to this definition">¶</a></dt>
+<dd><p>An array of objects that define dataset access for one or more entities.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupByEmail</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">specialGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userByEmail</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">view</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.Dataset.creation_time">
+<code class="sig-name descname">creation_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.creation_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time when this dataset was created, in milliseconds since the epoch.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.Dataset.dataset_id">
+<code class="sig-name descname">dataset_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.dataset_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
+underscores (_). The maximum length is 1,024 characters.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.Dataset.default_encryption_configuration">
+<code class="sig-name descname">default_encryption_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.default_encryption_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
+tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
+key.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.Dataset.default_partition_expiration_ms">
+<code class="sig-name descname">default_partition_expiration_ms</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.default_partition_expiration_ms" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set,
+all newly-created partitioned tables in the dataset will have an ‘expirationMs’ property in the ‘timePartitioning’
+settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a
+partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of
+‘defaultTableExpirationMs’ for partitioned tables: only one of ‘defaultTableExpirationMs’ and
+‘defaultPartitionExpirationMs’ will be used for any new partitioned table. If you provide an explicit
+‘timePartitioning.expirationMs’ when creating or updating a partitioned table, that value takes precedence over the
+default partition expiration time indicated by this property.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.Dataset.default_table_expiration_ms">
+<code class="sig-name descname">default_table_expiration_ms</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.default_table_expiration_ms" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one
+hour). Once this property is set, all newly-created tables in the dataset will have an ‘expirationTime’ property set to
+the creation time plus the value in this property, and changing the value will only affect new tables, not existing
+ones. When the ‘expirationTime’ for a given table is reached, that table will be deleted automatically. If a table’s
+‘expirationTime’ is modified or removed before the table expires, or if you provide an explicit ‘expirationTime’ when
+creating a table, that value takes precedence over the default expiration time indicated by this property.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.delete_contents_on_destroy">
 <code class="sig-name descname">delete_contents_on_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.delete_contents_on_destroy" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, delete all the tables in the
 dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.Dataset.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A user-friendly description of the dataset</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.Dataset.etag">
+<code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.etag" title="Permalink to this definition">¶</a></dt>
+<dd><p>A hash of the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.Dataset.friendly_name">
+<code class="sig-name descname">friendly_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.friendly_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A descriptive name for the dataset</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.Dataset.labels">
+<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>The labels associated with this dataset. You can use these to organize and group your datasets</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.Dataset.last_modified_time">
+<code class="sig-name descname">last_modified_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.last_modified_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.Dataset.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The geographic location where the dataset should reside. See <a class="reference external" href="https://cloud.google.com/bigquery/docs/dataset-locations">official
+docs</a>. There are two types of locations, regional or
+multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a
+large geographic area, such as the United States, that contains at least two geographic places. Possible regional values
+include: ‘asia-east1’, ‘asia-northeast1’, ‘asia-southeast1’, ‘australia-southeast1’, ‘europe-north1’, ‘europe-west2’ and
+‘us-east4’. Possible multi-regional values: ‘EU’ and ‘US’. The default value is multi-regional location ‘US’. Changing
+this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -265,9 +559,44 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>accesses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of objects that define dataset access for one or more entities.</p></li>
+<li><p><strong>creation_time</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time when this dataset was created, in milliseconds since the epoch.</p></li>
+<li><p><strong>dataset*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
+underscores (<a href="#id8"><span class="problematic" id="id9">*</span></a>). The maximum length is 1,024 characters.</p>
+</p></li>
+<li><p><strong>default_encryption_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
+tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
+key.</p></li>
+<li><p><strong>default_partition_expiration_ms</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set,
+all newly-created partitioned tables in the dataset will have an ‘expirationMs’ property in the ‘timePartitioning’
+settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a
+partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of
+‘defaultTableExpirationMs’ for partitioned tables: only one of ‘defaultTableExpirationMs’ and
+‘defaultPartitionExpirationMs’ will be used for any new partitioned table. If you provide an explicit
+‘timePartitioning.expirationMs’ when creating or updating a partitioned table, that value takes precedence over the
+default partition expiration time indicated by this property.</p></li>
+<li><p><strong>default_table_expiration_ms</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one
+hour). Once this property is set, all newly-created tables in the dataset will have an ‘expirationTime’ property set to
+the creation time plus the value in this property, and changing the value will only affect new tables, not existing
+ones. When the ‘expirationTime’ for a given table is reached, that table will be deleted automatically. If a table’s
+‘expirationTime’ is modified or removed before the table expires, or if you provide an explicit ‘expirationTime’ when
+creating a table, that value takes precedence over the default expiration time indicated by this property.</p></li>
 <li><p><strong>delete_contents_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, delete all the tables in the
 dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-friendly description of the dataset</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A hash of the resource.</p></li>
+<li><p><strong>friendly_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A descriptive name for the dataset</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this dataset. You can use these to organize and group your datasets</p></li>
+<li><p><strong>last_modified_time</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The geographic location where the dataset should reside. See <a class="reference external" href="https://cloud.google.com/bigquery/docs/dataset-locations">official
+docs</a>. There are two types of locations, regional or
+multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a
+large geographic area, such as the United States, that contains at least two geographic places. Possible regional values
+include: ‘asia-east1’, ‘asia-northeast1’, ‘asia-southeast1’, ‘australia-southeast1’, ‘europe-north1’, ‘europe-west2’ and
+‘us-east4’. Possible multi-regional values: ‘EU’ and ‘US’. The default value is multi-regional location ‘US’. Changing
+this forces a new resource to be created.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
@@ -284,18 +613,15 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">view</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">projectId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>default_encryption_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_dataset.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_dataset.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -338,7 +664,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.bigquery.GetDefaultServiceAccountResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">GetDefaultServiceAccountResult</code><span class="sig-paren">(</span><em class="sig-param">email=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.GetDefaultServiceAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">GetDefaultServiceAccountResult</code><span class="sig-paren">(</span><em class="sig-param">email=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.GetDefaultServiceAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDefaultServiceAccount.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.GetDefaultServiceAccountResult.email">
@@ -360,6 +686,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Creates a table resource in a dataset for Google BigQuery. For more information see
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/">the official documentation</a> and
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/tables">API</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_table.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_table.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -410,7 +739,7 @@ Structure is documented below.</p></li>
 </dl>
 <p>The <strong>encryption_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>external_data_configuration</strong> object supports the following:</p>
 <ul class="simple">
@@ -460,9 +789,6 @@ Structure is documented below.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useLegacySql</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_table.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_table.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.Table.clusterings">
 <code class="sig-name descname">clusterings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.clusterings" title="Permalink to this definition">¶</a></dt>
@@ -497,7 +823,7 @@ Changing this forces a new resource to be created.</p>
 If left blank, the table will be encrypted with a Google-managed key; that process
 is transparent to the user.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeyName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -740,7 +1066,7 @@ Structure is documented below.</p></li>
 </dl>
 <p>The <strong>encryption_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>external_data_configuration</strong> object supports the following:</p>
 <ul class="simple">
@@ -790,9 +1116,6 @@ Structure is documented below.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useLegacySql</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_table.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_table.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -837,14 +1160,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.bigquery.get_default_service_account">
 <code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">get_default_service_account</code><span class="sig-paren">(</span><em class="sig-param">project=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.get_default_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve default service account for this project</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_bigquery_default_service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_bigquery_default_service_account.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>project</strong> (<em>str</em>) – The project ID. If it is not provided, the provider project is used.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/bigquery_default_service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/bigquery_default_service_account.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

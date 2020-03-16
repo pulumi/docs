@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.opsworks.Application">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">Application</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_sources=None</em>, <em class="sig-param">auto_bundle_on_deploy=None</em>, <em class="sig-param">aws_flow_ruby_settings=None</em>, <em class="sig-param">data_source_arn=None</em>, <em class="sig-param">data_source_database_name=None</em>, <em class="sig-param">data_source_type=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">document_root=None</em>, <em class="sig-param">domains=None</em>, <em class="sig-param">enable_ssl=None</em>, <em class="sig-param">environments=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rails_env=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">ssl_configurations=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks application resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_application.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -44,9 +47,9 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <p>The <strong>app_sources</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - For sources that are version-aware, the revision to use.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of source to use. For example, “archive”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL where the app resource can be found.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Username to use when authenticating to the source.</p></li>
@@ -63,17 +66,14 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">chain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_application.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Application.app_sources">
 <code class="sig-name descname">app_sources</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Application.app_sources" title="Permalink to this definition">¶</a></dt>
 <dd><p>SCM configuration of the app as described below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - For sources that are version-aware, the revision to use.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of source to use. For example, “archive”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL where the app resource can be found.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Username to use when authenticating to the source.</p></li>
@@ -219,9 +219,9 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>app_sources</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - For sources that are version-aware, the revision to use.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of source to use. For example, “archive”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL where the app resource can be found.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Username to use when authenticating to the source.</p></li>
@@ -238,9 +238,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">chain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_application.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -285,6 +282,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.opsworks.CustomLayer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">CustomLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.CustomLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks custom layer resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_custom_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_custom_layer.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -319,9 +319,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_custom_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_custom_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.CustomLayer.auto_assign_elastic_ips">
 <code class="sig-name descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.CustomLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -467,9 +464,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_custom_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_custom_layer.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -514,6 +508,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.opsworks.GangliaLayer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">GangliaLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.GangliaLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks Ganglia layer resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_ganglia_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_ganglia_layer.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -550,9 +547,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_ganglia_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_ganglia_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.GangliaLayer.auto_assign_elastic_ips">
 <code class="sig-name descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.GangliaLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -712,9 +706,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_ganglia_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_ganglia_layer.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -759,6 +750,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.opsworks.HaproxyLayer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">HaproxyLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">healthcheck_method=None</em>, <em class="sig-param">healthcheck_url=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">stats_enabled=None</em>, <em class="sig-param">stats_password=None</em>, <em class="sig-param">stats_url=None</em>, <em class="sig-param">stats_user=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.HaproxyLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks haproxy layer resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_haproxy_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_haproxy_layer.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -798,9 +792,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_haproxy_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_haproxy_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.HaproxyLayer.auto_assign_elastic_ips">
 <code class="sig-name descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.HaproxyLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -981,9 +972,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_haproxy_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_haproxy_layer.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1076,6 +1064,7 @@ identified by the <code class="docutils literal notranslate"><span class="pre">v
 resources cannot be automatically detected by this provider. After making updates
 to block device configuration, resource recreation can be manually triggered by
 using the <cite>``taint`</cite> command &lt;<a class="reference external" href="https://www.terraform.io/docs/commands/taint.html">https://www.terraform.io/docs/commands/taint.html</a>&gt;`_.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_instance.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1140,9 +1129,6 @@ will use. Can be either <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Instance.agent_version">
 <code class="sig-name descname">agent_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Instance.agent_version" title="Permalink to this definition">¶</a></dt>
@@ -1401,9 +1387,6 @@ will use. Can be either <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_instance.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1448,6 +1431,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.opsworks.JavaAppLayer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">JavaAppLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_server=None</em>, <em class="sig-param">app_server_version=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">jvm_options=None</em>, <em class="sig-param">jvm_type=None</em>, <em class="sig-param">jvm_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.JavaAppLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks Java application layer resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_java_app_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_java_app_layer.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1486,9 +1472,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_java_app_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_java_app_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.JavaAppLayer.app_server">
 <code class="sig-name descname">app_server</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.JavaAppLayer.app_server" title="Permalink to this definition">¶</a></dt>
@@ -1662,9 +1645,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_java_app_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_java_app_layer.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1709,6 +1689,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.opsworks.MemcachedLayer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">MemcachedLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_memory=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.MemcachedLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks memcached layer resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_memcached_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_memcached_layer.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1743,9 +1726,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_memcached_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_memcached_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.MemcachedLayer.allocated_memory">
 <code class="sig-name descname">allocated_memory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.MemcachedLayer.allocated_memory" title="Permalink to this definition">¶</a></dt>
@@ -1891,9 +1871,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_memcached_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_memcached_layer.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1941,6 +1918,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the root password will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_mysql_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_mysql_layer.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1977,9 +1955,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_mysql_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_mysql_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.MysqlLayer.auto_assign_elastic_ips">
 <code class="sig-name descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.MysqlLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -2132,9 +2107,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_mysql_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_mysql_layer.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2179,6 +2151,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.opsworks.NodejsAppLayer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">NodejsAppLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nodejs_version=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.NodejsAppLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks NodeJS application layer resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_nodejs_app_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_nodejs_app_layer.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2213,9 +2188,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_nodejs_app_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_nodejs_app_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.NodejsAppLayer.auto_assign_elastic_ips">
 <code class="sig-name descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.NodejsAppLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -2361,9 +2333,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_nodejs_app_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_nodejs_app_layer.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2408,6 +2377,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.opsworks.Permission">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">Permission</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_ssh=None</em>, <em class="sig-param">allow_sudo=None</em>, <em class="sig-param">level=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">user_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.Permission" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks permission resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_permission.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2421,9 +2393,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_permission.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Permission.allow_ssh">
 <code class="sig-name descname">allow_ssh</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Permission.allow_ssh" title="Permalink to this definition">¶</a></dt>
@@ -2473,9 +2442,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_permission.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2520,6 +2486,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.opsworks.PhpAppLayer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">PhpAppLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.PhpAppLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks PHP application layer resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_php_app_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_php_app_layer.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2553,9 +2522,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_php_app_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_php_app_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.PhpAppLayer.auto_assign_elastic_ips">
 <code class="sig-name descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.PhpAppLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -2694,9 +2660,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_php_app_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_php_app_layer.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2741,6 +2704,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.opsworks.RailsAppLayer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">RailsAppLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_server=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">bundler_version=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">manage_bundler=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">passenger_version=None</em>, <em class="sig-param">ruby_version=None</em>, <em class="sig-param">rubygems_version=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.RailsAppLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks Ruby on Rails application layer resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_rails_app_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_rails_app_layer.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2780,9 +2746,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_rails_app_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_rails_app_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.RailsAppLayer.app_server">
 <code class="sig-name descname">app_server</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.RailsAppLayer.app_server" title="Permalink to this definition">¶</a></dt>
@@ -2963,9 +2926,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_rails_app_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_rails_app_layer.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3013,6 +2973,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_rds_db_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_rds_db_instance.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3026,9 +2987,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_rds_db_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_rds_db_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.RdsDbInstance.db_password">
 <code class="sig-name descname">db_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.RdsDbInstance.db_password" title="Permalink to this definition">¶</a></dt>
@@ -3071,9 +3029,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_rds_db_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_rds_db_instance.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3118,6 +3073,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.opsworks.Stack">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">Stack</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">agent_version=None</em>, <em class="sig-param">berkshelf_version=None</em>, <em class="sig-param">color=None</em>, <em class="sig-param">configuration_manager_name=None</em>, <em class="sig-param">configuration_manager_version=None</em>, <em class="sig-param">custom_cookbooks_sources=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">default_availability_zone=None</em>, <em class="sig-param">default_instance_profile_arn=None</em>, <em class="sig-param">default_os=None</em>, <em class="sig-param">default_root_device_type=None</em>, <em class="sig-param">default_ssh_key_name=None</em>, <em class="sig-param">default_subnet_id=None</em>, <em class="sig-param">hostname_theme=None</em>, <em class="sig-param">manage_berkshelf=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">service_role_arn=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_custom_cookbooks=None</em>, <em class="sig-param">use_opsworks_security_groups=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.Stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks stack resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_stack.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_stack.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3164,9 +3122,6 @@ security groups apply to created instances.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_stack.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_stack.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Stack.agent_version">
 <code class="sig-name descname">agent_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Stack.agent_version" title="Permalink to this definition">¶</a></dt>
@@ -3366,9 +3321,6 @@ security groups apply to created instances.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_stack.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_stack.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3413,6 +3365,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.opsworks.StaticWebLayer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">StaticWebLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.StaticWebLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks static web server layer resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_static_web_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_static_web_layer.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3445,9 +3400,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_static_web_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_static_web_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.StaticWebLayer.auto_assign_elastic_ips">
 <code class="sig-name descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.StaticWebLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -3579,9 +3531,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_static_web_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_static_web_layer.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3626,6 +3575,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.opsworks.UserProfile">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">UserProfile</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_self_management=None</em>, <em class="sig-param">ssh_public_key=None</em>, <em class="sig-param">ssh_username=None</em>, <em class="sig-param">user_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.UserProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks User Profile resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_user_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_user_profile.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3638,9 +3590,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_user_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_user_profile.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.UserProfile.allow_self_management">
 <code class="sig-name descname">allow_self_management</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.UserProfile.allow_self_management" title="Permalink to this definition">¶</a></dt>
@@ -3683,9 +3632,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_user_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_user_profile.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

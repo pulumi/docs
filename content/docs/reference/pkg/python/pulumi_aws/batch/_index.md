@@ -15,12 +15,12 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.batch"></span><dl class="class">
 <dt id="pulumi_aws.batch.AwaitableGetComputeEnvironmentResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">AwaitableGetComputeEnvironmentResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">compute_environment_name=None</em>, <em class="sig-param">ecs_cluster_arn=None</em>, <em class="sig-param">service_role=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">status_reason=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.AwaitableGetComputeEnvironmentResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">AwaitableGetComputeEnvironmentResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">compute_environment_name=None</em>, <em class="sig-param">ecs_cluster_arn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">service_role=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">status_reason=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.AwaitableGetComputeEnvironmentResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.batch.AwaitableGetJobQueueResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">AwaitableGetJobQueueResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">compute_environment_orders=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">status_reason=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.AwaitableGetJobQueueResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">AwaitableGetJobQueueResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">compute_environment_orders=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">status_reason=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.AwaitableGetJobQueueResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -32,6 +32,7 @@ For information about compute environment, see [Compute Environments][2] .</p>
 <blockquote>
 <div><p><strong>Note:</strong> To prevent a race condition during environment deletion, make sure to set <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> to the related <code class="docutils literal notranslate"><span class="pre">iam.RolePolicyAttachment</span></code>;
 otherwise, the policy may be destroyed too soon and the compute environment will then get stuck in the <code class="docutils literal notranslate"><span class="pre">DELETING</span></code> state, see [Troubleshooting AWS Batch][3] .</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_compute_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_compute_environment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -48,13 +49,13 @@ otherwise, the policy may be destroyed too soon and the compute environment will
 </dl>
 <p>The <strong>compute_resources</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allocationStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are <code class="docutils literal notranslate"><span class="pre">BEST_FIT_PROGRESSIVE</span></code>, <code class="docutils literal notranslate"><span class="pre">SPOT_CAPACITY_OPTIMIZED</span></code> or <code class="docutils literal notranslate"><span class="pre">BEST_FIT</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">BEST_FIT</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">AWS docs</a> for details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are <code class="docutils literal notranslate"><span class="pre">BEST_FIT_PROGRESSIVE</span></code>, <code class="docutils literal notranslate"><span class="pre">SPOT_CAPACITY_OPTIMIZED</span></code> or <code class="docutils literal notranslate"><span class="pre">BEST_FIT</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">BEST_FIT</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">AWS docs</a> for details.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bidPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (<code class="docutils literal notranslate"><span class="pre">20</span></code>), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">desiredVcpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The desired number of EC2 vCPUS in the compute environment.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ec2KeyPair</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The EC2 key pair that is used for instances launched in the compute environment.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Machine Image (AMI) ID used for instances launched in the compute environment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Machine Image (AMI) ID used for instances launched in the compute environment.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instanceRole</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of instance types that may be launched.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_types</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of instance types that may be launched.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">launch_template</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The launch template to use for your compute resources. See details below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">launchTemplateId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the launch template. You must specify either the launch template ID or launch template name in the request, but not both.</p></li>
@@ -64,15 +65,12 @@ otherwise, the policy may be destroyed too soon and the compute environment will
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxVcpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of EC2 vCPUs that an environment can reach.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minVcpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum number of EC2 vCPUs that an environment should maintain.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of EC2 security group that are associated with instances launched in the compute environment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of EC2 security group that are associated with instances launched in the compute environment.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spotIamFleetRole</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of VPC subnets into which the compute resources are launched.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Key-value pair tags to be applied to resources that are launched in the compute environment.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of compute environment. Valid items are <code class="docutils literal notranslate"><span class="pre">EC2</span></code> or <code class="docutils literal notranslate"><span class="pre">SPOT</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_compute_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_compute_environment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.batch.ComputeEnvironment.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.ComputeEnvironment.arn" title="Permalink to this definition">¶</a></dt>
@@ -90,13 +88,13 @@ otherwise, the policy may be destroyed too soon and the compute environment will
 <code class="sig-name descname">compute_resources</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.ComputeEnvironment.compute_resources" title="Permalink to this definition">¶</a></dt>
 <dd><p>Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allocationStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are <code class="docutils literal notranslate"><span class="pre">BEST_FIT_PROGRESSIVE</span></code>, <code class="docutils literal notranslate"><span class="pre">SPOT_CAPACITY_OPTIMIZED</span></code> or <code class="docutils literal notranslate"><span class="pre">BEST_FIT</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">BEST_FIT</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">AWS docs</a> for details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are <code class="docutils literal notranslate"><span class="pre">BEST_FIT_PROGRESSIVE</span></code>, <code class="docutils literal notranslate"><span class="pre">SPOT_CAPACITY_OPTIMIZED</span></code> or <code class="docutils literal notranslate"><span class="pre">BEST_FIT</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">BEST_FIT</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">AWS docs</a> for details.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bidPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (<code class="docutils literal notranslate"><span class="pre">20</span></code>), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">desiredVcpus</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The desired number of EC2 vCPUS in the compute environment.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ec2KeyPair</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The EC2 key pair that is used for instances launched in the compute environment.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon Machine Image (AMI) ID used for instances launched in the compute environment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon Machine Image (AMI) ID used for instances launched in the compute environment.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instanceRole</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of instance types that may be launched.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_types</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of instance types that may be launched.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">launch_template</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The launch template to use for your compute resources. See details below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">launchTemplateId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the launch template. You must specify either the launch template ID or launch template name in the request, but not both.</p></li>
@@ -106,7 +104,7 @@ otherwise, the policy may be destroyed too soon and the compute environment will
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxVcpus</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of EC2 vCPUs that an environment can reach.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minVcpus</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The minimum number of EC2 vCPUs that an environment should maintain.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of EC2 security group that are associated with instances launched in the compute environment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of EC2 security group that are associated with instances launched in the compute environment.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spotIamFleetRole</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of VPC subnets into which the compute resources are launched.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Key-value pair tags to be applied to resources that are launched in the compute environment.</p></li>
@@ -175,13 +173,13 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>compute_resources</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allocationStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are <code class="docutils literal notranslate"><span class="pre">BEST_FIT_PROGRESSIVE</span></code>, <code class="docutils literal notranslate"><span class="pre">SPOT_CAPACITY_OPTIMIZED</span></code> or <code class="docutils literal notranslate"><span class="pre">BEST_FIT</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">BEST_FIT</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">AWS docs</a> for details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are <code class="docutils literal notranslate"><span class="pre">BEST_FIT_PROGRESSIVE</span></code>, <code class="docutils literal notranslate"><span class="pre">SPOT_CAPACITY_OPTIMIZED</span></code> or <code class="docutils literal notranslate"><span class="pre">BEST_FIT</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">BEST_FIT</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">AWS docs</a> for details.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bidPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (<code class="docutils literal notranslate"><span class="pre">20</span></code>), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">desiredVcpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The desired number of EC2 vCPUS in the compute environment.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ec2KeyPair</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The EC2 key pair that is used for instances launched in the compute environment.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Machine Image (AMI) ID used for instances launched in the compute environment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Machine Image (AMI) ID used for instances launched in the compute environment.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instanceRole</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of instance types that may be launched.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_types</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of instance types that may be launched.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">launch_template</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The launch template to use for your compute resources. See details below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">launchTemplateId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the launch template. You must specify either the launch template ID or launch template name in the request, but not both.</p></li>
@@ -191,15 +189,12 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxVcpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of EC2 vCPUs that an environment can reach.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minVcpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum number of EC2 vCPUs that an environment should maintain.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of EC2 security group that are associated with instances launched in the compute environment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of EC2 security group that are associated with instances launched in the compute environment.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spotIamFleetRole</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of VPC subnets into which the compute resources are launched.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Key-value pair tags to be applied to resources that are launched in the compute environment.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of compute environment. Valid items are <code class="docutils literal notranslate"><span class="pre">EC2</span></code> or <code class="docutils literal notranslate"><span class="pre">SPOT</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_compute_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_compute_environment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -242,7 +237,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.batch.GetComputeEnvironmentResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">GetComputeEnvironmentResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">compute_environment_name=None</em>, <em class="sig-param">ecs_cluster_arn=None</em>, <em class="sig-param">service_role=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">status_reason=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.GetComputeEnvironmentResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">GetComputeEnvironmentResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">compute_environment_name=None</em>, <em class="sig-param">ecs_cluster_arn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">service_role=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">status_reason=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.GetComputeEnvironmentResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getComputeEnvironment.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.batch.GetComputeEnvironmentResult.arn">
@@ -254,6 +249,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.batch.GetComputeEnvironmentResult.ecs_cluster_arn">
 <code class="sig-name descname">ecs_cluster_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.GetComputeEnvironmentResult.ecs_cluster_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the underlying Amazon ECS cluster used by the compute environment.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.batch.GetComputeEnvironmentResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.GetComputeEnvironmentResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -286,17 +287,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The type of the compute environment (for example, <code class="docutils literal notranslate"><span class="pre">MANAGED</span></code> or <code class="docutils literal notranslate"><span class="pre">UNMANAGED</span></code>).</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.batch.GetComputeEnvironmentResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.GetComputeEnvironmentResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.batch.GetJobQueueResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">GetJobQueueResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">compute_environment_orders=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">status_reason=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.GetJobQueueResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">GetJobQueueResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">compute_environment_orders=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">status_reason=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.GetJobQueueResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getJobQueue.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.batch.GetJobQueueResult.arn">
@@ -313,6 +308,12 @@ which job placement is preferred. Compute environments are selected for job plac
 <li><p><code class="docutils literal notranslate"><span class="pre">compute_environment_order.#.order</span></code> - The order of the compute environment.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">compute_environment_order.#.compute_environment</span></code> - The ARN of the compute environment.</p></li>
 </ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.batch.GetJobQueueResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.GetJobQueueResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -341,12 +342,6 @@ associated with the same compute environment.</p>
 of the job queue.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.batch.GetJobQueueResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.GetJobQueueResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -361,6 +356,9 @@ of the job queue.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">attempt_duration_seconds</span></code> - (Optional) The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is <code class="docutils literal notranslate"><span class="pre">60</span></code> seconds.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_definition.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -385,9 +383,6 @@ Maximum number of <code class="docutils literal notranslate"><span class="pre">r
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">attemptDurationSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_definition.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.batch.JobDefinition.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.JobDefinition.arn" title="Permalink to this definition">¶</a></dt>
@@ -477,9 +472,6 @@ Maximum number of <code class="docutils literal notranslate"><span class="pre">r
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">attemptDurationSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_definition.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -524,6 +516,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.batch.JobQueue">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">JobQueue</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_environments=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.JobQueue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Batch Job Queue resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_queue.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -540,9 +535,6 @@ are evaluated first when associated with the same compute environment.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_queue.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.batch.JobQueue.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.JobQueue.arn" title="Permalink to this definition">¶</a></dt>
@@ -600,9 +592,6 @@ are evaluated first when associated with the same compute environment.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_queue.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -648,14 +637,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">get_compute_environment</code><span class="sig-paren">(</span><em class="sig-param">compute_environment_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.get_compute_environment" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Batch Compute Environment data source allows access to details of a specific
 compute environment within AWS Batch.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_compute_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_compute_environment.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>compute_environment_name</strong> (<em>str</em>) – The name of the Batch Compute Environment</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_compute_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_compute_environment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -663,14 +652,14 @@ compute environment within AWS Batch.</p>
 <code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">get_job_queue</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.get_job_queue" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Batch Job Queue data source allows access to details of a specific
 job queue within AWS Batch.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_job_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_job_queue.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the job queue.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_job_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_job_queue.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

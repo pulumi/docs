@@ -16,20 +16,14 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_aws.s3"></span><dl class="class">
 <dt id="pulumi_aws.s3.AccessPoint">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">AccessPoint</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">public_access_block_configuration=None</em>, <em class="sig-param">vpc_configuration=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AccessPoint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AccessPoint resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket that you want to associate this access point with.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name you want to assign to this access point.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid JSON document that specifies the policy that you want to apply to this access point.</p></li>
-<li><p><strong>public_access_block_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block to manage the <code class="docutils literal notranslate"><span class="pre">PublicAccessBlock</span></code> configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.</p></li>
-<li><p><strong>vpc_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a AccessPoint resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] bucket: The name of the bucket that you want to associate this access point with.
+:param pulumi.Input[str] name: The name you want to assign to this access point.
+:param pulumi.Input[str] policy: A valid JSON document that specifies the policy that you want to apply to this access point.
+:param pulumi.Input[dict] public_access_block_configuration: Configuration block to manage the <code class="docutils literal notranslate"><span class="pre">PublicAccessBlock</span></code> configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.
+:param pulumi.Input[dict] vpc_configuration: Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.</p>
 <p>The <strong>public_access_block_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">block_public_acls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Enabling this setting does not affect existing policies or ACLs. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> causes the following behavior:</p>
@@ -59,9 +53,6 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This access point will only allow connections from the specified VPC ID.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_access_point.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_access_point.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.AccessPoint.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AccessPoint.arn" title="Permalink to this definition">¶</a></dt>
@@ -198,9 +189,6 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn’t support
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This access point will only allow connections from the specified VPC ID.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_access_point.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_access_point.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -248,6 +236,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Each AWS account may only have one S3 Public Access Block configuration. Multiple configurations of the resource against the same AWS account will cause a perpetual difference.</p>
 <p>Advanced usage: To use a custom API endpoint for this resource, use the <cite>``s3control`</cite> endpoint provider configuration &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/index.html#s3control">https://www.terraform.io/docs/providers/aws/index.html#s3control</a>&gt;`_, not the <code class="docutils literal notranslate"><span class="pre">s3</span></code> endpoint provider configuration.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_account_public_access_block.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_account_public_access_block.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -287,9 +276,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Only</span> <span class="n">the</span> <span class="n">bucket</span> <span class="n">owner</span> <span class="ow">and</span> <span class="n">AWS</span> <span class="n">Services</span> <span class="n">can</span> <span class="n">access</span> <span class="n">buckets</span> <span class="k">with</span> <span class="n">public</span> <span class="n">policies</span><span class="o">.</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_account_public_access_block.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_account_public_access_block.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.AccountPublicAccessBlock.account_id">
 <code class="sig-name descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AccountPublicAccessBlock.account_id" title="Permalink to this definition">¶</a></dt>
@@ -377,9 +363,6 @@ properties used to qualify the lookup.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Only</span> <span class="n">the</span> <span class="n">bucket</span> <span class="n">owner</span> <span class="ow">and</span> <span class="n">AWS</span> <span class="n">Services</span> <span class="n">can</span> <span class="n">access</span> <span class="n">buckets</span> <span class="k">with</span> <span class="n">public</span> <span class="n">policies</span><span class="o">.</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_account_public_access_block.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_account_public_access_block.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -423,15 +406,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.s3.AnalyticsConfiguration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">AnalyticsConfiguration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_class_analysis=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AnalyticsConfiguration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AnalyticsConfiguration resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a AnalyticsConfiguration resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <p>The <strong>filter</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -538,30 +515,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.s3.AwaitableGetBucketObjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">AwaitableGetBucketObjectResult</code><span class="sig-paren">(</span><em class="sig-param">body=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_length=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">expires=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">object_lock_legal_hold_status=None</em>, <em class="sig-param">object_lock_mode=None</em>, <em class="sig-param">object_lock_retain_until_date=None</em>, <em class="sig-param">range=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">sse_kms_key_id=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">website_redirect_location=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AwaitableGetBucketObjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">AwaitableGetBucketObjectResult</code><span class="sig-paren">(</span><em class="sig-param">body=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_length=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">expires=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">object_lock_legal_hold_status=None</em>, <em class="sig-param">object_lock_mode=None</em>, <em class="sig-param">object_lock_retain_until_date=None</em>, <em class="sig-param">range=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">sse_kms_key_id=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">website_redirect_location=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AwaitableGetBucketObjectResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.s3.AwaitableGetBucketObjectsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">AwaitableGetBucketObjectsResult</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">common_prefixes=None</em>, <em class="sig-param">delimiter=None</em>, <em class="sig-param">encoding_type=None</em>, <em class="sig-param">fetch_owner=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">max_keys=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">start_after=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AwaitableGetBucketObjectsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">AwaitableGetBucketObjectsResult</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">common_prefixes=None</em>, <em class="sig-param">delimiter=None</em>, <em class="sig-param">encoding_type=None</em>, <em class="sig-param">fetch_owner=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">max_keys=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">start_after=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AwaitableGetBucketObjectsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.s3.AwaitableGetBucketResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">AwaitableGetBucketResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">bucket_domain_name=None</em>, <em class="sig-param">bucket_regional_domain_name=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">website_domain=None</em>, <em class="sig-param">website_endpoint=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AwaitableGetBucketResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">AwaitableGetBucketResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">bucket_domain_name=None</em>, <em class="sig-param">bucket_regional_domain_name=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">website_domain=None</em>, <em class="sig-param">website_endpoint=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AwaitableGetBucketResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.s3.Bucket">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">Bucket</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acceleration_status=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">bucket_prefix=None</em>, <em class="sig-param">cors_rules=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">grants=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">lifecycle_rules=None</em>, <em class="sig-param">loggings=None</em>, <em class="sig-param">object_lock_configuration=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">replication_configuration=None</em>, <em class="sig-param">request_payer=None</em>, <em class="sig-param">server_side_encryption_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">versioning=None</em>, <em class="sig-param">website=None</em>, <em class="sig-param">website_domain=None</em>, <em class="sig-param">website_endpoint=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.Bucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>acceleration_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets the accelerate configuration of an existing bucket. Can be <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> or <code class="docutils literal notranslate"><span class="pre">Suspended</span></code>.</p></li>
-<li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">canned ACL</a> to apply. Defaults to “private”.  Conflicts with <code class="docutils literal notranslate"><span class="pre">grant</span></code>.</p></li>
+<li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">canned ACL</a> to apply. Defaults to “private”.  Conflicts with <code class="docutils literal notranslate"><span class="pre">grant</span></code>.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the bucket. Will be of format <code class="docutils literal notranslate"><span class="pre">arn:aws:s3:::bucketname</span></code>.</p></li>
 <li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.</p></li>
 <li><p><strong>bucket_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique bucket name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">bucket</span></code>.</p></li>
@@ -572,7 +552,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>lifecycle_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A configuration of <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html">object lifecycle management</a> (documented below).</p></li>
 <li><p><strong>loggings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A settings of <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html">bucket logging</a> (documented below).</p></li>
 <li><p><strong>object_lock_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration of <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">S3 object locking</a> (documented below)</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html">bucket policy</a> JSON document.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A valid <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html">bucket policy</a> JSON document.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If specified, the AWS region this bucket should reside in. Otherwise, the region used by the callee.</p></li>
 <li><p><strong>replication_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration of <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html">replication configuration</a> (documented below).</p></li>
 <li><p><strong>request_payer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies who should bear the cost of Amazon S3 data transfer.
@@ -707,7 +687,7 @@ in <code class="docutils literal notranslate"><span class="pre">destination</spa
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">applyServerSideEncryptionByDefault</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A single object for setting server-side encryption by default. (documented below)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsMasterKeyId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of <code class="docutils literal notranslate"><span class="pre">sse_algorithm</span></code> as <code class="docutils literal notranslate"><span class="pre">aws:kms</span></code>. The default <code class="docutils literal notranslate"><span class="pre">aws/s3</span></code> AWS KMS master key is used if this element is absent while the <code class="docutils literal notranslate"><span class="pre">sse_algorithm</span></code> is <code class="docutils literal notranslate"><span class="pre">aws:kms</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_master_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of <code class="docutils literal notranslate"><span class="pre">sse_algorithm</span></code> as <code class="docutils literal notranslate"><span class="pre">aws:kms</span></code>. The default <code class="docutils literal notranslate"><span class="pre">aws/s3</span></code> AWS KMS master key is used if this element is absent while the <code class="docutils literal notranslate"><span class="pre">sse_algorithm</span></code> is <code class="docutils literal notranslate"><span class="pre">aws:kms</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sseAlgorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The server-side encryption algorithm to use. Valid values are <code class="docutils literal notranslate"><span class="pre">AES256</span></code> and <code class="docutils literal notranslate"><span class="pre">aws:kms</span></code></p></li>
 </ul>
 </li>
@@ -724,12 +704,9 @@ in <code class="docutils literal notranslate"><span class="pre">destination</spa
 <li><p><code class="docutils literal notranslate"><span class="pre">errorDocument</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An absolute path to the document to return in case of a 4XX error.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">indexDocument</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon S3 returns this index document when requests are made to the root domain or any of the subfolders.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">redirectAllRequestsTo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (<code class="docutils literal notranslate"><span class="pre">http://</span></code> or <code class="docutils literal notranslate"><span class="pre">https://</span></code>) to use when redirecting requests. The default is the protocol that is used in the original request.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">routingRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A json array containing <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html">routing rules</a>
+<li><p><code class="docutils literal notranslate"><span class="pre">routingRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A json array containing <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html">routing rules</a>
 describing redirect behavior and when redirects are applied.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.Bucket.acceleration_status">
 <code class="sig-name descname">acceleration_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Bucket.acceleration_status" title="Permalink to this definition">¶</a></dt>
@@ -956,7 +933,7 @@ developer guide for more information.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">applyServerSideEncryptionByDefault</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A single object for setting server-side encryption by default. (documented below)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsMasterKeyId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of <code class="docutils literal notranslate"><span class="pre">sse_algorithm</span></code> as <code class="docutils literal notranslate"><span class="pre">aws:kms</span></code>. The default <code class="docutils literal notranslate"><span class="pre">aws/s3</span></code> AWS KMS master key is used if this element is absent while the <code class="docutils literal notranslate"><span class="pre">sse_algorithm</span></code> is <code class="docutils literal notranslate"><span class="pre">aws:kms</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_master_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of <code class="docutils literal notranslate"><span class="pre">sse_algorithm</span></code> as <code class="docutils literal notranslate"><span class="pre">aws:kms</span></code>. The default <code class="docutils literal notranslate"><span class="pre">aws/s3</span></code> AWS KMS master key is used if this element is absent while the <code class="docutils literal notranslate"><span class="pre">sse_algorithm</span></code> is <code class="docutils literal notranslate"><span class="pre">aws:kms</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sseAlgorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The server-side encryption algorithm to use. Valid values are <code class="docutils literal notranslate"><span class="pre">AES256</span></code> and <code class="docutils literal notranslate"><span class="pre">aws:kms</span></code></p></li>
 </ul>
 </li>
@@ -990,7 +967,7 @@ The rule applies only to objects having all the tags in its tagset.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">errorDocument</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An absolute path to the document to return in case of a 4XX error.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">indexDocument</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon S3 returns this index document when requests are made to the root domain or any of the subfolders.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">redirectAllRequestsTo</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (<code class="docutils literal notranslate"><span class="pre">http://</span></code> or <code class="docutils literal notranslate"><span class="pre">https://</span></code>) to use when redirecting requests. The default is the protocol that is used in the original request.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">routingRules</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A json array containing <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html">routing rules</a>
+<li><p><code class="docutils literal notranslate"><span class="pre">routingRules</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A json array containing <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html">routing rules</a>
 describing redirect behavior and when redirects are applied.</p></li>
 </ul>
 </dd></dl>
@@ -1019,7 +996,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>acceleration_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets the accelerate configuration of an existing bucket. Can be <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> or <code class="docutils literal notranslate"><span class="pre">Suspended</span></code>.</p></li>
-<li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">canned ACL</a> to apply. Defaults to “private”.  Conflicts with <code class="docutils literal notranslate"><span class="pre">grant</span></code>.</p>
+<li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">canned ACL</a> to apply. Defaults to “private”.  Conflicts with <code class="docutils literal notranslate"><span class="pre">grant</span></code>.</p>
 </p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the bucket. Will be of format <code class="docutils literal notranslate"><span class="pre">arn:aws:s3:::bucketname</span></code>.</p></li>
 <li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.</p></li>
@@ -1041,7 +1018,7 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>object_lock_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A configuration of <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">S3 object locking</a> (documented below)</p>
 </p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A valid <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html">bucket policy</a> JSON document.</p>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A valid <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html">bucket policy</a> JSON document.</p>
 </p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If specified, the AWS region this bucket should reside in. Otherwise, the region used by the callee.</p></li>
 <li><p><strong>replication_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A configuration of <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html">replication configuration</a> (documented below).</p>
@@ -1181,7 +1158,7 @@ in <code class="docutils literal notranslate"><span class="pre">destination</spa
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">applyServerSideEncryptionByDefault</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A single object for setting server-side encryption by default. (documented below)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsMasterKeyId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of <code class="docutils literal notranslate"><span class="pre">sse_algorithm</span></code> as <code class="docutils literal notranslate"><span class="pre">aws:kms</span></code>. The default <code class="docutils literal notranslate"><span class="pre">aws/s3</span></code> AWS KMS master key is used if this element is absent while the <code class="docutils literal notranslate"><span class="pre">sse_algorithm</span></code> is <code class="docutils literal notranslate"><span class="pre">aws:kms</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_master_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of <code class="docutils literal notranslate"><span class="pre">sse_algorithm</span></code> as <code class="docutils literal notranslate"><span class="pre">aws:kms</span></code>. The default <code class="docutils literal notranslate"><span class="pre">aws/s3</span></code> AWS KMS master key is used if this element is absent while the <code class="docutils literal notranslate"><span class="pre">sse_algorithm</span></code> is <code class="docutils literal notranslate"><span class="pre">aws:kms</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sseAlgorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The server-side encryption algorithm to use. Valid values are <code class="docutils literal notranslate"><span class="pre">AES256</span></code> and <code class="docutils literal notranslate"><span class="pre">aws:kms</span></code></p></li>
 </ul>
 </li>
@@ -1198,12 +1175,9 @@ in <code class="docutils literal notranslate"><span class="pre">destination</spa
 <li><p><code class="docutils literal notranslate"><span class="pre">errorDocument</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An absolute path to the document to return in case of a 4XX error.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">indexDocument</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon S3 returns this index document when requests are made to the root domain or any of the subfolders.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">redirectAllRequestsTo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (<code class="docutils literal notranslate"><span class="pre">http://</span></code> or <code class="docutils literal notranslate"><span class="pre">https://</span></code>) to use when redirecting requests. The default is the protocol that is used in the original request.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">routingRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A json array containing <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html">routing rules</a>
+<li><p><code class="docutils literal notranslate"><span class="pre">routingRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A json array containing <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html">routing rules</a>
 describing redirect behavior and when redirects are applied.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1248,6 +1222,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.BucketMetric">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">BucketMetric</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketMetric" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html">metrics configuration</a> resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_metric.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_metric.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1264,9 +1241,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object prefix for filtering (singular).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Object tags for filtering (up to 10).</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_metric.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_metric.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.BucketMetric.bucket">
 <code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketMetric.bucket" title="Permalink to this definition">¶</a></dt>
@@ -1312,9 +1286,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object prefix for filtering (singular).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Object tags for filtering (up to 10).</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_metric.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_metric.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1361,6 +1332,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a S3 Bucket Notification Configuration. For additional information, see the <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html">Configuring S3 Event Notifications section in the Amazon S3 Developer Guide</a>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> S3 Buckets only support a single notification configuration. Declaring multiple <code class="docutils literal notranslate"><span class="pre">s3.BucketNotification</span></code> resources to the same S3 Bucket will cause a perpetual difference in configuration. See the example “Trigger multiple Lambda functions” for an option.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_notification.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1398,9 +1370,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies unique identifier for each of the notification configurations.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies Amazon SNS topic ARN.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_notification.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.BucketNotification.bucket">
 <code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketNotification.bucket" title="Permalink to this definition">¶</a></dt>
@@ -1488,9 +1457,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies unique identifier for each of the notification configurations.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies Amazon SNS topic ARN.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_notification.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1535,6 +1501,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.BucketObject">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">BucketObject</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">content_base64=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">object_lock_legal_hold_status=None</em>, <em class="sig-param">object_lock_mode=None</em>, <em class="sig-param">object_lock_retain_until_date=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">website_redirect=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket object resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_object.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1542,7 +1511,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">canned ACL</a> to apply. Defaults to “private”.</p>
 </p></li>
-<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket to put the file in. Alternatively, an <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html">S3 access point</a> ARN can be specified.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The name of the bucket to put the file in. Alternatively, an <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html">S3 access point</a> ARN can be specified.</p></li>
 <li><p><strong>cache_control</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies caching behavior along the request/reply chain Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">w3c cache_control</a> for further details.</p></li>
 <li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.</p></li>
 <li><p><strong>content_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the <code class="docutils literal notranslate"><span class="pre">gzipbase64</span></code> function with small text strings. For larger objects, use <code class="docutils literal notranslate"><span class="pre">source</span></code> to stream the content from a disk file.</p></li>
@@ -1572,9 +1541,6 @@ for the object. Can be either “<code class="docutils literal notranslate"><spa
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_object.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.BucketObject.acl">
 <code class="sig-name descname">acl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketObject.acl" title="Permalink to this definition">¶</a></dt>
@@ -1733,7 +1699,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">canned ACL</a> to apply. Defaults to “private”.</p>
 </p></li>
-<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the bucket to put the file in. Alternatively, an <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html">S3 access point</a> ARN can be specified.</p>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The name of the bucket to put the file in. Alternatively, an <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html">S3 access point</a> ARN can be specified.</p>
 </p></li>
 <li><p><strong>cache_control</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies caching behavior along the request/reply chain Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">w3c cache_control</a> for further details.</p>
 </p></li>
@@ -1774,9 +1740,6 @@ is enabled.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_object.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1821,6 +1784,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.BucketPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">BucketPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches a policy to an S3 bucket resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_policy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1830,9 +1796,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.BucketPolicy.bucket">
 <code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketPolicy.bucket" title="Permalink to this definition">¶</a></dt>
@@ -1854,9 +1817,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1901,6 +1861,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.BucketPublicAccessBlock">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">BucketPublicAccessBlock</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">block_public_acls=None</em>, <em class="sig-param">block_public_policy=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">ignore_public_acls=None</em>, <em class="sig-param">restrict_public_buckets=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketPublicAccessBlock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages S3 bucket-level Public Access Block configuration. For more information about these settings, see the <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">AWS S3 Block Public Access documentation</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_public_access_block.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_public_access_block.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1941,9 +1904,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Only</span> <span class="n">the</span> <span class="n">bucket</span> <span class="n">owner</span> <span class="ow">and</span> <span class="n">AWS</span> <span class="n">Services</span> <span class="n">can</span> <span class="n">access</span> <span class="n">this</span> <span class="n">buckets</span> <span class="k">if</span> <span class="n">it</span> <span class="n">has</span> <span class="n">a</span> <span class="n">public</span> <span class="n">policy</span><span class="o">.</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_public_access_block.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_public_access_block.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.BucketPublicAccessBlock.block_public_acls">
 <code class="sig-name descname">block_public_acls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketPublicAccessBlock.block_public_acls" title="Permalink to this definition">¶</a></dt>
@@ -2033,9 +1993,6 @@ properties used to qualify the lookup.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Only</span> <span class="n">the</span> <span class="n">bucket</span> <span class="n">owner</span> <span class="ow">and</span> <span class="n">AWS</span> <span class="n">Services</span> <span class="n">can</span> <span class="n">access</span> <span class="n">this</span> <span class="n">buckets</span> <span class="k">if</span> <span class="n">it</span> <span class="n">has</span> <span class="n">a</span> <span class="n">public</span> <span class="n">policy</span><span class="o">.</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_public_access_block.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_public_access_block.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2078,7 +2035,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.s3.GetBucketObjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">GetBucketObjectResult</code><span class="sig-paren">(</span><em class="sig-param">body=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_length=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">expires=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">object_lock_legal_hold_status=None</em>, <em class="sig-param">object_lock_mode=None</em>, <em class="sig-param">object_lock_retain_until_date=None</em>, <em class="sig-param">range=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">sse_kms_key_id=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">website_redirect_location=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">GetBucketObjectResult</code><span class="sig-paren">(</span><em class="sig-param">body=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_length=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">expires=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">object_lock_legal_hold_status=None</em>, <em class="sig-param">object_lock_mode=None</em>, <em class="sig-param">object_lock_retain_until_date=None</em>, <em class="sig-param">range=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">sse_kms_key_id=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">website_redirect_location=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBucketObject.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.GetBucketObjectResult.body">
@@ -2138,6 +2095,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.GetBucketObjectResult.expires">
 <code class="sig-name descname">expires</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectResult.expires" title="Permalink to this definition">¶</a></dt>
 <dd><p>The date and time at which the object is no longer cacheable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.GetBucketObjectResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2206,22 +2169,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.s3.GetBucketObjectResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.s3.GetBucketObjectsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">GetBucketObjectsResult</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">common_prefixes=None</em>, <em class="sig-param">delimiter=None</em>, <em class="sig-param">encoding_type=None</em>, <em class="sig-param">fetch_owner=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">max_keys=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">start_after=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">GetBucketObjectsResult</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">common_prefixes=None</em>, <em class="sig-param">delimiter=None</em>, <em class="sig-param">encoding_type=None</em>, <em class="sig-param">fetch_owner=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">max_keys=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">start_after=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBucketObjects.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.GetBucketObjectsResult.common_prefixes">
 <code class="sig-name descname">common_prefixes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectsResult.common_prefixes" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of any keys between <code class="docutils literal notranslate"><span class="pre">prefix</span></code> and the next occurrence of <code class="docutils literal notranslate"><span class="pre">delimiter</span></code> (i.e., similar to subdirectories of the <code class="docutils literal notranslate"><span class="pre">prefix</span></code> “directory”); the list is only returned when you specify <code class="docutils literal notranslate"><span class="pre">delimiter</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.GetBucketObjectsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2236,17 +2199,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>List of strings representing object owner IDs (see <code class="docutils literal notranslate"><span class="pre">fetch_owner</span></code> above)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.s3.GetBucketObjectsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.s3.GetBucketResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">GetBucketResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">bucket_domain_name=None</em>, <em class="sig-param">bucket_regional_domain_name=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">website_domain=None</em>, <em class="sig-param">website_endpoint=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.GetBucketResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">GetBucketResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">bucket_domain_name=None</em>, <em class="sig-param">bucket_regional_domain_name=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">website_domain=None</em>, <em class="sig-param">website_endpoint=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.GetBucketResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBucket.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.GetBucketResult.arn">
@@ -2273,6 +2230,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.s3.GetBucketResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.s3.GetBucketResult.region">
 <code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketResult.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The AWS region this bucket resides in.</p>
@@ -2290,18 +2253,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.s3.GetBucketResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.s3.Inventory">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">Inventory</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">included_object_versions=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">optional_fields=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.Inventory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html">inventory configuration</a> resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_inventory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_inventory.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2348,9 +2308,6 @@ Valid values: <code class="docutils literal notranslate"><span class="pre">Size<
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how frequently inventory results are produced. Valid values: <code class="docutils literal notranslate"><span class="pre">Daily</span></code>, <code class="docutils literal notranslate"><span class="pre">Weekly</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_inventory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_inventory.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.Inventory.bucket">
 <code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Inventory.bucket" title="Permalink to this definition">¶</a></dt>
@@ -2478,9 +2435,6 @@ Valid values: <code class="docutils literal notranslate"><span class="pre">Size<
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how frequently inventory results are produced. Valid values: <code class="docutils literal notranslate"><span class="pre">Daily</span></code>, <code class="docutils literal notranslate"><span class="pre">Weekly</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_inventory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_inventory.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2527,14 +2481,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides details about a specific S3 bucket.</p>
 <p>This resource may prove useful when setting up a Route53 record, or an origin for a CloudFront
 Distribution.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>bucket</strong> (<em>str</em>) – The name of the bucket</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2544,6 +2498,7 @@ Distribution.</p>
 <em>optionally</em> (see below) content of an object stored inside S3 bucket.</p>
 <blockquote>
 <div><p><strong>Note:</strong> The content of an object (<code class="docutils literal notranslate"><span class="pre">body</span></code> field) is available only for objects which have a human-readable <code class="docutils literal notranslate"><span class="pre">Content-Type</span></code> (<code class="docutils literal notranslate"><span class="pre">text/*</span></code> and <code class="docutils literal notranslate"><span class="pre">application/json</span></code>). This is to prevent printing unsafe characters and potentially downloading large amount of data which would be thrown away in favour of metadata.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket_object.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2555,9 +2510,6 @@ Distribution.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket_object.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2578,9 +2530,6 @@ Distribution.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket_objects.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket_objects.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

@@ -15,32 +15,32 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.dns"></span><dl class="class">
 <dt id="pulumi_alicloud.dns.AwaitableGetDomainGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetDomainGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetDomainGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetDomainGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetDomainGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.dns.AwaitableGetDomainRecordsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetDomainRecordsResult</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">host_record_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_locked=None</em>, <em class="sig-param">line=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">urls=None</em>, <em class="sig-param">value_regex=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetDomainRecordsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetDomainRecordsResult</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">host_record_regex=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_locked=None</em>, <em class="sig-param">line=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">urls=None</em>, <em class="sig-param">value_regex=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetDomainRecordsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.dns.AwaitableGetDomainsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetDomainsResult</code><span class="sig-paren">(</span><em class="sig-param">ali_domain=None</em>, <em class="sig-param">domain_name_regex=None</em>, <em class="sig-param">domains=None</em>, <em class="sig-param">group_name_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">version_code=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetDomainsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetDomainsResult</code><span class="sig-paren">(</span><em class="sig-param">ali_domain=None</em>, <em class="sig-param">domain_name_regex=None</em>, <em class="sig-param">domains=None</em>, <em class="sig-param">group_name_regex=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">version_code=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetDomainsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.dns.AwaitableGetGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.dns.AwaitableGetRecordsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetRecordsResult</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">host_record_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_locked=None</em>, <em class="sig-param">line=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">urls=None</em>, <em class="sig-param">value_regex=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetRecordsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetRecordsResult</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">host_record_regex=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_locked=None</em>, <em class="sig-param">line=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">urls=None</em>, <em class="sig-param">value_regex=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetRecordsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.dns.AwaitableGetResolutionLinesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetResolutionLinesResult</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">lang=None</em>, <em class="sig-param">line_codes=None</em>, <em class="sig-param">line_display_names=None</em>, <em class="sig-param">line_names=None</em>, <em class="sig-param">lines=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">user_client_ip=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetResolutionLinesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetResolutionLinesResult</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lang=None</em>, <em class="sig-param">line_codes=None</em>, <em class="sig-param">line_display_names=None</em>, <em class="sig-param">line_names=None</em>, <em class="sig-param">lines=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">user_client_ip=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetResolutionLinesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -50,6 +50,7 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> The endpoint of bssopenapi used only support “business.aliyuncs.com” at present.</p>
 <p><strong>NOTE:</strong> Available in 1.57.0+ .</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddosbgp_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddosbgp_instance.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -66,9 +67,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddosbgp_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddosbgp_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.dns.DdosBgpInstance.bandwidth">
 <code class="sig-name descname">bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.DdosBgpInstance.bandwidth" title="Permalink to this definition">¶</a></dt>
@@ -132,9 +130,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddosbgp_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddosbgp_instance.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -183,6 +178,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> The product region only support cn-hangzhou.</p>
 <p><strong>NOTE:</strong> The endpoint of bssopenapi used only support “business.aliyuncs.com” at present.</p>
 <p><strong>NOTE:</strong> Available in 1.37.0+ .</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddoscoo_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddoscoo_instance.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -199,9 +195,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddoscoo_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddoscoo_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.dns.DdosCooInstance.bandwidth">
 <code class="sig-name descname">bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.DdosCooInstance.bandwidth" title="Permalink to this definition">¶</a></dt>
@@ -265,9 +258,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddoscoo_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddoscoo_instance.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -314,6 +304,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a DNS resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The domain name which you want to add must be already registered and had not added by another account. Every domain name can only exist in a unique group.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -326,9 +317,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.dns.Domain.dns_servers">
 <code class="sig-name descname">dns_servers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.Domain.dns_servers" title="Permalink to this definition">¶</a></dt>
@@ -378,9 +366,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -423,7 +408,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.dns.GetDomainGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetDomainGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetDomainGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDomainGroups.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.dns.GetDomainGroupsResult.id">
@@ -435,7 +420,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.dns.GetDomainRecordsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetDomainRecordsResult</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">host_record_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_locked=None</em>, <em class="sig-param">line=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">urls=None</em>, <em class="sig-param">value_regex=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainRecordsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetDomainRecordsResult</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">host_record_regex=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_locked=None</em>, <em class="sig-param">line=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">urls=None</em>, <em class="sig-param">value_regex=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainRecordsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDomainRecords.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.dns.GetDomainRecordsResult.id">
@@ -447,7 +432,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.dns.GetDomainsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetDomainsResult</code><span class="sig-paren">(</span><em class="sig-param">ali_domain=None</em>, <em class="sig-param">domain_name_regex=None</em>, <em class="sig-param">domains=None</em>, <em class="sig-param">group_name_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">version_code=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetDomainsResult</code><span class="sig-paren">(</span><em class="sig-param">ali_domain=None</em>, <em class="sig-param">domain_name_regex=None</em>, <em class="sig-param">domains=None</em>, <em class="sig-param">group_name_regex=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">version_code=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDomains.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.dns.GetDomainsResult.ali_domain">
@@ -459,6 +444,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.dns.GetDomainsResult.domains">
 <code class="sig-name descname">domains</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainsResult.domains" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of domains. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.dns.GetDomainsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -491,22 +482,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Cloud analysis version code of the domain.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.dns.GetDomainsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.dns.GetGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGroups.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.dns.GetGroupsResult.groups">
 <code class="sig-name descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetGroupsResult.groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of groups. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.dns.GetGroupsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetGroupsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -521,22 +512,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of group names.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.dns.GetGroupsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetGroupsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.dns.GetRecordsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetRecordsResult</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">host_record_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_locked=None</em>, <em class="sig-param">line=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">urls=None</em>, <em class="sig-param">value_regex=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetRecordsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetRecordsResult</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">host_record_regex=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_locked=None</em>, <em class="sig-param">line=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">urls=None</em>, <em class="sig-param">value_regex=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetRecordsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRecords.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.dns.GetRecordsResult.domain_name">
 <code class="sig-name descname">domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetRecordsResult.domain_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the domain the record belongs to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.dns.GetRecordsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetRecordsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -575,18 +566,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of entire URLs. Each item format as <code class="docutils literal notranslate"><span class="pre">&lt;host_record&gt;.&lt;domain_name&gt;</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.dns.GetRecordsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetRecordsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.dns.GetResolutionLinesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetResolutionLinesResult</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">lang=None</em>, <em class="sig-param">line_codes=None</em>, <em class="sig-param">line_display_names=None</em>, <em class="sig-param">line_names=None</em>, <em class="sig-param">lines=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">user_client_ip=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetResolutionLinesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetResolutionLinesResult</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lang=None</em>, <em class="sig-param">line_codes=None</em>, <em class="sig-param">line_display_names=None</em>, <em class="sig-param">line_names=None</em>, <em class="sig-param">lines=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">user_client_ip=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetResolutionLinesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getResolutionLines.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.dns.GetResolutionLinesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetResolutionLinesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.dns.GetResolutionLinesResult.line_codes">
 <code class="sig-name descname">line_codes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetResolutionLinesResult.line_codes" title="Permalink to this definition">¶</a></dt>
@@ -605,18 +596,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of cloud resolution line. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.dns.GetResolutionLinesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetResolutionLinesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.dns.Group">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DNS Group resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -626,9 +614,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.dns.Group.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.Group.name" title="Permalink to this definition">¶</a></dt>
@@ -650,9 +635,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -699,6 +681,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a DNS Record resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> When the site is an international site, the <code class="docutils literal notranslate"><span class="pre">type</span></code> neither supports <code class="docutils literal notranslate"><span class="pre">REDIRECT_URL</span></code> nor <code class="docutils literal notranslate"><span class="pre">REDIRECT_URL</span></code></p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_record.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_record.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -715,9 +698,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_record.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_record.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.dns.Record.host_record">
 <code class="sig-name descname">host_record</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.Record.host_record" title="Permalink to this definition">¶</a></dt>
@@ -789,9 +769,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_record.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_record.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -836,24 +813,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.dns.get_domain_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">get_domain_groups</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.get_domain_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_domain_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_domain_groups.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.dns.get_domain_records">
 <code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">get_domain_records</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">host_record_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_locked=None</em>, <em class="sig-param">line=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value_regex=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.get_domain_records" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_domain_records.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_domain_records.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.dns.get_domains">
 <code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">get_domains</code><span class="sig-paren">(</span><em class="sig-param">ali_domain=None</em>, <em class="sig-param">domain_name_regex=None</em>, <em class="sig-param">group_name_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">version_code=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.get_domains" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of DNS Domains in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_domains.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_domains.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -869,15 +843,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `ids` (Optional, Available in 1.53.0+) - A list of domain IDs.
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_domains.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_domains.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.dns.get_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">get_groups</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.get_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of DNS Domain Groups in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_groups.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -886,15 +860,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_groups.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.dns.get_records">
 <code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">get_records</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">host_record_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_locked=None</em>, <em class="sig-param">line=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value_regex=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.get_records" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of DNS Domain Records in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_records.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_records.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -910,9 +884,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_records.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_records.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -921,6 +892,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list of DNS Resolution Lines in an Alibaba Cloud account according to the specified filters.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.60.0.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_resolution_lines.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_resolution_lines.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -933,9 +905,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_resolution_lines.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_resolution_lines.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

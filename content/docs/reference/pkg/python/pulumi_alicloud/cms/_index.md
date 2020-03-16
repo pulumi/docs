@@ -18,6 +18,9 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cms.</code><code class="sig-name descname">Alarm</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">contact_groups=None</em>, <em class="sig-param">dimensions=None</em>, <em class="sig-param">effective_interval=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">end_time=None</em>, <em class="sig-param">metric=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">operator=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">silence_time=None</em>, <em class="sig-param">start_time=None</em>, <em class="sig-param">statistics=None</em>, <em class="sig-param">threshold=None</em>, <em class="sig-param">triggered_count=None</em>, <em class="sig-param">webhook=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cms.Alarm" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource provides a alarm rule resource and it can be used to monitor several cloud services according different metrics.
 Details for <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28608.htm">alarm rule</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cms_alarm.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cms_alarm.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -52,9 +55,6 @@ Details for <a class="reference external" href="https://www.alibabacloud.com/hel
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cms_alarm.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cms_alarm.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cms.Alarm.contact_groups">
 <code class="sig-name descname">contact_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cms.Alarm.contact_groups" title="Permalink to this definition">¶</a></dt>
@@ -196,9 +196,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cms_alarm.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cms_alarm.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -242,15 +239,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.cms.SiteMonitor">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cms.</code><code class="sig-name descname">SiteMonitor</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">alert_ids=None</em>, <em class="sig-param">interval=None</em>, <em class="sig-param">options_json=None</em>, <em class="sig-param">task_name=None</em>, <em class="sig-param">task_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cms.SiteMonitor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SiteMonitor resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a SiteMonitor resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_alicloud.cms.SiteMonitor.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">alert_ids=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">interval=None</em>, <em class="sig-param">options_json=None</em>, <em class="sig-param">task_name=None</em>, <em class="sig-param">task_state=None</em>, <em class="sig-param">task_type=None</em>, <em class="sig-param">update_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cms.SiteMonitor.get" title="Permalink to this definition">¶</a></dt>

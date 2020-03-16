@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_alicloud.rds.Account">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">Account</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.Account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an RDS account resource and used to manage databases.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_account.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_account.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -37,9 +40,6 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="o">-</span> <span class="n">Super</span><span class="p">:</span> <span class="n">High</span> <span class="n">privilege</span><span class="o">.</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_account.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_account.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.rds.Account.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.Account.description" title="Permalink to this definition">¶</a></dt>
@@ -113,9 +113,6 @@ properties used to qualify the lookup.</p>
 <span class="o">-</span> <span class="n">Super</span><span class="p">:</span> <span class="n">High</span> <span class="n">privilege</span><span class="o">.</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_account.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_account.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -160,6 +157,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.rds.AccountPrivilege">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">AccountPrivilege</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_name=None</em>, <em class="sig-param">db_names=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">privilege=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.AccountPrivilege" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an RDS account privilege resource and used to grant several database some access privilege. A database can be granted by multiple account.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_account_privilege.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_account_privilege.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -179,9 +179,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="o">-</span> <span class="n">DBOwner</span><span class="p">:</span> <span class="p">(</span><span class="n">Available</span> <span class="ow">in</span> <span class="mf">1.64</span><span class="o">.</span><span class="mi">0</span><span class="o">+</span><span class="p">)</span> <span class="n">This</span> <span class="n">value</span> <span class="ow">is</span> <span class="n">only</span> <span class="k">for</span> <span class="n">SQL</span> <span class="n">Server</span> <span class="ow">and</span> <span class="n">PostgreSQL</span><span class="o">.</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_account_privilege.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_account_privilege.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.rds.AccountPrivilege.account_name">
 <code class="sig-name descname">account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.AccountPrivilege.account_name" title="Permalink to this definition">¶</a></dt>
@@ -238,9 +235,6 @@ properties used to qualify the lookup.</p>
 <span class="o">-</span> <span class="n">DBOwner</span><span class="p">:</span> <span class="p">(</span><span class="n">Available</span> <span class="ow">in</span> <span class="mf">1.64</span><span class="o">.</span><span class="mi">0</span><span class="o">+</span><span class="p">)</span> <span class="n">This</span> <span class="n">value</span> <span class="ow">is</span> <span class="n">only</span> <span class="k">for</span> <span class="n">SQL</span> <span class="n">Server</span> <span class="ow">and</span> <span class="n">PostgreSQL</span><span class="o">.</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_account_privilege.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_account_privilege.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -283,17 +277,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.rds.AwaitableGetInstanceClassesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">AwaitableGetInstanceClassesResult</code><span class="sig-paren">(</span><em class="sig-param">category=None</em>, <em class="sig-param">db_instance_class=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_classes=None</em>, <em class="sig-param">multi_zone=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">sorted_by=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.AwaitableGetInstanceClassesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">AwaitableGetInstanceClassesResult</code><span class="sig-paren">(</span><em class="sig-param">category=None</em>, <em class="sig-param">db_instance_class=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_classes=None</em>, <em class="sig-param">multi_zone=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">sorted_by=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.AwaitableGetInstanceClassesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.rds.AwaitableGetInstanceEnginesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">AwaitableGetInstanceEnginesResult</code><span class="sig-paren">(</span><em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_engines=None</em>, <em class="sig-param">multi_zone=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.AwaitableGetInstanceEnginesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">AwaitableGetInstanceEnginesResult</code><span class="sig-paren">(</span><em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_engines=None</em>, <em class="sig-param">multi_zone=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.AwaitableGetInstanceEnginesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.rds.AwaitableGetInstancesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">connection_mode=None</em>, <em class="sig-param">db_type=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">connection_mode=None</em>, <em class="sig-param">db_type=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -302,6 +296,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides an RDS instance backup policy resource and used to configure instance backup policy.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Each DB instance has a backup policy and it will be set default values when destroying the resource.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_backup_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_backup_policy.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -330,9 +325,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_backup_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_backup_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.rds.BackupPolicy.archive_backup_keep_count">
 <code class="sig-name descname">archive_backup_keep_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.BackupPolicy.archive_backup_keep_count" title="Permalink to this definition">¶</a></dt>
@@ -481,9 +473,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_backup_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_backup_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -533,6 +522,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt><strong>NOTE:</strong> Each RDS instance will allocate a intranet connnection string automatically and its prifix is RDS instance ID.</dt><dd><p>To avoid unnecessary conflict, please specified a internet connection prefix before applying the resource.</p>
 </dd>
 </dl>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_connection.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -545,9 +535,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_connection.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.rds.Connection.connection_prefix">
 <code class="sig-name descname">connection_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.Connection.connection_prefix" title="Permalink to this definition">¶</a></dt>
@@ -597,9 +584,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_connection.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -646,6 +630,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides an RDS database resource. A DB database deployed in a DB instance. A DB instance can own multiple databases.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource does not support creating ‘PPAS’ database. You have to login RDS instance to create manually.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_database.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_database.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -671,9 +656,6 @@ and have no more than 64 characters.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_database.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_database.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.rds.Database.character_set">
 <code class="sig-name descname">character_set</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.Database.character_set" title="Permalink to this definition">¶</a></dt>
@@ -734,9 +716,6 @@ and have no more than 64 characters.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_database.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_database.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -779,8 +758,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.rds.GetInstanceClassesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">GetInstanceClassesResult</code><span class="sig-paren">(</span><em class="sig-param">category=None</em>, <em class="sig-param">db_instance_class=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_classes=None</em>, <em class="sig-param">multi_zone=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">sorted_by=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.GetInstanceClassesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">GetInstanceClassesResult</code><span class="sig-paren">(</span><em class="sig-param">category=None</em>, <em class="sig-param">db_instance_class=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_classes=None</em>, <em class="sig-param">multi_zone=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">sorted_by=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.GetInstanceClassesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstanceClasses.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.rds.GetInstanceClassesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.GetInstanceClassesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.rds.GetInstanceClassesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.GetInstanceClassesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -793,17 +778,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of Rds available resource. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.rds.GetInstanceClassesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.GetInstanceClassesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.rds.GetInstanceEnginesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">GetInstanceEnginesResult</code><span class="sig-paren">(</span><em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_engines=None</em>, <em class="sig-param">multi_zone=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.GetInstanceEnginesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">GetInstanceEnginesResult</code><span class="sig-paren">(</span><em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_engines=None</em>, <em class="sig-param">multi_zone=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.GetInstanceEnginesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstanceEngines.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.rds.GetInstanceEnginesResult.engine">
@@ -818,22 +797,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.rds.GetInstanceEnginesResult.instance_engines">
-<code class="sig-name descname">instance_engines</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.GetInstanceEnginesResult.instance_engines" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of Rds available resource. Each element contains the following attributes:</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_alicloud.rds.GetInstanceEnginesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.GetInstanceEnginesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.rds.GetInstanceEnginesResult.instance_engines">
+<code class="sig-name descname">instance_engines</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.GetInstanceEnginesResult.instance_engines" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Rds available resource. Each element contains the following attributes:</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.rds.GetInstancesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">GetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">connection_mode=None</em>, <em class="sig-param">db_type=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">GetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">connection_mode=None</em>, <em class="sig-param">db_type=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstances.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.rds.GetInstancesResult.connection_mode">
@@ -851,6 +830,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.rds.GetInstancesResult.engine">
 <code class="sig-name descname">engine</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.GetInstancesResult.engine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Database type. Options are <code class="docutils literal notranslate"><span class="pre">MySQL</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLServer</span></code>, <code class="docutils literal notranslate"><span class="pre">PostgreSQL</span></code> and <code class="docutils literal notranslate"><span class="pre">PPAS</span></code>. If no value is specified, all types are returned.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.rds.GetInstancesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -889,12 +874,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>ID of the VSwitch the instance belongs to.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.rds.GetInstancesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -903,6 +882,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides an RDS instance resource. A DB instance is an isolated database
 environment in the cloud. A DB instance can contain multiple user-created
 databases.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_instance.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -986,9 +968,6 @@ The multiple zone ID can be retrieved by setting <code class="docutils literal n
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.rds.Instance.auto_renew">
 <code class="sig-name descname">auto_renew</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.Instance.auto_renew" title="Permalink to this definition">¶</a></dt>
@@ -1264,9 +1243,6 @@ The multiple zone ID can be retrieved by setting <code class="docutils literal n
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_instance.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1311,6 +1287,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.rds.ReadOnlyInstance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">ReadOnlyInstance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">instance_storage=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">master_db_instance_id=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.ReadOnlyInstance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an RDS readonly instance resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_readonly_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_readonly_instance.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1347,9 +1326,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_readonly_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_readonly_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.rds.ReadOnlyInstance.connection_string">
 <code class="sig-name descname">connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.ReadOnlyInstance.connection_string" title="Permalink to this definition">¶</a></dt>
@@ -1475,9 +1451,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_readonly_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_readonly_instance.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1522,6 +1495,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.rds.ReadWriteSplittingConnection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">ReadWriteSplittingConnection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">connection_prefix=None</em>, <em class="sig-param">distribution_type=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">max_delay_time=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">weight=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.ReadWriteSplittingConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an RDS read write splitting connection resource to allocate an Intranet connection string for RDS instance.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_read_write_splitting_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_read_write_splitting_connection.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1536,9 +1512,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_read_write_splitting_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_read_write_splitting_connection.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.rds.ReadWriteSplittingConnection.connection_prefix">
 <code class="sig-name descname">connection_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.ReadWriteSplittingConnection.connection_prefix" title="Permalink to this definition">¶</a></dt>
@@ -1602,9 +1575,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_read_write_splitting_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_read_write_splitting_connection.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1651,6 +1621,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides the RDS instance classes resource available info of Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.46.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/db_instance_classes.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/db_instance_classes.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1667,9 +1638,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/db_instance_classes.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/db_instance_classes.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1678,6 +1646,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides the RDS instance engines resource available info of Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.46.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/db_instance_engines.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/db_instance_engines.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1691,9 +1660,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/db_instance_engines.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/db_instance_engines.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1701,6 +1667,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">get_instances</code><span class="sig-paren">(</span><em class="sig-param">connection_mode=None</em>, <em class="sig-param">db_type=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.get_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">rds.getInstances</span></code> data source provides a collection of RDS instances available in Alibaba Cloud account.
 Filters support regular expression for the instance name, searches by tags, and other filters which are listed below.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/db_instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/db_instances.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1717,9 +1686,6 @@ Note: Before 1.60.0, the value’s format is a <code class="docutils literal not
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/db_instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/db_instances.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

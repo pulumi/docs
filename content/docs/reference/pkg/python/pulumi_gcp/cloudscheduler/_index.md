@@ -16,14 +16,33 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.cloudscheduler"></span><dl class="class">
 <dt id="pulumi_gcp.cloudscheduler.Job">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudscheduler.</code><code class="sig-name descname">Job</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_engine_http_target=None</em>, <em class="sig-param">attempt_deadline=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">http_target=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">pubsub_target=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">retry_config=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">time_zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Job resource with the given unique name, props, and options.</p>
+<dd><p>Create a Job resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] app_engine_http_target: App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service</p>
+<blockquote>
+<div><p>instance</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>attempt_deadline</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The deadline for job attempts. If the request handler does not respond by this deadline then the request is cancelled
+and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in execution logs. Cloud
+Scheduler will retry the job according to the RetryConfig. The allowed duration for this deadline is: * For HTTP
+targets, between 15 seconds and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours. A duration
+in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable description for the job. This string must not contain more than 500 characters.</p></li>
+<li><p><strong>http_target</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – HTTP target. If the job providers a http_target the cron will send a request to the targeted url</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the job.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>pubsub_target</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region where the scheduler job resides</p></li>
+<li><p><strong>retry_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler,
+then it will be retried with exponential backoff according to the settings</p></li>
+<li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Describes the schedule on which the job will be executed.</p></li>
+<li><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the time zone to be used in interpreting schedule. The value of this field must be a time zone name from the
+tz database.</p></li>
 </ul>
 </dd>
 </dl>
@@ -74,14 +93,121 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minBackoffDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retryCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_scheduler_job.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_scheduler_job.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudscheduler.Job.app_engine_http_target">
+<code class="sig-name descname">app_engine_http_target</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.app_engine_http_target" title="Permalink to this definition">¶</a></dt>
+<dd><p>App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
+instance</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">appEngineRouting</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">body</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">relativeUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudscheduler.Job.attempt_deadline">
+<code class="sig-name descname">attempt_deadline</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.attempt_deadline" title="Permalink to this definition">¶</a></dt>
+<dd><p>The deadline for job attempts. If the request handler does not respond by this deadline then the request is cancelled
+and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in execution logs. Cloud
+Scheduler will retry the job according to the RetryConfig. The allowed duration for this deadline is: * For HTTP
+targets, between 15 seconds and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours. A duration
+in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudscheduler.Job.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A human-readable description for the job. This string must not contain more than 500 characters.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudscheduler.Job.http_target">
+<code class="sig-name descname">http_target</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.http_target" title="Permalink to this definition">¶</a></dt>
+<dd><p>HTTP target. If the job providers a http_target the cron will send a request to the targeted url</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">body</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthToken</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account_email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oidcToken</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">audience</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account_email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudscheduler.Job.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the job.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudscheduler.Job.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudscheduler.Job.pubsub_target">
+<code class="sig-name descname">pubsub_target</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.pubsub_target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">attributes</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topicName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudscheduler.Job.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Region where the scheduler job resides</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudscheduler.Job.retry_config">
+<code class="sig-name descname">retry_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.retry_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler,
+then it will be retried with exponential backoff according to the settings</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBackoffDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxDoublings</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRetryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minBackoffDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudscheduler.Job.schedule">
+<code class="sig-name descname">schedule</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.schedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Describes the schedule on which the job will be executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudscheduler.Job.time_zone">
+<code class="sig-name descname">time_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.time_zone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the time zone to be used in interpreting schedule. The value of this field must be a time zone name from the
+tz database.</p>
 </dd></dl>
 
 <dl class="method">
@@ -95,8 +221,25 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_engine_http_target</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
+instance</p></li>
+<li><p><strong>attempt_deadline</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The deadline for job attempts. If the request handler does not respond by this deadline then the request is cancelled
+and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in execution logs. Cloud
+Scheduler will retry the job according to the RetryConfig. The allowed duration for this deadline is: * For HTTP
+targets, between 15 seconds and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours. A duration
+in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable description for the job. This string must not contain more than 500 characters.</p></li>
+<li><p><strong>http_target</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – HTTP target. If the job providers a http_target the cron will send a request to the targeted url</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the job.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>pubsub_target</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region where the scheduler job resides</p></li>
+<li><p><strong>retry_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler,
+then it will be retried with exponential backoff according to the settings</p></li>
+<li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Describes the schedule on which the job will be executed.</p></li>
+<li><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the time zone to be used in interpreting schedule. The value of this field must be a time zone name from the
+tz database.</p></li>
 </ul>
 </dd>
 </dl>
@@ -147,9 +290,6 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minBackoffDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retryCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_scheduler_job.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_scheduler_job.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

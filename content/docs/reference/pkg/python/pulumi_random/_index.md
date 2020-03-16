@@ -20,6 +20,9 @@ anything, please consult the source <a class="reference external" href="https://
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/index.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -28,28 +31,6 @@ construction to achieve fine-grained programmatic control over provider settings
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
-<dl class="method">
-<dt id="pulumi_random.Provider.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.Provider.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_random.Provider.translate_output_property">
 <code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -101,6 +82,9 @@ type-4 UUID.</p>
 the <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span></code> lifecycle flag set to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/id.html.md">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/id.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -117,9 +101,6 @@ base64 encoded.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/id.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/id.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_random.RandomId.b64_std">
 <code class="sig-name descname">b64_std</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomId.b64_std" title="Permalink to this definition">¶</a></dt>
@@ -194,9 +175,6 @@ base64 encoded.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/id.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/id.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -245,6 +223,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 the <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span></code> lifecycle flag set, to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/integer.html.md">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/integer.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -259,9 +240,6 @@ the main provider documentation for more information.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/integer.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/integer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_random.RandomInteger.keepers">
 <code class="sig-name descname">keepers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomInteger.keepers" title="Permalink to this definition">¶</a></dt>
@@ -315,9 +293,6 @@ the main provider documentation for more information.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/integer.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/integer.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -372,6 +347,9 @@ the raw state as plain-text. <a class="reference external" href="https://www.ter
 state</a>.</p>
 </div></blockquote>
 <p>This resource <em>does</em> use a cryptographic random number generator.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/password.html.md">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/password.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -380,9 +358,6 @@ state</a>.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/password.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/password.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="method">
 <dt id="pulumi_random.RandomPassword.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">keepers=None</em>, <em class="sig-param">length=None</em>, <em class="sig-param">lower=None</em>, <em class="sig-param">min_lower=None</em>, <em class="sig-param">min_numeric=None</em>, <em class="sig-param">min_special=None</em>, <em class="sig-param">min_upper=None</em>, <em class="sig-param">number=None</em>, <em class="sig-param">override_special=None</em>, <em class="sig-param">result=None</em>, <em class="sig-param">special=None</em>, <em class="sig-param">upper=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomPassword.get" title="Permalink to this definition">¶</a></dt>
@@ -397,9 +372,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/password.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/password.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -449,6 +421,9 @@ used as unique identifiers for other resources.</p>
 the <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span></code> lifecycle flag set, to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/pet.html.md">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/pet.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -463,9 +438,6 @@ the main provider documentation for more information.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/pet.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/pet.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_random.RandomPet.keepers">
 <code class="sig-name descname">keepers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomPet.keepers" title="Permalink to this definition">¶</a></dt>
@@ -512,9 +484,6 @@ the main provider documentation for more information.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/pet.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/pet.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -560,6 +529,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_random.</code><code class="sig-name descname">RandomShuffle</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">inputs=None</em>, <em class="sig-param">keepers=None</em>, <em class="sig-param">result_count=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomShuffle" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource <code class="docutils literal notranslate"><span class="pre">.RandomShuffle</span></code> generates a random permutation of a list
 of strings given as an argument.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/shuffle.html.md">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/shuffle.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -577,9 +549,6 @@ of items in the input list.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/shuffle.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/shuffle.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_random.RandomShuffle.inputs">
 <code class="sig-name descname">inputs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomShuffle.inputs" title="Permalink to this definition">¶</a></dt>
@@ -595,12 +564,6 @@ the main provider documentation for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_random.RandomShuffle.results">
-<code class="sig-name descname">results</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomShuffle.results" title="Permalink to this definition">¶</a></dt>
-<dd><p>Random permutation of the list of strings given in <code class="docutils literal notranslate"><span class="pre">input</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_random.RandomShuffle.result_count">
 <code class="sig-name descname">result_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomShuffle.result_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of results to return. Defaults to
@@ -610,9 +573,15 @@ items will be repeated in the result but not more frequently than the number
 of items in the input list.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_random.RandomShuffle.results">
+<code class="sig-name descname">results</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomShuffle.results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Random permutation of the list of strings given in <code class="docutils literal notranslate"><span class="pre">input</span></code>.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_random.RandomShuffle.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">inputs=None</em>, <em class="sig-param">keepers=None</em>, <em class="sig-param">results=None</em>, <em class="sig-param">result_count=None</em>, <em class="sig-param">seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomShuffle.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">inputs=None</em>, <em class="sig-param">keepers=None</em>, <em class="sig-param">result_count=None</em>, <em class="sig-param">results=None</em>, <em class="sig-param">seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomShuffle.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RandomShuffle resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -625,18 +594,15 @@ properties used to qualify the lookup.</p>
 <li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.</p></li>
-<li><p><strong>results</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Random permutation of the list of strings given in <code class="docutils literal notranslate"><span class="pre">input</span></code>.</p></li>
 <li><p><strong>result_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of results to return. Defaults to
 the number of items in the <code class="docutils literal notranslate"><span class="pre">input</span></code> list. If fewer items are requested,
 some elements will be excluded from the result. If more items are requested,
 items will be repeated in the result but not more frequently than the number
 of items in the input list.</p></li>
+<li><p><strong>results</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Random permutation of the list of strings given in <code class="docutils literal notranslate"><span class="pre">input</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/shuffle.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/shuffle.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -687,6 +653,9 @@ characters and optionally special characters.</p>
 used it in a password. For backwards compatibility it will
 continue to exist. For unique ids please use random_id, for sensitive
 random values please use random_password.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/string.html.md">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/string.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -720,9 +689,6 @@ in random string.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/string.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/string.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_random.RandomString.keepers">
 <code class="sig-name descname">keepers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomString.keepers" title="Permalink to this definition">¶</a></dt>
@@ -848,9 +814,6 @@ in random string.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/string.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/string.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -898,6 +861,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 used as unique identifiers for other resources.</p>
 <p>This resource uses the <code class="docutils literal notranslate"><span class="pre">hashicorp/go-uuid</span></code> to generate a UUID-formatted string
 for use with services needed a unique string identifier.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/uuid.html.md">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/uuid.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -909,9 +875,6 @@ the main provider documentation for more information.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/uuid.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/uuid.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_random.RandomUuid.keepers">
 <code class="sig-name descname">keepers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomUuid.keepers" title="Permalink to this definition">¶</a></dt>
@@ -944,9 +907,6 @@ the main provider documentation for more information.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/uuid.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/uuid.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

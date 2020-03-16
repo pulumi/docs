@@ -15,23 +15,29 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.mns"></span><dl class="class">
 <dt id="pulumi_alicloud.mns.AwaitableGetQueuesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">AwaitableGetQueuesResult</code><span class="sig-paren">(</span><em class="sig-param">name_prefix=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">queues=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.AwaitableGetQueuesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">AwaitableGetQueuesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">queues=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.AwaitableGetQueuesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.mns.AwaitableGetTopicSubscriptionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">AwaitableGetTopicSubscriptionsResult</code><span class="sig-paren">(</span><em class="sig-param">name_prefix=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">subscriptions=None</em>, <em class="sig-param">topic_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.AwaitableGetTopicSubscriptionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">AwaitableGetTopicSubscriptionsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">subscriptions=None</em>, <em class="sig-param">topic_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.AwaitableGetTopicSubscriptionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.mns.AwaitableGetTopicsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">AwaitableGetTopicsResult</code><span class="sig-paren">(</span><em class="sig-param">name_prefix=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">topics=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.AwaitableGetTopicsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">AwaitableGetTopicsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">topics=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.AwaitableGetTopicsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.mns.GetQueuesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">GetQueuesResult</code><span class="sig-paren">(</span><em class="sig-param">name_prefix=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">queues=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.GetQueuesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">GetQueuesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">queues=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.GetQueuesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getQueues.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.mns.GetQueuesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.GetQueuesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.mns.GetQueuesResult.names">
 <code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.GetQueuesResult.names" title="Permalink to this definition">¶</a></dt>
@@ -44,18 +50,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>A list of queues. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.mns.GetQueuesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.GetQueuesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.mns.GetTopicSubscriptionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">GetTopicSubscriptionsResult</code><span class="sig-paren">(</span><em class="sig-param">name_prefix=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">subscriptions=None</em>, <em class="sig-param">topic_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.GetTopicSubscriptionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">GetTopicSubscriptionsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">subscriptions=None</em>, <em class="sig-param">topic_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.GetTopicSubscriptionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTopicSubscriptions.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.mns.GetTopicSubscriptionsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.GetTopicSubscriptionsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.mns.GetTopicSubscriptionsResult.names">
 <code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.GetTopicSubscriptionsResult.names" title="Permalink to this definition">¶</a></dt>
@@ -68,18 +74,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>A list of subscriptions. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.mns.GetTopicSubscriptionsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.GetTopicSubscriptionsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.mns.GetTopicsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">GetTopicsResult</code><span class="sig-paren">(</span><em class="sig-param">name_prefix=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">topics=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.GetTopicsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">GetTopicsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">topics=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.GetTopicsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTopics.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.mns.GetTopicsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.GetTopicsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.mns.GetTopicsResult.names">
 <code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.GetTopicsResult.names" title="Permalink to this definition">¶</a></dt>
@@ -92,35 +98,20 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>A list of topics. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.mns.GetTopicsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.GetTopicsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.mns.Queue">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">Queue</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">delay_seconds=None</em>, <em class="sig-param">maximum_message_size=None</em>, <em class="sig-param">message_retention_period=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">polling_wait_seconds=None</em>, <em class="sig-param">visibility_timeout=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.Queue" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Queue resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>delay_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – This attribute defines the length of time, in seconds, after which every message sent to the queue is dequeued. Valid value range: 0-604800 seconds, i.e., 0 to 7 days. Default value to 0.</p></li>
-<li><p><strong>maximum_message_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – This indicates the maximum length, in bytes, of any message body sent to the queue. Valid value range: 1024-65536, i.e., 1K to 64K. Default value to 65536.</p></li>
-<li><p><strong>message_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Messages are deleted from the queue after a specified length of time, whether they have been activated or not. This attribute defines the viability period, in seconds, for every message in the queue. Valid value range: 60-604800 seconds, i.e., 1 minutes to 7 days. Default value to 345600.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Two queues on a single account in the same region cannot have the same name. A queue name must start with an English letter or a digit, and can contain English letters, digits, and hyphens, with the length not exceeding 256 characters .</p></li>
-<li><p><strong>polling_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Long polling is measured in seconds. When this attribute is set to 0, long polling is disabled. When it is not set to 0, long polling is enabled and message dequeue requests will be processed only when valid messages are received or when long polling times out. Valid value range: 0-30 seconds. Default value to 0.</p></li>
-<li><p><strong>visibility_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VisibilityTimeout attribute of the queue. A dequeued messages will change from active (visible) status to inactive (invisible) status, and this attribute defines the length of time, in seconds, that messages remain invisible. Messages return to active status after the set period. Valid value range: 1-43200 seconds, i.e., 1 seconds to 12 hours. Default value to 30.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mns_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mns_queue.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Queue resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] delay_seconds: This attribute defines the length of time, in seconds, after which every message sent to the queue is dequeued. Valid value range: 0-604800 seconds, i.e., 0 to 7 days. Default value to 0.
+:param pulumi.Input[float] maximum_message_size: This indicates the maximum length, in bytes, of any message body sent to the queue. Valid value range: 1024-65536, i.e., 1K to 64K. Default value to 65536.
+:param pulumi.Input[float] message_retention_period: Messages are deleted from the queue after a specified length of time, whether they have been activated or not. This attribute defines the viability period, in seconds, for every message in the queue. Valid value range: 60-604800 seconds, i.e., 1 minutes to 7 days. Default value to 345600.
+:param pulumi.Input[str] name: Two queues on a single account in the same region cannot have the same name. A queue name must start with an English letter or a digit, and can contain English letters, digits, and hyphens, with the length not exceeding 256 characters .
+:param pulumi.Input[float] polling_wait_seconds: Long polling is measured in seconds. When this attribute is set to 0, long polling is disabled. When it is not set to 0, long polling is enabled and message dequeue requests will be processed only when valid messages are received or when long polling times out. Valid value range: 0-30 seconds. Default value to 0.
+:param pulumi.Input[float] visibility_timeout: The VisibilityTimeout attribute of the queue. A dequeued messages will change from active (visible) status to inactive (invisible) status, and this attribute defines the length of time, in seconds, that messages remain invisible. Messages return to active status after the set period. Valid value range: 1-43200 seconds, i.e., 1 seconds to 12 hours. Default value to 30.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.mns.Queue.delay_seconds">
 <code class="sig-name descname">delay_seconds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.Queue.delay_seconds" title="Permalink to this definition">¶</a></dt>
@@ -177,9 +168,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mns_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mns_queue.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -223,21 +211,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.mns.Topic">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">Topic</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">logging_enabled=None</em>, <em class="sig-param">maximum_message_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.Topic" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Topic resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>logging_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is logging enabled? true or false. Default value to false.</p></li>
-<li><p><strong>maximum_message_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – This indicates the maximum length, in bytes, of any message body sent to the topic. Valid value range: 1024-65536, i.e., 1K to 64K. Default value to 65536.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Two topics on a single account in the same region cannot have the same name. A topic name must start with an English letter or a digit, and can contain English letters, digits, and hyphens, with the length not exceeding 256 characters.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mns_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mns_topic.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Topic resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] logging_enabled: Is logging enabled? true or false. Default value to false.
+:param pulumi.Input[float] maximum_message_size: This indicates the maximum length, in bytes, of any message body sent to the topic. Valid value range: 1024-65536, i.e., 1K to 64K. Default value to 65536.
+:param pulumi.Input[str] name: Two topics on a single account in the same region cannot have the same name. A topic name must start with an English letter or a digit, and can contain English letters, digits, and hyphens, with the length not exceeding 256 characters.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.mns.Topic.logging_enabled">
 <code class="sig-name descname">logging_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.Topic.logging_enabled" title="Permalink to this definition">¶</a></dt>
@@ -273,9 +252,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mns_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mns_topic.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -319,16 +295,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.mns.TopicSubscription">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">TopicSubscription</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">filter_tag=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notify_content_format=None</em>, <em class="sig-param">notify_strategy=None</em>, <em class="sig-param">topic_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.TopicSubscription" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a TopicSubscription resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint has three format. Available values format:</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a TopicSubscription resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] endpoint: The endpoint has three format. Available values format:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">HTTP</span> <span class="n">Format</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">xxx</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">xxx</span>
 <span class="o">-</span> <span class="n">Queue</span> <span class="n">Format</span><span class="p">:</span> <span class="n">acs</span><span class="p">:</span><span class="n">mns</span><span class="p">:{</span><span class="n">REGION</span><span class="p">}:{</span><span class="n">AccountID</span><span class="p">}:</span><span class="n">queues</span><span class="o">/</span><span class="p">{</span><span class="n">QueueName</span><span class="p">}</span>
 <span class="o">-</span> <span class="n">Email</span> <span class="n">Format</span><span class="p">:</span> <span class="n">mail</span><span class="p">:</span><span class="n">directmail</span><span class="p">:{</span><span class="n">MailAddress</span><span class="p">}</span>
@@ -344,9 +314,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mns_topic_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mns_topic_subscription.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.mns.TopicSubscription.endpoint">
 <code class="sig-name descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.TopicSubscription.endpoint" title="Permalink to this definition">¶</a></dt>
@@ -412,9 +379,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mns_topic_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mns_topic_subscription.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -459,20 +423,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.mns.get_queues">
 <code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">get_queues</code><span class="sig-paren">(</span><em class="sig-param">name_prefix=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.get_queues" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of MNS queues in an Alibaba Cloud account according to the specified parameters.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_queues.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_queues.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name_prefix</strong> (<em>str</em>) – A string to filter resulting queues by their name prefixs.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_queues.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_queues.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.mns.get_topic_subscriptions">
 <code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">get_topic_subscriptions</code><span class="sig-paren">(</span><em class="sig-param">name_prefix=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">topic_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.get_topic_subscriptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of MNS topic subscriptions in an Alibaba Cloud account according to the specified parameters.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_topic_subscriptions.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_topic_subscriptions.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -481,23 +448,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_topic_subscriptions.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_topic_subscriptions.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.mns.get_topics">
 <code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">get_topics</code><span class="sig-paren">(</span><em class="sig-param">name_prefix=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.get_topics" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of MNS topics in an Alibaba Cloud account according to the specified parameters.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_topics.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_topics.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name_prefix</strong> (<em>str</em>) – A string to filter resulting topics by their name prefixs.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_topics.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_topics.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>
