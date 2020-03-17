@@ -1,11 +1,11 @@
 
 ---
 title: "AccessKey"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an IAM access key. This is a set of credentials that allow API requests to be made as an IAM user.
 

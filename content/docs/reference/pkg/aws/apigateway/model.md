@@ -1,11 +1,11 @@
 
 ---
 title: "Model"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a Model for a API Gateway.
 
@@ -430,7 +430,7 @@ The name of the model
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1223,7 +1223,7 @@ The name of the model
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

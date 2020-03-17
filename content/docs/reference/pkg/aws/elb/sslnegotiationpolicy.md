@@ -1,11 +1,11 @@
 
 ---
 title: "SslNegotiationPolicy"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a load balancer SSL negotiation policy, which allows an ELB to control the ciphers and protocols that are supported during SSL negotiations between a client and a load balancer.
 

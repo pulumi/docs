@@ -1,11 +1,11 @@
 
 ---
 title: "MethodSettings"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an API Gateway Method Settings, e.g. logging or monitoring.
 
@@ -387,7 +387,7 @@ Method path defined as `{resource_path}/{http_method}` for an individual method 
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1068,7 +1068,7 @@ Method path defined as `{resource_path}/{http_method}` for an individual method 
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -1,11 +1,11 @@
 
 ---
 title: "GetVpcEndpointService"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 The VPC Endpoint Service data source details about a specific service that
 can be specified when creating a VPC endpoint within the region configured in the provider.
@@ -313,7 +313,7 @@ The service name that can be specified when creating a VPC endpoint.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1064,7 +1064,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the resource.
  {{% /md %}}

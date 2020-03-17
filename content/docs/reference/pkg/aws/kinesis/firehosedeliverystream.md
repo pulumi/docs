@@ -1,11 +1,11 @@
 
 ---
 title: "FirehoseDeliveryStream"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is a fully managed, elastic service to easily deliver real-time data streams to destinations such as Amazon S3 and Amazon Redshift.
 
@@ -1110,7 +1110,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1896,7 +1896,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2823,7 +2823,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6870,7 +6870,7 @@ When set to true, which is the default, Kinesis Data Firehose converts JSON keys
             <td class="align-top">column_<wbr>to_<wbr>json_<wbr>key_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

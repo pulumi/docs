@@ -1,11 +1,11 @@
 
 ---
 title: "ClusterSnapshot"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Manages a RDS database cluster snapshot for Aurora clusters. For managing RDS database instance snapshots, see the [`aws.rds.Snapshot` resource](https://www.terraform.io/docs/providers/aws/r/db_snapshot.html).
 
@@ -317,7 +317,7 @@ The Identifier for the snapshot.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1224,7 +1224,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the DB cluster.
  {{% /md %}}
@@ -2311,7 +2311,7 @@ Specifies whether the DB cluster snapshot is encrypted.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -1,11 +1,11 @@
 
 ---
 title: "Stack"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a CloudFormation Stack resource.
 
@@ -867,7 +867,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -914,7 +914,7 @@ Conflicts w/ `policy_body`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1710,7 +1710,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
             <td class="align-top">outputs</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A map of outputs from the stack.
  {{% /md %}}
@@ -1723,7 +1723,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A map of Parameter structures that specify input parameters for the stack.
  {{% /md %}}
@@ -1764,7 +1764,7 @@ Conflicts w/ `policy_body`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A list of tags to associate with this stack.
  {{% /md %}}
@@ -2693,7 +2693,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
             <td class="align-top">outputs</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2708,7 +2708,7 @@ A map of outputs from the stack.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2755,7 +2755,7 @@ Conflicts w/ `policy_body`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

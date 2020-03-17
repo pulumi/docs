@@ -1,11 +1,11 @@
 
 ---
 title: "ResourceShare"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Manages a Resource Access Manager (RAM) Resource Share. To association principals with the share, see the [`aws.ram.PrincipalAssociation` resource](https://www.terraform.io/docs/providers/aws/r/ram_principal_association.html). To associate resources with the share, see the [`aws.ram.ResourceAssociation` resource](https://www.terraform.io/docs/providers/aws/r/ram_resource_association.html).
 
@@ -319,7 +319,7 @@ The name of the resource share.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -623,7 +623,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource share.
  {{% /md %}}
@@ -1000,7 +1000,7 @@ The name of the resource share.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

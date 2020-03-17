@@ -1,11 +1,11 @@
 
 ---
 title: "GetWebAcl"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 `aws.waf.WebAcl` Retrieves a WAF Web ACL Resource Id.
 

@@ -1,11 +1,11 @@
 
 ---
 title: "ClusterInstance"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an DocDB Cluster Resource Instance. A Cluster Instance Resource defines
 attributes that are specific to a single instance in a [DocDB Cluster][1].
@@ -914,7 +914,7 @@ Default 0. Failover Priority setting on instance level. The reader who has lower
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2225,7 +2225,7 @@ Syntax: &#34;ddd:hh24:mi-ddd:hh24:mi&#34;. Eg: &#34;Mon:00:00-Mon:03:00&#34;.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the instance.
  {{% /md %}}
@@ -3772,7 +3772,7 @@ Specifies whether the DB cluster is encrypted.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

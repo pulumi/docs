@@ -1,11 +1,11 @@
 
 ---
 title: "LogSubscriptionFilter"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a CloudWatch Logs subscription filter resource.
 
@@ -470,7 +470,7 @@ A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of l
             <td class="align-top">log_<wbr>group</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1375,7 +1375,7 @@ A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of l
             <td class="align-top">log_<wbr>group</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

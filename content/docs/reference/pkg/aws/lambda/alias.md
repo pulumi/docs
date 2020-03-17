@@ -1,11 +1,11 @@
 
 ---
 title: "Alias"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Creates a Lambda function alias. Creates an alias that points to the specified Lambda function version.
 
@@ -1631,7 +1631,7 @@ A map that defines the proportion of events that should be sent to different ver
             <td class="align-top">additional_<wbr>version_<wbr>weights</td>
             <td class="align-top">
                 
-                <code>Dict[number, Any]</code>
+                <code>Dict[str, number]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

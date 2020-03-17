@@ -1,11 +1,11 @@
 
 ---
 title: "GetVpnGateway"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 The VPN Gateway data source provides details about
 a specific VPN gateway.
@@ -541,7 +541,7 @@ The state of the specific VPN Gateway to retrieve.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -976,7 +976,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

@@ -1,11 +1,11 @@
 
 ---
 title: "DomainPolicy"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Allows setting policy to an Elasticsearch domain while referencing domain attributes (e.g. ARN)
 
@@ -259,7 +259,7 @@ Name of the domain.
             <td class="align-top">access_<wbr>policies</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -716,7 +716,7 @@ Name of the domain.
             <td class="align-top">access_<wbr>policies</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

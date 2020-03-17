@@ -1,11 +1,11 @@
 
 ---
 title: "UserGroupMembership"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a resource for adding an [IAM User][2] to [IAM Groups][1]. This
 resource can be used multiple times with the same user for non-overlapping

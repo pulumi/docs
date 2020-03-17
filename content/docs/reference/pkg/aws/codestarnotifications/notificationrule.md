@@ -1,11 +1,11 @@
 
 ---
 title: "NotificationRule"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a CodeStar Notifications Rule.
 
@@ -534,7 +534,7 @@ The status of the notification rule. Possible values are `ENABLED` and `DISABLED
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1052,7 +1052,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1671,7 +1671,7 @@ The status of the notification rule. Possible values are `ENABLED` and `DISABLED
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

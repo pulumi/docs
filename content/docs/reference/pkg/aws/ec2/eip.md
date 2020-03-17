@@ -1,11 +1,11 @@
 
 ---
 title: "Eip"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an Elastic IP resource.
 
@@ -565,7 +565,7 @@ EC2 IPv4 address pool identifier or `amazon`. This option is only available for 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1335,7 +1335,7 @@ the Elastic IP address is associated with the primary private IP address.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2246,7 +2246,7 @@ EC2 IPv4 address pool identifier or `amazon`. This option is only available for 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

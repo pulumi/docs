@@ -1,11 +1,11 @@
 
 ---
 title: "Plan"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an AWS Backup plan resource.
 
@@ -320,7 +320,7 @@ A rule object that specifies a scheduled task that is used to back up a selectio
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -663,7 +663,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} Metadata that you can assign to help organize the plans you create.
  {{% /md %}}
@@ -1098,7 +1098,7 @@ A rule object that specifies a scheduled task that is used to back up a selectio
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1581,7 +1581,7 @@ The lifecycle defines when a protected resource is transitioned to cold storage 
             <td class="align-top">recovery_<wbr>point_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

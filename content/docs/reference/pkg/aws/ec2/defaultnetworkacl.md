@@ -1,11 +1,11 @@
 
 ---
 title: "DefaultNetworkAcl"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a resource to manage the default AWS Network ACL. VPC Only.
 
@@ -474,7 +474,7 @@ notes below on managing Subnets in the Default Network ACL
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -929,7 +929,7 @@ notes below on managing Subnets in the Default Network ACL
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1492,7 +1492,7 @@ notes below on managing Subnets in the Default Network ACL
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

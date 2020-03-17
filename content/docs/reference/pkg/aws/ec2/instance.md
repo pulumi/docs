@@ -1,11 +1,11 @@
 
 ---
 title: "Instance"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an EC2 instance resource. This allows instances to be created, updated,
 and deleted. Instances also support [provisioning](https://www.terraform.io/docs/provisioners/index.html).
@@ -1907,7 +1907,7 @@ The Id of a dedicated host that the instance will be assigned to. Use when an in
             <td class="align-top">iam_<wbr>instance_<wbr>profile</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2124,7 +2124,7 @@ The VPC Subnet ID to launch in.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2184,7 +2184,7 @@ Can be used instead of `user_data` to pass base64-encoded binary data directly. 
             <td class="align-top">volume_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4402,7 +4402,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -4454,7 +4454,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             <td class="align-top">volume_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the devices created by the instance at launch time.
  {{% /md %}}
@@ -6707,7 +6707,7 @@ The Id of a dedicated host that the instance will be assigned to. Use when an in
             <td class="align-top">iam_<wbr>instance_<wbr>profile</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7021,7 +7021,7 @@ The VPC Subnet ID to launch in.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7081,7 +7081,7 @@ Can be used instead of `user_data` to pass base64-encoded binary data directly. 
             <td class="align-top">volume_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

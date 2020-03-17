@@ -1,11 +1,11 @@
 
 ---
 title: "Cluster"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Manages AWS Managed Streaming for Kafka cluster
 
@@ -795,7 +795,7 @@ Configuration block for JMX and Node monitoring for the MSK cluster. See below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1662,7 +1662,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource
  {{% /md %}}
@@ -2701,7 +2701,7 @@ Configuration block for JMX and Node monitoring for the MSK cluster. See below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -1,11 +1,11 @@
 
 ---
 title: "VpcAttachmentAccepter"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Manages the accepter's side of an EC2 Transit Gateway VPC Attachment.
 
@@ -342,7 +342,7 @@ Boolean whether the VPC Attachment should propagate routes with the EC2 Transit 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -925,7 +925,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value tags for the EC2 Transit Gateway VPC Attachment.
  {{% /md %}}
@@ -1650,7 +1650,7 @@ Identifiers of EC2 Subnets.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

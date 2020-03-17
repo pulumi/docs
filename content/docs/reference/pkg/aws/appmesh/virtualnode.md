@@ -1,11 +1,11 @@
 
 ---
 title: "VirtualNode"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an AWS App Mesh virtual node resource.
 
@@ -514,7 +514,7 @@ The virtual node specification to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -974,7 +974,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1531,7 +1531,7 @@ The virtual node specification to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4122,7 +4122,7 @@ The name of the AWS Cloud Map service to use. Use the [`aws.servicediscovery.Ser
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -1,11 +1,11 @@
 
 ---
 title: "Route"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a resource to create a routing table entry (a route) in a VPC routing table.
 

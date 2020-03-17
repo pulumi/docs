@@ -1,11 +1,11 @@
 
 ---
 title: "LogStream"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a CloudWatch Log Stream resource.
 

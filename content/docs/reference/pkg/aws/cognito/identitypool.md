@@ -1,11 +1,11 @@
 
 ---
 title: "IdentityPool"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an AWS Cognito Identity Pool.
 
@@ -628,7 +628,7 @@ An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
             <td class="align-top">supported_<wbr>login_<wbr>providers</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -643,7 +643,7 @@ Key-Value pairs mapping provider names to provider app IDs.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1198,7 +1198,7 @@ backend and the Cognito service to communicate about the developer provider.
             <td class="align-top">supported_<wbr>login_<wbr>providers</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} Key-Value pairs mapping provider names to provider app IDs.
  {{% /md %}}
@@ -1211,7 +1211,7 @@ backend and the Cognito service to communicate about the developer provider.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the Identity Pool.
  {{% /md %}}
@@ -1877,7 +1877,7 @@ An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
             <td class="align-top">supported_<wbr>login_<wbr>providers</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1892,7 +1892,7 @@ Key-Value pairs mapping provider names to provider app IDs.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

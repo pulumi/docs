@@ -1,11 +1,11 @@
 
 ---
 title: "PolicyAttachment"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a resource to attach an AWS Organizations policy to an organization account, root, or unit.
 

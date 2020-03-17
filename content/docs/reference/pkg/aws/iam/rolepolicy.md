@@ -1,11 +1,11 @@
 
 ---
 title: "RolePolicy"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an IAM role policy.
 
@@ -358,7 +358,7 @@ prefix. Conflicts with `name`.
             <td class="align-top">policy</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -373,7 +373,7 @@ The policy document attached to the role.
             <td class="align-top">role</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1055,7 +1055,7 @@ prefix. Conflicts with `name`.
             <td class="align-top">policy</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1070,7 +1070,7 @@ The policy document attached to the role.
             <td class="align-top">role</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

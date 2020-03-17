@@ -1,11 +1,11 @@
 
 ---
 title: "GetDomain"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Use this data source to get information about an Elasticsearch Domain
 
@@ -229,7 +229,7 @@ Name of the domain.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1167,7 +1167,7 @@ The following output properties are available:
             <td class="align-top">advanced_<wbr>options</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value string pairs to specify advanced configuration options.
  {{% /md %}}
@@ -1400,7 +1400,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} The tags assigned to the domain.
  {{% /md %}}

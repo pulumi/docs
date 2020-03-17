@@ -1,11 +1,11 @@
 
 ---
 title: "GetSubnetIds"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 `aws.ec2.getSubnetIds` provides a set of ids for a vpc_id
 
@@ -271,7 +271,7 @@ Custom filter block as described below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -621,7 +621,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

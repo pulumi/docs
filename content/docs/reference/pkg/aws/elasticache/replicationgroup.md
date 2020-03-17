@@ -1,11 +1,11 @@
 
 ---
 title: "ReplicationGroup"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an ElastiCache Replication Group resource.
 For working with Memcached or single primary Redis instances (Cluster Mode Disabled), see the
@@ -1861,7 +1861,7 @@ The name of the cache subnet group to be used for the replication group.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3563,7 +3563,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource
  {{% /md %}}
@@ -5542,7 +5542,7 @@ The name of the cache subnet group to be used for the replication group.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

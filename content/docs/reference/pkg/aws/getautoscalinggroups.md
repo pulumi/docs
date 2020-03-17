@@ -1,11 +1,11 @@
 
 ---
 title: "GetAutoscalingGroups"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 The Autoscaling Groups data source allows access to the list of AWS
 ASGs within a specific region. This will allow you to pass a list of AutoScaling Groups to other resources.

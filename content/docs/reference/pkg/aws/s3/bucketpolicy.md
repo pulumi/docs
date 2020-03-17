@@ -1,11 +1,11 @@
 
 ---
 title: "BucketPolicy"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Attaches a policy to an S3 bucket resource.
 
@@ -273,7 +273,7 @@ The name of the bucket to which to apply the policy.
             <td class="align-top">policy</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -722,7 +722,7 @@ The name of the bucket to which to apply the policy.
             <td class="align-top">policy</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

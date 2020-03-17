@@ -1,11 +1,11 @@
 
 ---
 title: "GetResolverRules"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 `aws.route53.getResolverRules` provides details about a set of Route53 Resolver rules.
 

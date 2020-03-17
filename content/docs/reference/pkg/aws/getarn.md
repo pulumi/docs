@@ -1,11 +1,11 @@
 
 ---
 title: "GetArn"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Parses an Amazon Resource Name (ARN) into its constituent parts.
 

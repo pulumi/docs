@@ -1,11 +1,11 @@
 
 ---
 title: "Fleet"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a resource to manage EC2 Fleets.
 
@@ -685,7 +685,7 @@ Nested argument containing Spot configurations. Defined below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1309,7 +1309,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Template.
  {{% /md %}}
@@ -2038,7 +2038,7 @@ Nested argument containing Spot configurations. Defined below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

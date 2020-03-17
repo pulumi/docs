@@ -1,11 +1,11 @@
 
 ---
 title: "GetCluster"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 The ECS Cluster data source allows access to details of a specific
 cluster within an AWS ECS service.

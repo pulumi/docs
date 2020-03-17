@@ -1,11 +1,11 @@
 
 ---
 title: "SecurityGroup"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Creates a new Amazon Redshift security group. You use security groups to control access to non-VPC clusters
 

@@ -1,11 +1,11 @@
 
 ---
 title: "GetRoute"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 `aws.ec2.Route` provides details about a specific Route.
 

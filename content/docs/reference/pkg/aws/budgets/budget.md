@@ -1,11 +1,11 @@
 
 ---
 title: "Budget"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a budgets budget resource. Budgets use the cost visualisation provided by Cost Explorer to show you the status of your budgets, to provide forecasts of your estimated costs, and to track your AWS usage, including your free tier usage.
 
@@ -821,7 +821,7 @@ Whether this budget tracks monetary cost or usage.
             <td class="align-top">cost_<wbr>filters</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1559,7 +1559,7 @@ The following output properties are available:
             <td class="align-top">cost_<wbr>filters</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} Map of CostFilters key/value pairs to apply to the budget.
  {{% /md %}}
@@ -2398,7 +2398,7 @@ Whether this budget tracks monetary cost or usage.
             <td class="align-top">cost_<wbr>filters</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

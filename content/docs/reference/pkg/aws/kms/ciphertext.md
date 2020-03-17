@@ -1,11 +1,11 @@
 
 ---
 title: "Ciphertext"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 The KMS ciphertext resource allows you to encrypt plaintext into ciphertext
 by using an AWS KMS customer master key. The value returned by this resource
@@ -301,7 +301,7 @@ Data to be encrypted. Note that this may show up in logs, and it will be stored 
             <td class="align-top">context</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -609,7 +609,7 @@ The following output properties are available:
             <td class="align-top">context</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} An optional mapping that makes up the encryption context.
  {{% /md %}}
@@ -982,7 +982,7 @@ Base64 encoded ciphertext
             <td class="align-top">context</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

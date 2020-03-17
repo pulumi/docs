@@ -1,11 +1,11 @@
 
 ---
 title: "Response"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an API Gateway Gateway Response for a REST API Gateway.
 
@@ -385,7 +385,7 @@ The HTTP status code of the Gateway Response.
             <td class="align-top">response_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -400,7 +400,7 @@ A map specifying the parameters (paths, query strings and headers) of the Gatewa
             <td class="align-top">response_<wbr>templates</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -749,7 +749,7 @@ The following output properties are available:
             <td class="align-top">response_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} A map specifying the parameters (paths, query strings and headers) of the Gateway Response.
  {{% /md %}}
@@ -762,7 +762,7 @@ The following output properties are available:
             <td class="align-top">response_<wbr>templates</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} A map specifying the templates used to transform the response body.
  {{% /md %}}
@@ -1178,7 +1178,7 @@ The HTTP status code of the Gateway Response.
             <td class="align-top">response_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1193,7 +1193,7 @@ A map specifying the parameters (paths, query strings and headers) of the Gatewa
             <td class="align-top">response_<wbr>templates</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

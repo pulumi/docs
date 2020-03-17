@@ -1,11 +1,11 @@
 
 ---
 title: "GetCanonicalUserId"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 The Canonical User ID data source allows access to the [canonical user ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html)
 for the effective account in which this provider is working.  

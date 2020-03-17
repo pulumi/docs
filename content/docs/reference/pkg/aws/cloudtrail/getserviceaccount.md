@@ -1,11 +1,11 @@
 
 ---
 title: "GetServiceAccount"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Use this data source to get the Account ID of the [AWS CloudTrail Service Account](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-supported-regions.html)
 in a given region for the purpose of allowing CloudTrail to store trail data in S3.

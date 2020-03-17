@@ -1,11 +1,11 @@
 
 ---
 title: "LaunchTemplate"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an EC2 launch template resource. Can be used to create instances or auto scaling groups.
 
@@ -1811,7 +1811,7 @@ The tags to apply to the resources during launch. See Tag Specifications below f
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3559,7 +3559,7 @@ Interfaces below for more details.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the launch template.
  {{% /md %}}
@@ -5588,7 +5588,7 @@ The tags to apply to the resources during launch. See Tag Specifications below f
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -10089,7 +10089,7 @@ A mapping of tags to assign to the launch template.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

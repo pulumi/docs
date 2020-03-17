@@ -1,11 +1,11 @@
 
 ---
 title: "Authorizer"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an API Gateway Authorizer.
 
@@ -755,7 +755,7 @@ Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userp
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2076,7 +2076,7 @@ Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userp
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

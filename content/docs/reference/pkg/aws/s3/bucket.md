@@ -1,11 +1,11 @@
 
 ---
 title: "Bucket"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a S3 bucket resource.
 
@@ -1459,7 +1459,7 @@ Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Su
             <td class="align-top">acl</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1624,7 +1624,7 @@ A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/late
             <td class="align-top">policy</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1702,7 +1702,7 @@ A configuration of [server-side encryption configuration](http://docs.aws.amazon
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3070,7 +3070,7 @@ developer guide for more information.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags that identifies subset of objects to which the rule applies.
 The rule applies only to objects having all the tags in its tagset.
@@ -4382,7 +4382,7 @@ Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Su
             <td class="align-top">acl</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4577,7 +4577,7 @@ A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/late
             <td class="align-top">policy</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4655,7 +4655,7 @@ A configuration of [server-side encryption configuration](http://docs.aws.amazon
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6094,7 +6094,7 @@ Object keyname prefix that identifies subset of objects to which the rule applie
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9470,7 +9470,7 @@ Object keyname prefix that identifies subset of objects to which the rule applie
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -10905,7 +10905,7 @@ A hostname to redirect all website requests for this bucket to. Hostname can opt
             <td class="align-top">routing_<wbr>rules</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

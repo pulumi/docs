@@ -1,11 +1,11 @@
 
 ---
 title: "RequestValidator"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Manages an API Gateway Request Validator.
 
@@ -348,7 +348,7 @@ The name of the request validator
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1029,7 +1029,7 @@ The name of the request validator
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

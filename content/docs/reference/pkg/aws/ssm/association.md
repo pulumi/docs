@@ -1,11 +1,11 @@
 
 ---
 title: "Association"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Associates an SSM Document to an instance or EC2 tag.
 
@@ -829,7 +829,7 @@ An output location block. Output Location is documented below.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1605,7 +1605,7 @@ The following output properties are available:
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A block of arbitrary string parameters to pass to the SSM document.
  {{% /md %}}
@@ -2518,7 +2518,7 @@ An output location block. Output Location is documented below.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

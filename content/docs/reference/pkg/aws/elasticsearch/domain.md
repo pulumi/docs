@@ -1,11 +1,11 @@
 
 ---
 title: "Domain"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Manages an AWS Elasticsearch Domain.
 
@@ -938,7 +938,7 @@ VPC related options, see below. Adding or removing this configuration forces a n
             <td class="align-top">access_<wbr>policies</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -953,7 +953,7 @@ IAM policy document specifying the access policies for the domain
             <td class="align-top">advanced_<wbr>options</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1120,7 +1120,7 @@ Snapshot related options, see below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1971,7 +1971,7 @@ domain on every apply.
             <td class="align-top">advanced_<wbr>options</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value string pairs to specify advanced configuration options.
 Note that the values for these configuration options must be strings (wrapped in quotes) or they
@@ -2170,7 +2170,7 @@ domain on every apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource
  {{% /md %}}
@@ -3157,7 +3157,7 @@ VPC related options, see below. Adding or removing this configuration forces a n
             <td class="align-top">access_<wbr>policies</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3172,7 +3172,7 @@ IAM policy document specifying the access policies for the domain
             <td class="align-top">advanced_<wbr>options</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3401,7 +3401,7 @@ Snapshot related options, see below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

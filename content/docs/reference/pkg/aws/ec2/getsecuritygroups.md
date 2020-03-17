@@ -1,11 +1,11 @@
 
 ---
 title: "GetSecurityGroups"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Use this data source to get IDs and VPC membership of Security Groups that are created
 outside of this provider.
@@ -265,7 +265,7 @@ several valid keys, for a full reference, check out
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -606,7 +606,7 @@ unless the `vpc-id` filter is also used.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

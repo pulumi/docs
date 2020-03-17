@@ -1,11 +1,11 @@
 
 ---
 title: "MethodResponse"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an HTTP Method Response for an API Gateway Resource.
 
@@ -480,7 +480,7 @@ The API resource ID
             <td class="align-top">response_<wbr>models</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -495,7 +495,7 @@ A map of the API models used for the response&#39;s content type
             <td class="align-top">response_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[boolean, Any]</code>
+                <code>Dict[str, boolean]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -512,7 +512,7 @@ would define that the header `X-Some-Header` can be provided on the response.
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -902,7 +902,7 @@ would define that the header `X-Some-Header` can be provided on the response.
             <td class="align-top">response_<wbr>models</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} A map of the API models used for the response&#39;s content type
  {{% /md %}}
@@ -915,7 +915,7 @@ would define that the header `X-Some-Header` can be provided on the response.
             <td class="align-top">response_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[boolean, Any]</code>
+                <code>Dict[str, boolean]</code>
             </td>
             <td class="align-top">{{% md %}} A map of response parameters that can be sent to the caller.
 For example: `response_parameters = { &#34;method.response.header.X-Some-Header&#34; = true }`
@@ -1401,7 +1401,7 @@ The API resource ID
             <td class="align-top">response_<wbr>models</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1416,7 +1416,7 @@ A map of the API models used for the response&#39;s content type
             <td class="align-top">response_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[boolean, Any]</code>
+                <code>Dict[str, boolean]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1433,7 +1433,7 @@ would define that the header `X-Some-Header` can be provided on the response.
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -1,11 +1,11 @@
 
 ---
 title: "ZoneAssociation"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Manages a Route53 Hosted Zone VPC association. VPC associations can only be made on private zones.
 

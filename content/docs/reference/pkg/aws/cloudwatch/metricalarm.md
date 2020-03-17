@@ -1,11 +1,11 @@
 
 ---
 title: "MetricAlarm"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a CloudWatch Metric Alarm resource.
 
@@ -1360,7 +1360,7 @@ The number of datapoints that must be breaching to trigger the alarm.
             <td class="align-top">dimensions</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1548,7 +1548,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2716,7 +2716,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
             <td class="align-top">dimensions</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
  {{% /md %}}
@@ -2880,7 +2880,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -4233,7 +4233,7 @@ The number of datapoints that must be breaching to trigger the alarm.
             <td class="align-top">dimensions</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4421,7 +4421,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5284,7 +5284,7 @@ The unit for this metric.
             <td class="align-top">dimensions</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

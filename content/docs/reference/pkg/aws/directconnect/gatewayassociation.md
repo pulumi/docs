@@ -1,11 +1,11 @@
 
 ---
 title: "GatewayAssociation"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Associates a Direct Connect Gateway with a VGW or transit gateway.
 

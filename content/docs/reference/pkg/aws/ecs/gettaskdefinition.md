@@ -1,11 +1,11 @@
 
 ---
 title: "GetTaskDefinition"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 The ECS task definition data source allows access to details of
 a specific AWS ECS task definition.

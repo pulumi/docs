@@ -1,11 +1,11 @@
 
 ---
 title: "EgressOnlyInternetGateway"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 [IPv6 only] Creates an egress-only Internet gateway for your VPC.
 An egress-only Internet gateway is used to enable outbound communication

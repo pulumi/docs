@@ -1,11 +1,11 @@
 
 ---
 title: "IdentityProvider"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a Cognito User Identity Provider resource.
 
@@ -435,7 +435,7 @@ The user pool id
             <td class="align-top">attribute_<wbr>mapping</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -465,7 +465,7 @@ The list of identity providers.
             <td class="align-top">provider_<wbr>details</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -853,7 +853,7 @@ The following output properties are available:
             <td class="align-top">attribute_<wbr>mapping</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} The map of attribute mapping of user pool attributes. [AttributeMapping in AWS API documentation](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping)
  {{% /md %}}
@@ -879,7 +879,7 @@ The following output properties are available:
             <td class="align-top">provider_<wbr>details</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} The map of identity details, such as access token
  {{% /md %}}
@@ -1340,7 +1340,7 @@ The user pool id
             <td class="align-top">attribute_<wbr>mapping</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1370,7 +1370,7 @@ The list of identity providers.
             <td class="align-top">provider_<wbr>details</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

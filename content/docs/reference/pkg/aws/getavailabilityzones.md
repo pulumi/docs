@@ -1,11 +1,11 @@
 
 ---
 title: "GetAvailabilityZones"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 The Availability Zones data source allows access to the list of AWS
 Availability Zones which can be accessed by an AWS account within the region

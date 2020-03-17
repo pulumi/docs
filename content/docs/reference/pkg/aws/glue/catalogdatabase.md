@@ -1,11 +1,11 @@
 
 ---
 title: "CatalogDatabase"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a Glue Catalog Database Resource. You can refer to the [Glue Developer Guide](http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html) for a full explanation of the Glue Data Catalog functionality
 
@@ -436,7 +436,7 @@ The name of the database.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -792,7 +792,7 @@ The following output properties are available:
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of key-value pairs that define parameters and properties of the database.
  {{% /md %}}
@@ -1229,7 +1229,7 @@ The name of the database.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -1,11 +1,11 @@
 
 ---
 title: "Group"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an AutoScaling Group resource.
 
@@ -1920,7 +1920,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
             <td class="align-top">launch_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1996,7 +1996,7 @@ The maximum size of the auto scale group.
             <td class="align-top">metrics_<wbr>granularity</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2091,7 +2091,7 @@ prefix. Conflicts with `name`.
             <td class="align-top">placement_<wbr>group</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5857,7 +5857,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
             <td class="align-top">launch_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5933,7 +5933,7 @@ The maximum size of the auto scale group.
             <td class="align-top">metrics_<wbr>granularity</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6028,7 +6028,7 @@ prefix. Conflicts with `name`.
             <td class="align-top">placement_<wbr>group</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

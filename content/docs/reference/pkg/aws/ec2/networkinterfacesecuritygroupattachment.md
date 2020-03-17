@@ -1,11 +1,11 @@
 
 ---
 title: "NetworkInterfaceSecurityGroupAttachment"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 This resource attaches a security group to an Elastic Network Interface (ENI).
 It can be used to attach a security group to any existing ENI, be it a

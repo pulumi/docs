@@ -1,11 +1,11 @@
 
 ---
 title: "CatalogTable"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a Glue Catalog Table Resource. You can refer to the [Glue Developer Guide](http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html) for a full explanation of the Glue Data Catalog functionality.
 
@@ -823,7 +823,7 @@ Owner of the table.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1555,7 +1555,7 @@ The following output properties are available:
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} A map of initialization parameters for the SerDe, in key-value form.
  {{% /md %}}
@@ -2400,7 +2400,7 @@ Owner of the table.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3539,7 +3539,7 @@ The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputForm
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4146,7 +4146,7 @@ Name of the SerDe.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4427,7 +4427,7 @@ A list of names of columns that contain skewed values.
             <td class="align-top">skewed_<wbr>column_<wbr>value_<wbr>location_<wbr>maps</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

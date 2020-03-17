@@ -1,11 +1,11 @@
 
 ---
 title: "Project"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a resource to manage AWS Device Farm Projects. 
 Please keep in mind that this feature is only supported on the "us-west-2" region.

@@ -1,11 +1,11 @@
 
 ---
 title: "TaskDefinition"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Manages a revision of an ECS task definition to be used in `aws.ecs.Service`.
 
@@ -981,7 +981,7 @@ A set of launch types required by the task. The valid values are `EC2` and `FARG
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1933,7 +1933,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -3046,7 +3046,7 @@ The revision of the task in a particular family.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3582,7 +3582,7 @@ The name of the container that will serve as the App Mesh proxy.
             <td class="align-top">properties</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4313,7 +4313,7 @@ The Docker volume driver to use. The driver value must match the driver name pro
             <td class="align-top">driver_<wbr>opts</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4328,7 +4328,7 @@ A map of Docker driver specific options.
             <td class="align-top">labels</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

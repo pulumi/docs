@@ -1,11 +1,11 @@
 
 ---
 title: "Cluster"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Manages a DocDB Cluster.
 
@@ -1549,7 +1549,7 @@ Specifies whether the DB cluster is encrypted. The default is `false`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3135,7 +3135,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the DB cluster.
  {{% /md %}}
@@ -4982,7 +4982,7 @@ Specifies whether the DB cluster is encrypted. The default is `false`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

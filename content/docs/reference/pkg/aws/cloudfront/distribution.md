@@ -1,11 +1,11 @@
 
 ---
 title: "Distribution"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Creates an Amazon CloudFront web distribution.
 
@@ -1508,7 +1508,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2867,7 +2867,7 @@ region and the credentials configuring this argument must have
             <td class="align-top">active_<wbr>trusted_<wbr>signers</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} The key pair IDs that CloudFront is aware of for
 each trusted signer, if the distribution is set up to serve private content
@@ -3206,7 +3206,7 @@ CloudFront system.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -4770,7 +4770,7 @@ region and the credentials configuring this argument must have
             <td class="align-top">active_<wbr>trusted_<wbr>signers</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5157,7 +5157,7 @@ CloudFront system.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

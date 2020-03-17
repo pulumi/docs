@@ -1,11 +1,11 @@
 
 ---
 title: "Permission"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Creates a Lambda permission to allow external sources invoking the Lambda function
 (e.g. CloudWatch Event Rule, SNS or S3).
@@ -704,7 +704,7 @@ The Event Source Token to validate.  Used with [Alexa Skills][1].
             <td class="align-top">function</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2017,7 +2017,7 @@ The Event Source Token to validate.  Used with [Alexa Skills][1].
             <td class="align-top">function</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

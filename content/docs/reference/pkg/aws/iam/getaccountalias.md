@@ -1,11 +1,11 @@
 
 ---
 title: "GetAccountAlias"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 The IAM Account Alias data source allows access to the account alias
 for the effective account in which this provider is working.

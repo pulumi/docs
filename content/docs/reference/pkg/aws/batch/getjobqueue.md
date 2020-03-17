@@ -1,11 +1,11 @@
 
 ---
 title: "GetJobQueue"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 The Batch Job Queue data source allows access to details of a specific
 job queue within AWS Batch.

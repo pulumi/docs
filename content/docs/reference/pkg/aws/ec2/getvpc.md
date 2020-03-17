@@ -1,11 +1,11 @@
 
 ---
 title: "GetVpc"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 `aws.ec2.Vpc` provides details about a specific VPC.
 
@@ -536,7 +536,7 @@ Can be either `&#34;pending&#34;` or `&#34;available&#34;`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1447,7 +1447,7 @@ selected VPC. May be any of `&#34;default&#34;`, `&#34;dedicated&#34;`, or `&#34
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

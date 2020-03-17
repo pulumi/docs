@@ -1,11 +1,11 @@
 
 ---
 title: "RolePolicyAttachment"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Attaches a Managed IAM Policy to an IAM role
 
@@ -291,7 +291,7 @@ The ARN of the policy you want to apply
             <td class="align-top">role</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -748,7 +748,7 @@ The ARN of the policy you want to apply
             <td class="align-top">role</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

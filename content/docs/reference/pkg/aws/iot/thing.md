@@ -1,11 +1,11 @@
 
 ---
 title: "Thing"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Creates and manages an AWS IoT Thing.
 
@@ -288,7 +288,7 @@ The thing type name.
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -674,7 +674,7 @@ The following output properties are available:
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} Map of attributes of the thing.
  {{% /md %}}
@@ -1163,7 +1163,7 @@ The ARN of the thing.
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

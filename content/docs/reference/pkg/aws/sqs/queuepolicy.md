@@ -1,11 +1,11 @@
 
 ---
 title: "QueuePolicy"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Allows you to set a policy of an SQS Queue
 while referencing ARN of the queue within the policy.

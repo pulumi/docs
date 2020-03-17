@@ -1,11 +1,11 @@
 
 ---
 title: "DefaultKmsKey"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a resource to manage the default customer master key (CMK) that your AWS account uses to encrypt EBS volumes.
 

@@ -1,11 +1,11 @@
 
 ---
 title: "Broker"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an MQ Broker Resource. This resources also manages users for the broker.
 
@@ -1112,7 +1112,7 @@ The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deploy
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2182,7 +2182,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -3433,7 +3433,7 @@ The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deploy
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

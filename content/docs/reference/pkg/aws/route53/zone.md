@@ -1,11 +1,11 @@
 
 ---
 title: "Zone"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Manages a Route53 Hosted Zone.
 
@@ -528,7 +528,7 @@ This is the name of the hosted zone.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1033,7 +1033,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the zone.
  {{% /md %}}
@@ -1650,7 +1650,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

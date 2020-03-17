@@ -1,11 +1,11 @@
 
 ---
 title: "GetEndpoint"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Returns a unique endpoint specific to the AWS account making the call.
 

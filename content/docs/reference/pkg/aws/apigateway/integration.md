@@ -1,11 +1,11 @@
 
 ---
 title: "Integration"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an HTTP Method Integration for an API Gateway Integration.
 
@@ -1185,7 +1185,7 @@ The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEV
             <td class="align-top">request_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1201,7 +1201,7 @@ For example: `request_parameters = { &#34;integration.request.header.X-Some-Othe
             <td class="align-top">request_<wbr>templates</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1231,7 +1231,7 @@ The API resource ID.
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2157,7 +2157,7 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
             <td class="align-top">request_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} A map of request query string parameters and headers that should be passed to the backend responder.
 For example: `request_parameters = { &#34;integration.request.header.X-Some-Other-Header&#34; = &#34;method.request.header.X-Some-Header&#34; }`
@@ -2171,7 +2171,7 @@ For example: `request_parameters = { &#34;integration.request.header.X-Some-Othe
             <td class="align-top">request_<wbr>templates</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} A map of the integration&#39;s request templates.
  {{% /md %}}
@@ -3274,7 +3274,7 @@ The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEV
             <td class="align-top">request_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3290,7 +3290,7 @@ For example: `request_parameters = { &#34;integration.request.header.X-Some-Othe
             <td class="align-top">request_<wbr>templates</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3320,7 +3320,7 @@ The API resource ID.
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

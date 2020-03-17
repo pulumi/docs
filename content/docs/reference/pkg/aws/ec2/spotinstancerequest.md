@@ -1,11 +1,11 @@
 
 ---
 title: "SpotInstanceRequest"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an EC2 Spot Instance Request resource. This allows instances to be
 requested on the spot market.
@@ -2590,7 +2590,7 @@ The VPC Subnet ID to launch in.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2680,7 +2680,7 @@ The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/ht
             <td class="align-top">volume_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5458,7 +5458,7 @@ the instance is terminated, the spot request will be closed.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -5536,7 +5536,7 @@ the instance is terminated, the spot request will be closed.
             <td class="align-top">volume_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the devices created by the instance at launch time.
  {{% /md %}}
@@ -8743,7 +8743,7 @@ The VPC Subnet ID to launch in.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8833,7 +8833,7 @@ The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/ht
             <td class="align-top">volume_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

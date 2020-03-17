@@ -1,11 +1,11 @@
 
 ---
 title: "VpnConnectionRoute"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a static route between a VPN connection and a customer gateway.
 

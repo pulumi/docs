@@ -1,11 +1,11 @@
 
 ---
 title: "LaunchConfiguration"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a resource to create a new launch configuration, used for autoscaling groups.
 
@@ -1259,7 +1259,7 @@ Customize Ephemeral (also known as
             <td class="align-top">iam_<wbr>instance_<wbr>profile</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3796,7 +3796,7 @@ Customize Ephemeral (also known as
             <td class="align-top">iam_<wbr>instance_<wbr>profile</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

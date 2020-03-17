@@ -1,11 +1,11 @@
 
 ---
 title: "Role"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an IAM role.
 
@@ -598,7 +598,7 @@ Key-value mapping of tags for the IAM role
             <td class="align-top">assume_<wbr>role_<wbr>policy</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -719,7 +719,7 @@ The ARN of the policy that is used to set the permissions boundary for the role.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1430,7 +1430,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of tags for the IAM role
  {{% /md %}}
@@ -2153,7 +2153,7 @@ The Amazon Resource Name (ARN) specifying the role.
             <td class="align-top">assume_<wbr>role_<wbr>policy</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2289,7 +2289,7 @@ The ARN of the policy that is used to set the permissions boundary for the role.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

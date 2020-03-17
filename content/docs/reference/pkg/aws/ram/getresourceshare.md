@@ -1,11 +1,11 @@
 
 ---
 title: "GetResourceShare"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 `aws.ram.ResourceShare` Retrieve information about a RAM Resource Share.
 
@@ -366,7 +366,7 @@ The owner of the resource share. Valid values are SELF or OTHER-ACCOUNTS
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -814,7 +814,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} The Tags attached to the RAM share
  {{% /md %}}

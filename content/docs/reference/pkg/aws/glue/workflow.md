@@ -1,11 +1,11 @@
 
 ---
 title: "Workflow"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a Glue Workflow resource.
 The workflow graph (DAG) can be build using the `aws.glue.Trigger` resource. 
@@ -306,7 +306,7 @@ The name you assign to this workflow.
             <td class="align-top">default_<wbr>run_<wbr>properties</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -562,7 +562,7 @@ The following output properties are available:
             <td class="align-top">default_<wbr>run_<wbr>properties</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.
  {{% /md %}}
@@ -875,7 +875,7 @@ The name you assign to this workflow.
             <td class="align-top">default_<wbr>run_<wbr>properties</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

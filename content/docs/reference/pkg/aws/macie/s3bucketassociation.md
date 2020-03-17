@@ -1,11 +1,11 @@
 
 ---
 title: "S3BucketAssociation"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Associates an S3 resource with Amazon Macie for monitoring and data classification.
 

@@ -1,11 +1,11 @@
 
 ---
 title: "GetInstance"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Use this data source to get the ID of an Amazon EC2 Instance for use in other
 resources.
@@ -476,7 +476,7 @@ Specify the exact Instance ID with which to populate the data source.
             <td class="align-top">instance_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -492,7 +492,7 @@ exactly match a pair on the desired Instance.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2260,7 +2260,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">instance_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2460,7 +2460,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the Instance.
  {{% /md %}}

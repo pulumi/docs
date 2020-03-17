@@ -1,11 +1,11 @@
 
 ---
 title: "EfsLocation"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Manages an AWS DataSync EFS Location.
 
@@ -384,7 +384,7 @@ Subdirectory to perform actions as source or destination. Default `/`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -776,7 +776,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value pairs of resource tags to assign to the DataSync Location.
  {{% /md %}}
@@ -1267,7 +1267,7 @@ Subdirectory to perform actions as source or destination. Default `/`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -1,11 +1,11 @@
 
 ---
 title: "Activation"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Registers an on-premises server or virtual machine with Amazon EC2 so that it can be managed using Run Command.
 
@@ -513,7 +513,7 @@ The maximum number of managed instances you want to register. The default value 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1077,7 +1077,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the object.
  {{% /md %}}
@@ -1754,7 +1754,7 @@ The maximum number of managed instances you want to register. The default value 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

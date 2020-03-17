@@ -1,11 +1,11 @@
 
 ---
 title: "GetInvocation"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Use this data source to invoke custom lambda functions as data source.
 The lambda function is invoked with [RequestResponse](https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html#API_Invoke_RequestSyntax)
@@ -684,7 +684,7 @@ The following output properties are available:
             <td class="align-top">result_<wbr>map</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} This field is set only if result is a map of primitive types, where the map is string keys and string values.
  {{% /md %}}

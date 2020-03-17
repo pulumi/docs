@@ -1,11 +1,11 @@
 
 ---
 title: "HostedTransitVirtualInterface"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a Direct Connect hosted transit virtual interface resource.
 This resource represents the allocator's side of the hosted virtual interface.

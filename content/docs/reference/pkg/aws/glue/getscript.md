@@ -1,11 +1,11 @@
 
 ---
 title: "GetScript"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Use this data source to generate a Glue script from a Directed Acyclic Graph (DAG).
 

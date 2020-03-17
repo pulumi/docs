@@ -1,11 +1,11 @@
 
 ---
 title: "Connection"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a Glue Connection resource.
 
@@ -509,7 +509,7 @@ The ID of the Data Catalog in which to create the connection. If none is supplie
             <td class="align-top">connection_<wbr>properties</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -979,7 +979,7 @@ The following output properties are available:
             <td class="align-top">connection_<wbr>properties</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A map of key-value pairs used as parameters for this connection.
  {{% /md %}}
@@ -1526,7 +1526,7 @@ The ID of the Data Catalog in which to create the connection. If none is supplie
             <td class="align-top">connection_<wbr>properties</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

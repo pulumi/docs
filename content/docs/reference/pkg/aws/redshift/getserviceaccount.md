@@ -1,11 +1,11 @@
 
 ---
 title: "GetServiceAccount"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Use this data source to get the Account ID of the [AWS Redshift Service Account](http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging)
 in a given region for the purpose of allowing Redshift to store audit data in S3.

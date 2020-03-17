@@ -1,11 +1,11 @@
 
 ---
 title: "Grant"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a resource-based access control mechanism for a KMS customer master key.
 
@@ -2216,7 +2216,7 @@ The principal that is given permission to retire the grant by using RetireGrant 
             <td class="align-top">encryption_<wbr>context_<wbr>equals</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2230,7 +2230,7 @@ The principal that is given permission to retire the grant by using RetireGrant 
             <td class="align-top">encryption_<wbr>context_<wbr>subset</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

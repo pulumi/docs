@@ -1,11 +1,11 @@
 
 ---
 title: "GetResolverRule"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 `aws.route53.ResolverRule` provides details about a specific Route53 Resolver rule.
 
@@ -472,7 +472,7 @@ The rule type of the desired resolver rule. Valid values are `FORWARD`, `SYSTEM`
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1072,7 +1072,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the resolver rule.
  {{% /md %}}

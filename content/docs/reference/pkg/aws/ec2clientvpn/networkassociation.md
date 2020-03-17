@@ -1,11 +1,11 @@
 
 ---
 title: "NetworkAssociation"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides network associations for AWS Client VPN endpoints. For more information on usage, please see the 
 [AWS Client VPN Administrator's Guide](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html).

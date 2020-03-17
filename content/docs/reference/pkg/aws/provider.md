@@ -1,11 +1,11 @@
 
 ---
 title: "Provider"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 The provider type for the aws package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource

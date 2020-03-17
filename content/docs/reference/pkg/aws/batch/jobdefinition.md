@@ -1,11 +1,11 @@
 
 ---
 title: "JobDefinition"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a Batch Job Definition resource.
 
@@ -502,7 +502,7 @@ Specifies the name of the job definition.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1015,7 +1015,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} Specifies the parameter substitution placeholders to set in the job definition.
  {{% /md %}}
@@ -1632,7 +1632,7 @@ Specifies the name of the job definition.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

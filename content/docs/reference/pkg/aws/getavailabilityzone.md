@@ -1,11 +1,11 @@
 
 ---
 title: "GetAvailabilityZone"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 `aws..getAvailabilityZone` provides details about a specific availability zone (AZ)
 in the current region.

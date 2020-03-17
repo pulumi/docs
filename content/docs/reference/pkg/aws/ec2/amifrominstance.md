@@ -1,11 +1,11 @@
 
 ---
 title: "AmiFromInstance"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 The "AMI from instance" resource allows the creation of an Amazon Machine
 Image (AMI) modelled after an existing EBS-backed EC2 instance.
@@ -592,7 +592,7 @@ The id of the instance to use as the basis of the AMI.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1593,7 +1593,7 @@ for created instances. No other value is supported at this time.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2784,7 +2784,7 @@ for created instances. No other value is supported at this time.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

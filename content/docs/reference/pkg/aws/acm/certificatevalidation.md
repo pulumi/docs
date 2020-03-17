@@ -1,11 +1,11 @@
 
 ---
 title: "CertificateValidation"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 This resource represents a successful validation of an ACM certificate in concert
 with other resources.

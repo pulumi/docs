@@ -1,11 +1,11 @@
 
 ---
 title: "LogService"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides a Log subscription for AWS Directory Service that pushes logs to cloudwatch.
 

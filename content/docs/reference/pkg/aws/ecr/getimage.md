@@ -1,11 +1,11 @@
 
 ---
 title: "GetImage"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 The ECR Image data source allows the details of an image with a particular tag or digest to be retrieved.
 

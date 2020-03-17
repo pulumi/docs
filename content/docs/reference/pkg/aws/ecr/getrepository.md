@@ -1,11 +1,11 @@
 
 ---
 title: "GetRepository"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 The ECR Repository data source allows the ARN, Repository URI and Registry ID to be retrieved for an ECR repository.
 
@@ -229,7 +229,7 @@ The name of the ECR Repository.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -633,7 +633,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the resource.
  {{% /md %}}

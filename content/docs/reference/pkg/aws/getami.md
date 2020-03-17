@@ -1,11 +1,11 @@
 
 ---
 title: "GetAmi"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Use this data source to get the ID of a registered AMI for use in other
 resources.
@@ -519,7 +519,7 @@ List of AMI owners to limit search. At least 1 value must be specified. Valid va
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2232,7 +2232,7 @@ is successfully registered and can be used to launch an instance.
             <td class="align-top">state_<wbr>reason</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} Describes a state change. Fields are `UNSET` if not available.
 * `state_reason.code` - The reason code for the state change.
@@ -2247,7 +2247,7 @@ is successfully registered and can be used to launch an instance.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
@@ -2564,7 +2564,7 @@ is successfully registered and can be used to launch an instance.
             <td class="align-top">ebs</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -1,11 +1,11 @@
 
 ---
 title: "TransitGateway"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Manages an EC2 Transit Gateway.
 
@@ -601,7 +601,7 @@ Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1323,7 +1323,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value tags for the EC2 Transit Gateway.
  {{% /md %}}
@@ -2178,7 +2178,7 @@ Identifier of the default propagation route table
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

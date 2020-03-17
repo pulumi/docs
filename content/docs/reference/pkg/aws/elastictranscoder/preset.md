@@ -1,11 +1,11 @@
 
 ---
 title: "Preset"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an Elastic Transcoder preset resource.
 
@@ -768,7 +768,7 @@ Video parameters object (documented below)
             <td class="align-top">video_<wbr>codec_<wbr>options</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1430,7 +1430,7 @@ The following output properties are available:
             <td class="align-top">video_<wbr>codec_<wbr>options</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2217,7 +2217,7 @@ Video parameters object (documented below)
             <td class="align-top">video_<wbr>codec_<wbr>options</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

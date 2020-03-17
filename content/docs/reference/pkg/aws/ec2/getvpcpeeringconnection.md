@@ -1,11 +1,11 @@
 
 ---
 title: "GetVpcPeeringConnection"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 The VPC Peering Connection data source provides details about
 a specific VPC peering connection.
@@ -833,7 +833,7 @@ The status of the specific VPC Peering Connection to retrieve.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1475,7 +1475,7 @@ The following output properties are available:
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code>Dict[boolean, Any]</code>
+                <code>Dict[str, boolean]</code>
             </td>
             <td class="align-top">{{% md %}} A configuration block that describes [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options set for the accepter VPC.
@@ -1597,7 +1597,7 @@ The following output properties are available:
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code>Dict[boolean, Any]</code>
+                <code>Dict[str, boolean]</code>
             </td>
             <td class="align-top">{{% md %}} A configuration block that describes [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options set for the requester VPC.
@@ -1623,7 +1623,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

@@ -1,11 +1,11 @@
 
 ---
 title: "GetLaunchTemplate"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides information about a Launch Template.
 
@@ -229,7 +229,7 @@ The name of the launch template.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1731,7 +1731,7 @@ Interfaces below for more details.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} (Optional) A mapping of tags to assign to the launch template.
  {{% /md %}}
@@ -5295,7 +5295,7 @@ Description of the launch template.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

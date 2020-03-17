@@ -1,11 +1,11 @@
 
 ---
 title: "GetStateMachine"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Use this data source to get the ARN of a State Machine in AWS Step
 Function (SFN). By using this data source, you can reference a

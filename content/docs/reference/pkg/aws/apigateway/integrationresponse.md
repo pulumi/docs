@@ -1,11 +1,11 @@
 
 ---
 title: "IntegrationResponse"
+block_external_search_index: true
 ---
 <style>
 table td p { margin-top: 0; margin-bottom: 0; }
 </style>
-
 
 Provides an HTTP Method Integration Response for an API Gateway Resource.
 
@@ -609,7 +609,7 @@ The API resource ID
             <td class="align-top">response_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -625,7 +625,7 @@ For example: `response_parameters = { &#34;method.response.header.X-Some-Header&
             <td class="align-top">response_<wbr>templates</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -640,7 +640,7 @@ A map specifying the templates used to transform the integration response body
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1145,7 +1145,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
             <td class="align-top">response_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { &#34;method.response.header.X-Some-Header&#34; = &#34;integration.response.header.X-Some-Other-Header&#34; }`
@@ -1159,7 +1159,7 @@ For example: `response_parameters = { &#34;method.response.header.X-Some-Header&
             <td class="align-top">response_<wbr>templates</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} A map specifying the templates used to transform the integration response body
  {{% /md %}}
@@ -1770,7 +1770,7 @@ The API resource ID
             <td class="align-top">response_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1786,7 +1786,7 @@ For example: `response_parameters = { &#34;method.response.header.X-Some-Header&
             <td class="align-top">response_<wbr>templates</td>
             <td class="align-top">
                 
-                <code>Dict[str, Any]</code>
+                <code>Dict[str, str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1801,7 +1801,7 @@ A map specifying the templates used to transform the integration response body
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>Dict[Any, Any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
