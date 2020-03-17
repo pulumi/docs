@@ -733,7 +733,7 @@ The following output properties are available:
             <td class="align-top">default_<wbr>actions</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultaction">list[get_<wbr>listener_<wbr>default_<wbr>action]</a></code>
+                <code><a href="#getlistenerdefaultaction">List[get_<wbr>listener_<wbr>default_<wbr>action]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1206,7 +1206,7 @@ The following output properties are available:
             <td class="align-top">authenticate_<wbr>cognitos</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionauthenticatecognito">list[get_<wbr>listener_<wbr>default_<wbr>action_<wbr>authenticate_<wbr>cognito]</a></code>
+                <code><a href="#getlistenerdefaultactionauthenticatecognito">List[get_<wbr>listener_<wbr>default_<wbr>action_<wbr>authenticate_<wbr>cognito]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1220,7 +1220,7 @@ The following output properties are available:
             <td class="align-top">authenticate_<wbr>oidcs</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionauthenticateoidc">list[get_<wbr>listener_<wbr>default_<wbr>action_<wbr>authenticate_<wbr>oidc]</a></code>
+                <code><a href="#getlistenerdefaultactionauthenticateoidc">List[get_<wbr>listener_<wbr>default_<wbr>action_<wbr>authenticate_<wbr>oidc]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1234,7 +1234,7 @@ The following output properties are available:
             <td class="align-top">fixed_<wbr>responses</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionfixedresponse">list[get_<wbr>listener_<wbr>default_<wbr>action_<wbr>fixed_<wbr>response]</a></code>
+                <code><a href="#getlistenerdefaultactionfixedresponse">List[get_<wbr>listener_<wbr>default_<wbr>action_<wbr>fixed_<wbr>response]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1262,7 +1262,7 @@ The following output properties are available:
             <td class="align-top">redirects</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionredirect">list[get_<wbr>listener_<wbr>default_<wbr>action_<wbr>redirect]</a></code>
+                <code><a href="#getlistenerdefaultactionredirect">List[get_<wbr>listener_<wbr>default_<wbr>action_<wbr>redirect]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1741,7 +1741,7 @@ The following output properties are available:
             <td class="align-top">authentication_<wbr>request_<wbr>extra_<wbr>params</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2416,7 +2416,7 @@ The following output properties are available:
             <td class="align-top">authentication_<wbr>request_<wbr>extra_<wbr>params</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

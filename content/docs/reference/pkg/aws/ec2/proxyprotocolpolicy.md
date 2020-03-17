@@ -268,7 +268,7 @@ should be attached.
             <td class="align-top">instance_<wbr>ports</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -478,7 +478,7 @@ should be attached.
             <td class="align-top">instance_<wbr>ports</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of instance ports to which the policy
 should be applied. This can be specified if the protocol is SSL or TCP.
@@ -741,7 +741,7 @@ should be attached.
             <td class="align-top">instance_<wbr>ports</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

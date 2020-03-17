@@ -466,7 +466,7 @@ modified, added, or removed.** It will be left in its current state
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">list[default_<wbr>security_<wbr>group_<wbr>egress]</a></code>
+                <code><a href="#defaultsecuritygroupegress">List[default_<wbr>security_<wbr>group_<wbr>egress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -482,7 +482,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">list[default_<wbr>security_<wbr>group_<wbr>ingress]</a></code>
+                <code><a href="#defaultsecuritygroupingress">List[default_<wbr>security_<wbr>group_<wbr>ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -512,7 +512,7 @@ ingress rule. Each ingress block supports fields documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1020,7 +1020,7 @@ modified, added, or removed.** It will be left in its current state
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">list[default_<wbr>security_<wbr>group_<wbr>egress]</a></code>
+                <code><a href="#defaultsecuritygroupegress">List[default_<wbr>security_<wbr>group_<wbr>egress]</a></code>
             </td>
             <td class="align-top">{{% md %}} Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -1034,7 +1034,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">list[default_<wbr>security_<wbr>group_<wbr>ingress]</a></code>
+                <code><a href="#defaultsecuritygroupingress">List[default_<wbr>security_<wbr>group_<wbr>ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -1086,7 +1086,7 @@ ingress rule. Each ingress block supports fields documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1693,7 +1693,7 @@ The description of the security group
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">list[default_<wbr>security_<wbr>group_<wbr>egress]</a></code>
+                <code><a href="#defaultsecuritygroupegress">List[default_<wbr>security_<wbr>group_<wbr>egress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1709,7 +1709,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">list[default_<wbr>security_<wbr>group_<wbr>ingress]</a></code>
+                <code><a href="#defaultsecuritygroupingress">List[default_<wbr>security_<wbr>group_<wbr>ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1769,7 +1769,7 @@ The owner ID.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2290,7 +2290,7 @@ The description of the security group
             <td class="align-top">cidr_<wbr>blocks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2333,7 +2333,7 @@ The description of the security group
             <td class="align-top">ipv6_<wbr>cidr_<wbr>blocks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2347,7 +2347,7 @@ The description of the security group
             <td class="align-top">prefix_<wbr>list_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2375,7 +2375,7 @@ The description of the security group
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2899,7 +2899,7 @@ The description of the security group
             <td class="align-top">cidr_<wbr>blocks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2942,7 +2942,7 @@ The description of the security group
             <td class="align-top">ipv6_<wbr>cidr_<wbr>blocks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2956,7 +2956,7 @@ The description of the security group
             <td class="align-top">prefix_<wbr>list_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2984,7 +2984,7 @@ The description of the security group
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

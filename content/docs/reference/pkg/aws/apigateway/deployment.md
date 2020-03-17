@@ -418,7 +418,7 @@ The description of the deployment
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -463,7 +463,7 @@ The name of the stage. If the specified stage already exists, it will be updated
             <td class="align-top">variables</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -987,7 +987,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
             <td class="align-top">variables</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A map that defines variables for the stage
  {{% /md %}}
@@ -1571,7 +1571,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1616,7 +1616,7 @@ The name of the stage. If the specified stage already exists, it will be updated
             <td class="align-top">variables</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

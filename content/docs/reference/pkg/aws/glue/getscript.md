@@ -443,7 +443,7 @@ The programming language of the resulting code from the DAG. Defaults to `PYTHON
             <td class="align-top">dag_<wbr>edges</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagedge">list[get_<wbr>script_<wbr>dag_<wbr>edge]</a></code>
+                <code><a href="#getscriptdagedge">List[get_<wbr>script_<wbr>dag_<wbr>edge]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -458,7 +458,7 @@ A list of the edges in the DAG. Defined below.
             <td class="align-top">dag_<wbr>nodes</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagnode">list[get_<wbr>script_<wbr>dag_<wbr>node]</a></code>
+                <code><a href="#getscriptdagnode">List[get_<wbr>script_<wbr>dag_<wbr>node]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -808,7 +808,7 @@ The following output properties are available:
             <td class="align-top">dag_<wbr>edges</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagedge">list[get_<wbr>script_<wbr>dag_<wbr>edge]</a></code>
+                <code><a href="#getscriptdagedge">List[get_<wbr>script_<wbr>dag_<wbr>edge]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -820,7 +820,7 @@ The following output properties are available:
             <td class="align-top">dag_<wbr>nodes</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagnode">list[get_<wbr>script_<wbr>dag_<wbr>node]</a></code>
+                <code><a href="#getscriptdagnode">List[get_<wbr>script_<wbr>dag_<wbr>node]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1450,7 +1450,7 @@ The type of node this is.
             <td class="align-top">args</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagnodearg">list[get_<wbr>script_<wbr>dag_<wbr>node_<wbr>arg]</a></code>
+                <code><a href="#getscriptdagnodearg">List[get_<wbr>script_<wbr>dag_<wbr>node_<wbr>arg]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

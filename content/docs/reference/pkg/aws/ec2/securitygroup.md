@@ -560,7 +560,7 @@ to classify your security groups in a way that can be updated, use `tags`.
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupegress">list[security_<wbr>group_<wbr>egress]</a></code>
+                <code><a href="#securitygroupegress">List[security_<wbr>group_<wbr>egress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -577,7 +577,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">list[security_<wbr>group_<wbr>ingress]</a></code>
+                <code><a href="#securitygroupingress">List[security_<wbr>group_<wbr>ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -647,7 +647,7 @@ Default `false`
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1235,7 +1235,7 @@ to classify your security groups in a way that can be updated, use `tags`.
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupegress">list[security_<wbr>group_<wbr>egress]</a></code>
+                <code><a href="#securitygroupegress">List[security_<wbr>group_<wbr>egress]</a></code>
             </td>
             <td class="align-top">{{% md %}} Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -1250,7 +1250,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">list[security_<wbr>group_<wbr>ingress]</a></code>
+                <code><a href="#securitygroupingress">List[security_<wbr>group_<wbr>ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -1325,7 +1325,7 @@ Default `false`
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2018,7 +2018,7 @@ to classify your security groups in a way that can be updated, use `tags`.
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupegress">list[security_<wbr>group_<wbr>egress]</a></code>
+                <code><a href="#securitygroupegress">List[security_<wbr>group_<wbr>egress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2035,7 +2035,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">list[security_<wbr>group_<wbr>ingress]</a></code>
+                <code><a href="#securitygroupingress">List[security_<wbr>group_<wbr>ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2120,7 +2120,7 @@ Default `false`
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2648,7 +2648,7 @@ to classify your security groups in a way that can be updated, use `tags`.
             <td class="align-top">cidr_<wbr>blocks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2694,7 +2694,7 @@ to classify your security groups in a way that can be updated, use `tags`.
             <td class="align-top">ipv6_<wbr>cidr_<wbr>blocks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2708,7 +2708,7 @@ to classify your security groups in a way that can be updated, use `tags`.
             <td class="align-top">prefix_<wbr>list_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2736,7 +2736,7 @@ to classify your security groups in a way that can be updated, use `tags`.
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3269,7 +3269,7 @@ to classify your security groups in a way that can be updated, use `tags`.
             <td class="align-top">cidr_<wbr>blocks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3315,7 +3315,7 @@ to classify your security groups in a way that can be updated, use `tags`.
             <td class="align-top">ipv6_<wbr>cidr_<wbr>blocks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3329,7 +3329,7 @@ to classify your security groups in a way that can be updated, use `tags`.
             <td class="align-top">prefix_<wbr>list_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3357,7 +3357,7 @@ to classify your security groups in a way that can be updated, use `tags`.
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

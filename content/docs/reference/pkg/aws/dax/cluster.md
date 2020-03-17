@@ -784,7 +784,7 @@ A mapping of tags to assign to the resource
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -932,7 +932,7 @@ replicas
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -948,7 +948,7 @@ with the cluster
             <td class="align-top">server_<wbr>side_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#clusterserversideencryption">dict{cluster_<wbr>server_<wbr>side_<wbr>encryption}</a></code>
+                <code><a href="#clusterserversideencryption">Dict[cluster_<wbr>server_<wbr>side_<wbr>encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -979,7 +979,7 @@ cluster
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1857,7 +1857,7 @@ cluster
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of Availability Zones in which the
 nodes will be created
@@ -1970,7 +1970,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
             <td class="align-top">nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clusternode">list[cluster_<wbr>node]</a></code>
+                <code><a href="#clusternode">List[cluster_<wbr>node]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of node objects including `id`, `address`, `port` and
 `availability_zone`. Referenceable e.g. as
@@ -2042,7 +2042,7 @@ replicas
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} One or more VPC security groups associated
 with the cluster
@@ -2056,7 +2056,7 @@ with the cluster
             <td class="align-top">server_<wbr>side_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#clusterserversideencryption">dict{cluster_<wbr>server_<wbr>side_<wbr>encryption}</a></code>
+                <code><a href="#clusterserversideencryption">Dict[cluster_<wbr>server_<wbr>side_<wbr>encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} Encrypt at rest options
  {{% /md %}}
@@ -2083,7 +2083,7 @@ cluster
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource
  {{% /md %}}
@@ -3114,7 +3114,7 @@ The ARN of the DAX cluster
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3243,7 +3243,7 @@ The compute and memory capacity of the nodes. See
             <td class="align-top">nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clusternode">list[cluster_<wbr>node]</a></code>
+                <code><a href="#clusternode">List[cluster_<wbr>node]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3325,7 +3325,7 @@ replicas
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3341,7 +3341,7 @@ with the cluster
             <td class="align-top">server_<wbr>side_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#clusterserversideencryption">dict{cluster_<wbr>server_<wbr>side_<wbr>encryption}</a></code>
+                <code><a href="#clusterserversideencryption">Dict[cluster_<wbr>server_<wbr>side_<wbr>encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3372,7 +3372,7 @@ cluster
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

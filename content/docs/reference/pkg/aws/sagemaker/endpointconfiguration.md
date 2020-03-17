@@ -372,7 +372,7 @@ The name of the endpoint configuration. If omitted, this provider will assign a 
             <td class="align-top">production_<wbr>variants</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconfigurationproductionvariant">list[endpoint_<wbr>configuration_<wbr>production_<wbr>variant]</a></code>
+                <code><a href="#endpointconfigurationproductionvariant">List[endpoint_<wbr>configuration_<wbr>production_<wbr>variant]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -387,7 +387,7 @@ Fields are documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -730,7 +730,7 @@ The following output properties are available:
             <td class="align-top">production_<wbr>variants</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconfigurationproductionvariant">list[endpoint_<wbr>configuration_<wbr>production_<wbr>variant]</a></code>
+                <code><a href="#endpointconfigurationproductionvariant">List[endpoint_<wbr>configuration_<wbr>production_<wbr>variant]</a></code>
             </td>
             <td class="align-top">{{% md %}} Fields are documented below.
  {{% /md %}}
@@ -743,7 +743,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1165,7 +1165,7 @@ The name of the endpoint configuration. If omitted, this provider will assign a 
             <td class="align-top">production_<wbr>variants</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconfigurationproductionvariant">list[endpoint_<wbr>configuration_<wbr>production_<wbr>variant]</a></code>
+                <code><a href="#endpointconfigurationproductionvariant">List[endpoint_<wbr>configuration_<wbr>production_<wbr>variant]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1180,7 +1180,7 @@ Fields are documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

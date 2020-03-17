@@ -892,7 +892,7 @@ The following output properties are available:
             <td class="align-top">compatible_<wbr>runtimes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of [Runtimes][1] the specific Lambda Layer version is compatible with.
  {{% /md %}}

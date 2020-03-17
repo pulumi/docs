@@ -623,7 +623,7 @@ Amazon Resource Number (ARN) of the IAM Role in the administrator account.
             <td class="align-top">capabilities</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -683,7 +683,7 @@ Name of the StackSet. The name must be unique in the region where you create you
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -698,7 +698,7 @@ Key-value map of input parameters for the StackSet template. All template parame
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1292,7 +1292,7 @@ The following output properties are available:
             <td class="align-top">capabilities</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of capabilities. Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, `CAPABILITY_AUTO_EXPAND`.
  {{% /md %}}
@@ -1344,7 +1344,7 @@ The following output properties are available:
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value map of input parameters for the StackSet template. All template parameters, including those with a `Default`, must be configured or ignored with `lifecycle` configuration block `ignore_changes` argument. All `NoEcho` template parameters must be ignored with the `lifecycle` configuration block `ignore_changes` argument.
  {{% /md %}}
@@ -1370,7 +1370,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified.
  {{% /md %}}
@@ -2073,7 +2073,7 @@ Amazon Resource Name (ARN) of the StackSet.
             <td class="align-top">capabilities</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2133,7 +2133,7 @@ Name of the StackSet. The name must be unique in the region where you create you
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2163,7 +2163,7 @@ Unique identifier of the StackSet.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

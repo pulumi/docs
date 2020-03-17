@@ -232,7 +232,7 @@ Key identifier which can be one of the following format:
             <td class="align-top">grant_<wbr>tokens</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1036,7 +1036,7 @@ The following output properties are available:
             <td class="align-top">grant_<wbr>tokens</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

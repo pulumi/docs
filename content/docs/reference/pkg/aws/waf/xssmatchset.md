@@ -269,7 +269,7 @@ The name or description of the SizeConstraintSet.
             <td class="align-top">xss_<wbr>match_<wbr>tuples</td>
             <td class="align-top">
                 
-                <code><a href="#xssmatchsetxssmatchtuple">list[xss_<wbr>match_<wbr>set_<wbr>xss_<wbr>match_<wbr>tuple]</a></code>
+                <code><a href="#xssmatchsetxssmatchtuple">List[xss_<wbr>match_<wbr>set_<wbr>xss_<wbr>match_<wbr>tuple]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -521,7 +521,7 @@ The following output properties are available:
             <td class="align-top">xss_<wbr>match_<wbr>tuples</td>
             <td class="align-top">
                 
-                <code><a href="#xssmatchsetxssmatchtuple">list[xss_<wbr>match_<wbr>set_<wbr>xss_<wbr>match_<wbr>tuple]</a></code>
+                <code><a href="#xssmatchsetxssmatchtuple">List[xss_<wbr>match_<wbr>set_<wbr>xss_<wbr>match_<wbr>tuple]</a></code>
             </td>
             <td class="align-top">{{% md %}} The parts of web requests that you want to inspect for cross-site scripting attacks.
  {{% /md %}}
@@ -838,7 +838,7 @@ The name or description of the SizeConstraintSet.
             <td class="align-top">xss_<wbr>match_<wbr>tuples</td>
             <td class="align-top">
                 
-                <code><a href="#xssmatchsetxssmatchtuple">list[xss_<wbr>match_<wbr>set_<wbr>xss_<wbr>match_<wbr>tuple]</a></code>
+                <code><a href="#xssmatchsetxssmatchtuple">List[xss_<wbr>match_<wbr>set_<wbr>xss_<wbr>match_<wbr>tuple]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1063,7 +1063,7 @@ for all supported values.
             <td class="align-top">field_<wbr>to_<wbr>match</td>
             <td class="align-top">
                 
-                <code><a href="#xssmatchsetxssmatchtuplefieldtomatch">dict{xss_<wbr>match_<wbr>set_<wbr>xss_<wbr>match_<wbr>tuple_<wbr>field_<wbr>to_<wbr>match}</a></code>
+                <code><a href="#xssmatchsetxssmatchtuplefieldtomatch">Dict[xss_<wbr>match_<wbr>set_<wbr>xss_<wbr>match_<wbr>tuple_<wbr>field_<wbr>to_<wbr>match]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

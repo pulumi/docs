@@ -900,7 +900,7 @@ The fully-qualified domain name to register
             <td class="align-top">endpoint_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#domainnameendpointconfiguration">dict{domain_<wbr>name_<wbr>endpoint_<wbr>configuration}</a></code>
+                <code><a href="#domainnameendpointconfiguration">Dict[domain_<wbr>name_<wbr>endpoint_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -961,7 +961,7 @@ The Transport Layer Security (TLS) version &#43; cipher suite for this DomainNam
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1906,7 +1906,7 @@ that can be used to create a Route53 alias record for the distribution.
             <td class="align-top">endpoint_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#domainnameendpointconfiguration">dict{domain_<wbr>name_<wbr>endpoint_<wbr>configuration}</a></code>
+                <code><a href="#domainnameendpointconfiguration">Dict[domain_<wbr>name_<wbr>endpoint_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block defining API endpoint information including type. Defined below.
  {{% /md %}}
@@ -1985,7 +1985,7 @@ that can be used to create a Route53 alias record for the distribution.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -3095,7 +3095,7 @@ The fully-qualified domain name to register
             <td class="align-top">endpoint_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#domainnameendpointconfiguration">dict{domain_<wbr>name_<wbr>endpoint_<wbr>configuration}</a></code>
+                <code><a href="#domainnameendpointconfiguration">Dict[domain_<wbr>name_<wbr>endpoint_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3186,7 +3186,7 @@ The Transport Layer Security (TLS) version &#43; cipher suite for this DomainNam
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

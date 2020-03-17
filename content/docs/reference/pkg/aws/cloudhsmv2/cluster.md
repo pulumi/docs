@@ -395,7 +395,7 @@ The id of Cloud HSM v2 cluster backup to be restored.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -410,7 +410,7 @@ The IDs of subnets in which cluster will operate.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -885,7 +885,7 @@ The following output properties are available:
             <td class="align-top">cluster_<wbr>certificates</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclustercertificates">dict{cluster_<wbr>cluster_<wbr>certificates}</a></code>
+                <code><a href="#clusterclustercertificates">Dict[cluster_<wbr>cluster_<wbr>certificates]</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of cluster certificates.
 * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
@@ -968,7 +968,7 @@ The following output properties are available:
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The IDs of subnets in which cluster will operate.
  {{% /md %}}
@@ -981,7 +981,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1566,7 +1566,7 @@ The id of the VPC that the CloudHSM cluster resides in.
             <td class="align-top">cluster_<wbr>certificates</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclustercertificates">dict{cluster_<wbr>cluster_<wbr>certificates}</a></code>
+                <code><a href="#clusterclustercertificates">Dict[cluster_<wbr>cluster_<wbr>certificates]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1661,7 +1661,7 @@ The id of Cloud HSM v2 cluster backup to be restored.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1676,7 +1676,7 @@ The IDs of subnets in which cluster will operate.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

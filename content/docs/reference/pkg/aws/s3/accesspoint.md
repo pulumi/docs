@@ -463,7 +463,7 @@ A valid JSON document that specifies the policy that you want to apply to this a
             <td class="align-top">public_<wbr>access_<wbr>block_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointpublicaccessblockconfiguration">dict{access_<wbr>point_<wbr>public_<wbr>access_<wbr>block_<wbr>configuration}</a></code>
+                <code><a href="#accesspointpublicaccessblockconfiguration">Dict[access_<wbr>point_<wbr>public_<wbr>access_<wbr>block_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -478,7 +478,7 @@ Configuration block to manage the `PublicAccessBlock` configuration that you wan
             <td class="align-top">vpc_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointvpcconfiguration">dict{access_<wbr>point_<wbr>vpc_<wbr>configuration}</a></code>
+                <code><a href="#accesspointvpcconfiguration">Dict[access_<wbr>point_<wbr>vpc_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1081,7 +1081,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn&#39;t suppo
             <td class="align-top">public_<wbr>access_<wbr>block_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointpublicaccessblockconfiguration">dict{access_<wbr>point_<wbr>public_<wbr>access_<wbr>block_<wbr>configuration}</a></code>
+                <code><a href="#accesspointpublicaccessblockconfiguration">Dict[access_<wbr>point_<wbr>public_<wbr>access_<wbr>block_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block to manage the `PublicAccessBlock` configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.
  {{% /md %}}
@@ -1094,7 +1094,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn&#39;t suppo
             <td class="align-top">vpc_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointvpcconfiguration">dict{access_<wbr>point_<wbr>vpc_<wbr>configuration}</a></code>
+                <code><a href="#accesspointvpcconfiguration">Dict[access_<wbr>point_<wbr>vpc_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.
  {{% /md %}}
@@ -1816,7 +1816,7 @@ A valid JSON document that specifies the policy that you want to apply to this a
             <td class="align-top">public_<wbr>access_<wbr>block_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointpublicaccessblockconfiguration">dict{access_<wbr>point_<wbr>public_<wbr>access_<wbr>block_<wbr>configuration}</a></code>
+                <code><a href="#accesspointpublicaccessblockconfiguration">Dict[access_<wbr>point_<wbr>public_<wbr>access_<wbr>block_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1831,7 +1831,7 @@ Configuration block to manage the `PublicAccessBlock` configuration that you wan
             <td class="align-top">vpc_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointvpcconfiguration">dict{access_<wbr>point_<wbr>vpc_<wbr>configuration}</a></code>
+                <code><a href="#accesspointvpcconfiguration">Dict[access_<wbr>point_<wbr>vpc_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

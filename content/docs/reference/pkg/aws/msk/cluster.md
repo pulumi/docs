@@ -660,7 +660,7 @@ A mapping of tags to assign to the resource
             <td class="align-top">broker_<wbr>node_<wbr>group_<wbr>info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterbrokernodegroupinfo">dict{cluster_<wbr>broker_<wbr>node_<wbr>group_<wbr>info}</a></code>
+                <code><a href="#clusterbrokernodegroupinfo">Dict[cluster_<wbr>broker_<wbr>node_<wbr>group_<wbr>info]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -675,7 +675,7 @@ Configuration block for the broker nodes of the Kafka cluster.
             <td class="align-top">client_<wbr>authentication</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclientauthentication">dict{cluster_<wbr>client_<wbr>authentication}</a></code>
+                <code><a href="#clusterclientauthentication">Dict[cluster_<wbr>client_<wbr>authentication]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -705,7 +705,7 @@ Name of the MSK cluster.
             <td class="align-top">configuration_<wbr>info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterconfigurationinfo">dict{cluster_<wbr>configuration_<wbr>info}</a></code>
+                <code><a href="#clusterconfigurationinfo">Dict[cluster_<wbr>configuration_<wbr>info]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -720,7 +720,7 @@ Configuration block for specifying a MSK Configuration to attach to Kafka broker
             <td class="align-top">encryption_<wbr>info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptioninfo">dict{cluster_<wbr>encryption_<wbr>info}</a></code>
+                <code><a href="#clusterencryptioninfo">Dict[cluster_<wbr>encryption_<wbr>info]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -780,7 +780,7 @@ The desired total number of broker nodes in the kafka cluster.  It must be a mul
             <td class="align-top">open_<wbr>monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoring">dict{cluster_<wbr>open_<wbr>monitoring}</a></code>
+                <code><a href="#clusteropenmonitoring">Dict[cluster_<wbr>open_<wbr>monitoring]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -795,7 +795,7 @@ Configuration block for JMX and Node monitoring for the MSK cluster. See below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1531,7 +1531,7 @@ The following output properties are available:
             <td class="align-top">broker_<wbr>node_<wbr>group_<wbr>info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterbrokernodegroupinfo">dict{cluster_<wbr>broker_<wbr>node_<wbr>group_<wbr>info}</a></code>
+                <code><a href="#clusterbrokernodegroupinfo">Dict[cluster_<wbr>broker_<wbr>node_<wbr>group_<wbr>info]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for the broker nodes of the Kafka cluster.
  {{% /md %}}
@@ -1544,7 +1544,7 @@ The following output properties are available:
             <td class="align-top">client_<wbr>authentication</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclientauthentication">dict{cluster_<wbr>client_<wbr>authentication}</a></code>
+                <code><a href="#clusterclientauthentication">Dict[cluster_<wbr>client_<wbr>authentication]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for specifying a client authentication. See below.
  {{% /md %}}
@@ -1570,7 +1570,7 @@ The following output properties are available:
             <td class="align-top">configuration_<wbr>info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterconfigurationinfo">dict{cluster_<wbr>configuration_<wbr>info}</a></code>
+                <code><a href="#clusterconfigurationinfo">Dict[cluster_<wbr>configuration_<wbr>info]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
  {{% /md %}}
@@ -1597,7 +1597,7 @@ The following output properties are available:
             <td class="align-top">encryption_<wbr>info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptioninfo">dict{cluster_<wbr>encryption_<wbr>info}</a></code>
+                <code><a href="#clusterencryptioninfo">Dict[cluster_<wbr>encryption_<wbr>info]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for specifying encryption. See below.
  {{% /md %}}
@@ -1649,7 +1649,7 @@ The following output properties are available:
             <td class="align-top">open_<wbr>monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoring">dict{cluster_<wbr>open_<wbr>monitoring}</a></code>
+                <code><a href="#clusteropenmonitoring">Dict[cluster_<wbr>open_<wbr>monitoring]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for JMX and Node monitoring for the MSK cluster. See below.
  {{% /md %}}
@@ -1662,7 +1662,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource
  {{% /md %}}
@@ -2550,7 +2550,7 @@ A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafk
             <td class="align-top">broker_<wbr>node_<wbr>group_<wbr>info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterbrokernodegroupinfo">dict{cluster_<wbr>broker_<wbr>node_<wbr>group_<wbr>info}</a></code>
+                <code><a href="#clusterbrokernodegroupinfo">Dict[cluster_<wbr>broker_<wbr>node_<wbr>group_<wbr>info]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2565,7 +2565,7 @@ Configuration block for the broker nodes of the Kafka cluster.
             <td class="align-top">client_<wbr>authentication</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclientauthentication">dict{cluster_<wbr>client_<wbr>authentication}</a></code>
+                <code><a href="#clusterclientauthentication">Dict[cluster_<wbr>client_<wbr>authentication]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2595,7 +2595,7 @@ Name of the MSK cluster.
             <td class="align-top">configuration_<wbr>info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterconfigurationinfo">dict{cluster_<wbr>configuration_<wbr>info}</a></code>
+                <code><a href="#clusterconfigurationinfo">Dict[cluster_<wbr>configuration_<wbr>info]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2626,7 +2626,7 @@ Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
             <td class="align-top">encryption_<wbr>info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptioninfo">dict{cluster_<wbr>encryption_<wbr>info}</a></code>
+                <code><a href="#clusterencryptioninfo">Dict[cluster_<wbr>encryption_<wbr>info]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2686,7 +2686,7 @@ The desired total number of broker nodes in the kafka cluster.  It must be a mul
             <td class="align-top">open_<wbr>monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoring">dict{cluster_<wbr>open_<wbr>monitoring}</a></code>
+                <code><a href="#clusteropenmonitoring">Dict[cluster_<wbr>open_<wbr>monitoring]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2701,7 +2701,7 @@ Configuration block for JMX and Node monitoring for the MSK cluster. See below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3079,7 +3079,7 @@ The distribution of broker nodes across availability zones ([documentation](http
             <td class="align-top">client_<wbr>subnets</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3124,7 +3124,7 @@ Specify the instance type to use for the kafka brokers. e.g. kafka.m5.large. ([P
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3285,7 +3285,7 @@ Configuration block for specifying TLS client authentication. See below.
             <td class="align-top">tls</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclientauthenticationtls">dict{cluster_<wbr>client_<wbr>authentication_<wbr>tls}</a></code>
+                <code><a href="#clusterclientauthenticationtls">Dict[cluster_<wbr>client_<wbr>authentication_<wbr>tls]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3446,7 +3446,7 @@ List of ACM Certificate Authority Amazon Resource Names (ARNs).
             <td class="align-top">certificate_<wbr>authority_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3888,7 +3888,7 @@ You may specify a KMS key short ID or ARN (it will always output an ARN) to use 
             <td class="align-top">encryption_<wbr>in_<wbr>transit</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptioninfoencryptionintransit">dict{cluster_<wbr>encryption_<wbr>info_<wbr>encryption_<wbr>in_<wbr>transit}</a></code>
+                <code><a href="#clusterencryptioninfoencryptionintransit">Dict[cluster_<wbr>encryption_<wbr>info_<wbr>encryption_<wbr>in_<wbr>transit]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4270,7 +4270,7 @@ Configuration block for Prometheus settings for open monitoring. See below.
             <td class="align-top">prometheus</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoringprometheus">dict{cluster_<wbr>open_<wbr>monitoring_<wbr>prometheus}</a></code>
+                <code><a href="#clusteropenmonitoringprometheus">Dict[cluster_<wbr>open_<wbr>monitoring_<wbr>prometheus]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4476,7 +4476,7 @@ Configuration block for Node Exporter. See below.
             <td class="align-top">jmx_<wbr>exporter</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoringprometheusjmxexporter">dict{cluster_<wbr>open_<wbr>monitoring_<wbr>prometheus_<wbr>jmx_<wbr>exporter}</a></code>
+                <code><a href="#clusteropenmonitoringprometheusjmxexporter">Dict[cluster_<wbr>open_<wbr>monitoring_<wbr>prometheus_<wbr>jmx_<wbr>exporter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4491,7 +4491,7 @@ Configuration block for JMX Exporter. See below.
             <td class="align-top">node_<wbr>exporter</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoringprometheusnodeexporter">dict{cluster_<wbr>open_<wbr>monitoring_<wbr>prometheus_<wbr>node_<wbr>exporter}</a></code>
+                <code><a href="#clusteropenmonitoringprometheusnodeexporter">Dict[cluster_<wbr>open_<wbr>monitoring_<wbr>prometheus_<wbr>node_<wbr>exporter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

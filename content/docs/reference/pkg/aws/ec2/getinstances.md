@@ -257,7 +257,7 @@ exactly match a pair on desired instances.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancesfilter">list[get_<wbr>instances_<wbr>filter]</a></code>
+                <code><a href="#getinstancesfilter">List[get_<wbr>instances_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -274,7 +274,7 @@ several valid keys, for a full reference, check out
             <td class="align-top">instance_<wbr>state_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -289,7 +289,7 @@ A list of instance states that should be applicable to the desired instances. Th
             <td class="align-top">instance_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -664,7 +664,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancesfilter">list[get_<wbr>instances_<wbr>filter]</a></code>
+                <code><a href="#getinstancesfilter">List[get_<wbr>instances_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -689,7 +689,7 @@ The following output properties are available:
             <td class="align-top">ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} IDs of instances found through the filter
  {{% /md %}}
@@ -702,7 +702,7 @@ The following output properties are available:
             <td class="align-top">instance_<wbr>state_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -714,7 +714,7 @@ The following output properties are available:
             <td class="align-top">instance_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -726,7 +726,7 @@ The following output properties are available:
             <td class="align-top">private_<wbr>ips</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Private IP addresses of instances found through the filter
  {{% /md %}}
@@ -739,7 +739,7 @@ The following output properties are available:
             <td class="align-top">public_<wbr>ips</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Public IP addresses of instances found through the filter
  {{% /md %}}
@@ -956,7 +956,7 @@ The following output properties are available:
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

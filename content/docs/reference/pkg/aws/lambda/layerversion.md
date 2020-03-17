@@ -587,7 +587,7 @@ The path to the function&#39;s deployment package within the local filesystem. I
             <td class="align-top">compatible_<wbr>runtimes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1373,7 +1373,7 @@ The following output properties are available:
             <td class="align-top">compatible_<wbr>runtimes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
  {{% /md %}}
@@ -2328,7 +2328,7 @@ The path to the function&#39;s deployment package within the local filesystem. I
             <td class="align-top">compatible_<wbr>runtimes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

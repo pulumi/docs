@@ -1780,7 +1780,7 @@ If set to to 1, hyperthreading is disabled on the launched instance. Defaults to
             <td class="align-top">credit_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#instancecreditspecification">dict{instance_<wbr>credit_<wbr>specification}</a></code>
+                <code><a href="#instancecreditspecification">Dict[instance_<wbr>credit_<wbr>specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1811,7 +1811,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">list[instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceebsblockdevice">List[instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1846,7 +1846,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">list[instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceephemeralblockdevice">List[instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1907,7 +1907,7 @@ The Id of a dedicated host that the instance will be assigned to. Use when an in
             <td class="align-top">iam_<wbr>instance_<wbr>profile</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1971,7 +1971,7 @@ The type of instance to start. Updates to this field will trigger a stop/start o
             <td class="align-top">ipv6_<wbr>addresses</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2016,7 +2016,7 @@ If true, the launched EC2 instance will have detailed monitoring enabled. (Avail
             <td class="align-top">network_<wbr>interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#instancenetworkinterface">list[instance_<wbr>network_<wbr>interface]</a></code>
+                <code><a href="#instancenetworkinterface">List[instance_<wbr>network_<wbr>interface]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2062,7 +2062,7 @@ instance in a VPC.
             <td class="align-top">root_<wbr>block_<wbr>device</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">dict{instance_<wbr>root_<wbr>block_<wbr>device}</a></code>
+                <code><a href="#instancerootblockdevice">Dict[instance_<wbr>root_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2078,7 +2078,7 @@ device of the instance. See Block Devices below for details.
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2124,7 +2124,7 @@ The VPC Subnet ID to launch in.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2184,7 +2184,7 @@ Can be used instead of `user_data` to pass base64-encoded binary data directly. 
             <td class="align-top">volume_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2199,7 +2199,7 @@ A mapping of tags to assign to the devices created by the instance at launch tim
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4017,7 +4017,7 @@ only supported on creation of instance type that support CPU Options
             <td class="align-top">credit_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#instancecreditspecification">dict{instance_<wbr>credit_<wbr>specification}</a></code>
+                <code><a href="#instancecreditspecification">Dict[instance_<wbr>credit_<wbr>specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize the credit specification of the instance. See Credit Specification below for more details.
  {{% /md %}}
@@ -4044,7 +4044,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">list[instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceebsblockdevice">List[instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
@@ -4075,7 +4075,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">list[instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceephemeralblockdevice">List[instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize Ephemeral (also known as
 &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
@@ -4197,7 +4197,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             <td class="align-top">ipv6_<wbr>addresses</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
  {{% /md %}}
@@ -4236,7 +4236,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             <td class="align-top">network_<wbr>interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#instancenetworkinterface">list[instance_<wbr>network_<wbr>interface]</a></code>
+                <code><a href="#instancenetworkinterface">List[instance_<wbr>network_<wbr>interface]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
  {{% /md %}}
@@ -4348,7 +4348,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC
             <td class="align-top">root_<wbr>block_<wbr>device</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">dict{instance_<wbr>root_<wbr>block_<wbr>device}</a></code>
+                <code><a href="#instancerootblockdevice">Dict[instance_<wbr>root_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -4362,7 +4362,7 @@ device of the instance. See Block Devices below for details.
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
  {{% /md %}}
@@ -4402,7 +4402,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -4454,7 +4454,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             <td class="align-top">volume_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the devices created by the instance at launch time.
  {{% /md %}}
@@ -4467,7 +4467,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of security group IDs to associate with.
  {{% /md %}}
@@ -6580,7 +6580,7 @@ If set to to 1, hyperthreading is disabled on the launched instance. Defaults to
             <td class="align-top">credit_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#instancecreditspecification">dict{instance_<wbr>credit_<wbr>specification}</a></code>
+                <code><a href="#instancecreditspecification">Dict[instance_<wbr>credit_<wbr>specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6611,7 +6611,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">list[instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceebsblockdevice">List[instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6646,7 +6646,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">list[instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceephemeralblockdevice">List[instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6707,7 +6707,7 @@ The Id of a dedicated host that the instance will be assigned to. Use when an in
             <td class="align-top">iam_<wbr>instance_<wbr>profile</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6786,7 +6786,7 @@ The type of instance to start. Updates to this field will trigger a stop/start o
             <td class="align-top">ipv6_<wbr>addresses</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6831,7 +6831,7 @@ If true, the launched EC2 instance will have detailed monitoring enabled. (Avail
             <td class="align-top">network_<wbr>interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#instancenetworkinterface">list[instance_<wbr>network_<wbr>interface]</a></code>
+                <code><a href="#instancenetworkinterface">List[instance_<wbr>network_<wbr>interface]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6959,7 +6959,7 @@ The public IP address assigned to the instance, if applicable. **NOTE**: If you 
             <td class="align-top">root_<wbr>block_<wbr>device</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">dict{instance_<wbr>root_<wbr>block_<wbr>device}</a></code>
+                <code><a href="#instancerootblockdevice">Dict[instance_<wbr>root_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6975,7 +6975,7 @@ device of the instance. See Block Devices below for details.
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7021,7 +7021,7 @@ The VPC Subnet ID to launch in.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7081,7 +7081,7 @@ Can be used instead of `user_data` to pass base64-encoded binary data directly. 
             <td class="align-top">volume_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7096,7 +7096,7 @@ A mapping of tags to assign to the devices created by the instance at launch tim
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

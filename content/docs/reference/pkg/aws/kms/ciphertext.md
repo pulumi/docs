@@ -301,7 +301,7 @@ Data to be encrypted. Note that this may show up in logs, and it will be stored 
             <td class="align-top">context</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -609,7 +609,7 @@ The following output properties are available:
             <td class="align-top">context</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} An optional mapping that makes up the encryption context.
  {{% /md %}}
@@ -982,7 +982,7 @@ Base64 encoded ciphertext
             <td class="align-top">context</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

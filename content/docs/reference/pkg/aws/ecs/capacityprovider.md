@@ -272,7 +272,7 @@ Key-value mapping of resource tags.
             <td class="align-top">auto_<wbr>scaling_<wbr>group_<wbr>provider</td>
             <td class="align-top">
                 
-                <code><a href="#capacityproviderautoscalinggroupprovider">dict{capacity_<wbr>provider_<wbr>auto_<wbr>scaling_<wbr>group_<wbr>provider}</a></code>
+                <code><a href="#capacityproviderautoscalinggroupprovider">Dict[capacity_<wbr>provider_<wbr>auto_<wbr>scaling_<wbr>group_<wbr>provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -302,7 +302,7 @@ The name of the capacity provider.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -580,7 +580,7 @@ The following output properties are available:
             <td class="align-top">auto_<wbr>scaling_<wbr>group_<wbr>provider</td>
             <td class="align-top">
                 
-                <code><a href="#capacityproviderautoscalinggroupprovider">dict{capacity_<wbr>provider_<wbr>auto_<wbr>scaling_<wbr>group_<wbr>provider}</a></code>
+                <code><a href="#capacityproviderautoscalinggroupprovider">Dict[capacity_<wbr>provider_<wbr>auto_<wbr>scaling_<wbr>group_<wbr>provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument defining the provider for the ECS auto scaling group. Defined below.
  {{% /md %}}
@@ -606,7 +606,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags.
  {{% /md %}}
@@ -953,7 +953,7 @@ The Amazon Resource Name (ARN) that identifies the capacity provider.
             <td class="align-top">auto_<wbr>scaling_<wbr>group_<wbr>provider</td>
             <td class="align-top">
                 
-                <code><a href="#capacityproviderautoscalinggroupprovider">dict{capacity_<wbr>provider_<wbr>auto_<wbr>scaling_<wbr>group_<wbr>provider}</a></code>
+                <code><a href="#capacityproviderautoscalinggroupprovider">Dict[capacity_<wbr>provider_<wbr>auto_<wbr>scaling_<wbr>group_<wbr>provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -983,7 +983,7 @@ The name of the capacity provider.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1246,7 +1246,7 @@ Key-value mapping of resource tags.
             <td class="align-top">managed_<wbr>scaling</td>
             <td class="align-top">
                 
-                <code><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">dict{capacity_<wbr>provider_<wbr>auto_<wbr>scaling_<wbr>group_<wbr>provider_<wbr>managed_<wbr>scaling}</a></code>
+                <code><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Dict[capacity_<wbr>provider_<wbr>auto_<wbr>scaling_<wbr>group_<wbr>provider_<wbr>managed_<wbr>scaling]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

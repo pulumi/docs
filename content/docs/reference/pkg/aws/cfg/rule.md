@@ -599,7 +599,7 @@ The name of the rule
             <td class="align-top">scope</td>
             <td class="align-top">
                 
-                <code><a href="#rulescope">dict{rule_<wbr>scope}</a></code>
+                <code><a href="#rulescope">Dict[rule_<wbr>scope]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -614,7 +614,7 @@ Scope defines which resources can trigger an evaluation for the rule as document
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code><a href="#rulesource">dict{rule_<wbr>source}</a></code>
+                <code><a href="#rulesource">Dict[rule_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -630,7 +630,7 @@ the function to evaluate your AWS resources as documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1175,7 +1175,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             <td class="align-top">scope</td>
             <td class="align-top">
                 
-                <code><a href="#rulescope">dict{rule_<wbr>scope}</a></code>
+                <code><a href="#rulescope">Dict[rule_<wbr>scope]</a></code>
             </td>
             <td class="align-top">{{% md %}} Scope defines which resources can trigger an evaluation for the rule as documented below.
  {{% /md %}}
@@ -1188,7 +1188,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code><a href="#rulesource">dict{rule_<wbr>source}</a></code>
+                <code><a href="#rulesource">Dict[rule_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} Source specifies the rule owner, the rule identifier, and the notifications that cause
 the function to evaluate your AWS resources as documented below.
@@ -1202,7 +1202,7 @@ the function to evaluate your AWS resources as documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1856,7 +1856,7 @@ The ID of the config rule
             <td class="align-top">scope</td>
             <td class="align-top">
                 
-                <code><a href="#rulescope">dict{rule_<wbr>scope}</a></code>
+                <code><a href="#rulescope">Dict[rule_<wbr>scope]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1871,7 +1871,7 @@ Scope defines which resources can trigger an evaluation for the rule as document
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code><a href="#rulesource">dict{rule_<wbr>source}</a></code>
+                <code><a href="#rulesource">Dict[rule_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1887,7 +1887,7 @@ the function to evaluate your AWS resources as documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2218,7 +2218,7 @@ If you specify a resource ID, you must specify one resource type for `compliance
             <td class="align-top">compliance_<wbr>resource_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2517,7 +2517,7 @@ Indicates whether AWS or the customer owns and manages the AWS Config rule. Vali
             <td class="align-top">source_<wbr>details</td>
             <td class="align-top">
                 
-                <code><a href="#rulesourcesourcedetail">list[rule_<wbr>source_<wbr>source_<wbr>detail]</a></code>
+                <code><a href="#rulesourcesourcedetail">List[rule_<wbr>source_<wbr>source_<wbr>detail]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

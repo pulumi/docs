@@ -675,7 +675,7 @@ Description of the rule
             <td class="align-top">excluded_<wbr>accounts</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -765,7 +765,7 @@ Identifier of the AWS resource to evaluate
             <td class="align-top">resource_<wbr>types_<wbr>scopes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -810,7 +810,7 @@ Tag value of AWS resources to evaluate
             <td class="align-top">trigger_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1413,7 +1413,7 @@ The following output properties are available:
             <td class="align-top">excluded_<wbr>accounts</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of AWS account identifiers to exclude from the rule
  {{% /md %}}
@@ -1491,7 +1491,7 @@ The following output properties are available:
             <td class="align-top">resource_<wbr>types_<wbr>scopes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of types of AWS resources to evaluate
  {{% /md %}}
@@ -1530,7 +1530,7 @@ The following output properties are available:
             <td class="align-top">trigger_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of notification types that trigger AWS Config to run an evaluation for the rule. Valid values: `ConfigurationItemChangeNotification`, `OversizedConfigurationItemChangeNotification`, and `ScheduledNotification`
  {{% /md %}}
@@ -2252,7 +2252,7 @@ Description of the rule
             <td class="align-top">excluded_<wbr>accounts</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2342,7 +2342,7 @@ Identifier of the AWS resource to evaluate
             <td class="align-top">resource_<wbr>types_<wbr>scopes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2387,7 +2387,7 @@ Tag value of AWS resources to evaluate
             <td class="align-top">trigger_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

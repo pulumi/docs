@@ -784,7 +784,7 @@ Key-value mapping of resource tags
             <td class="align-top">client_<wbr>lists</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -889,7 +889,7 @@ The ARN of the backed storage used for storing file data.
             <td class="align-top">nfs_<wbr>file_<wbr>share_<wbr>defaults</td>
             <td class="align-top">
                 
-                <code><a href="#nfsfilesharenfsfilesharedefaults">dict{nfs_<wbr>file_<wbr>share_<wbr>nfs_<wbr>file_<wbr>share_<wbr>defaults}</a></code>
+                <code><a href="#nfsfilesharenfsfilesharedefaults">Dict[nfs_<wbr>file_<wbr>share_<wbr>nfs_<wbr>file_<wbr>share_<wbr>defaults]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -979,7 +979,7 @@ Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSqua
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1725,7 +1725,7 @@ The following output properties are available:
             <td class="align-top">client_<wbr>lists</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `[&#34;0.0.0.0/0&#34;]` to not limit access. Minimum 1 item. Maximum 100 items.
  {{% /md %}}
@@ -1829,7 +1829,7 @@ The following output properties are available:
             <td class="align-top">nfs_<wbr>file_<wbr>share_<wbr>defaults</td>
             <td class="align-top">
                 
-                <code><a href="#nfsfilesharenfsfilesharedefaults">dict{nfs_<wbr>file_<wbr>share_<wbr>nfs_<wbr>file_<wbr>share_<wbr>defaults}</a></code>
+                <code><a href="#nfsfilesharenfsfilesharedefaults">Dict[nfs_<wbr>file_<wbr>share_<wbr>nfs_<wbr>file_<wbr>share_<wbr>defaults]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument with file share default values. More information below.
  {{% /md %}}
@@ -1907,7 +1907,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -2794,7 +2794,7 @@ Amazon Resource Name (ARN) of the NFS File Share.
             <td class="align-top">client_<wbr>lists</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2914,7 +2914,7 @@ The ARN of the backed storage used for storing file data.
             <td class="align-top">nfs_<wbr>file_<wbr>share_<wbr>defaults</td>
             <td class="align-top">
                 
-                <code><a href="#nfsfilesharenfsfilesharedefaults">dict{nfs_<wbr>file_<wbr>share_<wbr>nfs_<wbr>file_<wbr>share_<wbr>defaults}</a></code>
+                <code><a href="#nfsfilesharenfsfilesharedefaults">Dict[nfs_<wbr>file_<wbr>share_<wbr>nfs_<wbr>file_<wbr>share_<wbr>defaults]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3004,7 +3004,7 @@ Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSqua
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

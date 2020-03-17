@@ -751,7 +751,7 @@ Whether active tracing with X-ray is enabled. Defaults to `false`.
             <td class="align-top">access_<wbr>log_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#stageaccesslogsettings">dict{stage_<wbr>access_<wbr>log_<wbr>settings}</a></code>
+                <code><a href="#stageaccesslogsettings">Dict[stage_<wbr>access_<wbr>log_<wbr>settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -812,7 +812,7 @@ The identifier of a client certificate for the stage.
             <td class="align-top">deployment</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -857,7 +857,7 @@ The version of the associated API documentation
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -887,7 +887,7 @@ The name of the stage
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -902,7 +902,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">variables</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1623,7 +1623,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
             <td class="align-top">access_<wbr>log_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#stageaccesslogsettings">dict{stage_<wbr>access_<wbr>log_<wbr>settings}</a></code>
+                <code><a href="#stageaccesslogsettings">Dict[stage_<wbr>access_<wbr>log_<wbr>settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} Enables access logs for the API stage. Detailed below.
  {{% /md %}}
@@ -1783,7 +1783,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1796,7 +1796,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
             <td class="align-top">variables</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A map that defines the stage variables
  {{% /md %}}
@@ -2648,7 +2648,7 @@ Whether active tracing with X-ray is enabled. Defaults to `false`.
             <td class="align-top">access_<wbr>log_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#stageaccesslogsettings">dict{stage_<wbr>access_<wbr>log_<wbr>settings}</a></code>
+                <code><a href="#stageaccesslogsettings">Dict[stage_<wbr>access_<wbr>log_<wbr>settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2724,7 +2724,7 @@ The identifier of a client certificate for the stage.
             <td class="align-top">deployment</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2802,7 +2802,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2832,7 +2832,7 @@ The name of the stage
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2847,7 +2847,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">variables</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

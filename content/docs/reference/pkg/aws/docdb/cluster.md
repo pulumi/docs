@@ -1244,7 +1244,7 @@ are applied immediately, or during the next maintenance window. Default is
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1305,7 +1305,7 @@ Creates a unique cluster identifier beginning with the specified prefix. Conflic
             <td class="align-top">cluster_<wbr>members</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1350,7 +1350,7 @@ A DB subnet group to associate with this DB instance.
             <td class="align-top">enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1549,7 +1549,7 @@ Specifies whether the DB cluster is encrypted. The default is `false`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1564,7 +1564,7 @@ A mapping of tags to assign to the DB cluster.
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2818,7 +2818,7 @@ are applied immediately, or during the next maintenance window. Default is
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
@@ -2871,7 +2871,7 @@ instances in the DB cluster can be created in.
             <td class="align-top">cluster_<wbr>members</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of DocDB Instances that are a part of this cluster
  {{% /md %}}
@@ -2923,7 +2923,7 @@ instances in the DB cluster can be created in.
             <td class="align-top">enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
@@ -3135,7 +3135,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the DB cluster.
  {{% /md %}}
@@ -3148,7 +3148,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of VPC security groups to associate
 with the Cluster
@@ -4617,7 +4617,7 @@ Amazon Resource Name (ARN) of cluster
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4678,7 +4678,7 @@ Creates a unique cluster identifier beginning with the specified prefix. Conflic
             <td class="align-top">cluster_<wbr>members</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4738,7 +4738,7 @@ A DB subnet group to associate with this DB instance.
             <td class="align-top">enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4982,7 +4982,7 @@ Specifies whether the DB cluster is encrypted. The default is `false`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4997,7 +4997,7 @@ A mapping of tags to assign to the DB cluster.
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

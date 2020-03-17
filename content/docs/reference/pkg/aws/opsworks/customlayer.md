@@ -1127,7 +1127,7 @@ Whether to enable auto-healing for the layer.
             <td class="align-top">custom_<wbr>configure_<wbr>recipes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1141,7 +1141,7 @@ Whether to enable auto-healing for the layer.
             <td class="align-top">custom_<wbr>deploy_<wbr>recipes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1185,7 +1185,7 @@ Custom JSON attributes to apply to the layer.
             <td class="align-top">custom_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1200,7 +1200,7 @@ Ids for a set of security groups to apply to the layer&#39;s instances.
             <td class="align-top">custom_<wbr>setup_<wbr>recipes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1214,7 +1214,7 @@ Ids for a set of security groups to apply to the layer&#39;s instances.
             <td class="align-top">custom_<wbr>shutdown_<wbr>recipes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1228,7 +1228,7 @@ Ids for a set of security groups to apply to the layer&#39;s instances.
             <td class="align-top">custom_<wbr>undeploy_<wbr>recipes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1257,7 +1257,7 @@ Whether to enable Elastic Load Balancing connection draining.
             <td class="align-top">ebs_<wbr>volumes</td>
             <td class="align-top">
                 
-                <code><a href="#customlayerebsvolume">list[custom_<wbr>layer_<wbr>ebs_<wbr>volume]</a></code>
+                <code><a href="#customlayerebsvolume">List[custom_<wbr>layer_<wbr>ebs_<wbr>volume]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1362,7 +1362,7 @@ The id of the stack the layer will belong to.
             <td class="align-top">system_<wbr>packages</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2329,7 +2329,7 @@ The following output properties are available:
             <td class="align-top">custom_<wbr>configure_<wbr>recipes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2341,7 +2341,7 @@ The following output properties are available:
             <td class="align-top">custom_<wbr>deploy_<wbr>recipes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2379,7 +2379,7 @@ The following output properties are available:
             <td class="align-top">custom_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Ids for a set of security groups to apply to the layer&#39;s instances.
  {{% /md %}}
@@ -2392,7 +2392,7 @@ The following output properties are available:
             <td class="align-top">custom_<wbr>setup_<wbr>recipes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2404,7 +2404,7 @@ The following output properties are available:
             <td class="align-top">custom_<wbr>shutdown_<wbr>recipes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2416,7 +2416,7 @@ The following output properties are available:
             <td class="align-top">custom_<wbr>undeploy_<wbr>recipes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2441,7 +2441,7 @@ The following output properties are available:
             <td class="align-top">ebs_<wbr>volumes</td>
             <td class="align-top">
                 
-                <code><a href="#customlayerebsvolume">list[custom_<wbr>layer_<wbr>ebs_<wbr>volume]</a></code>
+                <code><a href="#customlayerebsvolume">List[custom_<wbr>layer_<wbr>ebs_<wbr>volume]</a></code>
             </td>
             <td class="align-top">{{% md %}} `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
  {{% /md %}}
@@ -2532,7 +2532,7 @@ The following output properties are available:
             <td class="align-top">system_<wbr>packages</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Names of a set of system packages to install on the layer&#39;s instances.
  {{% /md %}}
@@ -3672,7 +3672,7 @@ Whether to enable auto-healing for the layer.
             <td class="align-top">custom_<wbr>configure_<wbr>recipes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3686,7 +3686,7 @@ Whether to enable auto-healing for the layer.
             <td class="align-top">custom_<wbr>deploy_<wbr>recipes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3730,7 +3730,7 @@ Custom JSON attributes to apply to the layer.
             <td class="align-top">custom_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3745,7 +3745,7 @@ Ids for a set of security groups to apply to the layer&#39;s instances.
             <td class="align-top">custom_<wbr>setup_<wbr>recipes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3759,7 +3759,7 @@ Ids for a set of security groups to apply to the layer&#39;s instances.
             <td class="align-top">custom_<wbr>shutdown_<wbr>recipes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3773,7 +3773,7 @@ Ids for a set of security groups to apply to the layer&#39;s instances.
             <td class="align-top">custom_<wbr>undeploy_<wbr>recipes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3802,7 +3802,7 @@ Whether to enable Elastic Load Balancing connection draining.
             <td class="align-top">ebs_<wbr>volumes</td>
             <td class="align-top">
                 
-                <code><a href="#customlayerebsvolume">list[custom_<wbr>layer_<wbr>ebs_<wbr>volume]</a></code>
+                <code><a href="#customlayerebsvolume">List[custom_<wbr>layer_<wbr>ebs_<wbr>volume]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3907,7 +3907,7 @@ The id of the stack the layer will belong to.
             <td class="align-top">system_<wbr>packages</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

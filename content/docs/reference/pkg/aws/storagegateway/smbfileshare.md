@@ -864,7 +864,7 @@ Boolean value that enables guessing of the MIME type for uploaded objects based 
             <td class="align-top">invalid_<wbr>user_<wbr>lists</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -984,7 +984,7 @@ The ARN of the AWS Identity and Access Management (IAM) role that a file gateway
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -999,7 +999,7 @@ Key-value mapping of resource tags
             <td class="align-top">valid_<wbr>user_<wbr>lists</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1810,7 +1810,7 @@ The following output properties are available:
             <td class="align-top">invalid_<wbr>user_<wbr>lists</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of users in the Active Directory that are not allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
  {{% /md %}}
@@ -1914,7 +1914,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1927,7 +1927,7 @@ The following output properties are available:
             <td class="align-top">valid_<wbr>user_<wbr>lists</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
  {{% /md %}}
@@ -2889,7 +2889,7 @@ Boolean value that enables guessing of the MIME type for uploaded objects based 
             <td class="align-top">invalid_<wbr>user_<wbr>lists</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3009,7 +3009,7 @@ The ARN of the AWS Identity and Access Management (IAM) role that a file gateway
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3024,7 +3024,7 @@ Key-value mapping of resource tags
             <td class="align-top">valid_<wbr>user_<wbr>lists</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

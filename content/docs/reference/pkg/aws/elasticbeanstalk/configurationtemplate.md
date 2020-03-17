@@ -505,7 +505,7 @@ A unique name for this Template.
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#configurationtemplatesetting">list[configuration_<wbr>template_<wbr>setting]</a></code>
+                <code><a href="#configurationtemplatesetting">List[configuration_<wbr>template_<wbr>setting]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -927,7 +927,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#configurationtemplatesetting">list[configuration_<wbr>template_<wbr>setting]</a></code>
+                <code><a href="#configurationtemplatesetting">List[configuration_<wbr>template_<wbr>setting]</a></code>
             </td>
             <td class="align-top">{{% md %}} Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -1434,7 +1434,7 @@ A unique name for this Template.
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#configurationtemplatesetting">list[configuration_<wbr>template_<wbr>setting]</a></code>
+                <code><a href="#configurationtemplatesetting">List[configuration_<wbr>template_<wbr>setting]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

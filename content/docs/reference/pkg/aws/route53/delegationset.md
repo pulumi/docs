@@ -399,7 +399,7 @@ The following output properties are available:
             <td class="align-top">name_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of authoritative name servers for the hosted zone
 (effectively a list of NS records).
@@ -662,7 +662,7 @@ This is a reference name used in Caller Reference
             <td class="align-top">name_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

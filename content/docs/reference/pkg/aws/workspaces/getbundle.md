@@ -603,7 +603,7 @@ The following output properties are available:
             <td class="align-top">compute_<wbr>types</td>
             <td class="align-top">
                 
-                <code><a href="#getbundlecomputetype">list[get_<wbr>bundle_<wbr>compute_<wbr>type]</a></code>
+                <code><a href="#getbundlecomputetype">List[get_<wbr>bundle_<wbr>compute_<wbr>type]</a></code>
             </td>
             <td class="align-top">{{% md %}} The compute type. See supported fields below.
  {{% /md %}}
@@ -668,7 +668,7 @@ The following output properties are available:
             <td class="align-top">root_<wbr>storages</td>
             <td class="align-top">
                 
-                <code><a href="#getbundlerootstorage">list[get_<wbr>bundle_<wbr>root_<wbr>storage]</a></code>
+                <code><a href="#getbundlerootstorage">List[get_<wbr>bundle_<wbr>root_<wbr>storage]</a></code>
             </td>
             <td class="align-top">{{% md %}} The root volume. See supported fields below.
  {{% /md %}}
@@ -681,7 +681,7 @@ The following output properties are available:
             <td class="align-top">user_<wbr>storages</td>
             <td class="align-top">
                 
-                <code><a href="#getbundleuserstorage">list[get_<wbr>bundle_<wbr>user_<wbr>storage]</a></code>
+                <code><a href="#getbundleuserstorage">List[get_<wbr>bundle_<wbr>user_<wbr>storage]</a></code>
             </td>
             <td class="align-top">{{% md %}} The user storage. See supported fields below.
  {{% /md %}}

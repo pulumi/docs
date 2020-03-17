@@ -517,7 +517,7 @@ Send the events to an SNS Topic destination
             <td class="align-top">cloudwatch_<wbr>destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">list[event_<wbr>destination_<wbr>cloudwatch_<wbr>destination]</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">List[event_<wbr>destination_<wbr>cloudwatch_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -562,7 +562,7 @@ If true, the event destination will be enabled
             <td class="align-top">kinesis_<wbr>destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">dict{event_<wbr>destination_<wbr>kinesis_<wbr>destination}</a></code>
+                <code><a href="#eventdestinationkinesisdestination">Dict[event_<wbr>destination_<wbr>kinesis_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -577,7 +577,7 @@ Send the events to a kinesis firehose destination
             <td class="align-top">matching_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -607,7 +607,7 @@ The name of the event destination
             <td class="align-top">sns_<wbr>destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">dict{event_<wbr>destination_<wbr>sns_<wbr>destination}</a></code>
+                <code><a href="#eventdestinationsnsdestination">Dict[event_<wbr>destination_<wbr>sns_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -989,7 +989,7 @@ The following output properties are available:
             <td class="align-top">cloudwatch_<wbr>destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">list[event_<wbr>destination_<wbr>cloudwatch_<wbr>destination]</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">List[event_<wbr>destination_<wbr>cloudwatch_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} CloudWatch destination for the events
  {{% /md %}}
@@ -1028,7 +1028,7 @@ The following output properties are available:
             <td class="align-top">kinesis_<wbr>destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">dict{event_<wbr>destination_<wbr>kinesis_<wbr>destination}</a></code>
+                <code><a href="#eventdestinationkinesisdestination">Dict[event_<wbr>destination_<wbr>kinesis_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} Send the events to a kinesis firehose destination
  {{% /md %}}
@@ -1041,7 +1041,7 @@ The following output properties are available:
             <td class="align-top">matching_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of matching types. May be any of `&#34;send&#34;`, `&#34;reject&#34;`, `&#34;bounce&#34;`, `&#34;complaint&#34;`, `&#34;delivery&#34;`, `&#34;open&#34;`, `&#34;click&#34;`, or `&#34;renderingFailure&#34;`.
  {{% /md %}}
@@ -1067,7 +1067,7 @@ The following output properties are available:
             <td class="align-top">sns_<wbr>destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">dict{event_<wbr>destination_<wbr>sns_<wbr>destination}</a></code>
+                <code><a href="#eventdestinationsnsdestination">Dict[event_<wbr>destination_<wbr>sns_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} Send the events to an SNS Topic destination
  {{% /md %}}
@@ -1534,7 +1534,7 @@ Send the events to an SNS Topic destination
             <td class="align-top">cloudwatch_<wbr>destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">list[event_<wbr>destination_<wbr>cloudwatch_<wbr>destination]</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">List[event_<wbr>destination_<wbr>cloudwatch_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1579,7 +1579,7 @@ If true, the event destination will be enabled
             <td class="align-top">kinesis_<wbr>destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">dict{event_<wbr>destination_<wbr>kinesis_<wbr>destination}</a></code>
+                <code><a href="#eventdestinationkinesisdestination">Dict[event_<wbr>destination_<wbr>kinesis_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1594,7 +1594,7 @@ Send the events to a kinesis firehose destination
             <td class="align-top">matching_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1624,7 +1624,7 @@ The name of the event destination
             <td class="align-top">sns_<wbr>destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">dict{event_<wbr>destination_<wbr>sns_<wbr>destination}</a></code>
+                <code><a href="#eventdestinationsnsdestination">Dict[event_<wbr>destination_<wbr>sns_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

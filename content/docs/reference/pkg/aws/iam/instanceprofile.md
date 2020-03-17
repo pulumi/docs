@@ -441,7 +441,7 @@ Path in which to create the profile.
             <td class="align-top">role</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -456,7 +456,7 @@ The role name to include in the profile.
             <td class="align-top">roles</td>
             <td class="align-top">
                 
-                <code>list[role>]</code>
+                <code>List[role>]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -959,7 +959,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             <td class="align-top">roles</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
 A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
@@ -1563,7 +1563,7 @@ Path in which to create the profile.
             <td class="align-top">role</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1578,7 +1578,7 @@ The role name to include in the profile.
             <td class="align-top">roles</td>
             <td class="align-top">
                 
-                <code>list[role>]</code>
+                <code>List[role>]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

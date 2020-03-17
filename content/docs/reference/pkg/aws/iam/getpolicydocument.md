@@ -410,7 +410,7 @@ json.  Statements without an `sid` cannot be overwritten.
             <td class="align-top">statements</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatement">list[get_<wbr>policy_<wbr>document_<wbr>statement]</a></code>
+                <code><a href="#getpolicydocumentstatement">List[get_<wbr>policy_<wbr>document_<wbr>statement]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -856,7 +856,7 @@ The following output properties are available:
             <td class="align-top">statements</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatement">list[get_<wbr>policy_<wbr>document_<wbr>statement]</a></code>
+                <code><a href="#getpolicydocumentstatement">List[get_<wbr>policy_<wbr>document_<wbr>statement]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1424,7 +1424,7 @@ An ID for the policy statement.
             <td class="align-top">actions</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1440,7 +1440,7 @@ or denies. For example, ``[&#34;ec2:RunInstances&#34;, &#34;s3:*&#34;]``.
             <td class="align-top">conditions</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementcondition">list[get_<wbr>policy_<wbr>document_<wbr>statement_<wbr>condition]</a></code>
+                <code><a href="#getpolicydocumentstatementcondition">List[get_<wbr>policy_<wbr>document_<wbr>statement_<wbr>condition]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1473,7 +1473,7 @@ statement allows or denies the given actions. The default is &#34;Allow&#34;.
             <td class="align-top">not_<wbr>actions</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1490,7 +1490,7 @@ listed.
             <td class="align-top">not_<wbr>principals</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementnotprincipal">list[get_<wbr>policy_<wbr>document_<wbr>statement_<wbr>not_<wbr>principal]</a></code>
+                <code><a href="#getpolicydocumentstatementnotprincipal">List[get_<wbr>policy_<wbr>document_<wbr>statement_<wbr>not_<wbr>principal]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1506,7 +1506,7 @@ the statement does *not* apply to.
             <td class="align-top">not_<wbr>resources</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1523,7 +1523,7 @@ does *not* apply to. Used to apply a policy statement to all resources
             <td class="align-top">principals</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementprincipal">list[get_<wbr>policy_<wbr>document_<wbr>statement_<wbr>principal]</a></code>
+                <code><a href="#getpolicydocumentstatementprincipal">List[get_<wbr>policy_<wbr>document_<wbr>statement_<wbr>principal]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1539,7 +1539,7 @@ specifying a resource (or resource pattern) to which this statement applies.
             <td class="align-top">resources</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1847,7 +1847,7 @@ to evaluate.
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2077,7 +2077,7 @@ The type of principal. For AWS ARNs this is &#34;AWS&#34;.  For AWS services (e.
             <td class="align-top">identifiers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2302,7 +2302,7 @@ The type of principal. For AWS ARNs this is &#34;AWS&#34;.  For AWS services (e.
             <td class="align-top">identifiers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -704,7 +704,7 @@ The version of the sampling rule format (`1` )
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1498,7 +1498,7 @@ The following output properties are available:
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Matches attributes derived from the request.
  {{% /md %}}
@@ -2393,7 +2393,7 @@ The ARN of the sampling rule.
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

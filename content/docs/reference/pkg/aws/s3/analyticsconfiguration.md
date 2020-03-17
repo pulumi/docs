@@ -319,7 +319,7 @@ The following arguments are supported:
             <td class="align-top">filter</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationfilter">dict{analytics_<wbr>configuration_<wbr>filter}</a></code>
+                <code><a href="#analyticsconfigurationfilter">Dict[analytics_<wbr>configuration_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -347,7 +347,7 @@ The following arguments are supported:
             <td class="align-top">storage_<wbr>class_<wbr>analysis</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationstorageclassanalysis">dict{analytics_<wbr>configuration_<wbr>storage_<wbr>class_<wbr>analysis}</a></code>
+                <code><a href="#analyticsconfigurationstorageclassanalysis">Dict[analytics_<wbr>configuration_<wbr>storage_<wbr>class_<wbr>analysis]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -611,7 +611,7 @@ The following output properties are available:
             <td class="align-top">filter</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationfilter">dict{analytics_<wbr>configuration_<wbr>filter}</a></code>
+                <code><a href="#analyticsconfigurationfilter">Dict[analytics_<wbr>configuration_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -635,7 +635,7 @@ The following output properties are available:
             <td class="align-top">storage_<wbr>class_<wbr>analysis</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationstorageclassanalysis">dict{analytics_<wbr>configuration_<wbr>storage_<wbr>class_<wbr>analysis}</a></code>
+                <code><a href="#analyticsconfigurationstorageclassanalysis">Dict[analytics_<wbr>configuration_<wbr>storage_<wbr>class_<wbr>analysis]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -968,7 +968,7 @@ The following state arguments are supported:
             <td class="align-top">filter</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationfilter">dict{analytics_<wbr>configuration_<wbr>filter}</a></code>
+                <code><a href="#analyticsconfigurationfilter">Dict[analytics_<wbr>configuration_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -996,7 +996,7 @@ The following state arguments are supported:
             <td class="align-top">storage_<wbr>class_<wbr>analysis</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationstorageclassanalysis">dict{analytics_<wbr>configuration_<wbr>storage_<wbr>class_<wbr>analysis}</a></code>
+                <code><a href="#analyticsconfigurationstorageclassanalysis">Dict[analytics_<wbr>configuration_<wbr>storage_<wbr>class_<wbr>analysis]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1216,7 +1216,7 @@ The following state arguments are supported:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1373,7 +1373,7 @@ The following state arguments are supported:
             <td class="align-top">data_<wbr>export</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationstorageclassanalysisdataexport">dict{analytics_<wbr>configuration_<wbr>storage_<wbr>class_<wbr>analysis_<wbr>data_<wbr>export}</a></code>
+                <code><a href="#analyticsconfigurationstorageclassanalysisdataexport">Dict[analytics_<wbr>configuration_<wbr>storage_<wbr>class_<wbr>analysis_<wbr>data_<wbr>export]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1572,7 +1572,7 @@ The following state arguments are supported:
             <td class="align-top">destination</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationstorageclassanalysisdataexportdestination">dict{analytics_<wbr>configuration_<wbr>storage_<wbr>class_<wbr>analysis_<wbr>data_<wbr>export_<wbr>destination}</a></code>
+                <code><a href="#analyticsconfigurationstorageclassanalysisdataexportdestination">Dict[analytics_<wbr>configuration_<wbr>storage_<wbr>class_<wbr>analysis_<wbr>data_<wbr>export_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1743,7 +1743,7 @@ The following state arguments are supported:
             <td class="align-top">s3_<wbr>bucket_<wbr>destination</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationstorageclassanalysisdataexportdestinations3bucketdestination">dict{analytics_<wbr>configuration_<wbr>storage_<wbr>class_<wbr>analysis_<wbr>data_<wbr>export_<wbr>destination_<wbr>s3_<wbr>bucket_<wbr>destination}</a></code>
+                <code><a href="#analyticsconfigurationstorageclassanalysisdataexportdestinations3bucketdestination">Dict[analytics_<wbr>configuration_<wbr>storage_<wbr>class_<wbr>analysis_<wbr>data_<wbr>export_<wbr>destination_<wbr>s3_<wbr>bucket_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

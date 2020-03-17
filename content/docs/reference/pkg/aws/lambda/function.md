@@ -1094,7 +1094,7 @@ The path to the function&#39;s deployment package within the local filesystem. I
             <td class="align-top">dead_<wbr>letter_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#functiondeadletterconfig">dict{function_<wbr>dead_<wbr>letter_<wbr>config}</a></code>
+                <code><a href="#functiondeadletterconfig">Dict[function_<wbr>dead_<wbr>letter_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1124,7 +1124,7 @@ Description of what your Lambda Function does.
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code><a href="#functionenvironment">dict{function_<wbr>environment}</a></code>
+                <code><a href="#functionenvironment">Dict[function_<wbr>environment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1169,7 +1169,7 @@ The ARN for the KMS encryption key.
             <td class="align-top">layers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1334,7 +1334,7 @@ Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the pack
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1364,7 +1364,7 @@ The amount of time your Lambda Function has to run in seconds. Defaults to `3`. 
             <td class="align-top">tracing_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#functiontracingconfig">dict{function_<wbr>tracing_<wbr>config}</a></code>
+                <code><a href="#functiontracingconfig">Dict[function_<wbr>tracing_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1378,7 +1378,7 @@ The amount of time your Lambda Function has to run in seconds. Defaults to `3`. 
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#functionvpcconfig">dict{function_<wbr>vpc_<wbr>config}</a></code>
+                <code><a href="#functionvpcconfig">Dict[function_<wbr>vpc_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2566,7 +2566,7 @@ The following output properties are available:
             <td class="align-top">dead_<wbr>letter_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#functiondeadletterconfig">dict{function_<wbr>dead_<wbr>letter_<wbr>config}</a></code>
+                <code><a href="#functiondeadletterconfig">Dict[function_<wbr>dead_<wbr>letter_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block to configure the function&#39;s *dead letter queue*. See details below.
  {{% /md %}}
@@ -2592,7 +2592,7 @@ The following output properties are available:
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code><a href="#functionenvironment">dict{function_<wbr>environment}</a></code>
+                <code><a href="#functionenvironment">Dict[function_<wbr>environment]</a></code>
             </td>
             <td class="align-top">{{% md %}} The Lambda environment&#39;s configuration settings. Fields documented below.
  {{% /md %}}
@@ -2657,7 +2657,7 @@ The following output properties are available:
             <td class="align-top">layers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers][10]
  {{% /md %}}
@@ -2827,7 +2827,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the object.
  {{% /md %}}
@@ -2853,7 +2853,7 @@ The following output properties are available:
             <td class="align-top">tracing_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#functiontracingconfig">dict{function_<wbr>tracing_<wbr>config}</a></code>
+                <code><a href="#functiontracingconfig">Dict[function_<wbr>tracing_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2878,7 +2878,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#functionvpcconfig">dict{function_<wbr>vpc_<wbr>config}</a></code>
+                <code><a href="#functionvpcconfig">Dict[function_<wbr>vpc_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]
  {{% /md %}}
@@ -4275,7 +4275,7 @@ The path to the function&#39;s deployment package within the local filesystem. I
             <td class="align-top">dead_<wbr>letter_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#functiondeadletterconfig">dict{function_<wbr>dead_<wbr>letter_<wbr>config}</a></code>
+                <code><a href="#functiondeadletterconfig">Dict[function_<wbr>dead_<wbr>letter_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4305,7 +4305,7 @@ Description of what your Lambda Function does.
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code><a href="#functionenvironment">dict{function_<wbr>environment}</a></code>
+                <code><a href="#functionenvironment">Dict[function_<wbr>environment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4380,7 +4380,7 @@ The date this resource was last modified.
             <td class="align-top">layers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4576,7 +4576,7 @@ The size in bytes of the function .zip file.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4606,7 +4606,7 @@ The amount of time your Lambda Function has to run in seconds. Defaults to `3`. 
             <td class="align-top">tracing_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#functiontracingconfig">dict{function_<wbr>tracing_<wbr>config}</a></code>
+                <code><a href="#functiontracingconfig">Dict[function_<wbr>tracing_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4635,7 +4635,7 @@ Latest published version of your Lambda Function.
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#functionvpcconfig">dict{function_<wbr>vpc_<wbr>config}</a></code>
+                <code><a href="#functionvpcconfig">Dict[function_<wbr>vpc_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4976,7 +4976,7 @@ A map that defines environment variables for the Lambda function.
             <td class="align-top">variables</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5401,7 +5401,7 @@ A list of subnet IDs associated with the Lambda function.
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -5416,7 +5416,7 @@ A list of security group IDs associated with the Lambda function.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

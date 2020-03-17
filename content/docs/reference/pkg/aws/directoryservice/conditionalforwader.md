@@ -306,7 +306,7 @@ The id of directory.
             <td class="align-top">dns_<wbr>ips</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -560,7 +560,7 @@ The following output properties are available:
             <td class="align-top">dns_<wbr>ips</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of forwarder IP addresses.
  {{% /md %}}
@@ -875,7 +875,7 @@ The id of directory.
             <td class="align-top">dns_<wbr>ips</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -514,7 +514,7 @@ The type of the endpoint. One of: READER , ANY .
             <td class="align-top">excluded_<wbr>members</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -529,7 +529,7 @@ List of DB instance identifiers that aren&#39;t part of the custom endpoint grou
             <td class="align-top">static_<wbr>members</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -544,7 +544,7 @@ List of DB instance identifiers that are part of the custom endpoint group. Conf
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1030,7 +1030,7 @@ The following output properties are available:
             <td class="align-top">excluded_<wbr>members</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of DB instance identifiers that aren&#39;t part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with `static_members`.
  {{% /md %}}
@@ -1043,7 +1043,7 @@ The following output properties are available:
             <td class="align-top">static_<wbr>members</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of DB instance identifiers that are part of the custom endpoint group. Conflicts with `excluded_members`.
  {{% /md %}}
@@ -1056,7 +1056,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1643,7 +1643,7 @@ A custom endpoint for the Aurora cluster
             <td class="align-top">excluded_<wbr>members</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1658,7 +1658,7 @@ List of DB instance identifiers that aren&#39;t part of the custom endpoint grou
             <td class="align-top">static_<wbr>members</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1673,7 +1673,7 @@ List of DB instance identifiers that are part of the custom endpoint group. Conf
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

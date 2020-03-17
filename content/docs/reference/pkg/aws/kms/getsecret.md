@@ -158,7 +158,7 @@ The following arguments are supported:
             <td class="align-top">secrets</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretsecret">list[get_<wbr>secret_<wbr>secret]</a></code>
+                <code><a href="#getsecretsecret">List[get_<wbr>secret_<wbr>secret]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -355,7 +355,7 @@ The following output properties are available:
             <td class="align-top">secrets</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretsecret">list[get_<wbr>secret_<wbr>secret]</a></code>
+                <code><a href="#getsecretsecret">List[get_<wbr>secret_<wbr>secret]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -641,7 +641,7 @@ The following output properties are available:
             <td class="align-top">context</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -655,7 +655,7 @@ The following output properties are available:
             <td class="align-top">grant_<wbr>tokens</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

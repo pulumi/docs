@@ -414,7 +414,7 @@ exactly match a pair on the desired Instance.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancefilter">list[get_<wbr>instance_<wbr>filter]</a></code>
+                <code><a href="#getinstancefilter">List[get_<wbr>instance_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -476,7 +476,7 @@ Specify the exact Instance ID with which to populate the data source.
             <td class="align-top">instance_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -492,7 +492,7 @@ exactly match a pair on the desired Instance.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2096,7 +2096,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">credit_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancecreditspecification">list[get_<wbr>instance_<wbr>credit_<wbr>specification]</a></code>
+                <code><a href="#getinstancecreditspecification">List[get_<wbr>instance_<wbr>credit_<wbr>specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} The credit specification of the Instance.
  {{% /md %}}
@@ -2121,7 +2121,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstanceebsblockdevice">list[get_<wbr>instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#getinstanceebsblockdevice">List[get_<wbr>instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} The EBS block device mappings of the Instance.
  {{% /md %}}
@@ -2147,7 +2147,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstanceephemeralblockdevice">list[get_<wbr>instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#getinstanceephemeralblockdevice">List[get_<wbr>instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} The ephemeral block device mappings of the Instance.
  {{% /md %}}
@@ -2160,7 +2160,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancefilter">list[get_<wbr>instance_<wbr>filter]</a></code>
+                <code><a href="#getinstancefilter">List[get_<wbr>instance_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2260,7 +2260,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">instance_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2408,7 +2408,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">root_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancerootblockdevice">list[get_<wbr>instance_<wbr>root_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#getinstancerootblockdevice">List[get_<wbr>instance_<wbr>root_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} The root block device mappings of the Instance
  {{% /md %}}
@@ -2421,7 +2421,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The associated security groups.
  {{% /md %}}
@@ -2460,7 +2460,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the Instance.
  {{% /md %}}
@@ -2512,7 +2512,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The associated security groups in a non-default VPC.
  {{% /md %}}
@@ -3800,7 +3800,7 @@ The virtual device name.
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

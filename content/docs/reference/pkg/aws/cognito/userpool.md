@@ -1006,7 +1006,7 @@ The verification message templates configuration.
             <td class="align-top">admin_<wbr>create_<wbr>user_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfig">dict{user_<wbr>pool_<wbr>admin_<wbr>create_<wbr>user_<wbr>config}</a></code>
+                <code><a href="#userpooladmincreateuserconfig">Dict[user_<wbr>pool_<wbr>admin_<wbr>create_<wbr>user_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1021,7 +1021,7 @@ The configuration for AdminCreateUser requests.
             <td class="align-top">alias_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1036,7 +1036,7 @@ Attributes supported as an alias for this user pool. Possible values: phone_numb
             <td class="align-top">auto_<wbr>verified_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1051,7 +1051,7 @@ The attributes to be auto-verified. Possible values: email, phone_number.
             <td class="align-top">device_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpooldeviceconfiguration">dict{user_<wbr>pool_<wbr>device_<wbr>configuration}</a></code>
+                <code><a href="#userpooldeviceconfiguration">Dict[user_<wbr>pool_<wbr>device_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1066,7 +1066,7 @@ The configuration for the user pool&#39;s device tracking.
             <td class="align-top">email_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolemailconfiguration">dict{user_<wbr>pool_<wbr>email_<wbr>configuration}</a></code>
+                <code><a href="#userpoolemailconfiguration">Dict[user_<wbr>pool_<wbr>email_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1111,7 +1111,7 @@ A string representing the email verification subject. Conflicts with `verificati
             <td class="align-top">lambda_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#userpoollambdaconfig">dict{user_<wbr>pool_<wbr>lambda_<wbr>config}</a></code>
+                <code><a href="#userpoollambdaconfig">Dict[user_<wbr>pool_<wbr>lambda_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1156,7 +1156,7 @@ The name of the attribute.
             <td class="align-top">password_<wbr>policy</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolpasswordpolicy">dict{user_<wbr>pool_<wbr>password_<wbr>policy}</a></code>
+                <code><a href="#userpoolpasswordpolicy">Dict[user_<wbr>pool_<wbr>password_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1171,7 +1171,7 @@ A container for information about the user pool password policy.
             <td class="align-top">schemas</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschema">list[user_<wbr>pool_<wbr>schema]</a></code>
+                <code><a href="#userpoolschema">List[user_<wbr>pool_<wbr>schema]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1201,7 +1201,7 @@ A string representing the SMS authentication message.
             <td class="align-top">sms_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolsmsconfiguration">dict{user_<wbr>pool_<wbr>sms_<wbr>configuration}</a></code>
+                <code><a href="#userpoolsmsconfiguration">Dict[user_<wbr>pool_<wbr>sms_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1231,7 +1231,7 @@ A string representing the SMS verification message. Conflicts with `verification
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1246,7 +1246,7 @@ A mapping of tags to assign to the User Pool.
             <td class="align-top">user_<wbr>pool_<wbr>add_<wbr>ons</td>
             <td class="align-top">
                 
-                <code><a href="#userpooluserpooladdons">dict{user_<wbr>pool_<wbr>user_<wbr>pool_<wbr>add_<wbr>ons}</a></code>
+                <code><a href="#userpooluserpooladdons">Dict[user_<wbr>pool_<wbr>user_<wbr>pool_<wbr>add_<wbr>ons]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1261,7 +1261,7 @@ Configuration block for user pool add-ons to enable user pool advanced security 
             <td class="align-top">username_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1276,7 +1276,7 @@ Specifies whether email addresses or phone numbers can be specified as usernames
             <td class="align-top">verification_<wbr>message_<wbr>template</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolverificationmessagetemplate">dict{user_<wbr>pool_<wbr>verification_<wbr>message_<wbr>template}</a></code>
+                <code><a href="#userpoolverificationmessagetemplate">Dict[user_<wbr>pool_<wbr>verification_<wbr>message_<wbr>template]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2282,7 +2282,7 @@ The following output properties are available:
             <td class="align-top">admin_<wbr>create_<wbr>user_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfig">dict{user_<wbr>pool_<wbr>admin_<wbr>create_<wbr>user_<wbr>config}</a></code>
+                <code><a href="#userpooladmincreateuserconfig">Dict[user_<wbr>pool_<wbr>admin_<wbr>create_<wbr>user_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} The configuration for AdminCreateUser requests.
  {{% /md %}}
@@ -2295,7 +2295,7 @@ The following output properties are available:
             <td class="align-top">alias_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
  {{% /md %}}
@@ -2321,7 +2321,7 @@ The following output properties are available:
             <td class="align-top">auto_<wbr>verified_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The attributes to be auto-verified. Possible values: email, phone_number.
  {{% /md %}}
@@ -2347,7 +2347,7 @@ The following output properties are available:
             <td class="align-top">device_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpooldeviceconfiguration">dict{user_<wbr>pool_<wbr>device_<wbr>configuration}</a></code>
+                <code><a href="#userpooldeviceconfiguration">Dict[user_<wbr>pool_<wbr>device_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} The configuration for the user pool&#39;s device tracking.
  {{% /md %}}
@@ -2360,7 +2360,7 @@ The following output properties are available:
             <td class="align-top">email_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolemailconfiguration">dict{user_<wbr>pool_<wbr>email_<wbr>configuration}</a></code>
+                <code><a href="#userpoolemailconfiguration">Dict[user_<wbr>pool_<wbr>email_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} The Email Configuration.
  {{% /md %}}
@@ -2412,7 +2412,7 @@ The following output properties are available:
             <td class="align-top">lambda_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#userpoollambdaconfig">dict{user_<wbr>pool_<wbr>lambda_<wbr>config}</a></code>
+                <code><a href="#userpoollambdaconfig">Dict[user_<wbr>pool_<wbr>lambda_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} A container for the AWS Lambda triggers associated with the user pool.
  {{% /md %}}
@@ -2464,7 +2464,7 @@ The following output properties are available:
             <td class="align-top">password_<wbr>policy</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolpasswordpolicy">dict{user_<wbr>pool_<wbr>password_<wbr>policy}</a></code>
+                <code><a href="#userpoolpasswordpolicy">Dict[user_<wbr>pool_<wbr>password_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} A container for information about the user pool password policy.
  {{% /md %}}
@@ -2477,7 +2477,7 @@ The following output properties are available:
             <td class="align-top">schemas</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschema">list[user_<wbr>pool_<wbr>schema]</a></code>
+                <code><a href="#userpoolschema">List[user_<wbr>pool_<wbr>schema]</a></code>
             </td>
             <td class="align-top">{{% md %}} A container with the schema attributes of a user pool. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Maximum of 50 attributes.
  {{% /md %}}
@@ -2503,7 +2503,7 @@ The following output properties are available:
             <td class="align-top">sms_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolsmsconfiguration">dict{user_<wbr>pool_<wbr>sms_<wbr>configuration}</a></code>
+                <code><a href="#userpoolsmsconfiguration">Dict[user_<wbr>pool_<wbr>sms_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} The SMS Configuration.
  {{% /md %}}
@@ -2529,7 +2529,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the User Pool.
  {{% /md %}}
@@ -2542,7 +2542,7 @@ The following output properties are available:
             <td class="align-top">user_<wbr>pool_<wbr>add_<wbr>ons</td>
             <td class="align-top">
                 
-                <code><a href="#userpooluserpooladdons">dict{user_<wbr>pool_<wbr>user_<wbr>pool_<wbr>add_<wbr>ons}</a></code>
+                <code><a href="#userpooluserpooladdons">Dict[user_<wbr>pool_<wbr>user_<wbr>pool_<wbr>add_<wbr>ons]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for user pool add-ons to enable user pool advanced security mode features.
  {{% /md %}}
@@ -2555,7 +2555,7 @@ The following output properties are available:
             <td class="align-top">username_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
  {{% /md %}}
@@ -2568,7 +2568,7 @@ The following output properties are available:
             <td class="align-top">verification_<wbr>message_<wbr>template</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolverificationmessagetemplate">dict{user_<wbr>pool_<wbr>verification_<wbr>message_<wbr>template}</a></code>
+                <code><a href="#userpoolverificationmessagetemplate">Dict[user_<wbr>pool_<wbr>verification_<wbr>message_<wbr>template]</a></code>
             </td>
             <td class="align-top">{{% md %}} The verification message templates configuration.
  {{% /md %}}
@@ -3755,7 +3755,7 @@ The verification message templates configuration.
             <td class="align-top">admin_<wbr>create_<wbr>user_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfig">dict{user_<wbr>pool_<wbr>admin_<wbr>create_<wbr>user_<wbr>config}</a></code>
+                <code><a href="#userpooladmincreateuserconfig">Dict[user_<wbr>pool_<wbr>admin_<wbr>create_<wbr>user_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3770,7 +3770,7 @@ The configuration for AdminCreateUser requests.
             <td class="align-top">alias_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3800,7 +3800,7 @@ The ARN of the user pool.
             <td class="align-top">auto_<wbr>verified_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3830,7 +3830,7 @@ The date the user pool was created.
             <td class="align-top">device_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpooldeviceconfiguration">dict{user_<wbr>pool_<wbr>device_<wbr>configuration}</a></code>
+                <code><a href="#userpooldeviceconfiguration">Dict[user_<wbr>pool_<wbr>device_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3845,7 +3845,7 @@ The configuration for the user pool&#39;s device tracking.
             <td class="align-top">email_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolemailconfiguration">dict{user_<wbr>pool_<wbr>email_<wbr>configuration}</a></code>
+                <code><a href="#userpoolemailconfiguration">Dict[user_<wbr>pool_<wbr>email_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3905,7 +3905,7 @@ The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws
             <td class="align-top">lambda_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#userpoollambdaconfig">dict{user_<wbr>pool_<wbr>lambda_<wbr>config}</a></code>
+                <code><a href="#userpoollambdaconfig">Dict[user_<wbr>pool_<wbr>lambda_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3965,7 +3965,7 @@ The name of the attribute.
             <td class="align-top">password_<wbr>policy</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolpasswordpolicy">dict{user_<wbr>pool_<wbr>password_<wbr>policy}</a></code>
+                <code><a href="#userpoolpasswordpolicy">Dict[user_<wbr>pool_<wbr>password_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3980,7 +3980,7 @@ A container for information about the user pool password policy.
             <td class="align-top">schemas</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschema">list[user_<wbr>pool_<wbr>schema]</a></code>
+                <code><a href="#userpoolschema">List[user_<wbr>pool_<wbr>schema]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4010,7 +4010,7 @@ A string representing the SMS authentication message.
             <td class="align-top">sms_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolsmsconfiguration">dict{user_<wbr>pool_<wbr>sms_<wbr>configuration}</a></code>
+                <code><a href="#userpoolsmsconfiguration">Dict[user_<wbr>pool_<wbr>sms_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4040,7 +4040,7 @@ A string representing the SMS verification message. Conflicts with `verification
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4055,7 +4055,7 @@ A mapping of tags to assign to the User Pool.
             <td class="align-top">user_<wbr>pool_<wbr>add_<wbr>ons</td>
             <td class="align-top">
                 
-                <code><a href="#userpooluserpooladdons">dict{user_<wbr>pool_<wbr>user_<wbr>pool_<wbr>add_<wbr>ons}</a></code>
+                <code><a href="#userpooluserpooladdons">Dict[user_<wbr>pool_<wbr>user_<wbr>pool_<wbr>add_<wbr>ons]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4070,7 +4070,7 @@ Configuration block for user pool add-ons to enable user pool advanced security 
             <td class="align-top">username_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4085,7 +4085,7 @@ Specifies whether email addresses or phone numbers can be specified as usernames
             <td class="align-top">verification_<wbr>message_<wbr>template</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolverificationmessagetemplate">dict{user_<wbr>pool_<wbr>verification_<wbr>message_<wbr>template}</a></code>
+                <code><a href="#userpoolverificationmessagetemplate">Dict[user_<wbr>pool_<wbr>verification_<wbr>message_<wbr>template]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4358,7 +4358,7 @@ Set to True if only the administrator is allowed to create user profiles. Set to
             <td class="align-top">invite_<wbr>message_<wbr>template</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfiginvitemessagetemplate">dict{user_<wbr>pool_<wbr>admin_<wbr>create_<wbr>user_<wbr>config_<wbr>invite_<wbr>message_<wbr>template}</a></code>
+                <code><a href="#userpooladmincreateuserconfiginvitemessagetemplate">Dict[user_<wbr>pool_<wbr>admin_<wbr>create_<wbr>user_<wbr>config_<wbr>invite_<wbr>message_<wbr>template]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6809,7 +6809,7 @@ The name of the attribute.
             <td class="align-top">number_<wbr>attribute_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschemanumberattributeconstraints">dict{user_<wbr>pool_<wbr>schema_<wbr>number_<wbr>attribute_<wbr>constraints}</a></code>
+                <code><a href="#userpoolschemanumberattributeconstraints">Dict[user_<wbr>pool_<wbr>schema_<wbr>number_<wbr>attribute_<wbr>constraints]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6839,7 +6839,7 @@ Specifies whether a user pool attribute is required. If the attribute is require
             <td class="align-top">string_<wbr>attribute_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschemastringattributeconstraints">dict{user_<wbr>pool_<wbr>schema_<wbr>string_<wbr>attribute_<wbr>constraints}</a></code>
+                <code><a href="#userpoolschemastringattributeconstraints">Dict[user_<wbr>pool_<wbr>schema_<wbr>string_<wbr>attribute_<wbr>constraints]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

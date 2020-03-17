@@ -805,7 +805,7 @@ The following output properties are available:
             <td class="align-top">docker_<wbr>labels</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Set docker labels
  {{% /md %}}
@@ -818,7 +818,7 @@ The following output properties are available:
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} The environment in use
  {{% /md %}}

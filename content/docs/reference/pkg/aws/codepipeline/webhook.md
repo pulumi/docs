@@ -470,7 +470,7 @@ The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICA
             <td class="align-top">authentication_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webhookauthenticationconfiguration">dict{webhook_<wbr>authentication_<wbr>configuration}</a></code>
+                <code><a href="#webhookauthenticationconfiguration">Dict[webhook_<wbr>authentication_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -485,7 +485,7 @@ An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#webhookfilter">list[webhook_<wbr>filter]</a></code>
+                <code><a href="#webhookfilter">List[webhook_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -515,7 +515,7 @@ The name of the webhook.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -979,7 +979,7 @@ The following output properties are available:
             <td class="align-top">authentication_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webhookauthenticationconfiguration">dict{webhook_<wbr>authentication_<wbr>configuration}</a></code>
+                <code><a href="#webhookauthenticationconfiguration">Dict[webhook_<wbr>authentication_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
  {{% /md %}}
@@ -992,7 +992,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#webhookfilter">list[webhook_<wbr>filter]</a></code>
+                <code><a href="#webhookfilter">List[webhook_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more `filter` blocks. Filter blocks are documented below.
  {{% /md %}}
@@ -1018,7 +1018,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1584,7 +1584,7 @@ The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICA
             <td class="align-top">authentication_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webhookauthenticationconfiguration">dict{webhook_<wbr>authentication_<wbr>configuration}</a></code>
+                <code><a href="#webhookauthenticationconfiguration">Dict[webhook_<wbr>authentication_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1599,7 +1599,7 @@ An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#webhookfilter">list[webhook_<wbr>filter]</a></code>
+                <code><a href="#webhookfilter">List[webhook_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1629,7 +1629,7 @@ The name of the webhook.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -252,7 +252,7 @@ Name of the security configuration.
             <td class="align-top">encryption_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfiguration">dict{security_<wbr>configuration_<wbr>encryption_<wbr>configuration}</a></code>
+                <code><a href="#securityconfigurationencryptionconfiguration">Dict[security_<wbr>configuration_<wbr>encryption_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -454,7 +454,7 @@ The following output properties are available:
             <td class="align-top">encryption_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfiguration">dict{security_<wbr>configuration_<wbr>encryption_<wbr>configuration}</a></code>
+                <code><a href="#securityconfigurationencryptionconfiguration">Dict[security_<wbr>configuration_<wbr>encryption_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing encryption configuration. Detailed below.
  {{% /md %}}
@@ -709,7 +709,7 @@ Name of the security configuration.
             <td class="align-top">encryption_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfiguration">dict{security_<wbr>configuration_<wbr>encryption_<wbr>configuration}</a></code>
+                <code><a href="#securityconfigurationencryptionconfiguration">Dict[security_<wbr>configuration_<wbr>encryption_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -976,7 +976,7 @@ A `s3_encryption ` block as described below, which contains encryption configura
             <td class="align-top">cloudwatch_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfigurationcloudwatchencryption">dict{security_<wbr>configuration_<wbr>encryption_<wbr>configuration_<wbr>cloudwatch_<wbr>encryption}</a></code>
+                <code><a href="#securityconfigurationencryptionconfigurationcloudwatchencryption">Dict[security_<wbr>configuration_<wbr>encryption_<wbr>configuration_<wbr>cloudwatch_<wbr>encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -990,7 +990,7 @@ A `s3_encryption ` block as described below, which contains encryption configura
             <td class="align-top">job_<wbr>bookmarks_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfigurationjobbookmarksencryption">dict{security_<wbr>configuration_<wbr>encryption_<wbr>configuration_<wbr>job_<wbr>bookmarks_<wbr>encryption}</a></code>
+                <code><a href="#securityconfigurationencryptionconfigurationjobbookmarksencryption">Dict[security_<wbr>configuration_<wbr>encryption_<wbr>configuration_<wbr>job_<wbr>bookmarks_<wbr>encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1004,7 +1004,7 @@ A `s3_encryption ` block as described below, which contains encryption configura
             <td class="align-top">s3_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfigurations3encryption">dict{security_<wbr>configuration_<wbr>encryption_<wbr>configuration_<wbr>s3_<wbr>encryption}</a></code>
+                <code><a href="#securityconfigurationencryptionconfigurations3encryption">Dict[security_<wbr>configuration_<wbr>encryption_<wbr>configuration_<wbr>s3_<wbr>encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

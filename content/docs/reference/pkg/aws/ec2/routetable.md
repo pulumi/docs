@@ -363,7 +363,7 @@ The VPC ID.
             <td class="align-top">propagating_<wbr>vgws</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -378,7 +378,7 @@ A list of virtual gateways for propagation.
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#routetableroute">list[route_<wbr>table_<wbr>route]</a></code>
+                <code><a href="#routetableroute">List[route_<wbr>table_<wbr>route]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -393,7 +393,7 @@ A list of route objects. Their keys are documented below. This argument is proce
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -725,7 +725,7 @@ The following output properties are available:
             <td class="align-top">propagating_<wbr>vgws</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of virtual gateways for propagation.
  {{% /md %}}
@@ -738,7 +738,7 @@ The following output properties are available:
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#routetableroute">list[route_<wbr>table_<wbr>route]</a></code>
+                <code><a href="#routetableroute">List[route_<wbr>table_<wbr>route]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of route objects. Their keys are documented below. This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
  {{% /md %}}
@@ -751,7 +751,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1156,7 +1156,7 @@ The ID of the AWS account that owns the route table.
             <td class="align-top">propagating_<wbr>vgws</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1171,7 +1171,7 @@ A list of virtual gateways for propagation.
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#routetableroute">list[route_<wbr>table_<wbr>route]</a></code>
+                <code><a href="#routetableroute">List[route_<wbr>table_<wbr>route]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1186,7 +1186,7 @@ A list of route objects. Their keys are documented below. This argument is proce
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

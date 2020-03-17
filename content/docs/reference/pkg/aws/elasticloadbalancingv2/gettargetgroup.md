@@ -300,7 +300,7 @@ The unique name of the target group.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -988,7 +988,7 @@ The following output properties are available:
             <td class="align-top">health_<wbr>check</td>
             <td class="align-top">
                 
-                <code><a href="#gettargetgrouphealthcheck">dict{get_<wbr>target_<wbr>group_<wbr>health_<wbr>check}</a></code>
+                <code><a href="#gettargetgrouphealthcheck">Dict[get_<wbr>target_<wbr>group_<wbr>health_<wbr>check]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1085,7 +1085,7 @@ The following output properties are available:
             <td class="align-top">stickiness</td>
             <td class="align-top">
                 
-                <code><a href="#gettargetgroupstickiness">dict{get_<wbr>target_<wbr>group_<wbr>stickiness}</a></code>
+                <code><a href="#gettargetgroupstickiness">Dict[get_<wbr>target_<wbr>group_<wbr>stickiness]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1097,7 +1097,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

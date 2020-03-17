@@ -1091,7 +1091,7 @@ The minimum number of child health checks that must be healthy for Route 53 to c
             <td class="align-top">child_<wbr>healthchecks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1272,7 +1272,7 @@ This is a reference name used in Caller Reference
             <td class="align-top">regions</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1332,7 +1332,7 @@ String searched in the first 5120 bytes of the response body for check to be con
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2213,7 +2213,7 @@ The following output properties are available:
             <td class="align-top">child_<wbr>healthchecks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
  {{% /md %}}
@@ -2370,7 +2370,7 @@ The following output properties are available:
             <td class="align-top">regions</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
  {{% /md %}}
@@ -2422,7 +2422,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the health check.
  {{% /md %}}
@@ -3460,7 +3460,7 @@ The minimum number of child health checks that must be healthy for Route 53 to c
             <td class="align-top">child_<wbr>healthchecks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3641,7 +3641,7 @@ This is a reference name used in Caller Reference
             <td class="align-top">regions</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3701,7 +3701,7 @@ String searched in the first 5120 bytes of the response body for check to be con
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

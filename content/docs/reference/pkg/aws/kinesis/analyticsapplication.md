@@ -547,7 +547,7 @@ Key-value mapping of tags for the Kinesis Analytics Application.
             <td class="align-top">cloudwatch_<wbr>logging_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">dict{analytics_<wbr>application_<wbr>cloudwatch_<wbr>logging_<wbr>options}</a></code>
+                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Dict[analytics_<wbr>application_<wbr>cloudwatch_<wbr>logging_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -593,7 +593,7 @@ Description of the application.
             <td class="align-top">inputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputs">dict{analytics_<wbr>application_<wbr>inputs}</a></code>
+                <code><a href="#analyticsapplicationinputs">Dict[analytics_<wbr>application_<wbr>inputs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -623,7 +623,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">outputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutput">list[analytics_<wbr>application_<wbr>output]</a></code>
+                <code><a href="#analyticsapplicationoutput">List[analytics_<wbr>application_<wbr>output]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -638,7 +638,7 @@ Output destination configuration of the application. See Outputs below for more 
             <td class="align-top">reference_<wbr>data_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasources">dict{analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources}</a></code>
+                <code><a href="#analyticsapplicationreferencedatasources">Dict[analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -654,7 +654,7 @@ See Reference Data Sources below for more details.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1289,7 +1289,7 @@ See Reference Data Sources below for more details.
             <td class="align-top">cloudwatch_<wbr>logging_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">dict{analytics_<wbr>application_<wbr>cloudwatch_<wbr>logging_<wbr>options}</a></code>
+                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Dict[analytics_<wbr>application_<wbr>cloudwatch_<wbr>logging_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
@@ -1342,7 +1342,7 @@ See CloudWatch Logging Options below for more details.
             <td class="align-top">inputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputs">dict{analytics_<wbr>application_<wbr>inputs}</a></code>
+                <code><a href="#analyticsapplicationinputs">Dict[analytics_<wbr>application_<wbr>inputs]</a></code>
             </td>
             <td class="align-top">{{% md %}} Input configuration of the application. See Inputs below for more details.
  {{% /md %}}
@@ -1381,7 +1381,7 @@ See CloudWatch Logging Options below for more details.
             <td class="align-top">outputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutput">list[analytics_<wbr>application_<wbr>output]</a></code>
+                <code><a href="#analyticsapplicationoutput">List[analytics_<wbr>application_<wbr>output]</a></code>
             </td>
             <td class="align-top">{{% md %}} Output destination configuration of the application. See Outputs below for more details.
  {{% /md %}}
@@ -1394,7 +1394,7 @@ See CloudWatch Logging Options below for more details.
             <td class="align-top">reference_<wbr>data_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasources">dict{analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources}</a></code>
+                <code><a href="#analyticsapplicationreferencedatasources">Dict[analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources]</a></code>
             </td>
             <td class="align-top">{{% md %}} An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
@@ -1421,7 +1421,7 @@ See Reference Data Sources below for more details.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of tags for the Kinesis Analytics Application.
  {{% /md %}}
@@ -2192,7 +2192,7 @@ The ARN of the Kinesis Analytics Appliation.
             <td class="align-top">cloudwatch_<wbr>logging_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">dict{analytics_<wbr>application_<wbr>cloudwatch_<wbr>logging_<wbr>options}</a></code>
+                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Dict[analytics_<wbr>application_<wbr>cloudwatch_<wbr>logging_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2253,7 +2253,7 @@ Description of the application.
             <td class="align-top">inputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputs">dict{analytics_<wbr>application_<wbr>inputs}</a></code>
+                <code><a href="#analyticsapplicationinputs">Dict[analytics_<wbr>application_<wbr>inputs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2298,7 +2298,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">outputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutput">list[analytics_<wbr>application_<wbr>output]</a></code>
+                <code><a href="#analyticsapplicationoutput">List[analytics_<wbr>application_<wbr>output]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2313,7 +2313,7 @@ Output destination configuration of the application. See Outputs below for more 
             <td class="align-top">reference_<wbr>data_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasources">dict{analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources}</a></code>
+                <code><a href="#analyticsapplicationreferencedatasources">Dict[analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2344,7 +2344,7 @@ The Status of the application.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3151,7 +3151,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">kinesis_<wbr>firehose</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputskinesisfirehose">dict{analytics_<wbr>application_<wbr>inputs_<wbr>kinesis_<wbr>firehose}</a></code>
+                <code><a href="#analyticsapplicationinputskinesisfirehose">Dict[analytics_<wbr>application_<wbr>inputs_<wbr>kinesis_<wbr>firehose]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3165,7 +3165,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">kinesis_<wbr>stream</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputskinesisstream">dict{analytics_<wbr>application_<wbr>inputs_<wbr>kinesis_<wbr>stream}</a></code>
+                <code><a href="#analyticsapplicationinputskinesisstream">Dict[analytics_<wbr>application_<wbr>inputs_<wbr>kinesis_<wbr>stream]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3193,7 +3193,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">parallelism</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsparallelism">dict{analytics_<wbr>application_<wbr>inputs_<wbr>parallelism}</a></code>
+                <code><a href="#analyticsapplicationinputsparallelism">Dict[analytics_<wbr>application_<wbr>inputs_<wbr>parallelism]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3207,7 +3207,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">processing_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsprocessingconfiguration">dict{analytics_<wbr>application_<wbr>inputs_<wbr>processing_<wbr>configuration}</a></code>
+                <code><a href="#analyticsapplicationinputsprocessingconfiguration">Dict[analytics_<wbr>application_<wbr>inputs_<wbr>processing_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3221,7 +3221,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">schema</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschema">dict{analytics_<wbr>application_<wbr>inputs_<wbr>schema}</a></code>
+                <code><a href="#analyticsapplicationinputsschema">Dict[analytics_<wbr>application_<wbr>inputs_<wbr>schema]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3235,7 +3235,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">starting_<wbr>position_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsstartingpositionconfiguration">list[analytics_<wbr>application_<wbr>inputs_<wbr>starting_<wbr>position_<wbr>configuration]</a></code>
+                <code><a href="#analyticsapplicationinputsstartingpositionconfiguration">List[analytics_<wbr>application_<wbr>inputs_<wbr>starting_<wbr>position_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3249,7 +3249,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">stream_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3989,7 +3989,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">lambda_</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsprocessingconfigurationlambda">dict{analytics_<wbr>application_<wbr>inputs_<wbr>processing_<wbr>configuration_<wbr>lambda}</a></code>
+                <code><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Dict[analytics_<wbr>application_<wbr>inputs_<wbr>processing_<wbr>configuration_<wbr>lambda]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4443,7 +4443,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">record_<wbr>columns</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschemarecordcolumn">list[analytics_<wbr>application_<wbr>inputs_<wbr>schema_<wbr>record_<wbr>column]</a></code>
+                <code><a href="#analyticsapplicationinputsschemarecordcolumn">List[analytics_<wbr>application_<wbr>inputs_<wbr>schema_<wbr>record_<wbr>column]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4471,7 +4471,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">record_<wbr>format</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschemarecordformat">dict{analytics_<wbr>application_<wbr>inputs_<wbr>schema_<wbr>record_<wbr>format}</a></code>
+                <code><a href="#analyticsapplicationinputsschemarecordformat">Dict[analytics_<wbr>application_<wbr>inputs_<wbr>schema_<wbr>record_<wbr>format]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4943,7 +4943,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">mapping_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">dict{analytics_<wbr>application_<wbr>inputs_<wbr>schema_<wbr>record_<wbr>format_<wbr>mapping_<wbr>parameters}</a></code>
+                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Dict[analytics_<wbr>application_<wbr>inputs_<wbr>schema_<wbr>record_<wbr>format_<wbr>mapping_<wbr>parameters]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5156,7 +5156,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">csv</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">dict{analytics_<wbr>application_<wbr>inputs_<wbr>schema_<wbr>record_<wbr>format_<wbr>mapping_<wbr>parameters_<wbr>csv}</a></code>
+                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Dict[analytics_<wbr>application_<wbr>inputs_<wbr>schema_<wbr>record_<wbr>format_<wbr>mapping_<wbr>parameters_<wbr>csv]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5170,7 +5170,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">json</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">dict{analytics_<wbr>application_<wbr>inputs_<wbr>schema_<wbr>record_<wbr>format_<wbr>mapping_<wbr>parameters_<wbr>json}</a></code>
+                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Dict[analytics_<wbr>application_<wbr>inputs_<wbr>schema_<wbr>record_<wbr>format_<wbr>mapping_<wbr>parameters_<wbr>json]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6085,7 +6085,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">kinesis_<wbr>firehose</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutputkinesisfirehose">dict{analytics_<wbr>application_<wbr>output_<wbr>kinesis_<wbr>firehose}</a></code>
+                <code><a href="#analyticsapplicationoutputkinesisfirehose">Dict[analytics_<wbr>application_<wbr>output_<wbr>kinesis_<wbr>firehose]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6099,7 +6099,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">kinesis_<wbr>stream</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutputkinesisstream">dict{analytics_<wbr>application_<wbr>output_<wbr>kinesis_<wbr>stream}</a></code>
+                <code><a href="#analyticsapplicationoutputkinesisstream">Dict[analytics_<wbr>application_<wbr>output_<wbr>kinesis_<wbr>stream]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6113,7 +6113,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">lambda_</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutputlambda">dict{analytics_<wbr>application_<wbr>output_<wbr>lambda}</a></code>
+                <code><a href="#analyticsapplicationoutputlambda">Dict[analytics_<wbr>application_<wbr>output_<wbr>lambda]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6142,7 +6142,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">schema</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutputschema">dict{analytics_<wbr>application_<wbr>output_<wbr>schema}</a></code>
+                <code><a href="#analyticsapplicationoutputschema">Dict[analytics_<wbr>application_<wbr>output_<wbr>schema]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7239,7 +7239,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">s3</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcess3">dict{analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources_<wbr>s3}</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcess3">Dict[analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources_<wbr>s3]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7253,7 +7253,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">schema</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschema">dict{analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources_<wbr>schema}</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschema">Dict[analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources_<wbr>schema]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7777,7 +7777,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">record_<wbr>columns</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">list[analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources_<wbr>schema_<wbr>record_<wbr>column]</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">List[analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources_<wbr>schema_<wbr>record_<wbr>column]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7805,7 +7805,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">record_<wbr>format</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">dict{analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources_<wbr>schema_<wbr>record_<wbr>format}</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Dict[analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources_<wbr>schema_<wbr>record_<wbr>format]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -8277,7 +8277,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">mapping_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">dict{analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources_<wbr>schema_<wbr>record_<wbr>format_<wbr>mapping_<wbr>parameters}</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Dict[analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources_<wbr>schema_<wbr>record_<wbr>format_<wbr>mapping_<wbr>parameters]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8490,7 +8490,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">csv</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">dict{analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources_<wbr>schema_<wbr>record_<wbr>format_<wbr>mapping_<wbr>parameters_<wbr>csv}</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Dict[analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources_<wbr>schema_<wbr>record_<wbr>format_<wbr>mapping_<wbr>parameters_<wbr>csv]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8504,7 +8504,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">json</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">dict{analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources_<wbr>schema_<wbr>record_<wbr>format_<wbr>mapping_<wbr>parameters_<wbr>json}</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Dict[analytics_<wbr>application_<wbr>reference_<wbr>data_<wbr>sources_<wbr>schema_<wbr>record_<wbr>format_<wbr>mapping_<wbr>parameters_<wbr>json]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

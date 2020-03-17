@@ -348,7 +348,7 @@ The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
             <td class="align-top">compute_<wbr>environments</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -726,7 +726,7 @@ are evaluated first when associated with the same compute environment.
             <td class="align-top">compute_<wbr>environments</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Specifies the set of compute environments
 mapped to a job queue and their order.  The position of the compute environments
@@ -1173,7 +1173,7 @@ The Amazon Resource Name of the job queue.
             <td class="align-top">compute_<wbr>environments</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

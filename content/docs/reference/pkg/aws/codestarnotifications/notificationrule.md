@@ -473,7 +473,7 @@ The level of detail to include in the notifications for this resource. Possible 
             <td class="align-top">event_<wbr>type_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -534,7 +534,7 @@ The status of the notification rule. Possible values are `ENABLED` and `DISABLED
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -549,7 +549,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">list[notification_<wbr>rule_<wbr>target]</a></code>
+                <code><a href="#notificationruletarget">List[notification_<wbr>rule_<wbr>target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -999,7 +999,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
             <td class="align-top">event_<wbr>type_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of event types associated with this notification rule.
 For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
@@ -1052,7 +1052,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1065,7 +1065,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">list[notification_<wbr>rule_<wbr>target]</a></code>
+                <code><a href="#notificationruletarget">List[notification_<wbr>rule_<wbr>target]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
  {{% /md %}}
@@ -1610,7 +1610,7 @@ The level of detail to include in the notifications for this resource. Possible 
             <td class="align-top">event_<wbr>type_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1671,7 +1671,7 @@ The status of the notification rule. Possible values are `ENABLED` and `DISABLED
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1686,7 +1686,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">list[notification_<wbr>rule_<wbr>target]</a></code>
+                <code><a href="#notificationruletarget">List[notification_<wbr>rule_<wbr>target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

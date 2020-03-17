@@ -232,7 +232,7 @@ The name of the REST API to look up. If no REST API is found with this name, an 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -832,7 +832,7 @@ The following output properties are available:
             <td class="align-top">binary_<wbr>media_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The list of binary media types supported by the REST API.
  {{% /md %}}
@@ -858,7 +858,7 @@ The following output properties are available:
             <td class="align-top">endpoint_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getrestapiendpointconfiguration">list[get_<wbr>rest_<wbr>api_<wbr>endpoint_<wbr>configuration]</a></code>
+                <code><a href="#getrestapiendpointconfiguration">List[get_<wbr>rest_<wbr>api_<wbr>endpoint_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} The endpoint configuration of this RestApi showing the endpoint types of the API.
  {{% /md %}}
@@ -948,7 +948,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags.
  {{% /md %}}
@@ -1151,7 +1151,7 @@ The following output properties are available:
             <td class="align-top">types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1165,7 +1165,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>endpoint_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

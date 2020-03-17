@@ -798,7 +798,7 @@ Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FIL
             <td class="align-top">smb_<wbr>active_<wbr>directory_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#gatewaysmbactivedirectorysettings">dict{gateway_<wbr>smb_<wbr>active_<wbr>directory_<wbr>settings}</a></code>
+                <code><a href="#gatewaysmbactivedirectorysettings">Dict[gateway_<wbr>smb_<wbr>active_<wbr>directory_<wbr>settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -828,7 +828,7 @@ Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1572,7 +1572,7 @@ The following output properties are available:
             <td class="align-top">smb_<wbr>active_<wbr>directory_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#gatewaysmbactivedirectorysettings">dict{gateway_<wbr>smb_<wbr>active_<wbr>directory_<wbr>settings}</a></code>
+                <code><a href="#gatewaysmbactivedirectorysettings">Dict[gateway_<wbr>smb_<wbr>active_<wbr>directory_<wbr>settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
  {{% /md %}}
@@ -1598,7 +1598,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -2479,7 +2479,7 @@ Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FIL
             <td class="align-top">smb_<wbr>active_<wbr>directory_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#gatewaysmbactivedirectorysettings">dict{gateway_<wbr>smb_<wbr>active_<wbr>directory_<wbr>settings}</a></code>
+                <code><a href="#gatewaysmbactivedirectorysettings">Dict[gateway_<wbr>smb_<wbr>active_<wbr>directory_<wbr>settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2509,7 +2509,7 @@ Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

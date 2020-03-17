@@ -570,7 +570,7 @@ The S3 bucket configuration where inventory results are published (documented be
             <td class="align-top">destination</td>
             <td class="align-top">
                 
-                <code><a href="#inventorydestination">dict{inventory_<wbr>destination}</a></code>
+                <code><a href="#inventorydestination">Dict[inventory_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -600,7 +600,7 @@ Specifies whether the inventory is enabled or disabled.
             <td class="align-top">filter</td>
             <td class="align-top">
                 
-                <code><a href="#inventoryfilter">dict{inventory_<wbr>filter}</a></code>
+                <code><a href="#inventoryfilter">Dict[inventory_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -645,7 +645,7 @@ Unique identifier of the inventory configuration for the bucket.
             <td class="align-top">optional_<wbr>fields</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -661,7 +661,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
             <td class="align-top">schedule</td>
             <td class="align-top">
                 
-                <code><a href="#inventoryschedule">dict{inventory_<wbr>schedule}</a></code>
+                <code><a href="#inventoryschedule">Dict[inventory_<wbr>schedule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1098,7 +1098,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
             <td class="align-top">destination</td>
             <td class="align-top">
                 
-                <code><a href="#inventorydestination">dict{inventory_<wbr>destination}</a></code>
+                <code><a href="#inventorydestination">Dict[inventory_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} Contains information about where to publish the inventory results (documented below).
  {{% /md %}}
@@ -1124,7 +1124,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
             <td class="align-top">filter</td>
             <td class="align-top">
                 
-                <code><a href="#inventoryfilter">dict{inventory_<wbr>filter}</a></code>
+                <code><a href="#inventoryfilter">Dict[inventory_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an inventory filter. The inventory only includes objects that meet the filter&#39;s criteria (documented below).
  {{% /md %}}
@@ -1163,7 +1163,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
             <td class="align-top">optional_<wbr>fields</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of optional fields that are included in the inventory results.
 Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUploaded`, `ReplicationStatus`, `EncryptionStatus`, `ObjectLockRetainUntilDate`, `ObjectLockMode`, `ObjectLockLegalHoldStatus`, `IntelligentTieringAccessTier`.
@@ -1177,7 +1177,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
             <td class="align-top">schedule</td>
             <td class="align-top">
                 
-                <code><a href="#inventoryschedule">dict{inventory_<wbr>schedule}</a></code>
+                <code><a href="#inventoryschedule">Dict[inventory_<wbr>schedule]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the schedule for generating inventory results (documented below).
  {{% /md %}}
@@ -1707,7 +1707,7 @@ The S3 bucket configuration where inventory results are published (documented be
             <td class="align-top">destination</td>
             <td class="align-top">
                 
-                <code><a href="#inventorydestination">dict{inventory_<wbr>destination}</a></code>
+                <code><a href="#inventorydestination">Dict[inventory_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1737,7 +1737,7 @@ Specifies whether the inventory is enabled or disabled.
             <td class="align-top">filter</td>
             <td class="align-top">
                 
-                <code><a href="#inventoryfilter">dict{inventory_<wbr>filter}</a></code>
+                <code><a href="#inventoryfilter">Dict[inventory_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1782,7 +1782,7 @@ Unique identifier of the inventory configuration for the bucket.
             <td class="align-top">optional_<wbr>fields</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1798,7 +1798,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
             <td class="align-top">schedule</td>
             <td class="align-top">
                 
-                <code><a href="#inventoryschedule">dict{inventory_<wbr>schedule}</a></code>
+                <code><a href="#inventoryschedule">Dict[inventory_<wbr>schedule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1966,7 +1966,7 @@ The S3 bucket configuration where inventory results are published (documented be
             <td class="align-top">bucket</td>
             <td class="align-top">
                 
-                <code><a href="#inventorydestinationbucket">dict{inventory_<wbr>destination_<wbr>bucket}</a></code>
+                <code><a href="#inventorydestinationbucket">Dict[inventory_<wbr>destination_<wbr>bucket]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2337,7 +2337,7 @@ The Amazon S3 bucket ARN of the destination.
             <td class="align-top">encryption</td>
             <td class="align-top">
                 
-                <code><a href="#inventorydestinationbucketencryption">dict{inventory_<wbr>destination_<wbr>bucket_<wbr>encryption}</a></code>
+                <code><a href="#inventorydestinationbucketencryption">Dict[inventory_<wbr>destination_<wbr>bucket_<wbr>encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2573,7 +2573,7 @@ Specifies to use server-side encryption with Amazon S3-managed keys (SSE-S3) to 
             <td class="align-top">sse_<wbr>kms</td>
             <td class="align-top">
                 
-                <code><a href="#inventorydestinationbucketencryptionssekms">dict{inventory_<wbr>destination_<wbr>bucket_<wbr>encryption_<wbr>sse_<wbr>kms}</a></code>
+                <code><a href="#inventorydestinationbucketencryptionssekms">Dict[inventory_<wbr>destination_<wbr>bucket_<wbr>encryption_<wbr>sse_<wbr>kms]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2588,7 +2588,7 @@ Specifies to use server-side encryption with AWS KMS-managed keys to encrypt the
             <td class="align-top">sse_<wbr>s3</td>
             <td class="align-top">
                 
-                <code><a href="#inventorydestinationbucketencryptionsses3">dict{inventory_<wbr>destination_<wbr>bucket_<wbr>encryption_<wbr>sse_<wbr>s3}</a></code>
+                <code><a href="#inventorydestinationbucketencryptionsses3">Dict[inventory_<wbr>destination_<wbr>bucket_<wbr>encryption_<wbr>sse_<wbr>s3]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

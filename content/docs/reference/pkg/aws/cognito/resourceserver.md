@@ -379,7 +379,7 @@ A name for the resource server.
             <td class="align-top">scopes</td>
             <td class="align-top">
                 
-                <code><a href="#resourceserverscope">list[resource_<wbr>server_<wbr>scope]</a></code>
+                <code><a href="#resourceserverscope">List[resource_<wbr>server_<wbr>scope]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -720,7 +720,7 @@ The following output properties are available:
             <td class="align-top">scope_<wbr>identifiers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of all scopes configured for this resource server in the format identifier/scope_name.
  {{% /md %}}
@@ -733,7 +733,7 @@ The following output properties are available:
             <td class="align-top">scopes</td>
             <td class="align-top">
                 
-                <code><a href="#resourceserverscope">list[resource_<wbr>server_<wbr>scope]</a></code>
+                <code><a href="#resourceserverscope">List[resource_<wbr>server_<wbr>scope]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of Authorization Scope.
  {{% /md %}}
@@ -1149,7 +1149,7 @@ A name for the resource server.
             <td class="align-top">scope_<wbr>identifiers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1164,7 +1164,7 @@ A list of all scopes configured for this resource server in the format identifie
             <td class="align-top">scopes</td>
             <td class="align-top">
                 
-                <code><a href="#resourceserverscope">list[resource_<wbr>server_<wbr>scope]</a></code>
+                <code><a href="#resourceserverscope">List[resource_<wbr>server_<wbr>scope]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

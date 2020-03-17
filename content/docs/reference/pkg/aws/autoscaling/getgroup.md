@@ -1030,7 +1030,7 @@ The following output properties are available:
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} One or more Availability Zones for the group.
  {{% /md %}}
@@ -1120,7 +1120,7 @@ The following output properties are available:
             <td class="align-top">load_<wbr>balancers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} One or more load balancers associated with the group.
  {{% /md %}}
@@ -1223,7 +1223,7 @@ The following output properties are available:
             <td class="align-top">target_<wbr>group_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The Amazon Resource Names (ARN) of the target groups for your load balancer.
  {{% /md %}}
@@ -1236,7 +1236,7 @@ The following output properties are available:
             <td class="align-top">termination_<wbr>policies</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The termination policies for the group.
  {{% /md %}}

@@ -543,7 +543,7 @@ A key policy JSON document. If you do not provide a key policy, AWS KMS attaches
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1213,7 +1213,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A key-value map of tags to assign to the key.
  {{% /md %}}
@@ -2008,7 +2008,7 @@ A key policy JSON document. If you do not provide a key policy, AWS KMS attaches
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

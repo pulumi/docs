@@ -470,7 +470,7 @@ A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of l
             <td class="align-top">log_<wbr>group</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1375,7 +1375,7 @@ A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of l
             <td class="align-top">log_<wbr>group</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -2277,7 +2277,7 @@ by default.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">list[instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceebsblockdevice">List[instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2336,7 +2336,7 @@ If true, the launched EC2 instance will be EBS-optimized.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">list[instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceephemeralblockdevice">List[instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2439,7 +2439,7 @@ The type of instance to start
             <td class="align-top">layer_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2616,7 +2616,7 @@ The public IP address assigned to the instance, if applicable.
             <td class="align-top">root_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">list[instance_<wbr>root_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instancerootblockdevice">List[instance_<wbr>root_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2661,7 +2661,7 @@ Name of the type of root device instances will have by default.  Can be either `
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4730,7 +4730,7 @@ by default.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">list[instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceebsblockdevice">List[instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -4794,7 +4794,7 @@ instance.  See Block Devices below for details.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">list[instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceephemeralblockdevice">List[instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize Ephemeral (also known as
 &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
@@ -4883,7 +4883,7 @@ instance.  See Block Devices below for details.
             <td class="align-top">layer_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The ids of the layers the instance will belong to.
  {{% /md %}}
@@ -5036,7 +5036,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC
             <td class="align-top">root_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">list[instance_<wbr>root_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instancerootblockdevice">List[instance_<wbr>root_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -5075,7 +5075,7 @@ device of the instance. See Block Devices below for details.
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The associated security groups.
  {{% /md %}}
@@ -7455,7 +7455,7 @@ by default.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">list[instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceebsblockdevice">List[instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7529,7 +7529,7 @@ EC2 instance ID
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">list[instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceephemeralblockdevice">List[instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7632,7 +7632,7 @@ The type of instance to start
             <td class="align-top">layer_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7809,7 +7809,7 @@ The public IP address assigned to the instance, if applicable.
             <td class="align-top">root_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">list[instance_<wbr>root_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instancerootblockdevice">List[instance_<wbr>root_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7854,7 +7854,7 @@ Name of the type of root device instances will have by default.  Can be either `
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

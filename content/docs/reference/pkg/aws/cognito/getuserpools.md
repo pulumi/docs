@@ -440,7 +440,7 @@ The following output properties are available:
             <td class="align-top">arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -465,7 +465,7 @@ The following output properties are available:
             <td class="align-top">ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The list of cognito user pool ids.
  {{% /md %}}

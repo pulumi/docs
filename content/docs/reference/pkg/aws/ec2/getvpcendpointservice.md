@@ -313,7 +313,7 @@ The service name that can be specified when creating a VPC endpoint.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -936,7 +936,7 @@ The following output properties are available:
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The Availability Zones in which the service is available.
  {{% /md %}}
@@ -949,7 +949,7 @@ The following output properties are available:
             <td class="align-top">base_<wbr>endpoint_<wbr>dns_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The DNS names for the service.
  {{% /md %}}
@@ -1064,7 +1064,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the resource.
  {{% /md %}}

@@ -305,7 +305,7 @@ The display name of a backup plan.
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">list[plan_<wbr>rule]</a></code>
+                <code><a href="#planrule">List[plan_<wbr>rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -320,7 +320,7 @@ A rule object that specifies a scheduled task that is used to back up a selectio
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -650,7 +650,7 @@ The following output properties are available:
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">list[plan_<wbr>rule]</a></code>
+                <code><a href="#planrule">List[plan_<wbr>rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} A rule object that specifies a scheduled task that is used to back up a selection of resources.
  {{% /md %}}
@@ -663,7 +663,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Metadata that you can assign to help organize the plans you create.
  {{% /md %}}
@@ -1083,7 +1083,7 @@ The display name of a backup plan.
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">list[plan_<wbr>rule]</a></code>
+                <code><a href="#planrule">List[plan_<wbr>rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1098,7 +1098,7 @@ A rule object that specifies a scheduled task that is used to back up a selectio
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1566,7 +1566,7 @@ The amount of time AWS Backup attempts a backup before canceling the job and ret
             <td class="align-top">lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#planrulelifecycle">dict{plan_<wbr>rule_<wbr>lifecycle}</a></code>
+                <code><a href="#planrulelifecycle">Dict[plan_<wbr>rule_<wbr>lifecycle]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1581,7 +1581,7 @@ The lifecycle defines when a protected resource is transitioned to cold storage 
             <td class="align-top">recovery_<wbr>point_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

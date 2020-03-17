@@ -378,7 +378,7 @@ The ID of the requester VPC peering connection.
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsaccepter">dict{peering_<wbr>connection_<wbr>options_<wbr>accepter}</a></code>
+                <code><a href="#peeringconnectionoptionsaccepter">Dict[peering_<wbr>connection_<wbr>options_<wbr>accepter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -395,7 +395,7 @@ the peering connection (a maximum of one).
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsrequester">dict{peering_<wbr>connection_<wbr>options_<wbr>requester}</a></code>
+                <code><a href="#peeringconnectionoptionsrequester">Dict[peering_<wbr>connection_<wbr>options_<wbr>requester]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -650,7 +650,7 @@ the peering connection (a maximum of one).
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsaccepter">dict{peering_<wbr>connection_<wbr>options_<wbr>accepter}</a></code>
+                <code><a href="#peeringconnectionoptionsaccepter">Dict[peering_<wbr>connection_<wbr>options_<wbr>accepter]</a></code>
             </td>
             <td class="align-top">{{% md %}} An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -665,7 +665,7 @@ the peering connection (a maximum of one).
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsrequester">dict{peering_<wbr>connection_<wbr>options_<wbr>requester}</a></code>
+                <code><a href="#peeringconnectionoptionsrequester">Dict[peering_<wbr>connection_<wbr>options_<wbr>requester]</a></code>
             </td>
             <td class="align-top">{{% md %}} A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
@@ -979,7 +979,7 @@ The ID of the requester VPC peering connection.
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsaccepter">dict{peering_<wbr>connection_<wbr>options_<wbr>accepter}</a></code>
+                <code><a href="#peeringconnectionoptionsaccepter">Dict[peering_<wbr>connection_<wbr>options_<wbr>accepter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -996,7 +996,7 @@ the peering connection (a maximum of one).
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsrequester">dict{peering_<wbr>connection_<wbr>options_<wbr>requester}</a></code>
+                <code><a href="#peeringconnectionoptionsrequester">Dict[peering_<wbr>connection_<wbr>options_<wbr>requester]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

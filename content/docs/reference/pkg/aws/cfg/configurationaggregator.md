@@ -370,7 +370,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">account_<wbr>aggregation_<wbr>source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatoraccountaggregationsource">dict{configuration_<wbr>aggregator_<wbr>account_<wbr>aggregation_<wbr>source}</a></code>
+                <code><a href="#configurationaggregatoraccountaggregationsource">Dict[configuration_<wbr>aggregator_<wbr>account_<wbr>aggregation_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -400,7 +400,7 @@ The name of the configuration aggregator.
             <td class="align-top">organization_<wbr>aggregation_<wbr>source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatororganizationaggregationsource">dict{configuration_<wbr>aggregator_<wbr>organization_<wbr>aggregation_<wbr>source}</a></code>
+                <code><a href="#configurationaggregatororganizationaggregationsource">Dict[configuration_<wbr>aggregator_<wbr>organization_<wbr>aggregation_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -415,7 +415,7 @@ The organization to aggregate config data from as documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -719,7 +719,7 @@ The following output properties are available:
             <td class="align-top">account_<wbr>aggregation_<wbr>source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatoraccountaggregationsource">dict{configuration_<wbr>aggregator_<wbr>account_<wbr>aggregation_<wbr>source}</a></code>
+                <code><a href="#configurationaggregatoraccountaggregationsource">Dict[configuration_<wbr>aggregator_<wbr>account_<wbr>aggregation_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} The account(s) to aggregate config data from as documented below.
  {{% /md %}}
@@ -758,7 +758,7 @@ The following output properties are available:
             <td class="align-top">organization_<wbr>aggregation_<wbr>source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatororganizationaggregationsource">dict{configuration_<wbr>aggregator_<wbr>organization_<wbr>aggregation_<wbr>source}</a></code>
+                <code><a href="#configurationaggregatororganizationaggregationsource">Dict[configuration_<wbr>aggregator_<wbr>organization_<wbr>aggregation_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} The organization to aggregate config data from as documented below.
  {{% /md %}}
@@ -771,7 +771,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1148,7 +1148,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">account_<wbr>aggregation_<wbr>source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatoraccountaggregationsource">dict{configuration_<wbr>aggregator_<wbr>account_<wbr>aggregation_<wbr>source}</a></code>
+                <code><a href="#configurationaggregatoraccountaggregationsource">Dict[configuration_<wbr>aggregator_<wbr>account_<wbr>aggregation_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1193,7 +1193,7 @@ The name of the configuration aggregator.
             <td class="align-top">organization_<wbr>aggregation_<wbr>source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatororganizationaggregationsource">dict{configuration_<wbr>aggregator_<wbr>organization_<wbr>aggregation_<wbr>source}</a></code>
+                <code><a href="#configurationaggregatororganizationaggregationsource">Dict[configuration_<wbr>aggregator_<wbr>organization_<wbr>aggregation_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1208,7 +1208,7 @@ The organization to aggregate config data from as documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1466,7 +1466,7 @@ List of source regions being aggregated.
             <td class="align-top">account_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1496,7 +1496,7 @@ If true, aggregate existing AWS Config regions and future regions.
             <td class="align-top">regions</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1762,7 +1762,7 @@ If true, aggregate existing AWS Config regions and future regions.
             <td class="align-top">regions</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

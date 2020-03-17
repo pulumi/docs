@@ -542,7 +542,7 @@ The principal that is given permission to retire the grant by using RetireGrant 
             <td class="align-top">constraints</td>
             <td class="align-top">
                 
-                <code><a href="#grantconstraint">list[grant_<wbr>constraint]</a></code>
+                <code><a href="#grantconstraint">List[grant_<wbr>constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -557,7 +557,7 @@ A structure that you can use to allow certain operations in the grant only when 
             <td class="align-top">grant_<wbr>creation_<wbr>tokens</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -619,7 +619,7 @@ A friendly name for identifying the grant.
             <td class="align-top">operations</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1150,7 +1150,7 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
             <td class="align-top">constraints</td>
             <td class="align-top">
                 
-                <code><a href="#grantconstraint">list[grant_<wbr>constraint]</a></code>
+                <code><a href="#grantconstraint">List[grant_<wbr>constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
  {{% /md %}}
@@ -1163,7 +1163,7 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
             <td class="align-top">grant_<wbr>creation_<wbr>tokens</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of grant tokens to be used when creating the grant. See [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token) for more information about grant tokens.
 * `retire_on_delete` -(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
@@ -1243,7 +1243,7 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
             <td class="align-top">operations</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of operations that the grant permits. The permitted values are: `Decrypt, Encrypt, GenerateDataKey, GenerateDataKeyWithoutPlaintext, ReEncryptFrom, ReEncryptTo, CreateGrant, RetireGrant, DescribeKey`
  {{% /md %}}
@@ -1873,7 +1873,7 @@ The principal that is given permission to retire the grant by using RetireGrant 
             <td class="align-top">constraints</td>
             <td class="align-top">
                 
-                <code><a href="#grantconstraint">list[grant_<wbr>constraint]</a></code>
+                <code><a href="#grantconstraint">List[grant_<wbr>constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1888,7 +1888,7 @@ A structure that you can use to allow certain operations in the grant only when 
             <td class="align-top">grant_<wbr>creation_<wbr>tokens</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1980,7 +1980,7 @@ A friendly name for identifying the grant.
             <td class="align-top">operations</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2216,7 +2216,7 @@ The principal that is given permission to retire the grant by using RetireGrant 
             <td class="align-top">encryption_<wbr>context_<wbr>equals</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2230,7 +2230,7 @@ The principal that is given permission to retire the grant by using RetireGrant 
             <td class="align-top">encryption_<wbr>context_<wbr>subset</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

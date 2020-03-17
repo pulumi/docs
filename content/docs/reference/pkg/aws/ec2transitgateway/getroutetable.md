@@ -281,7 +281,7 @@ Identifier of the EC2 Transit Gateway Route Table.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablefilter">list[get_<wbr>route_<wbr>table_<wbr>filter]</a></code>
+                <code><a href="#getroutetablefilter">List[get_<wbr>route_<wbr>table_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -311,7 +311,7 @@ Identifier of the EC2 Transit Gateway Route Table.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -677,7 +677,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablefilter">list[get_<wbr>route_<wbr>table_<wbr>filter]</a></code>
+                <code><a href="#getroutetablefilter">List[get_<wbr>route_<wbr>table_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -702,7 +702,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value tags for the EC2 Transit Gateway Route Table
  {{% /md %}}
@@ -939,7 +939,7 @@ Name of the filter.
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

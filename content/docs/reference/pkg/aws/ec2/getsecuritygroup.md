@@ -372,7 +372,7 @@ The id of the VPC that the desired security group belongs to.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsecuritygroupfilter">list[get_<wbr>security_<wbr>group_<wbr>filter]</a></code>
+                <code><a href="#getsecuritygroupfilter">List[get_<wbr>security_<wbr>group_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -418,7 +418,7 @@ The name of the field to filter by, as defined by
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -828,7 +828,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsecuritygroupfilter">list[get_<wbr>security_<wbr>group_<wbr>filter]</a></code>
+                <code><a href="#getsecuritygroupfilter">List[get_<wbr>security_<wbr>group_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -864,7 +864,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1106,7 +1106,7 @@ The name of the field to filter by, as defined by
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

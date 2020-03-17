@@ -636,7 +636,7 @@ A description of the DataSource.
             <td class="align-top">dynamodb_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcedynamodbconfig">dict{data_<wbr>source_<wbr>dynamodb_<wbr>config}</a></code>
+                <code><a href="#datasourcedynamodbconfig">Dict[data_<wbr>source_<wbr>dynamodb_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -651,7 +651,7 @@ DynamoDB settings. See below
             <td class="align-top">elasticsearch_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourceelasticsearchconfig">dict{data_<wbr>source_<wbr>elasticsearch_<wbr>config}</a></code>
+                <code><a href="#datasourceelasticsearchconfig">Dict[data_<wbr>source_<wbr>elasticsearch_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -666,7 +666,7 @@ Amazon Elasticsearch settings. See below
             <td class="align-top">http_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcehttpconfig">dict{data_<wbr>source_<wbr>http_<wbr>config}</a></code>
+                <code><a href="#datasourcehttpconfig">Dict[data_<wbr>source_<wbr>http_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -681,7 +681,7 @@ HTTP settings. See below
             <td class="align-top">lambda_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcelambdaconfig">dict{data_<wbr>source_<wbr>lambda_<wbr>config}</a></code>
+                <code><a href="#datasourcelambdaconfig">Dict[data_<wbr>source_<wbr>lambda_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1264,7 +1264,7 @@ The following output properties are available:
             <td class="align-top">dynamodb_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcedynamodbconfig">dict{data_<wbr>source_<wbr>dynamodb_<wbr>config}</a></code>
+                <code><a href="#datasourcedynamodbconfig">Dict[data_<wbr>source_<wbr>dynamodb_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} DynamoDB settings. See below
  {{% /md %}}
@@ -1277,7 +1277,7 @@ The following output properties are available:
             <td class="align-top">elasticsearch_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourceelasticsearchconfig">dict{data_<wbr>source_<wbr>elasticsearch_<wbr>config}</a></code>
+                <code><a href="#datasourceelasticsearchconfig">Dict[data_<wbr>source_<wbr>elasticsearch_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Amazon Elasticsearch settings. See below
  {{% /md %}}
@@ -1290,7 +1290,7 @@ The following output properties are available:
             <td class="align-top">http_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcehttpconfig">dict{data_<wbr>source_<wbr>http_<wbr>config}</a></code>
+                <code><a href="#datasourcehttpconfig">Dict[data_<wbr>source_<wbr>http_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} HTTP settings. See below
  {{% /md %}}
@@ -1303,7 +1303,7 @@ The following output properties are available:
             <td class="align-top">lambda_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcelambdaconfig">dict{data_<wbr>source_<wbr>lambda_<wbr>config}</a></code>
+                <code><a href="#datasourcelambdaconfig">Dict[data_<wbr>source_<wbr>lambda_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} AWS Lambda settings. See below
  {{% /md %}}
@@ -1989,7 +1989,7 @@ A description of the DataSource.
             <td class="align-top">dynamodb_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcedynamodbconfig">dict{data_<wbr>source_<wbr>dynamodb_<wbr>config}</a></code>
+                <code><a href="#datasourcedynamodbconfig">Dict[data_<wbr>source_<wbr>dynamodb_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2004,7 +2004,7 @@ DynamoDB settings. See below
             <td class="align-top">elasticsearch_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourceelasticsearchconfig">dict{data_<wbr>source_<wbr>elasticsearch_<wbr>config}</a></code>
+                <code><a href="#datasourceelasticsearchconfig">Dict[data_<wbr>source_<wbr>elasticsearch_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2019,7 +2019,7 @@ Amazon Elasticsearch settings. See below
             <td class="align-top">http_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcehttpconfig">dict{data_<wbr>source_<wbr>http_<wbr>config}</a></code>
+                <code><a href="#datasourcehttpconfig">Dict[data_<wbr>source_<wbr>http_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2034,7 +2034,7 @@ HTTP settings. See below
             <td class="align-top">lambda_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcelambdaconfig">dict{data_<wbr>source_<wbr>lambda_<wbr>config}</a></code>
+                <code><a href="#datasourcelambdaconfig">Dict[data_<wbr>source_<wbr>lambda_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -451,7 +451,7 @@ Used with `name` field to get a private Hosted Zone.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1121,7 +1121,7 @@ The following output properties are available:
             <td class="align-top">name_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The list of DNS name servers for the Hosted Zone.
  {{% /md %}}
@@ -1159,7 +1159,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

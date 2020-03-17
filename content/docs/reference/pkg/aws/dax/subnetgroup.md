@@ -319,7 +319,7 @@ The name of the subnet group.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -610,7 +610,7 @@ The following output properties are available:
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of VPC subnet IDs for the subnet group.
  {{% /md %}}
@@ -985,7 +985,7 @@ The name of the subnet group.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

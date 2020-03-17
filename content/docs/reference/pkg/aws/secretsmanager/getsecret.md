@@ -845,7 +845,7 @@ The following output properties are available:
             <td class="align-top">rotation_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretrotationrule">list[get_<wbr>secret_<wbr>rotation_<wbr>rule]</a></code>
+                <code><a href="#getsecretrotationrule">List[get_<wbr>secret_<wbr>rotation_<wbr>rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} Rotation rules if rotation is enabled.
  {{% /md %}}
@@ -858,7 +858,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Tags of the secret.
  {{% /md %}}

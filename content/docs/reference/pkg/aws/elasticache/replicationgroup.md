@@ -1550,7 +1550,7 @@ Specifies whether a read-only replica will be automatically promoted to read/wri
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1565,7 +1565,7 @@ A list of EC2 availability zones in which the replication group&#39;s cache clus
             <td class="align-top">cluster_<wbr>mode</td>
             <td class="align-top">
                 
-                <code><a href="#replicationgroupclustermode">dict{replication_<wbr>group_<wbr>cluster_<wbr>mode}</a></code>
+                <code><a href="#replicationgroupclustermode">Dict[replication_<wbr>group_<wbr>cluster_<wbr>mode]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1749,7 +1749,7 @@ The replication group identifier. This parameter is stored as a lowercase string
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1764,7 +1764,7 @@ One or more Amazon VPC security groups associated with this replication group. U
             <td class="align-top">security_<wbr>group_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1779,7 +1779,7 @@ A list of cache security group names to associate with this replication group.
             <td class="align-top">snapshot_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1861,7 +1861,7 @@ The name of the cache subnet group to be used for the replication group.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3253,7 +3253,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not important.
  {{% /md %}}
@@ -3266,7 +3266,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
             <td class="align-top">cluster_<wbr>mode</td>
             <td class="align-top">
                 
-                <code><a href="#replicationgroupclustermode">dict{replication_<wbr>group_<wbr>cluster_<wbr>mode}</a></code>
+                <code><a href="#replicationgroupclustermode">Dict[replication_<wbr>group_<wbr>cluster_<wbr>mode]</a></code>
             </td>
             <td class="align-top">{{% md %}} Create a native redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed.
  {{% /md %}}
@@ -3346,7 +3346,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
             <td class="align-top">member_<wbr>clusters</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The identifiers of all the nodes that are part of this replication group.
  {{% /md %}}
@@ -3465,7 +3465,7 @@ SNS topic to send ElastiCache notifications to. Example:
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
  {{% /md %}}
@@ -3478,7 +3478,7 @@ SNS topic to send ElastiCache notifications to. Example:
             <td class="align-top">security_<wbr>group_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of cache security group names to associate with this replication group.
  {{% /md %}}
@@ -3491,7 +3491,7 @@ SNS topic to send ElastiCache notifications to. Example:
             <td class="align-top">snapshot_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A single-element string list containing an
 Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
@@ -3563,7 +3563,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource
  {{% /md %}}
@@ -5186,7 +5186,7 @@ Specifies whether a read-only replica will be automatically promoted to read/wri
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5201,7 +5201,7 @@ A list of EC2 availability zones in which the replication group&#39;s cache clus
             <td class="align-top">cluster_<wbr>mode</td>
             <td class="align-top">
                 
-                <code><a href="#replicationgroupclustermode">dict{replication_<wbr>group_<wbr>cluster_<wbr>mode}</a></code>
+                <code><a href="#replicationgroupclustermode">Dict[replication_<wbr>group_<wbr>cluster_<wbr>mode]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5293,7 +5293,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
             <td class="align-top">member_<wbr>clusters</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5430,7 +5430,7 @@ The replication group identifier. This parameter is stored as a lowercase string
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5445,7 +5445,7 @@ One or more Amazon VPC security groups associated with this replication group. U
             <td class="align-top">security_<wbr>group_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5460,7 +5460,7 @@ A list of cache security group names to associate with this replication group.
             <td class="align-top">snapshot_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5542,7 +5542,7 @@ The name of the cache subnet group to be used for the replication group.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

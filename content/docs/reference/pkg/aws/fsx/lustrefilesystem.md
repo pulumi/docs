@@ -558,7 +558,7 @@ For files imported from a data repository, this value determines the stripe coun
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -603,7 +603,7 @@ A list of IDs for the subnets that the file system will be accessible from. File
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1299,7 +1299,7 @@ The following output properties are available:
             <td class="align-top">network_<wbr>interface_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Set of Elastic Network Interface identifiers from which the file system is accessible.
  {{% /md %}}
@@ -1325,7 +1325,7 @@ The following output properties are available:
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
  {{% /md %}}
@@ -1364,7 +1364,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the file system.
  {{% /md %}}
@@ -2202,7 +2202,7 @@ For files imported from a data repository, this value determines the stripe coun
             <td class="align-top">network_<wbr>interface_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2232,7 +2232,7 @@ AWS account identifier that created the file system.
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2277,7 +2277,7 @@ A list of IDs for the subnets that the file system will be accessible from. File
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

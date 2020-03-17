@@ -341,7 +341,7 @@ Key-value mapping of resource tags
             <td class="align-top">activated_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedrule">list[rule_<wbr>group_<wbr>activated_<wbr>rule]</a></code>
+                <code><a href="#rulegroupactivatedrule">List[rule_<wbr>group_<wbr>activated_<wbr>rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -386,7 +386,7 @@ A friendly name of the rule group
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -690,7 +690,7 @@ The following output properties are available:
             <td class="align-top">activated_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedrule">list[rule_<wbr>group_<wbr>activated_<wbr>rule]</a></code>
+                <code><a href="#rulegroupactivatedrule">List[rule_<wbr>group_<wbr>activated_<wbr>rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of activated rules, see below
  {{% /md %}}
@@ -742,7 +742,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1119,7 +1119,7 @@ Key-value mapping of resource tags
             <td class="align-top">activated_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedrule">list[rule_<wbr>group_<wbr>activated_<wbr>rule]</a></code>
+                <code><a href="#rulegroupactivatedrule">List[rule_<wbr>group_<wbr>activated_<wbr>rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1179,7 +1179,7 @@ A friendly name of the rule group
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1482,7 +1482,7 @@ The rule type, either [`REGULAR`](https://www.terraform.io/docs/providers/aws/r/
             <td class="align-top">action</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedruleaction">dict{rule_<wbr>group_<wbr>activated_<wbr>rule_<wbr>action}</a></code>
+                <code><a href="#rulegroupactivatedruleaction">Dict[rule_<wbr>group_<wbr>activated_<wbr>rule_<wbr>action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -547,7 +547,7 @@ Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, 
             <td class="align-top">license_<wbr>rules</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -577,7 +577,7 @@ Name of the license configuration.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1011,7 +1011,7 @@ The following output properties are available:
             <td class="align-top">license_<wbr>rules</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Array of configured License Manager rules.
  {{% /md %}}
@@ -1037,7 +1037,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1564,7 +1564,7 @@ Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, 
             <td class="align-top">license_<wbr>rules</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1594,7 +1594,7 @@ Name of the license configuration.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -288,7 +288,7 @@ The URL of the identity provider. Corresponds to the _iss_ claim.
             <td class="align-top">client_<wbr>id_<wbr>lists</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -303,7 +303,7 @@ A list of client IDs (also known as audiences). When a mobile or web app registe
             <td class="align-top">thumbprint_<wbr>lists</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -596,7 +596,7 @@ The following output properties are available:
             <td class="align-top">client_<wbr>id_<wbr>lists</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that&#39;s sent as the client_id parameter on OAuth requests.)
  {{% /md %}}
@@ -609,7 +609,7 @@ The following output properties are available:
             <td class="align-top">thumbprint_<wbr>lists</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider&#39;s server certificate(s). 
  {{% /md %}}
@@ -969,7 +969,7 @@ The ARN assigned by AWS for this provider.
             <td class="align-top">client_<wbr>id_<wbr>lists</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -984,7 +984,7 @@ A list of client IDs (also known as audiences). When a mobile or web app registe
             <td class="align-top">thumbprint_<wbr>lists</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

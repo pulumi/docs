@@ -627,7 +627,7 @@ The number of available cluster certificates may vary depending on state of the 
             <td class="align-top">cluster_<wbr>certificates</td>
             <td class="align-top">
                 
-                <code><a href="#getclusterclustercertificates">dict{get_<wbr>cluster_<wbr>cluster_<wbr>certificates}</a></code>
+                <code><a href="#getclusterclustercertificates">Dict[get_<wbr>cluster_<wbr>cluster_<wbr>certificates]</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of cluster certificates.
 * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
@@ -696,7 +696,7 @@ The number of available cluster certificates may vary depending on state of the 
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The IDs of subnets in which cluster operates.
  {{% /md %}}

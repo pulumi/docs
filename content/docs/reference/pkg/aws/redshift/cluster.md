@@ -1816,7 +1816,7 @@ The specific revision number of the database in the cluster
             <td class="align-top">cluster_<wbr>security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1968,7 +1968,7 @@ The identifier of the final snapshot that is to be created immediately before de
             <td class="align-top">iam_<wbr>roles</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1998,7 +1998,7 @@ The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` ne
             <td class="align-top">logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">dict{cluster_<wbr>logging}</a></code>
+                <code><a href="#clusterlogging">Dict[cluster_<wbr>logging]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2167,7 +2167,7 @@ The name of the cluster the source snapshot was created from.
             <td class="align-top">snapshot_<wbr>copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">dict{cluster_<wbr>snapshot_<wbr>copy}</a></code>
+                <code><a href="#clustersnapshotcopy">Dict[cluster_<wbr>snapshot_<wbr>copy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2197,7 +2197,7 @@ The name of the snapshot from which to create the new cluster.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2212,7 +2212,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3851,7 +3851,7 @@ string.
             <td class="align-top">cluster_<wbr>security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of security groups to be associated with this cluster.
  {{% /md %}}
@@ -3996,7 +3996,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
             <td class="align-top">iam_<wbr>roles</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be associated to the cluster at any time.
  {{% /md %}}
@@ -4022,7 +4022,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
             <td class="align-top">logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">dict{cluster_<wbr>logging}</a></code>
+                <code><a href="#clusterlogging">Dict[cluster_<wbr>logging]</a></code>
             </td>
             <td class="align-top">{{% md %}} Logging, documented below.
  {{% /md %}}
@@ -4169,7 +4169,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
             <td class="align-top">snapshot_<wbr>copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">dict{cluster_<wbr>snapshot_<wbr>copy}</a></code>
+                <code><a href="#clustersnapshotcopy">Dict[cluster_<wbr>snapshot_<wbr>copy]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration of automatic copy of snapshots from one region to another. Documented below.
  {{% /md %}}
@@ -4195,7 +4195,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -4208,7 +4208,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
  {{% /md %}}
@@ -6122,7 +6122,7 @@ The specific revision number of the database in the cluster
             <td class="align-top">cluster_<wbr>security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6289,7 +6289,7 @@ The identifier of the final snapshot that is to be created immediately before de
             <td class="align-top">iam_<wbr>roles</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6319,7 +6319,7 @@ The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` ne
             <td class="align-top">logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">dict{cluster_<wbr>logging}</a></code>
+                <code><a href="#clusterlogging">Dict[cluster_<wbr>logging]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6488,7 +6488,7 @@ The name of the cluster the source snapshot was created from.
             <td class="align-top">snapshot_<wbr>copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">dict{cluster_<wbr>snapshot_<wbr>copy}</a></code>
+                <code><a href="#clustersnapshotcopy">Dict[cluster_<wbr>snapshot_<wbr>copy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6518,7 +6518,7 @@ The name of the snapshot from which to create the new cluster.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6533,7 +6533,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

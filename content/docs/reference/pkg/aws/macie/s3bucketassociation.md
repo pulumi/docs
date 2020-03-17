@@ -352,7 +352,7 @@ The name of the S3 bucket that you want to associate with Amazon Macie.
             <td class="align-top">classification_<wbr>type</td>
             <td class="align-top">
                 
-                <code><a href="#s3bucketassociationclassificationtype">dict{s3_<wbr>bucket_<wbr>association_<wbr>classification_<wbr>type}</a></code>
+                <code><a href="#s3bucketassociationclassificationtype">Dict[s3_<wbr>bucket_<wbr>association_<wbr>classification_<wbr>type]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -660,7 +660,7 @@ The following output properties are available:
             <td class="align-top">classification_<wbr>type</td>
             <td class="align-top">
                 
-                <code><a href="#s3bucketassociationclassificationtype">dict{s3_<wbr>bucket_<wbr>association_<wbr>classification_<wbr>type}</a></code>
+                <code><a href="#s3bucketassociationclassificationtype">Dict[s3_<wbr>bucket_<wbr>association_<wbr>classification_<wbr>type]</a></code>
             </td>
             <td class="align-top">{{% md %}} The configuration of how Amazon Macie classifies the S3 objects.
  {{% /md %}}
@@ -1033,7 +1033,7 @@ The name of the S3 bucket that you want to associate with Amazon Macie.
             <td class="align-top">classification_<wbr>type</td>
             <td class="align-top">
                 
-                <code><a href="#s3bucketassociationclassificationtype">dict{s3_<wbr>bucket_<wbr>association_<wbr>classification_<wbr>type}</a></code>
+                <code><a href="#s3bucketassociationclassificationtype">Dict[s3_<wbr>bucket_<wbr>association_<wbr>classification_<wbr>type]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

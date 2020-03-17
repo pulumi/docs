@@ -1048,7 +1048,7 @@ The following output properties are available:
             <td class="align-top">common_<wbr>prefixes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of any keys between `prefix` and the next occurrence of `delimiter` (i.e., similar to subdirectories of the `prefix` &#34;directory&#34;); the list is only returned when you specify `delimiter`
  {{% /md %}}
@@ -1110,7 +1110,7 @@ The following output properties are available:
             <td class="align-top">keys</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of strings representing object keys
  {{% /md %}}
@@ -1135,7 +1135,7 @@ The following output properties are available:
             <td class="align-top">owners</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of strings representing object owner IDs (see `fetch_owner` above)
  {{% /md %}}

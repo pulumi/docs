@@ -291,7 +291,7 @@ The ARN of the policy you want to apply
             <td class="align-top">role</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -748,7 +748,7 @@ The ARN of the policy you want to apply
             <td class="align-top">role</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

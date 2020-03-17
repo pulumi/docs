@@ -435,7 +435,7 @@ The user pool id
             <td class="align-top">attribute_<wbr>mapping</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -450,7 +450,7 @@ The map of attribute mapping of user pool attributes. [AttributeMapping in AWS A
             <td class="align-top">idp_<wbr>identifiers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -465,7 +465,7 @@ The list of identity providers.
             <td class="align-top">provider_<wbr>details</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -853,7 +853,7 @@ The following output properties are available:
             <td class="align-top">attribute_<wbr>mapping</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} The map of attribute mapping of user pool attributes. [AttributeMapping in AWS API documentation](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping)
  {{% /md %}}
@@ -866,7 +866,7 @@ The following output properties are available:
             <td class="align-top">idp_<wbr>identifiers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The list of identity providers.
  {{% /md %}}
@@ -879,7 +879,7 @@ The following output properties are available:
             <td class="align-top">provider_<wbr>details</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} The map of identity details, such as access token
  {{% /md %}}
@@ -1340,7 +1340,7 @@ The user pool id
             <td class="align-top">attribute_<wbr>mapping</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1355,7 +1355,7 @@ The map of attribute mapping of user pool attributes. [AttributeMapping in AWS A
             <td class="align-top">idp_<wbr>identifiers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1370,7 +1370,7 @@ The list of identity providers.
             <td class="align-top">provider_<wbr>details</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

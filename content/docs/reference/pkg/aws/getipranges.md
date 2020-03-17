@@ -269,7 +269,7 @@ Custom URL for source JSON file. Syntax must match [AWS IP Address Ranges docume
             <td class="align-top">regions</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -286,7 +286,7 @@ omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
             <td class="align-top">services</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -721,7 +721,7 @@ The following output properties are available:
             <td class="align-top">cidr_<wbr>blocks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The lexically ordered list of CIDR blocks.
  {{% /md %}}
@@ -760,7 +760,7 @@ The following output properties are available:
             <td class="align-top">ipv6_<wbr>cidr_<wbr>blocks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The lexically ordered list of IPv6 CIDR blocks.
  {{% /md %}}
@@ -773,7 +773,7 @@ The following output properties are available:
             <td class="align-top">regions</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -785,7 +785,7 @@ The following output properties are available:
             <td class="align-top">services</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

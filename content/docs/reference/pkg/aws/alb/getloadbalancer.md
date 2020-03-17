@@ -300,7 +300,7 @@ The unique name of the load balancer.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -988,7 +988,7 @@ The following output properties are available:
             <td class="align-top">access_<wbr>logs</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalanceraccesslogs">dict{get_<wbr>load_<wbr>balancer_<wbr>access_<wbr>logs}</a></code>
+                <code><a href="#getloadbalanceraccesslogs">Dict[get_<wbr>load_<wbr>balancer_<wbr>access_<wbr>logs]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1109,7 +1109,7 @@ The following output properties are available:
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1121,7 +1121,7 @@ The following output properties are available:
             <td class="align-top">subnet_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalancersubnetmapping">list[get_<wbr>load_<wbr>balancer_<wbr>subnet_<wbr>mapping]</a></code>
+                <code><a href="#getloadbalancersubnetmapping">List[get_<wbr>load_<wbr>balancer_<wbr>subnet_<wbr>mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1133,7 +1133,7 @@ The following output properties are available:
             <td class="align-top">subnets</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1145,7 +1145,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

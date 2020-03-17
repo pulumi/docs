@@ -517,7 +517,7 @@ The user who can mount the share and has file and folder permissions in the SMB 
             <td class="align-top">agent_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -547,7 +547,7 @@ The name of the Windows domain the SMB server belongs to.
             <td class="align-top">mount_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">dict{location_<wbr>smb_<wbr>mount_<wbr>options}</a></code>
+                <code><a href="#locationsmbmountoptions">Dict[location_<wbr>smb_<wbr>mount_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -607,7 +607,7 @@ Subdirectory to perform actions as source or destination. Should be exported by 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1118,7 +1118,7 @@ The following output properties are available:
             <td class="align-top">agent_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of DataSync Agent ARNs with which this location will be associated.
  {{% /md %}}
@@ -1157,7 +1157,7 @@ The following output properties are available:
             <td class="align-top">mount_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">dict{location_<wbr>smb_<wbr>mount_<wbr>options}</a></code>
+                <code><a href="#locationsmbmountoptions">Dict[location_<wbr>smb_<wbr>mount_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
  {{% /md %}}
@@ -1209,7 +1209,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value pairs of resource tags to assign to the DataSync Location.
  {{% /md %}}
@@ -1833,7 +1833,7 @@ The user who can mount the share and has file and folder permissions in the SMB 
             <td class="align-top">agent_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1878,7 +1878,7 @@ The name of the Windows domain the SMB server belongs to.
             <td class="align-top">mount_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">dict{location_<wbr>smb_<wbr>mount_<wbr>options}</a></code>
+                <code><a href="#locationsmbmountoptions">Dict[location_<wbr>smb_<wbr>mount_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1938,7 +1938,7 @@ Subdirectory to perform actions as source or destination. Should be exported by 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

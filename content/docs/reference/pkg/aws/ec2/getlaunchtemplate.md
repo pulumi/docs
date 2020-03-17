@@ -229,7 +229,7 @@ The name of the launch template.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1425,7 +1425,7 @@ Interfaces below for more details.
             <td class="align-top">block_<wbr>device_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateblockdevicemapping">list[get_<wbr>launch_<wbr>template_<wbr>block_<wbr>device_<wbr>mapping]</a></code>
+                <code><a href="#getlaunchtemplateblockdevicemapping">List[get_<wbr>launch_<wbr>template_<wbr>block_<wbr>device_<wbr>mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specify volumes to attach to the instance besides the volumes specified by the AMI.
  {{% /md %}}
@@ -1438,7 +1438,7 @@ Interfaces below for more details.
             <td class="align-top">credit_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplatecreditspecification">list[get_<wbr>launch_<wbr>template_<wbr>credit_<wbr>specification]</a></code>
+                <code><a href="#getlaunchtemplatecreditspecification">List[get_<wbr>launch_<wbr>template_<wbr>credit_<wbr>specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -1505,7 +1505,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">elastic_<wbr>gpu_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateelasticgpuspecification">list[get_<wbr>launch_<wbr>template_<wbr>elastic_<wbr>gpu_<wbr>specification]</a></code>
+                <code><a href="#getlaunchtemplateelasticgpuspecification">List[get_<wbr>launch_<wbr>template_<wbr>elastic_<wbr>gpu_<wbr>specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -1519,7 +1519,7 @@ below for more details.
             <td class="align-top">iam_<wbr>instance_<wbr>profiles</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateiaminstanceprofile">list[get_<wbr>launch_<wbr>template_<wbr>iam_<wbr>instance_<wbr>profile]</a></code>
+                <code><a href="#getlaunchtemplateiaminstanceprofile">List[get_<wbr>launch_<wbr>template_<wbr>iam_<wbr>instance_<wbr>profile]</a></code>
             </td>
             <td class="align-top">{{% md %}} The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -1573,7 +1573,7 @@ below for more details.
             <td class="align-top">instance_<wbr>market_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateinstancemarketoption">list[get_<wbr>launch_<wbr>template_<wbr>instance_<wbr>market_<wbr>option]</a></code>
+                <code><a href="#getlaunchtemplateinstancemarketoption">List[get_<wbr>launch_<wbr>template_<wbr>instance_<wbr>market_<wbr>option]</a></code>
             </td>
             <td class="align-top">{{% md %}} The market (purchasing) option for the instance.
 below for details.
@@ -1639,7 +1639,7 @@ below for details.
             <td class="align-top">monitorings</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplatemonitoring">list[get_<wbr>launch_<wbr>template_<wbr>monitoring]</a></code>
+                <code><a href="#getlaunchtemplatemonitoring">List[get_<wbr>launch_<wbr>template_<wbr>monitoring]</a></code>
             </td>
             <td class="align-top">{{% md %}} The monitoring option for the instance.
  {{% /md %}}
@@ -1664,7 +1664,7 @@ below for details.
             <td class="align-top">network_<wbr>interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplatenetworkinterface">list[get_<wbr>launch_<wbr>template_<wbr>network_<wbr>interface]</a></code>
+                <code><a href="#getlaunchtemplatenetworkinterface">List[get_<wbr>launch_<wbr>template_<wbr>network_<wbr>interface]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -1678,7 +1678,7 @@ Interfaces below for more details.
             <td class="align-top">placements</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateplacement">list[get_<wbr>launch_<wbr>template_<wbr>placement]</a></code>
+                <code><a href="#getlaunchtemplateplacement">List[get_<wbr>launch_<wbr>template_<wbr>placement]</a></code>
             </td>
             <td class="align-top">{{% md %}} The placement of the instance.
  {{% /md %}}
@@ -1704,7 +1704,7 @@ Interfaces below for more details.
             <td class="align-top">security_<wbr>group_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of security group names to associate with. If you are creating Instances in a VPC, use
 `vpc_security_group_ids` instead.
@@ -1718,7 +1718,7 @@ Interfaces below for more details.
             <td class="align-top">tag_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplatetagspecification">list[get_<wbr>launch_<wbr>template_<wbr>tag_<wbr>specification]</a></code>
+                <code><a href="#getlaunchtemplatetagspecification">List[get_<wbr>launch_<wbr>template_<wbr>tag_<wbr>specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} The tags to apply to the resources during launch.
  {{% /md %}}
@@ -1731,7 +1731,7 @@ Interfaces below for more details.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} (Optional) A mapping of tags to assign to the launch template.
  {{% /md %}}
@@ -1757,7 +1757,7 @@ Interfaces below for more details.
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of security group IDs to associate with.
  {{% /md %}}
@@ -2058,7 +2058,7 @@ Interfaces below for more details.
             <td class="align-top">ebs</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateblockdevicemappingeb">list[get_<wbr>launch_<wbr>template_<wbr>block_<wbr>device_<wbr>mapping_<wbr>eb]</a></code>
+                <code><a href="#getlaunchtemplateblockdevicemappingeb">List[get_<wbr>launch_<wbr>template_<wbr>block_<wbr>device_<wbr>mapping_<wbr>eb]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3327,7 +3327,7 @@ The name of the launch template.
             <td class="align-top">spot_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateinstancemarketoptionspotoption">list[get_<wbr>launch_<wbr>template_<wbr>instance_<wbr>market_<wbr>option_<wbr>spot_<wbr>option]</a></code>
+                <code><a href="#getlaunchtemplateinstancemarketoptionspotoption">List[get_<wbr>launch_<wbr>template_<wbr>instance_<wbr>market_<wbr>option_<wbr>spot_<wbr>option]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4558,7 +4558,7 @@ Description of the launch template.
             <td class="align-top">ipv4_<wbr>addresses</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4586,7 +4586,7 @@ Description of the launch template.
             <td class="align-top">ipv6_<wbr>addresses</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4628,7 +4628,7 @@ Description of the launch template.
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -5295,7 +5295,7 @@ Description of the launch template.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

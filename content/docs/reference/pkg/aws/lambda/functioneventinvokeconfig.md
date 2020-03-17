@@ -365,7 +365,7 @@ Lambda Function published version, `$LATEST`, or Lambda Alias name.
             <td class="align-top">destination_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#functioneventinvokeconfigdestinationconfig">dict{function_<wbr>event_<wbr>invoke_<wbr>config_<wbr>destination_<wbr>config}</a></code>
+                <code><a href="#functioneventinvokeconfigdestinationconfig">Dict[function_<wbr>event_<wbr>invoke_<wbr>config_<wbr>destination_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -729,7 +729,7 @@ The following output properties are available:
             <td class="align-top">destination_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#functioneventinvokeconfigdestinationconfig">dict{function_<wbr>event_<wbr>invoke_<wbr>config_<wbr>destination_<wbr>config}</a></code>
+                <code><a href="#functioneventinvokeconfigdestinationconfig">Dict[function_<wbr>event_<wbr>invoke_<wbr>config_<wbr>destination_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with destination configuration. See below for details.
  {{% /md %}}
@@ -1158,7 +1158,7 @@ Lambda Function published version, `$LATEST`, or Lambda Alias name.
             <td class="align-top">destination_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#functioneventinvokeconfigdestinationconfig">dict{function_<wbr>event_<wbr>invoke_<wbr>config_<wbr>destination_<wbr>config}</a></code>
+                <code><a href="#functioneventinvokeconfigdestinationconfig">Dict[function_<wbr>event_<wbr>invoke_<wbr>config_<wbr>destination_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1431,7 +1431,7 @@ Configuration block with destination configuration for successful asynchronous i
             <td class="align-top">on_<wbr>failure</td>
             <td class="align-top">
                 
-                <code><a href="#functioneventinvokeconfigdestinationconfigonfailure">dict{function_<wbr>event_<wbr>invoke_<wbr>config_<wbr>destination_<wbr>config_<wbr>on_<wbr>failure}</a></code>
+                <code><a href="#functioneventinvokeconfigdestinationconfigonfailure">Dict[function_<wbr>event_<wbr>invoke_<wbr>config_<wbr>destination_<wbr>config_<wbr>on_<wbr>failure]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1446,7 +1446,7 @@ Configuration block with destination configuration for failed asynchronous invoc
             <td class="align-top">on_<wbr>success</td>
             <td class="align-top">
                 
-                <code><a href="#functioneventinvokeconfigdestinationconfigonsuccess">dict{function_<wbr>event_<wbr>invoke_<wbr>config_<wbr>destination_<wbr>config_<wbr>on_<wbr>success}</a></code>
+                <code><a href="#functioneventinvokeconfigdestinationconfigonsuccess">Dict[function_<wbr>event_<wbr>invoke_<wbr>config_<wbr>destination_<wbr>config_<wbr>on_<wbr>success]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

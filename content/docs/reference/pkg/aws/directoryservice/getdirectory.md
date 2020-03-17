@@ -229,7 +229,7 @@ The ID of the directory.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -979,7 +979,7 @@ The following output properties are available:
             <td class="align-top">connect_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#getdirectoryconnectsetting">list[get_<wbr>directory_<wbr>connect_<wbr>setting]</a></code>
+                <code><a href="#getdirectoryconnectsetting">List[get_<wbr>directory_<wbr>connect_<wbr>setting]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1016,7 +1016,7 @@ The following output properties are available:
             <td class="align-top">dns_<wbr>ip_<wbr>addresses</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of IP addresses of the DNS servers for the directory/connector.
  {{% /md %}}
@@ -1120,7 +1120,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the directory/connector.
  {{% /md %}}
@@ -1146,7 +1146,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#getdirectoryvpcsetting">list[get_<wbr>directory_<wbr>vpc_<wbr>setting]</a></code>
+                <code><a href="#getdirectoryvpcsetting">List[get_<wbr>directory_<wbr>vpc_<wbr>setting]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1444,7 +1444,7 @@ The ID of the VPC that the connector is in.
             <td class="align-top">customer_<wbr>dns_<wbr>ips</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1474,7 +1474,7 @@ The username corresponding to the password provided.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1695,7 +1695,7 @@ The ID of the VPC that the connector is in.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -497,7 +497,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">list[parameter_<wbr>group_<wbr>parameter]</a></code>
+                <code><a href="#parametergroupparameter">List[parameter_<wbr>group_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -512,7 +512,7 @@ A list of DB parameters to apply. Note that parameters may differ from a family 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -959,7 +959,7 @@ The following output properties are available:
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">list[parameter_<wbr>group_<wbr>parameter]</a></code>
+                <code><a href="#parametergroupparameter">List[parameter_<wbr>group_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html) after initial creation of the group.
  {{% /md %}}
@@ -972,7 +972,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1514,7 +1514,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">list[parameter_<wbr>group_<wbr>parameter]</a></code>
+                <code><a href="#parametergroupparameter">List[parameter_<wbr>group_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1529,7 +1529,7 @@ A list of DB parameters to apply. Note that parameters may differ from a family 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

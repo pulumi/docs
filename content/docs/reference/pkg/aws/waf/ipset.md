@@ -250,7 +250,7 @@ The name or description of the IPSet.
             <td class="align-top">ip_<wbr>set_<wbr>descriptors</td>
             <td class="align-top">
                 
-                <code><a href="#ipsetipsetdescriptor">list[ip_<wbr>set_<wbr>ip_<wbr>set_<wbr>descriptor]</a></code>
+                <code><a href="#ipsetipsetdescriptor">List[ip_<wbr>set_<wbr>ip_<wbr>set_<wbr>descriptor]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -504,7 +504,7 @@ The following output properties are available:
             <td class="align-top">ip_<wbr>set_<wbr>descriptors</td>
             <td class="align-top">
                 
-                <code><a href="#ipsetipsetdescriptor">list[ip_<wbr>set_<wbr>ip_<wbr>set_<wbr>descriptor]</a></code>
+                <code><a href="#ipsetipsetdescriptor">List[ip_<wbr>set_<wbr>ip_<wbr>set_<wbr>descriptor]</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR format) from which web requests originate.
  {{% /md %}}
@@ -819,7 +819,7 @@ The ARN of the WAF IPSet.
             <td class="align-top">ip_<wbr>set_<wbr>descriptors</td>
             <td class="align-top">
                 
-                <code><a href="#ipsetipsetdescriptor">list[ip_<wbr>set_<wbr>ip_<wbr>set_<wbr>descriptor]</a></code>
+                <code><a href="#ipsetipsetdescriptor">List[ip_<wbr>set_<wbr>ip_<wbr>set_<wbr>descriptor]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

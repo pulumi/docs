@@ -649,7 +649,7 @@ Watermark parameters for the video parameters (documented below)
             <td class="align-top">audio</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudio">dict{preset_<wbr>audio}</a></code>
+                <code><a href="#presetaudio">Dict[preset_<wbr>audio]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -664,7 +664,7 @@ Audio parameters object (documented below).
             <td class="align-top">audio_<wbr>codec_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudiocodecoptions">dict{preset_<wbr>audio_<wbr>codec_<wbr>options}</a></code>
+                <code><a href="#presetaudiocodecoptions">Dict[preset_<wbr>audio_<wbr>codec_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -724,7 +724,7 @@ The name of the preset. (maximum 40 characters)
             <td class="align-top">thumbnails</td>
             <td class="align-top">
                 
-                <code><a href="#presetthumbnails">dict{preset_<wbr>thumbnails}</a></code>
+                <code><a href="#presetthumbnails">Dict[preset_<wbr>thumbnails]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -753,7 +753,7 @@ Thumbnail parameters object (documented below)
             <td class="align-top">video</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideo">dict{preset_<wbr>video}</a></code>
+                <code><a href="#presetvideo">Dict[preset_<wbr>video]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -768,7 +768,7 @@ Video parameters object (documented below)
             <td class="align-top">video_<wbr>codec_<wbr>options</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -782,7 +782,7 @@ Video parameters object (documented below)
             <td class="align-top">video_<wbr>watermarks</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideowatermark">list[preset_<wbr>video_<wbr>watermark]</a></code>
+                <code><a href="#presetvideowatermark">List[preset_<wbr>video_<wbr>watermark]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1327,7 +1327,7 @@ The following output properties are available:
             <td class="align-top">audio</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudio">dict{preset_<wbr>audio}</a></code>
+                <code><a href="#presetaudio">Dict[preset_<wbr>audio]</a></code>
             </td>
             <td class="align-top">{{% md %}} Audio parameters object (documented below).
  {{% /md %}}
@@ -1340,7 +1340,7 @@ The following output properties are available:
             <td class="align-top">audio_<wbr>codec_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudiocodecoptions">dict{preset_<wbr>audio_<wbr>codec_<wbr>options}</a></code>
+                <code><a href="#presetaudiocodecoptions">Dict[preset_<wbr>audio_<wbr>codec_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} Codec options for the audio parameters (documented below)
  {{% /md %}}
@@ -1392,7 +1392,7 @@ The following output properties are available:
             <td class="align-top">thumbnails</td>
             <td class="align-top">
                 
-                <code><a href="#presetthumbnails">dict{preset_<wbr>thumbnails}</a></code>
+                <code><a href="#presetthumbnails">Dict[preset_<wbr>thumbnails]</a></code>
             </td>
             <td class="align-top">{{% md %}} Thumbnail parameters object (documented below)
  {{% /md %}}
@@ -1417,7 +1417,7 @@ The following output properties are available:
             <td class="align-top">video</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideo">dict{preset_<wbr>video}</a></code>
+                <code><a href="#presetvideo">Dict[preset_<wbr>video]</a></code>
             </td>
             <td class="align-top">{{% md %}} Video parameters object (documented below)
  {{% /md %}}
@@ -1430,7 +1430,7 @@ The following output properties are available:
             <td class="align-top">video_<wbr>codec_<wbr>options</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1442,7 +1442,7 @@ The following output properties are available:
             <td class="align-top">video_<wbr>watermarks</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideowatermark">list[preset_<wbr>video_<wbr>watermark]</a></code>
+                <code><a href="#presetvideowatermark">List[preset_<wbr>video_<wbr>watermark]</a></code>
             </td>
             <td class="align-top">{{% md %}} Watermark parameters for the video parameters (documented below)
 * `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
@@ -2098,7 +2098,7 @@ Watermark parameters for the video parameters (documented below)
             <td class="align-top">audio</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudio">dict{preset_<wbr>audio}</a></code>
+                <code><a href="#presetaudio">Dict[preset_<wbr>audio]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2113,7 +2113,7 @@ Audio parameters object (documented below).
             <td class="align-top">audio_<wbr>codec_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudiocodecoptions">dict{preset_<wbr>audio_<wbr>codec_<wbr>options}</a></code>
+                <code><a href="#presetaudiocodecoptions">Dict[preset_<wbr>audio_<wbr>codec_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2173,7 +2173,7 @@ The name of the preset. (maximum 40 characters)
             <td class="align-top">thumbnails</td>
             <td class="align-top">
                 
-                <code><a href="#presetthumbnails">dict{preset_<wbr>thumbnails}</a></code>
+                <code><a href="#presetthumbnails">Dict[preset_<wbr>thumbnails]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2202,7 +2202,7 @@ Thumbnail parameters object (documented below)
             <td class="align-top">video</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideo">dict{preset_<wbr>video}</a></code>
+                <code><a href="#presetvideo">Dict[preset_<wbr>video]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2217,7 +2217,7 @@ Video parameters object (documented below)
             <td class="align-top">video_<wbr>codec_<wbr>options</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2231,7 +2231,7 @@ Video parameters object (documented below)
             <td class="align-top">video_<wbr>watermarks</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideowatermark">list[preset_<wbr>video_<wbr>watermark]</a></code>
+                <code><a href="#presetvideowatermark">List[preset_<wbr>video_<wbr>watermark]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

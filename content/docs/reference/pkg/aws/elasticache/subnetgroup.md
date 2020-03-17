@@ -334,7 +334,7 @@ Name for the cache subnet group. Elasticache converts this name to lowercase.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -586,7 +586,7 @@ The following output properties are available:
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of VPC Subnet IDs for the cache subnet group
  {{% /md %}}
@@ -903,7 +903,7 @@ Name for the cache subnet group. Elasticache converts this name to lowercase.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

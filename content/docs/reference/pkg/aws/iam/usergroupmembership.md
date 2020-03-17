@@ -258,7 +258,7 @@ The name of the [IAM User][2] to add to groups
             <td class="align-top">groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -460,7 +460,7 @@ The following output properties are available:
             <td class="align-top">groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of [IAM Groups][1] to add the user to
  {{% /md %}}
@@ -715,7 +715,7 @@ The name of the [IAM User][2] to add to groups
             <td class="align-top">groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

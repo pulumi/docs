@@ -1197,7 +1197,7 @@ Associate a public ip address with an instance in a VPC.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationebsblockdevice">list[launch_<wbr>configuration_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#launchconfigurationebsblockdevice">List[launch_<wbr>configuration_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1243,7 +1243,7 @@ Enables/disables detailed monitoring. This is enabled by default.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationephemeralblockdevice">list[launch_<wbr>configuration_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#launchconfigurationephemeralblockdevice">List[launch_<wbr>configuration_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1259,7 +1259,7 @@ Customize Ephemeral (also known as
             <td class="align-top">iam_<wbr>instance_<wbr>profile</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1369,7 +1369,7 @@ for more details
             <td class="align-top">root_<wbr>block_<wbr>device</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationrootblockdevice">dict{launch_<wbr>configuration_<wbr>root_<wbr>block_<wbr>device}</a></code>
+                <code><a href="#launchconfigurationrootblockdevice">Dict[launch_<wbr>configuration_<wbr>root_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1385,7 +1385,7 @@ device of the instance. See Block Devices below for details.
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1460,7 +1460,7 @@ The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg.
             <td class="align-top">vpc_<wbr>classic_<wbr>link_<wbr>security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2399,7 +2399,7 @@ device of the instance. See Block Devices below for details.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationebsblockdevice">list[launch_<wbr>configuration_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#launchconfigurationebsblockdevice">List[launch_<wbr>configuration_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -2439,7 +2439,7 @@ instance.  See Block Devices below for details.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationephemeralblockdevice">list[launch_<wbr>configuration_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#launchconfigurationephemeralblockdevice">List[launch_<wbr>configuration_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize Ephemeral (also known as
 &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
@@ -2549,7 +2549,7 @@ for more details
             <td class="align-top">root_<wbr>block_<wbr>device</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationrootblockdevice">dict{launch_<wbr>configuration_<wbr>root_<wbr>block_<wbr>device}</a></code>
+                <code><a href="#launchconfigurationrootblockdevice">Dict[launch_<wbr>configuration_<wbr>root_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -2563,7 +2563,7 @@ device of the instance. See Block Devices below for details.
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of associated security group IDS.
  {{% /md %}}
@@ -2628,7 +2628,7 @@ device of the instance. See Block Devices below for details.
             <td class="align-top">vpc_<wbr>classic_<wbr>link_<wbr>security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
  {{% /md %}}
@@ -3734,7 +3734,7 @@ Associate a public ip address with an instance in a VPC.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationebsblockdevice">list[launch_<wbr>configuration_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#launchconfigurationebsblockdevice">List[launch_<wbr>configuration_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3780,7 +3780,7 @@ Enables/disables detailed monitoring. This is enabled by default.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationephemeralblockdevice">list[launch_<wbr>configuration_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#launchconfigurationephemeralblockdevice">List[launch_<wbr>configuration_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3796,7 +3796,7 @@ Customize Ephemeral (also known as
             <td class="align-top">iam_<wbr>instance_<wbr>profile</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3906,7 +3906,7 @@ for more details
             <td class="align-top">root_<wbr>block_<wbr>device</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationrootblockdevice">dict{launch_<wbr>configuration_<wbr>root_<wbr>block_<wbr>device}</a></code>
+                <code><a href="#launchconfigurationrootblockdevice">Dict[launch_<wbr>configuration_<wbr>root_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3922,7 +3922,7 @@ device of the instance. See Block Devices below for details.
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3997,7 +3997,7 @@ The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg.
             <td class="align-top">vpc_<wbr>classic_<wbr>link_<wbr>security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

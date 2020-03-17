@@ -678,7 +678,7 @@ A domain name for which the certificate should be issued
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#certificateoptions">dict{certificate_<wbr>options}</a></code>
+                <code><a href="#certificateoptions">Dict[certificate_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -707,7 +707,7 @@ The certificate&#39;s PEM-formatted private key
             <td class="align-top">subject_<wbr>alternative_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -722,7 +722,7 @@ A list of domains that should be SANs in the issued certificate
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1384,7 +1384,7 @@ The following output properties are available:
             <td class="align-top">domain_<wbr>validation_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#certificatedomainvalidationoption">list[certificate_<wbr>domain_<wbr>validation_<wbr>option]</a></code>
+                <code><a href="#certificatedomainvalidationoption">List[certificate_<wbr>domain_<wbr>validation_<wbr>option]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
  {{% /md %}}
@@ -1397,7 +1397,7 @@ The following output properties are available:
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#certificateoptions">dict{certificate_<wbr>options}</a></code>
+                <code><a href="#certificateoptions">Dict[certificate_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1422,7 +1422,7 @@ The following output properties are available:
             <td class="align-top">subject_<wbr>alternative_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of domains that should be SANs in the issued certificate
  {{% /md %}}
@@ -1435,7 +1435,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1448,7 +1448,7 @@ The following output properties are available:
             <td class="align-top">validation_<wbr>emails</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
  {{% /md %}}
@@ -2233,7 +2233,7 @@ A domain name for which the certificate should be issued
             <td class="align-top">domain_<wbr>validation_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#certificatedomainvalidationoption">list[certificate_<wbr>domain_<wbr>validation_<wbr>option]</a></code>
+                <code><a href="#certificatedomainvalidationoption">List[certificate_<wbr>domain_<wbr>validation_<wbr>option]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2248,7 +2248,7 @@ A list of attributes to feed into other resources to complete certificate valida
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#certificateoptions">dict{certificate_<wbr>options}</a></code>
+                <code><a href="#certificateoptions">Dict[certificate_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2277,7 +2277,7 @@ The certificate&#39;s PEM-formatted private key
             <td class="align-top">subject_<wbr>alternative_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2292,7 +2292,7 @@ A list of domains that should be SANs in the issued certificate
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2307,7 +2307,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">validation_<wbr>emails</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

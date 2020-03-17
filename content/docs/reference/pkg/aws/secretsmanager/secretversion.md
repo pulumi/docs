@@ -381,7 +381,7 @@ Specifies text data that you want to encrypt and store in this version of the se
             <td class="align-top">version_<wbr>stages</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -789,7 +789,7 @@ The following output properties are available:
             <td class="align-top">version_<wbr>stages</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Specifies a list of staging labels that are attached to this version of the secret. A staging label must be unique to a single version of the secret. If you specify a staging label that&#39;s already associated with a different version of the same secret then that staging label is automatically removed from the other version and attached to this version. If you do not specify a value, then AWS Secrets Manager automatically moves the staging label `AWSCURRENT` to this new version on creation.
  {{% /md %}}
@@ -1286,7 +1286,7 @@ The unique identifier of the version of the secret.
             <td class="align-top">version_<wbr>stages</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

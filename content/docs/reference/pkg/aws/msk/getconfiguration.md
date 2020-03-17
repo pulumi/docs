@@ -591,7 +591,7 @@ The following output properties are available:
             <td class="align-top">kafka_<wbr>versions</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of Apache Kafka versions which can use this configuration.
  {{% /md %}}

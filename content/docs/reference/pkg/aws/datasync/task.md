@@ -470,7 +470,7 @@ Name of the DataSync Task.
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#taskoptions">dict{task_<wbr>options}</a></code>
+                <code><a href="#taskoptions">Dict[task_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -500,7 +500,7 @@ Amazon Resource Name (ARN) of source DataSync Location.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -934,7 +934,7 @@ The following output properties are available:
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#taskoptions">dict{task_<wbr>options}</a></code>
+                <code><a href="#taskoptions">Dict[task_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
  {{% /md %}}
@@ -960,7 +960,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value pairs of resource tags to assign to the DataSync Task.
  {{% /md %}}
@@ -1487,7 +1487,7 @@ Name of the DataSync Task.
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#taskoptions">dict{task_<wbr>options}</a></code>
+                <code><a href="#taskoptions">Dict[task_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1517,7 +1517,7 @@ Amazon Resource Name (ARN) of source DataSync Location.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

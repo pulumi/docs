@@ -317,7 +317,7 @@ A description of the channel
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -660,7 +660,7 @@ The following output properties are available:
             <td class="align-top">hls_<wbr>ingests</td>
             <td class="align-top">
                 
-                <code><a href="#channelhlsingest">list[channel_<wbr>hls_<wbr>ingest]</a></code>
+                <code><a href="#channelhlsingest">List[channel_<wbr>hls_<wbr>ingest]</a></code>
             </td>
             <td class="align-top">{{% md %}} A single item list of HLS ingest information
  {{% /md %}}
@@ -673,7 +673,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1095,7 +1095,7 @@ A description of the channel
             <td class="align-top">hls_<wbr>ingests</td>
             <td class="align-top">
                 
-                <code><a href="#channelhlsingest">list[channel_<wbr>hls_<wbr>ingest]</a></code>
+                <code><a href="#channelhlsingest">List[channel_<wbr>hls_<wbr>ingest]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1110,7 +1110,7 @@ A single item list of HLS ingest information
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1278,7 +1278,7 @@ A list of the ingest endpoints
             <td class="align-top">ingest_<wbr>endpoints</td>
             <td class="align-top">
                 
-                <code><a href="#channelhlsingestingestendpoint">list[channel_<wbr>hls_<wbr>ingest_<wbr>ingest_<wbr>endpoint]</a></code>
+                <code><a href="#channelhlsingestingestendpoint">List[channel_<wbr>hls_<wbr>ingest_<wbr>ingest_<wbr>endpoint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -673,7 +673,7 @@ The following output properties are available:
             <td class="align-top">additional_<wbr>artifacts</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of additional artifacts.
  {{% /md %}}
@@ -686,7 +686,7 @@ The following output properties are available:
             <td class="align-top">additional_<wbr>schema_<wbr>elements</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of schema elements.
  {{% /md %}}

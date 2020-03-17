@@ -321,7 +321,7 @@ A regular expression used to determine which branches get built. Default is all 
             <td class="align-top">filter_<wbr>groups</td>
             <td class="align-top">
                 
-                <code><a href="#webhookfiltergroup">list[webhook_<wbr>filter_<wbr>group]</a></code>
+                <code><a href="#webhookfiltergroup">List[webhook_<wbr>filter_<wbr>group]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -692,7 +692,7 @@ The following output properties are available:
             <td class="align-top">filter_<wbr>groups</td>
             <td class="align-top">
                 
-                <code><a href="#webhookfiltergroup">list[webhook_<wbr>filter_<wbr>group]</a></code>
+                <code><a href="#webhookfiltergroup">List[webhook_<wbr>filter_<wbr>group]</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the webhook&#39;s trigger. Filter group blocks are documented below.
  {{% /md %}}
@@ -1181,7 +1181,7 @@ A regular expression used to determine which branches get built. Default is all 
             <td class="align-top">filter_<wbr>groups</td>
             <td class="align-top">
                 
-                <code><a href="#webhookfiltergroup">list[webhook_<wbr>filter_<wbr>group]</a></code>
+                <code><a href="#webhookfiltergroup">List[webhook_<wbr>filter_<wbr>group]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1409,7 +1409,7 @@ A webhook filter for the group. Filter blocks are documented below.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#webhookfiltergroupfilter">list[webhook_<wbr>filter_<wbr>group_<wbr>filter]</a></code>
+                <code><a href="#webhookfiltergroupfilter">List[webhook_<wbr>filter_<wbr>group_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

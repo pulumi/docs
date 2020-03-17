@@ -299,7 +299,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">netbios_<wbr>name_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -329,7 +329,7 @@ The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadca
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -726,7 +726,7 @@ The following output properties are available:
             <td class="align-top">netbios_<wbr>name_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of NETBIOS name servers.
  {{% /md %}}
@@ -777,7 +777,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1263,7 +1263,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">netbios_<wbr>name_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1322,7 +1322,7 @@ The ID of the AWS account that owns the DHCP options set.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

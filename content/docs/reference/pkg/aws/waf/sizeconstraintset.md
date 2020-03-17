@@ -263,7 +263,7 @@ The name or description of the Size Constraint Set.
             <td class="align-top">size_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#sizeconstraintsetsizeconstraint">list[size_<wbr>constraint_<wbr>set_<wbr>size_<wbr>constraint]</a></code>
+                <code><a href="#sizeconstraintsetsizeconstraint">List[size_<wbr>constraint_<wbr>set_<wbr>size_<wbr>constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -515,7 +515,7 @@ The following output properties are available:
             <td class="align-top">size_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#sizeconstraintsetsizeconstraint">list[size_<wbr>constraint_<wbr>set_<wbr>size_<wbr>constraint]</a></code>
+                <code><a href="#sizeconstraintsetsizeconstraint">List[size_<wbr>constraint_<wbr>set_<wbr>size_<wbr>constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the parts of web requests that you want to inspect the size of.
  {{% /md %}}
@@ -832,7 +832,7 @@ The name or description of the Size Constraint Set.
             <td class="align-top">size_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#sizeconstraintsetsizeconstraint">list[size_<wbr>constraint_<wbr>set_<wbr>size_<wbr>constraint]</a></code>
+                <code><a href="#sizeconstraintsetsizeconstraint">List[size_<wbr>constraint_<wbr>set_<wbr>size_<wbr>constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1176,7 +1176,7 @@ See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint
             <td class="align-top">field_<wbr>to_<wbr>match</td>
             <td class="align-top">
                 
-                <code><a href="#sizeconstraintsetsizeconstraintfieldtomatch">dict{size_<wbr>constraint_<wbr>set_<wbr>size_<wbr>constraint_<wbr>field_<wbr>to_<wbr>match}</a></code>
+                <code><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Dict[size_<wbr>constraint_<wbr>set_<wbr>size_<wbr>constraint_<wbr>field_<wbr>to_<wbr>match]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

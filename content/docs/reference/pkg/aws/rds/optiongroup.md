@@ -569,7 +569,7 @@ The description of the option group. Defaults to &#34;Managed by Pulumi&#34;.
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoption">list[option_<wbr>group_<wbr>option]</a></code>
+                <code><a href="#optiongroupoption">List[option_<wbr>group_<wbr>option]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -584,7 +584,7 @@ A list of Options to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1083,7 +1083,7 @@ The following output properties are available:
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoption">list[option_<wbr>group_<wbr>option]</a></code>
+                <code><a href="#optiongroupoption">List[option_<wbr>group_<wbr>option]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of Options to apply.
  {{% /md %}}
@@ -1096,7 +1096,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1698,7 +1698,7 @@ The description of the option group. Defaults to &#34;Managed by Pulumi&#34;.
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoption">list[option_<wbr>group_<wbr>option]</a></code>
+                <code><a href="#optiongroupoption">List[option_<wbr>group_<wbr>option]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1713,7 +1713,7 @@ A list of Options to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2106,7 +2106,7 @@ A list of VPC Security Groups for which the option is enabled.
             <td class="align-top">db_<wbr>security_<wbr>group_<wbr>memberships</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2136,7 +2136,7 @@ The Name of the Option (e.g. MEMCACHED).
             <td class="align-top">option_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoptionoptionsetting">list[option_<wbr>group_<wbr>option_<wbr>option_<wbr>setting]</a></code>
+                <code><a href="#optiongroupoptionoptionsetting">List[option_<wbr>group_<wbr>option_<wbr>option_<wbr>setting]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2181,7 +2181,7 @@ The version of the option (e.g. 13.1.0.0).
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>memberships</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

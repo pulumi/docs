@@ -942,7 +942,7 @@ The type of source to use. For example, &#34;archive&#34;.
             <td class="align-top">app_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappsource">list[application_<wbr>app_<wbr>source]</a></code>
+                <code><a href="#applicationappsource">List[application_<wbr>app_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1062,7 +1062,7 @@ Subfolder for the document root for application of type `rails`.
             <td class="align-top">domains</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1092,7 +1092,7 @@ Whether to enable SSL for the app. This must be set in order to let `ssl_configu
             <td class="align-top">environments</td>
             <td class="align-top">
                 
-                <code><a href="#applicationenvironment">list[application_<wbr>environment]</a></code>
+                <code><a href="#applicationenvironment">List[application_<wbr>environment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1152,7 +1152,7 @@ A short, machine-readable name for the application. This can only be defined on 
             <td class="align-top">ssl_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#applicationsslconfiguration">list[application_<wbr>ssl_<wbr>configuration]</a></code>
+                <code><a href="#applicationsslconfiguration">List[application_<wbr>ssl_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1954,7 +1954,7 @@ The following output properties are available:
             <td class="align-top">app_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappsource">list[application_<wbr>app_<wbr>source]</a></code>
+                <code><a href="#applicationappsource">List[application_<wbr>app_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} SCM configuration of the app as described below.
  {{% /md %}}
@@ -2058,7 +2058,7 @@ The following output properties are available:
             <td class="align-top">domains</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of virtual host alias.
  {{% /md %}}
@@ -2084,7 +2084,7 @@ The following output properties are available:
             <td class="align-top">environments</td>
             <td class="align-top">
                 
-                <code><a href="#applicationenvironment">list[application_<wbr>environment]</a></code>
+                <code><a href="#applicationenvironment">List[application_<wbr>environment]</a></code>
             </td>
             <td class="align-top">{{% md %}} Object to define environment variables.  Object is described below.
  {{% /md %}}
@@ -2136,7 +2136,7 @@ The following output properties are available:
             <td class="align-top">ssl_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#applicationsslconfiguration">list[application_<wbr>ssl_<wbr>configuration]</a></code>
+                <code><a href="#applicationsslconfiguration">List[application_<wbr>ssl_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} The SSL configuration of the app. Object is described below.
  {{% /md %}}
@@ -3079,7 +3079,7 @@ The type of source to use. For example, &#34;archive&#34;.
             <td class="align-top">app_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappsource">list[application_<wbr>app_<wbr>source]</a></code>
+                <code><a href="#applicationappsource">List[application_<wbr>app_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3199,7 +3199,7 @@ Subfolder for the document root for application of type `rails`.
             <td class="align-top">domains</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3229,7 +3229,7 @@ Whether to enable SSL for the app. This must be set in order to let `ssl_configu
             <td class="align-top">environments</td>
             <td class="align-top">
                 
-                <code><a href="#applicationenvironment">list[application_<wbr>environment]</a></code>
+                <code><a href="#applicationenvironment">List[application_<wbr>environment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3289,7 +3289,7 @@ A short, machine-readable name for the application. This can only be defined on 
             <td class="align-top">ssl_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#applicationsslconfiguration">list[application_<wbr>ssl_<wbr>configuration]</a></code>
+                <code><a href="#applicationsslconfiguration">List[application_<wbr>ssl_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

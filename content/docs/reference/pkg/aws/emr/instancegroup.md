@@ -623,7 +623,7 @@ A JSON string for supplying list of configurations specific to the EMR instance 
             <td class="align-top">ebs_<wbr>configs</td>
             <td class="align-top">
                 
-                <code><a href="#instancegroupebsconfig">list[instance_<wbr>group_<wbr>ebs_<wbr>config]</a></code>
+                <code><a href="#instancegroupebsconfig">List[instance_<wbr>group_<wbr>ebs_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1267,7 +1267,7 @@ The following output properties are available:
             <td class="align-top">ebs_<wbr>configs</td>
             <td class="align-top">
                 
-                <code><a href="#instancegroupebsconfig">list[instance_<wbr>group_<wbr>ebs_<wbr>config]</a></code>
+                <code><a href="#instancegroupebsconfig">List[instance_<wbr>group_<wbr>ebs_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more `ebs_config` blocks as defined below. Changing this forces a new resource to be created.
  {{% /md %}}
@@ -2044,7 +2044,7 @@ A JSON string for supplying list of configurations specific to the EMR instance 
             <td class="align-top">ebs_<wbr>configs</td>
             <td class="align-top">
                 
-                <code><a href="#instancegroupebsconfig">list[instance_<wbr>group_<wbr>ebs_<wbr>config]</a></code>
+                <code><a href="#instancegroupebsconfig">List[instance_<wbr>group_<wbr>ebs_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

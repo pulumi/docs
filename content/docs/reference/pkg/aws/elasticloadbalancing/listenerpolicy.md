@@ -386,7 +386,7 @@ The load balancer listener port to apply the policy to.
             <td class="align-top">policy_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -638,7 +638,7 @@ The following output properties are available:
             <td class="align-top">policy_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of Policy Names to apply to the backend server.
  {{% /md %}}
@@ -955,7 +955,7 @@ The load balancer listener port to apply the policy to.
             <td class="align-top">policy_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

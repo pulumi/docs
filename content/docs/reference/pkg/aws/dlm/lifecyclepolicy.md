@@ -471,7 +471,7 @@ The ARN of an IAM role that is able to be assumed by the DLM service.
             <td class="align-top">policy_<wbr>details</td>
             <td class="align-top">
                 
-                <code><a href="#lifecyclepolicypolicydetails">dict{lifecycle_<wbr>policy_<wbr>policy_<wbr>details}</a></code>
+                <code><a href="#lifecyclepolicypolicydetails">Dict[lifecycle_<wbr>policy_<wbr>policy_<wbr>details]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -501,7 +501,7 @@ Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABL
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -883,7 +883,7 @@ The following output properties are available:
             <td class="align-top">policy_<wbr>details</td>
             <td class="align-top">
                 
-                <code><a href="#lifecyclepolicypolicydetails">dict{lifecycle_<wbr>policy_<wbr>policy_<wbr>details}</a></code>
+                <code><a href="#lifecyclepolicypolicydetails">Dict[lifecycle_<wbr>policy_<wbr>policy_<wbr>details]</a></code>
             </td>
             <td class="align-top">{{% md %}} See the `policy_details` configuration block. Max of 1.
  {{% /md %}}
@@ -909,7 +909,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags.
  {{% /md %}}
@@ -1376,7 +1376,7 @@ The ARN of an IAM role that is able to be assumed by the DLM service.
             <td class="align-top">policy_<wbr>details</td>
             <td class="align-top">
                 
-                <code><a href="#lifecyclepolicypolicydetails">dict{lifecycle_<wbr>policy_<wbr>policy_<wbr>details}</a></code>
+                <code><a href="#lifecyclepolicypolicydetails">Dict[lifecycle_<wbr>policy_<wbr>policy_<wbr>details]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1406,7 +1406,7 @@ Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABL
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1664,7 +1664,7 @@ A mapping of tag keys and their values. Any resources that match the `resource_t
             <td class="align-top">resource_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1679,7 +1679,7 @@ A list of resource types that should be targeted by the lifecycle policy. `VOLUM
             <td class="align-top">schedules</td>
             <td class="align-top">
                 
-                <code><a href="#lifecyclepolicypolicydetailsschedule">list[lifecycle_<wbr>policy_<wbr>policy_<wbr>details_<wbr>schedule]</a></code>
+                <code><a href="#lifecyclepolicypolicydetailsschedule">List[lifecycle_<wbr>policy_<wbr>policy_<wbr>details_<wbr>schedule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1694,7 +1694,7 @@ See the `schedule` configuration block.
             <td class="align-top">target_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2050,7 +2050,7 @@ Copy all user-defined tags on a source volume to snapshots of the volume created
             <td class="align-top">create_<wbr>rule</td>
             <td class="align-top">
                 
-                <code><a href="#lifecyclepolicypolicydetailsschedulecreaterule">dict{lifecycle_<wbr>policy_<wbr>policy_<wbr>details_<wbr>schedule_<wbr>create_<wbr>rule}</a></code>
+                <code><a href="#lifecyclepolicypolicydetailsschedulecreaterule">Dict[lifecycle_<wbr>policy_<wbr>policy_<wbr>details_<wbr>schedule_<wbr>create_<wbr>rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2080,7 +2080,7 @@ A name for the schedule.
             <td class="align-top">retain_<wbr>rule</td>
             <td class="align-top">
                 
-                <code><a href="#lifecyclepolicypolicydetailsscheduleretainrule">dict{lifecycle_<wbr>policy_<wbr>policy_<wbr>details_<wbr>schedule_<wbr>retain_<wbr>rule}</a></code>
+                <code><a href="#lifecyclepolicypolicydetailsscheduleretainrule">Dict[lifecycle_<wbr>policy_<wbr>policy_<wbr>details_<wbr>schedule_<wbr>retain_<wbr>rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2095,7 +2095,7 @@ See the `retain_rule` block. Max of 1 per schedule.
             <td class="align-top">tags_<wbr>to_<wbr>add</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -986,7 +986,7 @@ This is the destination to where the data is delivered. The only options are `s3
             <td class="align-top">elasticsearch_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamelasticsearchconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>elasticsearch_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamelasticsearchconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>elasticsearch_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1001,7 +1001,7 @@ Configuration options if elasticsearch is the destination. More details are give
             <td class="align-top">extended_<wbr>s3_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configuration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configuration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1016,7 +1016,7 @@ Enhanced configuration options for the s3 destination. More details are given be
             <td class="align-top">kinesis_<wbr>source_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamkinesissourceconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>kinesis_<wbr>source_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamkinesissourceconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>kinesis_<wbr>source_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1047,7 +1047,7 @@ AWS account and region the Stream is created in.
             <td class="align-top">redshift_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1064,7 +1064,7 @@ Using `redshift_configuration` requires the user to also specify a
             <td class="align-top">s3_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreams3configuration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>s3_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreams3configuration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>s3_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1080,7 +1080,7 @@ is redshift). More details are given below.
             <td class="align-top">server_<wbr>side_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamserversideencryption">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>server_<wbr>side_<wbr>encryption}</a></code>
+                <code><a href="#firehosedeliverystreamserversideencryption">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>server_<wbr>side_<wbr>encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1096,7 +1096,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">splunk_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamsplunkconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>splunk_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamsplunkconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>splunk_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1110,7 +1110,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1788,7 +1788,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">elasticsearch_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamelasticsearchconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>elasticsearch_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamelasticsearchconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>elasticsearch_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration options if elasticsearch is the destination. More details are given below.
  {{% /md %}}
@@ -1801,7 +1801,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">extended_<wbr>s3_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configuration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configuration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Enhanced configuration options for the s3 destination. More details are given below.
  {{% /md %}}
@@ -1814,7 +1814,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">kinesis_<wbr>source_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamkinesissourceconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>kinesis_<wbr>source_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamkinesissourceconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>kinesis_<wbr>source_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
  {{% /md %}}
@@ -1841,7 +1841,7 @@ AWS account and region the Stream is created in.
             <td class="align-top">redshift_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration options if redshift is the destination.
 Using `redshift_configuration` requires the user to also specify a
@@ -1856,7 +1856,7 @@ Using `redshift_configuration` requires the user to also specify a
             <td class="align-top">s3_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreams3configuration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>s3_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreams3configuration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>s3_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.
@@ -1870,7 +1870,7 @@ is redshift). More details are given below.
             <td class="align-top">server_<wbr>side_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamserversideencryption">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>server_<wbr>side_<wbr>encryption}</a></code>
+                <code><a href="#firehosedeliverystreamserversideencryption">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>server_<wbr>side_<wbr>encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
@@ -1884,7 +1884,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">splunk_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamsplunkconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>splunk_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamsplunkconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>splunk_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1896,7 +1896,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2699,7 +2699,7 @@ This is the destination to where the data is delivered. The only options are `s3
             <td class="align-top">elasticsearch_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamelasticsearchconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>elasticsearch_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamelasticsearchconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>elasticsearch_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2714,7 +2714,7 @@ Configuration options if elasticsearch is the destination. More details are give
             <td class="align-top">extended_<wbr>s3_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configuration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configuration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2729,7 +2729,7 @@ Enhanced configuration options for the s3 destination. More details are given be
             <td class="align-top">kinesis_<wbr>source_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamkinesissourceconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>kinesis_<wbr>source_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamkinesissourceconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>kinesis_<wbr>source_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2760,7 +2760,7 @@ AWS account and region the Stream is created in.
             <td class="align-top">redshift_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2777,7 +2777,7 @@ Using `redshift_configuration` requires the user to also specify a
             <td class="align-top">s3_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreams3configuration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>s3_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreams3configuration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>s3_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2793,7 +2793,7 @@ is redshift). More details are given below.
             <td class="align-top">server_<wbr>side_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamserversideencryption">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>server_<wbr>side_<wbr>encryption}</a></code>
+                <code><a href="#firehosedeliverystreamserversideencryption">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>server_<wbr>side_<wbr>encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2809,7 +2809,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">splunk_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamsplunkconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>splunk_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamsplunkconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>splunk_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2823,7 +2823,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3486,7 +3486,7 @@ Buffer incoming data to the specified size, in MBs between 1 to 100, before deli
             <td class="align-top">cloudwatch_<wbr>logging_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>elasticsearch_<wbr>configuration_<wbr>cloudwatch_<wbr>logging_<wbr>options}</a></code>
+                <code><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>elasticsearch_<wbr>configuration_<wbr>cloudwatch_<wbr>logging_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3546,7 +3546,7 @@ The Elasticsearch index rotation period.  Index rotation appends a timestamp to 
             <td class="align-top">processing_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>elasticsearch_<wbr>configuration_<wbr>processing_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>elasticsearch_<wbr>configuration_<wbr>processing_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4108,7 +4108,7 @@ Defaults to `true`. Set it to `false` if you want to disable format conversion w
             <td class="align-top">processors</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">list[firehose_<wbr>delivery_<wbr>stream_<wbr>elasticsearch_<wbr>configuration_<wbr>processing_<wbr>configuration_<wbr>processor]</a></code>
+                <code><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">List[firehose_<wbr>delivery_<wbr>stream_<wbr>elasticsearch_<wbr>configuration_<wbr>processing_<wbr>configuration_<wbr>processor]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4314,7 +4314,7 @@ The type of processor. Valid Values: `Lambda`
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">list[firehose_<wbr>delivery_<wbr>stream_<wbr>elasticsearch_<wbr>configuration_<wbr>processing_<wbr>configuration_<wbr>processor_<wbr>parameter]</a></code>
+                <code><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">List[firehose_<wbr>delivery_<wbr>stream_<wbr>elasticsearch_<wbr>configuration_<wbr>processing_<wbr>configuration_<wbr>processor_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5303,7 +5303,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             <td class="align-top">cloudwatch_<wbr>logging_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>cloudwatch_<wbr>logging_<wbr>options}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>cloudwatch_<wbr>logging_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5333,7 +5333,7 @@ The compression format. If no value is specified, the default is UNCOMPRESSED. O
             <td class="align-top">data_<wbr>format_<wbr>conversion_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5394,7 +5394,7 @@ The &#34;YYYY/MM/DD/HH&#34; time format prefix is automatically used for deliver
             <td class="align-top">processing_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>processing_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>processing_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5424,7 +5424,7 @@ The role that Kinesis Data Firehose can use to access AWS Glue. This role must b
             <td class="align-top">s3_<wbr>backup_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>s3_<wbr>backup_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>s3_<wbr>backup_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6031,7 +6031,7 @@ Defaults to `true`. Set it to `false` if you want to disable format conversion w
             <td class="align-top">input_<wbr>format_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>input_<wbr>format_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>input_<wbr>format_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6046,7 +6046,7 @@ Nested argument that specifies the deserializer that you want Kinesis Data Fireh
             <td class="align-top">output_<wbr>format_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>output_<wbr>format_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>output_<wbr>format_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6061,7 +6061,7 @@ Nested argument that specifies the serializer that you want Kinesis Data Firehos
             <td class="align-top">schema_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>schema_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>schema_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6222,7 +6222,7 @@ Nested argument that specifies which deserializer to use. You can choose either 
             <td class="align-top">deserializer</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>input_<wbr>format_<wbr>configuration_<wbr>deserializer}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>input_<wbr>format_<wbr>configuration_<wbr>deserializer]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6428,7 +6428,7 @@ Nested argument that specifies the OpenX SerDe. More details below.
             <td class="align-top">hive_<wbr>json_<wbr>ser_<wbr>de</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>input_<wbr>format_<wbr>configuration_<wbr>deserializer_<wbr>hive_<wbr>json_<wbr>ser_<wbr>de}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>input_<wbr>format_<wbr>configuration_<wbr>deserializer_<wbr>hive_<wbr>json_<wbr>ser_<wbr>de]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6443,7 +6443,7 @@ Nested argument that specifies the native Hive / HCatalog JsonSerDe. More detail
             <td class="align-top">open_<wbr>x_<wbr>json_<wbr>ser_<wbr>de</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>input_<wbr>format_<wbr>configuration_<wbr>deserializer_<wbr>open_<wbr>x_<wbr>json_<wbr>ser_<wbr>de}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>input_<wbr>format_<wbr>configuration_<wbr>deserializer_<wbr>open_<wbr>x_<wbr>json_<wbr>ser_<wbr>de]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6604,7 +6604,7 @@ A list of how you want Kinesis Data Firehose to parse the date and time stamps t
             <td class="align-top">timestamp_<wbr>formats</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6870,7 +6870,7 @@ When set to true, which is the default, Kinesis Data Firehose converts JSON keys
             <td class="align-top">column_<wbr>to_<wbr>json_<wbr>key_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7046,7 +7046,7 @@ Nested argument that specifies which serializer to use. You can choose either th
             <td class="align-top">serializer</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>output_<wbr>format_<wbr>configuration_<wbr>serializer}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>output_<wbr>format_<wbr>configuration_<wbr>serializer]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7252,7 +7252,7 @@ Nested argument that specifies converting data to the Parquet format before stor
             <td class="align-top">orc_<wbr>ser_<wbr>de</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>output_<wbr>format_<wbr>configuration_<wbr>serializer_<wbr>orc_<wbr>ser_<wbr>de}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>output_<wbr>format_<wbr>configuration_<wbr>serializer_<wbr>orc_<wbr>ser_<wbr>de]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7267,7 +7267,7 @@ Nested argument that specifies converting data to the ORC format before storing 
             <td class="align-top">parquet_<wbr>ser_<wbr>de</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>output_<wbr>format_<wbr>configuration_<wbr>serializer_<wbr>parquet_<wbr>ser_<wbr>de}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>data_<wbr>format_<wbr>conversion_<wbr>configuration_<wbr>output_<wbr>format_<wbr>configuration_<wbr>serializer_<wbr>parquet_<wbr>ser_<wbr>de]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7848,7 +7848,7 @@ The Hadoop Distributed File System (HDFS) block size. This is useful if you inte
             <td class="align-top">bloom_<wbr>filter_<wbr>columns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9111,7 +9111,7 @@ Defaults to `true`. Set it to `false` if you want to disable format conversion w
             <td class="align-top">processors</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">list[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>processing_<wbr>configuration_<wbr>processor]</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">List[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>processing_<wbr>configuration_<wbr>processor]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9317,7 +9317,7 @@ The type of processor. Valid Values: `Lambda`
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">list[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>processing_<wbr>configuration_<wbr>processor_<wbr>parameter]</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">List[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>processing_<wbr>configuration_<wbr>processor_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -10081,7 +10081,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             <td class="align-top">cloudwatch_<wbr>logging_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>s3_<wbr>backup_<wbr>configuration_<wbr>cloudwatch_<wbr>logging_<wbr>options}</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>extended_<wbr>s3_<wbr>configuration_<wbr>s3_<wbr>backup_<wbr>configuration_<wbr>cloudwatch_<wbr>logging_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -11300,7 +11300,7 @@ The username that the firehose delivery stream will assume. It is strongly recom
             <td class="align-top">cloudwatch_<wbr>logging_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration_<wbr>cloudwatch_<wbr>logging_<wbr>options}</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration_<wbr>cloudwatch_<wbr>logging_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -11390,7 +11390,7 @@ The password for the username above.
             <td class="align-top">processing_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration_<wbr>processing_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration_<wbr>processing_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -11435,7 +11435,7 @@ The role that Kinesis Data Firehose can use to access AWS Glue. This role must b
             <td class="align-top">s3_<wbr>backup_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration_<wbr>s3_<wbr>backup_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration_<wbr>s3_<wbr>backup_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -11967,7 +11967,7 @@ Defaults to `true`. Set it to `false` if you want to disable format conversion w
             <td class="align-top">processors</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">list[firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration_<wbr>processing_<wbr>configuration_<wbr>processor]</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">List[firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration_<wbr>processing_<wbr>configuration_<wbr>processor]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -12173,7 +12173,7 @@ The type of processor. Valid Values: `Lambda`
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">list[firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration_<wbr>processing_<wbr>configuration_<wbr>processor_<wbr>parameter]</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">List[firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration_<wbr>processing_<wbr>configuration_<wbr>processor_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -12937,7 +12937,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             <td class="align-top">cloudwatch_<wbr>logging_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration_<wbr>s3_<wbr>backup_<wbr>configuration_<wbr>cloudwatch_<wbr>logging_<wbr>options}</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>redshift_<wbr>configuration_<wbr>s3_<wbr>backup_<wbr>configuration_<wbr>cloudwatch_<wbr>logging_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -13807,7 +13807,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             <td class="align-top">cloudwatch_<wbr>logging_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>s3_<wbr>configuration_<wbr>cloudwatch_<wbr>logging_<wbr>options}</a></code>
+                <code><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>s3_<wbr>configuration_<wbr>cloudwatch_<wbr>logging_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -14786,7 +14786,7 @@ Defines how documents should be delivered to Amazon S3.  Valid values are `Faile
             <td class="align-top">cloudwatch_<wbr>logging_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>splunk_<wbr>configuration_<wbr>cloudwatch_<wbr>logging_<wbr>options}</a></code>
+                <code><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>splunk_<wbr>configuration_<wbr>cloudwatch_<wbr>logging_<wbr>options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -14861,7 +14861,7 @@ The GUID that you obtain from your Splunk cluster when you create a new HEC endp
             <td class="align-top">processing_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">dict{firehose_<wbr>delivery_<wbr>stream_<wbr>splunk_<wbr>configuration_<wbr>processing_<wbr>configuration}</a></code>
+                <code><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Dict[firehose_<wbr>delivery_<wbr>stream_<wbr>splunk_<wbr>configuration_<wbr>processing_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -15393,7 +15393,7 @@ Defaults to `true`. Set it to `false` if you want to disable format conversion w
             <td class="align-top">processors</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">list[firehose_<wbr>delivery_<wbr>stream_<wbr>splunk_<wbr>configuration_<wbr>processing_<wbr>configuration_<wbr>processor]</a></code>
+                <code><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">List[firehose_<wbr>delivery_<wbr>stream_<wbr>splunk_<wbr>configuration_<wbr>processing_<wbr>configuration_<wbr>processor]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -15599,7 +15599,7 @@ The type of processor. Valid Values: `Lambda`
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">list[firehose_<wbr>delivery_<wbr>stream_<wbr>splunk_<wbr>configuration_<wbr>processing_<wbr>configuration_<wbr>processor_<wbr>parameter]</a></code>
+                <code><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">List[firehose_<wbr>delivery_<wbr>stream_<wbr>splunk_<wbr>configuration_<wbr>processing_<wbr>configuration_<wbr>processor_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

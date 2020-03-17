@@ -583,7 +583,7 @@ The source of the API key for requests. Valid values are HEADER (default) and AU
             <td class="align-top">binary_<wbr>media_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -628,7 +628,7 @@ The description of the REST API
             <td class="align-top">endpoint_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#restapiendpointconfiguration">dict{rest_<wbr>api_<wbr>endpoint_<wbr>configuration}</a></code>
+                <code><a href="#restapiendpointconfiguration">Dict[rest_<wbr>api_<wbr>endpoint_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -687,7 +687,7 @@ The name of the REST API
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1332,7 +1332,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
             <td class="align-top">binary_<wbr>media_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The list of binary media types supported by the RestApi. By default, the RestApi supports only UTF-8-encoded text payloads.
  {{% /md %}}
@@ -1384,7 +1384,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
             <td class="align-top">endpoint_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#restapiendpointconfiguration">dict{rest_<wbr>api_<wbr>endpoint_<wbr>configuration}</a></code>
+                <code><a href="#restapiendpointconfiguration">Dict[rest_<wbr>api_<wbr>endpoint_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument defining API endpoint configuration including endpoint type. Defined below.
  {{% /md %}}
@@ -1463,7 +1463,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -2233,7 +2233,7 @@ Amazon Resource Name (ARN)
             <td class="align-top">binary_<wbr>media_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2293,7 +2293,7 @@ The description of the REST API
             <td class="align-top">endpoint_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#restapiendpointconfiguration">dict{rest_<wbr>api_<wbr>endpoint_<wbr>configuration}</a></code>
+                <code><a href="#restapiendpointconfiguration">Dict[rest_<wbr>api_<wbr>endpoint_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2384,7 +2384,7 @@ The resource ID of the REST API&#39;s root
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2612,7 +2612,7 @@ A list of endpoint types. This resource currently only supports managing a singl
             <td class="align-top">vpc_<wbr>endpoint_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

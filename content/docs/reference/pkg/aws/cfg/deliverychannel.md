@@ -464,7 +464,7 @@ The prefix for the specified S3 bucket.
             <td class="align-top">snapshot_<wbr>delivery_<wbr>properties</td>
             <td class="align-top">
                 
-                <code><a href="#deliverychannelsnapshotdeliveryproperties">dict{delivery_<wbr>channel_<wbr>snapshot_<wbr>delivery_<wbr>properties}</a></code>
+                <code><a href="#deliverychannelsnapshotdeliveryproperties">Dict[delivery_<wbr>channel_<wbr>snapshot_<wbr>delivery_<wbr>properties]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -822,7 +822,7 @@ The following output properties are available:
             <td class="align-top">snapshot_<wbr>delivery_<wbr>properties</td>
             <td class="align-top">
                 
-                <code><a href="#deliverychannelsnapshotdeliveryproperties">dict{delivery_<wbr>channel_<wbr>snapshot_<wbr>delivery_<wbr>properties}</a></code>
+                <code><a href="#deliverychannelsnapshotdeliveryproperties">Dict[delivery_<wbr>channel_<wbr>snapshot_<wbr>delivery_<wbr>properties]</a></code>
             </td>
             <td class="align-top">{{% md %}} Options for how AWS Config delivers configuration snapshots. See below
  {{% /md %}}
@@ -1257,7 +1257,7 @@ The prefix for the specified S3 bucket.
             <td class="align-top">snapshot_<wbr>delivery_<wbr>properties</td>
             <td class="align-top">
                 
-                <code><a href="#deliverychannelsnapshotdeliveryproperties">dict{delivery_<wbr>channel_<wbr>snapshot_<wbr>delivery_<wbr>properties}</a></code>
+                <code><a href="#deliverychannelsnapshotdeliveryproperties">Dict[delivery_<wbr>channel_<wbr>snapshot_<wbr>delivery_<wbr>properties]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

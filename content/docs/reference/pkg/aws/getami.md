@@ -436,7 +436,7 @@ List of AMI owners to limit search. At least 1 value must be specified. Valid va
             <td class="align-top">executable_<wbr>users</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -452,7 +452,7 @@ the image. Valid items are the numeric account ID or `self`.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getamifilter">list[get_<wbr>ami_<wbr>filter]</a></code>
+                <code><a href="#getamifilter">List[get_<wbr>ami_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -504,7 +504,7 @@ options to narrow down the list AWS returns.
             <td class="align-top">owners</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -519,7 +519,7 @@ List of AMI owners to limit search. At least 1 value must be specified. Valid va
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1877,7 +1877,7 @@ is successfully registered and can be used to launch an instance.
             <td class="align-top">block_<wbr>device_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code><a href="#getamiblockdevicemapping">list[get_<wbr>ami_<wbr>block_<wbr>device_<wbr>mapping]</a></code>
+                <code><a href="#getamiblockdevicemapping">List[get_<wbr>ami_<wbr>block_<wbr>device_<wbr>mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} The block device mappings of the AMI.
 * `block_device_mappings.#.device_name` - The physical name of the device.
@@ -1931,7 +1931,7 @@ creation.
             <td class="align-top">executable_<wbr>users</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1943,7 +1943,7 @@ creation.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getamifilter">list[get_<wbr>ami_<wbr>filter]</a></code>
+                <code><a href="#getamifilter">List[get_<wbr>ami_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2098,7 +2098,7 @@ for machine images.
             <td class="align-top">owners</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2123,7 +2123,7 @@ for machine images.
             <td class="align-top">product_<wbr>codes</td>
             <td class="align-top">
                 
-                <code><a href="#getamiproductcode">list[get_<wbr>ami_<wbr>product_<wbr>code]</a></code>
+                <code><a href="#getamiproductcode">List[get_<wbr>ami_<wbr>product_<wbr>code]</a></code>
             </td>
             <td class="align-top">{{% md %}} Any product codes associated with the AMI.
 * `product_codes.#.product_code_id` - The product code.
@@ -2232,7 +2232,7 @@ is successfully registered and can be used to launch an instance.
             <td class="align-top">state_<wbr>reason</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Describes a state change. Fields are `UNSET` if not available.
 * `state_reason.code` - The reason code for the state change.
@@ -2247,7 +2247,7 @@ is successfully registered and can be used to launch an instance.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
@@ -2564,7 +2564,7 @@ is successfully registered and can be used to launch an instance.
             <td class="align-top">ebs</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2809,7 +2809,7 @@ The name of the AMI that was provided during image creation.
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

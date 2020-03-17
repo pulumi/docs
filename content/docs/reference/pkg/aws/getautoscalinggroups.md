@@ -192,7 +192,7 @@ A filter used to scope the list e.g. by tags. See [related docs](http://docs.aws
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getautoscalinggroupsfilter">list[get_<wbr>autoscaling_<wbr>groups_<wbr>filter]</a></code>
+                <code><a href="#getautoscalinggroupsfilter">List[get_<wbr>autoscaling_<wbr>groups_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -455,7 +455,7 @@ The following output properties are available:
             <td class="align-top">arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of the Autoscaling Groups Arns in the current region.
  {{% /md %}}
@@ -468,7 +468,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getautoscalinggroupsfilter">list[get_<wbr>autoscaling_<wbr>groups_<wbr>filter]</a></code>
+                <code><a href="#getautoscalinggroupsfilter">List[get_<wbr>autoscaling_<wbr>groups_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -493,7 +493,7 @@ The following output properties are available:
             <td class="align-top">names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of the Autoscaling Groups in the current region.
  {{% /md %}}
@@ -717,7 +717,7 @@ The name of the filter. The valid values are: `auto-scaling-group`, `key`, `valu
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -558,7 +558,7 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
             <td class="align-top">default_<wbr>actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultaction">list[listener_<wbr>default_<wbr>action]</a></code>
+                <code><a href="#listenerdefaultaction">List[listener_<wbr>default_<wbr>action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1026,7 +1026,7 @@ The following output properties are available:
             <td class="align-top">default_<wbr>actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultaction">list[listener_<wbr>default_<wbr>action]</a></code>
+                <code><a href="#listenerdefaultaction">List[listener_<wbr>default_<wbr>action]</a></code>
             </td>
             <td class="align-top">{{% md %}} An Action block. Action blocks are documented below.
  {{% /md %}}
@@ -1575,7 +1575,7 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
             <td class="align-top">default_<wbr>actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultaction">list[listener_<wbr>default_<wbr>action]</a></code>
+                <code><a href="#listenerdefaultaction">List[listener_<wbr>default_<wbr>action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2064,7 +2064,7 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
             <td class="align-top">authenticate_<wbr>cognito</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionauthenticatecognito">dict{listener_<wbr>default_<wbr>action_<wbr>authenticate_<wbr>cognito}</a></code>
+                <code><a href="#listenerdefaultactionauthenticatecognito">Dict[listener_<wbr>default_<wbr>action_<wbr>authenticate_<wbr>cognito]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2078,7 +2078,7 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
             <td class="align-top">authenticate_<wbr>oidc</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionauthenticateoidc">dict{listener_<wbr>default_<wbr>action_<wbr>authenticate_<wbr>oidc}</a></code>
+                <code><a href="#listenerdefaultactionauthenticateoidc">Dict[listener_<wbr>default_<wbr>action_<wbr>authenticate_<wbr>oidc]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2092,7 +2092,7 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
             <td class="align-top">fixed_<wbr>response</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionfixedresponse">dict{listener_<wbr>default_<wbr>action_<wbr>fixed_<wbr>response}</a></code>
+                <code><a href="#listenerdefaultactionfixedresponse">Dict[listener_<wbr>default_<wbr>action_<wbr>fixed_<wbr>response]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2121,7 +2121,7 @@ Information for creating an action that returns a custom HTTP response. Required
             <td class="align-top">redirect</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionredirect">dict{listener_<wbr>default_<wbr>action_<wbr>redirect}</a></code>
+                <code><a href="#listenerdefaultactionredirect">Dict[listener_<wbr>default_<wbr>action_<wbr>redirect]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2627,7 +2627,7 @@ The domain prefix or fully-qualified domain name of the Cognito user pool.
             <td class="align-top">authentication_<wbr>request_<wbr>extra_<wbr>params</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3343,7 +3343,7 @@ The user info endpoint of the IdP.
             <td class="align-top">authentication_<wbr>request_<wbr>extra_<wbr>params</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -377,7 +377,7 @@ The domain of the certificate to look up. If no certificate is found with this n
             <td class="align-top">key_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -407,7 +407,7 @@ If set to true, it sorts the certificates matched by previous criteria by the No
             <td class="align-top">statuses</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -424,7 +424,7 @@ are returned.
             <td class="align-top">types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -830,7 +830,7 @@ The following output properties are available:
             <td class="align-top">key_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -854,7 +854,7 @@ The following output properties are available:
             <td class="align-top">statuses</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -866,7 +866,7 @@ The following output properties are available:
             <td class="align-top">types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

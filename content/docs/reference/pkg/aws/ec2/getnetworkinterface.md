@@ -259,7 +259,7 @@ The identifier for the network interface.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkinterfacefilter">list[get_<wbr>network_<wbr>interface_<wbr>filter]</a></code>
+                <code><a href="#getnetworkinterfacefilter">List[get_<wbr>network_<wbr>interface_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -289,7 +289,7 @@ The identifier for the network interface.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1091,7 +1091,7 @@ The following output properties are available:
             <td class="align-top">associations</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkinterfaceassociation">list[get_<wbr>network_<wbr>interface_<wbr>association]</a></code>
+                <code><a href="#getnetworkinterfaceassociation">List[get_<wbr>network_<wbr>interface_<wbr>association]</a></code>
             </td>
             <td class="align-top">{{% md %}} The association information for an Elastic IP address (IPv4) associated with the network interface. See supported fields below.
  {{% /md %}}
@@ -1104,7 +1104,7 @@ The following output properties are available:
             <td class="align-top">attachments</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkinterfaceattachment">list[get_<wbr>network_<wbr>interface_<wbr>attachment]</a></code>
+                <code><a href="#getnetworkinterfaceattachment">List[get_<wbr>network_<wbr>interface_<wbr>attachment]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1142,7 +1142,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkinterfacefilter">list[get_<wbr>network_<wbr>interface_<wbr>filter]</a></code>
+                <code><a href="#getnetworkinterfacefilter">List[get_<wbr>network_<wbr>interface_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1179,7 +1179,7 @@ The following output properties are available:
             <td class="align-top">ipv6_<wbr>addresses</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of IPv6 addresses to assign to the ENI.
  {{% /md %}}
@@ -1244,7 +1244,7 @@ The following output properties are available:
             <td class="align-top">private_<wbr>ips</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The private IPv4 addresses associated with the network interface.
  {{% /md %}}
@@ -1270,7 +1270,7 @@ The following output properties are available:
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The list of security groups for the network interface.
  {{% /md %}}
@@ -1296,7 +1296,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Any tags assigned to the network interface.
  {{% /md %}}
@@ -2252,7 +2252,7 @@ The address of the Elastic IP address bound to the network interface.
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

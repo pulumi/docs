@@ -338,7 +338,7 @@ Key-value mapping of tags for the Elastic Beanstalk Application.
             <td class="align-top">appversion_<wbr>lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappversionlifecycle">dict{application_<wbr>appversion_<wbr>lifecycle}</a></code>
+                <code><a href="#applicationappversionlifecycle">Dict[application_<wbr>appversion_<wbr>lifecycle]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -382,7 +382,7 @@ The name of the application, must be unique within your account
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -683,7 +683,7 @@ The following output properties are available:
             <td class="align-top">appversion_<wbr>lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappversionlifecycle">dict{application_<wbr>appversion_<wbr>lifecycle}</a></code>
+                <code><a href="#applicationappversionlifecycle">Dict[application_<wbr>appversion_<wbr>lifecycle]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -734,7 +734,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of tags for the Elastic Beanstalk Application.
  {{% /md %}}
@@ -1108,7 +1108,7 @@ Key-value mapping of tags for the Elastic Beanstalk Application.
             <td class="align-top">appversion_<wbr>lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappversionlifecycle">dict{application_<wbr>appversion_<wbr>lifecycle}</a></code>
+                <code><a href="#applicationappversionlifecycle">Dict[application_<wbr>appversion_<wbr>lifecycle]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1167,7 +1167,7 @@ The name of the application, must be unique within your account
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

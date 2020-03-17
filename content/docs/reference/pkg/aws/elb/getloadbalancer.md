@@ -238,7 +238,7 @@ The unique name of the load balancer.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1070,7 +1070,7 @@ The following output properties are available:
             <td class="align-top">access_<wbr>logs</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalanceraccesslogs">dict{get_<wbr>load_<wbr>balancer_<wbr>access_<wbr>logs}</a></code>
+                <code><a href="#getloadbalanceraccesslogs">Dict[get_<wbr>load_<wbr>balancer_<wbr>access_<wbr>logs]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1094,7 +1094,7 @@ The following output properties are available:
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1154,7 +1154,7 @@ The following output properties are available:
             <td class="align-top">health_<wbr>check</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalancerhealthcheck">dict{get_<wbr>load_<wbr>balancer_<wbr>health_<wbr>check}</a></code>
+                <code><a href="#getloadbalancerhealthcheck">Dict[get_<wbr>load_<wbr>balancer_<wbr>health_<wbr>check]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1191,7 +1191,7 @@ The following output properties are available:
             <td class="align-top">instances</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1215,7 +1215,7 @@ The following output properties are available:
             <td class="align-top">listeners</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalancerlistener">list[get_<wbr>load_<wbr>balancer_<wbr>listener]</a></code>
+                <code><a href="#getloadbalancerlistener">List[get_<wbr>load_<wbr>balancer_<wbr>listener]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1239,7 +1239,7 @@ The following output properties are available:
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1275,7 +1275,7 @@ The following output properties are available:
             <td class="align-top">subnets</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1287,7 +1287,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

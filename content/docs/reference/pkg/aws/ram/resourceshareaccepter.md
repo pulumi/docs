@@ -629,7 +629,7 @@ The following output properties are available:
             <td class="align-top">resources</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of the resource ARNs shared via the resource share.
  {{% /md %}}
@@ -1236,7 +1236,7 @@ The account ID of the receiver account which accepts the invitation.
             <td class="align-top">resources</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

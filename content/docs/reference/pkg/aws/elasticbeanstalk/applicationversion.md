@@ -491,7 +491,7 @@ Key-value mapping of tags for the Elastic Beanstalk Application Version.
             <td class="align-top">application</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -506,7 +506,7 @@ Name of the Beanstalk Application the version is associated with.
             <td class="align-top">bucket</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -582,7 +582,7 @@ A unique name for the this Application Version.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1098,7 +1098,7 @@ by multiple Elastic Beanstalk Environments.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of tags for the Elastic Beanstalk Application Version.
  {{% /md %}}
@@ -1613,7 +1613,7 @@ Key-value mapping of tags for the Elastic Beanstalk Application Version.
             <td class="align-top">application</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1643,7 +1643,7 @@ The ARN assigned by AWS for this Elastic Beanstalk Application.
             <td class="align-top">bucket</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1719,7 +1719,7 @@ A unique name for the this Application Version.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

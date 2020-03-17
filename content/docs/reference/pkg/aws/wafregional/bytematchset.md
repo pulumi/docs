@@ -249,7 +249,7 @@ The name or description of the ByteMatchSet.
             <td class="align-top">byte_<wbr>match_<wbr>tuples</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuple">list[byte_<wbr>match_<wbr>set_<wbr>byte_<wbr>match_<wbr>tuple]</a></code>
+                <code><a href="#bytematchsetbytematchtuple">List[byte_<wbr>match_<wbr>set_<wbr>byte_<wbr>match_<wbr>tuple]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -451,7 +451,7 @@ The following output properties are available:
             <td class="align-top">byte_<wbr>match_<wbr>tuples</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuple">list[byte_<wbr>match_<wbr>set_<wbr>byte_<wbr>match_<wbr>tuple]</a></code>
+                <code><a href="#bytematchsetbytematchtuple">List[byte_<wbr>match_<wbr>set_<wbr>byte_<wbr>match_<wbr>tuple]</a></code>
             </td>
             <td class="align-top">{{% md %}} Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
  {{% /md %}}
@@ -706,7 +706,7 @@ The name or description of the ByteMatchSet.
             <td class="align-top">byte_<wbr>match_<wbr>tuples</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuple">list[byte_<wbr>match_<wbr>set_<wbr>byte_<wbr>match_<wbr>tuple]</a></code>
+                <code><a href="#bytematchsetbytematchtuple">List[byte_<wbr>match_<wbr>set_<wbr>byte_<wbr>match_<wbr>tuple]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1024,7 +1024,7 @@ The formatting way for web request.
             <td class="align-top">field_<wbr>to_<wbr>match</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuplefieldtomatch">dict{byte_<wbr>match_<wbr>set_<wbr>byte_<wbr>match_<wbr>tuple_<wbr>field_<wbr>to_<wbr>match}</a></code>
+                <code><a href="#bytematchsetbytematchtuplefieldtomatch">Dict[byte_<wbr>match_<wbr>set_<wbr>byte_<wbr>match_<wbr>tuple_<wbr>field_<wbr>to_<wbr>match]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

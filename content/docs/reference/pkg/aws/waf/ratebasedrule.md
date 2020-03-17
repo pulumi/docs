@@ -464,7 +464,7 @@ The name or description of the rule.
             <td class="align-top">predicates</td>
             <td class="align-top">
                 
-                <code><a href="#ratebasedrulepredicate">list[rate_<wbr>based_<wbr>rule_<wbr>predicate]</a></code>
+                <code><a href="#ratebasedrulepredicate">List[rate_<wbr>based_<wbr>rule_<wbr>predicate]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -509,7 +509,7 @@ The maximum number of requests, which have an identical value in the field speci
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -930,7 +930,7 @@ The following output properties are available:
             <td class="align-top">predicates</td>
             <td class="align-top">
                 
-                <code><a href="#ratebasedrulepredicate">list[rate_<wbr>based_<wbr>rule_<wbr>predicate]</a></code>
+                <code><a href="#ratebasedrulepredicate">List[rate_<wbr>based_<wbr>rule_<wbr>predicate]</a></code>
             </td>
             <td class="align-top">{{% md %}} The objects to include in a rule (documented below).
  {{% /md %}}
@@ -969,7 +969,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1481,7 +1481,7 @@ The name or description of the rule.
             <td class="align-top">predicates</td>
             <td class="align-top">
                 
-                <code><a href="#ratebasedrulepredicate">list[rate_<wbr>based_<wbr>rule_<wbr>predicate]</a></code>
+                <code><a href="#ratebasedrulepredicate">List[rate_<wbr>based_<wbr>rule_<wbr>predicate]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1526,7 +1526,7 @@ The maximum number of requests, which have an identical value in the field speci
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

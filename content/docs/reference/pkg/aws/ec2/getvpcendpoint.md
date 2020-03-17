@@ -407,7 +407,7 @@ The ID of the VPC in which the specific VPC Endpoint is used.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcendpointfilter">list[get_<wbr>vpc_<wbr>endpoint_<wbr>filter]</a></code>
+                <code><a href="#getvpcendpointfilter">List[get_<wbr>vpc_<wbr>endpoint_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -467,7 +467,7 @@ The state of the specific VPC Endpoint to retrieve.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1277,7 +1277,7 @@ The following output properties are available:
             <td class="align-top">cidr_<wbr>blocks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of type `Gateway`.
  {{% /md %}}
@@ -1290,7 +1290,7 @@ The following output properties are available:
             <td class="align-top">dns_<wbr>entries</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcendpointdnsentry">list[get_<wbr>vpc_<wbr>endpoint_<wbr>dns_<wbr>entry]</a></code>
+                <code><a href="#getvpcendpointdnsentry">List[get_<wbr>vpc_<wbr>endpoint_<wbr>dns_<wbr>entry]</a></code>
             </td>
             <td class="align-top">{{% md %}} The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
  {{% /md %}}
@@ -1303,7 +1303,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcendpointfilter">list[get_<wbr>vpc_<wbr>endpoint_<wbr>filter]</a></code>
+                <code><a href="#getvpcendpointfilter">List[get_<wbr>vpc_<wbr>endpoint_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1327,7 +1327,7 @@ The following output properties are available:
             <td class="align-top">network_<wbr>interface_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type `Interface`.
  {{% /md %}}
@@ -1405,7 +1405,7 @@ The following output properties are available:
             <td class="align-top">route_<wbr>table_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} One or more route tables associated with the VPC Endpoint. Applicable for endpoints of type `Gateway`.
  {{% /md %}}
@@ -1418,7 +1418,7 @@ The following output properties are available:
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} One or more security groups associated with the network interfaces. Applicable for endpoints of type `Interface`.
  {{% /md %}}
@@ -1455,7 +1455,7 @@ The following output properties are available:
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} One or more subnets in which the VPC Endpoint is located. Applicable for endpoints of type `Interface`.
  {{% /md %}}
@@ -1468,7 +1468,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1944,7 +1944,7 @@ The name of the field to filter by, as defined by
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

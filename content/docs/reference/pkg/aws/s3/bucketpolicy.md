@@ -273,7 +273,7 @@ The name of the bucket to which to apply the policy.
             <td class="align-top">policy</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -722,7 +722,7 @@ The name of the bucket to which to apply the policy.
             <td class="align-top">policy</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

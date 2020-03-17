@@ -723,7 +723,7 @@ The following output properties are available:
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of VPC security group IDs attached to the mount target.
  {{% /md %}}

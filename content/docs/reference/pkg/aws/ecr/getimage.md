@@ -826,7 +826,7 @@ The following output properties are available:
             <td class="align-top">image_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The list of tags associated with this image.
  {{% /md %}}

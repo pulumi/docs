@@ -271,7 +271,7 @@ Amazon Resource Name (ARN) of the certificate authority.
             <td class="align-top">revocation_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getcertificateauthorityrevocationconfiguration">list[get_<wbr>certificate_<wbr>authority_<wbr>revocation_<wbr>configuration]</a></code>
+                <code><a href="#getcertificateauthorityrevocationconfiguration">List[get_<wbr>certificate_<wbr>authority_<wbr>revocation_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -285,7 +285,7 @@ Amazon Resource Name (ARN) of the certificate authority.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -964,7 +964,7 @@ The following output properties are available:
             <td class="align-top">revocation_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getcertificateauthorityrevocationconfiguration">list[get_<wbr>certificate_<wbr>authority_<wbr>revocation_<wbr>configuration]</a></code>
+                <code><a href="#getcertificateauthorityrevocationconfiguration">List[get_<wbr>certificate_<wbr>authority_<wbr>revocation_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing revocation configuration.
 * `revocation_configuration.0.crl_configuration` - Nested attribute containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority.
@@ -1008,7 +1008,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Specifies a key-value map of user-defined tags that are attached to the certificate authority.
  {{% /md %}}
@@ -1182,7 +1182,7 @@ The following output properties are available:
             <td class="align-top">crl_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getcertificateauthorityrevocationconfigurationcrlconfiguration">list[get_<wbr>certificate_<wbr>authority_<wbr>revocation_<wbr>configuration_<wbr>crl_<wbr>configuration]</a></code>
+                <code><a href="#getcertificateauthorityrevocationconfigurationcrlconfiguration">List[get_<wbr>certificate_<wbr>authority_<wbr>revocation_<wbr>configuration_<wbr>crl_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

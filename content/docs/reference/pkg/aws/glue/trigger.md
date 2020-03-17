@@ -640,7 +640,7 @@ A workflow to which the trigger should be associated to. Every workflow graph (D
             <td class="align-top">actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">list[trigger_<wbr>action]</a></code>
+                <code><a href="#triggeraction">List[trigger_<wbr>action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -700,7 +700,7 @@ The name of the trigger.
             <td class="align-top">predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">dict{trigger_<wbr>predicate}</a></code>
+                <code><a href="#triggerpredicate">Dict[trigger_<wbr>predicate]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -730,7 +730,7 @@ A cron expression used to specify the schedule. [Time-Based Schedules for Jobs a
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1259,7 +1259,7 @@ The following output properties are available:
             <td class="align-top">actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">list[trigger_<wbr>action]</a></code>
+                <code><a href="#triggeraction">List[trigger_<wbr>action]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of actions initiated by this trigger when it fires. Defined below.
  {{% /md %}}
@@ -1324,7 +1324,7 @@ The following output properties are available:
             <td class="align-top">predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">dict{trigger_<wbr>predicate}</a></code>
+                <code><a href="#triggerpredicate">Dict[trigger_<wbr>predicate]</a></code>
             </td>
             <td class="align-top">{{% md %}} A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
  {{% /md %}}
@@ -1350,7 +1350,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1978,7 +1978,7 @@ A workflow to which the trigger should be associated to. Every workflow graph (D
             <td class="align-top">actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">list[trigger_<wbr>action]</a></code>
+                <code><a href="#triggeraction">List[trigger_<wbr>action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2053,7 +2053,7 @@ The name of the trigger.
             <td class="align-top">predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">dict{trigger_<wbr>predicate}</a></code>
+                <code><a href="#triggerpredicate">Dict[trigger_<wbr>predicate]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2083,7 +2083,7 @@ A cron expression used to specify the schedule. [Time-Based Schedules for Jobs a
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2416,7 +2416,7 @@ The job run timeout in minutes. It overrides the timeout value of the job.
             <td class="align-top">arguments</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2667,7 +2667,7 @@ How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or 
             <td class="align-top">conditions</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicatecondition">list[trigger_<wbr>predicate_<wbr>condition]</a></code>
+                <code><a href="#triggerpredicatecondition">List[trigger_<wbr>predicate_<wbr>condition]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

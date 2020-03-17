@@ -536,7 +536,7 @@ The ID of the requester VPC.
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepter">dict{vpc_<wbr>peering_<wbr>connection_<wbr>accepter}</a></code>
+                <code><a href="#vpcpeeringconnectionaccepter">Dict[vpc_<wbr>peering_<wbr>connection_<wbr>accepter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -615,7 +615,7 @@ The ID of the VPC with which you are creating the VPC Peering Connection.
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionrequester">dict{vpc_<wbr>peering_<wbr>connection_<wbr>requester}</a></code>
+                <code><a href="#vpcpeeringconnectionrequester">Dict[vpc_<wbr>peering_<wbr>connection_<wbr>requester]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -632,7 +632,7 @@ the peering connection (a maximum of one).
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1138,7 +1138,7 @@ the peering connection (a maximum of one).
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepter">dict{vpc_<wbr>peering_<wbr>connection_<wbr>accepter}</a></code>
+                <code><a href="#vpcpeeringconnectionaccepter">Dict[vpc_<wbr>peering_<wbr>connection_<wbr>accepter]</a></code>
             </td>
             <td class="align-top">{{% md %}} An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -1207,7 +1207,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionrequester">dict{vpc_<wbr>peering_<wbr>connection_<wbr>requester}</a></code>
+                <code><a href="#vpcpeeringconnectionrequester">Dict[vpc_<wbr>peering_<wbr>connection_<wbr>requester]</a></code>
             </td>
             <td class="align-top">{{% md %}} A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
@@ -1222,7 +1222,7 @@ the peering connection (a maximum of one).
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1825,7 +1825,7 @@ The status of the VPC Peering Connection request.
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepter">dict{vpc_<wbr>peering_<wbr>connection_<wbr>accepter}</a></code>
+                <code><a href="#vpcpeeringconnectionaccepter">Dict[vpc_<wbr>peering_<wbr>connection_<wbr>accepter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1904,7 +1904,7 @@ The ID of the VPC with which you are creating the VPC Peering Connection.
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionrequester">dict{vpc_<wbr>peering_<wbr>connection_<wbr>requester}</a></code>
+                <code><a href="#vpcpeeringconnectionrequester">Dict[vpc_<wbr>peering_<wbr>connection_<wbr>requester]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1921,7 +1921,7 @@ the peering connection (a maximum of one).
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

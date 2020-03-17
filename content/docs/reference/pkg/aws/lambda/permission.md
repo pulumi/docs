@@ -704,7 +704,7 @@ The Event Source Token to validate.  Used with [Alexa Skills][1].
             <td class="align-top">function</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2017,7 +2017,7 @@ The Event Source Token to validate.  Used with [Alexa Skills][1].
             <td class="align-top">function</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

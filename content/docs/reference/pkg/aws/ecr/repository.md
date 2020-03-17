@@ -334,7 +334,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">image_<wbr>scanning_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#repositoryimagescanningconfiguration">dict{repository_<wbr>image_<wbr>scanning_<wbr>configuration}</a></code>
+                <code><a href="#repositoryimagescanningconfiguration">Dict[repository_<wbr>image_<wbr>scanning_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -379,7 +379,7 @@ Name of the repository.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -774,7 +774,7 @@ The following output properties are available:
             <td class="align-top">image_<wbr>scanning_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#repositoryimagescanningconfiguration">dict{repository_<wbr>image_<wbr>scanning_<wbr>configuration}</a></code>
+                <code><a href="#repositoryimagescanningconfiguration">Dict[repository_<wbr>image_<wbr>scanning_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
  {{% /md %}}
@@ -839,7 +839,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1321,7 +1321,7 @@ Full ARN of the repository.
             <td class="align-top">image_<wbr>scanning_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#repositoryimagescanningconfiguration">dict{repository_<wbr>image_<wbr>scanning_<wbr>configuration}</a></code>
+                <code><a href="#repositoryimagescanningconfiguration">Dict[repository_<wbr>image_<wbr>scanning_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1396,7 +1396,7 @@ The URL of the repository (in the form `aws_account_id.dkr.ecr.region.amazonaws.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

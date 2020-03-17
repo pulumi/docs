@@ -347,7 +347,7 @@ A mapping of tags, each pair of which must exactly match a pair on the desired E
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getelasticipfilter">list[get_<wbr>elastic_<wbr>ip_<wbr>filter]</a></code>
+                <code><a href="#getelasticipfilter">List[get_<wbr>elastic_<wbr>ip_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -392,7 +392,7 @@ The public IP of the specific EIP to retrieve.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1032,7 +1032,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getelasticipfilter">list[get_<wbr>elastic_<wbr>ip_<wbr>filter]</a></code>
+                <code><a href="#getelasticipfilter">List[get_<wbr>elastic_<wbr>ip_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1161,7 +1161,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value map of tags associated with Elastic IP.
  {{% /md %}}
@@ -1378,7 +1378,7 @@ The following output properties are available:
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

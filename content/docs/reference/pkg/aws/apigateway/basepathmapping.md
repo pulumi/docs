@@ -378,7 +378,7 @@ The already-registered domain name to connect the API to.
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1059,7 +1059,7 @@ The already-registered domain name to connect the API to.
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

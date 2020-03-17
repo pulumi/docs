@@ -365,7 +365,7 @@ An identity pool ID in the format REGION:GUID.
             <td class="align-top">role_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentrolemapping">list[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>role_<wbr>mapping]</a></code>
+                <code><a href="#identitypoolroleattachmentrolemapping">List[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>role_<wbr>mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -380,7 +380,7 @@ A List of Role Mapping.
             <td class="align-top">roles</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentroles">dict{identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>roles}</a></code>
+                <code><a href="#identitypoolroleattachmentroles">Dict[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>roles]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -619,7 +619,7 @@ The following output properties are available:
             <td class="align-top">role_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentrolemapping">list[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>role_<wbr>mapping]</a></code>
+                <code><a href="#identitypoolroleattachmentrolemapping">List[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>role_<wbr>mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} A List of Role Mapping.
  {{% /md %}}
@@ -632,7 +632,7 @@ The following output properties are available:
             <td class="align-top">roles</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentroles">dict{identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>roles}</a></code>
+                <code><a href="#identitypoolroleattachmentroles">Dict[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>roles]</a></code>
             </td>
             <td class="align-top">{{% md %}} The map of roles associated with this pool. For a given role, the key will be either &#34;authenticated&#34; or &#34;unauthenticated&#34; and the value will be the Role ARN.
  {{% /md %}}
@@ -934,7 +934,7 @@ An identity pool ID in the format REGION:GUID.
             <td class="align-top">role_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentrolemapping">list[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>role_<wbr>mapping]</a></code>
+                <code><a href="#identitypoolroleattachmentrolemapping">List[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>role_<wbr>mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -949,7 +949,7 @@ A List of Role Mapping.
             <td class="align-top">roles</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentroles">dict{identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>roles}</a></code>
+                <code><a href="#identitypoolroleattachmentroles">Dict[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>roles]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1282,7 +1282,7 @@ A string identifying the identity provider, for example, &#34;graph.facebook.com
             <td class="align-top">mapping_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentrolemappingmappingrule">list[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>role_<wbr>mapping_<wbr>mapping_<wbr>rule]</a></code>
+                <code><a href="#identitypoolroleattachmentrolemappingmappingrule">List[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>role_<wbr>mapping_<wbr>mapping_<wbr>rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

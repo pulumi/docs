@@ -271,7 +271,7 @@ The name of the DynamoDB table.
             <td class="align-top">server_<wbr>side_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#gettableserversideencryption">dict{get_<wbr>table_<wbr>server_<wbr>side_<wbr>encryption}</a></code>
+                <code><a href="#gettableserversideencryption">Dict[get_<wbr>table_<wbr>server_<wbr>side_<wbr>encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -285,7 +285,7 @@ The name of the DynamoDB table.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1093,7 +1093,7 @@ The following output properties are available:
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#gettableattribute">list[get_<wbr>table_<wbr>attribute]</a></code>
+                <code><a href="#gettableattribute">List[get_<wbr>table_<wbr>attribute]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1117,7 +1117,7 @@ The following output properties are available:
             <td class="align-top">global_<wbr>secondary_<wbr>indexes</td>
             <td class="align-top">
                 
-                <code><a href="#gettableglobalsecondaryindex">list[get_<wbr>table_<wbr>global_<wbr>secondary_<wbr>index]</a></code>
+                <code><a href="#gettableglobalsecondaryindex">List[get_<wbr>table_<wbr>global_<wbr>secondary_<wbr>index]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1154,7 +1154,7 @@ The following output properties are available:
             <td class="align-top">local_<wbr>secondary_<wbr>indexes</td>
             <td class="align-top">
                 
-                <code><a href="#gettablelocalsecondaryindex">list[get_<wbr>table_<wbr>local_<wbr>secondary_<wbr>index]</a></code>
+                <code><a href="#gettablelocalsecondaryindex">List[get_<wbr>table_<wbr>local_<wbr>secondary_<wbr>index]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1178,7 +1178,7 @@ The following output properties are available:
             <td class="align-top">point_<wbr>in_<wbr>time_<wbr>recovery</td>
             <td class="align-top">
                 
-                <code><a href="#gettablepointintimerecovery">dict{get_<wbr>table_<wbr>point_<wbr>in_<wbr>time_<wbr>recovery}</a></code>
+                <code><a href="#gettablepointintimerecovery">Dict[get_<wbr>table_<wbr>point_<wbr>in_<wbr>time_<wbr>recovery]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1214,7 +1214,7 @@ The following output properties are available:
             <td class="align-top">server_<wbr>side_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#gettableserversideencryption">dict{get_<wbr>table_<wbr>server_<wbr>side_<wbr>encryption}</a></code>
+                <code><a href="#gettableserversideencryption">Dict[get_<wbr>table_<wbr>server_<wbr>side_<wbr>encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1274,7 +1274,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1286,7 +1286,7 @@ The following output properties are available:
             <td class="align-top">ttl</td>
             <td class="align-top">
                 
-                <code><a href="#gettablettl">dict{get_<wbr>table_<wbr>ttl}</a></code>
+                <code><a href="#gettablettl">Dict[get_<wbr>table_<wbr>ttl]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1959,7 +1959,7 @@ The name of the DynamoDB table.
             <td class="align-top">non_<wbr>key_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2316,7 +2316,7 @@ The name of the DynamoDB table.
             <td class="align-top">non_<wbr>key_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

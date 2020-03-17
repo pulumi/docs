@@ -552,7 +552,7 @@ The target type which defines the kinds of resources the document can run on. Fo
             <td class="align-top">attachments_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#documentattachmentssource">list[document_<wbr>attachments_<wbr>source]</a></code>
+                <code><a href="#documentattachmentssource">List[document_<wbr>attachments_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -627,7 +627,7 @@ The name of the document.
             <td class="align-top">permissions</td>
             <td class="align-top">
                 
-                <code><a href="#documentpermissions">dict{document_<wbr>permissions}</a></code>
+                <code><a href="#documentpermissions">Dict[document_<wbr>permissions]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -642,7 +642,7 @@ Additional Permissions to attach to the document. See Permissions below for deta
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1555,7 +1555,7 @@ The following output properties are available:
             <td class="align-top">attachments_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#documentattachmentssource">list[document_<wbr>attachments_<wbr>source]</a></code>
+                <code><a href="#documentattachmentssource">List[document_<wbr>attachments_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more configuration blocks describing attachments sources to a version of a document. Defined below.
  {{% /md %}}
@@ -1711,7 +1711,7 @@ The following output properties are available:
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#documentparameter">list[document_<wbr>parameter]</a></code>
+                <code><a href="#documentparameter">List[document_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} The parameters that are available to this document.
  {{% /md %}}
@@ -1724,7 +1724,7 @@ The following output properties are available:
             <td class="align-top">permissions</td>
             <td class="align-top">
                 
-                <code><a href="#documentpermissions">dict{document_<wbr>permissions}</a></code>
+                <code><a href="#documentpermissions">Dict[document_<wbr>permissions]</a></code>
             </td>
             <td class="align-top">{{% md %}} Additional Permissions to attach to the document. See Permissions below for details.
  {{% /md %}}
@@ -1737,7 +1737,7 @@ The following output properties are available:
             <td class="align-top">platform_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of OS platforms compatible with this SSM document, either &#34;Windows&#34; or &#34;Linux&#34;.
  {{% /md %}}
@@ -1776,7 +1776,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the object.
  {{% /md %}}
@@ -2852,7 +2852,7 @@ The target type which defines the kinds of resources the document can run on. Fo
             <td class="align-top">attachments_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#documentattachmentssource">list[document_<wbr>attachments_<wbr>source]</a></code>
+                <code><a href="#documentattachmentssource">List[document_<wbr>attachments_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3032,7 +3032,7 @@ The AWS user account of the person who created the document.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#documentparameter">list[document_<wbr>parameter]</a></code>
+                <code><a href="#documentparameter">List[document_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3047,7 +3047,7 @@ The parameters that are available to this document.
             <td class="align-top">permissions</td>
             <td class="align-top">
                 
-                <code><a href="#documentpermissions">dict{document_<wbr>permissions}</a></code>
+                <code><a href="#documentpermissions">Dict[document_<wbr>permissions]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3062,7 +3062,7 @@ Additional Permissions to attach to the document. See Permissions below for deta
             <td class="align-top">platform_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3107,7 +3107,7 @@ The schema version of the document.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3403,7 +3403,7 @@ The name of the document.
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

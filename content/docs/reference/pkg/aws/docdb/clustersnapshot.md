@@ -867,7 +867,7 @@ The following output properties are available:
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of EC2 Availability Zones that instances in the DocDB cluster snapshot can be restored in.
  {{% /md %}}
@@ -1752,7 +1752,7 @@ The VPC ID associated with the DocDB cluster snapshot.
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

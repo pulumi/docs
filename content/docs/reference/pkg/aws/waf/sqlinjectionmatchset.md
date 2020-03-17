@@ -261,7 +261,7 @@ The name or description of the SQL Injection Match Set.
             <td class="align-top">sql_<wbr>injection_<wbr>match_<wbr>tuples</td>
             <td class="align-top">
                 
-                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">list[sql_<wbr>injection_<wbr>match_<wbr>set_<wbr>sql_<wbr>injection_<wbr>match_<wbr>tuple]</a></code>
+                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">List[sql_<wbr>injection_<wbr>match_<wbr>set_<wbr>sql_<wbr>injection_<wbr>match_<wbr>tuple]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -461,7 +461,7 @@ The following output properties are available:
             <td class="align-top">sql_<wbr>injection_<wbr>match_<wbr>tuples</td>
             <td class="align-top">
                 
-                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">list[sql_<wbr>injection_<wbr>match_<wbr>set_<wbr>sql_<wbr>injection_<wbr>match_<wbr>tuple]</a></code>
+                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">List[sql_<wbr>injection_<wbr>match_<wbr>set_<wbr>sql_<wbr>injection_<wbr>match_<wbr>tuple]</a></code>
             </td>
             <td class="align-top">{{% md %}} The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
  {{% /md %}}
@@ -718,7 +718,7 @@ The name or description of the SQL Injection Match Set.
             <td class="align-top">sql_<wbr>injection_<wbr>match_<wbr>tuples</td>
             <td class="align-top">
                 
-                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">list[sql_<wbr>injection_<wbr>match_<wbr>set_<wbr>sql_<wbr>injection_<wbr>match_<wbr>tuple]</a></code>
+                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">List[sql_<wbr>injection_<wbr>match_<wbr>set_<wbr>sql_<wbr>injection_<wbr>match_<wbr>tuple]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -943,7 +943,7 @@ for all supported values.
             <td class="align-top">field_<wbr>to_<wbr>match</td>
             <td class="align-top">
                 
-                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuplefieldtomatch">dict{sql_<wbr>injection_<wbr>match_<wbr>set_<wbr>sql_<wbr>injection_<wbr>match_<wbr>tuple_<wbr>field_<wbr>to_<wbr>match}</a></code>
+                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuplefieldtomatch">Dict[sql_<wbr>injection_<wbr>match_<wbr>set_<wbr>sql_<wbr>injection_<wbr>match_<wbr>tuple_<wbr>field_<wbr>to_<wbr>match]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

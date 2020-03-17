@@ -810,7 +810,7 @@ The following output properties are available:
             <td class="align-top">version_<wbr>stages</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

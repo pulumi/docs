@@ -389,7 +389,7 @@ Maximum time a game session request can remain in the queue.
             <td class="align-top">destinations</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -419,7 +419,7 @@ Name of the session queue.
             <td class="align-top">player_<wbr>latency_<wbr>policies</td>
             <td class="align-top">
                 
-                <code><a href="#gamesessionqueueplayerlatencypolicy">list[game_<wbr>session_<wbr>queue_<wbr>player_<wbr>latency_<wbr>policy]</a></code>
+                <code><a href="#gamesessionqueueplayerlatencypolicy">List[game_<wbr>session_<wbr>queue_<wbr>player_<wbr>latency_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -434,7 +434,7 @@ One or more policies used to choose fleet based on player latency. See below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -805,7 +805,7 @@ The following output properties are available:
             <td class="align-top">destinations</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of fleet/alias ARNs used by session queue for placing game sessions.
  {{% /md %}}
@@ -831,7 +831,7 @@ The following output properties are available:
             <td class="align-top">player_<wbr>latency_<wbr>policies</td>
             <td class="align-top">
                 
-                <code><a href="#gamesessionqueueplayerlatencypolicy">list[game_<wbr>session_<wbr>queue_<wbr>player_<wbr>latency_<wbr>policy]</a></code>
+                <code><a href="#gamesessionqueueplayerlatencypolicy">List[game_<wbr>session_<wbr>queue_<wbr>player_<wbr>latency_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more policies used to choose fleet based on player latency. See below.
  {{% /md %}}
@@ -844,7 +844,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1294,7 +1294,7 @@ Game Session Queue ARN.
             <td class="align-top">destinations</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1324,7 +1324,7 @@ Name of the session queue.
             <td class="align-top">player_<wbr>latency_<wbr>policies</td>
             <td class="align-top">
                 
-                <code><a href="#gamesessionqueueplayerlatencypolicy">list[game_<wbr>session_<wbr>queue_<wbr>player_<wbr>latency_<wbr>policy]</a></code>
+                <code><a href="#gamesessionqueueplayerlatencypolicy">List[game_<wbr>session_<wbr>queue_<wbr>player_<wbr>latency_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1339,7 +1339,7 @@ One or more policies used to choose fleet based on player latency. See below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

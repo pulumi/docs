@@ -668,7 +668,7 @@ subnet must be the default subnet for its associated availability zone.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsubnetfilter">list[get_<wbr>subnet_<wbr>filter]</a></code>
+                <code><a href="#getsubnetfilter">List[get_<wbr>subnet_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -728,7 +728,7 @@ The state that the desired subnet must have.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1473,7 +1473,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsubnetfilter">list[get_<wbr>subnet_<wbr>filter]</a></code>
+                <code><a href="#getsubnetfilter">List[get_<wbr>subnet_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1558,7 +1558,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1804,7 +1804,7 @@ For example, if matching against tag `Name`, use:
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

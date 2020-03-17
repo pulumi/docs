@@ -355,7 +355,7 @@ The ID of the VPC Endpoint Service to receive notifications for.
             <td class="align-top">connection_<wbr>events</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -743,7 +743,7 @@ The following output properties are available:
             <td class="align-top">connection_<wbr>events</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} One or more endpoint [events](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcEndpointConnectionNotification.html#API_CreateVpcEndpointConnectionNotification_RequestParameters) for which to receive notifications.
  {{% /md %}}
@@ -1230,7 +1230,7 @@ The ID of the VPC Endpoint Service to receive notifications for.
             <td class="align-top">connection_<wbr>events</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

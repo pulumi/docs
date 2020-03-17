@@ -814,7 +814,7 @@ The name of the SSM document to apply.
             <td class="align-top">output_<wbr>location</td>
             <td class="align-top">
                 
-                <code><a href="#associationoutputlocation">dict{association_<wbr>output_<wbr>location}</a></code>
+                <code><a href="#associationoutputlocation">Dict[association_<wbr>output_<wbr>location]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -829,7 +829,7 @@ An output location block. Output Location is documented below.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -859,7 +859,7 @@ A cron expression when the association will be applied to the target(s).
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#associationtarget">list[association_<wbr>target]</a></code>
+                <code><a href="#associationtarget">List[association_<wbr>target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1592,7 +1592,7 @@ The following output properties are available:
             <td class="align-top">output_<wbr>location</td>
             <td class="align-top">
                 
-                <code><a href="#associationoutputlocation">dict{association_<wbr>output_<wbr>location}</a></code>
+                <code><a href="#associationoutputlocation">Dict[association_<wbr>output_<wbr>location]</a></code>
             </td>
             <td class="align-top">{{% md %}} An output location block. Output Location is documented below.
  {{% /md %}}
@@ -1605,7 +1605,7 @@ The following output properties are available:
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A block of arbitrary string parameters to pass to the SSM document.
  {{% /md %}}
@@ -1631,7 +1631,7 @@ The following output properties are available:
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#associationtarget">list[association_<wbr>target]</a></code>
+                <code><a href="#associationtarget">List[association_<wbr>target]</a></code>
             </td>
             <td class="align-top">{{% md %}} A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
  {{% /md %}}
@@ -2503,7 +2503,7 @@ The name of the SSM document to apply.
             <td class="align-top">output_<wbr>location</td>
             <td class="align-top">
                 
-                <code><a href="#associationoutputlocation">dict{association_<wbr>output_<wbr>location}</a></code>
+                <code><a href="#associationoutputlocation">Dict[association_<wbr>output_<wbr>location]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2518,7 +2518,7 @@ An output location block. Output Location is documented below.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2548,7 +2548,7 @@ A cron expression when the association will be applied to the target(s).
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#associationtarget">list[association_<wbr>target]</a></code>
+                <code><a href="#associationtarget">List[association_<wbr>target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2997,7 +2997,7 @@ Either `InstanceIds` or `tag:Tag Name` to specify an EC2 tag.
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

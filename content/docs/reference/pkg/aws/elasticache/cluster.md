@@ -1463,7 +1463,7 @@ The port number on which each of the cache nodes will accept connections. For Me
             <td class="align-top">preferred_<wbr>availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1493,7 +1493,7 @@ The ID of the replication group to which this cluster should belong. If this par
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1509,7 +1509,7 @@ with the cache cluster
             <td class="align-top">security_<wbr>group_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1525,7 +1525,7 @@ names to associate with this cache cluster
             <td class="align-top">snapshot_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1608,7 +1608,7 @@ for the cache cluster.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2866,7 +2866,7 @@ are applied immediately, or during the next maintenance window. Default is
             <td class="align-top">cache_<wbr>nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clustercachenode">list[cluster_<wbr>cache_<wbr>node]</a></code>
+                <code><a href="#clustercachenode">List[cluster_<wbr>cache_<wbr>node]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of node objects including `id`, `address`, `port` and `availability_zone`.
 Referenceable e.g. as `${aws_elasticache_cluster.bar.cache_nodes.0.address}`
@@ -3037,7 +3037,7 @@ with this cache cluster
             <td class="align-top">preferred_<wbr>availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
  {{% /md %}}
@@ -3063,7 +3063,7 @@ with this cache cluster
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} One or more VPC security groups associated
 with the cache cluster
@@ -3077,7 +3077,7 @@ with the cache cluster
             <td class="align-top">security_<wbr>group_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of security group
 names to associate with this cache cluster
@@ -3091,7 +3091,7 @@ names to associate with this cache cluster
             <td class="align-top">snapshot_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A single-element string list containing an
 Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
@@ -3164,7 +3164,7 @@ for the cache cluster.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource
  {{% /md %}}
@@ -4629,7 +4629,7 @@ Specifies whether the nodes in this Memcached node group are created in a single
             <td class="align-top">cache_<wbr>nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clustercachenode">list[cluster_<wbr>cache_<wbr>node]</a></code>
+                <code><a href="#clustercachenode">List[cluster_<wbr>cache_<wbr>node]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4824,7 +4824,7 @@ The port number on which each of the cache nodes will accept connections. For Me
             <td class="align-top">preferred_<wbr>availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4854,7 +4854,7 @@ The ID of the replication group to which this cluster should belong. If this par
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4870,7 +4870,7 @@ with the cache cluster
             <td class="align-top">security_<wbr>group_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4886,7 +4886,7 @@ names to associate with this cache cluster
             <td class="align-top">snapshot_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4969,7 +4969,7 @@ for the cache cluster.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

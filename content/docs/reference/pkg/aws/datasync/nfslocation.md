@@ -337,7 +337,7 @@ Key-value pairs of resource tags to assign to the DataSync Location.
             <td class="align-top">on_<wbr>prem_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#nfslocationonpremconfig">dict{nfs_<wbr>location_<wbr>on_<wbr>prem_<wbr>config}</a></code>
+                <code><a href="#nfslocationonpremconfig">Dict[nfs_<wbr>location_<wbr>on_<wbr>prem_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -382,7 +382,7 @@ Subdirectory to perform actions as source or destination. Should be exported by 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -735,7 +735,7 @@ The following output properties are available:
             <td class="align-top">on_<wbr>prem_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#nfslocationonpremconfig">dict{nfs_<wbr>location_<wbr>on_<wbr>prem_<wbr>config}</a></code>
+                <code><a href="#nfslocationonpremconfig">Dict[nfs_<wbr>location_<wbr>on_<wbr>prem_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing information for connecting to the NFS File System.
  {{% /md %}}
@@ -774,7 +774,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value pairs of resource tags to assign to the DataSync Location.
  {{% /md %}}
@@ -1220,7 +1220,7 @@ Amazon Resource Name (ARN) of the DataSync Location.
             <td class="align-top">on_<wbr>prem_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#nfslocationonpremconfig">dict{nfs_<wbr>location_<wbr>on_<wbr>prem_<wbr>config}</a></code>
+                <code><a href="#nfslocationonpremconfig">Dict[nfs_<wbr>location_<wbr>on_<wbr>prem_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1265,7 +1265,7 @@ Subdirectory to perform actions as source or destination. Should be exported by 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1447,7 +1447,7 @@ List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to t
             <td class="align-top">agent_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

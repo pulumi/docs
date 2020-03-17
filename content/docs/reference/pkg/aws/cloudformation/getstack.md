@@ -238,7 +238,7 @@ The name of the stack
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -812,7 +812,7 @@ The following output properties are available:
             <td class="align-top">capabilities</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of capabilities
  {{% /md %}}
@@ -889,7 +889,7 @@ The following output properties are available:
             <td class="align-top">notification_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of SNS topic ARNs to publish stack related events
  {{% /md %}}
@@ -902,7 +902,7 @@ The following output properties are available:
             <td class="align-top">outputs</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A map of outputs from the stack.
  {{% /md %}}
@@ -915,7 +915,7 @@ The following output properties are available:
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A map of parameters that specify input parameters for the stack.
  {{% /md %}}
@@ -928,7 +928,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A map of tags associated with this stack.
  {{% /md %}}

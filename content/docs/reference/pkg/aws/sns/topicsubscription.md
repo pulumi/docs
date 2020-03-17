@@ -616,7 +616,7 @@ Boolean indicating whether or not to enable raw message delivery (the original m
             <td class="align-top">topic</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1857,7 +1857,7 @@ Boolean indicating whether or not to enable raw message delivery (the original m
             <td class="align-top">topic</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

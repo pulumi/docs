@@ -265,7 +265,7 @@ The name for the repository. This needs to be less than 100 characters.
             <td class="align-top">triggers</td>
             <td class="align-top">
                 
-                <code><a href="#triggertrigger">list[trigger_<wbr>trigger]</a></code>
+                <code><a href="#triggertrigger">List[trigger_<wbr>trigger]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -509,7 +509,7 @@ The following output properties are available:
             <td class="align-top">triggers</td>
             <td class="align-top">
                 
-                <code><a href="#triggertrigger">list[trigger_<wbr>trigger]</a></code>
+                <code><a href="#triggertrigger">List[trigger_<wbr>trigger]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -818,7 +818,7 @@ The name for the repository. This needs to be less than 100 characters.
             <td class="align-top">triggers</td>
             <td class="align-top">
                 
-                <code><a href="#triggertrigger">list[trigger_<wbr>trigger]</a></code>
+                <code><a href="#triggertrigger">List[trigger_<wbr>trigger]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1165,7 +1165,7 @@ The name of the trigger.
             <td class="align-top">branches</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1210,7 +1210,7 @@ The ARN of the resource that is the target for a trigger. For example, the ARN o
             <td class="align-top">events</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -321,7 +321,7 @@ The last path segment of this API resource.
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1002,7 +1002,7 @@ The last path segment of this API resource.
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

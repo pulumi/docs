@@ -1902,7 +1902,7 @@ are applied immediately, or during the next maintenance window. Default is
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1977,7 +1977,7 @@ Creates a unique cluster identifier beginning with the specified prefix. Conflic
             <td class="align-top">cluster_<wbr>members</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2082,7 +2082,7 @@ Enable HTTP endpoint (data API). Only valid when `engine_mode` is set to `server
             <td class="align-top">enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2190,7 +2190,7 @@ Specifies whether or mappings of AWS Identity and Access Management (IAM) accoun
             <td class="align-top">iam_<wbr>roles</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2312,7 +2312,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">s3_<wbr>import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">dict{cluster_<wbr>s3_<wbr>import}</a></code>
+                <code><a href="#clusters3import">Dict[cluster_<wbr>s3_<wbr>import]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2326,7 +2326,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">scaling_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">dict{cluster_<wbr>scaling_<wbr>configuration}</a></code>
+                <code><a href="#clusterscalingconfiguration">Dict[cluster_<wbr>scaling_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2401,7 +2401,7 @@ Specifies whether the DB cluster is encrypted. The default is `false` for `provi
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2416,7 +2416,7 @@ A mapping of tags to assign to the DB cluster.
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4177,7 +4177,7 @@ are applied immediately, or during the next maintenance window. Default is
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next deployment. It is recommended to specify 3 AZs or use `ignore_changes` if necessary.
  {{% /md %}}
@@ -4242,7 +4242,7 @@ are applied immediately, or during the next maintenance window. Default is
             <td class="align-top">cluster_<wbr>members</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of RDS Instances that are a part of this cluster
  {{% /md %}}
@@ -4346,7 +4346,7 @@ are applied immediately, or during the next maintenance window. Default is
             <td class="align-top">enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
@@ -4466,7 +4466,7 @@ made.
             <td class="align-top">iam_<wbr>roles</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A List of ARNs for the IAM roles to associate to the RDS Cluster.
  {{% /md %}}
@@ -4586,7 +4586,7 @@ load-balanced across replicas
             <td class="align-top">s3_<wbr>import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">dict{cluster_<wbr>s3_<wbr>import}</a></code>
+                <code><a href="#clusters3import">Dict[cluster_<wbr>s3_<wbr>import]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -4598,7 +4598,7 @@ load-balanced across replicas
             <td class="align-top">scaling_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">dict{cluster_<wbr>scaling_<wbr>configuration}</a></code>
+                <code><a href="#clusterscalingconfiguration">Dict[cluster_<wbr>scaling_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
  {{% /md %}}
@@ -4663,7 +4663,7 @@ load-balanced across replicas
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the DB cluster.
  {{% /md %}}
@@ -4676,7 +4676,7 @@ load-balanced across replicas
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of VPC security groups to associate
 with the Cluster
@@ -6730,7 +6730,7 @@ Amazon Resource Name (ARN) of cluster
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6805,7 +6805,7 @@ Creates a unique cluster identifier beginning with the specified prefix. Conflic
             <td class="align-top">cluster_<wbr>members</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6925,7 +6925,7 @@ Enable HTTP endpoint (data API). Only valid when `engine_mode` is set to `server
             <td class="align-top">enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7063,7 +7063,7 @@ Specifies whether or mappings of AWS Identity and Access Management (IAM) accoun
             <td class="align-top">iam_<wbr>roles</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7201,7 +7201,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">s3_<wbr>import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">dict{cluster_<wbr>s3_<wbr>import}</a></code>
+                <code><a href="#clusters3import">Dict[cluster_<wbr>s3_<wbr>import]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7215,7 +7215,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">scaling_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">dict{cluster_<wbr>scaling_<wbr>configuration}</a></code>
+                <code><a href="#clusterscalingconfiguration">Dict[cluster_<wbr>scaling_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7290,7 +7290,7 @@ Specifies whether the DB cluster is encrypted. The default is `false` for `provi
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7305,7 +7305,7 @@ A mapping of tags to assign to the DB cluster.
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

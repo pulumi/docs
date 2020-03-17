@@ -672,7 +672,7 @@ Whether the VPN connection uses static routes exclusively. Static routes must be
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1842,7 +1842,7 @@ The following output properties are available:
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#vpnconnectionroute">list[vpn_<wbr>connection_<wbr>route]</a></code>
+                <code><a href="#vpnconnectionroute">List[vpn_<wbr>connection_<wbr>route]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1867,7 +1867,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Tags to apply to the connection.
  {{% /md %}}
@@ -2101,7 +2101,7 @@ The following output properties are available:
             <td class="align-top">vgw_<wbr>telemetries</td>
             <td class="align-top">
                 
-                <code><a href="#vpnconnectionvgwtelemetry">list[vpn_<wbr>connection_<wbr>vgw_<wbr>telemetry]</a></code>
+                <code><a href="#vpnconnectionvgwtelemetry">List[vpn_<wbr>connection_<wbr>vgw_<wbr>telemetry]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -3369,7 +3369,7 @@ The ID of the customer gateway.
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#vpnconnectionroute">list[vpn_<wbr>connection_<wbr>route]</a></code>
+                <code><a href="#vpnconnectionroute">List[vpn_<wbr>connection_<wbr>route]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3398,7 +3398,7 @@ Whether the VPN connection uses static routes exclusively. Static routes must be
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3668,7 +3668,7 @@ The type of VPN connection. The only type AWS supports at this time is &#34;ipse
             <td class="align-top">vgw_<wbr>telemetries</td>
             <td class="align-top">
                 
-                <code><a href="#vpnconnectionvgwtelemetry">list[vpn_<wbr>connection_<wbr>vgw_<wbr>telemetry]</a></code>
+                <code><a href="#vpnconnectionvgwtelemetry">List[vpn_<wbr>connection_<wbr>vgw_<wbr>telemetry]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

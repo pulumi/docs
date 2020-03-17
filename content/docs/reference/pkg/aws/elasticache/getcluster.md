@@ -229,7 +229,7 @@ Group identifier.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1233,7 +1233,7 @@ begin taking a daily snapshot of the cache cluster.
             <td class="align-top">cache_<wbr>nodes</td>
             <td class="align-top">
                 
-                <code><a href="#getclustercachenode">list[get_<wbr>cluster_<wbr>cache_<wbr>node]</a></code>
+                <code><a href="#getclustercachenode">List[get_<wbr>cluster_<wbr>cache_<wbr>node]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of node objects including `id`, `address`, `port` and `availability_zone`.
 Referenceable e.g. as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`
@@ -1418,7 +1418,7 @@ accept connections.
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List VPC security groups associated with the cache cluster.
  {{% /md %}}
@@ -1431,7 +1431,7 @@ accept connections.
             <td class="align-top">security_<wbr>group_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of security group names associated with this cache cluster.
  {{% /md %}}
@@ -1485,7 +1485,7 @@ begin taking a daily snapshot of the cache cluster.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} The tags assigned to the resource
  {{% /md %}}

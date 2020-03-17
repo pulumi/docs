@@ -521,7 +521,7 @@ The following output properties are available:
             <td class="align-top">accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationalunitaccount">list[organizational_<wbr>unit_<wbr>account]</a></code>
+                <code><a href="#organizationalunitaccount">List[organizational_<wbr>unit_<wbr>account]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:
  {{% /md %}}
@@ -892,7 +892,7 @@ ID of the parent organizational unit, which may be the root
             <td class="align-top">accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationalunitaccount">list[organizational_<wbr>unit_<wbr>account]</a></code>
+                <code><a href="#organizationalunitaccount">List[organizational_<wbr>unit_<wbr>account]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -684,7 +684,7 @@ The following output properties are available:
             <td class="align-top">result_<wbr>map</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} This field is set only if result is a map of primitive types, where the map is string keys and string values.
  {{% /md %}}

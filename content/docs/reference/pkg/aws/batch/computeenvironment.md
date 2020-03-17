@@ -520,7 +520,7 @@ Creates a unique compute environment name beginning with the specified prefix. C
             <td class="align-top">compute_<wbr>resources</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresources">dict{compute_<wbr>environment_<wbr>compute_<wbr>resources}</a></code>
+                <code><a href="#computeenvironmentcomputeresources">Dict[compute_<wbr>environment_<wbr>compute_<wbr>resources]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1099,7 +1099,7 @@ The following output properties are available:
             <td class="align-top">compute_<wbr>resources</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresources">dict{compute_<wbr>environment_<wbr>compute_<wbr>resources}</a></code>
+                <code><a href="#computeenvironmentcomputeresources">Dict[compute_<wbr>environment_<wbr>compute_<wbr>resources]</a></code>
             </td>
             <td class="align-top">{{% md %}} Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
  {{% /md %}}
@@ -1820,7 +1820,7 @@ Creates a unique compute environment name beginning with the specified prefix. C
             <td class="align-top">compute_<wbr>resources</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresources">dict{compute_<wbr>environment_<wbr>compute_<wbr>resources}</a></code>
+                <code><a href="#computeenvironmentcomputeresources">Dict[compute_<wbr>environment_<wbr>compute_<wbr>resources]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2798,7 +2798,7 @@ The Amazon ECS instance role applied to Amazon EC2 instances in a compute enviro
             <td class="align-top">instance_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2813,7 +2813,7 @@ A list of instance types that may be launched.
             <td class="align-top">launch_<wbr>template</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresourceslaunchtemplate">dict{compute_<wbr>environment_<wbr>compute_<wbr>resources_<wbr>launch_<wbr>template}</a></code>
+                <code><a href="#computeenvironmentcomputeresourceslaunchtemplate">Dict[compute_<wbr>environment_<wbr>compute_<wbr>resources_<wbr>launch_<wbr>template]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2858,7 +2858,7 @@ The minimum number of EC2 vCPUs that an environment should maintain.
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2888,7 +2888,7 @@ The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to 
             <td class="align-top">subnets</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2903,7 +2903,7 @@ A list of VPC subnets into which the compute resources are launched.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

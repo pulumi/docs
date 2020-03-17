@@ -617,7 +617,7 @@ The destination CIDR block to assign to the Traffic Mirror rule.
             <td class="align-top">destination_<wbr>port_<wbr>range</td>
             <td class="align-top">
                 
-                <code><a href="#trafficmirrorfilterruledestinationportrange">dict{traffic_<wbr>mirror_<wbr>filter_<wbr>rule_<wbr>destination_<wbr>port_<wbr>range}</a></code>
+                <code><a href="#trafficmirrorfilterruledestinationportrange">Dict[traffic_<wbr>mirror_<wbr>filter_<wbr>rule_<wbr>destination_<wbr>port_<wbr>range]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -692,7 +692,7 @@ The source CIDR block to assign to the Traffic Mirror rule.
             <td class="align-top">source_<wbr>port_<wbr>range</td>
             <td class="align-top">
                 
-                <code><a href="#trafficmirrorfilterrulesourceportrange">dict{traffic_<wbr>mirror_<wbr>filter_<wbr>rule_<wbr>source_<wbr>port_<wbr>range}</a></code>
+                <code><a href="#trafficmirrorfilterrulesourceportrange">Dict[traffic_<wbr>mirror_<wbr>filter_<wbr>rule_<wbr>source_<wbr>port_<wbr>range]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1247,7 +1247,7 @@ The following output properties are available:
             <td class="align-top">destination_<wbr>port_<wbr>range</td>
             <td class="align-top">
                 
-                <code><a href="#trafficmirrorfilterruledestinationportrange">dict{traffic_<wbr>mirror_<wbr>filter_<wbr>rule_<wbr>destination_<wbr>port_<wbr>range}</a></code>
+                <code><a href="#trafficmirrorfilterruledestinationportrange">Dict[traffic_<wbr>mirror_<wbr>filter_<wbr>rule_<wbr>destination_<wbr>port_<wbr>range]</a></code>
             </td>
             <td class="align-top">{{% md %}} The destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
  {{% /md %}}
@@ -1312,7 +1312,7 @@ The following output properties are available:
             <td class="align-top">source_<wbr>port_<wbr>range</td>
             <td class="align-top">
                 
-                <code><a href="#trafficmirrorfilterrulesourceportrange">dict{traffic_<wbr>mirror_<wbr>filter_<wbr>rule_<wbr>source_<wbr>port_<wbr>range}</a></code>
+                <code><a href="#trafficmirrorfilterrulesourceportrange">Dict[traffic_<wbr>mirror_<wbr>filter_<wbr>rule_<wbr>source_<wbr>port_<wbr>range]</a></code>
             </td>
             <td class="align-top">{{% md %}} The source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
  {{% /md %}}
@@ -1970,7 +1970,7 @@ The destination CIDR block to assign to the Traffic Mirror rule.
             <td class="align-top">destination_<wbr>port_<wbr>range</td>
             <td class="align-top">
                 
-                <code><a href="#trafficmirrorfilterruledestinationportrange">dict{traffic_<wbr>mirror_<wbr>filter_<wbr>rule_<wbr>destination_<wbr>port_<wbr>range}</a></code>
+                <code><a href="#trafficmirrorfilterruledestinationportrange">Dict[traffic_<wbr>mirror_<wbr>filter_<wbr>rule_<wbr>destination_<wbr>port_<wbr>range]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2045,7 +2045,7 @@ The source CIDR block to assign to the Traffic Mirror rule.
             <td class="align-top">source_<wbr>port_<wbr>range</td>
             <td class="align-top">
                 
-                <code><a href="#trafficmirrorfilterrulesourceportrange">dict{traffic_<wbr>mirror_<wbr>filter_<wbr>rule_<wbr>source_<wbr>port_<wbr>range}</a></code>
+                <code><a href="#trafficmirrorfilterrulesourceportrange">Dict[traffic_<wbr>mirror_<wbr>filter_<wbr>rule_<wbr>source_<wbr>port_<wbr>range]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -480,7 +480,7 @@ The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: 
             <td class="align-top">certificate_<wbr>authority_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthoritycertificateauthorityconfiguration">dict{certificate_<wbr>authority_<wbr>certificate_<wbr>authority_<wbr>configuration}</a></code>
+                <code><a href="#certificateauthoritycertificateauthorityconfiguration">Dict[certificate_<wbr>authority_<wbr>certificate_<wbr>authority_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -525,7 +525,7 @@ The number of days to make a CA restorable after it has been deleted, must be be
             <td class="align-top">revocation_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthorityrevocationconfiguration">dict{certificate_<wbr>authority_<wbr>revocation_<wbr>configuration}</a></code>
+                <code><a href="#certificateauthorityrevocationconfiguration">Dict[certificate_<wbr>authority_<wbr>revocation_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -540,7 +540,7 @@ Nested argument containing revocation configuration. Defined below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1236,7 +1236,7 @@ The following output properties are available:
             <td class="align-top">certificate_<wbr>authority_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthoritycertificateauthorityconfiguration">dict{certificate_<wbr>authority_<wbr>certificate_<wbr>authority_<wbr>configuration}</a></code>
+                <code><a href="#certificateauthoritycertificateauthorityconfiguration">Dict[certificate_<wbr>authority_<wbr>certificate_<wbr>authority_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing algorithms and certificate subject information. Defined below.
  {{% /md %}}
@@ -1327,7 +1327,7 @@ The following output properties are available:
             <td class="align-top">revocation_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthorityrevocationconfiguration">dict{certificate_<wbr>authority_<wbr>revocation_<wbr>configuration}</a></code>
+                <code><a href="#certificateauthorityrevocationconfiguration">Dict[certificate_<wbr>authority_<wbr>revocation_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing revocation configuration. Defined below.
  {{% /md %}}
@@ -1366,7 +1366,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Specifies a key-value map of user-defined tags that are attached to the certificate authority.
  {{% /md %}}
@@ -2191,7 +2191,7 @@ Base64-encoded certificate authority (CA) certificate. Only available after the 
             <td class="align-top">certificate_<wbr>authority_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthoritycertificateauthorityconfiguration">dict{certificate_<wbr>authority_<wbr>certificate_<wbr>authority_<wbr>configuration}</a></code>
+                <code><a href="#certificateauthoritycertificateauthorityconfiguration">Dict[certificate_<wbr>authority_<wbr>certificate_<wbr>authority_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2296,7 +2296,7 @@ The number of days to make a CA restorable after it has been deleted, must be be
             <td class="align-top">revocation_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthorityrevocationconfiguration">dict{certificate_<wbr>authority_<wbr>revocation_<wbr>configuration}</a></code>
+                <code><a href="#certificateauthorityrevocationconfiguration">Dict[certificate_<wbr>authority_<wbr>revocation_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2341,7 +2341,7 @@ Status of the certificate authority.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2644,7 +2644,7 @@ Name of the algorithm your private CA uses to sign certificate requests. Valid v
             <td class="align-top">subject</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthoritycertificateauthorityconfigurationsubject">dict{certificate_<wbr>authority_<wbr>certificate_<wbr>authority_<wbr>configuration_<wbr>subject}</a></code>
+                <code><a href="#certificateauthoritycertificateauthorityconfigurationsubject">Dict[certificate_<wbr>authority_<wbr>certificate_<wbr>authority_<wbr>configuration_<wbr>subject]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3686,7 +3686,7 @@ Nested argument containing configuration of the certificate revocation list (CRL
             <td class="align-top">crl_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">dict{certificate_<wbr>authority_<wbr>revocation_<wbr>configuration_<wbr>crl_<wbr>configuration}</a></code>
+                <code><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">Dict[certificate_<wbr>authority_<wbr>revocation_<wbr>configuration_<wbr>crl_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

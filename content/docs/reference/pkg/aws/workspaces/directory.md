@@ -374,7 +374,7 @@ The directory identifier for registration in WorkSpaces service.
             <td class="align-top">self_<wbr>service_<wbr>permissions</td>
             <td class="align-top">
                 
-                <code><a href="#directoryselfservicepermissions">dict{directory_<wbr>self_<wbr>service_<wbr>permissions}</a></code>
+                <code><a href="#directoryselfservicepermissions">Dict[directory_<wbr>self_<wbr>service_<wbr>permissions]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -389,7 +389,7 @@ The permissions to enable or disable self-service capabilities.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -404,7 +404,7 @@ The identifiers of the subnets where the directory resides.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -682,7 +682,7 @@ The following output properties are available:
             <td class="align-top">self_<wbr>service_<wbr>permissions</td>
             <td class="align-top">
                 
-                <code><a href="#directoryselfservicepermissions">dict{directory_<wbr>self_<wbr>service_<wbr>permissions}</a></code>
+                <code><a href="#directoryselfservicepermissions">Dict[directory_<wbr>self_<wbr>service_<wbr>permissions]</a></code>
             </td>
             <td class="align-top">{{% md %}} The permissions to enable or disable self-service capabilities.
  {{% /md %}}
@@ -695,7 +695,7 @@ The following output properties are available:
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The identifiers of the subnets where the directory resides.
  {{% /md %}}
@@ -708,7 +708,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the WorkSpaces directory.
  {{% /md %}}
@@ -1055,7 +1055,7 @@ The directory identifier for registration in WorkSpaces service.
             <td class="align-top">self_<wbr>service_<wbr>permissions</td>
             <td class="align-top">
                 
-                <code><a href="#directoryselfservicepermissions">dict{directory_<wbr>self_<wbr>service_<wbr>permissions}</a></code>
+                <code><a href="#directoryselfservicepermissions">Dict[directory_<wbr>self_<wbr>service_<wbr>permissions]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1070,7 +1070,7 @@ The permissions to enable or disable self-service capabilities.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1085,7 +1085,7 @@ The identifiers of the subnets where the directory resides.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

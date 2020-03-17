@@ -427,7 +427,7 @@ The priority for the rule between `1` and `50000`. Leaving it unset will automat
             <td class="align-top">actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleaction">list[listener_<wbr>rule_<wbr>action]</a></code>
+                <code><a href="#listenerruleaction">List[listener_<wbr>rule_<wbr>action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -442,7 +442,7 @@ An Action block. Action blocks are documented below.
             <td class="align-top">conditions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerrulecondition">list[listener_<wbr>rule_<wbr>condition]</a></code>
+                <code><a href="#listenerrulecondition">List[listener_<wbr>rule_<wbr>condition]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -776,7 +776,7 @@ The following output properties are available:
             <td class="align-top">actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleaction">list[listener_<wbr>rule_<wbr>action]</a></code>
+                <code><a href="#listenerruleaction">List[listener_<wbr>rule_<wbr>action]</a></code>
             </td>
             <td class="align-top">{{% md %}} An Action block. Action blocks are documented below.
  {{% /md %}}
@@ -802,7 +802,7 @@ The following output properties are available:
             <td class="align-top">conditions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerrulecondition">list[listener_<wbr>rule_<wbr>condition]</a></code>
+                <code><a href="#listenerrulecondition">List[listener_<wbr>rule_<wbr>condition]</a></code>
             </td>
             <td class="align-top">{{% md %}} A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
  {{% /md %}}
@@ -1205,7 +1205,7 @@ The priority for the rule between `1` and `50000`. Leaving it unset will automat
             <td class="align-top">actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleaction">list[listener_<wbr>rule_<wbr>action]</a></code>
+                <code><a href="#listenerruleaction">List[listener_<wbr>rule_<wbr>action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1235,7 +1235,7 @@ The ARN of the rule (matches `id`)
             <td class="align-top">conditions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerrulecondition">list[listener_<wbr>rule_<wbr>condition]</a></code>
+                <code><a href="#listenerrulecondition">List[listener_<wbr>rule_<wbr>condition]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1700,7 +1700,7 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
             <td class="align-top">authenticate_<wbr>cognito</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleactionauthenticatecognito">dict{listener_<wbr>rule_<wbr>action_<wbr>authenticate_<wbr>cognito}</a></code>
+                <code><a href="#listenerruleactionauthenticatecognito">Dict[listener_<wbr>rule_<wbr>action_<wbr>authenticate_<wbr>cognito]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1715,7 +1715,7 @@ Information for creating an authenticate action using Cognito. Required if `type
             <td class="align-top">authenticate_<wbr>oidc</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleactionauthenticateoidc">dict{listener_<wbr>rule_<wbr>action_<wbr>authenticate_<wbr>oidc}</a></code>
+                <code><a href="#listenerruleactionauthenticateoidc">Dict[listener_<wbr>rule_<wbr>action_<wbr>authenticate_<wbr>oidc]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1730,7 +1730,7 @@ Information for creating an authenticate action using OIDC. Required if `type` i
             <td class="align-top">fixed_<wbr>response</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleactionfixedresponse">dict{listener_<wbr>rule_<wbr>action_<wbr>fixed_<wbr>response}</a></code>
+                <code><a href="#listenerruleactionfixedresponse">Dict[listener_<wbr>rule_<wbr>action_<wbr>fixed_<wbr>response]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1759,7 +1759,7 @@ Information for creating an action that returns a custom HTTP response. Required
             <td class="align-top">redirect</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleactionredirect">dict{listener_<wbr>rule_<wbr>action_<wbr>redirect}</a></code>
+                <code><a href="#listenerruleactionredirect">Dict[listener_<wbr>rule_<wbr>action_<wbr>redirect]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2265,7 +2265,7 @@ The domain prefix or fully-qualified domain name of the Cognito user pool.
             <td class="align-top">authentication_<wbr>request_<wbr>extra_<wbr>params</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2981,7 +2981,7 @@ The user info endpoint of the IdP.
             <td class="align-top">authentication_<wbr>request_<wbr>extra_<wbr>params</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4364,7 +4364,7 @@ The type of condition. Valid values are `host-header` or `path-pattern`. Must al
             <td class="align-top">host_<wbr>header</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionhostheader">dict{listener_<wbr>rule_<wbr>condition_<wbr>host_<wbr>header}</a></code>
+                <code><a href="#listenerruleconditionhostheader">Dict[listener_<wbr>rule_<wbr>condition_<wbr>host_<wbr>header]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4379,7 +4379,7 @@ Contains a single `values` item which is a list of host header patterns to match
             <td class="align-top">http_<wbr>header</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionhttpheader">dict{listener_<wbr>rule_<wbr>condition_<wbr>http_<wbr>header}</a></code>
+                <code><a href="#listenerruleconditionhttpheader">Dict[listener_<wbr>rule_<wbr>condition_<wbr>http_<wbr>header]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4394,7 +4394,7 @@ HTTP headers to match. HTTP Header block fields documented below.
             <td class="align-top">http_<wbr>request_<wbr>method</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionhttprequestmethod">dict{listener_<wbr>rule_<wbr>condition_<wbr>http_<wbr>request_<wbr>method}</a></code>
+                <code><a href="#listenerruleconditionhttprequestmethod">Dict[listener_<wbr>rule_<wbr>condition_<wbr>http_<wbr>request_<wbr>method]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4409,7 +4409,7 @@ Contains a single `values` item which is a list of HTTP request methods or verbs
             <td class="align-top">path_<wbr>pattern</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionpathpattern">dict{listener_<wbr>rule_<wbr>condition_<wbr>path_<wbr>pattern}</a></code>
+                <code><a href="#listenerruleconditionpathpattern">Dict[listener_<wbr>rule_<wbr>condition_<wbr>path_<wbr>pattern]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4424,7 +4424,7 @@ Contains a single `values` item which is a list of path patterns to match agains
             <td class="align-top">query_<wbr>strings</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionquerystring">list[listener_<wbr>rule_<wbr>condition_<wbr>query_<wbr>string]</a></code>
+                <code><a href="#listenerruleconditionquerystring">List[listener_<wbr>rule_<wbr>condition_<wbr>query_<wbr>string]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4439,7 +4439,7 @@ Query strings to match. Query String block fields documented below.
             <td class="align-top">source_<wbr>ip</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionsourceip">dict{listener_<wbr>rule_<wbr>condition_<wbr>source_<wbr>ip}</a></code>
+                <code><a href="#listenerruleconditionsourceip">Dict[listener_<wbr>rule_<wbr>condition_<wbr>source_<wbr>ip]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4615,7 +4615,7 @@ Query string pairs or values to match. Query String Value blocks documented belo
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4836,7 +4836,7 @@ Name of HTTP header to search. The maximum size is 40 characters. Comparison is 
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4997,7 +4997,7 @@ Query string pairs or values to match. Query String Value blocks documented belo
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -5158,7 +5158,7 @@ Query string pairs or values to match. Query String Value blocks documented belo
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5540,7 +5540,7 @@ Query string pairs or values to match. Query String Value blocks documented belo
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -559,7 +559,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">attachments</td>
             <td class="align-top">
                 
-                <code><a href="#networkinterfaceattachment">list[network_<wbr>interface_<wbr>attachment]</a></code>
+                <code><a href="#networkinterfaceattachment">List[network_<wbr>interface_<wbr>attachment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -603,7 +603,7 @@ A description for the network interface.
             <td class="align-top">private_<wbr>ips</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -633,7 +633,7 @@ Number of secondary private IPs to assign to the ENI. The total number of privat
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -678,7 +678,7 @@ Subnet ID to create the ENI in.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1213,7 +1213,7 @@ The following output properties are available:
             <td class="align-top">attachments</td>
             <td class="align-top">
                 
-                <code><a href="#networkinterfaceattachment">list[network_<wbr>interface_<wbr>attachment]</a></code>
+                <code><a href="#networkinterfaceattachment">List[network_<wbr>interface_<wbr>attachment]</a></code>
             </td>
             <td class="align-top">{{% md %}} Block to define the attachment of the ENI. Documented below.
  {{% /md %}}
@@ -1277,7 +1277,7 @@ The following output properties are available:
             <td class="align-top">private_<wbr>ips</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of private IPs to assign to the ENI.
  {{% /md %}}
@@ -1303,7 +1303,7 @@ The following output properties are available:
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of security group IDs to assign to the ENI.
  {{% /md %}}
@@ -1342,7 +1342,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1986,7 +1986,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">attachments</td>
             <td class="align-top">
                 
-                <code><a href="#networkinterfaceattachment">list[network_<wbr>interface_<wbr>attachment]</a></code>
+                <code><a href="#networkinterfaceattachment">List[network_<wbr>interface_<wbr>attachment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2060,7 +2060,7 @@ The private DNS name of the network interface (IPv4).
             <td class="align-top">private_<wbr>ips</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2090,7 +2090,7 @@ Number of secondary private IPs to assign to the ENI. The total number of privat
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2135,7 +2135,7 @@ Subnet ID to create the ENI in.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

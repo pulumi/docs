@@ -570,7 +570,7 @@ The frequency on which report data are measured and displayed.  Valid values are
             <td class="align-top">additional_<wbr>artifacts</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -585,7 +585,7 @@ A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
             <td class="align-top">additional_<wbr>schema_<wbr>elements</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1150,7 +1150,7 @@ The following output properties are available:
             <td class="align-top">additional_<wbr>artifacts</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
  {{% /md %}}
@@ -1163,7 +1163,7 @@ The following output properties are available:
             <td class="align-top">additional_<wbr>schema_<wbr>elements</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of schema elements. Valid values are: RESOURCES.
  {{% /md %}}
@@ -1811,7 +1811,7 @@ The frequency on which report data are measured and displayed.  Valid values are
             <td class="align-top">additional_<wbr>artifacts</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1826,7 +1826,7 @@ A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
             <td class="align-top">additional_<wbr>schema_<wbr>elements</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

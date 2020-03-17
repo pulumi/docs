@@ -232,7 +232,7 @@ The name of the Kinesis Stream.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -744,7 +744,7 @@ The following output properties are available:
             <td class="align-top">closed_<wbr>shards</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The list of shard ids in the CLOSED state. See [Shard State][2] for more.
  {{% /md %}}
@@ -796,7 +796,7 @@ The following output properties are available:
             <td class="align-top">open_<wbr>shards</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The list of shard ids in the OPEN state. See [Shard State][2] for more.
  {{% /md %}}
@@ -822,7 +822,7 @@ The following output properties are available:
             <td class="align-top">shard_<wbr>level_<wbr>metrics</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of shard-level CloudWatch metrics which are enabled for the stream. See [Monitoring with CloudWatch][3] for more.
  {{% /md %}}
@@ -848,7 +848,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assigned to the stream.
  {{% /md %}}

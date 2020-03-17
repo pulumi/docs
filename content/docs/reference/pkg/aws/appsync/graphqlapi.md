@@ -619,7 +619,7 @@ The Amazon Cognito User Pool configuration. Defined below.
             <td class="align-top">additional_<wbr>authentication_<wbr>providers</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovider">list[graph_<wbr>ql_<wbr>api_<wbr>additional_<wbr>authentication_<wbr>provider]</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovider">List[graph_<wbr>ql_<wbr>api_<wbr>additional_<wbr>authentication_<wbr>provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -649,7 +649,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
             <td class="align-top">log_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapilogconfig">dict{graph_<wbr>ql_<wbr>api_<wbr>log_<wbr>config}</a></code>
+                <code><a href="#graphqlapilogconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>log_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -679,7 +679,7 @@ A user-supplied name for the GraphqlApi.
             <td class="align-top">openid_<wbr>connect_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiopenidconnectconfig">dict{graph_<wbr>ql_<wbr>api_<wbr>openid_<wbr>connect_<wbr>config}</a></code>
+                <code><a href="#graphqlapiopenidconnectconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>openid_<wbr>connect_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -709,7 +709,7 @@ The schema definition, in GraphQL schema language format. This provider cannot p
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -724,7 +724,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">user_<wbr>pool_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiuserpoolconfig">dict{graph_<wbr>ql_<wbr>api_<wbr>user_<wbr>pool_<wbr>config}</a></code>
+                <code><a href="#graphqlapiuserpoolconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>user_<wbr>pool_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1223,7 +1223,7 @@ The following output properties are available:
             <td class="align-top">additional_<wbr>authentication_<wbr>providers</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovider">list[graph_<wbr>ql_<wbr>api_<wbr>additional_<wbr>authentication_<wbr>provider]</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovider">List[graph_<wbr>ql_<wbr>api_<wbr>additional_<wbr>authentication_<wbr>provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more additional authentication providers for the GraphqlApi. Defined below.
  {{% /md %}}
@@ -1262,7 +1262,7 @@ The following output properties are available:
             <td class="align-top">log_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapilogconfig">dict{graph_<wbr>ql_<wbr>api_<wbr>log_<wbr>config}</a></code>
+                <code><a href="#graphqlapilogconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>log_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing logging configuration. Defined below.
  {{% /md %}}
@@ -1288,7 +1288,7 @@ The following output properties are available:
             <td class="align-top">openid_<wbr>connect_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiopenidconnectconfig">dict{graph_<wbr>ql_<wbr>api_<wbr>openid_<wbr>connect_<wbr>config}</a></code>
+                <code><a href="#graphqlapiopenidconnectconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>openid_<wbr>connect_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing OpenID Connect configuration. Defined below.
  {{% /md %}}
@@ -1314,7 +1314,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1327,7 +1327,7 @@ The following output properties are available:
             <td class="align-top">uris</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Map of URIs associated with the API. e.g. `uris[&#34;GRAPHQL&#34;] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
  {{% /md %}}
@@ -1340,7 +1340,7 @@ The following output properties are available:
             <td class="align-top">user_<wbr>pool_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiuserpoolconfig">dict{graph_<wbr>ql_<wbr>api_<wbr>user_<wbr>pool_<wbr>config}</a></code>
+                <code><a href="#graphqlapiuserpoolconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>user_<wbr>pool_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} The Amazon Cognito User Pool configuration. Defined below.
  {{% /md %}}
@@ -1942,7 +1942,7 @@ The Amazon Cognito User Pool configuration. Defined below.
             <td class="align-top">additional_<wbr>authentication_<wbr>providers</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovider">list[graph_<wbr>ql_<wbr>api_<wbr>additional_<wbr>authentication_<wbr>provider]</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovider">List[graph_<wbr>ql_<wbr>api_<wbr>additional_<wbr>authentication_<wbr>provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1987,7 +1987,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
             <td class="align-top">log_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapilogconfig">dict{graph_<wbr>ql_<wbr>api_<wbr>log_<wbr>config}</a></code>
+                <code><a href="#graphqlapilogconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>log_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2017,7 +2017,7 @@ A user-supplied name for the GraphqlApi.
             <td class="align-top">openid_<wbr>connect_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiopenidconnectconfig">dict{graph_<wbr>ql_<wbr>api_<wbr>openid_<wbr>connect_<wbr>config}</a></code>
+                <code><a href="#graphqlapiopenidconnectconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>openid_<wbr>connect_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2047,7 +2047,7 @@ The schema definition, in GraphQL schema language format. This provider cannot p
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2062,7 +2062,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">uris</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2077,7 +2077,7 @@ Map of URIs associated with the API. e.g. `uris[&#34;GRAPHQL&#34;] = https://ID.
             <td class="align-top">user_<wbr>pool_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiuserpoolconfig">dict{graph_<wbr>ql_<wbr>api_<wbr>user_<wbr>pool_<wbr>config}</a></code>
+                <code><a href="#graphqlapiuserpoolconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>user_<wbr>pool_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2350,7 +2350,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
             <td class="align-top">openid_<wbr>connect_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovideropenidconnectconfig">dict{graph_<wbr>ql_<wbr>api_<wbr>additional_<wbr>authentication_<wbr>provider_<wbr>openid_<wbr>connect_<wbr>config}</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovideropenidconnectconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>additional_<wbr>authentication_<wbr>provider_<wbr>openid_<wbr>connect_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2365,7 +2365,7 @@ Nested argument containing OpenID Connect configuration. Defined below.
             <td class="align-top">user_<wbr>pool_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovideruserpoolconfig">dict{graph_<wbr>ql_<wbr>api_<wbr>additional_<wbr>authentication_<wbr>provider_<wbr>user_<wbr>pool_<wbr>config}</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovideruserpoolconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>additional_<wbr>authentication_<wbr>provider_<wbr>user_<wbr>pool_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -877,7 +877,7 @@ Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted
             <td class="align-top">aliases</td>
             <td class="align-top">
                 
-                <code><a href="#recordalias">list[record_<wbr>alias]</a></code>
+                <code><a href="#recordalias">List[record_<wbr>alias]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -908,7 +908,7 @@ Allow creation of this record to overwrite an existing record, if any. This does
             <td class="align-top">failover_<wbr>routing_<wbr>policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordfailoverroutingpolicy">list[record_<wbr>failover_<wbr>routing_<wbr>policy]</a></code>
+                <code><a href="#recordfailoverroutingpolicy">List[record_<wbr>failover_<wbr>routing_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -923,7 +923,7 @@ A block indicating the routing behavior when associated health check fails. Conf
             <td class="align-top">geolocation_<wbr>routing_<wbr>policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordgeolocationroutingpolicy">list[record_<wbr>geolocation_<wbr>routing_<wbr>policy]</a></code>
+                <code><a href="#recordgeolocationroutingpolicy">List[record_<wbr>geolocation_<wbr>routing_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -953,7 +953,7 @@ The health check the record should be associated with.
             <td class="align-top">latency_<wbr>routing_<wbr>policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordlatencyroutingpolicy">list[record_<wbr>latency_<wbr>routing_<wbr>policy]</a></code>
+                <code><a href="#recordlatencyroutingpolicy">List[record_<wbr>latency_<wbr>routing_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -998,7 +998,7 @@ DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resour
             <td class="align-top">records</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1043,7 +1043,7 @@ The TTL of the record.
             <td class="align-top">type</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1058,7 +1058,7 @@ The TTL of the record.
             <td class="align-top">weighted_<wbr>routing_<wbr>policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordweightedroutingpolicy">list[record_<wbr>weighted_<wbr>routing_<wbr>policy]</a></code>
+                <code><a href="#recordweightedroutingpolicy">List[record_<wbr>weighted_<wbr>routing_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1770,7 +1770,7 @@ Alias record documented below.
             <td class="align-top">aliases</td>
             <td class="align-top">
                 
-                <code><a href="#recordalias">list[record_<wbr>alias]</a></code>
+                <code><a href="#recordalias">List[record_<wbr>alias]</a></code>
             </td>
             <td class="align-top">{{% md %}} An alias block. Conflicts with `ttl` &amp; `records`.
 Alias record documented below.
@@ -1797,7 +1797,7 @@ Alias record documented below.
             <td class="align-top">failover_<wbr>routing_<wbr>policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordfailoverroutingpolicy">list[record_<wbr>failover_<wbr>routing_<wbr>policy]</a></code>
+                <code><a href="#recordfailoverroutingpolicy">List[record_<wbr>failover_<wbr>routing_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
  {{% /md %}}
@@ -1823,7 +1823,7 @@ Alias record documented below.
             <td class="align-top">geolocation_<wbr>routing_<wbr>policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordgeolocationroutingpolicy">list[record_<wbr>geolocation_<wbr>routing_<wbr>policy]</a></code>
+                <code><a href="#recordgeolocationroutingpolicy">List[record_<wbr>geolocation_<wbr>routing_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
  {{% /md %}}
@@ -1849,7 +1849,7 @@ Alias record documented below.
             <td class="align-top">latency_<wbr>routing_<wbr>policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordlatencyroutingpolicy">list[record_<wbr>latency_<wbr>routing_<wbr>policy]</a></code>
+                <code><a href="#recordlatencyroutingpolicy">List[record_<wbr>latency_<wbr>routing_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
  {{% /md %}}
@@ -1888,7 +1888,7 @@ Alias record documented below.
             <td class="align-top">records</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\&#34;\&#34;` inside the configuration string (e.g. `&#34;first255characters\&#34;\&#34;morecharacters&#34;`).
  {{% /md %}}
@@ -1940,7 +1940,7 @@ Alias record documented below.
             <td class="align-top">weighted_<wbr>routing_<wbr>policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordweightedroutingpolicy">list[record_<wbr>weighted_<wbr>routing_<wbr>policy]</a></code>
+                <code><a href="#recordweightedroutingpolicy">List[record_<wbr>weighted_<wbr>routing_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
  {{% /md %}}
@@ -2783,7 +2783,7 @@ Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted
             <td class="align-top">aliases</td>
             <td class="align-top">
                 
-                <code><a href="#recordalias">list[record_<wbr>alias]</a></code>
+                <code><a href="#recordalias">List[record_<wbr>alias]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2814,7 +2814,7 @@ Allow creation of this record to overwrite an existing record, if any. This does
             <td class="align-top">failover_<wbr>routing_<wbr>policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordfailoverroutingpolicy">list[record_<wbr>failover_<wbr>routing_<wbr>policy]</a></code>
+                <code><a href="#recordfailoverroutingpolicy">List[record_<wbr>failover_<wbr>routing_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2844,7 +2844,7 @@ A block indicating the routing behavior when associated health check fails. Conf
             <td class="align-top">geolocation_<wbr>routing_<wbr>policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordgeolocationroutingpolicy">list[record_<wbr>geolocation_<wbr>routing_<wbr>policy]</a></code>
+                <code><a href="#recordgeolocationroutingpolicy">List[record_<wbr>geolocation_<wbr>routing_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2874,7 +2874,7 @@ The health check the record should be associated with.
             <td class="align-top">latency_<wbr>routing_<wbr>policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordlatencyroutingpolicy">list[record_<wbr>latency_<wbr>routing_<wbr>policy]</a></code>
+                <code><a href="#recordlatencyroutingpolicy">List[record_<wbr>latency_<wbr>routing_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2919,7 +2919,7 @@ DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resour
             <td class="align-top">records</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2964,7 +2964,7 @@ The TTL of the record.
             <td class="align-top">type</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2979,7 +2979,7 @@ The TTL of the record.
             <td class="align-top">weighted_<wbr>routing_<wbr>policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordweightedroutingpolicy">list[record_<wbr>weighted_<wbr>routing_<wbr>policy]</a></code>
+                <code><a href="#recordweightedroutingpolicy">List[record_<wbr>weighted_<wbr>routing_<wbr>policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -425,7 +425,7 @@ The full path to the object inside the bucket
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1695,7 +1695,7 @@ The following output properties are available:
             <td class="align-top">metadata</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A map of metadata stored with the object in S3
  {{% /md %}}
@@ -1798,7 +1798,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the object.
  {{% /md %}}

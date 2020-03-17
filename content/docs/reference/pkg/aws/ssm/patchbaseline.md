@@ -674,7 +674,7 @@ A list of rejected patches.
             <td class="align-top">approval_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineapprovalrule">list[patch_<wbr>baseline_<wbr>approval_<wbr>rule]</a></code>
+                <code><a href="#patchbaselineapprovalrule">List[patch_<wbr>baseline_<wbr>approval_<wbr>rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -689,7 +689,7 @@ A set of rules used to include patches in the baseline. up to 10 approval rules 
             <td class="align-top">approved_<wbr>patches</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -734,7 +734,7 @@ The description of the patch baseline.
             <td class="align-top">global_<wbr>filters</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineglobalfilter">list[patch_<wbr>baseline_<wbr>global_<wbr>filter]</a></code>
+                <code><a href="#patchbaselineglobalfilter">List[patch_<wbr>baseline_<wbr>global_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -779,7 +779,7 @@ Defines the operating system the patch baseline applies to. Supported operating 
             <td class="align-top">rejected_<wbr>patches</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -794,7 +794,7 @@ A list of rejected patches.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1250,7 +1250,7 @@ The following output properties are available:
             <td class="align-top">approval_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineapprovalrule">list[patch_<wbr>baseline_<wbr>approval_<wbr>rule]</a></code>
+                <code><a href="#patchbaselineapprovalrule">List[patch_<wbr>baseline_<wbr>approval_<wbr>rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
  {{% /md %}}
@@ -1263,7 +1263,7 @@ The following output properties are available:
             <td class="align-top">approved_<wbr>patches</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of explicitly approved patches for the baseline.
  {{% /md %}}
@@ -1302,7 +1302,7 @@ The following output properties are available:
             <td class="align-top">global_<wbr>filters</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineglobalfilter">list[patch_<wbr>baseline_<wbr>global_<wbr>filter]</a></code>
+                <code><a href="#patchbaselineglobalfilter">List[patch_<wbr>baseline_<wbr>global_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
  {{% /md %}}
@@ -1341,7 +1341,7 @@ The following output properties are available:
             <td class="align-top">rejected_<wbr>patches</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of rejected patches.
  {{% /md %}}
@@ -1354,7 +1354,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1907,7 +1907,7 @@ A list of rejected patches.
             <td class="align-top">approval_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineapprovalrule">list[patch_<wbr>baseline_<wbr>approval_<wbr>rule]</a></code>
+                <code><a href="#patchbaselineapprovalrule">List[patch_<wbr>baseline_<wbr>approval_<wbr>rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1922,7 +1922,7 @@ A set of rules used to include patches in the baseline. up to 10 approval rules 
             <td class="align-top">approved_<wbr>patches</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1967,7 +1967,7 @@ The description of the patch baseline.
             <td class="align-top">global_<wbr>filters</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineglobalfilter">list[patch_<wbr>baseline_<wbr>global_<wbr>filter]</a></code>
+                <code><a href="#patchbaselineglobalfilter">List[patch_<wbr>baseline_<wbr>global_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2012,7 +2012,7 @@ Defines the operating system the patch baseline applies to. Supported operating 
             <td class="align-top">rejected_<wbr>patches</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2027,7 +2027,7 @@ A list of rejected patches.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2359,7 +2359,7 @@ A list of rejected patches.
             <td class="align-top">patch_<wbr>filters</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineapprovalrulepatchfilter">list[patch_<wbr>baseline_<wbr>approval_<wbr>rule_<wbr>patch_<wbr>filter]</a></code>
+                <code><a href="#patchbaselineapprovalrulepatchfilter">List[patch_<wbr>baseline_<wbr>approval_<wbr>rule_<wbr>patch_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2572,7 +2572,7 @@ A list of rejected patches.
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2785,7 +2785,7 @@ A list of rejected patches.
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

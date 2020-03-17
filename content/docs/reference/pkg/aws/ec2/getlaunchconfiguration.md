@@ -1049,7 +1049,7 @@ The following output properties are available:
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationebsblockdevice">list[get_<wbr>launch_<wbr>configuration_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#getlaunchconfigurationebsblockdevice">List[get_<wbr>launch_<wbr>configuration_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} The EBS Block Devices attached to the instance.
  {{% /md %}}
@@ -1088,7 +1088,7 @@ The following output properties are available:
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationephemeralblockdevice">list[get_<wbr>launch_<wbr>configuration_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#getlaunchconfigurationephemeralblockdevice">List[get_<wbr>launch_<wbr>configuration_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} The Ephemeral volumes on the instance.
  {{% /md %}}
@@ -1192,7 +1192,7 @@ The following output properties are available:
             <td class="align-top">root_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationrootblockdevice">list[get_<wbr>launch_<wbr>configuration_<wbr>root_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#getlaunchconfigurationrootblockdevice">List[get_<wbr>launch_<wbr>configuration_<wbr>root_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} The Root Block Device of the instance.
  {{% /md %}}
@@ -1205,7 +1205,7 @@ The following output properties are available:
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of associated Security Group IDS.
  {{% /md %}}
@@ -1257,7 +1257,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>classic_<wbr>link_<wbr>security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The IDs of one or more Security Groups for the specified ClassicLink-enabled VPC.
  {{% /md %}}

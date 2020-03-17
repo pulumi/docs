@@ -325,7 +325,7 @@ The name of the recorder. Defaults to `default`. Changing it recreates the resou
             <td class="align-top">recording_<wbr>group</td>
             <td class="align-top">
                 
-                <code><a href="#recorderrecordinggroup">dict{recorder_<wbr>recording_<wbr>group}</a></code>
+                <code><a href="#recorderrecordinggroup">Dict[recorder_<wbr>recording_<wbr>group]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -587,7 +587,7 @@ See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-p
             <td class="align-top">recording_<wbr>group</td>
             <td class="align-top">
                 
-                <code><a href="#recorderrecordinggroup">dict{recorder_<wbr>recording_<wbr>group}</a></code>
+                <code><a href="#recorderrecordinggroup">Dict[recorder_<wbr>recording_<wbr>group]</a></code>
             </td>
             <td class="align-top">{{% md %}} Recording group - see below.
  {{% /md %}}
@@ -910,7 +910,7 @@ The name of the recorder. Defaults to `default`. Changing it recreates the resou
             <td class="align-top">recording_<wbr>group</td>
             <td class="align-top">
                 
-                <code><a href="#recorderrecordinggroup">dict{recorder_<wbr>recording_<wbr>group}</a></code>
+                <code><a href="#recorderrecordinggroup">Dict[recorder_<wbr>recording_<wbr>group]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1233,7 +1233,7 @@ with the resources that it records. Requires `all_supported = true`. Conflicts w
             <td class="align-top">resource_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

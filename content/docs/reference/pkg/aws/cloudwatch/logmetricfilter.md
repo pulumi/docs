@@ -359,7 +359,7 @@ The name of the log group to associate the metric filter with.
             <td class="align-top">metric_<wbr>transformation</td>
             <td class="align-top">
                 
-                <code><a href="#logmetricfiltermetrictransformation">dict{log_<wbr>metric_<wbr>filter_<wbr>metric_<wbr>transformation}</a></code>
+                <code><a href="#logmetricfiltermetrictransformation">Dict[log_<wbr>metric_<wbr>filter_<wbr>metric_<wbr>transformation]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -675,7 +675,7 @@ for extracting metric data out of ingested log events.
             <td class="align-top">metric_<wbr>transformation</td>
             <td class="align-top">
                 
-                <code><a href="#logmetricfiltermetrictransformation">dict{log_<wbr>metric_<wbr>filter_<wbr>metric_<wbr>transformation}</a></code>
+                <code><a href="#logmetricfiltermetrictransformation">Dict[log_<wbr>metric_<wbr>filter_<wbr>metric_<wbr>transformation]</a></code>
             </td>
             <td class="align-top">{{% md %}} A block defining collection of information
 needed to define how metric data gets emitted. See below.
@@ -1056,7 +1056,7 @@ The name of the log group to associate the metric filter with.
             <td class="align-top">metric_<wbr>transformation</td>
             <td class="align-top">
                 
-                <code><a href="#logmetricfiltermetrictransformation">dict{log_<wbr>metric_<wbr>filter_<wbr>metric_<wbr>transformation}</a></code>
+                <code><a href="#logmetricfiltermetrictransformation">Dict[log_<wbr>metric_<wbr>filter_<wbr>metric_<wbr>transformation]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

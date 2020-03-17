@@ -539,7 +539,7 @@ The name of the fleet.
             <td class="align-top">identity_<wbr>provider</td>
             <td class="align-top">
                 
-                <code><a href="#fleetidentityprovider">dict{fleet_<wbr>identity_<wbr>provider}</a></code>
+                <code><a href="#fleetidentityprovider">Dict[fleet_<wbr>identity_<wbr>provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -569,7 +569,7 @@ A region-unique name for the AMI.
             <td class="align-top">network</td>
             <td class="align-top">
                 
-                <code><a href="#fleetnetwork">dict{fleet_<wbr>network}</a></code>
+                <code><a href="#fleetnetwork">Dict[fleet_<wbr>network]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1200,7 +1200,7 @@ The following output properties are available:
             <td class="align-top">identity_<wbr>provider</td>
             <td class="align-top">
                 
-                <code><a href="#fleetidentityprovider">dict{fleet_<wbr>identity_<wbr>provider}</a></code>
+                <code><a href="#fleetidentityprovider">Dict[fleet_<wbr>identity_<wbr>provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
  {{% /md %}}
@@ -1239,7 +1239,7 @@ The following output properties are available:
             <td class="align-top">network</td>
             <td class="align-top">
                 
-                <code><a href="#fleetnetwork">dict{fleet_<wbr>network}</a></code>
+                <code><a href="#fleetnetwork">Dict[fleet_<wbr>network]</a></code>
             </td>
             <td class="align-top">{{% md %}} Provide this to allow manage the company network configuration for the fleet. Fields documented below.
  {{% /md %}}
@@ -1989,7 +1989,7 @@ The name of the fleet.
             <td class="align-top">identity_<wbr>provider</td>
             <td class="align-top">
                 
-                <code><a href="#fleetidentityprovider">dict{fleet_<wbr>identity_<wbr>provider}</a></code>
+                <code><a href="#fleetidentityprovider">Dict[fleet_<wbr>identity_<wbr>provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2034,7 +2034,7 @@ A region-unique name for the AMI.
             <td class="align-top">network</td>
             <td class="align-top">
                 
-                <code><a href="#fleetnetwork">dict{fleet_<wbr>network}</a></code>
+                <code><a href="#fleetnetwork">Dict[fleet_<wbr>network]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2528,7 +2528,7 @@ The VPC ID with connectivity to associated websites.
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2543,7 +2543,7 @@ A list of security group IDs associated with access to the provided subnets.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

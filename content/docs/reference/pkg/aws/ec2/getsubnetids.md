@@ -256,7 +256,7 @@ The VPC ID that you want to filter from.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsubnetidsfilter">list[get_<wbr>subnet_<wbr>ids_<wbr>filter]</a></code>
+                <code><a href="#getsubnetidsfilter">List[get_<wbr>subnet_<wbr>ids_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -271,7 +271,7 @@ Custom filter block as described below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -583,7 +583,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsubnetidsfilter">list[get_<wbr>subnet_<wbr>ids_<wbr>filter]</a></code>
+                <code><a href="#getsubnetidsfilter">List[get_<wbr>subnet_<wbr>ids_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -608,7 +608,7 @@ The following output properties are available:
             <td class="align-top">ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A set of all the subnet ids found. This data source will fail if none are found.
  {{% /md %}}
@@ -621,7 +621,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -867,7 +867,7 @@ For example, if matching against tag `Name`, use:
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

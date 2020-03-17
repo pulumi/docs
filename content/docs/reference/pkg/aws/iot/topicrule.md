@@ -876,7 +876,7 @@ The version of the SQL rules engine to use when evaluating the rule.
             <td class="align-top">cloudwatch_<wbr>alarm</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulecloudwatchalarm">dict{topic_<wbr>rule_<wbr>cloudwatch_<wbr>alarm}</a></code>
+                <code><a href="#topicrulecloudwatchalarm">Dict[topic_<wbr>rule_<wbr>cloudwatch_<wbr>alarm]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -890,7 +890,7 @@ The version of the SQL rules engine to use when evaluating the rule.
             <td class="align-top">cloudwatch_<wbr>metric</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulecloudwatchmetric">dict{topic_<wbr>rule_<wbr>cloudwatch_<wbr>metric}</a></code>
+                <code><a href="#topicrulecloudwatchmetric">Dict[topic_<wbr>rule_<wbr>cloudwatch_<wbr>metric]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -919,7 +919,7 @@ The description of the rule.
             <td class="align-top">dynamodb</td>
             <td class="align-top">
                 
-                <code><a href="#topicruledynamodb">dict{topic_<wbr>rule_<wbr>dynamodb}</a></code>
+                <code><a href="#topicruledynamodb">Dict[topic_<wbr>rule_<wbr>dynamodb]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -933,7 +933,7 @@ The description of the rule.
             <td class="align-top">elasticsearch</td>
             <td class="align-top">
                 
-                <code><a href="#topicruleelasticsearch">dict{topic_<wbr>rule_<wbr>elasticsearch}</a></code>
+                <code><a href="#topicruleelasticsearch">Dict[topic_<wbr>rule_<wbr>elasticsearch]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -962,7 +962,7 @@ Specifies whether the rule is enabled.
             <td class="align-top">firehose</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulefirehose">dict{topic_<wbr>rule_<wbr>firehose}</a></code>
+                <code><a href="#topicrulefirehose">Dict[topic_<wbr>rule_<wbr>firehose]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -976,7 +976,7 @@ Specifies whether the rule is enabled.
             <td class="align-top">kinesis</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulekinesis">dict{topic_<wbr>rule_<wbr>kinesis}</a></code>
+                <code><a href="#topicrulekinesis">Dict[topic_<wbr>rule_<wbr>kinesis]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -990,7 +990,7 @@ Specifies whether the rule is enabled.
             <td class="align-top">lambda_</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulelambda">dict{topic_<wbr>rule_<wbr>lambda}</a></code>
+                <code><a href="#topicrulelambda">Dict[topic_<wbr>rule_<wbr>lambda]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1019,7 +1019,7 @@ The name of the rule.
             <td class="align-top">republish</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulerepublish">dict{topic_<wbr>rule_<wbr>republish}</a></code>
+                <code><a href="#topicrulerepublish">Dict[topic_<wbr>rule_<wbr>republish]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1033,7 +1033,7 @@ The name of the rule.
             <td class="align-top">s3</td>
             <td class="align-top">
                 
-                <code><a href="#topicrules3">dict{topic_<wbr>rule_<wbr>s3}</a></code>
+                <code><a href="#topicrules3">Dict[topic_<wbr>rule_<wbr>s3]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1047,7 +1047,7 @@ The name of the rule.
             <td class="align-top">sns</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulesns">dict{topic_<wbr>rule_<wbr>sns}</a></code>
+                <code><a href="#topicrulesns">Dict[topic_<wbr>rule_<wbr>sns]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1091,7 +1091,7 @@ The version of the SQL rules engine to use when evaluating the rule.
             <td class="align-top">sqs</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulesqs">dict{topic_<wbr>rule_<wbr>sqs}</a></code>
+                <code><a href="#topicrulesqs">Dict[topic_<wbr>rule_<wbr>sqs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1842,7 +1842,7 @@ The following output properties are available:
             <td class="align-top">cloudwatch_<wbr>alarm</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulecloudwatchalarm">dict{topic_<wbr>rule_<wbr>cloudwatch_<wbr>alarm}</a></code>
+                <code><a href="#topicrulecloudwatchalarm">Dict[topic_<wbr>rule_<wbr>cloudwatch_<wbr>alarm]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1854,7 +1854,7 @@ The following output properties are available:
             <td class="align-top">cloudwatch_<wbr>metric</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulecloudwatchmetric">dict{topic_<wbr>rule_<wbr>cloudwatch_<wbr>metric}</a></code>
+                <code><a href="#topicrulecloudwatchmetric">Dict[topic_<wbr>rule_<wbr>cloudwatch_<wbr>metric]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1879,7 +1879,7 @@ The following output properties are available:
             <td class="align-top">dynamodb</td>
             <td class="align-top">
                 
-                <code><a href="#topicruledynamodb">dict{topic_<wbr>rule_<wbr>dynamodb}</a></code>
+                <code><a href="#topicruledynamodb">Dict[topic_<wbr>rule_<wbr>dynamodb]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1891,7 +1891,7 @@ The following output properties are available:
             <td class="align-top">elasticsearch</td>
             <td class="align-top">
                 
-                <code><a href="#topicruleelasticsearch">dict{topic_<wbr>rule_<wbr>elasticsearch}</a></code>
+                <code><a href="#topicruleelasticsearch">Dict[topic_<wbr>rule_<wbr>elasticsearch]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1916,7 +1916,7 @@ The following output properties are available:
             <td class="align-top">firehose</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulefirehose">dict{topic_<wbr>rule_<wbr>firehose}</a></code>
+                <code><a href="#topicrulefirehose">Dict[topic_<wbr>rule_<wbr>firehose]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1928,7 +1928,7 @@ The following output properties are available:
             <td class="align-top">kinesis</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulekinesis">dict{topic_<wbr>rule_<wbr>kinesis}</a></code>
+                <code><a href="#topicrulekinesis">Dict[topic_<wbr>rule_<wbr>kinesis]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1940,7 +1940,7 @@ The following output properties are available:
             <td class="align-top">lambda_</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulelambda">dict{topic_<wbr>rule_<wbr>lambda}</a></code>
+                <code><a href="#topicrulelambda">Dict[topic_<wbr>rule_<wbr>lambda]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1965,7 +1965,7 @@ The following output properties are available:
             <td class="align-top">republish</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulerepublish">dict{topic_<wbr>rule_<wbr>republish}</a></code>
+                <code><a href="#topicrulerepublish">Dict[topic_<wbr>rule_<wbr>republish]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1977,7 +1977,7 @@ The following output properties are available:
             <td class="align-top">s3</td>
             <td class="align-top">
                 
-                <code><a href="#topicrules3">dict{topic_<wbr>rule_<wbr>s3}</a></code>
+                <code><a href="#topicrules3">Dict[topic_<wbr>rule_<wbr>s3]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1989,7 +1989,7 @@ The following output properties are available:
             <td class="align-top">sns</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulesns">dict{topic_<wbr>rule_<wbr>sns}</a></code>
+                <code><a href="#topicrulesns">Dict[topic_<wbr>rule_<wbr>sns]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2027,7 +2027,7 @@ The following output properties are available:
             <td class="align-top">sqs</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulesqs">dict{topic_<wbr>rule_<wbr>sqs}</a></code>
+                <code><a href="#topicrulesqs">Dict[topic_<wbr>rule_<wbr>sqs]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2925,7 +2925,7 @@ The ARN of the topic rule
             <td class="align-top">cloudwatch_<wbr>alarm</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulecloudwatchalarm">dict{topic_<wbr>rule_<wbr>cloudwatch_<wbr>alarm}</a></code>
+                <code><a href="#topicrulecloudwatchalarm">Dict[topic_<wbr>rule_<wbr>cloudwatch_<wbr>alarm]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2939,7 +2939,7 @@ The ARN of the topic rule
             <td class="align-top">cloudwatch_<wbr>metric</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulecloudwatchmetric">dict{topic_<wbr>rule_<wbr>cloudwatch_<wbr>metric}</a></code>
+                <code><a href="#topicrulecloudwatchmetric">Dict[topic_<wbr>rule_<wbr>cloudwatch_<wbr>metric]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2968,7 +2968,7 @@ The description of the rule.
             <td class="align-top">dynamodb</td>
             <td class="align-top">
                 
-                <code><a href="#topicruledynamodb">dict{topic_<wbr>rule_<wbr>dynamodb}</a></code>
+                <code><a href="#topicruledynamodb">Dict[topic_<wbr>rule_<wbr>dynamodb]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2982,7 +2982,7 @@ The description of the rule.
             <td class="align-top">elasticsearch</td>
             <td class="align-top">
                 
-                <code><a href="#topicruleelasticsearch">dict{topic_<wbr>rule_<wbr>elasticsearch}</a></code>
+                <code><a href="#topicruleelasticsearch">Dict[topic_<wbr>rule_<wbr>elasticsearch]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3011,7 +3011,7 @@ Specifies whether the rule is enabled.
             <td class="align-top">firehose</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulefirehose">dict{topic_<wbr>rule_<wbr>firehose}</a></code>
+                <code><a href="#topicrulefirehose">Dict[topic_<wbr>rule_<wbr>firehose]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3025,7 +3025,7 @@ Specifies whether the rule is enabled.
             <td class="align-top">kinesis</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulekinesis">dict{topic_<wbr>rule_<wbr>kinesis}</a></code>
+                <code><a href="#topicrulekinesis">Dict[topic_<wbr>rule_<wbr>kinesis]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3039,7 +3039,7 @@ Specifies whether the rule is enabled.
             <td class="align-top">lambda_</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulelambda">dict{topic_<wbr>rule_<wbr>lambda}</a></code>
+                <code><a href="#topicrulelambda">Dict[topic_<wbr>rule_<wbr>lambda]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3068,7 +3068,7 @@ The name of the rule.
             <td class="align-top">republish</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulerepublish">dict{topic_<wbr>rule_<wbr>republish}</a></code>
+                <code><a href="#topicrulerepublish">Dict[topic_<wbr>rule_<wbr>republish]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3082,7 +3082,7 @@ The name of the rule.
             <td class="align-top">s3</td>
             <td class="align-top">
                 
-                <code><a href="#topicrules3">dict{topic_<wbr>rule_<wbr>s3}</a></code>
+                <code><a href="#topicrules3">Dict[topic_<wbr>rule_<wbr>s3]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3096,7 +3096,7 @@ The name of the rule.
             <td class="align-top">sns</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulesns">dict{topic_<wbr>rule_<wbr>sns}</a></code>
+                <code><a href="#topicrulesns">Dict[topic_<wbr>rule_<wbr>sns]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3140,7 +3140,7 @@ The version of the SQL rules engine to use when evaluating the rule.
             <td class="align-top">sqs</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulesqs">dict{topic_<wbr>rule_<wbr>sqs}</a></code>
+                <code><a href="#topicrulesqs">Dict[topic_<wbr>rule_<wbr>sqs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

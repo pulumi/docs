@@ -448,7 +448,7 @@ The name of the bucket to put notification configuration.
             <td class="align-top">lambda_<wbr>functions</td>
             <td class="align-top">
                 
-                <code><a href="#bucketnotificationlambdafunction">list[bucket_<wbr>notification_<wbr>lambda_<wbr>function]</a></code>
+                <code><a href="#bucketnotificationlambdafunction">List[bucket_<wbr>notification_<wbr>lambda_<wbr>function]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -463,7 +463,7 @@ Used to configure notifications to a Lambda Function (documented below).
             <td class="align-top">queues</td>
             <td class="align-top">
                 
-                <code><a href="#bucketnotificationqueue">list[bucket_<wbr>notification_<wbr>queue]</a></code>
+                <code><a href="#bucketnotificationqueue">List[bucket_<wbr>notification_<wbr>queue]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -478,7 +478,7 @@ The notification configuration to SQS Queue (documented below).
             <td class="align-top">topics</td>
             <td class="align-top">
                 
-                <code><a href="#bucketnotificationtopic">list[bucket_<wbr>notification_<wbr>topic]</a></code>
+                <code><a href="#bucketnotificationtopic">List[bucket_<wbr>notification_<wbr>topic]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -756,7 +756,7 @@ The following output properties are available:
             <td class="align-top">lambda_<wbr>functions</td>
             <td class="align-top">
                 
-                <code><a href="#bucketnotificationlambdafunction">list[bucket_<wbr>notification_<wbr>lambda_<wbr>function]</a></code>
+                <code><a href="#bucketnotificationlambdafunction">List[bucket_<wbr>notification_<wbr>lambda_<wbr>function]</a></code>
             </td>
             <td class="align-top">{{% md %}} Used to configure notifications to a Lambda Function (documented below).
  {{% /md %}}
@@ -769,7 +769,7 @@ The following output properties are available:
             <td class="align-top">queues</td>
             <td class="align-top">
                 
-                <code><a href="#bucketnotificationqueue">list[bucket_<wbr>notification_<wbr>queue]</a></code>
+                <code><a href="#bucketnotificationqueue">List[bucket_<wbr>notification_<wbr>queue]</a></code>
             </td>
             <td class="align-top">{{% md %}} The notification configuration to SQS Queue (documented below).
  {{% /md %}}
@@ -782,7 +782,7 @@ The following output properties are available:
             <td class="align-top">topics</td>
             <td class="align-top">
                 
-                <code><a href="#bucketnotificationtopic">list[bucket_<wbr>notification_<wbr>topic]</a></code>
+                <code><a href="#bucketnotificationtopic">List[bucket_<wbr>notification_<wbr>topic]</a></code>
             </td>
             <td class="align-top">{{% md %}} The notification configuration to SNS Topic (documented below).
  {{% /md %}}
@@ -1129,7 +1129,7 @@ The name of the bucket to put notification configuration.
             <td class="align-top">lambda_<wbr>functions</td>
             <td class="align-top">
                 
-                <code><a href="#bucketnotificationlambdafunction">list[bucket_<wbr>notification_<wbr>lambda_<wbr>function]</a></code>
+                <code><a href="#bucketnotificationlambdafunction">List[bucket_<wbr>notification_<wbr>lambda_<wbr>function]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1144,7 +1144,7 @@ Used to configure notifications to a Lambda Function (documented below).
             <td class="align-top">queues</td>
             <td class="align-top">
                 
-                <code><a href="#bucketnotificationqueue">list[bucket_<wbr>notification_<wbr>queue]</a></code>
+                <code><a href="#bucketnotificationqueue">List[bucket_<wbr>notification_<wbr>queue]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1159,7 +1159,7 @@ The notification configuration to SQS Queue (documented below).
             <td class="align-top">topics</td>
             <td class="align-top">
                 
-                <code><a href="#bucketnotificationtopic">list[bucket_<wbr>notification_<wbr>topic]</a></code>
+                <code><a href="#bucketnotificationtopic">List[bucket_<wbr>notification_<wbr>topic]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1507,7 +1507,7 @@ Specifies Amazon Lambda function ARN.
             <td class="align-top">events</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1908,7 +1908,7 @@ Specifies Amazon SQS queue ARN.
             <td class="align-top">events</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2309,7 +2309,7 @@ Specifies Amazon SNS topic ARN.
             <td class="align-top">events</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -259,7 +259,7 @@ Name of the domain.
             <td class="align-top">access_<wbr>policies</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -716,7 +716,7 @@ Name of the domain.
             <td class="align-top">access_<wbr>policies</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

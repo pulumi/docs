@@ -470,7 +470,7 @@ the suffix domain name to use by default when resolving non Fully Qualified Doma
             <td class="align-top">domain_<wbr>name_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -485,7 +485,7 @@ List of name servers to configure in `/etc/resolv.conf`. If you want to use the 
             <td class="align-top">netbios_<wbr>name_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -515,7 +515,7 @@ The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadca
             <td class="align-top">ntp_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -530,7 +530,7 @@ List of NTP servers to configure.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -925,7 +925,7 @@ The following output properties are available:
             <td class="align-top">domain_<wbr>name_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of name servers to configure in `/etc/resolv.conf`. If you want to use the default AWS nameservers you should set this to `AmazonProvidedDNS`.
  {{% /md %}}
@@ -938,7 +938,7 @@ The following output properties are available:
             <td class="align-top">netbios_<wbr>name_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of NETBIOS name servers.
  {{% /md %}}
@@ -964,7 +964,7 @@ The following output properties are available:
             <td class="align-top">ntp_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of NTP servers to configure.
  {{% /md %}}
@@ -990,7 +990,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1472,7 +1472,7 @@ the suffix domain name to use by default when resolving non Fully Qualified Doma
             <td class="align-top">domain_<wbr>name_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1487,7 +1487,7 @@ List of name servers to configure in `/etc/resolv.conf`. If you want to use the 
             <td class="align-top">netbios_<wbr>name_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1517,7 +1517,7 @@ The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadca
             <td class="align-top">ntp_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1547,7 +1547,7 @@ The ID of the AWS account that owns the DHCP options set.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

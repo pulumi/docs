@@ -1698,7 +1698,7 @@ A JSON string for selecting additional features such as adding proxy information
             <td class="align-top">applications</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1728,7 +1728,7 @@ An IAM role for automatic scaling policies. The IAM role provides permissions th
             <td class="align-top">bootstrap_<wbr>actions</td>
             <td class="align-top">
                 
-                <code><a href="#clusterbootstrapaction">list[cluster_<wbr>bootstrap_<wbr>action]</a></code>
+                <code><a href="#clusterbootstrapaction">List[cluster_<wbr>bootstrap_<wbr>action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1788,7 +1788,7 @@ Use the `core_instance_group` configuration block `instance_count` argument inst
             <td class="align-top">core_<wbr>instance_<wbr>group</td>
             <td class="align-top">
                 
-                <code><a href="#clustercoreinstancegroup">dict{cluster_<wbr>core_<wbr>instance_<wbr>group}</a></code>
+                <code><a href="#clustercoreinstancegroup">Dict[cluster_<wbr>core_<wbr>instance_<wbr>group]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1848,7 +1848,7 @@ Size in GiB of the EBS root device volume of the Linux AMI that is used for each
             <td class="align-top">ec2_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code><a href="#clusterec2attributes">dict{cluster_<wbr>ec2_<wbr>attributes}</a></code>
+                <code><a href="#clusterec2attributes">Dict[cluster_<wbr>ec2_<wbr>attributes]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1863,7 +1863,7 @@ Attributes for the EC2 instances running the job flow. Defined below
             <td class="align-top">instance_<wbr>groups</td>
             <td class="align-top">
                 
-                <code><a href="#clusterinstancegroup">list[cluster_<wbr>instance_<wbr>group]</a></code>
+                <code><a href="#clusterinstancegroup">List[cluster_<wbr>instance_<wbr>group]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1893,7 +1893,7 @@ Switch on/off run cluster with no steps or when all steps are complete (default 
             <td class="align-top">kerberos_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code><a href="#clusterkerberosattributes">dict{cluster_<wbr>kerberos_<wbr>attributes}</a></code>
+                <code><a href="#clusterkerberosattributes">Dict[cluster_<wbr>kerberos_<wbr>attributes]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1923,7 +1923,7 @@ S3 bucket to write the log files of the job flow. If a value is not provided, lo
             <td class="align-top">master_<wbr>instance_<wbr>group</td>
             <td class="align-top">
                 
-                <code><a href="#clustermasterinstancegroup">dict{cluster_<wbr>master_<wbr>instance_<wbr>group}</a></code>
+                <code><a href="#clustermasterinstancegroup">Dict[cluster_<wbr>master_<wbr>instance_<wbr>group]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2043,7 +2043,7 @@ The number of steps that can be executed concurrently. You can specify a maximum
             <td class="align-top">steps</td>
             <td class="align-top">
                 
-                <code><a href="#clusterstep">list[cluster_<wbr>step]</a></code>
+                <code><a href="#clusterstep">List[cluster_<wbr>step]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2058,7 +2058,7 @@ List of steps to run when creating the cluster. Defined below. It is highly reco
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3416,7 +3416,7 @@ The following output properties are available:
             <td class="align-top">applications</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
  {{% /md %}}
@@ -3454,7 +3454,7 @@ The following output properties are available:
             <td class="align-top">bootstrap_<wbr>actions</td>
             <td class="align-top">
                 
-                <code><a href="#clusterbootstrapaction">list[cluster_<wbr>bootstrap_<wbr>action]</a></code>
+                <code><a href="#clusterbootstrapaction">List[cluster_<wbr>bootstrap_<wbr>action]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below
  {{% /md %}}
@@ -3518,7 +3518,7 @@ The following output properties are available:
             <td class="align-top">core_<wbr>instance_<wbr>group</td>
             <td class="align-top">
                 
-                <code><a href="#clustercoreinstancegroup">dict{cluster_<wbr>core_<wbr>instance_<wbr>group}</a></code>
+                <code><a href="#clustercoreinstancegroup">Dict[cluster_<wbr>core_<wbr>instance_<wbr>group]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
  {{% /md %}}
@@ -3570,7 +3570,7 @@ The following output properties are available:
             <td class="align-top">ec2_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code><a href="#clusterec2attributes">dict{cluster_<wbr>ec2_<wbr>attributes}</a></code>
+                <code><a href="#clusterec2attributes">Dict[cluster_<wbr>ec2_<wbr>attributes]</a></code>
             </td>
             <td class="align-top">{{% md %}} Attributes for the EC2 instances running the job flow. Defined below
  {{% /md %}}
@@ -3583,7 +3583,7 @@ The following output properties are available:
             <td class="align-top">instance_<wbr>groups</td>
             <td class="align-top">
                 
-                <code><a href="#clusterinstancegroup">list[cluster_<wbr>instance_<wbr>group]</a></code>
+                <code><a href="#clusterinstancegroup">List[cluster_<wbr>instance_<wbr>group]</a></code>
             </td>
             <td class="align-top">{{% md %}} Use the `master_instance_group` configuration block, `core_instance_group` configuration block and [`aws.emr.InstanceGroup` resource(s)](https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
  {{% /md %}}
@@ -3609,7 +3609,7 @@ The following output properties are available:
             <td class="align-top">kerberos_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code><a href="#clusterkerberosattributes">dict{cluster_<wbr>kerberos_<wbr>attributes}</a></code>
+                <code><a href="#clusterkerberosattributes">Dict[cluster_<wbr>kerberos_<wbr>attributes]</a></code>
             </td>
             <td class="align-top">{{% md %}} Kerberos configuration for the cluster. Defined below
  {{% /md %}}
@@ -3635,7 +3635,7 @@ The following output properties are available:
             <td class="align-top">master_<wbr>instance_<wbr>group</td>
             <td class="align-top">
                 
-                <code><a href="#clustermasterinstancegroup">dict{cluster_<wbr>master_<wbr>instance_<wbr>group}</a></code>
+                <code><a href="#clustermasterinstancegroup">Dict[cluster_<wbr>master_<wbr>instance_<wbr>group]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
  {{% /md %}}
@@ -3753,7 +3753,7 @@ The following output properties are available:
             <td class="align-top">steps</td>
             <td class="align-top">
                 
-                <code><a href="#clusterstep">list[cluster_<wbr>step]</a></code>
+                <code><a href="#clusterstep">List[cluster_<wbr>step]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize the [lifecycle configuration block](https://www.terraform.io/docs/configuration/resources.html) with `ignore_changes` if other steps are being managed outside of this provider. This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
  {{% /md %}}
@@ -3766,7 +3766,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} list of tags to apply to the EMR Cluster
  {{% /md %}}
@@ -5351,7 +5351,7 @@ A JSON string for selecting additional features such as adding proxy information
             <td class="align-top">applications</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5395,7 +5395,7 @@ An IAM role for automatic scaling policies. The IAM role provides permissions th
             <td class="align-top">bootstrap_<wbr>actions</td>
             <td class="align-top">
                 
-                <code><a href="#clusterbootstrapaction">list[cluster_<wbr>bootstrap_<wbr>action]</a></code>
+                <code><a href="#clusterbootstrapaction">List[cluster_<wbr>bootstrap_<wbr>action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5469,7 +5469,7 @@ Use the `core_instance_group` configuration block `instance_count` argument inst
             <td class="align-top">core_<wbr>instance_<wbr>group</td>
             <td class="align-top">
                 
-                <code><a href="#clustercoreinstancegroup">dict{cluster_<wbr>core_<wbr>instance_<wbr>group}</a></code>
+                <code><a href="#clustercoreinstancegroup">Dict[cluster_<wbr>core_<wbr>instance_<wbr>group]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5529,7 +5529,7 @@ Size in GiB of the EBS root device volume of the Linux AMI that is used for each
             <td class="align-top">ec2_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code><a href="#clusterec2attributes">dict{cluster_<wbr>ec2_<wbr>attributes}</a></code>
+                <code><a href="#clusterec2attributes">Dict[cluster_<wbr>ec2_<wbr>attributes]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5544,7 +5544,7 @@ Attributes for the EC2 instances running the job flow. Defined below
             <td class="align-top">instance_<wbr>groups</td>
             <td class="align-top">
                 
-                <code><a href="#clusterinstancegroup">list[cluster_<wbr>instance_<wbr>group]</a></code>
+                <code><a href="#clusterinstancegroup">List[cluster_<wbr>instance_<wbr>group]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5574,7 +5574,7 @@ Switch on/off run cluster with no steps or when all steps are complete (default 
             <td class="align-top">kerberos_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code><a href="#clusterkerberosattributes">dict{cluster_<wbr>kerberos_<wbr>attributes}</a></code>
+                <code><a href="#clusterkerberosattributes">Dict[cluster_<wbr>kerberos_<wbr>attributes]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5604,7 +5604,7 @@ S3 bucket to write the log files of the job flow. If a value is not provided, lo
             <td class="align-top">master_<wbr>instance_<wbr>group</td>
             <td class="align-top">
                 
-                <code><a href="#clustermasterinstancegroup">dict{cluster_<wbr>master_<wbr>instance_<wbr>group}</a></code>
+                <code><a href="#clustermasterinstancegroup">Dict[cluster_<wbr>master_<wbr>instance_<wbr>group]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5740,7 +5740,7 @@ The number of steps that can be executed concurrently. You can specify a maximum
             <td class="align-top">steps</td>
             <td class="align-top">
                 
-                <code><a href="#clusterstep">list[cluster_<wbr>step]</a></code>
+                <code><a href="#clusterstep">List[cluster_<wbr>step]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5755,7 +5755,7 @@ List of steps to run when creating the cluster. Defined below. It is highly reco
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6037,7 +6037,7 @@ The name of the job flow
             <td class="align-top">args</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6509,7 +6509,7 @@ The name of the job flow
             <td class="align-top">ebs_<wbr>configs</td>
             <td class="align-top">
                 
-                <code><a href="#clustercoreinstancegroupebsconfig">list[cluster_<wbr>core_<wbr>instance_<wbr>group_<wbr>ebs_<wbr>config]</a></code>
+                <code><a href="#clustercoreinstancegroupebsconfig">List[cluster_<wbr>core_<wbr>instance_<wbr>group_<wbr>ebs_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7926,7 +7926,7 @@ The name of the job flow
             <td class="align-top">ebs_<wbr>configs</td>
             <td class="align-top">
                 
-                <code><a href="#clusterinstancegroupebsconfig">list[cluster_<wbr>instance_<wbr>group_<wbr>ebs_<wbr>config]</a></code>
+                <code><a href="#clusterinstancegroupebsconfig">List[cluster_<wbr>instance_<wbr>group_<wbr>ebs_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9091,7 +9091,7 @@ The name of the job flow
             <td class="align-top">ebs_<wbr>configs</td>
             <td class="align-top">
                 
-                <code><a href="#clustermasterinstancegroupebsconfig">list[cluster_<wbr>master_<wbr>instance_<wbr>group_<wbr>ebs_<wbr>config]</a></code>
+                <code><a href="#clustermasterinstancegroupebsconfig">List[cluster_<wbr>master_<wbr>instance_<wbr>group_<wbr>ebs_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9732,7 +9732,7 @@ The name of the job flow
             <td class="align-top">hadoop_<wbr>jar_<wbr>step</td>
             <td class="align-top">
                 
-                <code><a href="#clusterstephadoopjarstep">dict{cluster_<wbr>step_<wbr>hadoop_<wbr>jar_<wbr>step}</a></code>
+                <code><a href="#clusterstephadoopjarstep">Dict[cluster_<wbr>step_<wbr>hadoop_<wbr>jar_<wbr>step]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -10030,7 +10030,7 @@ The name of the job flow
             <td class="align-top">args</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -10072,7 +10072,7 @@ The name of the job flow
             <td class="align-top">properties</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

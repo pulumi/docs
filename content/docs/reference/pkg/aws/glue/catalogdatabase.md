@@ -436,7 +436,7 @@ The name of the database.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -792,7 +792,7 @@ The following output properties are available:
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A list of key-value pairs that define parameters and properties of the database.
  {{% /md %}}
@@ -1229,7 +1229,7 @@ The name of the database.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

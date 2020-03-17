@@ -292,7 +292,7 @@ Alias name or version number of the lambda function. e.g. `$LATEST`, `my-alias`,
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1341,7 +1341,7 @@ The following output properties are available:
             <td class="align-top">dead_<wbr>letter_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctiondeadletterconfig">dict{get_<wbr>function_<wbr>dead_<wbr>letter_<wbr>config}</a></code>
+                <code><a href="#getfunctiondeadletterconfig">Dict[get_<wbr>function_<wbr>dead_<wbr>letter_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configure the function&#39;s *dead letter queue*.
  {{% /md %}}
@@ -1367,7 +1367,7 @@ The following output properties are available:
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctionenvironment">dict{get_<wbr>function_<wbr>environment}</a></code>
+                <code><a href="#getfunctionenvironment">Dict[get_<wbr>function_<wbr>environment]</a></code>
             </td>
             <td class="align-top">{{% md %}} The Lambda environment&#39;s configuration settings.
  {{% /md %}}
@@ -1457,7 +1457,7 @@ The following output properties are available:
             <td class="align-top">layers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of Lambda Layer ARNs attached to your Lambda Function.
  {{% /md %}}
@@ -1573,7 +1573,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1598,7 +1598,7 @@ The following output properties are available:
             <td class="align-top">tracing_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctiontracingconfig">dict{get_<wbr>function_<wbr>tracing_<wbr>config}</a></code>
+                <code><a href="#getfunctiontracingconfig">Dict[get_<wbr>function_<wbr>tracing_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Tracing settings of the function.
  {{% /md %}}
@@ -1624,7 +1624,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctionvpcconfig">dict{get_<wbr>function_<wbr>vpc_<wbr>config}</a></code>
+                <code><a href="#getfunctionvpcconfig">Dict[get_<wbr>function_<wbr>vpc_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC configuration associated with your Lambda function.
  {{% /md %}}
@@ -1942,7 +1942,7 @@ The following output properties are available:
             <td class="align-top">variables</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2340,7 +2340,7 @@ The following output properties are available:
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2354,7 +2354,7 @@ The following output properties are available:
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

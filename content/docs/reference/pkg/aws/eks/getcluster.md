@@ -234,7 +234,7 @@ The name of the cluster
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -899,7 +899,7 @@ The following output properties are available:
             <td class="align-top">certificate_<wbr>authority</td>
             <td class="align-top">
                 
-                <code><a href="#getclustercertificateauthority">dict{get_<wbr>cluster_<wbr>certificate_<wbr>authority}</a></code>
+                <code><a href="#getclustercertificateauthority">Dict[get_<wbr>cluster_<wbr>certificate_<wbr>authority]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing `certificate-authority-data` for your cluster.
  {{% /md %}}
@@ -925,7 +925,7 @@ The following output properties are available:
             <td class="align-top">enabled_<wbr>cluster_<wbr>log_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The enabled control plane logs.
  {{% /md %}}
@@ -964,7 +964,7 @@ The following output properties are available:
             <td class="align-top">identities</td>
             <td class="align-top">
                 
-                <code><a href="#getclusteridentity">list[get_<wbr>cluster_<wbr>identity]</a></code>
+                <code><a href="#getclusteridentity">List[get_<wbr>cluster_<wbr>identity]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. For an example using this information to enable IAM Roles for Service Accounts, see the [`aws.eks.Cluster` resource documentation](https://www.terraform.io/docs/providers/aws/r/eks_cluster.html).
  {{% /md %}}
@@ -1028,7 +1028,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags.
  {{% /md %}}
@@ -1054,7 +1054,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#getclustervpcconfig">dict{get_<wbr>cluster_<wbr>vpc_<wbr>config}</a></code>
+                <code><a href="#getclustervpcconfig">Dict[get_<wbr>cluster_<wbr>vpc_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested list containing VPC configuration for the cluster.
  {{% /md %}}
@@ -1379,7 +1379,7 @@ Nested attribute containing [OpenID Connect](https://openid.net/connect/) identi
             <td class="align-top">oidcs</td>
             <td class="align-top">
                 
-                <code><a href="#getclusteridentityoidc">list[get_<wbr>cluster_<wbr>identity_<wbr>oidc]</a></code>
+                <code><a href="#getclusteridentityoidc">List[get_<wbr>cluster_<wbr>identity_<wbr>oidc]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2016,7 +2016,7 @@ Indicates whether or not the Amazon EKS public API server endpoint is enabled.
             <td class="align-top">public_<wbr>access_<wbr>cidrs</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2031,7 +2031,7 @@ List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS publi
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2046,7 +2046,7 @@ List of security group IDs
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

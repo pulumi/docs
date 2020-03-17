@@ -716,7 +716,7 @@ Defaults to `false`.
             <td class="align-top">route_<wbr>table_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -731,7 +731,7 @@ One or more route table IDs. Applicable for endpoints of type `Gateway`.
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -761,7 +761,7 @@ The service name, in the form `com.amazonaws.region.service` for AWS services.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -776,7 +776,7 @@ The ID of one or more subnets in which to create a network interface for the end
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1591,7 +1591,7 @@ Defaults to `false`.
             <td class="align-top">cidr_<wbr>blocks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of type `Gateway`.
  {{% /md %}}
@@ -1604,7 +1604,7 @@ Defaults to `false`.
             <td class="align-top">dns_<wbr>entries</td>
             <td class="align-top">
                 
-                <code><a href="#vpcendpointdnsentry">list[vpc_<wbr>endpoint_<wbr>dns_<wbr>entry]</a></code>
+                <code><a href="#vpcendpointdnsentry">List[vpc_<wbr>endpoint_<wbr>dns_<wbr>entry]</a></code>
             </td>
             <td class="align-top">{{% md %}} The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
  {{% /md %}}
@@ -1617,7 +1617,7 @@ Defaults to `false`.
             <td class="align-top">network_<wbr>interface_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type `Interface`.
  {{% /md %}}
@@ -1695,7 +1695,7 @@ Defaults to `false`.
             <td class="align-top">route_<wbr>table_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} One or more route table IDs. Applicable for endpoints of type `Gateway`.
  {{% /md %}}
@@ -1708,7 +1708,7 @@ Defaults to `false`.
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The ID of one or more security groups to associate with the network interface. Required for endpoints of type `Interface`.
  {{% /md %}}
@@ -1747,7 +1747,7 @@ Defaults to `false`.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `Interface`.
  {{% /md %}}
@@ -1760,7 +1760,7 @@ Defaults to `false`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2718,7 +2718,7 @@ Accept the VPC endpoint (the VPC endpoint and service need to be in the same AWS
             <td class="align-top">cidr_<wbr>blocks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2733,7 +2733,7 @@ The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of
             <td class="align-top">dns_<wbr>entries</td>
             <td class="align-top">
                 
-                <code><a href="#vpcendpointdnsentry">list[vpc_<wbr>endpoint_<wbr>dns_<wbr>entry]</a></code>
+                <code><a href="#vpcendpointdnsentry">List[vpc_<wbr>endpoint_<wbr>dns_<wbr>entry]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2748,7 +2748,7 @@ The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interfac
             <td class="align-top">network_<wbr>interface_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2838,7 +2838,7 @@ Whether or not the VPC Endpoint is being managed by its service - `true` or `fal
             <td class="align-top">route_<wbr>table_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2853,7 +2853,7 @@ One or more route table IDs. Applicable for endpoints of type `Gateway`.
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2898,7 +2898,7 @@ The state of the VPC endpoint.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2913,7 +2913,7 @@ The ID of one or more subnets in which to create a network interface for the end
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -389,7 +389,7 @@ Key-value mapping of resource tags
             <td class="align-top">capacity_<wbr>providers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -404,7 +404,7 @@ List of short names of one or more capacity providers to associate with the clus
             <td class="align-top">default_<wbr>capacity_<wbr>provider_<wbr>strategies</td>
             <td class="align-top">
                 
-                <code><a href="#clusterdefaultcapacityproviderstrategy">list[cluster_<wbr>default_<wbr>capacity_<wbr>provider_<wbr>strategy]</a></code>
+                <code><a href="#clusterdefaultcapacityproviderstrategy">List[cluster_<wbr>default_<wbr>capacity_<wbr>provider_<wbr>strategy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -434,7 +434,7 @@ The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#clustersetting">list[cluster_<wbr>setting]</a></code>
+                <code><a href="#clustersetting">List[cluster_<wbr>setting]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -449,7 +449,7 @@ Configuration block(s) with cluster settings. For example, this can be used to e
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -805,7 +805,7 @@ The following output properties are available:
             <td class="align-top">capacity_<wbr>providers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
  {{% /md %}}
@@ -818,7 +818,7 @@ The following output properties are available:
             <td class="align-top">default_<wbr>capacity_<wbr>provider_<wbr>strategies</td>
             <td class="align-top">
                 
-                <code><a href="#clusterdefaultcapacityproviderstrategy">list[cluster_<wbr>default_<wbr>capacity_<wbr>provider_<wbr>strategy]</a></code>
+                <code><a href="#clusterdefaultcapacityproviderstrategy">List[cluster_<wbr>default_<wbr>capacity_<wbr>provider_<wbr>strategy]</a></code>
             </td>
             <td class="align-top">{{% md %}} The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
  {{% /md %}}
@@ -844,7 +844,7 @@ The following output properties are available:
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#clustersetting">list[cluster_<wbr>setting]</a></code>
+                <code><a href="#clustersetting">List[cluster_<wbr>setting]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
  {{% /md %}}
@@ -857,7 +857,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1294,7 +1294,7 @@ The Amazon Resource Name (ARN) that identifies the cluster
             <td class="align-top">capacity_<wbr>providers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1309,7 +1309,7 @@ List of short names of one or more capacity providers to associate with the clus
             <td class="align-top">default_<wbr>capacity_<wbr>provider_<wbr>strategies</td>
             <td class="align-top">
                 
-                <code><a href="#clusterdefaultcapacityproviderstrategy">list[cluster_<wbr>default_<wbr>capacity_<wbr>provider_<wbr>strategy]</a></code>
+                <code><a href="#clusterdefaultcapacityproviderstrategy">List[cluster_<wbr>default_<wbr>capacity_<wbr>provider_<wbr>strategy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1339,7 +1339,7 @@ The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#clustersetting">list[cluster_<wbr>setting]</a></code>
+                <code><a href="#clustersetting">List[cluster_<wbr>setting]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1354,7 +1354,7 @@ Configuration block(s) with cluster settings. For example, this can be used to e
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

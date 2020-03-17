@@ -521,7 +521,7 @@ with the prefix list.
             <td class="align-top">cidr_<wbr>blocks</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The list of CIDR blocks for the AWS service associated
 with the prefix list.

@@ -420,7 +420,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">definitions</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -495,7 +495,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -886,7 +886,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
             <td class="align-top">definitions</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The definition of the snapshot schedule. The definition is made up of schedule expressions, for example `cron(30 12 *)` or `rate(12 hours)`.
  {{% /md %}}
@@ -951,7 +951,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1429,7 +1429,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">definitions</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1504,7 +1504,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

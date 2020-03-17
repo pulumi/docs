@@ -337,7 +337,7 @@ The name of the accelerator.
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratorattributes">dict{accelerator_<wbr>attributes}</a></code>
+                <code><a href="#acceleratorattributes">Dict[accelerator_<wbr>attributes]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -770,7 +770,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratorattributes">dict{accelerator_<wbr>attributes}</a></code>
+                <code><a href="#acceleratorattributes">Dict[accelerator_<wbr>attributes]</a></code>
             </td>
             <td class="align-top">{{% md %}} The attributes of the accelerator. Fields documented below.
  {{% /md %}}
@@ -837,7 +837,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             <td class="align-top">ip_<wbr>sets</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratoripset">list[accelerator_<wbr>ip_<wbr>set]</a></code>
+                <code><a href="#acceleratoripset">List[accelerator_<wbr>ip_<wbr>set]</a></code>
             </td>
             <td class="align-top">{{% md %}} IP address set associated with the accelerator.
  {{% /md %}}
@@ -1323,7 +1323,7 @@ The name of the accelerator.
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratorattributes">dict{accelerator_<wbr>attributes}</a></code>
+                <code><a href="#acceleratorattributes">Dict[accelerator_<wbr>attributes]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1400,7 +1400,7 @@ The value for the address type must be `IPV4`.
             <td class="align-top">ip_<wbr>sets</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratoripset">list[accelerator_<wbr>ip_<wbr>set]</a></code>
+                <code><a href="#acceleratoripset">List[accelerator_<wbr>ip_<wbr>set]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1909,7 +1909,7 @@ The types of IP addresses included in this IP set.
             <td class="align-top">ip_<wbr>addresses</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

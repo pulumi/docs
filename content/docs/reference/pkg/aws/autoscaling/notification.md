@@ -306,7 +306,7 @@ The Topic ARN for notifications to be sent through
             <td class="align-top">group_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -321,7 +321,7 @@ A list of AutoScaling Group Names
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code>list[notification_<wbr>type]</code>
+                <code>List[notification_<wbr>type]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -566,7 +566,7 @@ notifications. Acceptable values are documented [in the AWS documentation here][
             <td class="align-top">group_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of AutoScaling Group Names
  {{% /md %}}
@@ -579,7 +579,7 @@ notifications. Acceptable values are documented [in the AWS documentation here][
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code>list[notification_<wbr>type]</code>
+                <code>List[notification_<wbr>type]</code>
             </td>
             <td class="align-top">{{% md %}} A list of Notification Types that trigger
 notifications. Acceptable values are documented [in the AWS documentation here][1]
@@ -883,7 +883,7 @@ The Topic ARN for notifications to be sent through
             <td class="align-top">group_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -898,7 +898,7 @@ A list of AutoScaling Group Names
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code>list[notification_<wbr>type]</code>
+                <code>List[notification_<wbr>type]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

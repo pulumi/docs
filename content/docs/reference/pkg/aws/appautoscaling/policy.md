@@ -657,7 +657,7 @@ The AWS service namespace of the scalable target. Documentation can be found in 
             <td class="align-top">step_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policystepscalingpolicyconfiguration">dict{policy_<wbr>step_<wbr>scaling_<wbr>policy_<wbr>configuration}</a></code>
+                <code><a href="#policystepscalingpolicyconfiguration">Dict[policy_<wbr>step_<wbr>scaling_<wbr>policy_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -672,7 +672,7 @@ Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;
             <td class="align-top">target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">dict{policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration}</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfiguration">Dict[policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1171,7 +1171,7 @@ The following output properties are available:
             <td class="align-top">step_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policystepscalingpolicyconfiguration">dict{policy_<wbr>step_<wbr>scaling_<wbr>policy_<wbr>configuration}</a></code>
+                <code><a href="#policystepscalingpolicyconfiguration">Dict[policy_<wbr>step_<wbr>scaling_<wbr>policy_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
  {{% /md %}}
@@ -1184,7 +1184,7 @@ The following output properties are available:
             <td class="align-top">target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">dict{policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration}</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfiguration">Dict[policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
  {{% /md %}}
@@ -1786,7 +1786,7 @@ The AWS service namespace of the scalable target. Documentation can be found in 
             <td class="align-top">step_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policystepscalingpolicyconfiguration">dict{policy_<wbr>step_<wbr>scaling_<wbr>policy_<wbr>configuration}</a></code>
+                <code><a href="#policystepscalingpolicyconfiguration">Dict[policy_<wbr>step_<wbr>scaling_<wbr>policy_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1801,7 +1801,7 @@ Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;
             <td class="align-top">target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">dict{policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration}</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfiguration">Dict[policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2190,7 +2190,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
             <td class="align-top">step_<wbr>adjustments</td>
             <td class="align-top">
                 
-                <code><a href="#policystepscalingpolicyconfigurationstepadjustment">list[policy_<wbr>step_<wbr>scaling_<wbr>policy_<wbr>configuration_<wbr>step_<wbr>adjustment]</a></code>
+                <code><a href="#policystepscalingpolicyconfigurationstepadjustment">List[policy_<wbr>step_<wbr>scaling_<wbr>policy_<wbr>configuration_<wbr>step_<wbr>adjustment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2826,7 +2826,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
             <td class="align-top">customized_<wbr>metric_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">dict{policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration_<wbr>customized_<wbr>metric_<wbr>specification}</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Dict[policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration_<wbr>customized_<wbr>metric_<wbr>specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2854,7 +2854,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
             <td class="align-top">predefined_<wbr>metric_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">dict{policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration_<wbr>predefined_<wbr>metric_<wbr>specification}</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Dict[policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration_<wbr>predefined_<wbr>metric_<wbr>specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3221,7 +3221,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
             <td class="align-top">dimensions</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">list[policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration_<wbr>customized_<wbr>metric_<wbr>specification_<wbr>dimension]</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List[policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration_<wbr>customized_<wbr>metric_<wbr>specification_<wbr>dimension]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

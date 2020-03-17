@@ -1099,7 +1099,7 @@ the number of Spot pools that you specify.
             <td class="align-top">launch_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecification">list[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification]</a></code>
+                <code><a href="#spotfleetrequestlaunchspecification">List[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1116,7 +1116,7 @@ across different markets and instance types.
             <td class="align-top">load_<wbr>balancers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1178,7 +1178,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
             <td class="align-top">target_<wbr>group_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2216,7 +2216,7 @@ the number of Spot pools that you specify.
             <td class="align-top">launch_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecification">list[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification]</a></code>
+                <code><a href="#spotfleetrequestlaunchspecification">List[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
@@ -2231,7 +2231,7 @@ across different markets and instance types.
             <td class="align-top">load_<wbr>balancers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of elastic load balancer names to add to the Spot fleet.
  {{% /md %}}
@@ -2298,7 +2298,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
             <td class="align-top">target_<wbr>group_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of `aws.alb.TargetGroup` ARNs, for use with Application Load Balancing.
  {{% /md %}}
@@ -3493,7 +3493,7 @@ the number of Spot pools that you specify.
             <td class="align-top">launch_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecification">list[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification]</a></code>
+                <code><a href="#spotfleetrequestlaunchspecification">List[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3510,7 +3510,7 @@ across different markets and instance types.
             <td class="align-top">load_<wbr>balancers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3587,7 +3587,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
             <td class="align-top">target_<wbr>group_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4661,7 +4661,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecificationebsblockdevice">list[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#spotfleetrequestlaunchspecificationebsblockdevice">List[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4689,7 +4689,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">list[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">List[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4801,7 +4801,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">root_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecificationrootblockdevice">list[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification_<wbr>root_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#spotfleetrequestlaunchspecificationrootblockdevice">List[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification_<wbr>root_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4844,7 +4844,7 @@ The maximum bid price per unit hour.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4873,7 +4873,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

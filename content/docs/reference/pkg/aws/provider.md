@@ -1055,7 +1055,7 @@ The access key for API operations. You can retrieve this from the &#39;Security 
             <td class="align-top">allowed_<wbr>account_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1069,7 +1069,7 @@ The access key for API operations. You can retrieve this from the &#39;Security 
             <td class="align-top">assume_<wbr>role</td>
             <td class="align-top">
                 
-                <code><a href="#providerassumerole">dict{provider_<wbr>assume_<wbr>role}</a></code>
+                <code><a href="#providerassumerole">Dict[provider_<wbr>assume_<wbr>role]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1083,7 +1083,7 @@ The access key for API operations. You can retrieve this from the &#39;Security 
             <td class="align-top">endpoints</td>
             <td class="align-top">
                 
-                <code><a href="#providerendpoint">list[provider_<wbr>endpoint]</a></code>
+                <code><a href="#providerendpoint">List[provider_<wbr>endpoint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1097,7 +1097,7 @@ The access key for API operations. You can retrieve this from the &#39;Security 
             <td class="align-top">forbidden_<wbr>account_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1111,7 +1111,7 @@ The access key for API operations. You can retrieve this from the &#39;Security 
             <td class="align-top">ignore_<wbr>tag_<wbr>prefixes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1126,7 +1126,7 @@ Resource tag key prefixes to ignore across all resources.
             <td class="align-top">ignore_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

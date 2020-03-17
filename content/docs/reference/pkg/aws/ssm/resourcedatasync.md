@@ -304,7 +304,7 @@ Name for the configuration.
             <td class="align-top">s3_<wbr>destination</td>
             <td class="align-top">
                 
-                <code><a href="#resourcedatasyncs3destination">dict{resource_<wbr>data_<wbr>sync_<wbr>s3_<wbr>destination}</a></code>
+                <code><a href="#resourcedatasyncs3destination">Dict[resource_<wbr>data_<wbr>sync_<wbr>s3_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -504,7 +504,7 @@ The following output properties are available:
             <td class="align-top">s3_<wbr>destination</td>
             <td class="align-top">
                 
-                <code><a href="#resourcedatasyncs3destination">dict{resource_<wbr>data_<wbr>sync_<wbr>s3_<wbr>destination}</a></code>
+                <code><a href="#resourcedatasyncs3destination">Dict[resource_<wbr>data_<wbr>sync_<wbr>s3_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} Amazon S3 configuration details for the sync.
  {{% /md %}}
@@ -761,7 +761,7 @@ Name for the configuration.
             <td class="align-top">s3_<wbr>destination</td>
             <td class="align-top">
                 
-                <code><a href="#resourcedatasyncs3destination">dict{resource_<wbr>data_<wbr>sync_<wbr>s3_<wbr>destination}</a></code>
+                <code><a href="#resourcedatasyncs3destination">Dict[resource_<wbr>data_<wbr>sync_<wbr>s3_<wbr>destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

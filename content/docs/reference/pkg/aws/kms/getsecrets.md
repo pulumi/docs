@@ -161,7 +161,7 @@ One or more encrypted payload definitions from the KMS service. See the Secret D
             <td class="align-top">secrets</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretssecret">list[get_<wbr>secrets_<wbr>secret]</a></code>
+                <code><a href="#getsecretssecret">List[get_<wbr>secrets_<wbr>secret]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -398,7 +398,7 @@ The following output properties are available:
             <td class="align-top">plaintext</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Map containing each `secret` `name` as the key with its decrypted plaintext value
  {{% /md %}}
@@ -411,7 +411,7 @@ The following output properties are available:
             <td class="align-top">secrets</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretssecret">list[get_<wbr>secrets_<wbr>secret]</a></code>
+                <code><a href="#getsecretssecret">List[get_<wbr>secrets_<wbr>secret]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -709,7 +709,7 @@ Base64 encoded payload, as returned from a KMS encrypt operation.
             <td class="align-top">context</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -724,7 +724,7 @@ An optional mapping that makes up the Encryption Context for the secret.
             <td class="align-top">grant_<wbr>tokens</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

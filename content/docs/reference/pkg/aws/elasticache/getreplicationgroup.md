@@ -841,7 +841,7 @@ The following output properties are available:
             <td class="align-top">member_<wbr>clusters</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The identifiers of all the nodes that are part of this replication group.
  {{% /md %}}

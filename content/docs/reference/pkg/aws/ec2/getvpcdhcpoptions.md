@@ -296,7 +296,7 @@ The EC2 DHCP Options ID.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcdhcpoptionsfilter">list[get_<wbr>vpc_<wbr>dhcp_<wbr>options_<wbr>filter]</a></code>
+                <code><a href="#getvpcdhcpoptionsfilter">List[get_<wbr>vpc_<wbr>dhcp_<wbr>options_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -311,7 +311,7 @@ List of custom filters as described below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -833,7 +833,7 @@ The following output properties are available:
             <td class="align-top">domain_<wbr>name_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of name servers.
  {{% /md %}}
@@ -846,7 +846,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcdhcpoptionsfilter">list[get_<wbr>vpc_<wbr>dhcp_<wbr>options_<wbr>filter]</a></code>
+                <code><a href="#getvpcdhcpoptionsfilter">List[get_<wbr>vpc_<wbr>dhcp_<wbr>options_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -871,7 +871,7 @@ The following output properties are available:
             <td class="align-top">netbios_<wbr>name_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of NETBIOS name servers.
  {{% /md %}}
@@ -897,7 +897,7 @@ The following output properties are available:
             <td class="align-top">ntp_<wbr>servers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of NTP servers.
  {{% /md %}}
@@ -923,7 +923,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the resource.
  {{% /md %}}
@@ -1147,7 +1147,7 @@ The name of the field to filter.
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

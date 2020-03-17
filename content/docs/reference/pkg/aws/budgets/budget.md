@@ -821,7 +821,7 @@ Whether this budget tracks monetary cost or usage.
             <td class="align-top">cost_<wbr>filters</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -836,7 +836,7 @@ Map of CostFilters key/value pairs to apply to the budget.
             <td class="align-top">cost_<wbr>types</td>
             <td class="align-top">
                 
-                <code><a href="#budgetcosttypes">dict{budget_<wbr>cost_<wbr>types}</a></code>
+                <code><a href="#budgetcosttypes">Dict[budget_<wbr>cost_<wbr>types]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -911,7 +911,7 @@ The prefix of the name of a budget. Unique within accounts.
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code><a href="#budgetnotification">list[budget_<wbr>notification]</a></code>
+                <code><a href="#budgetnotification">List[budget_<wbr>notification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1559,7 +1559,7 @@ The following output properties are available:
             <td class="align-top">cost_<wbr>filters</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Map of CostFilters key/value pairs to apply to the budget.
  {{% /md %}}
@@ -1572,7 +1572,7 @@ The following output properties are available:
             <td class="align-top">cost_<wbr>types</td>
             <td class="align-top">
                 
-                <code><a href="#budgetcosttypes">dict{budget_<wbr>cost_<wbr>types}</a></code>
+                <code><a href="#budgetcosttypes">Dict[budget_<wbr>cost_<wbr>types]</a></code>
             </td>
             <td class="align-top">{{% md %}} Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
  {{% /md %}}
@@ -1637,7 +1637,7 @@ The following output properties are available:
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code><a href="#budgetnotification">list[budget_<wbr>notification]</a></code>
+                <code><a href="#budgetnotification">List[budget_<wbr>notification]</a></code>
             </td>
             <td class="align-top">{{% md %}} Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
  {{% /md %}}
@@ -2398,7 +2398,7 @@ Whether this budget tracks monetary cost or usage.
             <td class="align-top">cost_<wbr>filters</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2413,7 +2413,7 @@ Map of CostFilters key/value pairs to apply to the budget.
             <td class="align-top">cost_<wbr>types</td>
             <td class="align-top">
                 
-                <code><a href="#budgetcosttypes">dict{budget_<wbr>cost_<wbr>types}</a></code>
+                <code><a href="#budgetcosttypes">Dict[budget_<wbr>cost_<wbr>types]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2488,7 +2488,7 @@ The prefix of the name of a budget. Unique within accounts.
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code><a href="#budgetnotification">list[budget_<wbr>notification]</a></code>
+                <code><a href="#budgetnotification">List[budget_<wbr>notification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3717,7 +3717,7 @@ A boolean value whether to use blended costs in the cost budget. Defaults to `fa
             <td class="align-top">subscriber_<wbr>email_<wbr>addresses</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3732,7 +3732,7 @@ A boolean value whether to use blended costs in the cost budget. Defaults to `fa
             <td class="align-top">subscriber_<wbr>sns_<wbr>topic_<wbr>arns</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

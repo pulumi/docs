@@ -425,7 +425,7 @@ The name of the Neptune parameter.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">list[parameter_<wbr>group_<wbr>parameter]</a></code>
+                <code><a href="#parametergroupparameter">List[parameter_<wbr>group_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -440,7 +440,7 @@ A list of Neptune parameters to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -835,7 +835,7 @@ The following output properties are available:
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">list[parameter_<wbr>group_<wbr>parameter]</a></code>
+                <code><a href="#parametergroupparameter">List[parameter_<wbr>group_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of Neptune parameters to apply.
  {{% /md %}}
@@ -848,7 +848,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1330,7 +1330,7 @@ The name of the Neptune parameter.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">list[parameter_<wbr>group_<wbr>parameter]</a></code>
+                <code><a href="#parametergroupparameter">List[parameter_<wbr>group_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1345,7 +1345,7 @@ A list of Neptune parameters to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

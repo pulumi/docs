@@ -806,7 +806,7 @@ A longer, human-readable description for the AMI.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiebsblockdevice">list[ami_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amiebsblockdevice">List[ami_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -837,7 +837,7 @@ Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiephemeralblockdevice">list[ami_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amiephemeralblockdevice">List[ami_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -947,7 +947,7 @@ for created instances. No other value is supported at this time.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1705,7 +1705,7 @@ changes the set of further arguments that are required, as described below.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiebsblockdevice">list[ami_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amiebsblockdevice">List[ami_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -1732,7 +1732,7 @@ attached to created instances. The structure of this block is described below.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiephemeralblockdevice">list[ami_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amiephemeralblockdevice">List[ami_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -1853,7 +1853,7 @@ for created instances. No other value is supported at this time.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2746,7 +2746,7 @@ A longer, human-readable description for the AMI.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiebsblockdevice">list[ami_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amiebsblockdevice">List[ami_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2777,7 +2777,7 @@ Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiephemeralblockdevice">list[ami_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amiephemeralblockdevice">List[ami_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2916,7 +2916,7 @@ for created instances. No other value is supported at this time.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

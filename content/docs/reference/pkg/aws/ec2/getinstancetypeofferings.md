@@ -230,7 +230,7 @@ Location type. Defaults to `region`. Valid values: `availability-zone`, `availab
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancetypeofferingsfilter">list[get_<wbr>instance_<wbr>type_<wbr>offerings_<wbr>filter]</a></code>
+                <code><a href="#getinstancetypeofferingsfilter">List[get_<wbr>instance_<wbr>type_<wbr>offerings_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -505,7 +505,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancetypeofferingsfilter">list[get_<wbr>instance_<wbr>type_<wbr>offerings_<wbr>filter]</a></code>
+                <code><a href="#getinstancetypeofferingsfilter">List[get_<wbr>instance_<wbr>type_<wbr>offerings_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -530,7 +530,7 @@ The following output properties are available:
             <td class="align-top">instance_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Set of EC2 Instance Types.
  {{% /md %}}
@@ -766,7 +766,7 @@ Name of the filter. The `location` filter depends on the top-level `location_typ
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

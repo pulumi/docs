@@ -729,7 +729,7 @@ The following output properties are available:
             <td class="align-top">resolver_<wbr>rule_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The IDs of the matched resolver rules.
  {{% /md %}}

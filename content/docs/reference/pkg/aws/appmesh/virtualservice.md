@@ -388,7 +388,7 @@ The name to use for the virtual service.
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualservicespec">dict{virtual_<wbr>service_<wbr>spec}</a></code>
+                <code><a href="#virtualservicespec">Dict[virtual_<wbr>service_<wbr>spec]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -403,7 +403,7 @@ The virtual service specification to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -850,7 +850,7 @@ The following output properties are available:
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualservicespec">dict{virtual_<wbr>service_<wbr>spec}</a></code>
+                <code><a href="#virtualservicespec">Dict[virtual_<wbr>service_<wbr>spec]</a></code>
             </td>
             <td class="align-top">{{% md %}} The virtual service specification to apply.
  {{% /md %}}
@@ -863,7 +863,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1405,7 +1405,7 @@ The name to use for the virtual service.
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualservicespec">dict{virtual_<wbr>service_<wbr>spec}</a></code>
+                <code><a href="#virtualservicespec">Dict[virtual_<wbr>service_<wbr>spec]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1420,7 +1420,7 @@ The virtual service specification to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1585,7 +1585,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">provider</td>
             <td class="align-top">
                 
-                <code><a href="#virtualservicespecprovider">dict{virtual_<wbr>service_<wbr>spec_<wbr>provider}</a></code>
+                <code><a href="#virtualservicespecprovider">Dict[virtual_<wbr>service_<wbr>spec_<wbr>provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1790,7 +1790,7 @@ The virtual router associated with a virtual service.
             <td class="align-top">virtual_<wbr>node</td>
             <td class="align-top">
                 
-                <code><a href="#virtualservicespecprovidervirtualnode">dict{virtual_<wbr>service_<wbr>spec_<wbr>provider_<wbr>virtual_<wbr>node}</a></code>
+                <code><a href="#virtualservicespecprovidervirtualnode">Dict[virtual_<wbr>service_<wbr>spec_<wbr>provider_<wbr>virtual_<wbr>node]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1805,7 +1805,7 @@ The virtual node associated with a virtual service.
             <td class="align-top">virtual_<wbr>router</td>
             <td class="align-top">
                 
-                <code><a href="#virtualservicespecprovidervirtualrouter">dict{virtual_<wbr>service_<wbr>spec_<wbr>provider_<wbr>virtual_<wbr>router}</a></code>
+                <code><a href="#virtualservicespecprovidervirtualrouter">Dict[virtual_<wbr>service_<wbr>spec_<wbr>provider_<wbr>virtual_<wbr>router]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -1045,7 +1045,7 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
             <td class="align-top">cache_<wbr>key_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1185,7 +1185,7 @@ The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEV
             <td class="align-top">request_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1201,7 +1201,7 @@ For example: `request_parameters = { &#34;integration.request.header.X-Some-Othe
             <td class="align-top">request_<wbr>templates</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1231,7 +1231,7 @@ The API resource ID.
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2035,7 +2035,7 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
             <td class="align-top">cache_<wbr>key_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of cache key parameters for the integration.
  {{% /md %}}
@@ -2157,7 +2157,7 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
             <td class="align-top">request_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A map of request query string parameters and headers that should be passed to the backend responder.
 For example: `request_parameters = { &#34;integration.request.header.X-Some-Other-Header&#34; = &#34;method.request.header.X-Some-Header&#34; }`
@@ -2171,7 +2171,7 @@ For example: `request_parameters = { &#34;integration.request.header.X-Some-Othe
             <td class="align-top">request_<wbr>templates</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A map of the integration&#39;s request templates.
  {{% /md %}}
@@ -3134,7 +3134,7 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
             <td class="align-top">cache_<wbr>key_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3274,7 +3274,7 @@ The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEV
             <td class="align-top">request_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3290,7 +3290,7 @@ For example: `request_parameters = { &#34;integration.request.header.X-Some-Othe
             <td class="align-top">request_<wbr>templates</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3320,7 +3320,7 @@ The API resource ID.
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

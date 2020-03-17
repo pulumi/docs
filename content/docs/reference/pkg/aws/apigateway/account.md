@@ -452,7 +452,7 @@ Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API 
             <td class="align-top">throttle_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#accountthrottlesettings">dict{account_<wbr>throttle_<wbr>settings}</a></code>
+                <code><a href="#accountthrottlesettings">Dict[account_<wbr>throttle_<wbr>settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} Account-Level throttle settings. See exported fields below.
  {{% /md %}}
@@ -717,7 +717,7 @@ Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API 
             <td class="align-top">throttle_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#accountthrottlesettings">dict{account_<wbr>throttle_<wbr>settings}</a></code>
+                <code><a href="#accountthrottlesettings">Dict[account_<wbr>throttle_<wbr>settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

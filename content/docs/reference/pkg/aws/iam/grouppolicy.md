@@ -400,7 +400,7 @@ prefix. Conflicts with `name`.
             <td class="align-top">policy</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1097,7 +1097,7 @@ prefix. Conflicts with `name`.
             <td class="align-top">policy</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

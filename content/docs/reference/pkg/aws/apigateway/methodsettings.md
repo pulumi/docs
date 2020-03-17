@@ -387,7 +387,7 @@ Method path defined as `{resource_path}/{http_method}` for an individual method 
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -402,7 +402,7 @@ The ID of the REST API
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#methodsettingssettings">dict{method_<wbr>settings_<wbr>settings}</a></code>
+                <code><a href="#methodsettingssettings">Dict[method_<wbr>settings_<wbr>settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -708,7 +708,7 @@ The following output properties are available:
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#methodsettingssettings">dict{method_<wbr>settings_<wbr>settings}</a></code>
+                <code><a href="#methodsettingssettings">Dict[method_<wbr>settings_<wbr>settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} The settings block, see below.
  {{% /md %}}
@@ -1068,7 +1068,7 @@ Method path defined as `{resource_path}/{http_method}` for an individual method 
             <td class="align-top">rest_<wbr>api</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1083,7 +1083,7 @@ The ID of the REST API
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#methodsettingssettings">dict{method_<wbr>settings_<wbr>settings}</a></code>
+                <code><a href="#methodsettingssettings">Dict[method_<wbr>settings_<wbr>settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

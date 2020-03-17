@@ -338,7 +338,7 @@ The unique name of the mq broker.
             <td class="align-top">logs</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerlogs">dict{get_<wbr>broker_<wbr>logs}</a></code>
+                <code><a href="#getbrokerlogs">Dict[get_<wbr>broker_<wbr>logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -352,7 +352,7 @@ The unique name of the mq broker.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1196,7 +1196,7 @@ The following output properties are available:
             <td class="align-top">configuration</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerconfiguration">dict{get_<wbr>broker_<wbr>configuration}</a></code>
+                <code><a href="#getbrokerconfiguration">Dict[get_<wbr>broker_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1220,7 +1220,7 @@ The following output properties are available:
             <td class="align-top">encryption_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerencryptionoption">list[get_<wbr>broker_<wbr>encryption_<wbr>option]</a></code>
+                <code><a href="#getbrokerencryptionoption">List[get_<wbr>broker_<wbr>encryption_<wbr>option]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1281,7 +1281,7 @@ The following output properties are available:
             <td class="align-top">instances</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerinstance">list[get_<wbr>broker_<wbr>instance]</a></code>
+                <code><a href="#getbrokerinstance">List[get_<wbr>broker_<wbr>instance]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1293,7 +1293,7 @@ The following output properties are available:
             <td class="align-top">logs</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerlogs">dict{get_<wbr>broker_<wbr>logs}</a></code>
+                <code><a href="#getbrokerlogs">Dict[get_<wbr>broker_<wbr>logs]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1305,7 +1305,7 @@ The following output properties are available:
             <td class="align-top">maintenance_<wbr>window_<wbr>start_<wbr>time</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokermaintenancewindowstarttime">dict{get_<wbr>broker_<wbr>maintenance_<wbr>window_<wbr>start_<wbr>time}</a></code>
+                <code><a href="#getbrokermaintenancewindowstarttime">Dict[get_<wbr>broker_<wbr>maintenance_<wbr>window_<wbr>start_<wbr>time]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1329,7 +1329,7 @@ The following output properties are available:
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1341,7 +1341,7 @@ The following output properties are available:
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1353,7 +1353,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1365,7 +1365,7 @@ The following output properties are available:
             <td class="align-top">users</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokeruser">list[get_<wbr>broker_<wbr>user]</a></code>
+                <code><a href="#getbrokeruser">List[get_<wbr>broker_<wbr>user]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2049,7 +2049,7 @@ The following output properties are available:
             <td class="align-top">endpoints</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2800,7 +2800,7 @@ The following output properties are available:
             <td class="align-top">groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

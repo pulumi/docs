@@ -381,7 +381,7 @@ The name to use for the virtual router.
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualrouterspec">dict{virtual_<wbr>router_<wbr>spec}</a></code>
+                <code><a href="#virtualrouterspec">Dict[virtual_<wbr>router_<wbr>spec]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -396,7 +396,7 @@ The virtual router specification to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -843,7 +843,7 @@ The following output properties are available:
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualrouterspec">dict{virtual_<wbr>router_<wbr>spec}</a></code>
+                <code><a href="#virtualrouterspec">Dict[virtual_<wbr>router_<wbr>spec]</a></code>
             </td>
             <td class="align-top">{{% md %}} The virtual router specification to apply.
  {{% /md %}}
@@ -856,7 +856,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1398,7 +1398,7 @@ The name to use for the virtual router.
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualrouterspec">dict{virtual_<wbr>router_<wbr>spec}</a></code>
+                <code><a href="#virtualrouterspec">Dict[virtual_<wbr>router_<wbr>spec]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1413,7 +1413,7 @@ The virtual router specification to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1584,7 +1584,7 @@ Currently only one listener is supported per virtual router.
             <td class="align-top">listener</td>
             <td class="align-top">
                 
-                <code><a href="#virtualrouterspeclistener">dict{virtual_<wbr>router_<wbr>spec_<wbr>listener}</a></code>
+                <code><a href="#virtualrouterspeclistener">Dict[virtual_<wbr>router_<wbr>spec_<wbr>listener]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1746,7 +1746,7 @@ The port mapping information for the listener.
             <td class="align-top">port_<wbr>mapping</td>
             <td class="align-top">
                 
-                <code><a href="#virtualrouterspeclistenerportmapping">dict{virtual_<wbr>router_<wbr>spec_<wbr>listener_<wbr>port_<wbr>mapping}</a></code>
+                <code><a href="#virtualrouterspeclistenerportmapping">Dict[virtual_<wbr>router_<wbr>spec_<wbr>listener_<wbr>port_<wbr>mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

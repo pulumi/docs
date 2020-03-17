@@ -864,7 +864,7 @@ The description of the maintenance window task.
             <td class="align-top">logging_<wbr>info</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasklogginginfo">dict{maintenance_<wbr>window_<wbr>task_<wbr>logging_<wbr>info}</a></code>
+                <code><a href="#maintenancewindowtasklogginginfo">Dict[maintenance_<wbr>window_<wbr>task_<wbr>logging_<wbr>info]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -954,7 +954,7 @@ The IAM service role to assume during task execution.
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktarget">list[maintenance_<wbr>window_<wbr>task_<wbr>target]</a></code>
+                <code><a href="#maintenancewindowtasktarget">List[maintenance_<wbr>window_<wbr>task_<wbr>target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -984,7 +984,7 @@ The ARN of the task to execute.
             <td class="align-top">task_<wbr>invocation_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparameters">dict{maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters}</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparameters">Dict[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -999,7 +999,7 @@ The parameters for task execution. This argument is conflict with `task_paramete
             <td class="align-top">task_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskparameter">list[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>parameter]</a></code>
+                <code><a href="#maintenancewindowtasktaskparameter">List[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1658,7 +1658,7 @@ The following output properties are available:
             <td class="align-top">logging_<wbr>info</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasklogginginfo">dict{maintenance_<wbr>window_<wbr>task_<wbr>logging_<wbr>info}</a></code>
+                <code><a href="#maintenancewindowtasklogginginfo">Dict[maintenance_<wbr>window_<wbr>task_<wbr>logging_<wbr>info]</a></code>
             </td>
             <td class="align-top">{{% md %}} A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
  {{% /md %}}
@@ -1736,7 +1736,7 @@ The following output properties are available:
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktarget">list[maintenance_<wbr>window_<wbr>task_<wbr>target]</a></code>
+                <code><a href="#maintenancewindowtasktarget">List[maintenance_<wbr>window_<wbr>task_<wbr>target]</a></code>
             </td>
             <td class="align-top">{{% md %}} The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
  {{% /md %}}
@@ -1762,7 +1762,7 @@ The following output properties are available:
             <td class="align-top">task_<wbr>invocation_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparameters">dict{maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters}</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparameters">Dict[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters]</a></code>
             </td>
             <td class="align-top">{{% md %}} The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
  {{% /md %}}
@@ -1775,7 +1775,7 @@ The following output properties are available:
             <td class="align-top">task_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskparameter">list[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>parameter]</a></code>
+                <code><a href="#maintenancewindowtasktaskparameter">List[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
  {{% /md %}}
@@ -2553,7 +2553,7 @@ The description of the maintenance window task.
             <td class="align-top">logging_<wbr>info</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasklogginginfo">dict{maintenance_<wbr>window_<wbr>task_<wbr>logging_<wbr>info}</a></code>
+                <code><a href="#maintenancewindowtasklogginginfo">Dict[maintenance_<wbr>window_<wbr>task_<wbr>logging_<wbr>info]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2643,7 +2643,7 @@ The IAM service role to assume during task execution.
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktarget">list[maintenance_<wbr>window_<wbr>task_<wbr>target]</a></code>
+                <code><a href="#maintenancewindowtasktarget">List[maintenance_<wbr>window_<wbr>task_<wbr>target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2673,7 +2673,7 @@ The ARN of the task to execute.
             <td class="align-top">task_<wbr>invocation_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparameters">dict{maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters}</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparameters">Dict[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2688,7 +2688,7 @@ The parameters for task execution. This argument is conflict with `task_paramete
             <td class="align-top">task_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskparameter">list[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>parameter]</a></code>
+                <code><a href="#maintenancewindowtasktaskparameter">List[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3211,7 +3211,7 @@ The array of strings.
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3507,7 +3507,7 @@ The parameters for a STEP_FUNCTIONS task type. Documented below.
             <td class="align-top">automation_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">dict{maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters_<wbr>automation_<wbr>parameters}</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">Dict[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters_<wbr>automation_<wbr>parameters]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3522,7 +3522,7 @@ The parameters for an AUTOMATION task type. Documented below.
             <td class="align-top">lambda_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">dict{maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters_<wbr>lambda_<wbr>parameters}</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">Dict[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters_<wbr>lambda_<wbr>parameters]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3537,7 +3537,7 @@ The parameters for a LAMBDA task type. Documented below.
             <td class="align-top">run_<wbr>command_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">dict{maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters_<wbr>run_<wbr>command_<wbr>parameters}</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">Dict[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters_<wbr>run_<wbr>command_<wbr>parameters]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3552,7 +3552,7 @@ The parameters for a RUN_COMMAND task type. Documented below.
             <td class="align-top">step_<wbr>functions_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">dict{maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters_<wbr>step_<wbr>functions_<wbr>parameters}</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">Dict[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters_<wbr>step_<wbr>functions_<wbr>parameters]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3773,7 +3773,7 @@ The version of an Automation document to use during task execution.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">list[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters_<wbr>automation_<wbr>parameters_<wbr>parameter]</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">List[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters_<wbr>automation_<wbr>parameters_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3994,7 +3994,7 @@ The parameter name.
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4841,7 +4841,7 @@ SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and 
             <td class="align-top">notification_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">dict{maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters_<wbr>run_<wbr>command_<wbr>parameters_<wbr>notification_<wbr>config}</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">Dict[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters_<wbr>run_<wbr>command_<wbr>parameters_<wbr>notification_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4886,7 +4886,7 @@ The Amazon S3 bucket subfolder.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">list[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters_<wbr>run_<wbr>command_<wbr>parameters_<wbr>parameter]</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">List[maintenance_<wbr>window_<wbr>task_<wbr>task_<wbr>invocation_<wbr>parameters_<wbr>run_<wbr>command_<wbr>parameters_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5182,7 +5182,7 @@ An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run
             <td class="align-top">notification_<wbr>events</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5418,7 +5418,7 @@ The parameter name.
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -5860,7 +5860,7 @@ The parameter name.
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

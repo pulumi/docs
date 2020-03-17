@@ -549,7 +549,7 @@ Nested argument for the VPC associated with your cluster. Amazon EKS VPC resourc
             <td class="align-top">enabled_<wbr>cluster_<wbr>log_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -564,7 +564,7 @@ A list of the desired control plane logging to enable. For more information, see
             <td class="align-top">encryption_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptionconfig">dict{cluster_<wbr>encryption_<wbr>config}</a></code>
+                <code><a href="#clusterencryptionconfig">Dict[cluster_<wbr>encryption_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -609,7 +609,7 @@ The Amazon Resource Name (ARN) of the IAM role that provides permissions for the
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -639,7 +639,7 @@ Desired Kubernetes master version. If you do not specify a value, the latest ava
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#clustervpcconfig">dict{cluster_<wbr>vpc_<wbr>config}</a></code>
+                <code><a href="#clustervpcconfig">Dict[cluster_<wbr>vpc_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1304,7 +1304,7 @@ The following output properties are available:
             <td class="align-top">certificate_<wbr>authority</td>
             <td class="align-top">
                 
-                <code><a href="#clustercertificateauthority">dict{cluster_<wbr>certificate_<wbr>authority}</a></code>
+                <code><a href="#clustercertificateauthority">Dict[cluster_<wbr>certificate_<wbr>authority]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing `certificate-authority-data` for your cluster.
  {{% /md %}}
@@ -1329,7 +1329,7 @@ The following output properties are available:
             <td class="align-top">enabled_<wbr>cluster_<wbr>log_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
  {{% /md %}}
@@ -1342,7 +1342,7 @@ The following output properties are available:
             <td class="align-top">encryption_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptionconfig">dict{cluster_<wbr>encryption_<wbr>config}</a></code>
+                <code><a href="#clusterencryptionconfig">Dict[cluster_<wbr>encryption_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
  {{% /md %}}
@@ -1368,7 +1368,7 @@ The following output properties are available:
             <td class="align-top">identities</td>
             <td class="align-top">
                 
-                <code><a href="#clusteridentity">list[cluster_<wbr>identity]</a></code>
+                <code><a href="#clusteridentity">List[cluster_<wbr>identity]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
  {{% /md %}}
@@ -1433,7 +1433,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags.
  {{% /md %}}
@@ -1459,7 +1459,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#clustervpcconfig">dict{cluster_<wbr>vpc_<wbr>config}</a></code>
+                <code><a href="#clustervpcconfig">Dict[cluster_<wbr>vpc_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
  {{% /md %}}
@@ -2253,7 +2253,7 @@ The Amazon Resource Name (ARN) of the cluster.
             <td class="align-top">certificate_<wbr>authority</td>
             <td class="align-top">
                 
-                <code><a href="#clustercertificateauthority">dict{cluster_<wbr>certificate_<wbr>authority}</a></code>
+                <code><a href="#clustercertificateauthority">Dict[cluster_<wbr>certificate_<wbr>authority]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2282,7 +2282,7 @@ Nested attribute containing `certificate-authority-data` for your cluster.
             <td class="align-top">enabled_<wbr>cluster_<wbr>log_<wbr>types</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2297,7 +2297,7 @@ A list of the desired control plane logging to enable. For more information, see
             <td class="align-top">encryption_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptionconfig">dict{cluster_<wbr>encryption_<wbr>config}</a></code>
+                <code><a href="#clusterencryptionconfig">Dict[cluster_<wbr>encryption_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2327,7 +2327,7 @@ The endpoint for your Kubernetes API server.
             <td class="align-top">identities</td>
             <td class="align-top">
                 
-                <code><a href="#clusteridentity">list[cluster_<wbr>identity]</a></code>
+                <code><a href="#clusteridentity">List[cluster_<wbr>identity]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2402,7 +2402,7 @@ The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2432,7 +2432,7 @@ Desired Kubernetes master version. If you do not specify a value, the latest ava
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#clustervpcconfig">dict{cluster_<wbr>vpc_<wbr>config}</a></code>
+                <code><a href="#clustervpcconfig">Dict[cluster_<wbr>vpc_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2806,7 +2806,7 @@ List of strings with resources to be encrypted. Valid values: `secrets`
             <td class="align-top">provider</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptionconfigprovider">dict{cluster_<wbr>encryption_<wbr>config_<wbr>provider}</a></code>
+                <code><a href="#clusterencryptionconfigprovider">Dict[cluster_<wbr>encryption_<wbr>config_<wbr>provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2821,7 +2821,7 @@ Configuration block with provider for encryption. Detailed below.
             <td class="align-top">resources</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3143,7 +3143,7 @@ Nested attribute containing [OpenID Connect](https://openid.net/connect/) identi
             <td class="align-top">oidcs</td>
             <td class="align-top">
                 
-                <code><a href="#clusteridentityoidc">list[cluster_<wbr>identity_<wbr>oidc]</a></code>
+                <code><a href="#clusteridentityoidc">List[cluster_<wbr>identity_<wbr>oidc]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3777,7 +3777,7 @@ Indicates whether or not the Amazon EKS public API server endpoint is enabled. D
             <td class="align-top">public_<wbr>access_<wbr>cidrs</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3791,7 +3791,7 @@ Indicates whether or not the Amazon EKS public API server endpoint is enabled. D
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3806,7 +3806,7 @@ List of security group IDs for the cross-account elastic network interfaces that
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -279,7 +279,7 @@ recent Volume.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvolumefilter">list[get_<wbr>volume_<wbr>filter]</a></code>
+                <code><a href="#getvolumefilter">List[get_<wbr>volume_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -312,7 +312,7 @@ recent Volume.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -961,7 +961,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvolumefilter">list[get_<wbr>volume_<wbr>filter]</a></code>
+                <code><a href="#getvolumefilter">List[get_<wbr>volume_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1050,7 +1050,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags for the resource.
  {{% /md %}}
@@ -1293,7 +1293,7 @@ The following output properties are available:
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

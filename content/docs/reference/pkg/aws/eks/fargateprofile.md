@@ -455,7 +455,7 @@ Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS
             <td class="align-top">selectors</td>
             <td class="align-top">
                 
-                <code><a href="#fargateprofileselector">list[fargate_<wbr>profile_<wbr>selector]</a></code>
+                <code><a href="#fargateprofileselector">List[fargate_<wbr>profile_<wbr>selector]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -470,7 +470,7 @@ Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fa
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -485,7 +485,7 @@ Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. Th
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -958,7 +958,7 @@ The following output properties are available:
             <td class="align-top">selectors</td>
             <td class="align-top">
                 
-                <code><a href="#fargateprofileselector">list[fargate_<wbr>profile_<wbr>selector]</a></code>
+                <code><a href="#fargateprofileselector">List[fargate_<wbr>profile_<wbr>selector]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
  {{% /md %}}
@@ -984,7 +984,7 @@ The following output properties are available:
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
  {{% /md %}}
@@ -997,7 +997,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags.
  {{% /md %}}
@@ -1569,7 +1569,7 @@ Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS
             <td class="align-top">selectors</td>
             <td class="align-top">
                 
-                <code><a href="#fargateprofileselector">list[fargate_<wbr>profile_<wbr>selector]</a></code>
+                <code><a href="#fargateprofileselector">List[fargate_<wbr>profile_<wbr>selector]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1599,7 +1599,7 @@ Status of the EKS Fargate Profile.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1614,7 +1614,7 @@ Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. Th
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1827,7 +1827,7 @@ Kubernetes namespace for selection.
             <td class="align-top">labels</td>
             <td class="align-top">
                 
-                <code>dict{string}</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

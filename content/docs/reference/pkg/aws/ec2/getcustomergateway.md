@@ -272,7 +272,7 @@ The ID of the gateway.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getcustomergatewayfilter">list[get_<wbr>customer_<wbr>gateway_<wbr>filter]</a></code>
+                <code><a href="#getcustomergatewayfilter">List[get_<wbr>customer_<wbr>gateway_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -302,7 +302,7 @@ The ID of the gateway.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -652,7 +652,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getcustomergatewayfilter">list[get_<wbr>customer_<wbr>gateway_<wbr>filter]</a></code>
+                <code><a href="#getcustomergatewayfilter">List[get_<wbr>customer_<wbr>gateway_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -689,7 +689,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Map of key-value pairs assigned to the gateway.
  {{% /md %}}
@@ -919,7 +919,7 @@ The following output properties are available:
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

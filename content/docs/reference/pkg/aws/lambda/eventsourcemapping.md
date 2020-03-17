@@ -752,7 +752,7 @@ The largest number of records that Lambda will retrieve from your event source a
             <td class="align-top">destination_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#eventsourcemappingdestinationconfig">dict{event_<wbr>source_<wbr>mapping_<wbr>destination_<wbr>config}</a></code>
+                <code><a href="#eventsourcemappingdestinationconfig">Dict[event_<wbr>source_<wbr>mapping_<wbr>destination_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1724,7 +1724,7 @@ The following output properties are available:
             <td class="align-top">destination_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#eventsourcemappingdestinationconfig">dict{event_<wbr>source_<wbr>mapping_<wbr>destination_<wbr>config}</a></code>
+                <code><a href="#eventsourcemappingdestinationconfig">Dict[event_<wbr>source_<wbr>mapping_<wbr>destination_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2911,7 +2911,7 @@ The largest number of records that Lambda will retrieve from your event source a
             <td class="align-top">destination_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#eventsourcemappingdestinationconfig">dict{event_<wbr>source_<wbr>mapping_<wbr>destination_<wbr>config}</a></code>
+                <code><a href="#eventsourcemappingdestinationconfig">Dict[event_<wbr>source_<wbr>mapping_<wbr>destination_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3305,7 +3305,7 @@ The destination configuration for failed invocations. Detailed below.
             <td class="align-top">on_<wbr>failure</td>
             <td class="align-top">
                 
-                <code><a href="#eventsourcemappingdestinationconfigonfailure">dict{event_<wbr>source_<wbr>mapping_<wbr>destination_<wbr>config_<wbr>on_<wbr>failure}</a></code>
+                <code><a href="#eventsourcemappingdestinationconfigonfailure">Dict[event_<wbr>source_<wbr>mapping_<wbr>destination_<wbr>config_<wbr>on_<wbr>failure]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

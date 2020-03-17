@@ -246,7 +246,7 @@ a pair on the desired vpcs.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcsfilter">list[get_<wbr>vpcs_<wbr>filter]</a></code>
+                <code><a href="#getvpcsfilter">List[get_<wbr>vpcs_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -261,7 +261,7 @@ Custom filter block as described below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -522,7 +522,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcsfilter">list[get_<wbr>vpcs_<wbr>filter]</a></code>
+                <code><a href="#getvpcsfilter">List[get_<wbr>vpcs_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -547,7 +547,7 @@ The following output properties are available:
             <td class="align-top">ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of all the VPC Ids found. This data source will fail if none are found.
  {{% /md %}}
@@ -560,7 +560,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -790,7 +790,7 @@ The name of the field to filter by, as defined by
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

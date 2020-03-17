@@ -366,7 +366,7 @@ The action that you are enabling the other account to perform. Defaults to `even
             <td class="align-top">condition</td>
             <td class="align-top">
                 
-                <code><a href="#eventpermissioncondition">dict{event_<wbr>permission_<wbr>condition}</a></code>
+                <code><a href="#eventpermissioncondition">Dict[event_<wbr>permission_<wbr>condition]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -674,7 +674,7 @@ The following output properties are available:
             <td class="align-top">condition</td>
             <td class="align-top">
                 
-                <code><a href="#eventpermissioncondition">dict{event_<wbr>permission_<wbr>condition}</a></code>
+                <code><a href="#eventpermissioncondition">Dict[event_<wbr>permission_<wbr>condition]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
  {{% /md %}}
@@ -1047,7 +1047,7 @@ The action that you are enabling the other account to perform. Defaults to `even
             <td class="align-top">condition</td>
             <td class="align-top">
                 
-                <code><a href="#eventpermissioncondition">dict{event_<wbr>permission_<wbr>condition}</a></code>
+                <code><a href="#eventpermissioncondition">Dict[event_<wbr>permission_<wbr>condition]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

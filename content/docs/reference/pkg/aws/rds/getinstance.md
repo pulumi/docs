@@ -229,7 +229,7 @@ The name of the RDS instance
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2047,7 +2047,7 @@ The following output properties are available:
             <td class="align-top">db_<wbr>parameter_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Provides the list of DB parameter groups applied to this DB instance.
  {{% /md %}}
@@ -2060,7 +2060,7 @@ The following output properties are available:
             <td class="align-top">db_<wbr>security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Provides List of DB security groups associated to this DB instance.
  {{% /md %}}
@@ -2086,7 +2086,7 @@ The following output properties are available:
             <td class="align-top">enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} List of log types to export to cloudwatch.
  {{% /md %}}
@@ -2255,7 +2255,7 @@ The following output properties are available:
             <td class="align-top">option_<wbr>group_<wbr>memberships</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Provides the list of option group memberships for this DB instance.
  {{% /md %}}
@@ -2372,7 +2372,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2397,7 +2397,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} Provides a list of VPC security group elements that the DB instance belongs to.
  {{% /md %}}

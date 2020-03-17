@@ -265,7 +265,7 @@ to which the underlying AWS account has access, regardless of their state.
             <td class="align-top">blacklisted_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -280,7 +280,7 @@ List of blacklisted Availability Zone names.
             <td class="align-top">blacklisted_<wbr>zone_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -633,7 +633,7 @@ The following output properties are available:
             <td class="align-top">blacklisted_<wbr>names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -645,7 +645,7 @@ The following output properties are available:
             <td class="align-top">blacklisted_<wbr>zone_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -670,7 +670,7 @@ The following output properties are available:
             <td class="align-top">names</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of the Availability Zone names available to the account.
  {{% /md %}}
@@ -695,7 +695,7 @@ The following output properties are available:
             <td class="align-top">zone_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of the Availability Zone IDs available to the account.
  {{% /md %}}

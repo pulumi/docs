@@ -474,7 +474,7 @@ The following output properties are available:
             <td class="align-top">appversion_<wbr>lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#getapplicationappversionlifecycle">dict{get_<wbr>application_<wbr>appversion_<wbr>lifecycle}</a></code>
+                <code><a href="#getapplicationappversionlifecycle">Dict[get_<wbr>application_<wbr>appversion_<wbr>lifecycle]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

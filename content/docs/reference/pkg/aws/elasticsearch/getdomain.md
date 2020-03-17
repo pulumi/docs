@@ -229,7 +229,7 @@ Name of the domain.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1167,7 +1167,7 @@ The following output properties are available:
             <td class="align-top">advanced_<wbr>options</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value string pairs to specify advanced configuration options.
  {{% /md %}}
@@ -1193,7 +1193,7 @@ The following output properties are available:
             <td class="align-top">cluster_<wbr>configs</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainclusterconfig">list[get_<wbr>domain_<wbr>cluster_<wbr>config]</a></code>
+                <code><a href="#getdomainclusterconfig">List[get_<wbr>domain_<wbr>cluster_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Cluster configuration of the domain.
  {{% /md %}}
@@ -1206,7 +1206,7 @@ The following output properties are available:
             <td class="align-top">cognito_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomaincognitooption">list[get_<wbr>domain_<wbr>cognito_<wbr>option]</a></code>
+                <code><a href="#getdomaincognitooption">List[get_<wbr>domain_<wbr>cognito_<wbr>option]</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain Amazon Cognito Authentication options for Kibana.
  {{% /md %}}
@@ -1270,7 +1270,7 @@ The following output properties are available:
             <td class="align-top">ebs_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainebsoption">list[get_<wbr>domain_<wbr>ebs_<wbr>option]</a></code>
+                <code><a href="#getdomainebsoption">List[get_<wbr>domain_<wbr>ebs_<wbr>option]</a></code>
             </td>
             <td class="align-top">{{% md %}} EBS Options for the instances in the domain.
  {{% /md %}}
@@ -1296,7 +1296,7 @@ The following output properties are available:
             <td class="align-top">encryption_<wbr>at_<wbr>rests</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainencryptionatrest">list[get_<wbr>domain_<wbr>encryption_<wbr>at_<wbr>rest]</a></code>
+                <code><a href="#getdomainencryptionatrest">List[get_<wbr>domain_<wbr>encryption_<wbr>at_<wbr>rest]</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain encryption at rest related options.
  {{% /md %}}
@@ -1348,7 +1348,7 @@ The following output properties are available:
             <td class="align-top">log_<wbr>publishing_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainlogpublishingoption">list[get_<wbr>domain_<wbr>log_<wbr>publishing_<wbr>option]</a></code>
+                <code><a href="#getdomainlogpublishingoption">List[get_<wbr>domain_<wbr>log_<wbr>publishing_<wbr>option]</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain log publishing related options.
  {{% /md %}}
@@ -1361,7 +1361,7 @@ The following output properties are available:
             <td class="align-top">node_<wbr>to_<wbr>node_<wbr>encryptions</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainnodetonodeencryption">list[get_<wbr>domain_<wbr>node_<wbr>to_<wbr>node_<wbr>encryption]</a></code>
+                <code><a href="#getdomainnodetonodeencryption">List[get_<wbr>domain_<wbr>node_<wbr>to_<wbr>node_<wbr>encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain in transit encryption related options.
  {{% /md %}}
@@ -1388,7 +1388,7 @@ The following output properties are available:
             <td class="align-top">snapshot_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainsnapshotoption">list[get_<wbr>domain_<wbr>snapshot_<wbr>option]</a></code>
+                <code><a href="#getdomainsnapshotoption">List[get_<wbr>domain_<wbr>snapshot_<wbr>option]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1400,7 +1400,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} The tags assigned to the domain.
  {{% /md %}}
@@ -1413,7 +1413,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainvpcoption">list[get_<wbr>domain_<wbr>vpc_<wbr>option]</a></code>
+                <code><a href="#getdomainvpcoption">List[get_<wbr>domain_<wbr>vpc_<wbr>option]</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC Options for private Elasticsearch domains.
  {{% /md %}}
@@ -1922,7 +1922,7 @@ Instance type of data nodes in the cluster.
             <td class="align-top">zone_<wbr>awareness_<wbr>configs</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainclusterconfigzoneawarenessconfig">list[get_<wbr>domain_<wbr>cluster_<wbr>config_<wbr>zone_<wbr>awareness_<wbr>config]</a></code>
+                <code><a href="#getdomainclusterconfigzoneawarenessconfig">List[get_<wbr>domain_<wbr>cluster_<wbr>config_<wbr>zone_<wbr>awareness_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3908,7 +3908,7 @@ The VPC used by the domain.
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3923,7 +3923,7 @@ The availability zones used by the domain.
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3938,7 +3938,7 @@ The security groups used by the domain.
             <td class="align-top">subnet_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

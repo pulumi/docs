@@ -1088,7 +1088,7 @@ Configuration for the builds to run inside a VPC. VPC config blocks are document
             <td class="align-top">artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectartifacts">dict{project_<wbr>artifacts}</a></code>
+                <code><a href="#projectartifacts">Dict[project_<wbr>artifacts]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1133,7 +1133,7 @@ How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until ti
             <td class="align-top">cache</td>
             <td class="align-top">
                 
-                <code><a href="#projectcache">dict{project_<wbr>cache}</a></code>
+                <code><a href="#projectcache">Dict[project_<wbr>cache]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1178,7 +1178,7 @@ The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used fo
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code><a href="#projectenvironment">dict{project_<wbr>environment}</a></code>
+                <code><a href="#projectenvironment">Dict[project_<wbr>environment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1193,7 +1193,7 @@ Information about the project&#39;s build environment. Environment blocks are do
             <td class="align-top">logs_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#projectlogsconfig">dict{project_<wbr>logs_<wbr>config}</a></code>
+                <code><a href="#projectlogsconfig">Dict[project_<wbr>logs_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1238,7 +1238,7 @@ How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued be
             <td class="align-top">secondary_<wbr>artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondaryartifact">list[project_<wbr>secondary_<wbr>artifact]</a></code>
+                <code><a href="#projectsecondaryartifact">List[project_<wbr>secondary_<wbr>artifact]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1253,7 +1253,7 @@ A set of secondary artifacts to be used inside the build. Secondary artifacts bl
             <td class="align-top">secondary_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondarysource">list[project_<wbr>secondary_<wbr>source]</a></code>
+                <code><a href="#projectsecondarysource">List[project_<wbr>secondary_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1283,7 +1283,7 @@ The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) r
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code><a href="#projectsource">dict{project_<wbr>source}</a></code>
+                <code><a href="#projectsource">Dict[project_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1313,7 +1313,7 @@ A version of the build input to be built for this project. If not specified, the
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1328,7 +1328,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#projectvpcconfig">dict{project_<wbr>vpc_<wbr>config}</a></code>
+                <code><a href="#projectvpcconfig">Dict[project_<wbr>vpc_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2191,7 +2191,7 @@ The following output properties are available:
             <td class="align-top">artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectartifacts">dict{project_<wbr>artifacts}</a></code>
+                <code><a href="#projectartifacts">Dict[project_<wbr>artifacts]</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the project&#39;s build output artifacts. Artifact blocks are documented below.
  {{% /md %}}
@@ -2243,7 +2243,7 @@ The following output properties are available:
             <td class="align-top">cache</td>
             <td class="align-top">
                 
-                <code><a href="#projectcache">dict{project_<wbr>cache}</a></code>
+                <code><a href="#projectcache">Dict[project_<wbr>cache]</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the cache storage for the project. Cache blocks are documented below.
  {{% /md %}}
@@ -2282,7 +2282,7 @@ The following output properties are available:
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code><a href="#projectenvironment">dict{project_<wbr>environment}</a></code>
+                <code><a href="#projectenvironment">Dict[project_<wbr>environment]</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the project&#39;s build environment. Environment blocks are documented below.
  {{% /md %}}
@@ -2295,7 +2295,7 @@ The following output properties are available:
             <td class="align-top">logs_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#projectlogsconfig">dict{project_<wbr>logs_<wbr>config}</a></code>
+                <code><a href="#projectlogsconfig">Dict[project_<wbr>logs_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration for the builds to store log data to CloudWatch or S3.
  {{% /md %}}
@@ -2334,7 +2334,7 @@ The following output properties are available:
             <td class="align-top">secondary_<wbr>artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondaryartifact">list[project_<wbr>secondary_<wbr>artifact]</a></code>
+                <code><a href="#projectsecondaryartifact">List[project_<wbr>secondary_<wbr>artifact]</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
  {{% /md %}}
@@ -2347,7 +2347,7 @@ The following output properties are available:
             <td class="align-top">secondary_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondarysource">list[project_<wbr>secondary_<wbr>source]</a></code>
+                <code><a href="#projectsecondarysource">List[project_<wbr>secondary_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
  {{% /md %}}
@@ -2373,7 +2373,7 @@ The following output properties are available:
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code><a href="#projectsource">dict{project_<wbr>source}</a></code>
+                <code><a href="#projectsource">Dict[project_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the project&#39;s input source code. Source blocks are documented below.
  {{% /md %}}
@@ -2399,7 +2399,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2412,7 +2412,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#projectvpcconfig">dict{project_<wbr>vpc_<wbr>config}</a></code>
+                <code><a href="#projectvpcconfig">Dict[project_<wbr>vpc_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
  {{% /md %}}
@@ -3434,7 +3434,7 @@ The ARN of the CodeBuild project.
             <td class="align-top">artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectartifacts">dict{project_<wbr>artifacts}</a></code>
+                <code><a href="#projectartifacts">Dict[project_<wbr>artifacts]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3494,7 +3494,7 @@ How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until ti
             <td class="align-top">cache</td>
             <td class="align-top">
                 
-                <code><a href="#projectcache">dict{project_<wbr>cache}</a></code>
+                <code><a href="#projectcache">Dict[project_<wbr>cache]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3539,7 +3539,7 @@ The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used fo
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code><a href="#projectenvironment">dict{project_<wbr>environment}</a></code>
+                <code><a href="#projectenvironment">Dict[project_<wbr>environment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3554,7 +3554,7 @@ Information about the project&#39;s build environment. Environment blocks are do
             <td class="align-top">logs_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#projectlogsconfig">dict{project_<wbr>logs_<wbr>config}</a></code>
+                <code><a href="#projectlogsconfig">Dict[project_<wbr>logs_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3599,7 +3599,7 @@ How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued be
             <td class="align-top">secondary_<wbr>artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondaryartifact">list[project_<wbr>secondary_<wbr>artifact]</a></code>
+                <code><a href="#projectsecondaryartifact">List[project_<wbr>secondary_<wbr>artifact]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3614,7 +3614,7 @@ A set of secondary artifacts to be used inside the build. Secondary artifacts bl
             <td class="align-top">secondary_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondarysource">list[project_<wbr>secondary_<wbr>source]</a></code>
+                <code><a href="#projectsecondarysource">List[project_<wbr>secondary_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3644,7 +3644,7 @@ The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) r
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code><a href="#projectsource">dict{project_<wbr>source}</a></code>
+                <code><a href="#projectsource">Dict[project_<wbr>source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3674,7 +3674,7 @@ A version of the build input to be built for this project. If not specified, the
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3689,7 +3689,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#projectvpcconfig">dict{project_<wbr>vpc_<wbr>config}</a></code>
+                <code><a href="#projectvpcconfig">Dict[project_<wbr>vpc_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4603,7 +4603,7 @@ The location of the source code from git or s3.
             <td class="align-top">modes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5124,7 +5124,7 @@ Information about the compute resources the build project will use. Available va
             <td class="align-top">environment_<wbr>variables</td>
             <td class="align-top">
                 
-                <code><a href="#projectenvironmentenvironmentvariable">list[project_<wbr>environment_<wbr>environment_<wbr>variable]</a></code>
+                <code><a href="#projectenvironmentenvironmentvariable">List[project_<wbr>environment_<wbr>environment_<wbr>variable]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5184,7 +5184,7 @@ If set to true, enables running the Docker daemon inside a Docker container. Def
             <td class="align-top">registry_<wbr>credential</td>
             <td class="align-top">
                 
-                <code><a href="#projectenvironmentregistrycredential">dict{project_<wbr>environment_<wbr>registry_<wbr>credential}</a></code>
+                <code><a href="#projectenvironmentregistrycredential">Dict[project_<wbr>environment_<wbr>registry_<wbr>credential]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5907,7 +5907,7 @@ Configuration for the builds to store logs to S3.
             <td class="align-top">cloudwatch_<wbr>logs</td>
             <td class="align-top">
                 
-                <code><a href="#projectlogsconfigcloudwatchlogs">dict{project_<wbr>logs_<wbr>config_<wbr>cloudwatch_<wbr>logs}</a></code>
+                <code><a href="#projectlogsconfigcloudwatchlogs">Dict[project_<wbr>logs_<wbr>config_<wbr>cloudwatch_<wbr>logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5922,7 +5922,7 @@ Configuration for the builds to store logs to CloudWatch
             <td class="align-top">s3_<wbr>logs</td>
             <td class="align-top">
                 
-                <code><a href="#projectlogsconfigs3logs">dict{project_<wbr>logs_<wbr>config_<wbr>s3_<wbr>logs}</a></code>
+                <code><a href="#projectlogsconfigs3logs">Dict[project_<wbr>logs_<wbr>config_<wbr>s3_<wbr>logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7646,7 +7646,7 @@ The type of repository that contains the source code to be built. Valid values f
             <td class="align-top">auths</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondarysourceauth">list[project_<wbr>secondary_<wbr>source_<wbr>auth]</a></code>
+                <code><a href="#projectsecondarysourceauth">List[project_<wbr>secondary_<wbr>source_<wbr>auth]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7691,7 +7691,7 @@ Truncate git history to this many commits.
             <td class="align-top">git_<wbr>submodules_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondarysourcegitsubmodulesconfig">dict{project_<wbr>secondary_<wbr>source_<wbr>git_<wbr>submodules_<wbr>config}</a></code>
+                <code><a href="#projectsecondarysourcegitsubmodulesconfig">Dict[project_<wbr>secondary_<wbr>source_<wbr>git_<wbr>submodules_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8624,7 +8624,7 @@ The type of repository that contains the source code to be built. Valid values f
             <td class="align-top">auths</td>
             <td class="align-top">
                 
-                <code><a href="#projectsourceauth">list[project_<wbr>source_<wbr>auth]</a></code>
+                <code><a href="#projectsourceauth">List[project_<wbr>source_<wbr>auth]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8669,7 +8669,7 @@ Truncate git history to this many commits.
             <td class="align-top">git_<wbr>submodules_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#projectsourcegitsubmodulesconfig">dict{project_<wbr>source_<wbr>git_<wbr>submodules_<wbr>config}</a></code>
+                <code><a href="#projectsourcegitsubmodulesconfig">Dict[project_<wbr>source_<wbr>git_<wbr>submodules_<wbr>config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9362,7 +9362,7 @@ The ID of the VPC within which to run builds.
             <td class="align-top">security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -9377,7 +9377,7 @@ The security group IDs to assign to running builds.
             <td class="align-top">subnets</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

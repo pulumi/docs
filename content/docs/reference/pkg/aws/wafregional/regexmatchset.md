@@ -272,7 +272,7 @@ The name or description of the Regex Match Set.
             <td class="align-top">regex_<wbr>match_<wbr>tuples</td>
             <td class="align-top">
                 
-                <code><a href="#regexmatchsetregexmatchtuple">list[regex_<wbr>match_<wbr>set_<wbr>regex_<wbr>match_<wbr>tuple]</a></code>
+                <code><a href="#regexmatchsetregexmatchtuple">List[regex_<wbr>match_<wbr>set_<wbr>regex_<wbr>match_<wbr>tuple]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -476,7 +476,7 @@ the location in requests that you want AWS WAF to search, and other settings. Se
             <td class="align-top">regex_<wbr>match_<wbr>tuples</td>
             <td class="align-top">
                 
-                <code><a href="#regexmatchsetregexmatchtuple">list[regex_<wbr>match_<wbr>set_<wbr>regex_<wbr>match_<wbr>tuple]</a></code>
+                <code><a href="#regexmatchsetregexmatchtuple">List[regex_<wbr>match_<wbr>set_<wbr>regex_<wbr>match_<wbr>tuple]</a></code>
             </td>
             <td class="align-top">{{% md %}} The regular expression pattern that you want AWS WAF to search for in web requests,
 the location in requests that you want AWS WAF to search, and other settings. See below.
@@ -737,7 +737,7 @@ The name or description of the Regex Match Set.
             <td class="align-top">regex_<wbr>match_<wbr>tuples</td>
             <td class="align-top">
                 
-                <code><a href="#regexmatchsetregexmatchtuple">list[regex_<wbr>match_<wbr>set_<wbr>regex_<wbr>match_<wbr>tuple]</a></code>
+                <code><a href="#regexmatchsetregexmatchtuple">List[regex_<wbr>match_<wbr>set_<wbr>regex_<wbr>match_<wbr>tuple]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1005,7 +1005,7 @@ for all supported values.
             <td class="align-top">field_<wbr>to_<wbr>match</td>
             <td class="align-top">
                 
-                <code><a href="#regexmatchsetregexmatchtuplefieldtomatch">dict{regex_<wbr>match_<wbr>set_<wbr>regex_<wbr>match_<wbr>tuple_<wbr>field_<wbr>to_<wbr>match}</a></code>
+                <code><a href="#regexmatchsetregexmatchtuplefieldtomatch">Dict[regex_<wbr>match_<wbr>set_<wbr>regex_<wbr>match_<wbr>tuple_<wbr>field_<wbr>to_<wbr>match]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -388,7 +388,7 @@ The name of the ElastiCache parameter.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">list[parameter_<wbr>group_<wbr>parameter]</a></code>
+                <code><a href="#parametergroupparameter">List[parameter_<wbr>group_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -692,7 +692,7 @@ The following output properties are available:
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">list[parameter_<wbr>group_<wbr>parameter]</a></code>
+                <code><a href="#parametergroupparameter">List[parameter_<wbr>group_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of ElastiCache parameters to apply.
  {{% /md %}}
@@ -1069,7 +1069,7 @@ The name of the ElastiCache parameter.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">list[parameter_<wbr>group_<wbr>parameter]</a></code>
+                <code><a href="#parametergroupparameter">List[parameter_<wbr>group_<wbr>parameter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

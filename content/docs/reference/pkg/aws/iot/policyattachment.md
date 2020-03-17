@@ -262,7 +262,7 @@ The identity to which the policy is attached.
             <td class="align-top">policy</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -719,7 +719,7 @@ The identity to which the policy is attached.
             <td class="align-top">policy</td>
             <td class="align-top">
                 
-                <code>dict</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -409,7 +409,7 @@ The following output properties are available:
             <td class="align-top">event_<wbr>categories</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of the event categories.
  {{% /md %}}

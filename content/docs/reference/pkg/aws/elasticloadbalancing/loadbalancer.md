@@ -940,7 +940,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">access_<wbr>logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">dict{load_<wbr>balancer_<wbr>access_<wbr>logs}</a></code>
+                <code><a href="#loadbalanceraccesslogs">Dict[load_<wbr>balancer_<wbr>access_<wbr>logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -955,7 +955,7 @@ An Access Logs block. Access Logs documented below.
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1015,7 +1015,7 @@ Enable cross-zone load balancing. Default: `true`
             <td class="align-top">health_<wbr>check</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerhealthcheck">dict{load_<wbr>balancer_<wbr>health_<wbr>check}</a></code>
+                <code><a href="#loadbalancerhealthcheck">Dict[load_<wbr>balancer_<wbr>health_<wbr>check]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1045,7 +1045,7 @@ The time in seconds that the connection is allowed to be idle. Default: `60`
             <td class="align-top">instances</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1075,7 +1075,7 @@ If true, ELB will be an internal ELB.
             <td class="align-top">listeners</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerlistener">list[load_<wbr>balancer_<wbr>listener]</a></code>
+                <code><a href="#loadbalancerlistener">List[load_<wbr>balancer_<wbr>listener]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1121,7 +1121,7 @@ prefix. Conflicts with `name`.
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1154,7 +1154,7 @@ instances. Use this for Classic or Default VPC only.
             <td class="align-top">subnets</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1169,7 +1169,7 @@ A list of subnet IDs to attach to the ELB.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2076,7 +2076,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">access_<wbr>logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">dict{load_<wbr>balancer_<wbr>access_<wbr>logs}</a></code>
+                <code><a href="#loadbalanceraccesslogs">Dict[load_<wbr>balancer_<wbr>access_<wbr>logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} An Access Logs block. Access Logs documented below.
  {{% /md %}}
@@ -2102,7 +2102,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The AZ&#39;s to serve traffic in.
  {{% /md %}}
@@ -2167,7 +2167,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">health_<wbr>check</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerhealthcheck">dict{load_<wbr>balancer_<wbr>health_<wbr>check}</a></code>
+                <code><a href="#loadbalancerhealthcheck">Dict[load_<wbr>balancer_<wbr>health_<wbr>check]</a></code>
             </td>
             <td class="align-top">{{% md %}} A health_check block. Health Check documented below.
  {{% /md %}}
@@ -2193,7 +2193,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">instances</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of instance ids to place in the ELB pool.
  {{% /md %}}
@@ -2219,7 +2219,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">listeners</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerlistener">list[load_<wbr>balancer_<wbr>listener]</a></code>
+                <code><a href="#loadbalancerlistener">List[load_<wbr>balancer_<wbr>listener]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of listener blocks. Listeners documented below.
  {{% /md %}}
@@ -2259,7 +2259,7 @@ prefix. Conflicts with `name`.
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
@@ -2303,7 +2303,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">subnets</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of subnet IDs to attach to the ELB.
  {{% /md %}}
@@ -2316,7 +2316,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -3399,7 +3399,7 @@ The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
             <td class="align-top">access_<wbr>logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">dict{load_<wbr>balancer_<wbr>access_<wbr>logs}</a></code>
+                <code><a href="#loadbalanceraccesslogs">Dict[load_<wbr>balancer_<wbr>access_<wbr>logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3429,7 +3429,7 @@ The ARN of the ELB
             <td class="align-top">availability_<wbr>zones</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3504,7 +3504,7 @@ The DNS name of the ELB
             <td class="align-top">health_<wbr>check</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerhealthcheck">dict{load_<wbr>balancer_<wbr>health_<wbr>check}</a></code>
+                <code><a href="#loadbalancerhealthcheck">Dict[load_<wbr>balancer_<wbr>health_<wbr>check]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3534,7 +3534,7 @@ The time in seconds that the connection is allowed to be idle. Default: `60`
             <td class="align-top">instances</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3564,7 +3564,7 @@ If true, ELB will be an internal ELB.
             <td class="align-top">listeners</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerlistener">list[load_<wbr>balancer_<wbr>listener]</a></code>
+                <code><a href="#loadbalancerlistener">List[load_<wbr>balancer_<wbr>listener]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3610,7 +3610,7 @@ prefix. Conflicts with `name`.
             <td class="align-top">security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3660,7 +3660,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">subnets</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3675,7 +3675,7 @@ A list of subnet IDs to attach to the ELB.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -431,7 +431,7 @@ A classifier for XML content. Defined below.
             <td class="align-top">csv_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiercsvclassifier">dict{classifier_<wbr>csv_<wbr>classifier}</a></code>
+                <code><a href="#classifiercsvclassifier">Dict[classifier_<wbr>csv_<wbr>classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -446,7 +446,7 @@ A classifier for Csv content. Defined below.
             <td class="align-top">grok_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiergrokclassifier">dict{classifier_<wbr>grok_<wbr>classifier}</a></code>
+                <code><a href="#classifiergrokclassifier">Dict[classifier_<wbr>grok_<wbr>classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -461,7 +461,7 @@ A classifier that uses grok patterns. Defined below.
             <td class="align-top">json_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierjsonclassifier">dict{classifier_<wbr>json_<wbr>classifier}</a></code>
+                <code><a href="#classifierjsonclassifier">Dict[classifier_<wbr>json_<wbr>classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -491,7 +491,7 @@ The name of the classifier.
             <td class="align-top">xml_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierxmlclassifier">dict{classifier_<wbr>xml_<wbr>classifier}</a></code>
+                <code><a href="#classifierxmlclassifier">Dict[classifier_<wbr>xml_<wbr>classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -795,7 +795,7 @@ The following output properties are available:
             <td class="align-top">csv_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiercsvclassifier">dict{classifier_<wbr>csv_<wbr>classifier}</a></code>
+                <code><a href="#classifiercsvclassifier">Dict[classifier_<wbr>csv_<wbr>classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} A classifier for Csv content. Defined below.
  {{% /md %}}
@@ -808,7 +808,7 @@ The following output properties are available:
             <td class="align-top">grok_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiergrokclassifier">dict{classifier_<wbr>grok_<wbr>classifier}</a></code>
+                <code><a href="#classifiergrokclassifier">Dict[classifier_<wbr>grok_<wbr>classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} A classifier that uses grok patterns. Defined below.
  {{% /md %}}
@@ -821,7 +821,7 @@ The following output properties are available:
             <td class="align-top">json_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierjsonclassifier">dict{classifier_<wbr>json_<wbr>classifier}</a></code>
+                <code><a href="#classifierjsonclassifier">Dict[classifier_<wbr>json_<wbr>classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} A classifier for JSON content. Defined below.
  {{% /md %}}
@@ -847,7 +847,7 @@ The following output properties are available:
             <td class="align-top">xml_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierxmlclassifier">dict{classifier_<wbr>xml_<wbr>classifier}</a></code>
+                <code><a href="#classifierxmlclassifier">Dict[classifier_<wbr>xml_<wbr>classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} A classifier for XML content. Defined below.
  {{% /md %}}
@@ -1224,7 +1224,7 @@ A classifier for XML content. Defined below.
             <td class="align-top">csv_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiercsvclassifier">dict{classifier_<wbr>csv_<wbr>classifier}</a></code>
+                <code><a href="#classifiercsvclassifier">Dict[classifier_<wbr>csv_<wbr>classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1239,7 +1239,7 @@ A classifier for Csv content. Defined below.
             <td class="align-top">grok_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiergrokclassifier">dict{classifier_<wbr>grok_<wbr>classifier}</a></code>
+                <code><a href="#classifiergrokclassifier">Dict[classifier_<wbr>grok_<wbr>classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1254,7 +1254,7 @@ A classifier that uses grok patterns. Defined below.
             <td class="align-top">json_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierjsonclassifier">dict{classifier_<wbr>json_<wbr>classifier}</a></code>
+                <code><a href="#classifierjsonclassifier">Dict[classifier_<wbr>json_<wbr>classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1284,7 +1284,7 @@ The name of the classifier.
             <td class="align-top">xml_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierxmlclassifier">dict{classifier_<wbr>xml_<wbr>classifier}</a></code>
+                <code><a href="#classifierxmlclassifier">Dict[classifier_<wbr>xml_<wbr>classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1737,7 +1737,7 @@ Specifies whether to trim column values.
             <td class="align-top">headers</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

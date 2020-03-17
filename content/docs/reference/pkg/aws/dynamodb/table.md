@@ -881,7 +881,7 @@ The number of write units for this index. Must be set if billing_mode is set to 
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#tableattribute">list[table_<wbr>attribute]</a></code>
+                <code><a href="#tableattribute">List[table_<wbr>attribute]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -911,7 +911,7 @@ Controls how you are charged for read and write throughput and how you manage ca
             <td class="align-top">global_<wbr>secondary_<wbr>indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tableglobalsecondaryindex">list[table_<wbr>global_<wbr>secondary_<wbr>index]</a></code>
+                <code><a href="#tableglobalsecondaryindex">List[table_<wbr>global_<wbr>secondary_<wbr>index]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -944,7 +944,7 @@ defined as an attribute in the resource.
             <td class="align-top">local_<wbr>secondary_<wbr>indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tablelocalsecondaryindex">list[table_<wbr>local_<wbr>secondary_<wbr>index]</a></code>
+                <code><a href="#tablelocalsecondaryindex">List[table_<wbr>local_<wbr>secondary_<wbr>index]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -976,7 +976,7 @@ The name of the index
             <td class="align-top">point_<wbr>in_<wbr>time_<wbr>recovery</td>
             <td class="align-top">
                 
-                <code><a href="#tablepointintimerecovery">dict{table_<wbr>point_<wbr>in_<wbr>time_<wbr>recovery}</a></code>
+                <code><a href="#tablepointintimerecovery">Dict[table_<wbr>point_<wbr>in_<wbr>time_<wbr>recovery]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1021,7 +1021,7 @@ The number of read units for this index. Must be set if billing_mode is set to P
             <td class="align-top">server_<wbr>side_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#tableserversideencryption">dict{table_<wbr>server_<wbr>side_<wbr>encryption}</a></code>
+                <code><a href="#tableserversideencryption">Dict[table_<wbr>server_<wbr>side_<wbr>encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1066,7 +1066,7 @@ When an item in the table is modified, StreamViewType determines what informatio
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1081,7 +1081,7 @@ A map of tags to populate on the created table.
             <td class="align-top">ttl</td>
             <td class="align-top">
                 
-                <code><a href="#tablettl">dict{table_<wbr>ttl}</a></code>
+                <code><a href="#tablettl">Dict[table_<wbr>ttl]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1944,7 +1944,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#tableattribute">list[table_<wbr>attribute]</a></code>
+                <code><a href="#tableattribute">List[table_<wbr>attribute]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
  {{% /md %}}
@@ -1970,7 +1970,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
             <td class="align-top">global_<wbr>secondary_<wbr>indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tableglobalsecondaryindex">list[table_<wbr>global_<wbr>secondary_<wbr>index]</a></code>
+                <code><a href="#tableglobalsecondaryindex">List[table_<wbr>global_<wbr>secondary_<wbr>index]</a></code>
             </td>
             <td class="align-top">{{% md %}} Describe a GSI for the table;
 subject to the normal limits on the number of GSIs, projected
@@ -1999,7 +1999,7 @@ defined as an attribute in the resource.
             <td class="align-top">local_<wbr>secondary_<wbr>indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tablelocalsecondaryindex">list[table_<wbr>local_<wbr>secondary_<wbr>index]</a></code>
+                <code><a href="#tablelocalsecondaryindex">List[table_<wbr>local_<wbr>secondary_<wbr>index]</a></code>
             </td>
             <td class="align-top">{{% md %}} Describe an LSI on the table;
 these can only be allocated *at creation* so you cannot change this
@@ -2027,7 +2027,7 @@ definition after you have created the resource.
             <td class="align-top">point_<wbr>in_<wbr>time_<wbr>recovery</td>
             <td class="align-top">
                 
-                <code><a href="#tablepointintimerecovery">dict{table_<wbr>point_<wbr>in_<wbr>time_<wbr>recovery}</a></code>
+                <code><a href="#tablepointintimerecovery">Dict[table_<wbr>point_<wbr>in_<wbr>time_<wbr>recovery]</a></code>
             </td>
             <td class="align-top">{{% md %}} Point-in-time recovery options.
  {{% /md %}}
@@ -2066,7 +2066,7 @@ definition after you have created the resource.
             <td class="align-top">server_<wbr>side_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#tableserversideencryption">dict{table_<wbr>server_<wbr>side_<wbr>encryption}</a></code>
+                <code><a href="#tableserversideencryption">Dict[table_<wbr>server_<wbr>side_<wbr>encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn&#39;t specified.
  {{% /md %}}
@@ -2134,7 +2134,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A map of tags to populate on the created table.
  {{% /md %}}
@@ -2147,7 +2147,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
             <td class="align-top">ttl</td>
             <td class="align-top">
                 
-                <code><a href="#tablettl">dict{table_<wbr>ttl}</a></code>
+                <code><a href="#tablettl">Dict[table_<wbr>ttl]</a></code>
             </td>
             <td class="align-top">{{% md %}} Defines ttl, has two properties, and can only be specified once:
  {{% /md %}}
@@ -3161,7 +3161,7 @@ The arn of the table
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#tableattribute">list[table_<wbr>attribute]</a></code>
+                <code><a href="#tableattribute">List[table_<wbr>attribute]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3191,7 +3191,7 @@ Controls how you are charged for read and write throughput and how you manage ca
             <td class="align-top">global_<wbr>secondary_<wbr>indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tableglobalsecondaryindex">list[table_<wbr>global_<wbr>secondary_<wbr>index]</a></code>
+                <code><a href="#tableglobalsecondaryindex">List[table_<wbr>global_<wbr>secondary_<wbr>index]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3224,7 +3224,7 @@ defined as an attribute in the resource.
             <td class="align-top">local_<wbr>secondary_<wbr>indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tablelocalsecondaryindex">list[table_<wbr>local_<wbr>secondary_<wbr>index]</a></code>
+                <code><a href="#tablelocalsecondaryindex">List[table_<wbr>local_<wbr>secondary_<wbr>index]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3256,7 +3256,7 @@ The name of the index
             <td class="align-top">point_<wbr>in_<wbr>time_<wbr>recovery</td>
             <td class="align-top">
                 
-                <code><a href="#tablepointintimerecovery">dict{table_<wbr>point_<wbr>in_<wbr>time_<wbr>recovery}</a></code>
+                <code><a href="#tablepointintimerecovery">Dict[table_<wbr>point_<wbr>in_<wbr>time_<wbr>recovery]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3301,7 +3301,7 @@ The number of read units for this index. Must be set if billing_mode is set to P
             <td class="align-top">server_<wbr>side_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#tableserversideencryption">dict{table_<wbr>server_<wbr>side_<wbr>encryption}</a></code>
+                <code><a href="#tableserversideencryption">Dict[table_<wbr>server_<wbr>side_<wbr>encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3379,7 +3379,7 @@ When an item in the table is modified, StreamViewType determines what informatio
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3394,7 +3394,7 @@ A map of tags to populate on the created table.
             <td class="align-top">ttl</td>
             <td class="align-top">
                 
-                <code><a href="#tablettl">dict{table_<wbr>ttl}</a></code>
+                <code><a href="#tablettl">Dict[table_<wbr>ttl]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4120,7 +4120,7 @@ The name of the index
             <td class="align-top">non_<wbr>key_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4515,7 +4515,7 @@ The name of the index
             <td class="align-top">non_<wbr>key_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

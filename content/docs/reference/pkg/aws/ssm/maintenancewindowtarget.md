@@ -492,7 +492,7 @@ The type of target being registered with the Maintenance Window. Possible values
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtargettarget">list[maintenance_<wbr>window_<wbr>target_<wbr>target]</a></code>
+                <code><a href="#maintenancewindowtargettarget">List[maintenance_<wbr>window_<wbr>target_<wbr>target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -902,7 +902,7 @@ The following output properties are available:
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtargettarget">list[maintenance_<wbr>window_<wbr>target_<wbr>target]</a></code>
+                <code><a href="#maintenancewindowtargettarget">List[maintenance_<wbr>window_<wbr>target_<wbr>target]</a></code>
             </td>
             <td class="align-top">{{% md %}} The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
  {{% /md %}}
@@ -1397,7 +1397,7 @@ The type of target being registered with the Maintenance Window. Possible values
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtargettarget">list[maintenance_<wbr>window_<wbr>target_<wbr>target]</a></code>
+                <code><a href="#maintenancewindowtargettarget">List[maintenance_<wbr>window_<wbr>target_<wbr>target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1633,7 +1633,7 @@ The Id of the maintenance window to register the target with.
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

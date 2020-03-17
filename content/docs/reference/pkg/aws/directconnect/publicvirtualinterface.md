@@ -715,7 +715,7 @@ The name for the virtual interface.
             <td class="align-top">route_<wbr>filter_<wbr>prefixes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -730,7 +730,7 @@ A list of routes to be advertised to the AWS network in this region.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1487,7 +1487,7 @@ The following output properties are available:
             <td class="align-top">route_<wbr>filter_<wbr>prefixes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} A list of routes to be advertised to the AWS network in this region.
  {{% /md %}}
@@ -1500,7 +1500,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2396,7 +2396,7 @@ The name for the virtual interface.
             <td class="align-top">route_<wbr>filter_<wbr>prefixes</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2411,7 +2411,7 @@ A list of routes to be advertised to the AWS network in this region.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

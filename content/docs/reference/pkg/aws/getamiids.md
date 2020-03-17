@@ -377,7 +377,7 @@ Used to sort AMIs by creation time.
             <td class="align-top">executable_<wbr>users</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -393,7 +393,7 @@ permission on  the image. Valid items are the numeric account ID or `self`.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getamiidsfilter">list[get_<wbr>ami_<wbr>ids_<wbr>filter]</a></code>
+                <code><a href="#getamiidsfilter">List[get_<wbr>ami_<wbr>ids_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -429,7 +429,7 @@ options to narrow down the list AWS returns.
             <td class="align-top">owners</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -809,7 +809,7 @@ The following output properties are available:
             <td class="align-top">executable_<wbr>users</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -821,7 +821,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getamiidsfilter">list[get_<wbr>ami_<wbr>ids_<wbr>filter]</a></code>
+                <code><a href="#getamiidsfilter">List[get_<wbr>ami_<wbr>ids_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -846,7 +846,7 @@ The following output properties are available:
             <td class="align-top">ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -870,7 +870,7 @@ The following output properties are available:
             <td class="align-top">owners</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1098,7 +1098,7 @@ The following output properties are available:
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

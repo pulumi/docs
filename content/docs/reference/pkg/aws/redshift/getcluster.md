@@ -248,7 +248,7 @@ The cluster identifier
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1667,7 +1667,7 @@ The following output properties are available:
             <td class="align-top">cluster_<wbr>security_<wbr>groups</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The security groups associated with the cluster
  {{% /md %}}
@@ -1796,7 +1796,7 @@ The following output properties are available:
             <td class="align-top">iam_<wbr>roles</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The IAM roles associated to the cluster
  {{% /md %}}
@@ -1926,7 +1926,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} The tags associated to the cluster
  {{% /md %}}
@@ -1952,7 +1952,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The VPC security group Ids associated with the cluster
  {{% /md %}}

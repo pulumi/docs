@@ -806,7 +806,7 @@ up. A negative value scales down.
             <td class="align-top">step_<wbr>adjustments</td>
             <td class="align-top">
                 
-                <code><a href="#policystepadjustment">list[policy_<wbr>step_<wbr>adjustment]</a></code>
+                <code><a href="#policystepadjustment">List[policy_<wbr>step_<wbr>adjustment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -822,7 +822,7 @@ group scaling. These have the following structure:
             <td class="align-top">target_<wbr>tracking_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingconfiguration">dict{policy_<wbr>target_<wbr>tracking_<wbr>configuration}</a></code>
+                <code><a href="#policytargettrackingconfiguration">Dict[policy_<wbr>target_<wbr>tracking_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1536,7 +1536,7 @@ up. A negative value scales down.
             <td class="align-top">step_<wbr>adjustments</td>
             <td class="align-top">
                 
-                <code><a href="#policystepadjustment">list[policy_<wbr>step_<wbr>adjustment]</a></code>
+                <code><a href="#policystepadjustment">List[policy_<wbr>step_<wbr>adjustment]</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of adjustments that manage
 group scaling. These have the following structure:
@@ -1550,7 +1550,7 @@ group scaling. These have the following structure:
             <td class="align-top">target_<wbr>tracking_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingconfiguration">dict{policy_<wbr>target_<wbr>tracking_<wbr>configuration}</a></code>
+                <code><a href="#policytargettrackingconfiguration">Dict[policy_<wbr>target_<wbr>tracking_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} A target tracking policy. These have the following structure:
  {{% /md %}}
@@ -2399,7 +2399,7 @@ up. A negative value scales down.
             <td class="align-top">step_<wbr>adjustments</td>
             <td class="align-top">
                 
-                <code><a href="#policystepadjustment">list[policy_<wbr>step_<wbr>adjustment]</a></code>
+                <code><a href="#policystepadjustment">List[policy_<wbr>step_<wbr>adjustment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2415,7 +2415,7 @@ group scaling. These have the following structure:
             <td class="align-top">target_<wbr>tracking_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingconfiguration">dict{policy_<wbr>target_<wbr>tracking_<wbr>configuration}</a></code>
+                <code><a href="#policytargettrackingconfiguration">Dict[policy_<wbr>target_<wbr>tracking_<wbr>configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3027,7 +3027,7 @@ The target value for the metric.
             <td class="align-top">customized_<wbr>metric_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingconfigurationcustomizedmetricspecification">dict{policy_<wbr>target_<wbr>tracking_<wbr>configuration_<wbr>customized_<wbr>metric_<wbr>specification}</a></code>
+                <code><a href="#policytargettrackingconfigurationcustomizedmetricspecification">Dict[policy_<wbr>target_<wbr>tracking_<wbr>configuration_<wbr>customized_<wbr>metric_<wbr>specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3057,7 +3057,7 @@ Indicates whether scale in by the target tracking policy is disabled.
             <td class="align-top">predefined_<wbr>metric_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingconfigurationpredefinedmetricspecification">dict{policy_<wbr>target_<wbr>tracking_<wbr>configuration_<wbr>predefined_<wbr>metric_<wbr>specification}</a></code>
+                <code><a href="#policytargettrackingconfigurationpredefinedmetricspecification">Dict[policy_<wbr>target_<wbr>tracking_<wbr>configuration_<wbr>predefined_<wbr>metric_<wbr>specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3413,7 +3413,7 @@ The unit of the metric.
             <td class="align-top">metric_<wbr>dimensions</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">list[policy_<wbr>target_<wbr>tracking_<wbr>configuration_<wbr>customized_<wbr>metric_<wbr>specification_<wbr>metric_<wbr>dimension]</a></code>
+                <code><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">List[policy_<wbr>target_<wbr>tracking_<wbr>configuration_<wbr>customized_<wbr>metric_<wbr>specification_<wbr>metric_<wbr>dimension]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

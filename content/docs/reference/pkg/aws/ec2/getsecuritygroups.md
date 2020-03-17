@@ -248,7 +248,7 @@ desired security groups.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsecuritygroupsfilter">list[get_<wbr>security_<wbr>groups_<wbr>filter]</a></code>
+                <code><a href="#getsecuritygroupsfilter">List[get_<wbr>security_<wbr>groups_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -265,7 +265,7 @@ several valid keys, for a full reference, check out
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -568,7 +568,7 @@ unless the `vpc-id` filter is also used.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsecuritygroupsfilter">list[get_<wbr>security_<wbr>groups_<wbr>filter]</a></code>
+                <code><a href="#getsecuritygroupsfilter">List[get_<wbr>security_<wbr>groups_<wbr>filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -593,7 +593,7 @@ unless the `vpc-id` filter is also used.
             <td class="align-top">ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} IDs of the matches security groups.
  {{% /md %}}
@@ -606,7 +606,7 @@ unless the `vpc-id` filter is also used.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>dict{any}</code>
+                <code>Dict[Any, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -618,7 +618,7 @@ unless the `vpc-id` filter is also used.
             <td class="align-top">vpc_<wbr>ids</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} The VPC IDs of the matched security groups. The data source&#39;s tag or filter *will span VPCs*
 unless the `vpc-id` filter is also used.
@@ -836,7 +836,7 @@ unless the `vpc-id` filter is also used.
             <td class="align-top">values</td>
             <td class="align-top">
                 
-                <code>list[string]</code>
+                <code>List[str]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
