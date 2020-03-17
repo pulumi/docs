@@ -1,16 +1,16 @@
 ---
 # Name of the webinar.
-title: "Name of the Webinar"
-meta_desc: "Search Description"
+title: "Breaking Down Dev and DevOps Silos"
+meta_desc: "Dinesh Ramamurthy, Engineering Manager, Mercedes Benz R&D, talks about his team's experience with Pulumi."
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
-pulumi_tv: false
+pulumi_tv: true
 
 # The preview image will be shown on the list page.
-preview_image: ""
+preview_image: "https://img.youtube.com/vi/5VExXUdQNSE/hqdefault.jpg"
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
@@ -28,34 +28,35 @@ external: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "{{ .Name }}"
+url_slug: "breaking-down-dev-and-devops-silos"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: ""
+    title: "Breaking Down Dev and DevOps Silos"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: ""
+    title: "Breaking Down Dev and DevOps Silos"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: ""
+    youtube_url: "https://www.youtube.com/embed/5VExXUdQNSE"
     # Datetime of the webinar.
     datetime: 2019-02-05 10:00:00 -07:00
     # Description of the webinar.
-    description: ""
+    description: |
+        Dinesh Ramamurthy, Engineering Manager, Mercedes Benz R&D, talks about his team's experience with Pulumi.
 
     # The webinar presenters
     presenters:
-        - name: ""
-          role: ""
+        - name: Dinesh Ramamurthy
+          role: Engineering Manager, Mercedes Benz R&D
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - ""
+        - How Mercedes Benz R&D leverages Pulumi to break down dev and devops silos.
 
 # The right hand side webinar setion.
 form:

@@ -6,6 +6,9 @@ meta_desc: "Join us in the webinar to see how Pulumi supercharges Mapbox’s IoT
 # If the video is pre-recorded or live.
 pre_recorded: true
 
+# If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
+pulumi_tv: false
+
 # The preview image will be shown on the list page.
 preview_image: "/images/webinar/mapbox-on-demand.png"
 

@@ -6,6 +6,9 @@ meta_desc: "Join us on March 30th, 2020 for a deep dive into Infrastructure as C
 # If the video is pre-recorded or live.
 pre_recorded: false
 
+# If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
+pulumi_tv: false
+
 # The preview image will be shown on the list page.
 preview_image: "/images/webinar/getting-started-with-iac-2020-03-30.png"
 

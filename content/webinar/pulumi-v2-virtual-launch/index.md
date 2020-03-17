@@ -6,6 +6,9 @@ meta_desc: "Join Pulumi CEO, Joe Duffy, and the Pulumi team for a walk-through o
 # If the video is pre-recorded or live.
 pre_recorded: false
 
+# If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
+pulumi_tv: false
+
 # The preview image will be shown on the list page.
 preview_image: "/images/webinar/pulumi-v2-virtual-launch.png"
 

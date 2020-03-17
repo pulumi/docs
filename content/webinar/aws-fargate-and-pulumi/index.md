@@ -6,6 +6,9 @@ meta_desc: "Learn how to unify your development and DevOps teams with the power 
 # If the video is pre-recorded or live.
 pre_recorded: true
 
+# If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
+pulumi_tv: false
+
 # The preview image will be shown on the list page.
 preview_image: "https://img.youtube.com/vi/M1Es9e9ICJA/hqdefault.jpg"
 
