@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Ephemeral Kubernetes"
-meta_desc: "Search Description"
+meta_desc: "Pulumi engineer, Mike Metral, walks through workflows around around ephemeral Kubernetes."
 
 # If the video is pre-recorded or live.
 pre_recorded: true

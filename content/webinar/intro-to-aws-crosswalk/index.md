@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Introduction to Crosswalk for AWS"
-meta_desc: "Meet the team behind Pulumi Crosswalk for AWS, see some of what it can do across AWS ECS, EKS, Lambda, and other AWS workloads, and hear from partners Tableau and AWS on how they are using EKS to get Kubernetes running in AWS."
+meta_desc: "Meet the team behind Pulumi Crosswalk for AWS, see some of what it can do across AWS ECS, EKS, Lambda, and other AWS workloads."
 
 # If the video is pre-recorded or live.
 pre_recorded: true
