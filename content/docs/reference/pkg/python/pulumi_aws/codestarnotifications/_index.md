@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.codestarnotifications.NotificationRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.codestarnotifications.</code><code class="sig-name descname">NotificationRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">detail_type=None</em>, <em class="sig-param">event_type_ids=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">targets=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codestarnotifications.NotificationRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeStar Notifications Rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codestarnotifications_notification_rule.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codestarnotifications_notification_rule.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -39,9 +42,6 @@ For list of allowed events see <a class="reference external" href="https://docs.
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The status of the notification rule. Possible values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, default is <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codestarnotifications_notification_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codestarnotifications_notification_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.codestarnotifications.NotificationRule.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codestarnotifications.NotificationRule.arn" title="Permalink to this definition">¶</a></dt>
@@ -126,9 +126,6 @@ For list of allowed events see <a class="reference external" href="https://docs.
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The status of the notification rule. Possible values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, default is <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codestarnotifications_notification_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codestarnotifications_notification_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

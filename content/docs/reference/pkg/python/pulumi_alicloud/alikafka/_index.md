@@ -21,6 +21,7 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>NOTE:</strong> Available in 1.56.0+</p>
 <p><strong>NOTE:</strong>  Only the following regions support create alikafka consumer group.
 [<code class="docutils literal notranslate"><span class="pre">cn-hangzhou</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-beijing</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shenzhen</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-qingdao</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-huhehaote</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-zhangjiakou</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-south-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>]</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_consumer_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_consumer_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -33,9 +34,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_consumer_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_consumer_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.alikafka.ConsumerGroup.consumer_id">
 <code class="sig-name descname">consumer_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.alikafka.ConsumerGroup.consumer_id" title="Permalink to this definition">¶</a></dt>
@@ -71,9 +69,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_consumer_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_consumer_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -125,6 +120,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 [<code class="docutils literal notranslate"><span class="pre">cn-hangzhou</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-beijing</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shenzhen</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-qingdao</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-huhehaote</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-zhangjiakou</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-south-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>]</p>
 <p><strong>NOTE:</strong> Only the following regions support create alikafka post paid instance.
 [<code class="docutils literal notranslate"><span class="pre">cn-hangzhou</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-beijing</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shenzhen</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-qingdao</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-huhehaote</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-zhangjiakou</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>]</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_instance.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -145,9 +141,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.alikafka.Instance.deploy_type">
 <code class="sig-name descname">deploy_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.alikafka.Instance.deploy_type" title="Permalink to this definition">¶</a></dt>
@@ -253,9 +246,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_instance.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -304,6 +294,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> Available in 1.66.0+</p>
 <p><strong>NOTE:</strong>  Only the following regions support create alikafka sasl user.
 [<code class="docutils literal notranslate"><span class="pre">cn-hangzhou</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-beijing</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shenzhen</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-qingdao</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-huhehaote</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-zhangjiakou</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-south-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>]</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_sasl_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_sasl_acl.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -319,9 +310,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_sasl_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_sasl_acl.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.alikafka.SaslAcl.acl_operation_type">
 <code class="sig-name descname">acl_operation_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.alikafka.SaslAcl.acl_operation_type" title="Permalink to this definition">¶</a></dt>
@@ -385,9 +373,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_sasl_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_sasl_acl.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -436,6 +421,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> Available in 1.66.0+</p>
 <p><strong>NOTE:</strong>  Only the following regions support create alikafka sasl user.
 [<code class="docutils literal notranslate"><span class="pre">cn-hangzhou</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-beijing</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shenzhen</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-qingdao</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-huhehaote</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-zhangjiakou</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-south-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>]</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_sasl_user.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_sasl_user.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -450,9 +436,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_sasl_user.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_sasl_user.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.alikafka.SaslUser.instance_id">
 <code class="sig-name descname">instance_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.alikafka.SaslUser.instance_id" title="Permalink to this definition">¶</a></dt>
@@ -503,9 +486,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_sasl_user.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_sasl_user.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -554,6 +534,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> Available in 1.56.0+</p>
 <p><strong>NOTE:</strong>  Only the following regions support create alikafka topic.
 [<code class="docutils literal notranslate"><span class="pre">cn-hangzhou</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-beijing</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shenzhen</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-qingdao</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-huhehaote</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-zhangjiakou</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-south-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>]</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_topic.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -570,9 +551,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_topic.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.alikafka.Topic.compact_topic">
 <code class="sig-name descname">compact_topic</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.alikafka.Topic.compact_topic" title="Permalink to this definition">¶</a></dt>
@@ -636,9 +614,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_topic.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

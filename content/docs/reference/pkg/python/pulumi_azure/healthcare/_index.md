@@ -15,12 +15,12 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.healthcare"></span><dl class="class">
 <dt id="pulumi_azure.healthcare.AwaitableGetServiceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.healthcare.</code><code class="sig-name descname">AwaitableGetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">access_policy_object_ids=None</em>, <em class="sig-param">authentication_configurations=None</em>, <em class="sig-param">cors_configurations=None</em>, <em class="sig-param">cosmosdb_throughput=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.healthcare.AwaitableGetServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.healthcare.</code><code class="sig-name descname">AwaitableGetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">access_policy_object_ids=None</em>, <em class="sig-param">authentication_configurations=None</em>, <em class="sig-param">cors_configurations=None</em>, <em class="sig-param">cosmosdb_throughput=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.healthcare.AwaitableGetServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.healthcare.GetServiceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.healthcare.</code><code class="sig-name descname">GetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">access_policy_object_ids=None</em>, <em class="sig-param">authentication_configurations=None</em>, <em class="sig-param">cors_configurations=None</em>, <em class="sig-param">cosmosdb_throughput=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.healthcare.GetServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.healthcare.</code><code class="sig-name descname">GetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">access_policy_object_ids=None</em>, <em class="sig-param">authentication_configurations=None</em>, <em class="sig-param">cors_configurations=None</em>, <em class="sig-param">cosmosdb_throughput=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.healthcare.GetServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getService.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.healthcare.GetServiceResult.authentication_configurations">
@@ -32,6 +32,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.healthcare.GetServiceResult.cors_configurations">
 <code class="sig-name descname">cors_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.healthcare.GetServiceResult.cors_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">cors_configuration</span></code> block as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.healthcare.GetServiceResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.healthcare.GetServiceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -52,18 +58,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.healthcare.GetServiceResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.healthcare.GetServiceResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.healthcare.Service">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.healthcare.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_policy_object_ids=None</em>, <em class="sig-param">authentication_configuration=None</em>, <em class="sig-param">cors_configuration=None</em>, <em class="sig-param">cosmosdb_throughput=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.healthcare.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Healthcare Service.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/healthcare_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/healthcare_service.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -83,7 +86,7 @@ anything, please consult the source <a class="reference external" href="https://
 <p>The <strong>authentication_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audience</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The intended audience to receive authentication tokens for the service. The default value is <a class="reference external" href="https://azurehealthcareapis.com">https://azurehealthcareapis.com</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">smartProxyEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables the ‘SMART on FHIR’ option for mobile and web implementations.</p></li>
 </ul>
 <p>The <strong>cors_configuration</strong> object supports the following:</p>
@@ -94,16 +97,13 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/healthcare_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/healthcare_service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.healthcare.Service.authentication_configuration">
 <code class="sig-name descname">authentication_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.healthcare.Service.authentication_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">authentication_configuration</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audience</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The intended audience to receive authentication tokens for the service. The default value is <a class="reference external" href="https://azurehealthcareapis.com">https://azurehealthcareapis.com</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">smartProxyEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables the ‘SMART on FHIR’ option for mobile and web implementations.</p></li>
 </ul>
 </dd></dl>
@@ -182,7 +182,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>authentication_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audience</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The intended audience to receive authentication tokens for the service. The default value is <a class="reference external" href="https://azurehealthcareapis.com">https://azurehealthcareapis.com</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">smartProxyEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables the ‘SMART on FHIR’ option for mobile and web implementations.</p></li>
 </ul>
 <p>The <strong>cors_configuration</strong> object supports the following:</p>
@@ -193,9 +193,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/healthcare_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/healthcare_service.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -240,6 +237,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.healthcare.get_service">
 <code class="sig-prename descclassname">pulumi_azure.healthcare.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.healthcare.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Healthcare Service</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/healthcare_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/healthcare_service.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -248,9 +248,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/healthcare_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/healthcare_service.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

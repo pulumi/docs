@@ -21,6 +21,9 @@ you to deploy and manage applications in the AWS cloud without worrying about
 the infrastructure that runs those applications.</p>
 <p>This resource creates an application that has one configuration template named
 <code class="docutils literal notranslate"><span class="pre">default</span></code>, and no application versions</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -39,9 +42,6 @@ the infrastructure that runs those applications.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of application versions to retain (‘max_age_in_days’ and ‘max_count’ cannot be enabled simultaneously.).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service_role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an IAM service role under which the application version is deleted.  Elastic Beanstalk must have permission to assume this role.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.Application.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Application.arn" title="Permalink to this definition">¶</a></dt>
@@ -91,9 +91,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of application versions to retain (‘max_age_in_days’ and ‘max_count’ cannot be enabled simultaneously.).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service_role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an IAM service role under which the application version is deleted.  Elastic Beanstalk must have permission to assume this role.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -147,14 +144,15 @@ Environment.</p>
 Elastic Beanstalk Environments it is possible that an error may be returned
 when attempting to delete an Application Version while it is still in use by a different environment.
 To work around this you can either create each environment in a separate AWS account or create your <code class="docutils literal notranslate"><span class="pre">elasticbeanstalk.ApplicationVersion</span></code> resources with a unique names in your Elastic Beanstalk Application. For example &amp;lt;revision&amp;gt;-&amp;lt;environment&amp;gt;.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application_version.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>application</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Beanstalk Application the version is associated with.</p></li>
-<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – S3 bucket that contains the Application Version source bundle.</p></li>
+<li><p><strong>application</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Name of the Beanstalk Application the version is associated with.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – S3 bucket that contains the Application Version source bundle.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Short description of the Application Version.</p></li>
 <li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – On delete, force an Application Version to be deleted when it may be in use
 by multiple Elastic Beanstalk Environments.</p></li>
@@ -164,9 +162,6 @@ by multiple Elastic Beanstalk Environments.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application_version.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.ApplicationVersion.application">
 <code class="sig-name descname">application</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ApplicationVersion.application" title="Permalink to this definition">¶</a></dt>
@@ -227,9 +222,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>application</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Beanstalk Application the version is associated with.</p></li>
+<li><p><strong>application</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Name of the Beanstalk Application the version is associated with.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN assigned by AWS for this Elastic Beanstalk Application.</p></li>
-<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – S3 bucket that contains the Application Version source bundle.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – S3 bucket that contains the Application Version source bundle.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Short description of the Application Version.</p></li>
 <li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – On delete, force an Application Version to be deleted when it may be in use
 by multiple Elastic Beanstalk Environments.</p></li>
@@ -239,9 +234,6 @@ by multiple Elastic Beanstalk Environments.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application_version.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -284,17 +276,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.AwaitableGetApplicationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">AwaitableGetApplicationResult</code><span class="sig-paren">(</span><em class="sig-param">appversion_lifecycle=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.AwaitableGetApplicationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">AwaitableGetApplicationResult</code><span class="sig-paren">(</span><em class="sig-param">appversion_lifecycle=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.AwaitableGetApplicationResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.AwaitableGetHostedZoneResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">AwaitableGetHostedZoneResult</code><span class="sig-paren">(</span><em class="sig-param">region=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.AwaitableGetHostedZoneResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">AwaitableGetHostedZoneResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.AwaitableGetHostedZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.AwaitableGetSolutionStackResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">AwaitableGetSolutionStackResult</code><span class="sig-paren">(</span><em class="sig-param">most_recent=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.AwaitableGetSolutionStackResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">AwaitableGetSolutionStackResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_regex=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.AwaitableGetSolutionStackResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -310,6 +302,9 @@ application with the same configuration settings.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> - value for the configuration option</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> - (Optional) resource name for <a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalingscheduledaction">scheduled action</a></p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_configuration_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_configuration_template.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -334,9 +329,6 @@ off of. Example stacks can be found in the [Amazon API documentation][1]</p></li
 <li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_configuration_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_configuration_template.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.ConfigurationTemplate.application">
 <code class="sig-name descname">application</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ConfigurationTemplate.application" title="Permalink to this definition">¶</a></dt>
@@ -412,9 +404,6 @@ off of. Example stacks can be found in the [Amazon API documentation][1]</p></li
 <li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_configuration_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_configuration_template.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -472,12 +461,15 @@ for supported options and examples.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> - value for the configuration option</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> - (Optional) resource name for <a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalingscheduledaction">scheduled action</a></p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_environment.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>application</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the application that contains the version
+<li><p><strong>application</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Name of the application that contains the version
 to be deployed</p></li>
 <li><p><strong>cname_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Prefix to use for the fully qualified DNS name of
 the Environment.</p></li>
@@ -517,9 +509,6 @@ in the application URL</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_environment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.Environment.all_settings">
 <code class="sig-name descname">all_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.all_settings" title="Permalink to this definition">¶</a></dt>
@@ -698,7 +687,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>all_settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from <code class="docutils literal notranslate"><span class="pre">setting</span></code> in
 the configuration.</p></li>
-<li><p><strong>application</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the application that contains the version
+<li><p><strong>application</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Name of the application that contains the version
 to be deployed</p></li>
 <li><p><strong>autoscaling_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The autoscaling groups used by this Environment.</p></li>
 <li><p><strong>cname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Fully qualified DNS name for this Environment.</p></li>
@@ -755,9 +744,6 @@ in the application URL</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_environment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -800,7 +786,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.GetApplicationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">GetApplicationResult</code><span class="sig-paren">(</span><em class="sig-param">appversion_lifecycle=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetApplicationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">GetApplicationResult</code><span class="sig-paren">(</span><em class="sig-param">appversion_lifecycle=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetApplicationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getApplication.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.GetApplicationResult.arn">
@@ -824,36 +810,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.GetHostedZoneResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">GetHostedZoneResult</code><span class="sig-paren">(</span><em class="sig-param">region=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetHostedZoneResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">GetHostedZoneResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetHostedZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getHostedZone.</p>
-<dl class="attribute">
-<dt id="pulumi_aws.elasticbeanstalk.GetHostedZoneResult.region">
-<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetHostedZoneResult.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>The region of the hosted zone.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.GetHostedZoneResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetHostedZoneResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.elasticbeanstalk.GetHostedZoneResult.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetHostedZoneResult.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region of the hosted zone.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.GetSolutionStackResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">GetSolutionStackResult</code><span class="sig-paren">(</span><em class="sig-param">most_recent=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetSolutionStackResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">GetSolutionStackResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_regex=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetSolutionStackResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSolutionStack.</p>
-<dl class="attribute">
-<dt id="pulumi_aws.elasticbeanstalk.GetSolutionStackResult.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetSolutionStackResult.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the solution stack.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.GetSolutionStackResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetSolutionStackResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticbeanstalk.GetSolutionStackResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetSolutionStackResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the solution stack.</p>
 </dd></dl>
 
 </dd></dl>
@@ -862,34 +848,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticbeanstalk.get_application">
 <code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">get_application</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.get_application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about an Elastic Beanstalk Application.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_application.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the application</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_application.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.elasticbeanstalk.get_hosted_zone">
 <code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">get_hosted_zone</code><span class="sig-paren">(</span><em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.get_hosted_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an <a class="reference external" href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region">elastic beanstalk hosted zone</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_hosted_zone.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_hosted_zone.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>region</strong> (<em>str</em>) – The region you’d like the zone for. By default, fetches the current region.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_hosted_zone.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_hosted_zone.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.elasticbeanstalk.get_solution_stack">
 <code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">get_solution_stack</code><span class="sig-paren">(</span><em class="sig-param">most_recent=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.get_solution_stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the name of a elastic beanstalk solution stack.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_solution_stack.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_solution_stack.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -901,9 +890,6 @@ AWS documentation for reference solution stack names.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_solution_stack.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_solution_stack.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

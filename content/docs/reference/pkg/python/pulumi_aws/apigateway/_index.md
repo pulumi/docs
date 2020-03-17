@@ -19,6 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a settings of an API Gateway Account. Settings is applied region-wide per <code class="docutils literal notranslate"><span class="pre">provider</span></code> block.</p>
 <blockquote>
 <div><p><strong>Note:</strong> As there is no API method for deleting account settings or resetting it to defaults, destroying this resource will keep your account settings intact</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_account.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_account.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -31,9 +32,6 @@ Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API 
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_account.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_account.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.Account.cloudwatch_role_arn">
 <code class="sig-name descname">cloudwatch_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Account.cloudwatch_role_arn" title="Permalink to this definition">¶</a></dt>
@@ -48,7 +46,7 @@ Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API 
 <dd><p>Account-Level throttle settings. See exported fields below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">burstLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The absolute maximum number of times API Gateway allows the API to be called per second (RPS).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of times API Gateway allows the API to be called per second on average (RPS).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rate_limit</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of times API Gateway allows the API to be called per second on average (RPS).</p></li>
 </ul>
 </dd></dl>
 
@@ -74,11 +72,8 @@ Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API 
 <p>The <strong>throttle_settings</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">burstLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The absolute maximum number of times API Gateway allows the API to be called per second (RPS).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of times API Gateway allows the API to be called per second on average (RPS).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rate_limit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of times API Gateway allows the API to be called per second on average (RPS).</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_account.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_account.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -125,6 +120,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides an API Gateway API Key.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Since the API Gateway usage plans feature was launched on August 11, 2016, usage plans are now <strong>required</strong> to associate an API key with an API stage.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_api_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_api_key.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -139,9 +135,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_api_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_api_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.ApiKey.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.ApiKey.arn" title="Permalink to this definition">¶</a></dt>
@@ -212,9 +205,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_api_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_api_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -259,6 +249,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.Authorizer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">Authorizer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authorizer_credentials=None</em>, <em class="sig-param">authorizer_result_ttl_in_seconds=None</em>, <em class="sig-param">authorizer_uri=None</em>, <em class="sig-param">identity_source=None</em>, <em class="sig-param">identity_validation_expression=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">provider_arns=None</em>, <em class="sig-param">rest_api=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Authorizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway Authorizer.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_authorizer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_authorizer.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -280,15 +273,12 @@ the client receives a 401 Unauthorized response.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the authorizer</p></li>
 <li><p><strong>provider_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the Amazon Cognito user pool ARNs.
 Each element is of this format: <code class="docutils literal notranslate"><span class="pre">arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}</span></code>.</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the authorizer. Possible values are <code class="docutils literal notranslate"><span class="pre">TOKEN</span></code> for a Lambda function using a single authorization token submitted in a custom header, <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code> for a Lambda function using incoming request parameters, or <code class="docutils literal notranslate"><span class="pre">COGNITO_USER_POOLS</span></code> for using an Amazon Cognito user pool.
 Defaults to <code class="docutils literal notranslate"><span class="pre">TOKEN</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_authorizer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_authorizer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.Authorizer.authorizer_credentials">
 <code class="sig-name descname">authorizer_credentials</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Authorizer.authorizer_credentials" title="Permalink to this definition">¶</a></dt>
@@ -380,15 +370,12 @@ the client receives a 401 Unauthorized response.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the authorizer</p></li>
 <li><p><strong>provider_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the Amazon Cognito user pool ARNs.
 Each element is of this format: <code class="docutils literal notranslate"><span class="pre">arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}</span></code>.</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the authorizer. Possible values are <code class="docutils literal notranslate"><span class="pre">TOKEN</span></code> for a Lambda function using a single authorization token submitted in a custom header, <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code> for a Lambda function using incoming request parameters, or <code class="docutils literal notranslate"><span class="pre">COGNITO_USER_POOLS</span></code> for using an Amazon Cognito user pool.
 Defaults to <code class="docutils literal notranslate"><span class="pre">TOKEN</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_authorizer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_authorizer.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -436,12 +423,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.AwaitableGetResourceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">AwaitableGetResourceResult</code><span class="sig-paren">(</span><em class="sig-param">parent_id=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">path_part=None</em>, <em class="sig-param">rest_api_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.AwaitableGetResourceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">AwaitableGetResourceResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">parent_id=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">path_part=None</em>, <em class="sig-param">rest_api_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.AwaitableGetResourceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.AwaitableGetRestApiResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">AwaitableGetRestApiResult</code><span class="sig-paren">(</span><em class="sig-param">api_key_source=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">binary_media_types=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">endpoint_configurations=None</em>, <em class="sig-param">execution_arn=None</em>, <em class="sig-param">minimum_compression_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">root_resource_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.AwaitableGetRestApiResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">AwaitableGetRestApiResult</code><span class="sig-paren">(</span><em class="sig-param">api_key_source=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">binary_media_types=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">endpoint_configurations=None</em>, <em class="sig-param">execution_arn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">minimum_compression_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">root_resource_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.AwaitableGetRestApiResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -451,31 +438,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.BasePathMapping">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">BasePathMapping</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">rest_api=None</em>, <em class="sig-param">base_path=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">stage_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.BasePathMapping" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">BasePathMapping</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">base_path=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">rest_api=None</em>, <em class="sig-param">stage_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.BasePathMapping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Connects a custom domain name registered via <code class="docutils literal notranslate"><span class="pre">apigateway.DomainName</span></code>
 with a deployed API so that its methods can be called via the
 custom domain name.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_base_path_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_base_path_mapping.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the API to connect.</p></li>
 <li><p><strong>base_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path segment that must be prepended to the path when accessing the API via this mapping. If omitted, the API is exposed at the root of the given domain.</p></li>
 <li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The already-registered domain name to connect the API to.</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The id of the API to connect.</p></li>
 <li><p><strong>stage_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a specific deployment stage to expose at the given path. If omitted, callers may select any stage by including its name as a path element after the base path.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_base_path_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_base_path_mapping.html.markdown</a>.</p>
-</div></blockquote>
-<dl class="attribute">
-<dt id="pulumi_aws.apigateway.BasePathMapping.rest_api">
-<code class="sig-name descname">rest_api</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.BasePathMapping.rest_api" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the API to connect.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.BasePathMapping.base_path">
 <code class="sig-name descname">base_path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.BasePathMapping.base_path" title="Permalink to this definition">¶</a></dt>
@@ -489,6 +470,12 @@ custom domain name.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.apigateway.BasePathMapping.rest_api">
+<code class="sig-name descname">rest_api</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.BasePathMapping.rest_api" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the API to connect.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.apigateway.BasePathMapping.stage_name">
 <code class="sig-name descname">stage_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.BasePathMapping.stage_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of a specific deployment stage to expose at the given path. If omitted, callers may select any stage by including its name as a path element after the base path.</p>
@@ -496,7 +483,7 @@ custom domain name.</p>
 
 <dl class="method">
 <dt id="pulumi_aws.apigateway.BasePathMapping.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">rest_api=None</em>, <em class="sig-param">base_path=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">stage_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.BasePathMapping.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">base_path=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">rest_api=None</em>, <em class="sig-param">stage_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.BasePathMapping.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing BasePathMapping resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -505,16 +492,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the API to connect.</p></li>
 <li><p><strong>base_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path segment that must be prepended to the path when accessing the API via this mapping. If omitted, the API is exposed at the root of the given domain.</p></li>
 <li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The already-registered domain name to connect the API to.</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The id of the API to connect.</p></li>
 <li><p><strong>stage_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a specific deployment stage to expose at the given path. If omitted, callers may select any stage by including its name as a path element after the base path.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_base_path_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_base_path_mapping.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -559,6 +543,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.ClientCertificate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">ClientCertificate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.ClientCertificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway Client Certificate.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_client_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_client_certificate.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -569,9 +556,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_client_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_client_certificate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.ClientCertificate.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.ClientCertificate.arn" title="Permalink to this definition">¶</a></dt>
@@ -628,9 +612,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_client_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_client_certificate.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -678,6 +659,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> Depends on having <code class="docutils literal notranslate"><span class="pre">apigateway.Integration</span></code> inside your rest api (which in turn depends on <code class="docutils literal notranslate"><span class="pre">apigateway.Method</span></code>). To avoid race conditions
 you might need to add an explicit <code class="docutils literal notranslate"><span class="pre">depends_on</span> <span class="pre">=</span> <span class="pre">[&quot;aws_api_gateway_integration.name&quot;]</span></code>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_deployment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_deployment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -685,16 +667,13 @@ you might need to add an explicit <code class="docutils literal notranslate"><sp
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the deployment</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 <li><p><strong>stage_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the stage</p></li>
 <li><p><strong>stage_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the stage. If the specified stage already exists, it will be updated to point to the new deployment. If the stage does not exist, a new one will be created and point to this deployment.</p></li>
 <li><p><strong>variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map that defines variables for the stage</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_deployment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_deployment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.Deployment.created_date">
 <code class="sig-name descname">created_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Deployment.created_date" title="Permalink to this definition">¶</a></dt>
@@ -764,16 +743,13 @@ when allowing API Gateway to invoke a Lambda function,
 e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod</span></code></p></li>
 <li><p><strong>invoke_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to invoke the API pointing to the stage,
 e.g. <code class="docutils literal notranslate"><span class="pre">https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod</span></code></p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 <li><p><strong>stage_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the stage</p></li>
 <li><p><strong>stage_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the stage. If the specified stage already exists, it will be updated to point to the new deployment. If the stage does not exist, a new one will be created and point to this deployment.</p></li>
 <li><p><strong>variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map that defines variables for the stage</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_deployment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_deployment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -818,6 +794,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.DocumentationPart">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">DocumentationPart</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">rest_api_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.DocumentationPart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a settings of an API Gateway Documentation Part.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_documentation_part.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_documentation_part.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -837,9 +816,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">status_code</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP status code of a response. The default value is <code class="docutils literal notranslate"><span class="pre">*</span></code> for any status code.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of API entity to which the documentation content applies. e.g. <code class="docutils literal notranslate"><span class="pre">API</span></code>, <code class="docutils literal notranslate"><span class="pre">METHOD</span></code> or <code class="docutils literal notranslate"><span class="pre">REQUEST_BODY</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_documentation_part.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_documentation_part.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.DocumentationPart.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.DocumentationPart.location" title="Permalink to this definition">¶</a></dt>
@@ -890,9 +866,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">status_code</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP status code of a response. The default value is <code class="docutils literal notranslate"><span class="pre">*</span></code> for any status code.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of API entity to which the documentation content applies. e.g. <code class="docutils literal notranslate"><span class="pre">API</span></code>, <code class="docutils literal notranslate"><span class="pre">METHOD</span></code> or <code class="docutils literal notranslate"><span class="pre">REQUEST_BODY</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_documentation_part.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_documentation_part.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -937,6 +910,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.DocumentationVersion">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">DocumentationVersion</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">rest_api_id=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.DocumentationVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage an API Gateway Documentation Version.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_documentation_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_documentation_version.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -948,9 +924,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_documentation_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_documentation_version.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.DocumentationVersion.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.DocumentationVersion.description" title="Permalink to this definition">¶</a></dt>
@@ -986,9 +959,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_documentation_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_documentation_version.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1056,6 +1026,7 @@ from the validation resource where it will be available after the resource creat
 <code class="docutils literal notranslate"><span class="pre">regional_certificate_arn</span> <span class="pre">=</span> <span class="pre">aws_acm_certificate_validation.cert.certificate_arn</span></code>.</p>
 <p><strong>Note:</strong> All arguments including the private key will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_domain_name.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_domain_name.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1089,9 +1060,6 @@ domain certificate given in <code class="docutils literal notranslate"><span cla
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">types</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A list of endpoint types. This resource currently only supports managing a single value. Valid values: <code class="docutils literal notranslate"><span class="pre">EDGE</span></code> or <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>. If unspecified, defaults to <code class="docutils literal notranslate"><span class="pre">EDGE</span></code>. Must be declared as <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code> in non-Commercial partitions. Refer to the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html">documentation</a> for more information on the difference between edge-optimized and regional APIs.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_domain_name.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_domain_name.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.DomainName.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.DomainName.arn" title="Permalink to this definition">¶</a></dt>
@@ -1254,9 +1222,6 @@ that can be used to create a Route53 alias record for the distribution.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">types</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A list of endpoint types. This resource currently only supports managing a single value. Valid values: <code class="docutils literal notranslate"><span class="pre">EDGE</span></code> or <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>. If unspecified, defaults to <code class="docutils literal notranslate"><span class="pre">EDGE</span></code>. Must be declared as <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code> in non-Commercial partitions. Refer to the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html">documentation</a> for more information on the difference between edge-optimized and regional APIs.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_domain_name.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_domain_name.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1353,8 +1318,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.GetResourceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">GetResourceResult</code><span class="sig-paren">(</span><em class="sig-param">parent_id=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">path_part=None</em>, <em class="sig-param">rest_api_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetResourceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">GetResourceResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">parent_id=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">path_part=None</em>, <em class="sig-param">rest_api_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetResourceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getResource.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetResourceResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetResourceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.GetResourceResult.parent_id">
 <code class="sig-name descname">parent_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetResourceResult.parent_id" title="Permalink to this definition">¶</a></dt>
@@ -1367,17 +1338,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Set to the path relative to the parent Resource.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.apigateway.GetResourceResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetResourceResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.GetRestApiResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">GetRestApiResult</code><span class="sig-paren">(</span><em class="sig-param">api_key_source=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">binary_media_types=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">endpoint_configurations=None</em>, <em class="sig-param">execution_arn=None</em>, <em class="sig-param">minimum_compression_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">root_resource_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">GetRestApiResult</code><span class="sig-paren">(</span><em class="sig-param">api_key_source=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">binary_media_types=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">endpoint_configurations=None</em>, <em class="sig-param">execution_arn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">minimum_compression_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">root_resource_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRestApi.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.GetRestApiResult.api_key_source">
@@ -1416,6 +1381,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetRestApiResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.apigateway.GetRestApiResult.minimum_compression_size">
 <code class="sig-name descname">minimum_compression_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult.minimum_compression_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Minimum response size to compress for the REST API.</p>
@@ -1437,12 +1408,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.GetRestApiResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Key-value mapping of resource tags.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.apigateway.GetRestApiResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1493,6 +1458,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.Integration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cache_key_parameters=None</em>, <em class="sig-param">cache_namespace=None</em>, <em class="sig-param">connection_id=None</em>, <em class="sig-param">connection_type=None</em>, <em class="sig-param">content_handling=None</em>, <em class="sig-param">credentials=None</em>, <em class="sig-param">http_method=None</em>, <em class="sig-param">integration_http_method=None</em>, <em class="sig-param">passthrough_behavior=None</em>, <em class="sig-param">request_parameters=None</em>, <em class="sig-param">request_templates=None</em>, <em class="sig-param">resource_id=None</em>, <em class="sig-param">rest_api=None</em>, <em class="sig-param">timeout_milliseconds=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an HTTP Method Integration for an API Gateway Integration.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1516,7 +1484,7 @@ e.g. Lambda function <a class="reference external" href="https://github.com/awsl
 For example: <code class="docutils literal notranslate"><span class="pre">request_parameters</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">&quot;integration.request.header.X-Some-Other-Header&quot;</span> <span class="pre">=</span> <span class="pre">&quot;method.request.header.X-Some-Header&quot;</span> <span class="pre">}</span></code></p></li>
 <li><p><strong>request_templates</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of the integration’s request templates.</p></li>
 <li><p><strong>resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API resource ID.</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API.</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API.</p></li>
 <li><p><strong>timeout_milliseconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The integration input’s <a class="reference external" href="https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/">type</a>. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> (for HTTP backends), <code class="docutils literal notranslate"><span class="pre">MOCK</span></code> (not calling any real backend), <code class="docutils literal notranslate"><span class="pre">AWS</span></code> (for AWS services), <code class="docutils literal notranslate"><span class="pre">AWS_PROXY</span></code> (for Lambda proxy integration) and <code class="docutils literal notranslate"><span class="pre">HTTP_PROXY</span></code> (for HTTP proxy integration). An <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTP_PROXY</span></code> integration with a <code class="docutils literal notranslate"><span class="pre">connection_type</span></code> of <code class="docutils literal notranslate"><span class="pre">VPC_LINK</span></code> is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.</p></li>
 <li><p><strong>uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The input’s URI. <strong>Required</strong> if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">AWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AWS_PROXY</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTP_PROXY</span></code>.
@@ -1525,9 +1493,6 @@ e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:apigat
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.Integration.cache_key_parameters">
 <code class="sig-name descname">cache_key_parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Integration.cache_key_parameters" title="Permalink to this definition">¶</a></dt>
@@ -1663,7 +1628,7 @@ e.g. Lambda function <a class="reference external" href="https://github.com/awsl
 For example: <code class="docutils literal notranslate"><span class="pre">request_parameters</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">&quot;integration.request.header.X-Some-Other-Header&quot;</span> <span class="pre">=</span> <span class="pre">&quot;method.request.header.X-Some-Header&quot;</span> <span class="pre">}</span></code></p></li>
 <li><p><strong>request_templates</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of the integration’s request templates.</p></li>
 <li><p><strong>resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API resource ID.</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API.</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API.</p></li>
 <li><p><strong>timeout_milliseconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The integration input’s <a class="reference external" href="https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/">type</a>. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> (for HTTP backends), <code class="docutils literal notranslate"><span class="pre">MOCK</span></code> (not calling any real backend), <code class="docutils literal notranslate"><span class="pre">AWS</span></code> (for AWS services), <code class="docutils literal notranslate"><span class="pre">AWS_PROXY</span></code> (for Lambda proxy integration) and <code class="docutils literal notranslate"><span class="pre">HTTP_PROXY</span></code> (for HTTP proxy integration). An <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTP_PROXY</span></code> integration with a <code class="docutils literal notranslate"><span class="pre">connection_type</span></code> of <code class="docutils literal notranslate"><span class="pre">VPC_LINK</span></code> is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.</p>
 </p></li>
@@ -1673,9 +1638,6 @@ e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:apigat
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1723,6 +1685,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> Depends on having <code class="docutils literal notranslate"><span class="pre">apigateway.Integration</span></code> inside your rest api. To ensure this
 you might need to add an explicit <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> for clean runs.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration_response.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration_response.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1735,7 +1698,7 @@ you might need to add an explicit <code class="docutils literal notranslate"><sp
 <li><p><strong>response_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of response parameters that can be read from the backend response.
 For example: <code class="docutils literal notranslate"><span class="pre">response_parameters</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">&quot;method.response.header.X-Some-Header&quot;</span> <span class="pre">=</span> <span class="pre">&quot;integration.response.header.X-Some-Other-Header&quot;</span> <span class="pre">}</span></code></p></li>
 <li><p><strong>response_templates</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map specifying the templates used to transform the integration response body</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 <li><p><strong>selection_pattern</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the regular expression pattern used to choose
 an integration response based on the response from the backend. Setting this to <code class="docutils literal notranslate"><span class="pre">-</span></code> makes the integration the default one.
 If the backend is an <code class="docutils literal notranslate"><span class="pre">AWS</span></code> Lambda function, the AWS Lambda function error header is matched.
@@ -1744,9 +1707,6 @@ For all other <code class="docutils literal notranslate"><span class="pre">HTTP<
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration_response.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration_response.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.IntegrationResponse.content_handling">
 <code class="sig-name descname">content_handling</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.IntegrationResponse.content_handling" title="Permalink to this definition">¶</a></dt>
@@ -1816,7 +1776,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>response_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of response parameters that can be read from the backend response.
 For example: <code class="docutils literal notranslate"><span class="pre">response_parameters</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">&quot;method.response.header.X-Some-Header&quot;</span> <span class="pre">=</span> <span class="pre">&quot;integration.response.header.X-Some-Other-Header&quot;</span> <span class="pre">}</span></code></p></li>
 <li><p><strong>response_templates</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map specifying the templates used to transform the integration response body</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 <li><p><strong>selection_pattern</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the regular expression pattern used to choose
 an integration response based on the response from the backend. Setting this to <code class="docutils literal notranslate"><span class="pre">-</span></code> makes the integration the default one.
 If the backend is an <code class="docutils literal notranslate"><span class="pre">AWS</span></code> Lambda function, the AWS Lambda function error header is matched.
@@ -1825,9 +1785,6 @@ For all other <code class="docutils literal notranslate"><span class="pre">HTTP<
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration_response.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration_response.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1872,6 +1829,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.Method">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">Method</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_key_required=None</em>, <em class="sig-param">authorization=None</em>, <em class="sig-param">authorization_scopes=None</em>, <em class="sig-param">authorizer_id=None</em>, <em class="sig-param">http_method=None</em>, <em class="sig-param">request_models=None</em>, <em class="sig-param">request_parameters=None</em>, <em class="sig-param">request_validator_id=None</em>, <em class="sig-param">resource_id=None</em>, <em class="sig-param">rest_api=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Method" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a HTTP Method for an API Gateway Resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1889,13 +1849,10 @@ and value is either <code class="docutils literal notranslate"><span class="pre"
 For example: <code class="docutils literal notranslate"><span class="pre">request_parameters</span> <span class="pre">=</span> <span class="pre">{&quot;method.request.header.X-Some-Header&quot;</span> <span class="pre">=</span> <span class="pre">true</span> <span class="pre">&quot;method.request.querystring.some-query-param&quot;</span> <span class="pre">=</span> <span class="pre">true}</span></code> would define that the header <code class="docutils literal notranslate"><span class="pre">X-Some-Header</span></code> and the query string <code class="docutils literal notranslate"><span class="pre">some-query-param</span></code> must be provided in the request.</p></li>
 <li><p><strong>request_validator_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a <code class="docutils literal notranslate"><span class="pre">apigateway.RequestValidator</span></code></p></li>
 <li><p><strong>resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API resource ID</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.Method.api_key_required">
 <code class="sig-name descname">api_key_required</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Method.api_key_required" title="Permalink to this definition">¶</a></dt>
@@ -1982,13 +1939,10 @@ and value is either <code class="docutils literal notranslate"><span class="pre"
 For example: <code class="docutils literal notranslate"><span class="pre">request_parameters</span> <span class="pre">=</span> <span class="pre">{&quot;method.request.header.X-Some-Header&quot;</span> <span class="pre">=</span> <span class="pre">true</span> <span class="pre">&quot;method.request.querystring.some-query-param&quot;</span> <span class="pre">=</span> <span class="pre">true}</span></code> would define that the header <code class="docutils literal notranslate"><span class="pre">X-Some-Header</span></code> and the query string <code class="docutils literal notranslate"><span class="pre">some-query-param</span></code> must be provided in the request.</p></li>
 <li><p><strong>request_validator_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a <code class="docutils literal notranslate"><span class="pre">apigateway.RequestValidator</span></code></p></li>
 <li><p><strong>resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API resource ID</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2033,6 +1987,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.MethodResponse">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">MethodResponse</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">http_method=None</em>, <em class="sig-param">resource_id=None</em>, <em class="sig-param">response_models=None</em>, <em class="sig-param">response_parameters=None</em>, <em class="sig-param">rest_api=None</em>, <em class="sig-param">status_code=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.MethodResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an HTTP Method Response for an API Gateway Resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_response.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_response.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2044,14 +2001,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>response_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of response parameters that can be sent to the caller.
 For example: <code class="docutils literal notranslate"><span class="pre">response_parameters</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">&quot;method.response.header.X-Some-Header&quot;</span> <span class="pre">=</span> <span class="pre">true</span> <span class="pre">}</span></code>
 would define that the header <code class="docutils literal notranslate"><span class="pre">X-Some-Header</span></code> can be provided on the response.</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 <li><p><strong>status_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The HTTP status code</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_response.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_response.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.MethodResponse.http_method">
 <code class="sig-name descname">http_method</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.MethodResponse.http_method" title="Permalink to this definition">¶</a></dt>
@@ -2107,14 +2061,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>response_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of response parameters that can be sent to the caller.
 For example: <code class="docutils literal notranslate"><span class="pre">response_parameters</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">&quot;method.response.header.X-Some-Header&quot;</span> <span class="pre">=</span> <span class="pre">true</span> <span class="pre">}</span></code>
 would define that the header <code class="docutils literal notranslate"><span class="pre">X-Some-Header</span></code> can be provided on the response.</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 <li><p><strong>status_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The HTTP status code</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_response.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_response.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2159,13 +2110,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.MethodSettings">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">MethodSettings</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">method_path=None</em>, <em class="sig-param">rest_api=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">stage_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.MethodSettings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway Method Settings, e.g. logging or monitoring.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_settings.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_settings.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>method_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Method path defined as <code class="docutils literal notranslate"><span class="pre">{resource_path}/{http_method}</span></code> for an individual method override, or <code class="docutils literal notranslate"><span class="pre">*/*</span></code> for overriding all methods in the stage.</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the REST API</p></li>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The settings block, see below.</p></li>
 <li><p><strong>stage_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the stage</p></li>
 </ul>
@@ -2184,9 +2138,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">throttlingRateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the throttling rate limit.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">unauthorizedCacheControlHeaderStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how to handle unauthorized requests for cache invalidation. The available values are <code class="docutils literal notranslate"><span class="pre">FAIL_WITH_403</span></code>, <code class="docutils literal notranslate"><span class="pre">SUCCEED_WITH_RESPONSE_HEADER</span></code>, <code class="docutils literal notranslate"><span class="pre">SUCCEED_WITHOUT_RESPONSE_HEADER</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_settings.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_settings.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.MethodSettings.method_path">
 <code class="sig-name descname">method_path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.MethodSettings.method_path" title="Permalink to this definition">¶</a></dt>
@@ -2235,7 +2186,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>method_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Method path defined as <code class="docutils literal notranslate"><span class="pre">{resource_path}/{http_method}</span></code> for an individual method override, or <code class="docutils literal notranslate"><span class="pre">*/*</span></code> for overriding all methods in the stage.</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the REST API</p></li>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The settings block, see below.</p></li>
 <li><p><strong>stage_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the stage</p></li>
 </ul>
@@ -2254,9 +2205,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">throttlingRateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the throttling rate limit.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">unauthorizedCacheControlHeaderStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how to handle unauthorized requests for cache invalidation. The available values are <code class="docutils literal notranslate"><span class="pre">FAIL_WITH_403</span></code>, <code class="docutils literal notranslate"><span class="pre">SUCCEED_WITH_RESPONSE_HEADER</span></code>, <code class="docutils literal notranslate"><span class="pre">SUCCEED_WITHOUT_RESPONSE_HEADER</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_settings.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_settings.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2301,6 +2249,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.Model">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rest_api=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Model for a API Gateway.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_model.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_model.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2309,14 +2260,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The content type of the model</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the model</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the model</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 <li><p><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The schema of the model in a JSON form</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_model.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_model.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.Model.content_type">
 <code class="sig-name descname">content_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Model.content_type" title="Permalink to this definition">¶</a></dt>
@@ -2361,14 +2309,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The content type of the model</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the model</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the model</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 <li><p><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The schema of the model in a JSON form</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_model.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_model.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2413,21 +2358,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.RequestValidator">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">RequestValidator</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rest_api=None</em>, <em class="sig-param">validate_request_body=None</em>, <em class="sig-param">validate_request_parameters=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.RequestValidator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Gateway Request Validator.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_request_validator.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_request_validator.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the request validator</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated Rest API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated Rest API</p></li>
 <li><p><strong>validate_request_body</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether to validate request body. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>validate_request_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether to validate request parameters. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_request_validator.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_request_validator.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.RequestValidator.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.RequestValidator.name" title="Permalink to this definition">¶</a></dt>
@@ -2464,15 +2409,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the request validator</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated Rest API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated Rest API</p></li>
 <li><p><strong>validate_request_body</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether to validate request body. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>validate_request_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether to validate request parameters. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_request_validator.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_request_validator.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2517,6 +2459,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.Resource">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">parent_id=None</em>, <em class="sig-param">path_part=None</em>, <em class="sig-param">rest_api=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway Resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_resource.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_resource.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2524,13 +2469,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>parent_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the parent API resource</p></li>
 <li><p><strong>path_part</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The last path segment of this API resource.</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_resource.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_resource.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.Resource.parent_id">
 <code class="sig-name descname">parent_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Resource.parent_id" title="Permalink to this definition">¶</a></dt>
@@ -2569,13 +2511,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>parent_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the parent API resource</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The complete path for this API resource, including all parent paths.</p></li>
 <li><p><strong>path_part</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The last path segment of this API resource.</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_resource.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_resource.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2620,6 +2559,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.Response">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">Response</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">response_parameters=None</em>, <em class="sig-param">response_templates=None</em>, <em class="sig-param">response_type=None</em>, <em class="sig-param">rest_api_id=None</em>, <em class="sig-param">status_code=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Response" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway Gateway Response for a REST API Gateway.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_gateway_response.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_gateway_response.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2633,9 +2575,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_gateway_response.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_gateway_response.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.Response.response_parameters">
 <code class="sig-name descname">response_parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Response.response_parameters" title="Permalink to this definition">¶</a></dt>
@@ -2685,9 +2624,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_gateway_response.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_gateway_response.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2732,6 +2668,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.RestApi">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">RestApi</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_key_source=None</em>, <em class="sig-param">binary_media_types=None</em>, <em class="sig-param">body=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">endpoint_configuration=None</em>, <em class="sig-param">minimum_compression_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.RestApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway REST API.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_rest_api.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_rest_api.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2753,9 +2692,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">types</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A list of endpoint types. This resource currently only supports managing a single value. Valid values: <code class="docutils literal notranslate"><span class="pre">EDGE</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE</span></code>. If unspecified, defaults to <code class="docutils literal notranslate"><span class="pre">EDGE</span></code>. Must be declared as <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code> in non-Commercial partitions. Refer to the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html">documentation</a> for more information on the difference between edge-optimized and regional APIs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpcEndpointIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of VPC Endpoint Ids. It is only supported for PRIVATE endpoint type.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_rest_api.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_rest_api.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.RestApi.api_key_source">
 <code class="sig-name descname">api_key_source</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.RestApi.api_key_source" title="Permalink to this definition">¶</a></dt>
@@ -2867,9 +2803,6 @@ e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:execut
 <li><p><code class="docutils literal notranslate"><span class="pre">types</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A list of endpoint types. This resource currently only supports managing a single value. Valid values: <code class="docutils literal notranslate"><span class="pre">EDGE</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE</span></code>. If unspecified, defaults to <code class="docutils literal notranslate"><span class="pre">EDGE</span></code>. Must be declared as <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code> in non-Commercial partitions. Refer to the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html">documentation</a> for more information on the difference between edge-optimized and regional APIs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpcEndpointIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of VPC Endpoint Ids. It is only supported for PRIVATE endpoint type.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_rest_api.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_rest_api.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2914,6 +2847,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.Stage">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">Stage</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_log_settings=None</em>, <em class="sig-param">cache_cluster_enabled=None</em>, <em class="sig-param">cache_cluster_size=None</em>, <em class="sig-param">client_certificate_id=None</em>, <em class="sig-param">deployment=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">documentation_version=None</em>, <em class="sig-param">rest_api=None</em>, <em class="sig-param">stage_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">variables=None</em>, <em class="sig-param">xray_tracing_enabled=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Stage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway Stage.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_stage.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_stage.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2924,10 +2860,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>cache_cluster_size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The size of the cache cluster for the stage, if enabled.
 Allowed values include <code class="docutils literal notranslate"><span class="pre">0.5</span></code>, <code class="docutils literal notranslate"><span class="pre">1.6</span></code>, <code class="docutils literal notranslate"><span class="pre">6.1</span></code>, <code class="docutils literal notranslate"><span class="pre">13.5</span></code>, <code class="docutils literal notranslate"><span class="pre">28.4</span></code>, <code class="docutils literal notranslate"><span class="pre">58.2</span></code>, <code class="docutils literal notranslate"><span class="pre">118</span></code> and <code class="docutils literal notranslate"><span class="pre">237</span></code>.</p></li>
 <li><p><strong>client_certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of a client certificate for the stage.</p></li>
-<li><p><strong>deployment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the deployment that the stage points to</p></li>
+<li><p><strong>deployment</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the deployment that the stage points to</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the stage</p></li>
 <li><p><strong>documentation_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the associated API documentation</p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 <li><p><strong>stage_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the stage</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map that defines the stage variables</p></li>
@@ -2937,19 +2873,16 @@ Allowed values include <code class="docutils literal notranslate"><span class="p
 </dl>
 <p>The <strong>access_log_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with <code class="docutils literal notranslate"><span class="pre">amazon-apigateway-</span></code>. Automatically removes trailing <code class="docutils literal notranslate"><span class="pre">:*</span></code> if present.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with <code class="docutils literal notranslate"><span class="pre">amazon-apigateway-</span></code>. Automatically removes trailing <code class="docutils literal notranslate"><span class="pre">:*</span></code> if present.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The formatting and values recorded in the logs. 
 For more information on configuring the log format rules visit the AWS <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html">documentation</a></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_stage.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_stage.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.Stage.access_log_settings">
 <code class="sig-name descname">access_log_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Stage.access_log_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables access logs for the API stage. Detailed below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with <code class="docutils literal notranslate"><span class="pre">amazon-apigateway-</span></code>. Automatically removes trailing <code class="docutils literal notranslate"><span class="pre">:*</span></code> if present.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with <code class="docutils literal notranslate"><span class="pre">amazon-apigateway-</span></code>. Automatically removes trailing <code class="docutils literal notranslate"><span class="pre">:*</span></code> if present.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The formatting and values recorded in the logs. 
 For more information on configuring the log format rules visit the AWS <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html">documentation</a></p></li>
 </ul>
@@ -3060,7 +2993,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>cache_cluster_size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The size of the cache cluster for the stage, if enabled.
 Allowed values include <code class="docutils literal notranslate"><span class="pre">0.5</span></code>, <code class="docutils literal notranslate"><span class="pre">1.6</span></code>, <code class="docutils literal notranslate"><span class="pre">6.1</span></code>, <code class="docutils literal notranslate"><span class="pre">13.5</span></code>, <code class="docutils literal notranslate"><span class="pre">28.4</span></code>, <code class="docutils literal notranslate"><span class="pre">58.2</span></code>, <code class="docutils literal notranslate"><span class="pre">118</span></code> and <code class="docutils literal notranslate"><span class="pre">237</span></code>.</p></li>
 <li><p><strong>client_certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of a client certificate for the stage.</p></li>
-<li><p><strong>deployment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the deployment that the stage points to</p></li>
+<li><p><strong>deployment</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the deployment that the stage points to</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the stage</p></li>
 <li><p><strong>documentation_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the associated API documentation</p></li>
 <li><p><strong>execution_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The execution ARN to be used in <cite>``lambda_permission`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code>
@@ -3068,7 +3001,7 @@ when allowing API Gateway to invoke a Lambda function,
 e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod</span></code></p></li>
 <li><p><strong>invoke_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to invoke the API pointing to the stage,
 e.g. <code class="docutils literal notranslate"><span class="pre">https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod</span></code></p></li>
-<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
+<li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 <li><p><strong>stage_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the stage</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map that defines the stage variables</p></li>
@@ -3078,13 +3011,10 @@ e.g. <code class="docutils literal notranslate"><span class="pre">https://z4675b
 </dl>
 <p>The <strong>access_log_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with <code class="docutils literal notranslate"><span class="pre">amazon-apigateway-</span></code>. Automatically removes trailing <code class="docutils literal notranslate"><span class="pre">:*</span></code> if present.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with <code class="docutils literal notranslate"><span class="pre">amazon-apigateway-</span></code>. Automatically removes trailing <code class="docutils literal notranslate"><span class="pre">:*</span></code> if present.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The formatting and values recorded in the logs. 
 For more information on configuring the log format rules visit the AWS <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html">documentation</a></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_stage.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_stage.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3129,6 +3059,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.UsagePlan">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">UsagePlan</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_stages=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">product_code=None</em>, <em class="sig-param">quota_settings=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">throttle_settings=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.UsagePlan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway Usage Plan.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_usage_plan.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_usage_plan.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3146,7 +3079,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>api_stages</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">apiId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - API Id of the associated API stage in a usage plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">api_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - API Id of the associated API stage in a usage plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - API stage name of the associated API stage in a usage plan.</p></li>
 </ul>
 <p>The <strong>quota_settings</strong> object supports the following:</p>
@@ -3158,17 +3091,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>throttle_settings</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">burstLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The API request steady-state rate limit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rate_limit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The API request steady-state rate limit.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_usage_plan.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_usage_plan.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.UsagePlan.api_stages">
 <code class="sig-name descname">api_stages</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.UsagePlan.api_stages" title="Permalink to this definition">¶</a></dt>
 <dd><p>The associated API stages of the usage plan.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">apiId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - API Id of the associated API stage in a usage plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">api_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - API Id of the associated API stage in a usage plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - API stage name of the associated API stage in a usage plan.</p></li>
 </ul>
 </dd></dl>
@@ -3220,7 +3150,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The throttling limits of the usage plan.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">burstLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The API request steady-state rate limit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rate_limit</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The API request steady-state rate limit.</p></li>
 </ul>
 </dd></dl>
 
@@ -3248,7 +3178,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>api_stages</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">apiId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - API Id of the associated API stage in a usage plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">api_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - API Id of the associated API stage in a usage plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - API stage name of the associated API stage in a usage plan.</p></li>
 </ul>
 <p>The <strong>quota_settings</strong> object supports the following:</p>
@@ -3260,11 +3190,8 @@ properties used to qualify the lookup.</p>
 <p>The <strong>throttle_settings</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">burstLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The API request steady-state rate limit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rate_limit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The API request steady-state rate limit.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_usage_plan.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_usage_plan.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3309,6 +3236,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.UsagePlanKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">UsagePlanKey</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">key_type=None</em>, <em class="sig-param">usage_plan_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.UsagePlanKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway Usage Plan Key.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_usage_plan_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_usage_plan_key.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3320,9 +3250,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_usage_plan_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_usage_plan_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.UsagePlanKey.key_id">
 <code class="sig-name descname">key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.UsagePlanKey.key_id" title="Permalink to this definition">¶</a></dt>
@@ -3372,9 +3299,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_usage_plan_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_usage_plan_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3419,6 +3343,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.VpcLink">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">VpcLink</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.VpcLink" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway VPC Link.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_vpc_link.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_vpc_link.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3431,9 +3358,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_vpc_link.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_vpc_link.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.VpcLink.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.VpcLink.description" title="Permalink to this definition">¶</a></dt>
@@ -3476,9 +3400,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_vpc_link.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_vpc_link.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3524,14 +3445,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">get_key</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the name and value of a pre-existing API Key, for
 example to supply credentials for a dependency microservice.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_api_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_api_key.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The ID of the API Key to look up.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_api_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_api_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -3539,6 +3460,9 @@ example to supply credentials for a dependency microservice.</p>
 <code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><em class="sig-param">path=None</em>, <em class="sig-param">rest_api_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the id of a Resource in API Gateway. 
 To fetch the Resource, you must provide the REST API id as well as the full path.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_resource.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_resource.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3547,9 +3471,6 @@ To fetch the Resource, you must provide the REST API id as well as the full path
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_resource.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_resource.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -3559,14 +3480,14 @@ To fetch the Resource, you must provide the REST API id as well as the full path
 API Gateway. To fetch the REST API you must provide a name to match against. 
 As there is no unique name constraint on REST APIs this data source will 
 error if there is more than one match.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_rest_api.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_rest_api.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the REST API to look up. If no REST API is found with this name, an error will be returned. If multiple REST APIs are found with this name, an error will be returned.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_rest_api.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_rest_api.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -3576,15 +3497,15 @@ error if there is more than one match.</p>
 API Gateway. To fetch the VPC Link you must provide a name to match against. 
 As there is no unique name constraint on API Gateway VPC Links this data source will 
 error if there is more than one match.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_vpc_link.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_vpc_link.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the API Gateway VPC Link to look up. If no API Gateway VPC Link is found with this name, an error will be returned. 
 If multiple API Gateway VPC Links are found with this name, an error will be returned.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_vpc_link.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_vpc_link.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

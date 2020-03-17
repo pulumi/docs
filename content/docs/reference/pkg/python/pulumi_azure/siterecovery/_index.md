@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.siterecovery.Fabric">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.siterecovery.</code><code class="sig-name descname">Fabric</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recovery_vault_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.siterecovery.Fabric" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Azure Site Recovery Replication Fabric within a Recovery Services vault. Only Azure fabrics are supported at this time. Replication Fabrics serve as a container within an Azure region for other Site Recovery resources such as protection containers, protected items, network mappings.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_fabric.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_fabric.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -29,9 +32,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_fabric.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_fabric.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.siterecovery.Fabric.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.siterecovery.Fabric.location" title="Permalink to this definition">¶</a></dt>
@@ -74,9 +74,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_fabric.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_fabric.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -121,6 +118,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.siterecovery.NetworkMapping">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.siterecovery.</code><code class="sig-name descname">NetworkMapping</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recovery_vault_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_network_id=None</em>, <em class="sig-param">source_recovery_fabric_name=None</em>, <em class="sig-param">target_network_id=None</em>, <em class="sig-param">target_recovery_fabric_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.siterecovery.NetworkMapping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a site recovery network mapping on Azure. A network mapping decides how to translate connected netwroks when a VM is migrated from one region to another.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_network_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_network_mapping.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -136,9 +136,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_network_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_network_mapping.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.siterecovery.NetworkMapping.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.siterecovery.NetworkMapping.name" title="Permalink to this definition">¶</a></dt>
@@ -202,9 +199,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_network_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_network_mapping.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -249,6 +243,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.siterecovery.ProtectionContainer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.siterecovery.</code><code class="sig-name descname">ProtectionContainer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recovery_fabric_name=None</em>, <em class="sig-param">recovery_vault_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.siterecovery.ProtectionContainer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Azure Site Recovery protection container. Protection containers serve as containers for replicated VMs and belong to a single region / recovery fabric. Protection containers can contain more than one replicated VM. To replicate a VM, a container must exist in both the source and target Azure regions.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_protection_container.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_protection_container.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -261,9 +258,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_protection_container.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_protection_container.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.siterecovery.ProtectionContainer.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.siterecovery.ProtectionContainer.name" title="Permalink to this definition">¶</a></dt>
@@ -306,9 +300,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_protection_container.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_protection_container.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -353,6 +344,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.siterecovery.ProtectionContainerMapping">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.siterecovery.</code><code class="sig-name descname">ProtectionContainerMapping</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recovery_fabric_name=None</em>, <em class="sig-param">recovery_replication_policy_id=None</em>, <em class="sig-param">recovery_source_protection_container_name=None</em>, <em class="sig-param">recovery_target_protection_container_id=None</em>, <em class="sig-param">recovery_vault_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.siterecovery.ProtectionContainerMapping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Azure recovery vault protection container mapping. A protection container mapping decides how to translate the protection container when a VM is migrated from one region to another.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_protection_container_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_protection_container_mapping.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -368,9 +362,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_protection_container_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_protection_container_mapping.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.siterecovery.ProtectionContainerMapping.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.siterecovery.ProtectionContainerMapping.name" title="Permalink to this definition">¶</a></dt>
@@ -434,9 +425,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_protection_container_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_protection_container_mapping.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -481,6 +469,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.siterecovery.ReplicatedVM">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.siterecovery.</code><code class="sig-name descname">ReplicatedVM</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">managed_disks=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recovery_replication_policy_id=None</em>, <em class="sig-param">recovery_vault_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_recovery_fabric_name=None</em>, <em class="sig-param">source_recovery_protection_container_name=None</em>, <em class="sig-param">source_vm_id=None</em>, <em class="sig-param">target_availability_set_id=None</em>, <em class="sig-param">target_recovery_fabric_id=None</em>, <em class="sig-param">target_recovery_protection_container_id=None</em>, <em class="sig-param">target_resource_group_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.siterecovery.ReplicatedVM" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A replicated VM keeps a copiously updated image of the VM in another region in order to be able to start the VM in that region in case of a disaster.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_replicated_vm.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_replicated_vm.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -508,9 +499,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">targetReplicaDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target_resource_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Id of resource group where the VM should be created when a failover is done.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_replicated_vm.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_replicated_vm.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.siterecovery.ReplicatedVM.managed_disks">
 <code class="sig-name descname">managed_disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.siterecovery.ReplicatedVM.managed_disks" title="Permalink to this definition">¶</a></dt>
@@ -617,9 +605,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetReplicaDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target_resource_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Id of resource group where the VM should be created when a failover is done.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_replicated_vm.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_replicated_vm.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -664,6 +649,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.siterecovery.ReplicationPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.siterecovery.</code><code class="sig-name descname">ReplicationPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_consistent_snapshot_frequency_in_minutes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recovery_point_retention_in_minutes=None</em>, <em class="sig-param">recovery_vault_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.siterecovery.ReplicationPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Azure Site Recovery replication policy within a recovery vault. Replication policies define the frequency at which recovery points are created and how long they are stored.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_replication_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_replication_policy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -677,9 +665,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_replication_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_replication_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.siterecovery.ReplicationPolicy.application_consistent_snapshot_frequency_in_minutes">
 <code class="sig-name descname">application_consistent_snapshot_frequency_in_minutes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.siterecovery.ReplicationPolicy.application_consistent_snapshot_frequency_in_minutes" title="Permalink to this definition">¶</a></dt>
@@ -729,9 +714,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_replication_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_replication_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

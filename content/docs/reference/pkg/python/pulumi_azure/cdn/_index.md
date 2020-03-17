@@ -15,13 +15,16 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.cdn"></span><dl class="class">
 <dt id="pulumi_azure.cdn.AwaitableGetProfileResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cdn.</code><code class="sig-name descname">AwaitableGetProfileResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cdn.AwaitableGetProfileResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cdn.</code><code class="sig-name descname">AwaitableGetProfileResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cdn.AwaitableGetProfileResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.cdn.Endpoint">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cdn.</code><code class="sig-name descname">Endpoint</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">content_types_to_compresses=None</em>, <em class="sig-param">geo_filters=None</em>, <em class="sig-param">is_compression_enabled=None</em>, <em class="sig-param">is_http_allowed=None</em>, <em class="sig-param">is_https_allowed=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">optimization_type=None</em>, <em class="sig-param">origins=None</em>, <em class="sig-param">origin_host_header=None</em>, <em class="sig-param">origin_path=None</em>, <em class="sig-param">probe_path=None</em>, <em class="sig-param">profile_name=None</em>, <em class="sig-param">querystring_caching_behaviour=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cdn.Endpoint" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cdn.</code><code class="sig-name descname">Endpoint</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">content_types_to_compresses=None</em>, <em class="sig-param">geo_filters=None</em>, <em class="sig-param">is_compression_enabled=None</em>, <em class="sig-param">is_http_allowed=None</em>, <em class="sig-param">is_https_allowed=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">optimization_type=None</em>, <em class="sig-param">origin_host_header=None</em>, <em class="sig-param">origin_path=None</em>, <em class="sig-param">origins=None</em>, <em class="sig-param">probe_path=None</em>, <em class="sig-param">profile_name=None</em>, <em class="sig-param">querystring_caching_behaviour=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cdn.Endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>A CDN Endpoint is the entity within a CDN Profile containing configuration information regarding caching behaviors and origins. The CDN Endpoint is exposed using the URL format <span class="raw-html-m2r"><endpointname></span>.azureedge.net.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cdn_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cdn_endpoint.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -35,9 +38,9 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the CDN Endpoint. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>optimization_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – What types of optimization should this CDN Endpoint optimize for? Possible values include <code class="docutils literal notranslate"><span class="pre">DynamicSiteAcceleration</span></code>, <code class="docutils literal notranslate"><span class="pre">GeneralMediaStreaming</span></code>, <code class="docutils literal notranslate"><span class="pre">GeneralWebDelivery</span></code>, <code class="docutils literal notranslate"><span class="pre">LargeFileDownload</span></code> and <code class="docutils literal notranslate"><span class="pre">VideoOnDemandMediaStreaming</span></code>.</p></li>
-<li><p><strong>origins</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each <code class="docutils literal notranslate"><span class="pre">origin</span></code> block supports fields documented below.</p></li>
 <li><p><strong>origin_host_header</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.</p></li>
 <li><p><strong>origin_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path used at for origin requests.</p></li>
+<li><p><strong>origins</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each <code class="docutils literal notranslate"><span class="pre">origin</span></code> block supports fields documented below.</p></li>
 <li><p><strong>probe_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the <code class="docutils literal notranslate"><span class="pre">origin_path</span></code>.</p></li>
 <li><p><strong>profile_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CDN Profile to which to attach the CDN Endpoint.</p></li>
 <li><p><strong>querystring_caching_behaviour</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets query string caching behavior. Allowed values are <code class="docutils literal notranslate"><span class="pre">IgnoreQueryString</span></code>, <code class="docutils literal notranslate"><span class="pre">BypassCaching</span></code> and <code class="docutils literal notranslate"><span class="pre">UseQueryString</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IgnoreQueryString</span></code>.</p></li>
@@ -50,7 +53,7 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">countryCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">relativePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">relative_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>origins</strong> object supports the following:</p>
 <ul class="simple">
@@ -59,9 +62,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">httpsPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the CDN Endpoint. Changing this forces a new resource to be created.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cdn_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cdn_endpoint.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.cdn.Endpoint.content_types_to_compresses">
 <code class="sig-name descname">content_types_to_compresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cdn.Endpoint.content_types_to_compresses" title="Permalink to this definition">¶</a></dt>
@@ -75,7 +75,7 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">countryCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">relativePath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">relative_path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -116,18 +116,6 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_azure.cdn.Endpoint.origins">
-<code class="sig-name descname">origins</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cdn.Endpoint.origins" title="Permalink to this definition">¶</a></dt>
-<dd><p>The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each <code class="docutils literal notranslate"><span class="pre">origin</span></code> block supports fields documented below.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpsPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the CDN Endpoint. Changing this forces a new resource to be created.</p></li>
-</ul>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_azure.cdn.Endpoint.origin_host_header">
 <code class="sig-name descname">origin_host_header</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cdn.Endpoint.origin_host_header" title="Permalink to this definition">¶</a></dt>
 <dd><p>The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.</p>
@@ -137,6 +125,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.cdn.Endpoint.origin_path">
 <code class="sig-name descname">origin_path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cdn.Endpoint.origin_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path used at for origin requests.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.cdn.Endpoint.origins">
+<code class="sig-name descname">origins</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cdn.Endpoint.origins" title="Permalink to this definition">¶</a></dt>
+<dd><p>The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each <code class="docutils literal notranslate"><span class="pre">origin</span></code> block supports fields documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the CDN Endpoint. Changing this forces a new resource to be created.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -171,7 +171,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_azure.cdn.Endpoint.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">content_types_to_compresses=None</em>, <em class="sig-param">geo_filters=None</em>, <em class="sig-param">host_name=None</em>, <em class="sig-param">is_compression_enabled=None</em>, <em class="sig-param">is_http_allowed=None</em>, <em class="sig-param">is_https_allowed=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">optimization_type=None</em>, <em class="sig-param">origins=None</em>, <em class="sig-param">origin_host_header=None</em>, <em class="sig-param">origin_path=None</em>, <em class="sig-param">probe_path=None</em>, <em class="sig-param">profile_name=None</em>, <em class="sig-param">querystring_caching_behaviour=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cdn.Endpoint.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">content_types_to_compresses=None</em>, <em class="sig-param">geo_filters=None</em>, <em class="sig-param">host_name=None</em>, <em class="sig-param">is_compression_enabled=None</em>, <em class="sig-param">is_http_allowed=None</em>, <em class="sig-param">is_https_allowed=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">optimization_type=None</em>, <em class="sig-param">origin_host_header=None</em>, <em class="sig-param">origin_path=None</em>, <em class="sig-param">origins=None</em>, <em class="sig-param">probe_path=None</em>, <em class="sig-param">profile_name=None</em>, <em class="sig-param">querystring_caching_behaviour=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cdn.Endpoint.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Endpoint resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -188,9 +188,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the CDN Endpoint. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>optimization_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – What types of optimization should this CDN Endpoint optimize for? Possible values include <code class="docutils literal notranslate"><span class="pre">DynamicSiteAcceleration</span></code>, <code class="docutils literal notranslate"><span class="pre">GeneralMediaStreaming</span></code>, <code class="docutils literal notranslate"><span class="pre">GeneralWebDelivery</span></code>, <code class="docutils literal notranslate"><span class="pre">LargeFileDownload</span></code> and <code class="docutils literal notranslate"><span class="pre">VideoOnDemandMediaStreaming</span></code>.</p></li>
-<li><p><strong>origins</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each <code class="docutils literal notranslate"><span class="pre">origin</span></code> block supports fields documented below.</p></li>
 <li><p><strong>origin_host_header</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.</p></li>
 <li><p><strong>origin_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path used at for origin requests.</p></li>
+<li><p><strong>origins</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each <code class="docutils literal notranslate"><span class="pre">origin</span></code> block supports fields documented below.</p></li>
 <li><p><strong>probe_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the <code class="docutils literal notranslate"><span class="pre">origin_path</span></code>.</p></li>
 <li><p><strong>profile_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CDN Profile to which to attach the CDN Endpoint.</p></li>
 <li><p><strong>querystring_caching_behaviour</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets query string caching behavior. Allowed values are <code class="docutils literal notranslate"><span class="pre">IgnoreQueryString</span></code>, <code class="docutils literal notranslate"><span class="pre">BypassCaching</span></code> and <code class="docutils literal notranslate"><span class="pre">UseQueryString</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IgnoreQueryString</span></code>.</p></li>
@@ -203,7 +203,7 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">countryCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">relativePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">relative_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>origins</strong> object supports the following:</p>
 <ul class="simple">
@@ -212,9 +212,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpsPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the CDN Endpoint. Changing this forces a new resource to be created.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cdn_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cdn_endpoint.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -257,8 +254,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.cdn.GetProfileResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cdn.</code><code class="sig-name descname">GetProfileResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cdn.GetProfileResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cdn.</code><code class="sig-name descname">GetProfileResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cdn.GetProfileResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProfile.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.cdn.GetProfileResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cdn.GetProfileResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azure.cdn.GetProfileResult.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cdn.GetProfileResult.location" title="Permalink to this definition">¶</a></dt>
@@ -277,18 +280,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags assigned to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.cdn.GetProfileResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cdn.GetProfileResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.cdn.Profile">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cdn.</code><code class="sig-name descname">Profile</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cdn.Profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a CDN Profile to create a collection of CDN Endpoints.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cdn_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cdn_profile.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -304,9 +304,6 @@ create the CDN Profile.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cdn_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cdn_profile.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.cdn.Profile.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cdn.Profile.location" title="Permalink to this definition">¶</a></dt>
@@ -360,9 +357,6 @@ create the CDN Profile.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cdn_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cdn_profile.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -407,6 +401,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.cdn.get_profile">
 <code class="sig-prename descclassname">pulumi_azure.cdn.</code><code class="sig-name descname">get_profile</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cdn.get_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing CDN Profile.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/cdn_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/cdn_profile.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -415,9 +412,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/cdn_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/cdn_profile.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

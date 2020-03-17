@@ -15,13 +15,16 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.glue"></span><dl class="class">
 <dt id="pulumi_aws.glue.AwaitableGetScriptResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">AwaitableGetScriptResult</code><span class="sig-paren">(</span><em class="sig-param">dag_edges=None</em>, <em class="sig-param">dag_nodes=None</em>, <em class="sig-param">language=None</em>, <em class="sig-param">python_script=None</em>, <em class="sig-param">scala_code=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.AwaitableGetScriptResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">AwaitableGetScriptResult</code><span class="sig-paren">(</span><em class="sig-param">dag_edges=None</em>, <em class="sig-param">dag_nodes=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">language=None</em>, <em class="sig-param">python_script=None</em>, <em class="sig-param">scala_code=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.AwaitableGetScriptResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.glue.CatalogDatabase">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">CatalogDatabase</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">location_uri=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.CatalogDatabase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Catalog Database Resource. You can refer to the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html">Glue Developer Guide</a> for a full explanation of the Glue Data Catalog functionality</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_database.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_database.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -35,9 +38,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_database.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_database.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.glue.CatalogDatabase.catalog_id">
 <code class="sig-name descname">catalog_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.CatalogDatabase.catalog_id" title="Permalink to this definition">¶</a></dt>
@@ -87,9 +87,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_database.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_database.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -134,6 +131,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.CatalogTable">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">CatalogTable</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_id=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">partition_keys=None</em>, <em class="sig-param">retention=None</em>, <em class="sig-param">storage_descriptor=None</em>, <em class="sig-param">table_type=None</em>, <em class="sig-param">view_expanded_text=None</em>, <em class="sig-param">view_original_text=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.CatalogTable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Catalog Table Resource. You can refer to the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html">Glue Developer Guide</a> for a full explanation of the Glue Data Catalog functionality.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_table.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -199,9 +199,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storedAsSubDirectories</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if the table data is stored in subdirectories, or False if not.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_table.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.glue.CatalogTable.catalog_id">
 <code class="sig-name descname">catalog_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.CatalogTable.catalog_id" title="Permalink to this definition">¶</a></dt>
@@ -387,9 +384,6 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storedAsSubDirectories</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if the table data is stored in subdirectories, or False if not.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_table.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -436,6 +430,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Glue Classifier resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> It is only valid to create one type of classifier (csv, grok, JSON, or XML). Changing classifier types will recreate the classifier.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_classifier.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_classifier.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -474,9 +469,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">classification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An identifier of the data format that the classifier matches.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rowTag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by <code class="docutils literal notranslate"><span class="pre">/&gt;</span></code>). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, <code class="docutils literal notranslate"><span class="pre">&lt;row</span> <span class="pre">item_a=&quot;A&quot;</span> <span class="pre">item_b=&quot;B&quot;&gt;&lt;/row&gt;</span></code> is okay, but <code class="docutils literal notranslate"><span class="pre">&lt;row</span> <span class="pre">item_a=&quot;A&quot;</span> <span class="pre">item_b=&quot;B&quot;</span> <span class="pre">/&gt;</span></code> is not).</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_classifier.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_classifier.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.glue.Classifier.csv_classifier">
 <code class="sig-name descname">csv_classifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Classifier.csv_classifier" title="Permalink to this definition">¶</a></dt>
@@ -570,9 +562,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">classification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An identifier of the data format that the classifier matches.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rowTag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by <code class="docutils literal notranslate"><span class="pre">/&gt;</span></code>). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, <code class="docutils literal notranslate"><span class="pre">&lt;row</span> <span class="pre">item_a=&quot;A&quot;</span> <span class="pre">item_b=&quot;B&quot;&gt;&lt;/row&gt;</span></code> is okay, but <code class="docutils literal notranslate"><span class="pre">&lt;row</span> <span class="pre">item_a=&quot;A&quot;</span> <span class="pre">item_b=&quot;B&quot;</span> <span class="pre">/&gt;</span></code> is not).</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_classifier.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_classifier.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -617,6 +606,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Connection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Connection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_id=None</em>, <em class="sig-param">connection_properties=None</em>, <em class="sig-param">connection_type=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">match_criterias=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">physical_connection_requirements=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Connection resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_connection.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -638,9 +630,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">securityGroupIdLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The security group ID list used by the connection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnet ID used by the connection.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_connection.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.glue.Connection.catalog_id">
 <code class="sig-name descname">catalog_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Connection.catalog_id" title="Permalink to this definition">¶</a></dt>
@@ -715,9 +704,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">securityGroupIdLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The security group ID list used by the connection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnet ID used by the connection.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_connection.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -762,6 +748,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Crawler">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Crawler</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_targets=None</em>, <em class="sig-param">classifiers=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamodb_targets=None</em>, <em class="sig-param">jdbc_targets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">s3_targets=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">schema_change_policy=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">table_prefix=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Crawler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Glue Crawler. More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html">AWS Glue Developer Guide</a></p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_crawler.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_crawler.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -809,9 +798,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteBehavior</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The deletion behavior when the crawler finds a deleted object. Valid values: <code class="docutils literal notranslate"><span class="pre">LOG</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETE_FROM_DATABASE</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEPRECATE_IN_DATABASE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">DEPRECATE_IN_DATABASE</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">updateBehavior</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The update behavior when the crawler finds a changed schema. Valid values: <code class="docutils literal notranslate"><span class="pre">LOG</span></code> or <code class="docutils literal notranslate"><span class="pre">UPDATE_IN_DATABASE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">UPDATE_IN_DATABASE</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_crawler.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_crawler.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.glue.Crawler.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Crawler.arn" title="Permalink to this definition">¶</a></dt>
@@ -973,9 +959,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteBehavior</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The deletion behavior when the crawler finds a deleted object. Valid values: <code class="docutils literal notranslate"><span class="pre">LOG</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETE_FROM_DATABASE</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEPRECATE_IN_DATABASE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">DEPRECATE_IN_DATABASE</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">updateBehavior</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The update behavior when the crawler finds a changed schema. Valid values: <code class="docutils literal notranslate"><span class="pre">LOG</span></code> or <code class="docutils literal notranslate"><span class="pre">UPDATE_IN_DATABASE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">UPDATE_IN_DATABASE</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_crawler.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_crawler.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1018,8 +1001,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.GetScriptResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">GetScriptResult</code><span class="sig-paren">(</span><em class="sig-param">dag_edges=None</em>, <em class="sig-param">dag_nodes=None</em>, <em class="sig-param">language=None</em>, <em class="sig-param">python_script=None</em>, <em class="sig-param">scala_code=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.GetScriptResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">GetScriptResult</code><span class="sig-paren">(</span><em class="sig-param">dag_edges=None</em>, <em class="sig-param">dag_nodes=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">language=None</em>, <em class="sig-param">python_script=None</em>, <em class="sig-param">scala_code=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.GetScriptResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getScript.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.glue.GetScriptResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.GetScriptResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.glue.GetScriptResult.python_script">
 <code class="sig-name descname">python_script</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.GetScriptResult.python_script" title="Permalink to this definition">¶</a></dt>
@@ -1032,12 +1021,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The Scala code generated from the DAG when the <code class="docutils literal notranslate"><span class="pre">language</span></code> argument is set to <code class="docutils literal notranslate"><span class="pre">SCALA</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.glue.GetScriptResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.GetScriptResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -1046,6 +1029,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Glue Job resource.</p>
 <blockquote>
 <div><p>Glue functionality, such as monitoring and logging of jobs, is typically managed with the <code class="docutils literal notranslate"><span class="pre">default_arguments</span></code> argument. See the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html">Special Parameters Used by AWS Glue</a> topic in the Glue developer guide for additional information.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1087,9 +1071,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">notifyDelayAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - After a job run starts, the number of minutes to wait before sending a job run delay notification.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.glue.Job.allocated_capacity">
 <code class="sig-name descname">allocated_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.allocated_capacity" title="Permalink to this definition">¶</a></dt>
@@ -1257,9 +1238,6 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">notifyDelayAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - After a job run starts, the number of minutes to wait before sending a job run delay notification.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1304,6 +1282,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.SecurityConfiguration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">SecurityConfiguration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">encryption_configuration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.SecurityConfiguration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Glue Security Configuration.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_security_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_security_configuration.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1335,9 +1316,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_security_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_security_configuration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.glue.SecurityConfiguration.encryption_configuration">
 <code class="sig-name descname">encryption_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.SecurityConfiguration.encryption_configuration" title="Permalink to this definition">¶</a></dt>
@@ -1407,9 +1385,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_security_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_security_configuration.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1454,6 +1429,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Trigger">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Trigger</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">predicate=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">workflow_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Glue Trigger resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_trigger.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_trigger.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1492,9 +1470,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logical</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to handle multiple conditions. Defaults to <code class="docutils literal notranslate"><span class="pre">AND</span></code>. Valid values are <code class="docutils literal notranslate"><span class="pre">AND</span></code> or <code class="docutils literal notranslate"><span class="pre">ANY</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_trigger.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_trigger.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.glue.Trigger.actions">
 <code class="sig-name descname">actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Trigger.actions" title="Permalink to this definition">¶</a></dt>
@@ -1618,9 +1593,6 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logical</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to handle multiple conditions. Defaults to <code class="docutils literal notranslate"><span class="pre">AND</span></code>. Valid values are <code class="docutils literal notranslate"><span class="pre">AND</span></code> or <code class="docutils literal notranslate"><span class="pre">ANY</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_trigger.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_trigger.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1667,6 +1639,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Glue Workflow resource.
 The workflow graph (DAG) can be build using the <code class="docutils literal notranslate"><span class="pre">glue.Trigger</span></code> resource. 
 See the example below for creating a graph with four nodes (two triggers and two jobs).</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_workflow.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_workflow.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1678,9 +1653,6 @@ See the example below for creating a graph with four nodes (two triggers and two
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_workflow.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_workflow.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.glue.Workflow.default_run_properties">
 <code class="sig-name descname">default_run_properties</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Workflow.default_run_properties" title="Permalink to this definition">¶</a></dt>
@@ -1716,9 +1688,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_workflow.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_workflow.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1763,6 +1732,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.get_script">
 <code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">get_script</code><span class="sig-paren">(</span><em class="sig-param">dag_edges=None</em>, <em class="sig-param">dag_nodes=None</em>, <em class="sig-param">language=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.get_script" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to generate a Glue script from a Directed Acyclic Graph (DAG).</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/glue_script.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/glue_script.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1791,9 +1763,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">lineNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The line number of the node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">node_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of node this is.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/glue_script.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/glue_script.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

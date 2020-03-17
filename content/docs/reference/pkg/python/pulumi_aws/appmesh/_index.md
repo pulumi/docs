@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.appmesh.Mesh">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appmesh.</code><code class="sig-name descname">Mesh</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.Mesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS App Mesh service mesh resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_mesh.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_mesh.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -37,9 +40,6 @@ Valid values are <code class="docutils literal notranslate"><span class="pre">AL
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_mesh.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_mesh.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.appmesh.Mesh.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.Mesh.arn" title="Permalink to this definition">¶</a></dt>
@@ -113,9 +113,6 @@ Valid values are <code class="docutils literal notranslate"><span class="pre">AL
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_mesh.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_mesh.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -160,6 +157,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appmesh.Route">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appmesh.</code><code class="sig-name descname">Route</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">mesh_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtual_router_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.Route" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS App Mesh route resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_route.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -243,9 +243,6 @@ You can specify one or more targets and their relative weights with which to dis
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_route.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.appmesh.Route.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.Route.arn" title="Permalink to this definition">¶</a></dt>
@@ -455,9 +452,6 @@ You can specify one or more targets and their relative weights with which to dis
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_route.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -509,6 +503,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 setting <code class="docutils literal notranslate"><span class="pre">virtual_service_name</span></code> to the name of the service.</p></li>
 </ul>
 <p>The state associated with existing resources will automatically be migrated.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_node.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_node.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -577,7 +574,7 @@ setting <code class="docutils literal notranslate"><span class="pre">virtual_ser
 <li><p><code class="docutils literal notranslate"><span class="pre">attributes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">namespaceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the AWS Cloud Map namespace to use.
 Use the <cite>``servicediscovery.HttpNamespace`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html">https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html</a>&gt;`_ resource to configure a Cloud Map namespace.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serviceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the AWS Cloud Map service to use. Use the <cite>``servicediscovery.Service`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html">https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html</a>&gt;`_ resource to configure a Cloud Map service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the AWS Cloud Map service to use. Use the <cite>``servicediscovery.Service`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html">https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html</a>&gt;`_ resource to configure a Cloud Map service.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the DNS service name for the virtual node.</p>
@@ -588,9 +585,6 @@ Use the <cite>``servicediscovery.HttpNamespace`</cite> &lt;<a class="reference e
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_node.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_node.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.appmesh.VirtualNode.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.VirtualNode.arn" title="Permalink to this definition">¶</a></dt>
@@ -680,7 +674,7 @@ Use the <cite>``servicediscovery.HttpNamespace`</cite> &lt;<a class="reference e
 <li><p><code class="docutils literal notranslate"><span class="pre">attributes</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">namespaceName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the AWS Cloud Map namespace to use.
 Use the <cite>``servicediscovery.HttpNamespace`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html">https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html</a>&gt;`_ resource to configure a Cloud Map namespace.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serviceName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the AWS Cloud Map service to use. Use the <cite>``servicediscovery.Service`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html">https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html</a>&gt;`_ resource to configure a Cloud Map service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the AWS Cloud Map service to use. Use the <cite>``servicediscovery.Service`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html">https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html</a>&gt;`_ resource to configure a Cloud Map service.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dns</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the DNS service name for the virtual node.</p>
@@ -776,7 +770,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">attributes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">namespaceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the AWS Cloud Map namespace to use.
 Use the <cite>``servicediscovery.HttpNamespace`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html">https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html</a>&gt;`_ resource to configure a Cloud Map namespace.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serviceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the AWS Cloud Map service to use. Use the <cite>``servicediscovery.Service`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html">https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html</a>&gt;`_ resource to configure a Cloud Map service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the AWS Cloud Map service to use. Use the <cite>``servicediscovery.Service`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html">https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html</a>&gt;`_ resource to configure a Cloud Map service.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the DNS service name for the virtual node.</p>
@@ -787,9 +781,6 @@ Use the <cite>``servicediscovery.HttpNamespace`</cite> &lt;<a class="reference e
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_node.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_node.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -842,6 +833,9 @@ These resource can be imported using <code class="docutils literal notranslate">
 <li><p>Add a <code class="docutils literal notranslate"><span class="pre">listener</span></code> configuration block to the <code class="docutils literal notranslate"><span class="pre">spec</span></code> argument.</p></li>
 </ul>
 <p>The state associated with existing resources will automatically be migrated.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_router.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_router.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -868,9 +862,6 @@ Currently only one listener is supported per virtual router.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_router.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_router.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.appmesh.VirtualRouter.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.VirtualRouter.arn" title="Permalink to this definition">¶</a></dt>
@@ -961,9 +952,6 @@ Currently only one listener is supported per virtual router.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_router.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_router.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1008,6 +996,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appmesh.VirtualService">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appmesh.</code><code class="sig-name descname">VirtualService</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">mesh_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.VirtualService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS App Mesh virtual service resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_service.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1037,9 +1028,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.appmesh.VirtualService.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.VirtualService.arn" title="Permalink to this definition">¶</a></dt>
@@ -1136,9 +1124,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_service.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

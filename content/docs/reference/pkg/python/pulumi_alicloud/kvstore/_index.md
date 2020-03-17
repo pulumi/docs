@@ -19,6 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a kvstore account resource and used to manage databases.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.66.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_account.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_account.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -56,9 +57,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_account.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_account.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.kvstore.Account.account_name">
 <code class="sig-name descname">account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.Account.account_name" title="Permalink to this definition">¶</a></dt>
@@ -160,9 +158,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_account.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_account.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -205,23 +200,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.kvstore.AwaitableGetInstanceClassesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">AwaitableGetInstanceClassesResult</code><span class="sig-paren">(</span><em class="sig-param">architecture=None</em>, <em class="sig-param">classes=None</em>, <em class="sig-param">edition_type=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_classes=None</em>, <em class="sig-param">node_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">package_type=None</em>, <em class="sig-param">performance_type=None</em>, <em class="sig-param">series_type=None</em>, <em class="sig-param">shard_number=None</em>, <em class="sig-param">sorted_by=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.AwaitableGetInstanceClassesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">AwaitableGetInstanceClassesResult</code><span class="sig-paren">(</span><em class="sig-param">architecture=None</em>, <em class="sig-param">classes=None</em>, <em class="sig-param">edition_type=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_classes=None</em>, <em class="sig-param">node_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">package_type=None</em>, <em class="sig-param">performance_type=None</em>, <em class="sig-param">series_type=None</em>, <em class="sig-param">shard_number=None</em>, <em class="sig-param">sorted_by=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.AwaitableGetInstanceClassesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.kvstore.AwaitableGetInstanceEnginesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">AwaitableGetInstanceEnginesResult</code><span class="sig-paren">(</span><em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_engines=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.AwaitableGetInstanceEnginesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">AwaitableGetInstanceEnginesResult</code><span class="sig-paren">(</span><em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_engines=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.AwaitableGetInstanceEnginesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.kvstore.AwaitableGetInstancesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.kvstore.BackupPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">BackupPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backup_periods=None</em>, <em class="sig-param">backup_time=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.BackupPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a backup policy for ApsaraDB Redis / Memcache instance resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_backup_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_backup_policy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -233,9 +231,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_backup_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_backup_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.kvstore.BackupPolicy.backup_periods">
 <code class="sig-name descname">backup_periods</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.BackupPolicy.backup_periods" title="Permalink to this definition">¶</a></dt>
@@ -271,9 +266,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_backup_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_backup_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -316,7 +308,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.kvstore.GetInstanceClassesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">GetInstanceClassesResult</code><span class="sig-paren">(</span><em class="sig-param">architecture=None</em>, <em class="sig-param">classes=None</em>, <em class="sig-param">edition_type=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_classes=None</em>, <em class="sig-param">node_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">package_type=None</em>, <em class="sig-param">performance_type=None</em>, <em class="sig-param">series_type=None</em>, <em class="sig-param">shard_number=None</em>, <em class="sig-param">sorted_by=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.GetInstanceClassesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">GetInstanceClassesResult</code><span class="sig-paren">(</span><em class="sig-param">architecture=None</em>, <em class="sig-param">classes=None</em>, <em class="sig-param">edition_type=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_classes=None</em>, <em class="sig-param">node_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">package_type=None</em>, <em class="sig-param">performance_type=None</em>, <em class="sig-param">series_type=None</em>, <em class="sig-param">shard_number=None</em>, <em class="sig-param">sorted_by=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.GetInstanceClassesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstanceClasses.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.kvstore.GetInstanceClassesResult.classes">
@@ -325,22 +317,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.kvstore.GetInstanceClassesResult.instance_classes">
-<code class="sig-name descname">instance_classes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.GetInstanceClassesResult.instance_classes" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of KVStore available instance classes.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_alicloud.kvstore.GetInstanceClassesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.GetInstanceClassesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kvstore.GetInstanceClassesResult.instance_classes">
+<code class="sig-name descname">instance_classes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.GetInstanceClassesResult.instance_classes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of KVStore available instance classes.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.kvstore.GetInstanceEnginesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">GetInstanceEnginesResult</code><span class="sig-paren">(</span><em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_engines=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.GetInstanceEnginesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">GetInstanceEnginesResult</code><span class="sig-paren">(</span><em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_engines=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.GetInstanceEnginesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstanceEngines.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.kvstore.GetInstanceEnginesResult.engine">
@@ -355,6 +347,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_alicloud.kvstore.GetInstanceEnginesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.GetInstanceEnginesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_alicloud.kvstore.GetInstanceEnginesResult.instance_engines">
 <code class="sig-name descname">instance_engines</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.GetInstanceEnginesResult.instance_engines" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of KVStore available instance engines. Each element contains the following attributes:</p>
@@ -366,18 +364,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The Zone to launch the KVStore instance.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.kvstore.GetInstanceEnginesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.GetInstanceEnginesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.kvstore.GetInstancesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">GetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">GetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstances.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.kvstore.GetInstancesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.kvstore.GetInstancesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.GetInstancesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -418,18 +416,15 @@ For more information, see <a class="reference external" href="https://www.alibab
 <dd><p>VSwitch ID the instance belongs to.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.kvstore.GetInstancesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.kvstore.Instance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_renew=None</em>, <em class="sig-param">auto_renew_period=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">backup_id=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">maintain_end_time=None</em>, <em class="sig-param">maintain_start_time=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">security_ips=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_auth_mode=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ApsaraDB Redis / Memcache instance resource. A DB instance is an isolated database environment in the cloud. It can be associated with IP whitelists and backup configuration which are separate resource providers.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_instance.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -474,9 +469,6 @@ For more information, see <a class="reference external" href="https://www.alibab
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.kvstore.Instance.auto_renew">
 <code class="sig-name descname">auto_renew</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.Instance.auto_renew" title="Permalink to this definition">¶</a></dt>
@@ -633,9 +625,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_instance.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -682,6 +671,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides the KVStore instance classes resource available info of Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.49.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_instance_classes.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_instance_classes.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -701,9 +691,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_instance_classes.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_instance_classes.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -712,6 +699,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides the KVStore instance engines resource available info of Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.51.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_instance_engines.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_instance_engines.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -724,9 +712,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_instance_engines.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_instance_engines.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -734,6 +719,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">get_instances</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.get_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">kvstore.getInstances</span></code> data source provides a collection of kvstore instances available in Alicloud account.
 Filters support regular expression for the instance name, searches by tags, and other filters which are listed below.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_instances.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -757,9 +745,6 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_instances.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

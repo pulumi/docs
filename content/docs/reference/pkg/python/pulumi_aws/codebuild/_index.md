@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.codebuild.Project">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.codebuild.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">artifacts=None</em>, <em class="sig-param">badge_enabled=None</em>, <em class="sig-param">build_timeout=None</em>, <em class="sig-param">cache=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encryption_key=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">logs_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">queued_timeout=None</em>, <em class="sig-param">secondary_artifacts=None</em>, <em class="sig-param">secondary_sources=None</em>, <em class="sig-param">service_role=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">source_version=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codebuild.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeBuild Project resource. See also the <cite>``codebuild.Webhook`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/codebuild_webhook.html">https://www.terraform.io/docs/providers/aws/r/codebuild_webhook.html</a>&gt;`_, which manages the webhook to the source (e.g. the “rebuild every time a code change is pushed” option in the CodeBuild web console).</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_project.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_project.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -86,7 +89,7 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration for the builds to store logs to CloudWatch</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">groupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The group name of the logs in CloudWatch Logs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The group name of the logs in CloudWatch Logs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Current status of logs in S3 for a build project. Valid values: <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">streamName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The stream name of the logs in CloudWatch Logs.</p></li>
 </ul>
@@ -154,13 +157,10 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 <p>The <strong>vpc_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The security group IDs to assign to running builds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The security group IDs to assign to running builds.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The subnet IDs within which to run builds.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the VPC within which to run builds.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_project.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_project.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.codebuild.Project.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codebuild.Project.arn" title="Permalink to this definition">¶</a></dt>
@@ -259,7 +259,7 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogs</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration for the builds to store logs to CloudWatch</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">groupName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The group name of the logs in CloudWatch Logs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The group name of the logs in CloudWatch Logs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Current status of logs in S3 for a build project. Valid values: <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">streamName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The stream name of the logs in CloudWatch Logs.</p></li>
 </ul>
@@ -377,7 +377,7 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">vpc_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codebuild.Project.vpc_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration for the builds to run inside a VPC. VPC config blocks are documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The security group IDs to assign to running builds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The security group IDs to assign to running builds.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The subnet IDs within which to run builds.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the VPC within which to run builds.</p></li>
 </ul>
@@ -460,7 +460,7 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration for the builds to store logs to CloudWatch</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">groupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The group name of the logs in CloudWatch Logs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The group name of the logs in CloudWatch Logs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Current status of logs in S3 for a build project. Valid values: <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">streamName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The stream name of the logs in CloudWatch Logs.</p></li>
 </ul>
@@ -528,13 +528,10 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>vpc_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The security group IDs to assign to running builds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The security group IDs to assign to running builds.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The subnet IDs within which to run builds.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the VPC within which to run builds.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_project.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_project.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -579,6 +576,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.codebuild.SourceCredential">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.codebuild.</code><code class="sig-name descname">SourceCredential</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_type=None</em>, <em class="sig-param">server_type=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">user_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codebuild.SourceCredential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeBuild Source Credentials Resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_source_credential.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_source_credential.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -591,9 +591,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_source_credential.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_source_credential.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.codebuild.SourceCredential.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codebuild.SourceCredential.arn" title="Permalink to this definition">¶</a></dt>
@@ -643,9 +640,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_source_credential.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_source_credential.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -690,6 +684,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.codebuild.Webhook">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.codebuild.</code><code class="sig-name descname">Webhook</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">branch_filter=None</em>, <em class="sig-param">filter_groups=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codebuild.Webhook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a CodeBuild webhook, which is an endpoint accepted by the CodeBuild service to trigger builds from source code repositories. Depending on the source type of the CodeBuild project, the CodeBuild service may also automatically create and delete the actual repository webhook as well.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_webhook.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_webhook.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -711,9 +708,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_webhook.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_webhook.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.codebuild.Webhook.branch_filter">
 <code class="sig-name descname">branch_filter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codebuild.Webhook.branch_filter" title="Permalink to this definition">¶</a></dt>
@@ -789,9 +783,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_webhook.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_webhook.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

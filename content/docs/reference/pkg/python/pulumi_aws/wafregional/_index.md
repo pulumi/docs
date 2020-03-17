@@ -15,28 +15,31 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.wafregional"></span><dl class="class">
 <dt id="pulumi_aws.wafregional.AwaitableGetIpsetResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">AwaitableGetIpsetResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.AwaitableGetIpsetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">AwaitableGetIpsetResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.AwaitableGetIpsetResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.wafregional.AwaitableGetRateBasedModResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">AwaitableGetRateBasedModResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.AwaitableGetRateBasedModResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">AwaitableGetRateBasedModResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.AwaitableGetRateBasedModResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.wafregional.AwaitableGetRuleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">AwaitableGetRuleResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.AwaitableGetRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">AwaitableGetRuleResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.AwaitableGetRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.wafregional.AwaitableGetWebAclResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">AwaitableGetWebAclResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.AwaitableGetWebAclResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">AwaitableGetWebAclResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.AwaitableGetWebAclResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.wafregional.ByteMatchSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">ByteMatchSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">byte_match_tuples=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.ByteMatchSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional Byte Match Set Resource for use with Application Load Balancer.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_byte_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_byte_match_set.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -59,9 +62,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">targetString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The formatting way for web request.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_byte_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_byte_match_set.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.ByteMatchSet.byte_match_tuples">
 <code class="sig-name descname">byte_match_tuples</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.ByteMatchSet.byte_match_tuples" title="Permalink to this definition">¶</a></dt>
@@ -113,9 +113,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The formatting way for web request.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_byte_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_byte_match_set.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -160,6 +157,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.GeoMatchSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">GeoMatchSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">geo_match_constraints=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.GeoMatchSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional Geo Match Set Resource</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_geo_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_geo_match_set.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -177,9 +177,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 This is the two-letter country code, e.g. <code class="docutils literal notranslate"><span class="pre">US</span></code>, <code class="docutils literal notranslate"><span class="pre">CA</span></code>, <code class="docutils literal notranslate"><span class="pre">RU</span></code>, <code class="docutils literal notranslate"><span class="pre">CN</span></code>, etc.
 See <a class="reference external" href="https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConstraint.html">docs</a> for all supported values.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_geo_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_geo_match_set.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.GeoMatchSet.geo_match_constraints">
 <code class="sig-name descname">geo_match_constraints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.GeoMatchSet.geo_match_constraints" title="Permalink to this definition">¶</a></dt>
@@ -221,9 +218,6 @@ properties used to qualify the lookup.</p>
 This is the two-letter country code, e.g. <code class="docutils literal notranslate"><span class="pre">US</span></code>, <code class="docutils literal notranslate"><span class="pre">CA</span></code>, <code class="docutils literal notranslate"><span class="pre">RU</span></code>, <code class="docutils literal notranslate"><span class="pre">CN</span></code>, etc.
 See <a class="reference external" href="https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConstraint.html">docs</a> for all supported values.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_geo_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_geo_match_set.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -266,7 +260,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.wafregional.GetIpsetResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">GetIpsetResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.GetIpsetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">GetIpsetResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.GetIpsetResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getIpset.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.GetIpsetResult.id">
@@ -278,7 +272,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.wafregional.GetRateBasedModResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">GetRateBasedModResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.GetRateBasedModResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">GetRateBasedModResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.GetRateBasedModResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRateBasedMod.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.GetRateBasedModResult.id">
@@ -290,7 +284,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.wafregional.GetRuleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">GetRuleResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.GetRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">GetRuleResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.GetRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRule.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.GetRuleResult.id">
@@ -302,7 +296,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.wafregional.GetWebAclResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">GetWebAclResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.GetWebAclResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">GetWebAclResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.GetWebAclResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getWebAcl.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.GetWebAclResult.id">
@@ -316,6 +310,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.IpSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">IpSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ip_set_descriptors=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.IpSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional IPSet Resource for use with Application Load Balancer.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_ipset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_ipset.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -331,9 +328,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The string like IPV4 or IPV6.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR notation.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_ipset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_ipset.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.IpSet.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.IpSet.arn" title="Permalink to this definition">¶</a></dt>
@@ -378,9 +372,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The string like IPV4 or IPV6.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR notation.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_ipset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_ipset.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -425,6 +416,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.RateBasedRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">RateBasedRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">predicates=None</em>, <em class="sig-param">rate_key=None</em>, <em class="sig-param">rate_limit=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.RateBasedRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Rate Based Rule Resource</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rate_based_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rate_based_rule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -448,9 +442,6 @@ For example, if an IPSet includes the IP address <code class="docutils literal n
 If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, AWS WAF will allow, block, or count requests based on all IP addresses <em>except</em> <code class="docutils literal notranslate"><span class="pre">192.0.2.44</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of predicate in a rule. Valid values: <code class="docutils literal notranslate"><span class="pre">ByteMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">GeoMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">IPMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">RegexMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">SizeConstraint</span></code>, <code class="docutils literal notranslate"><span class="pre">SqlInjectionMatch</span></code>, or <code class="docutils literal notranslate"><span class="pre">XssMatch</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rate_based_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rate_based_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.RateBasedRule.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.RateBasedRule.arn" title="Permalink to this definition">¶</a></dt>
@@ -531,9 +522,6 @@ For example, if an IPSet includes the IP address <code class="docutils literal n
 If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, AWS WAF will allow, block, or count requests based on all IP addresses <em>except</em> <code class="docutils literal notranslate"><span class="pre">192.0.2.44</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of predicate in a rule. Valid values: <code class="docutils literal notranslate"><span class="pre">ByteMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">GeoMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">IPMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">RegexMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">SizeConstraint</span></code>, <code class="docutils literal notranslate"><span class="pre">SqlInjectionMatch</span></code>, or <code class="docutils literal notranslate"><span class="pre">XssMatch</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rate_based_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rate_based_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -578,6 +566,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.RegexMatchSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">RegexMatchSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">regex_match_tuples=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.RegexMatchSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional Regex Match Set Resource</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_match_set.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -607,9 +598,6 @@ e.g. <code class="docutils literal notranslate"><span class="pre">CMD_LINE</span
 See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-TextTransformation">docs</a>
 for all supported values.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_match_set.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.RegexMatchSet.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.RegexMatchSet.name" title="Permalink to this definition">¶</a></dt>
@@ -675,9 +663,6 @@ e.g. <code class="docutils literal notranslate"><span class="pre">CMD_LINE</span
 See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-TextTransformation">docs</a>
 for all supported values.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_match_set.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -722,6 +707,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.RegexPatternSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">RegexPatternSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">regex_pattern_strings=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.RegexPatternSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional Regex Pattern Set Resource</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_pattern_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_pattern_set.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -732,9 +720,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_pattern_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_pattern_set.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.RegexPatternSet.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.RegexPatternSet.name" title="Permalink to this definition">¶</a></dt>
@@ -763,9 +748,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_pattern_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_pattern_set.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -816,6 +798,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">data_id</span></code> - (Required) The unique identifier of a predicate, such as the ID of a <code class="docutils literal notranslate"><span class="pre">ByteMatchSet</span></code> or <code class="docutils literal notranslate"><span class="pre">IPSet</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">negated</span></code> - (Required) Whether to use the settings or the negated settings that you specified in the objects.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -834,9 +819,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">negated</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.Rule.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.Rule.arn" title="Permalink to this definition">¶</a></dt>
@@ -897,9 +879,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">negated</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -944,6 +923,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.RuleGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">RuleGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">activated_rules=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.RuleGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional Rule Group Resource</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule_group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -967,9 +949,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">rule_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">rule</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The rule type, either <cite>``REGULAR`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html</a>&gt;`_, <cite>``RATE_BASED`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html</a>&gt;`_, or <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">REGULAR</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.RuleGroup.activated_rules">
 <code class="sig-name descname">activated_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.RuleGroup.activated_rules" title="Permalink to this definition">¶</a></dt>
@@ -1040,9 +1019,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">rule_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">rule</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The rule type, either <cite>``REGULAR`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html</a>&gt;`_, <cite>``RATE_BASED`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html</a>&gt;`_, or <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">REGULAR</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1087,6 +1063,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.SizeConstraintSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">SizeConstraintSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">size_constraints=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.SizeConstraintSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional Size Constraint Set Resource for use with Application Load Balancer.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_size_constraint_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_size_constraint_set.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1121,9 +1100,6 @@ See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/AP
 for all supported values.
 <strong>Note:</strong> if you choose <code class="docutils literal notranslate"><span class="pre">BODY</span></code> as <code class="docutils literal notranslate"><span class="pre">type</span></code>, you must choose <code class="docutils literal notranslate"><span class="pre">NONE</span></code> because CloudFront forwards only the first 8192 bytes for inspection.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_size_constraint_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_size_constraint_set.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.SizeConstraintSet.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.SizeConstraintSet.name" title="Permalink to this definition">¶</a></dt>
@@ -1199,9 +1175,6 @@ See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/AP
 for all supported values.
 <strong>Note:</strong> if you choose <code class="docutils literal notranslate"><span class="pre">BODY</span></code> as <code class="docutils literal notranslate"><span class="pre">type</span></code>, you must choose <code class="docutils literal notranslate"><span class="pre">NONE</span></code> because CloudFront forwards only the first 8192 bytes for inspection.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_size_constraint_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_size_constraint_set.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1246,6 +1219,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.SqlInjectionMatchSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">SqlInjectionMatchSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">sql_injection_match_tuples=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.SqlInjectionMatchSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional SQL Injection Match Set Resource for use with Application Load Balancer.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_sql_injection_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_sql_injection_match_set.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1274,9 +1250,6 @@ e.g. <code class="docutils literal notranslate"><span class="pre">CMD_LINE</span
 See <a class="reference external" href="https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_SqlInjectionMatchTuple.html#WAF-Type-regional_SqlInjectionMatchTuple-TextTransformation">docs</a>
 for all supported values.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_sql_injection_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_sql_injection_match_set.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.SqlInjectionMatchSet.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.SqlInjectionMatchSet.name" title="Permalink to this definition">¶</a></dt>
@@ -1340,9 +1313,6 @@ e.g. <code class="docutils literal notranslate"><span class="pre">CMD_LINE</span
 See <a class="reference external" href="https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_SqlInjectionMatchTuple.html#WAF-Type-regional_SqlInjectionMatchTuple-TextTransformation">docs</a>
 for all supported values.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_sql_injection_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_sql_injection_match_set.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1387,6 +1357,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.WebAcl">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">WebAcl</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">default_action=None</em>, <em class="sig-param">logging_configuration=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.WebAcl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional Web ACL Resource for use with Application Load Balancer.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1436,9 +1409,6 @@ Rules with a lower value are evaluated before rules with a higher value.</p></li
 <li><p><code class="docutils literal notranslate"><span class="pre">rule_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the associated WAF (Regional) rule (e.g. <cite>``wafregional.Rule`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html</a>&gt;`_). WAF (Global) rules cannot be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.WebAcl.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.WebAcl.arn" title="Permalink to this definition">¶</a></dt>
@@ -1569,9 +1539,6 @@ Rules with a lower value are evaluated before rules with a higher value.</p></li
 <li><p><code class="docutils literal notranslate"><span class="pre">rule_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the associated WAF (Regional) rule (e.g. <cite>``wafregional.Rule`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html</a>&gt;`_). WAF (Global) rules cannot be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1618,6 +1585,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an association with WAF Regional Web ACL.</p>
 <blockquote>
 <div><p><strong>Note:</strong> An Application Load Balancer can only be associated with one WAF Regional WebACL.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl_association.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1629,9 +1597,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl_association.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.WebAclAssociation.resource_arn">
 <code class="sig-name descname">resource_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.WebAclAssociation.resource_arn" title="Permalink to this definition">¶</a></dt>
@@ -1660,9 +1625,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl_association.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1707,6 +1669,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.XssMatchSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">XssMatchSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">xss_match_tuples=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.XssMatchSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional XSS Match Set Resource for use with Application Load Balancer.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_xss_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_xss_match_set.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1727,9 +1692,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Which text transformation, if any, to perform on the web request before inspecting the request for cross-site scripting attacks.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_xss_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_xss_match_set.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.XssMatchSet.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.XssMatchSet.name" title="Permalink to this definition">¶</a></dt>
@@ -1777,9 +1739,6 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Which text transformation, if any, to perform on the web request before inspecting the request for cross-site scripting attacks.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_xss_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_xss_match_set.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1824,56 +1783,56 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.get_ipset">
 <code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">get_ipset</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.get_ipset" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">wafregional.IpSet</span></code> Retrieves a WAF Regional IP Set Resource Id.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_ipset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_ipset.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the WAF Regional IP set.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_ipset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_ipset.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.wafregional.get_rate_based_mod">
 <code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">get_rate_based_mod</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.get_rate_based_mod" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">wafregional.RateBasedRule</span></code> Retrieves a WAF Regional Rate Based Rule Resource Id.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_rate_based_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_rate_based_rule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the WAF Regional rate based rule.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_rate_based_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_rate_based_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.wafregional.get_rule">
 <code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">get_rule</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.get_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">wafregional.Rule</span></code> Retrieves a WAF Regional Rule Resource Id.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_rule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the WAF Regional rule.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.wafregional.get_web_acl">
 <code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">get_web_acl</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.get_web_acl" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">wafregional.WebAcl</span></code> Retrieves a WAF Regional Web ACL Resource Id.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_web_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_web_acl.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the WAF Regional Web ACL.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_web_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_web_acl.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

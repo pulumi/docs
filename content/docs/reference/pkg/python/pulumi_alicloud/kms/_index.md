@@ -15,32 +15,26 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.kms"></span><dl class="class">
 <dt id="pulumi_alicloud.kms.AwaitableGetCiphertextResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">AwaitableGetCiphertextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext_blob=None</em>, <em class="sig-param">encryption_context=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">plaintext=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.AwaitableGetCiphertextResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">AwaitableGetCiphertextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext_blob=None</em>, <em class="sig-param">encryption_context=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">plaintext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.AwaitableGetCiphertextResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.kms.AwaitableGetKeysResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">AwaitableGetKeysResult</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.AwaitableGetKeysResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">AwaitableGetKeysResult</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.AwaitableGetKeysResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.kms.AwaitableGetPlaintextResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">AwaitableGetPlaintextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext_blob=None</em>, <em class="sig-param">encryption_context=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">plaintext=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.AwaitableGetPlaintextResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">AwaitableGetPlaintextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext_blob=None</em>, <em class="sig-param">encryption_context=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">plaintext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.AwaitableGetPlaintextResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.kms.Ciphertext">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">Ciphertext</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">encryption_context=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">plaintext=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Ciphertext" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Ciphertext resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The globally unique ID of the CMK.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Ciphertext resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] key_id: The globally unique ID of the CMK.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `encryption_context` -
 (Optional, ForceNew) The Encryption context. If you specify this parameter here, it is also required when you call the Decrypt API operation. For more information, see [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm).
 </pre></div>
@@ -50,9 +44,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd class="field-odd"><p><strong>plaintext</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The plaintext to be encrypted which must be encoded in Base64.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_ciphertext.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.kms.Ciphertext.ciphertext_blob">
 <code class="sig-name descname">ciphertext_blob</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Ciphertext.ciphertext_blob" title="Permalink to this definition">¶</a></dt>
@@ -100,9 +91,6 @@ properties used to qualify the lookup.</p>
 <dd class="field-odd"><p><strong>plaintext</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The plaintext to be encrypted which must be encoded in Base64.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_ciphertext.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -145,7 +133,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.kms.GetCiphertextResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">GetCiphertextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext_blob=None</em>, <em class="sig-param">encryption_context=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">plaintext=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.GetCiphertextResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">GetCiphertextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext_blob=None</em>, <em class="sig-param">encryption_context=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">plaintext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.GetCiphertextResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCiphertext.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.kms.GetCiphertextResult.ciphertext_blob">
@@ -163,8 +151,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.kms.GetKeysResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">GetKeysResult</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.GetKeysResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">GetKeysResult</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.GetKeysResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKeys.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.GetKeysResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetKeysResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.kms.GetKeysResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetKeysResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -183,18 +177,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Status of the key. Possible values: <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>, <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> and <code class="docutils literal notranslate"><span class="pre">PendingDeletion</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.kms.GetKeysResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetKeysResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.kms.GetPlaintextResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">GetPlaintextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext_blob=None</em>, <em class="sig-param">encryption_context=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">plaintext=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.GetPlaintextResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">GetPlaintextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext_blob=None</em>, <em class="sig-param">encryption_context=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">plaintext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.GetPlaintextResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPlaintext.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.GetPlaintextResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetPlaintextResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.kms.GetPlaintextResult.key_id">
 <code class="sig-name descname">key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetPlaintextResult.key_id" title="Permalink to this definition">¶</a></dt>
@@ -207,18 +201,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The decrypted plaintext.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.kms.GetPlaintextResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetPlaintextResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.kms.Key">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">Key</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">deletion_window_in_days=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">is_enabled=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Key" title="Permalink to this definition">¶</a></dt>
 <dd><p>A kms key can help user to protect data security in the transmission process.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_key.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -226,14 +217,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>deletion_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in days after which the key is deleted
 after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the key.</p></li>
 <li><p><strong>is_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the key is enabled. Defaults to true.</p></li>
 <li><p><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the usage of CMK. Currently, default to ‘ENCRYPT/DECRYPT’, indicating that CMK is used for encryption and decryption.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.kms.Key.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.arn" title="Permalink to this definition">¶</a></dt>
@@ -245,6 +234,12 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
 <code class="sig-name descname">deletion_window_in_days</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.deletion_window_in_days" title="Permalink to this definition">¶</a></dt>
 <dd><p>Duration in days after which the key is deleted
 after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.Key.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the key.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -273,14 +268,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Alicloud Resource Name (ARN) of the key.</p></li>
 <li><p><strong>deletion_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in days after which the key is deleted
 after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the key.</p></li>
 <li><p><strong>is_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the key is enabled. Defaults to true.</p></li>
 <li><p><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the usage of CMK. Currently, default to ‘ENCRYPT/DECRYPT’, indicating that CMK is used for encryption and decryption.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -339,15 +332,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p><strong>plaintext</strong> (<em>str</em>) – The plaintext to be encrypted which must be encoded in Base64.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kms_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kms_ciphertext.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.kms.get_keys">
 <code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">get_keys</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.get_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of KMS keys in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kms_keys.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kms_keys.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -357,9 +350,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kms_keys.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kms_keys.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -371,9 +361,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p><strong>ciphertext_blob</strong> (<em>str</em>) – The ciphertext to be decrypted.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kms_plaintext.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kms_plaintext.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>
