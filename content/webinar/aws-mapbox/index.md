@@ -7,7 +7,7 @@ meta_desc: "Join us in the webinar to see how Pulumi supercharges Mapbox’s IoT
 pre_recorded: true
 
 # The preview image will be shown on the list page.
-preview_image: "/logos/customers/mapbox_logo.png"
+preview_image: "/images/webinar/mapbox-on-demand.png"
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false

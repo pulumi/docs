@@ -61,5 +61,5 @@ form:
     gotowebinar_key: ""
 
     # HubSpot form id.
-    hubspot_form_id: "88fac9d7-6e56-4166-849d-e10a90892962"
+    hubspot_form_id: ""
 ---
