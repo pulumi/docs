@@ -18,6 +18,11 @@
             width: 100% !important;
         }
 
+        .legal-consent-container .hs-form-booleancheckbox-display .hs-input {
+            width: auto !important;
+            margin-top: 4px;
+        }
+
         .hs-form-required {
             @apply ml-1 text-red-500;
         }
