@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "API Gateway for an AWS Lambda"
-meta_desc: "Search Description"
+meta_desc: "In this week's edition of Modern Infrastructure as Code Wednesday, we’ll show you how to set up an API Gateway for an AWS Lambda function in 30 minutes."
 
 # If the video is pre-recorded or live.
 pre_recorded: true
