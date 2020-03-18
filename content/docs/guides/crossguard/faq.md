@@ -26,7 +26,7 @@ Therefore, if a Policy Pack is specified locally using `--policy-pack`, the Pulu
 
 If a stack belongs to multiple Policy Groups, the Pulumi Service will aggregate all required Policy Packs from those Policy Groups. Only one of version of each Policy Pack will be run per update.
 
-This means that if a stack belongs to multiple Policy Groups that specify different versions of a Policy Pack, only the newest version of that pack will be run. For example, if a stack `my-stack` belongs to Policy Group `production-stacks` that requires Policy Pack `aws-policies` version 2 and Policy Group `platform-stacks` that requires Policy Pack `aws-policies` version 4, only version 4 of `aws-policies` would be run.
+This means that if a stack belongs to multiple Policy Groups that specify different versions of a Policy Pack, only the newest version of that pack will be run. For example, if a stack `my-stack` belongs to Policy Group `production-stacks` that requires Policy Pack `aws-policies` version 2 and Policy Group `platform-stacks` that requires Policy Pack `aws-policies` version 4, only version 4 of `aws-policies` would be run. In the case that a stack has the same version of a Policy Pack with different configuration enabled, the most recently modified Policy Pack and configuration will be enforced.
 
 Under a stack's "Settings" tab you can take a look at the Policy Packs that would be enforced on a `preview` or `update` as well as the Policy Groups that the stack belongs to.
 
