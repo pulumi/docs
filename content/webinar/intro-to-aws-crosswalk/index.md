@@ -64,13 +64,4 @@ main:
     learn:
         - How to provision cloud services that are **Well-Architected** by default.
         - Common best practices for production ready infrastructure.
-
-# The right hand side webinar setion.
-form:
-    # GoToWebinar webinar key. This key allows us to register people for webinars via the
-    # HubSpot form.
-    gotowebinar_key: ""
-
-    # HubSpot form id.
-    hubspot_form_id: ""
 ---

@@ -57,7 +57,7 @@ main:
         - Multi language cloud development
         - Policy as Code - enforcing best practices across organizations.
 
-# The right hand side webinar setion.
+# The right hand side webinar section.
 form:
     # GoToWebinar webinar key. This key allows us to register people for webinars via the
     # HubSpot form.

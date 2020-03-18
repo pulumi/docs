@@ -57,7 +57,7 @@ main:
     learn:
         - ""
 
-# The right hand side webinar setion.
+# The right hand side form section.
 form:
     # GoToWebinar webinar key. This key allows us to register people for webinars via the
     # HubSpot form.

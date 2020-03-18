@@ -61,7 +61,7 @@ main:
         - This is a 100-level introduction to setting up your infrastructure using Pulumi with multiple languages.
         - Cloud programming with your favorite language.
 
-# The right hand side webinar setion.
+# The right hand side webinar section.
 form:
     # GoToWebinar webinar key. This key allows us to register people for webinars via the
     # HubSpot form.

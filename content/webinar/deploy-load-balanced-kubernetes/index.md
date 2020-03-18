@@ -57,13 +57,4 @@ main:
     # A bullet point list containing what the user will learn during the webinar.
     learn:
         - Deploy a scalable and load-balanced Kubernetes service.
-
-# The right hand side webinar setion.
-form:
-    # GoToWebinar webinar key. This key allows us to register people for webinars via the
-    # HubSpot form.
-    gotowebinar_key: ""
-
-    # HubSpot form id.
-    hubspot_form_id: ""
 ---
