@@ -15,17 +15,23 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.mongodb"></span><dl class="class">
 <dt id="pulumi_alicloud.mongodb.AwaitableGetInstancesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mongodb.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mongodb.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mongodb.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mongodb.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.mongodb.GetInstancesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mongodb.</code><code class="sig-name descname">GetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mongodb.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mongodb.</code><code class="sig-name descname">GetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mongodb.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstances.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.mongodb.GetInstancesResult.availability_zone">
 <code class="sig-name descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.GetInstancesResult.availability_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance availability zone.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.mongodb.GetInstancesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -58,31 +64,19 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The names list of MongoDB instances</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.mongodb.GetInstancesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.mongodb.Instance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mongodb.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_password=None</em>, <em class="sig-param">backup_periods=None</em>, <em class="sig-param">backup_time=None</em>, <em class="sig-param">db_instance_class=None</em>, <em class="sig-param">db_instance_storage=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">maintain_end_time=None</em>, <em class="sig-param">maintain_start_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">replication_factor=None</em>, <em class="sig-param">security_ip_lists=None</em>, <em class="sig-param">storage_engine=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mongodb.Instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Instance resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>account_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password of the root account. It is a string of 6 to 32 characters and is composed of letters, numbers, and underlines.</p></li>
-<li><p><strong>backup_periods</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – MongoDB Instance backup period. It is required when <code class="docutils literal notranslate"><span class="pre">backup_time</span></code> was existed. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]</p></li>
-<li><p><strong>backup_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – MongoDB instance backup time. It is required when <code class="docutils literal notranslate"><span class="pre">backup_period</span></code> was existed. In the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. If not set, the system will return a default, like “23:00Z-24:00Z”.</p></li>
-<li><p><strong>db_instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Instance specification. see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/57141.htm">Instance specifications</a>.</p></li>
-<li><p><strong>db_instance_storage</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – User-defined DB instance storage space.Unit: GB. Value range:</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Instance resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] account_password: Password of the root account. It is a string of 6 to 32 characters and is composed of letters, numbers, and underlines.
+:param pulumi.Input[list] backup_periods: MongoDB Instance backup period. It is required when <code class="docutils literal notranslate"><span class="pre">backup_time</span></code> was existed. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
+:param pulumi.Input[str] backup_time: MongoDB instance backup time. It is required when <code class="docutils literal notranslate"><span class="pre">backup_period</span></code> was existed. In the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. If not set, the system will return a default, like “23:00Z-24:00Z”.
+:param pulumi.Input[str] db_instance_class: Instance specification. see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/57141.htm">Instance specifications</a>.
+:param pulumi.Input[float] db_instance_storage: User-defined DB instance storage space.Unit: GB. Value range:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Custom</span> <span class="n">storage</span> <span class="n">space</span><span class="p">;</span> <span class="n">value</span> <span class="nb">range</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">2000</span><span class="p">]</span>
 <span class="o">-</span> <span class="mi">10</span><span class="o">-</span><span class="n">GB</span> <span class="n">increments</span><span class="o">.</span>
 </pre></div>
@@ -117,9 +111,6 @@ The multiple zone ID can be retrieved by setting <code class="docutils literal n
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mongodb_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mongodb_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.mongodb.Instance.account_password">
 <code class="sig-name descname">account_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.Instance.account_password" title="Permalink to this definition">¶</a></dt>
@@ -307,9 +298,6 @@ The multiple zone ID can be retrieved by setting <code class="docutils literal n
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mongodb_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mongodb_instance.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -353,20 +341,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.mongodb.ShardingInstance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mongodb.</code><code class="sig-name descname">ShardingInstance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_password=None</em>, <em class="sig-param">backup_periods=None</em>, <em class="sig-param">backup_time=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">mongo_lists=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">security_ip_lists=None</em>, <em class="sig-param">shard_lists=None</em>, <em class="sig-param">storage_engine=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mongodb.ShardingInstance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ShardingInstance resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>account_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password of the root account. It is a string of 6 to 32 characters and is composed of letters, numbers, and underlines.</p></li>
-<li><p><strong>backup_periods</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – MongoDB Instance backup period. It is required when <code class="docutils literal notranslate"><span class="pre">backup_time</span></code> was existed. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]</p></li>
-<li><p><strong>backup_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – MongoDB instance backup time. It is required when <code class="docutils literal notranslate"><span class="pre">backup_period</span></code> was existed. In the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. If not set, the system will return a default, like “23:00Z-24:00Z”.</p></li>
-<li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Database version. Value options can refer to the latest docs <a class="reference external" href="https://www.alibabacloud.com/help/zh/doc-detail/61884.htm">CreateDBInstance</a> <code class="docutils literal notranslate"><span class="pre">EngineVersion</span></code>.</p>
-</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ShardingInstance resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] account_password: Password of the root account. It is a string of 6 to 32 characters and is composed of letters, numbers, and underlines.
+:param pulumi.Input[list] backup_periods: MongoDB Instance backup period. It is required when <code class="docutils literal notranslate"><span class="pre">backup_time</span></code> was existed. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
+:param pulumi.Input[str] backup_time: MongoDB instance backup time. It is required when <code class="docutils literal notranslate"><span class="pre">backup_period</span></code> was existed. In the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. If not set, the system will return a default, like “23:00Z-24:00Z”.
+:param pulumi.Input[str] engine_version: Database version. Value options can refer to the latest docs <a class="reference external" href="https://www.alibabacloud.com/help/zh/doc-detail/61884.htm">CreateDBInstance</a> <code class="docutils literal notranslate"><span class="pre">EngineVersion</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 </pre></div>
 </div>
@@ -428,9 +409,6 @@ If it is a multi-zone and <code class="docutils literal notranslate"><span class
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mongodb_sharding_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mongodb_sharding_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.mongodb.ShardingInstance.account_password">
 <code class="sig-name descname">account_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.ShardingInstance.account_password" title="Permalink to this definition">¶</a></dt>
@@ -634,9 +612,6 @@ If it is a multi-zone and <code class="docutils literal notranslate"><span class
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mongodb_sharding_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/mongodb_sharding_instance.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -682,6 +657,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_alicloud.mongodb.</code><code class="sig-name descname">get_instances</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mongodb.get_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">mongodb.getInstances</span></code> data source provides a collection of MongoDB instances available in Alicloud account.
 Filters support regular expression for the instance name, engine or instance type.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mongodb_instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mongodb_instances.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -694,9 +672,6 @@ Filters support regular expression for the instance name, engine or instance typ
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mongodb_instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mongodb_instances.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

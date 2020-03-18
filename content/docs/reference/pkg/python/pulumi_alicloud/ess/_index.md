@@ -16,32 +16,23 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_alicloud.ess"></span><dl class="class">
 <dt id="pulumi_alicloud.ess.Alarm">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">Alarm</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alarm_actions=None</em>, <em class="sig-param">cloud_monitor_group_id=None</em>, <em class="sig-param">comparison_operator=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dimensions=None</em>, <em class="sig-param">enable=None</em>, <em class="sig-param">evaluation_count=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">metric_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">statistics=None</em>, <em class="sig-param">threshold=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.Alarm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Alarm resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>alarm_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of actions to execute when this alarm transition into an ALARM state. Each action is specified as ess scaling rule ari.</p></li>
-<li><p><strong>cloud_monitor_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Defines the application group id defined by CMS which is assigned when you upload custom metric to CMS, only available for custom metirc.</p></li>
-<li><p><strong>comparison_operator</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. Supported value: &gt;=, &lt;=, &gt;, &lt;. Defaults to &gt;=.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description for the alarm.</p></li>
-<li><p><strong>dimensions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The dimension map for the alarm’s associated metric (documented below). For all metrics, you can not set the dimension key as “scaling_group” or “userId”, which is set by default, the second dimension for metric, such as “device” for “PackagesNetIn”, need to be set by users.</p></li>
-<li><p><strong>enable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable specific ess alarm. Default to true.</p></li>
-<li><p><strong>evaluation_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of times that needs to satisfies comparison condition before transition into ALARM state. Defaults to 3.</p></li>
-<li><p><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the alarm’s associated metric. See Block_metricNames_and_dimensions below for details.</p></li>
-<li><p><strong>metric_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type for the alarm’s associated metric. Supported value: system, custom. “system” means the metric data is collected by Aliyun Cloud Monitor Service(CMS), “custom” means the metric data is upload to CMS by users. Defaults to system.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for ess alarm.</p></li>
-<li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The period in seconds over which the specified statistic is applied. Supported value: 60, 120, 300, 900. Defaults to 300.</p></li>
-<li><p><strong>scaling_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scaling group associated with this alarm, the ‘ForceNew’ attribute is available in 1.56.0+.</p></li>
-<li><p><strong>statistics</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The statistic to apply to the alarm’s associated metric. Supported value: Average, Minimum, Maximum. Defaults to Average.</p></li>
-<li><p><strong>threshold</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value against which the specified statistics is compared.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_alarm.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_alarm.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Alarm resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] alarm_actions: The list of actions to execute when this alarm transition into an ALARM state. Each action is specified as ess scaling rule ari.
+:param pulumi.Input[float] cloud_monitor_group_id: Defines the application group id defined by CMS which is assigned when you upload custom metric to CMS, only available for custom metirc.
+:param pulumi.Input[str] comparison_operator: The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. Supported value: &gt;=, &lt;=, &gt;, &lt;. Defaults to &gt;=.
+:param pulumi.Input[str] description: The description for the alarm.
+:param pulumi.Input[dict] dimensions: The dimension map for the alarm’s associated metric (documented below). For all metrics, you can not set the dimension key as “scaling_group” or “userId”, which is set by default, the second dimension for metric, such as “device” for “PackagesNetIn”, need to be set by users.
+:param pulumi.Input[bool] enable: Whether to enable specific ess alarm. Default to true.
+:param pulumi.Input[float] evaluation_count: The number of times that needs to satisfies comparison condition before transition into ALARM state. Defaults to 3.
+:param pulumi.Input[str] metric_name: The name for the alarm’s associated metric. See Block_metricNames_and_dimensions below for details.
+:param pulumi.Input[str] metric_type: The type for the alarm’s associated metric. Supported value: system, custom. “system” means the metric data is collected by Aliyun Cloud Monitor Service(CMS), “custom” means the metric data is upload to CMS by users. Defaults to system. 
+:param pulumi.Input[str] name: The name for ess alarm.
+:param pulumi.Input[float] period: The period in seconds over which the specified statistic is applied. Supported value: 60, 120, 300, 900. Defaults to 300.
+:param pulumi.Input[str] scaling_group_id: The scaling group associated with this alarm, the ‘ForceNew’ attribute is available in 1.56.0+.
+:param pulumi.Input[str] statistics: The statistic to apply to the alarm’s associated metric. Supported value: Average, Minimum, Maximum. Defaults to Average.
+:param pulumi.Input[str] threshold: The value against which the specified statistics is compared.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ess.Alarm.alarm_actions">
 <code class="sig-name descname">alarm_actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.Alarm.alarm_actions" title="Permalink to this definition">¶</a></dt>
@@ -161,9 +152,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_alarm.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_alarm.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -211,6 +199,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> ECS instances can be attached or remove only when the scaling group is active and it has no scaling activity in progress.</p>
 <p><strong>NOTE:</strong> There are two types ECS instances in a scaling group: “AutoCreated” and “Attached”. The total number of them can not larger than the scaling group “MaxSize”.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_attachment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -223,9 +212,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ess.Attachment.force">
 <code class="sig-name descname">force</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.Attachment.force" title="Permalink to this definition">¶</a></dt>
@@ -261,9 +247,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -306,47 +289,53 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.ess.AwaitableGetAlarmsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">AwaitableGetAlarmsResult</code><span class="sig-paren">(</span><em class="sig-param">alarms=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">metric_type=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.AwaitableGetAlarmsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">AwaitableGetAlarmsResult</code><span class="sig-paren">(</span><em class="sig-param">alarms=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">metric_type=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.AwaitableGetAlarmsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ess.AwaitableGetLifecycleHooksResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">AwaitableGetLifecycleHooksResult</code><span class="sig-paren">(</span><em class="sig-param">hooks=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.AwaitableGetLifecycleHooksResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">AwaitableGetLifecycleHooksResult</code><span class="sig-paren">(</span><em class="sig-param">hooks=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.AwaitableGetLifecycleHooksResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ess.AwaitableGetNotificationsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">AwaitableGetNotificationsResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">notifications=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.AwaitableGetNotificationsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">AwaitableGetNotificationsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">notifications=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.AwaitableGetNotificationsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ess.AwaitableGetScalingConfigurationsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">AwaitableGetScalingConfigurationsResult</code><span class="sig-paren">(</span><em class="sig-param">configurations=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.AwaitableGetScalingConfigurationsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">AwaitableGetScalingConfigurationsResult</code><span class="sig-paren">(</span><em class="sig-param">configurations=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.AwaitableGetScalingConfigurationsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ess.AwaitableGetScalingGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">AwaitableGetScalingGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.AwaitableGetScalingGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">AwaitableGetScalingGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.AwaitableGetScalingGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ess.AwaitableGetScalingRulesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">AwaitableGetScalingRulesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.AwaitableGetScalingRulesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">AwaitableGetScalingRulesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.AwaitableGetScalingRulesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ess.AwaitableGetScheduledTasksResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">AwaitableGetScheduledTasksResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scheduled_action=None</em>, <em class="sig-param">scheduled_task_id=None</em>, <em class="sig-param">tasks=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.AwaitableGetScheduledTasksResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">AwaitableGetScheduledTasksResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scheduled_action=None</em>, <em class="sig-param">scheduled_task_id=None</em>, <em class="sig-param">tasks=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.AwaitableGetScheduledTasksResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ess.GetAlarmsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">GetAlarmsResult</code><span class="sig-paren">(</span><em class="sig-param">alarms=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">metric_type=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.GetAlarmsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">GetAlarmsResult</code><span class="sig-paren">(</span><em class="sig-param">alarms=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">metric_type=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.GetAlarmsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAlarms.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ess.GetAlarmsResult.alarms">
 <code class="sig-name descname">alarms</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetAlarmsResult.alarms" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of alarms. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.ess.GetAlarmsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetAlarmsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -373,22 +362,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The scaling group associated with this alarm.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ess.GetAlarmsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetAlarmsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ess.GetLifecycleHooksResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">GetLifecycleHooksResult</code><span class="sig-paren">(</span><em class="sig-param">hooks=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.GetLifecycleHooksResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">GetLifecycleHooksResult</code><span class="sig-paren">(</span><em class="sig-param">hooks=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.GetLifecycleHooksResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLifecycleHooks.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ess.GetLifecycleHooksResult.hooks">
 <code class="sig-name descname">hooks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetLifecycleHooksResult.hooks" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of lifecycle hooks. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.ess.GetLifecycleHooksResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetLifecycleHooksResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -409,18 +398,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>ID of the scaling group.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ess.GetLifecycleHooksResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetLifecycleHooksResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ess.GetNotificationsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">GetNotificationsResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">notifications=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.GetNotificationsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">GetNotificationsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">notifications=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.GetNotificationsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNotifications.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.ess.GetNotificationsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetNotificationsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.ess.GetNotificationsResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetNotificationsResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -439,22 +428,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>ID of the scaling group.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ess.GetNotificationsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetNotificationsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ess.GetScalingConfigurationsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">GetScalingConfigurationsResult</code><span class="sig-paren">(</span><em class="sig-param">configurations=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.GetScalingConfigurationsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">GetScalingConfigurationsResult</code><span class="sig-paren">(</span><em class="sig-param">configurations=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.GetScalingConfigurationsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getScalingConfigurations.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ess.GetScalingConfigurationsResult.configurations">
 <code class="sig-name descname">configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetScalingConfigurationsResult.configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of scaling rules. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.ess.GetScalingConfigurationsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetScalingConfigurationsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -475,22 +464,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>ID of the scaling group.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ess.GetScalingConfigurationsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetScalingConfigurationsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ess.GetScalingGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">GetScalingGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.GetScalingGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">GetScalingGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.GetScalingGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getScalingGroups.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ess.GetScalingGroupsResult.groups">
 <code class="sig-name descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetScalingGroupsResult.groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of scaling groups. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.ess.GetScalingGroupsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetScalingGroupsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -505,18 +494,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of scaling group names.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ess.GetScalingGroupsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetScalingGroupsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ess.GetScalingRulesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">GetScalingRulesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.GetScalingRulesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">GetScalingRulesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.GetScalingRulesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getScalingRules.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.ess.GetScalingRulesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetScalingRulesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.ess.GetScalingRulesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetScalingRulesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -547,18 +536,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Type of the scaling rule.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ess.GetScalingRulesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetScalingRulesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ess.GetScheduledTasksResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">GetScheduledTasksResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scheduled_action=None</em>, <em class="sig-param">scheduled_task_id=None</em>, <em class="sig-param">tasks=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.GetScheduledTasksResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">GetScheduledTasksResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scheduled_action=None</em>, <em class="sig-param">scheduled_task_id=None</em>, <em class="sig-param">tasks=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.GetScheduledTasksResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getScheduledTasks.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.ess.GetScheduledTasksResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetScheduledTasksResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.ess.GetScheduledTasksResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetScheduledTasksResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -583,36 +572,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of scheduled tasks. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ess.GetScheduledTasksResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.GetScheduledTasksResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ess.LifecycleHook">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">LifecycleHook</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">default_result=None</em>, <em class="sig-param">heartbeat_timeout=None</em>, <em class="sig-param">lifecycle_transition=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_arn=None</em>, <em class="sig-param">notification_metadata=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.LifecycleHook" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a LifecycleHook resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>default_result</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses. Applicable value: CONTINUE, ABANDON, default value: CONTINUE.</p></li>
-<li><p><strong>heartbeat_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the default_result parameter. Default value: 600.</p></li>
-<li><p><strong>lifecycle_transition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of Scaling activity attached to lifecycle hook. Supported value: SCALE_OUT, SCALE<a href="#id1"><span class="problematic" id="id2">*</span></a>IN.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the lifecycle hook, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores <cite>*`</cite>, hypens``-<code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">and</span> <span class="pre">decimal</span> <span class="pre">point</span></code>.`. If this parameter value is not specified, the default value is lifecycle hook id.</p></li>
-<li><p><strong>notification_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Arn of notification target.</p></li>
-<li><p><strong>notification_metadata</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Additional information that you want to include when Auto Scaling sends a message to the notification target.</p></li>
-<li><p><strong>scaling_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Auto Scaling group to which you want to assign the lifecycle hook.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_lifecycle_hook.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_lifecycle_hook.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a LifecycleHook resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] default_result: Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses. Applicable value: CONTINUE, ABANDON, default value: CONTINUE.
+:param pulumi.Input[float] heartbeat_timeout: Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the default_result parameter. Default value: 600.
+:param pulumi.Input[str] lifecycle_transition: Type of Scaling activity attached to lifecycle hook. Supported value: SCALE_OUT, SCALE<em>IN.
+:param pulumi.Input[str] name: The name of the lifecycle hook, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `</em><code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">hypens</span></code>-<code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">and</span> <span class="pre">decimal</span> <span class="pre">point</span></code>.`. If this parameter value is not specified, the default value is lifecycle hook id.
+:param pulumi.Input[str] notification_arn: The Arn of notification target.
+:param pulumi.Input[str] notification_metadata: Additional information that you want to include when Auto Scaling sends a message to the notification target.
+:param pulumi.Input[str] scaling_group_id: The ID of the Auto Scaling group to which you want to assign the lifecycle hook.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ess.LifecycleHook.default_result">
 <code class="sig-name descname">default_result</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.LifecycleHook.default_result" title="Permalink to this definition">¶</a></dt>
@@ -668,7 +642,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>default_result</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses. Applicable value: CONTINUE, ABANDON, default value: CONTINUE.</p></li>
 <li><p><strong>heartbeat_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the default_result parameter. Default value: 600.</p></li>
-<li><p><strong>lifecycle_transition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of Scaling activity attached to lifecycle hook. Supported value: SCALE_OUT, SCALE<a href="#id3"><span class="problematic" id="id4">*</span></a>IN.</p></li>
+<li><p><strong>lifecycle_transition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of Scaling activity attached to lifecycle hook. Supported value: SCALE_OUT, SCALE<a href="#id1"><span class="problematic" id="id2">*</span></a>IN.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the lifecycle hook, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores <cite>*`</cite>, hypens``-<code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">and</span> <span class="pre">decimal</span> <span class="pre">point</span></code>.`. If this parameter value is not specified, the default value is lifecycle hook id.</p></li>
 <li><p><strong>notification_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Arn of notification target.</p></li>
 <li><p><strong>notification_metadata</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Additional information that you want to include when Auto Scaling sends a message to the notification target.</p></li>
@@ -676,9 +650,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_lifecycle_hook.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_lifecycle_hook.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -725,6 +696,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a ESS notification resource. More about Ess notification, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/71114.htm">Autoscaling Notification</a>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.55.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_notification.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -737,9 +709,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_notification.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ess.Notification.notification_arn">
 <code class="sig-name descname">notification_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.Notification.notification_arn" title="Permalink to this definition">¶</a></dt>
@@ -775,9 +744,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_notification.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -821,45 +787,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.ess.ScalingConfiguration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">ScalingConfiguration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">enable=None</em>, <em class="sig-param">force_delete=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_ids=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">instance_types=None</em>, <em class="sig-param">internet_charge_type=None</em>, <em class="sig-param">internet_max_bandwidth_in=None</em>, <em class="sig-param">internet_max_bandwidth_out=None</em>, <em class="sig-param">io_optimized=None</em>, <em class="sig-param">is_outdated=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">override=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">password_inherit=None</em>, <em class="sig-param">role_name=None</em>, <em class="sig-param">scaling_configuration_name=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">substitute=None</em>, <em class="sig-param">system_disk_category=None</em>, <em class="sig-param">system_disk_size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.ScalingConfiguration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ScalingConfiguration resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>active</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether active current scaling configuration in the specified scaling group. Default to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – DataDisk mappings to attach to ecs instance. See Block datadisk below for details.</p></li>
-<li><p><strong>enable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether enable the specified scaling group(make it active) to which the current scaling configuration belongs.</p></li>
-<li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The last scaling configuration will be deleted forcibly with deleting its scaling group. Default to false.</p></li>
-<li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of an image file, indicating the image resource selected when an instance is enabled.</p></li>
-<li><p><strong>instance_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – It has been deprecated from version 1.6.0. New resource <code class="docutils literal notranslate"><span class="pre">ess.Attachment</span></code> replaces it.</p></li>
-<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an ECS instance. Default to “ESS-Instance”. It is valid from version 1.7.1.</p></li>
-<li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource type of an ECS instance.</p></li>
-<li><p><strong>instance_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Resource types of an ECS instance.</p></li>
-<li><p><strong>internet_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network billing type, Values: PayByBandwidth or PayByTraffic. Default to <code class="docutils literal notranslate"><span class="pre">PayByBandwidth</span></code>.</p></li>
-<li><p><strong>internet_max_bandwidth_in</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit per second). The value range is [1,200].</p></li>
-<li><p><strong>internet_max_bandwidth_out</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum outgoing bandwidth from the public network, measured in Mbps (Mega bit per second). The value range for PayByBandwidth is [0,100].</p></li>
-<li><p><strong>io_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – It has been deprecated on instance resource. All the launched alicloud instances will be I/O optimized.</p></li>
-<li><p><strong>is_outdated</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use outdated instance type. Default to false.</p></li>
-<li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of key pair that can login ECS instance successfully without password. If it is specified, the password would be invalid.</p></li>
-<li><p><strong>kms_encrypted_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An KMS encrypts password used to a db account. If the <code class="docutils literal notranslate"><span class="pre">password</span></code> is filled in, this field will be ignored.</p></li>
-<li><p><strong>kms_encryption_context</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating a db account with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.</p></li>
-<li><p><strong>override</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether to overwrite the existing data. Default to false.</p></li>
-<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password of the ECS instance. The password must be 8 to 30 characters in length. It must contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code class="docutils literal notranslate"><span class="pre">()</span> <span class="pre">~!&#64;#$%^&amp;*-_+=\|{}[]:;'&lt;&gt;,.?/</span></code>, The password of Windows-based instances cannot start with a forward slash (/).</p></li>
-<li><p><strong>password_inherit</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether to use the password that is predefined in the image. If the PasswordInherit parameter is set to true, the <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> will be ignored. You must ensure that the selected image has a password configured.</p></li>
-<li><p><strong>role_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Instance RAM role name. The name is provided and maintained by RAM. You can use <code class="docutils literal notranslate"><span class="pre">ram.Role</span></code> to create a new one.</p></li>
-<li><p><strong>scaling_configuration*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name shown for the scheduled task. which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores <cite>*`</cite>, hypens``-<code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">and</span> <span class="pre">decimal</span> <span class="pre">point</span></code>.<a href="#id7"><span class="problematic" id="id8">``</span></a>. If this parameter value is not specified, the default value is ScalingConfigurationId.</p>
-</p></li>
-<li><p><strong>scaling_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the scaling group of a scaling configuration.</p></li>
-<li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the security group used to create new instance. It is conflict with``security_group_ids<a href="#id9"><span class="problematic" id="id10">``</span></a>.</p></li>
-<li><p><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List IDs of the security group used to create new instances. It is conflict with``security_group_id<a href="#id11"><span class="problematic" id="id12">``</span></a>.</p></li>
-<li><p><strong>substitute</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The another scaling configuration which will be active automatically and replace current configuration when setting``active<code class="docutils literal notranslate"><span class="pre">to</span> <span class="pre">'false'.</span> <span class="pre">It</span> <span class="pre">is</span> <span class="pre">invalid</span> <span class="pre">when</span></code>active<a href="#id13"><span class="problematic" id="id14">``</span></a>is ‘true’.</p></li>
-<li><p><strong>system_disk_category</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Category of the system disk. The parameter value options are``ephemeral_ssd<code class="docutils literal notranslate"><span class="pre">,</span></code>cloud_efficiency<code class="docutils literal notranslate"><span class="pre">,</span></code>cloud_ssd<code class="docutils literal notranslate"><span class="pre">,</span></code>cloud_essd<code class="docutils literal notranslate"><span class="pre">and</span></code>cloud<code class="docutils literal notranslate"><span class="pre">.</span></code>cloud<code class="docutils literal notranslate"><span class="pre">only</span> <span class="pre">is</span> <span class="pre">used</span> <span class="pre">to</span> <span class="pre">some</span> <span class="pre">no</span> <span class="pre">I/O</span> <span class="pre">optimized</span> <span class="pre">instance.</span> <span class="pre">Default</span> <span class="pre">to</span></code>cloud_efficiency`.</p></li>
-<li><p><strong>system_disk_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Size of system disk, in GiB. Optional values: cloud: 20-500, cloud_efficiency: 20-500, cloud_ssd: 20-500, ephemeral_ssd: 20-500 The default value is max{40, ImageSize}. If this parameter is set, the system disk size must be greater than or equal to max{40, ImageSize}.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource. It will be applied for ECS instances finally.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ScalingConfiguration resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] active: Whether active current scaling configuration in the specified scaling group. Default to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[list] data_disks: DataDisk mappings to attach to ecs instance. See Block datadisk below for details.
+:param pulumi.Input[bool] enable: Whether enable the specified scaling group(make it active) to which the current scaling configuration belongs.
+:param pulumi.Input[bool] force_delete: The last scaling configuration will be deleted forcibly with deleting its scaling group. Default to false.
+:param pulumi.Input[str] image_id: ID of an image file, indicating the image resource selected when an instance is enabled.
+:param pulumi.Input[list] instance_ids: It has been deprecated from version 1.6.0. New resource <code class="docutils literal notranslate"><span class="pre">ess.Attachment</span></code> replaces it.
+:param pulumi.Input[str] instance_name: Name of an ECS instance. Default to “ESS-Instance”. It is valid from version 1.7.1.
+:param pulumi.Input[str] instance_type: Resource type of an ECS instance.
+:param pulumi.Input[list] instance_types: Resource types of an ECS instance.
+:param pulumi.Input[str] internet_charge_type: Network billing type, Values: PayByBandwidth or PayByTraffic. Default to <code class="docutils literal notranslate"><span class="pre">PayByBandwidth</span></code>.
+:param pulumi.Input[float] internet_max_bandwidth_in: Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit per second). The value range is [1,200].
+:param pulumi.Input[float] internet_max_bandwidth_out: Maximum outgoing bandwidth from the public network, measured in Mbps (Mega bit per second). The value range for PayByBandwidth is [0,100].
+:param pulumi.Input[str] io_optimized: It has been deprecated on instance resource. All the launched alicloud instances will be I/O optimized.
+:param pulumi.Input[bool] is_outdated: Whether to use outdated instance type. Default to false.
+:param pulumi.Input[str] key_name: The name of key pair that can login ECS instance successfully without password. If it is specified, the password would be invalid.
+:param pulumi.Input[str] kms_encrypted_password: An KMS encrypts password used to a db account. If the <code class="docutils literal notranslate"><span class="pre">password</span></code> is filled in, this field will be ignored.
+:param pulumi.Input[dict] kms_encryption_context: An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating a db account with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.
+:param pulumi.Input[bool] override: Indicates whether to overwrite the existing data. Default to false.
+:param pulumi.Input[str] password: The password of the ECS instance. The password must be 8 to 30 characters in length. It must contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code class="docutils literal notranslate"><span class="pre">()</span> <span class="pre">~!&#64;#$%^&amp;*-_+=\|{}[]:;'&lt;&gt;,.?/</span></code>, The password of Windows-based instances cannot start with a forward slash (/).
+:param pulumi.Input[bool] password_inherit: Specifies whether to use the password that is predefined in the image. If the PasswordInherit parameter is set to true, the <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> will be ignored. You must ensure that the selected image has a password configured.
+:param pulumi.Input[str] role_name: Instance RAM role name. The name is provided and maintained by RAM. You can use <code class="docutils literal notranslate"><span class="pre">ram.Role</span></code> to create a new one.
+:param pulumi.Input[str] scaling_configuration<em>name: Name shown for the scheduled task. which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `</em><code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">hypens</span></code>-<code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">and</span> <span class="pre">decimal</span> <span class="pre">point</span></code>.<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">If</span> <span class="pre">this</span> <span class="pre">parameter</span> <span class="pre">value</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">specified,</span> <span class="pre">the</span> <span class="pre">default</span> <span class="pre">value</span> <span class="pre">is</span> <span class="pre">ScalingConfigurationId.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">scaling_group_id:</span> <span class="pre">ID</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">scaling</span> <span class="pre">group</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">scaling</span> <span class="pre">configuration.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">security_group_id:</span> <span class="pre">ID</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">security</span> <span class="pre">group</span> <span class="pre">used</span> <span class="pre">to</span> <span class="pre">create</span> <span class="pre">new</span> <span class="pre">instance.</span> <span class="pre">It</span> <span class="pre">is</span> <span class="pre">conflict</span> <span class="pre">with</span></code>security_group_ids<code class="docutils literal notranslate"><span class="pre">.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[list]</span> <span class="pre">security_group_ids:</span> <span class="pre">List</span> <span class="pre">IDs</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">security</span> <span class="pre">group</span> <span class="pre">used</span> <span class="pre">to</span> <span class="pre">create</span> <span class="pre">new</span> <span class="pre">instances.</span> <span class="pre">It</span> <span class="pre">is</span> <span class="pre">conflict</span> <span class="pre">with</span></code>security_group_id<code class="docutils literal notranslate"><span class="pre">.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">substitute:</span> <span class="pre">The</span> <span class="pre">another</span> <span class="pre">scaling</span> <span class="pre">configuration</span> <span class="pre">which</span> <span class="pre">will</span> <span class="pre">be</span> <span class="pre">active</span> <span class="pre">automatically</span> <span class="pre">and</span> <span class="pre">replace</span> <span class="pre">current</span> <span class="pre">configuration</span> <span class="pre">when</span> <span class="pre">setting</span></code>active<code class="docutils literal notranslate"><span class="pre">to</span> <span class="pre">'false'.</span> <span class="pre">It</span> <span class="pre">is</span> <span class="pre">invalid</span> <span class="pre">when</span></code>active<code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">'true'.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">system_disk_category:</span> <span class="pre">Category</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">system</span> <span class="pre">disk.</span> <span class="pre">The</span> <span class="pre">parameter</span> <span class="pre">value</span> <span class="pre">options</span> <span class="pre">are</span></code>ephemeral_ssd<code class="docutils literal notranslate"><span class="pre">,</span></code>cloud_efficiency<code class="docutils literal notranslate"><span class="pre">,</span></code>cloud_ssd<code class="docutils literal notranslate"><span class="pre">,</span></code>cloud_essd<code class="docutils literal notranslate"><span class="pre">and</span></code>cloud<code class="docutils literal notranslate"><span class="pre">.</span></code>cloud<code class="docutils literal notranslate"><span class="pre">only</span> <span class="pre">is</span> <span class="pre">used</span> <span class="pre">to</span> <span class="pre">some</span> <span class="pre">no</span> <span class="pre">I/O</span> <span class="pre">optimized</span> <span class="pre">instance.</span> <span class="pre">Default</span> <span class="pre">to</span></code>cloud_efficiency`.
+:param pulumi.Input[float] system_disk_size: Size of system disk, in GiB. Optional values: cloud: 20-500, cloud_efficiency: 20-500, cloud_ssd: 20-500, ephemeral_ssd: 20-500 The default value is max{40, ImageSize}. If this parameter is set, the system disk size must be greater than or equal to max{40, ImageSize}.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource. It will be applied for ECS instances finally.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Key</span><span class="p">:</span> <span class="n">It</span> <span class="n">can</span> <span class="n">be</span> <span class="n">up</span> <span class="n">to</span> <span class="mi">64</span> <span class="n">characters</span> <span class="ow">in</span> <span class="n">length</span><span class="o">.</span> <span class="n">It</span> <span class="n">cannot</span> <span class="n">begin</span> <span class="k">with</span> <span class="s2">&quot;aliyun&quot;</span><span class="p">,</span> <span class="s2">&quot;http://&quot;</span><span class="p">,</span> <span class="ow">or</span> <span class="s2">&quot;https://&quot;</span><span class="o">.</span> <span class="n">It</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">a</span> <span class="n">null</span> <span class="n">string</span><span class="o">.</span>
 <span class="o">-</span> <span class="n">Value</span><span class="p">:</span> <span class="n">It</span> <span class="n">can</span> <span class="n">be</span> <span class="n">up</span> <span class="n">to</span> <span class="mi">128</span> <span class="n">characters</span> <span class="ow">in</span> <span class="n">length</span><span class="o">.</span> <span class="n">It</span> <span class="n">cannot</span> <span class="n">begin</span> <span class="k">with</span> <span class="s2">&quot;aliyun&quot;</span><span class="p">,</span> <span class="s2">&quot;http://&quot;</span><span class="p">,</span> <span class="ow">or</span> <span class="s2">&quot;https://&quot;</span> <span class="n">It</span> <span class="n">can</span> <span class="n">be</span> <span class="n">a</span> <span class="n">null</span> <span class="n">string</span><span class="o">.</span>
 </pre></div>
@@ -877,9 +836,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scaling_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scaling_configuration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ess.ScalingConfiguration.active">
 <code class="sig-name descname">active</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.ScalingConfiguration.active" title="Permalink to this definition">¶</a></dt>
@@ -1104,12 +1060,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password of the ECS instance. The password must be 8 to 30 characters in length. It must contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code class="docutils literal notranslate"><span class="pre">()</span> <span class="pre">~!&#64;#$%^&amp;*-_+=\|{}[]:;'&lt;&gt;,.?/</span></code>, The password of Windows-based instances cannot start with a forward slash (/).</p></li>
 <li><p><strong>password_inherit</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether to use the password that is predefined in the image. If the PasswordInherit parameter is set to true, the <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> will be ignored. You must ensure that the selected image has a password configured.</p></li>
 <li><p><strong>role_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Instance RAM role name. The name is provided and maintained by RAM. You can use <code class="docutils literal notranslate"><span class="pre">ram.Role</span></code> to create a new one.</p></li>
-<li><p><strong>scaling_configuration*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name shown for the scheduled task. which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores <cite>*`</cite>, hypens``-<code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">and</span> <span class="pre">decimal</span> <span class="pre">point</span></code>.<a href="#id19"><span class="problematic" id="id20">``</span></a>. If this parameter value is not specified, the default value is ScalingConfigurationId.</p>
+<li><p><strong>scaling_configuration*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name shown for the scheduled task. which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores <cite>*`</cite>, hypens``-<code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">and</span> <span class="pre">decimal</span> <span class="pre">point</span></code>.<a href="#id7"><span class="problematic" id="id8">``</span></a>. If this parameter value is not specified, the default value is ScalingConfigurationId.</p>
 </p></li>
 <li><p><strong>scaling_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the scaling group of a scaling configuration.</p></li>
-<li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the security group used to create new instance. It is conflict with``security_group_ids<a href="#id21"><span class="problematic" id="id22">``</span></a>.</p></li>
-<li><p><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List IDs of the security group used to create new instances. It is conflict with``security_group_id<a href="#id23"><span class="problematic" id="id24">``</span></a>.</p></li>
-<li><p><strong>substitute</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The another scaling configuration which will be active automatically and replace current configuration when setting``active<code class="docutils literal notranslate"><span class="pre">to</span> <span class="pre">'false'.</span> <span class="pre">It</span> <span class="pre">is</span> <span class="pre">invalid</span> <span class="pre">when</span></code>active<a href="#id25"><span class="problematic" id="id26">``</span></a>is ‘true’.</p></li>
+<li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the security group used to create new instance. It is conflict with``security_group_ids<a href="#id9"><span class="problematic" id="id10">``</span></a>.</p></li>
+<li><p><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List IDs of the security group used to create new instances. It is conflict with``security_group_id<a href="#id11"><span class="problematic" id="id12">``</span></a>.</p></li>
+<li><p><strong>substitute</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The another scaling configuration which will be active automatically and replace current configuration when setting``active<code class="docutils literal notranslate"><span class="pre">to</span> <span class="pre">'false'.</span> <span class="pre">It</span> <span class="pre">is</span> <span class="pre">invalid</span> <span class="pre">when</span></code>active<a href="#id13"><span class="problematic" id="id14">``</span></a>is ‘true’.</p></li>
 <li><p><strong>system_disk_category</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Category of the system disk. The parameter value options are``ephemeral_ssd<code class="docutils literal notranslate"><span class="pre">,</span></code>cloud_efficiency<code class="docutils literal notranslate"><span class="pre">,</span></code>cloud_ssd<code class="docutils literal notranslate"><span class="pre">,</span></code>cloud_essd<code class="docutils literal notranslate"><span class="pre">and</span></code>cloud<code class="docutils literal notranslate"><span class="pre">.</span></code>cloud<code class="docutils literal notranslate"><span class="pre">only</span> <span class="pre">is</span> <span class="pre">used</span> <span class="pre">to</span> <span class="pre">some</span> <span class="pre">no</span> <span class="pre">I/O</span> <span class="pre">optimized</span> <span class="pre">instance.</span> <span class="pre">Default</span> <span class="pre">to</span></code>cloud_efficiency`.</p></li>
 <li><p><strong>system_disk_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Size of system disk, in GiB. Optional values: cloud: 20-500, cloud_efficiency: 20-500, cloud_ssd: 20-500, ephemeral_ssd: 20-500 The default value is max{40, ImageSize}. If this parameter is set, the system disk size must be greater than or equal to max{40, ImageSize}.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource. It will be applied for ECS instances finally.</p></li>
@@ -1133,9 +1089,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scaling_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scaling_configuration.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1179,16 +1132,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.ess.ScalingGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">ScalingGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">db_instance_ids=None</em>, <em class="sig-param">default_cooldown=None</em>, <em class="sig-param">loadbalancer_ids=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">multi_az_policy=None</em>, <em class="sig-param">on_demand_base_capacity=None</em>, <em class="sig-param">on_demand_percentage_above_base_capacity=None</em>, <em class="sig-param">removal_policies=None</em>, <em class="sig-param">scaling_group_name=None</em>, <em class="sig-param">spot_instance_pools=None</em>, <em class="sig-param">spot_instance_remedy=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">vswitch_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.ScalingGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ScalingGroup resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>db_instance_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If an RDS instance is specified in the scaling group, the scaling group automatically attaches the Intranet IP addresses of its ECS instances to the RDS access whitelist.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ScalingGroup resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] db_instance_ids: If an RDS instance is specified in the scaling group, the scaling group automatically attaches the Intranet IP addresses of its ECS instances to the RDS access whitelist.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- The specified RDS instance must be in running status.
 - The specified RDS instance’s whitelist must have room for more IP addresses.
 </pre></div>
@@ -1238,9 +1185,6 @@ targeting your `slb.Listener` in order to make sure the listener with its Health
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scaling_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scaling_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ess.ScalingGroup.db_instance_ids">
 <code class="sig-name descname">db_instance_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.ScalingGroup.db_instance_ids" title="Permalink to this definition">¶</a></dt>
@@ -1406,9 +1350,6 @@ targeting your `slb.Listener` in order to make sure the listener with its Health
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scaling_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scaling_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1474,6 +1415,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> - (Required) - The port will be used for VServer Group backend server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Required) The weight of an ECS instance attached to the VServer Group.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scalinggroup_vserver_groups.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scalinggroup_vserver_groups.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1496,9 +1440,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scalinggroup_vserver_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scalinggroup_vserver_groups.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ess.ScalingGroupVServerGroups.force">
 <code class="sig-name descname">force</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.ScalingGroupVServerGroups.force" title="Permalink to this definition">¶</a></dt>
@@ -1555,9 +1496,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scalinggroup_vserver_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scalinggroup_vserver_groups.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1601,16 +1539,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.ess.ScalingRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">ScalingRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">adjustment_type=None</em>, <em class="sig-param">adjustment_value=None</em>, <em class="sig-param">cooldown=None</em>, <em class="sig-param">disable_scale_in=None</em>, <em class="sig-param">estimated_instance_warmup=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">scaling_rule_name=None</em>, <em class="sig-param">scaling_rule_type=None</em>, <em class="sig-param">step_adjustments=None</em>, <em class="sig-param">target_value=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.ScalingRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ScalingRule resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>adjustment_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Adjustment mode of a scaling rule. Optional values:</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ScalingRule resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] adjustment_type: Adjustment mode of a scaling rule. Optional values:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">QuantityChangeInCapacity</span><span class="p">:</span> <span class="n">It</span> <span class="ow">is</span> <span class="n">used</span> <span class="n">to</span> <span class="n">increase</span> <span class="ow">or</span> <span class="n">decrease</span> <span class="n">a</span> <span class="n">specified</span> <span class="n">number</span> <span class="n">of</span> <span class="n">ECS</span> <span class="n">instances</span><span class="o">.</span>
 <span class="o">-</span> <span class="n">PercentChangeInCapacity</span><span class="p">:</span> <span class="n">It</span> <span class="ow">is</span> <span class="n">used</span> <span class="n">to</span> <span class="n">increase</span> <span class="ow">or</span> <span class="n">decrease</span> <span class="n">a</span> <span class="n">specified</span> <span class="n">proportion</span> <span class="n">of</span> <span class="n">ECS</span> <span class="n">instances</span><span class="o">.</span>
 <span class="o">-</span> <span class="n">TotalCapacity</span><span class="p">:</span> <span class="n">It</span> <span class="ow">is</span> <span class="n">used</span> <span class="n">to</span> <span class="n">adjust</span> <span class="n">the</span> <span class="n">quantity</span> <span class="n">of</span> <span class="n">ECS</span> <span class="n">instances</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">current</span> <span class="n">scaling</span> <span class="n">group</span> <span class="n">to</span> <span class="n">a</span> <span class="n">specified</span> <span class="n">value</span><span class="o">.</span>
@@ -1648,9 +1580,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">metricIntervalUpperBound</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scalingAdjustment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scaling_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scaling_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ess.ScalingRule.adjustment_type">
 <code class="sig-name descname">adjustment_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.ScalingRule.adjustment_type" title="Permalink to this definition">¶</a></dt>
@@ -1784,9 +1713,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">metricIntervalUpperBound</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scalingAdjustment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scaling_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scaling_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1830,18 +1756,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.ess.Schedule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">Schedule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">launch_expiration_time=None</em>, <em class="sig-param">launch_time=None</em>, <em class="sig-param">recurrence_end_time=None</em>, <em class="sig-param">recurrence_type=None</em>, <em class="sig-param">recurrence_value=None</em>, <em class="sig-param">scheduled_action=None</em>, <em class="sig-param">scheduled_task_name=None</em>, <em class="sig-param">task_enabled=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.Schedule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Schedule resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_schedule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_schedule.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Schedule resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_alicloud.ess.Schedule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">launch_expiration_time=None</em>, <em class="sig-param">launch_time=None</em>, <em class="sig-param">recurrence_end_time=None</em>, <em class="sig-param">recurrence_type=None</em>, <em class="sig-param">recurrence_value=None</em>, <em class="sig-param">scheduled_action=None</em>, <em class="sig-param">scheduled_task_name=None</em>, <em class="sig-param">task_enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.Schedule.get" title="Permalink to this definition">¶</a></dt>
@@ -1856,9 +1773,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_schedule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_schedule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1902,18 +1816,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.ess.ScheduledTask">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">ScheduledTask</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">launch_expiration_time=None</em>, <em class="sig-param">launch_time=None</em>, <em class="sig-param">recurrence_end_time=None</em>, <em class="sig-param">recurrence_type=None</em>, <em class="sig-param">recurrence_value=None</em>, <em class="sig-param">scheduled_action=None</em>, <em class="sig-param">scheduled_task_name=None</em>, <em class="sig-param">task_enabled=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.ScheduledTask" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ScheduledTask resource with the given unique name, props, and options.</p>
+<dd><p>Create a ScheduledTask resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: Description of the scheduled task, which is 2-200 characters (English or Chinese) long.
+:param pulumi.Input[float] launch_expiration_time: The time period during which a failed scheduled task is retried. Unit: seconds. Valid values: 0 to 21600. Default value: 600
+:param pulumi.Input[str] launch_time: The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</p>
+<blockquote>
+<div><p>The time must be in UTC. You cannot enter a time point later than 90 days from the date of scheduled task creation.
+If the <code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code> parameter is specified, the task is executed repeatedly at the time specified by LaunchTime.
+Otherwise, the task is only executed once at the date and time specified by LaunchTime.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the scheduled task, which is 2-200 characters (English or Chinese) long.</p></li>
-<li><p><strong>launch_expiration_time</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time period during which a failed scheduled task is retried. Unit: seconds. Valid values: 0 to 21600. Default value: 600</p></li>
-<li><p><strong>launch_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. 
-The time must be in UTC. You cannot enter a time point later than 90 days from the date of scheduled task creation.
-If the <code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code> parameter is specified, the task is executed repeatedly at the time specified by LaunchTime.
-Otherwise, the task is only executed once at the date and time specified by LaunchTime.</p></li>
 <li><p><strong>recurrence_end_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the end time after which the scheduled task is no longer repeated. 
 Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.
 The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation.</p></li>
@@ -1948,9 +1864,6 @@ If set, both <code class="docutils literal notranslate"><span class="pre">recurr
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scheduled_task.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scheduled_task.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ess.ScheduledTask.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.ScheduledTask.description" title="Permalink to this definition">¶</a></dt>
@@ -2074,9 +1987,6 @@ If set, both <code class="docutils literal notranslate"><span class="pre">recurr
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scheduled_task.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_scheduled_task.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2123,6 +2033,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides available alarm resources.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> Available in 1.72.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_alarms.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_alarms.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2134,9 +2045,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_alarms.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_alarms.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2145,6 +2053,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides available lifecycle hook resources.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.72.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_lifecycle_hooks.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_lifecycle_hooks.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2155,9 +2064,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_lifecycle_hooks.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_lifecycle_hooks.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2166,6 +2072,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides available notification resources.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.72.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_notifications.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_notifications.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2175,15 +2082,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_notifications.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_notifications.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.ess.get_scaling_configurations">
 <code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">get_scaling_configurations</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.get_scaling_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides available scaling configuration resources.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scaling_configurations.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scaling_configurations.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2193,15 +2100,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scaling_configurations.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scaling_configurations.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.ess.get_scaling_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">get_scaling_groups</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.get_scaling_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides available scaling group resources.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scaling_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scaling_groups.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2210,15 +2117,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scaling_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scaling_groups.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.ess.get_scaling_rules">
 <code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">get_scaling_rules</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">scaling_group_id=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.get_scaling_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides available scaling rule resources.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scaling_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scaling_rules.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2229,9 +2136,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scaling_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scaling_rules.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2240,6 +2144,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides available scheduled task resources.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.72.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scheduled_tasks.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scheduled_tasks.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2251,9 +2156,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scheduled_tasks.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scheduled_tasks.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

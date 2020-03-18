@@ -16,31 +16,25 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_alicloud.cdn"></span><dl class="class">
 <dt id="pulumi_alicloud.cdn.Domain">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cdn.</code><code class="sig-name descname">Domain</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_config=None</em>, <em class="sig-param">block_ips=None</em>, <em class="sig-param">cache_configs=None</em>, <em class="sig-param">cdn_type=None</em>, <em class="sig-param">certificate_config=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">http_header_configs=None</em>, <em class="sig-param">optimize_enable=None</em>, <em class="sig-param">page404_config=None</em>, <em class="sig-param">page_compress_enable=None</em>, <em class="sig-param">parameter_filter_config=None</em>, <em class="sig-param">range_enable=None</em>, <em class="sig-param">refer_config=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">source_port=None</em>, <em class="sig-param">source_type=None</em>, <em class="sig-param">sources=None</em>, <em class="sig-param">video_seek_enable=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cdn.Domain" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Domain resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>auth_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The auth config of the accelerated domain.</p></li>
-<li><p><strong>cache_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The cache configs of the accelerated domain.</p></li>
-<li><p><strong>cdn_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cdn type of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">web</span></code>, <code class="docutils literal notranslate"><span class="pre">download</span></code>, <code class="docutils literal notranslate"><span class="pre">video</span></code>, <code class="docutils literal notranslate"><span class="pre">liveStream</span></code>.</p></li>
-<li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or “-“, and must not begin or end with “-“, and “-” must not in the 3th and 4th character positions at the same time. Suffix <code class="docutils literal notranslate"><span class="pre">.sh</span></code> and <code class="docutils literal notranslate"><span class="pre">.tel</span></code> are not supported.</p></li>
-<li><p><strong>http_header_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The http header configs of the accelerated domain.</p></li>
-<li><p><strong>optimize_enable</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Page Optimize config of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">on</span></code> and <code class="docutils literal notranslate"><span class="pre">off</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">off</span></code>. It can effectively remove the page redundant content, reduce the file size and improve the speed of distribution when this parameter value is <code class="docutils literal notranslate"><span class="pre">on</span></code>.</p></li>
-<li><p><strong>page404_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The error page config of the accelerated domain.</p></li>
-<li><p><strong>page_compress_enable</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Page Compress config of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">on</span></code> and <code class="docutils literal notranslate"><span class="pre">off</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
-<li><p><strong>parameter_filter_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The parameter filter config of the accelerated domain.</p></li>
-<li><p><strong>range_enable</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Range Source config of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">on</span></code> and <code class="docutils literal notranslate"><span class="pre">off</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
-<li><p><strong>refer_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The refer config of the accelerated domain.</p></li>
-<li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Scope of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">domestic</span></code>, <code class="docutils literal notranslate"><span class="pre">overseas</span></code>, <code class="docutils literal notranslate"><span class="pre">global</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">domestic</span></code>. This parameter’s setting is valid Only for the international users and domestic L3 and above users .</p></li>
-<li><p><strong>source_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Source port of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">80</span></code> and <code class="docutils literal notranslate"><span class="pre">443</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">80</span></code>. You must use <code class="docutils literal notranslate"><span class="pre">80</span></code> when the <code class="docutils literal notranslate"><span class="pre">source_type</span></code> is <code class="docutils literal notranslate"><span class="pre">oss</span></code>.</p></li>
-<li><p><strong>source_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Source type of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">ipaddr</span></code>, <code class="docutils literal notranslate"><span class="pre">domain</span></code>, <code class="docutils literal notranslate"><span class="pre">oss</span></code>. You must set this parameter when <code class="docutils literal notranslate"><span class="pre">cdn_type</span></code> value is not <code class="docutils literal notranslate"><span class="pre">liveStream</span></code>.</p></li>
-<li><p><strong>sources</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Sources of the accelerated domain. It’s a list of domain names or IP address and consists of at most 20 items. You must set this parameter when <code class="docutils literal notranslate"><span class="pre">cdn_type</span></code> value is not <code class="docutils literal notranslate"><span class="pre">liveStream</span></code>.</p></li>
-<li><p><strong>video_seek_enable</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Video Seek config of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">on</span></code> and <code class="docutils literal notranslate"><span class="pre">off</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Domain resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] auth_config: The auth config of the accelerated domain.
+:param pulumi.Input[list] cache_configs: The cache configs of the accelerated domain.
+:param pulumi.Input[str] cdn_type: Cdn type of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">web</span></code>, <code class="docutils literal notranslate"><span class="pre">download</span></code>, <code class="docutils literal notranslate"><span class="pre">video</span></code>, <code class="docutils literal notranslate"><span class="pre">liveStream</span></code>.
+:param pulumi.Input[str] domain_name: Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or “-“, and must not begin or end with “-“, and “-” must not in the 3th and 4th character positions at the same time. Suffix <code class="docutils literal notranslate"><span class="pre">.sh</span></code> and <code class="docutils literal notranslate"><span class="pre">.tel</span></code> are not supported.
+:param pulumi.Input[list] http_header_configs: The http header configs of the accelerated domain.
+:param pulumi.Input[str] optimize_enable: Page Optimize config of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">on</span></code> and <code class="docutils literal notranslate"><span class="pre">off</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">off</span></code>. It can effectively remove the page redundant content, reduce the file size and improve the speed of distribution when this parameter value is <code class="docutils literal notranslate"><span class="pre">on</span></code>.
+:param pulumi.Input[dict] page404_config: The error page config of the accelerated domain.
+:param pulumi.Input[str] page_compress_enable: Page Compress config of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">on</span></code> and <code class="docutils literal notranslate"><span class="pre">off</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">off</span></code>.
+:param pulumi.Input[dict] parameter_filter_config: The parameter filter config of the accelerated domain.
+:param pulumi.Input[str] range_enable: Range Source config of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">on</span></code> and <code class="docutils literal notranslate"><span class="pre">off</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">off</span></code>.
+:param pulumi.Input[dict] refer_config: The refer config of the accelerated domain.
+:param pulumi.Input[str] scope: Scope of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">domestic</span></code>, <code class="docutils literal notranslate"><span class="pre">overseas</span></code>, <code class="docutils literal notranslate"><span class="pre">global</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">domestic</span></code>. This parameter’s setting is valid Only for the international users and domestic L3 and above users .
+:param pulumi.Input[float] source_port: Source port of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">80</span></code> and <code class="docutils literal notranslate"><span class="pre">443</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">80</span></code>. You must use <code class="docutils literal notranslate"><span class="pre">80</span></code> when the <code class="docutils literal notranslate"><span class="pre">source_type</span></code> is <code class="docutils literal notranslate"><span class="pre">oss</span></code>.
+:param pulumi.Input[str] source_type: Source type of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">ipaddr</span></code>, <code class="docutils literal notranslate"><span class="pre">domain</span></code>, <code class="docutils literal notranslate"><span class="pre">oss</span></code>. You must set this parameter when <code class="docutils literal notranslate"><span class="pre">cdn_type</span></code> value is not <code class="docutils literal notranslate"><span class="pre">liveStream</span></code>.
+:param pulumi.Input[list] sources: Sources of the accelerated domain. It’s a list of domain names or IP address and consists of at most 20 items. You must set this parameter when <code class="docutils literal notranslate"><span class="pre">cdn_type</span></code> value is not <code class="docutils literal notranslate"><span class="pre">liveStream</span></code>.
+:param pulumi.Input[str] video_seek_enable: Video Seek config of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">on</span></code> and <code class="docutils literal notranslate"><span class="pre">off</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p>
 <p>The <strong>auth_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">auth_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Auth type of the auth config. Valid values are  <code class="docutils literal notranslate"><span class="pre">no_auth</span></code>, <code class="docutils literal notranslate"><span class="pre">type_a</span></code>, <code class="docutils literal notranslate"><span class="pre">type_b</span></code> and <code class="docutils literal notranslate"><span class="pre">type_c</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">no_auth</span></code>.</p></li>
@@ -58,8 +52,8 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 <p>The <strong>certificate_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">privateKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL private key. This is required if <code class="docutils literal notranslate"><span class="pre">server_certificate_status</span></code> is <code class="docutils literal notranslate"><span class="pre">on</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL server certificate string. This is required if <code class="docutils literal notranslate"><span class="pre">server_certificate_status</span></code> is <code class="docutils literal notranslate"><span class="pre">on</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL private key. This is required if <code class="docutils literal notranslate"><span class="pre">server_certificate_status</span></code> is <code class="docutils literal notranslate"><span class="pre">on</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server_certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL server certificate string. This is required if <code class="docutils literal notranslate"><span class="pre">server_certificate_status</span></code> is <code class="docutils literal notranslate"><span class="pre">on</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This parameter indicates whether or not enable https. Valid values are <code class="docutils literal notranslate"><span class="pre">on</span></code> and <code class="docutils literal notranslate"><span class="pre">off</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">on</span></code>.</p></li>
 </ul>
 <p>The <strong>http_header_configs</strong> object supports the following:</p>
@@ -85,9 +79,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">referLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of domain names of the refer config.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">referType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Refer type of the refer config. Valid values are <code class="docutils literal notranslate"><span class="pre">block</span></code> and <code class="docutils literal notranslate"><span class="pre">allow</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">block</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cdn.Domain.auth_config">
 <code class="sig-name descname">auth_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cdn.Domain.auth_config" title="Permalink to this definition">¶</a></dt>
@@ -263,8 +254,8 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>certificate_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">privateKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL private key. This is required if <code class="docutils literal notranslate"><span class="pre">server_certificate_status</span></code> is <code class="docutils literal notranslate"><span class="pre">on</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL server certificate string. This is required if <code class="docutils literal notranslate"><span class="pre">server_certificate_status</span></code> is <code class="docutils literal notranslate"><span class="pre">on</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL private key. This is required if <code class="docutils literal notranslate"><span class="pre">server_certificate_status</span></code> is <code class="docutils literal notranslate"><span class="pre">on</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server_certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL server certificate string. This is required if <code class="docutils literal notranslate"><span class="pre">server_certificate_status</span></code> is <code class="docutils literal notranslate"><span class="pre">on</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This parameter indicates whether or not enable https. Valid values are <code class="docutils literal notranslate"><span class="pre">on</span></code> and <code class="docutils literal notranslate"><span class="pre">off</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">on</span></code>.</p></li>
 </ul>
 <p>The <strong>http_header_configs</strong> object supports the following:</p>
@@ -290,9 +281,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">referLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of domain names of the refer config.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">referType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Refer type of the refer config. Valid values are <code class="docutils literal notranslate"><span class="pre">block</span></code> and <code class="docutils literal notranslate"><span class="pre">allow</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">block</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -340,6 +328,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>For information about domain config and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/zh/doc-detail/90915.htm">Batch set config</a></p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.34.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_config.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_config.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -357,9 +346,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">argName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">argValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_config.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_config.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cdn.DomainConfig.domain_name">
 <code class="sig-name descname">domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cdn.DomainConfig.domain_name" title="Permalink to this definition">¶</a></dt>
@@ -404,9 +390,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">argName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">argValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_config.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_config.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -454,6 +437,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>For information about Cdn Domain New and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/91176.html">Add a domain</a>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.34.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_new.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_new.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -474,8 +458,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">certName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">certType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">forceSet</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server_certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>sources</strong> object supports the following:</p>
@@ -486,9 +470,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_new.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_new.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cdn.DomainNew.cdn_type">
 <code class="sig-name descname">cdn_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cdn.DomainNew.cdn_type" title="Permalink to this definition">¶</a></dt>
@@ -503,8 +484,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">certName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">certType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">forceSet</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server_certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -565,8 +546,8 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">certName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">certType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">forceSet</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server_certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>sources</strong> object supports the following:</p>
@@ -577,9 +558,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_new.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_new.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

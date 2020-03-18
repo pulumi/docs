@@ -15,18 +15,24 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.cr"></span><dl class="class">
 <dt id="pulumi_alicloud.cr.AwaitableGetNamespacesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cr.</code><code class="sig-name descname">AwaitableGetNamespacesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">namespaces=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cr.AwaitableGetNamespacesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cr.</code><code class="sig-name descname">AwaitableGetNamespacesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">namespaces=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cr.AwaitableGetNamespacesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.cr.AwaitableGetReposResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cr.</code><code class="sig-name descname">AwaitableGetReposResult</code><span class="sig-paren">(</span><em class="sig-param">enable_details=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">repos=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cr.AwaitableGetReposResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cr.</code><code class="sig-name descname">AwaitableGetReposResult</code><span class="sig-paren">(</span><em class="sig-param">enable_details=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">repos=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cr.AwaitableGetReposResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.cr.GetNamespacesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cr.</code><code class="sig-name descname">GetNamespacesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">namespaces=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cr.GetNamespacesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cr.</code><code class="sig-name descname">GetNamespacesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">namespaces=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cr.GetNamespacesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNamespaces.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.cr.GetNamespacesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cr.GetNamespacesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.cr.GetNamespacesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cr.GetNamespacesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -45,18 +51,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>A list of matched Container Registry namespaces. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.cr.GetNamespacesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cr.GetNamespacesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.cr.GetReposResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cr.</code><code class="sig-name descname">GetReposResult</code><span class="sig-paren">(</span><em class="sig-param">enable_details=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">repos=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cr.GetReposResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cr.</code><code class="sig-name descname">GetReposResult</code><span class="sig-paren">(</span><em class="sig-param">enable_details=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">repos=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cr.GetReposResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRepos.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.cr.GetReposResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cr.GetReposResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.cr.GetReposResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cr.GetReposResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -81,12 +87,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>A list of matched Container Registry Namespaces. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.cr.GetReposResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cr.GetReposResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -96,6 +96,7 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.34.0+.</p>
 <p><strong>NOTE:</strong> You need to set your registry password in Container Registry console before use this resource.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cr_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cr_namespace.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -108,9 +109,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cr_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cr_namespace.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cr.Namespace.auto_create">
 <code class="sig-name descname">auto_create</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cr.Namespace.auto_create" title="Permalink to this definition">¶</a></dt>
@@ -146,9 +144,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cr_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cr_namespace.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -196,6 +191,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.35.0+.</p>
 <p><strong>NOTE:</strong> You need to set your registry password in Container Registry console before use this resource.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cr_repo.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cr_repo.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -210,9 +206,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cr_repo.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cr_repo.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cr.Repo.detail">
 <code class="sig-name descname">detail</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cr.Repo.detail" title="Permalink to this definition">¶</a></dt>
@@ -280,9 +273,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Domain of public endpoint.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Domain of vpc endpoint.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cr_repo.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cr_repo.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -329,15 +319,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list Container Registry namespaces on Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.35.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cr_namespaces.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cr_namespaces.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by namespace name.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cr_namespaces.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cr_namespaces.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -346,6 +334,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list Container Registry repositories on Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.35.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cr_repos.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cr_repos.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -356,9 +345,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cr_repos.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cr_repos.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

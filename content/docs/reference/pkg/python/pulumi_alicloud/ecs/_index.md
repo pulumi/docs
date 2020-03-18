@@ -15,71 +15,65 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.ecs"></span><dl class="class">
 <dt id="pulumi_alicloud.ecs.AwaitableGetDisksResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetDisksResult</code><span class="sig-paren">(</span><em class="sig-param">category=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetDisksResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetDisksResult</code><span class="sig-paren">(</span><em class="sig-param">category=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetDisksResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.AwaitableGetEipsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetEipsResult</code><span class="sig-paren">(</span><em class="sig-param">eips=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">in_use=None</em>, <em class="sig-param">ip_addresses=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetEipsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetEipsResult</code><span class="sig-paren">(</span><em class="sig-param">eips=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">in_use=None</em>, <em class="sig-param">ip_addresses=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetEipsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.AwaitableGetImagesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetImagesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">images=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetImagesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetImagesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">images=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">owners=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetImagesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.AwaitableGetInstanceTypeFamiliesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetInstanceTypeFamiliesResult</code><span class="sig-paren">(</span><em class="sig-param">families=None</em>, <em class="sig-param">generation=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">spot_strategy=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetInstanceTypeFamiliesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetInstanceTypeFamiliesResult</code><span class="sig-paren">(</span><em class="sig-param">families=None</em>, <em class="sig-param">generation=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">spot_strategy=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetInstanceTypeFamiliesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.AwaitableGetInstanceTypesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetInstanceTypesResult</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">cpu_core_count=None</em>, <em class="sig-param">eni_amount=None</em>, <em class="sig-param">gpu_amount=None</em>, <em class="sig-param">gpu_spec=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type_family=None</em>, <em class="sig-param">instance_types=None</em>, <em class="sig-param">is_outdated=None</em>, <em class="sig-param">kubernetes_node_role=None</em>, <em class="sig-param">memory_size=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">sorted_by=None</em>, <em class="sig-param">spot_strategy=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetInstanceTypesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetInstanceTypesResult</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">cpu_core_count=None</em>, <em class="sig-param">eni_amount=None</em>, <em class="sig-param">gpu_amount=None</em>, <em class="sig-param">gpu_spec=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type_family=None</em>, <em class="sig-param">instance_types=None</em>, <em class="sig-param">is_outdated=None</em>, <em class="sig-param">kubernetes_node_role=None</em>, <em class="sig-param">memory_size=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">sorted_by=None</em>, <em class="sig-param">spot_strategy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetInstanceTypesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.AwaitableGetInstancesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">ram_role_name=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">ram_role_name=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.AwaitableGetKeyPairsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetKeyPairsResult</code><span class="sig-paren">(</span><em class="sig-param">finger_print=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">key_pairs=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetKeyPairsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetKeyPairsResult</code><span class="sig-paren">(</span><em class="sig-param">finger_print=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">key_pairs=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetKeyPairsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.AwaitableGetNetworkInterfacesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetNetworkInterfacesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">interfaces=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetNetworkInterfacesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetNetworkInterfacesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">interfaces=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetNetworkInterfacesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.AwaitableGetSecurityGroupRulesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetSecurityGroupRulesResult</code><span class="sig-paren">(</span><em class="sig-param">direction=None</em>, <em class="sig-param">group_desc=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">ip_protocol=None</em>, <em class="sig-param">nic_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetSecurityGroupRulesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetSecurityGroupRulesResult</code><span class="sig-paren">(</span><em class="sig-param">direction=None</em>, <em class="sig-param">group_desc=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ip_protocol=None</em>, <em class="sig-param">nic_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetSecurityGroupRulesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.AwaitableGetSecurityGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetSecurityGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetSecurityGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetSecurityGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetSecurityGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.AwaitableGetSnapshotsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetSnapshotsResult</code><span class="sig-paren">(</span><em class="sig-param">disk_id=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">snapshots=None</em>, <em class="sig-param">source_disk_type=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">usage=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetSnapshotsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetSnapshotsResult</code><span class="sig-paren">(</span><em class="sig-param">disk_id=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">snapshots=None</em>, <em class="sig-param">source_disk_type=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">usage=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetSnapshotsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.CopyImage">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">CopyImage</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">force=None</em>, <em class="sig-param">image_name=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">source_image_id=None</em>, <em class="sig-param">source_region_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.CopyImage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a CopyImage resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a CopyImage resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_alicloud.ecs.CopyImage.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">force=None</em>, <em class="sig-param">image_name=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">source_image_id=None</em>, <em class="sig-param">source_region_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.CopyImage.get" title="Permalink to this definition">¶</a></dt>
@@ -140,6 +134,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a ECS disk resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> One of <code class="docutils literal notranslate"><span class="pre">size</span></code> or <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> is required when specifying an ECS disk. If all of them be specified, <code class="docutils literal notranslate"><span class="pre">size</span></code> must more than the size of snapshot which <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> represents. Currently, <code class="docutils literal notranslate"><span class="pre">ecs.Disk</span></code> doesn’t resize disk.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/disk.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/disk.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -170,9 +165,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/disk.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/disk.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.Disk.availability_zone">
 <code class="sig-name descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.Disk.availability_zone" title="Permalink to this definition">¶</a></dt>
@@ -290,9 +282,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/disk.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/disk.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -337,6 +326,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ecs.DiskAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">DiskAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">device_name=None</em>, <em class="sig-param">disk_id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.DiskAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Alicloud ECS Disk Attachment as a resource, to attach and detach disks from ECS Instances.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/disk_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/disk_attachment.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -348,9 +340,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/disk_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/disk_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.DiskAttachment.device_name">
 <code class="sig-name descname">device_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DiskAttachment.device_name" title="Permalink to this definition">¶</a></dt>
@@ -386,9 +375,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/disk_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/disk_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -432,28 +418,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.Eip">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">Eip</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bandwidth=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">internet_charge_type=None</em>, <em class="sig-param">isp=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.Eip" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Eip resource with the given unique name, props, and options.</p>
+<dd><p>Create a Eip resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] bandwidth: Maximum bandwidth to the elastic public network, measured in Mbps (Mega bit per second). If this value is not specified, then automatically sets it to 5 Mbps.
+:param pulumi.Input[str] description: Description of the EIP instance, This description can have a string of 2 to 256 characters, It cannot begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.
+:param pulumi.Input[str] instance_charge_type: Elastic IP instance charge type. Valid values are “PrePaid” and “PostPaid”. Default to “PostPaid”.
+:param pulumi.Input[str] internet_charge_type: Internet charge type of the EIP, Valid values are <code class="docutils literal notranslate"><span class="pre">PayByBandwidth</span></code>, <code class="docutils literal notranslate"><span class="pre">PayByTraffic</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">PayByBandwidth</span></code>. From version <code class="docutils literal notranslate"><span class="pre">1.7.1</span></code>, default to <code class="docutils literal notranslate"><span class="pre">PayByTraffic</span></code>. It is only PayByBandwidth when <code class="docutils literal notranslate"><span class="pre">instance_charge_type</span></code> is PrePaid.
+:param pulumi.Input[str] isp: The line type of the Elastic IP instance. Default to <code class="docutils literal notranslate"><span class="pre">BGP</span></code>. Other type of the isp need to open a whitelist.
+:param pulumi.Input[str] name: The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”_”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.
+:param pulumi.Input[float] period: The duration that you will buy the resource, in month. It is valid when <code class="docutils literal notranslate"><span class="pre">instance_charge_type</span></code> is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>.</p>
+<blockquote>
+<div><p>Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify “period” and you can do that via web console.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum bandwidth to the elastic public network, measured in Mbps (Mega bit per second). If this value is not specified, then automatically sets it to 5 Mbps.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the EIP instance, This description can have a string of 2 to 256 characters, It cannot begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
-<li><p><strong>instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Elastic IP instance charge type. Valid values are “PrePaid” and “PostPaid”. Default to “PostPaid”.</p></li>
-<li><p><strong>internet_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Internet charge type of the EIP, Valid values are <code class="docutils literal notranslate"><span class="pre">PayByBandwidth</span></code>, <code class="docutils literal notranslate"><span class="pre">PayByTraffic</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">PayByBandwidth</span></code>. From version <code class="docutils literal notranslate"><span class="pre">1.7.1</span></code>, default to <code class="docutils literal notranslate"><span class="pre">PayByTraffic</span></code>. It is only PayByBandwidth when <code class="docutils literal notranslate"><span class="pre">instance_charge_type</span></code> is PrePaid.</p></li>
-<li><p><strong>isp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The line type of the Elastic IP instance. Default to <code class="docutils literal notranslate"><span class="pre">BGP</span></code>. Other type of the isp need to open a whitelist.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”_”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
-<li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration that you will buy the resource, in month. It is valid when <code class="docutils literal notranslate"><span class="pre">instance_charge_type</span></code> is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>.
-Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify “period” and you can do that via web console.</p></li>
 <li><p><strong>resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of resource group which the eip belongs.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/eip.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/eip.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.Eip.bandwidth">
 <code class="sig-name descname">bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.Eip.bandwidth" title="Permalink to this definition">¶</a></dt>
@@ -548,9 +533,6 @@ Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/eip.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/eip.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -594,22 +576,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.EipAssociation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">EipAssociation</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocation_id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">private_ip_address=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.EipAssociation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a EipAssociation resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>allocation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation EIP ID.</p></li>
-<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the ECS or SLB instance or Nat Gateway.</p></li>
-<li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of cloud product that the eip instance to bind.</p></li>
-<li><p><strong>private_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private IP address in the network segment of the vswitch which has been assigned.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/eip_association.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/eip_association.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a EipAssociation resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] allocation_id: The allocation EIP ID.
+:param pulumi.Input[str] instance_id: The ID of the ECS or SLB instance or Nat Gateway.
+:param pulumi.Input[str] instance_type: The type of cloud product that the eip instance to bind.
+:param pulumi.Input[str] private_ip_address: The private IP address in the network segment of the vswitch which has been assigned.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.EipAssociation.allocation_id">
 <code class="sig-name descname">allocation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.EipAssociation.allocation_id" title="Permalink to this definition">¶</a></dt>
@@ -652,9 +625,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/eip_association.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/eip_association.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -697,7 +667,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.GetDisksResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetDisksResult</code><span class="sig-paren">(</span><em class="sig-param">category=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetDisksResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetDisksResult</code><span class="sig-paren">(</span><em class="sig-param">category=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetDisksResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDisks.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.GetDisksResult.category">
@@ -715,6 +685,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ecs.GetDisksResult.encrypted">
 <code class="sig-name descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetDisksResult.encrypted" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicate whether the disk is encrypted or not. Possible values: <code class="docutils literal notranslate"><span class="pre">on</span></code> and <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.ecs.GetDisksResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetDisksResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -741,22 +717,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Disk type. Possible values: <code class="docutils literal notranslate"><span class="pre">system</span></code> and <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ecs.GetDisksResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetDisksResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.GetEipsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetEipsResult</code><span class="sig-paren">(</span><em class="sig-param">eips=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">in_use=None</em>, <em class="sig-param">ip_addresses=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetEipsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetEipsResult</code><span class="sig-paren">(</span><em class="sig-param">eips=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">in_use=None</em>, <em class="sig-param">ip_addresses=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetEipsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getEips.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.GetEipsResult.eips">
 <code class="sig-name descname">eips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetEipsResult.eips" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of EIPs. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.ecs.GetEipsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetEipsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -777,18 +753,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The Id of resource group which the eips belongs.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ecs.GetEipsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetEipsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.GetImagesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetImagesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">images=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetImagesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetImagesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">images=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">owners=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetImagesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getImages.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.ecs.GetImagesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetImagesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.GetImagesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetImagesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -801,17 +777,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of images. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ecs.GetImagesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetImagesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.GetInstanceTypeFamiliesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetInstanceTypeFamiliesResult</code><span class="sig-paren">(</span><em class="sig-param">families=None</em>, <em class="sig-param">generation=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">spot_strategy=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstanceTypeFamiliesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetInstanceTypeFamiliesResult</code><span class="sig-paren">(</span><em class="sig-param">families=None</em>, <em class="sig-param">generation=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">spot_strategy=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstanceTypeFamiliesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstanceTypeFamilies.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.GetInstanceTypeFamiliesResult.generation">
@@ -820,22 +790,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.ecs.GetInstanceTypeFamiliesResult.ids">
-<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstanceTypeFamiliesResult.ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of instance type family IDs.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_alicloud.ecs.GetInstanceTypeFamiliesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstanceTypeFamiliesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.ecs.GetInstanceTypeFamiliesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstanceTypeFamiliesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of instance type family IDs.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.GetInstanceTypesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetInstanceTypesResult</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">cpu_core_count=None</em>, <em class="sig-param">eni_amount=None</em>, <em class="sig-param">gpu_amount=None</em>, <em class="sig-param">gpu_spec=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type_family=None</em>, <em class="sig-param">instance_types=None</em>, <em class="sig-param">is_outdated=None</em>, <em class="sig-param">kubernetes_node_role=None</em>, <em class="sig-param">memory_size=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">sorted_by=None</em>, <em class="sig-param">spot_strategy=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstanceTypesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetInstanceTypesResult</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">cpu_core_count=None</em>, <em class="sig-param">eni_amount=None</em>, <em class="sig-param">gpu_amount=None</em>, <em class="sig-param">gpu_spec=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type_family=None</em>, <em class="sig-param">instance_types=None</em>, <em class="sig-param">is_outdated=None</em>, <em class="sig-param">kubernetes_node_role=None</em>, <em class="sig-param">memory_size=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">sorted_by=None</em>, <em class="sig-param">spot_strategy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstanceTypesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstanceTypes.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.GetInstanceTypesResult.cpu_core_count">
@@ -847,6 +817,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ecs.GetInstanceTypesResult.eni_amount">
 <code class="sig-name descname">eni_amount</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstanceTypesResult.eni_amount" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum number of network interfaces that an instance type can be attached to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.ecs.GetInstanceTypesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstanceTypesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -867,22 +843,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Size of memory, measured in GB.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ecs.GetInstanceTypesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstanceTypesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.GetInstancesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">ram_role_name=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">ram_role_name=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstances.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.GetInstancesResult.availability_zone">
 <code class="sig-name descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstancesResult.availability_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Availability zone the instance belongs to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.ecs.GetInstancesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -945,22 +921,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>ID of the VSwitch the instance belongs to.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ecs.GetInstancesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.GetKeyPairsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetKeyPairsResult</code><span class="sig-paren">(</span><em class="sig-param">finger_print=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">key_pairs=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetKeyPairsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetKeyPairsResult</code><span class="sig-paren">(</span><em class="sig-param">finger_print=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">key_pairs=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetKeyPairsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKeyPairs.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.GetKeyPairsResult.finger_print">
 <code class="sig-name descname">finger_print</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetKeyPairsResult.finger_print" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finger print of the key pair.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.ecs.GetKeyPairsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetKeyPairsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -987,18 +963,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Optional, Available in v1.66.0+) A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ecs.GetKeyPairsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetKeyPairsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.GetNetworkInterfacesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetNetworkInterfacesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">interfaces=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetNetworkInterfacesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetNetworkInterfacesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">interfaces=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetNetworkInterfacesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNetworkInterfaces.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.ecs.GetNetworkInterfacesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetNetworkInterfacesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.GetNetworkInterfacesResult.instance_id">
 <code class="sig-name descname">instance_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetNetworkInterfacesResult.instance_id" title="Permalink to this definition">¶</a></dt>
@@ -1041,17 +1017,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>ID of the VSwitch that the ENI is linked to.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ecs.GetNetworkInterfacesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetNetworkInterfacesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.GetSecurityGroupRulesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetSecurityGroupRulesResult</code><span class="sig-paren">(</span><em class="sig-param">direction=None</em>, <em class="sig-param">group_desc=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">ip_protocol=None</em>, <em class="sig-param">nic_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetSecurityGroupRulesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetSecurityGroupRulesResult</code><span class="sig-paren">(</span><em class="sig-param">direction=None</em>, <em class="sig-param">group_desc=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ip_protocol=None</em>, <em class="sig-param">nic_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetSecurityGroupRulesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecurityGroupRules.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.GetSecurityGroupRulesResult.direction">
@@ -1069,6 +1039,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ecs.GetSecurityGroupRulesResult.group_name">
 <code class="sig-name descname">group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetSecurityGroupRulesResult.group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the security group that owns the rules.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.ecs.GetSecurityGroupRulesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetSecurityGroupRulesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1095,22 +1071,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of security group rules. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ecs.GetSecurityGroupRulesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetSecurityGroupRulesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.GetSecurityGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetSecurityGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetSecurityGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetSecurityGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetSecurityGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecurityGroups.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.GetSecurityGroupsResult.groups">
 <code class="sig-name descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetSecurityGroupsResult.groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Security Groups. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.ecs.GetSecurityGroupsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetSecurityGroupsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1143,22 +1119,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The ID of the VPC that owns the security group.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ecs.GetSecurityGroupsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetSecurityGroupsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.GetSnapshotsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetSnapshotsResult</code><span class="sig-paren">(</span><em class="sig-param">disk_id=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">snapshots=None</em>, <em class="sig-param">source_disk_type=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">usage=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetSnapshotsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetSnapshotsResult</code><span class="sig-paren">(</span><em class="sig-param">disk_id=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">snapshots=None</em>, <em class="sig-param">source_disk_type=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">usage=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetSnapshotsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSnapshots.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.GetSnapshotsResult.encrypted">
 <code class="sig-name descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetSnapshotsResult.encrypted" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the snapshot is encrypted or not.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.ecs.GetSnapshotsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetSnapshotsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1218,12 +1194,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.ecs.GetSnapshotsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetSnapshotsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -1235,6 +1205,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong>  If you want to create a custom image based on the system disk of your ECS instance, you can specify one of the system disk snapshots (SnapshotId) to create a custom image. However, the specified snapshot cannot be created on or before July 15, 2013.</p>
 <p><strong>NOTE:</strong>  If you want to combine snapshots of multiple disks into an image template, you can specify DiskDeviceMapping to create a custom image.</p>
 <p><strong>NOTE:</strong>  Available in 1.64.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1272,9 +1243,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the size of a disk in the combined custom image, in GiB. Value range: 5 to 2000.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a snapshot that is used to create a combined custom image.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.Image.architecture">
 <code class="sig-name descname">architecture</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.Image.architecture" title="Permalink to this definition">¶</a></dt>
@@ -1387,9 +1355,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the size of a disk in the combined custom image, in GiB. Value range: 5 to 2000.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a snapshot that is used to create a combined custom image.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1439,6 +1404,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> You can only copy the image belonging to your Alibaba Cloud account. Images cannot be copied from one account to another.</p>
 <p><strong>NOTE:</strong> If the copying is not completed, you cannot call DeleteImage to delete the image but you can call CancelCopyImage to cancel the copying.</p>
 <p><strong>NOTE:</strong> Available in 1.66.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_copy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_copy.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1467,9 +1433,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_copy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_copy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.ImageCopy.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.ImageCopy.description" title="Permalink to this definition">¶</a></dt>
@@ -1556,9 +1519,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_copy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_copy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1608,6 +1568,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> Support for exporting custom images that include data disk snapshot information in the image. The number of data disks cannot exceed 4 and the maximum capacity of a single data disk cannot exceed 500 GiB.</p>
 <p><strong>NOTE:</strong> Before exporting the image, you must authorize the cloud server ECS official service account to write OSS permissions through RAM.</p>
 <p><strong>NOTE:</strong> Available in 1.68.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_export.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_export.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1620,9 +1581,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_export.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_export.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.ImageExport.image_id">
 <code class="sig-name descname">image_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.ImageExport.image_id" title="Permalink to this definition">¶</a></dt>
@@ -1658,9 +1616,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_export.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_export.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1709,6 +1664,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> You must upload the image file to the object storage OSS in advance.</p>
 <p><strong>NOTE:</strong> The region where the image is imported must be the same region as the OSS bucket where the image file is uploaded.</p>
 <p><strong>NOTE:</strong> Available in 1.69.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_import.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_import.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1733,9 +1689,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">oss_bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Save the exported OSS bucket.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ossObject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_import.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_import.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.ImageImport.architecture">
 <code class="sig-name descname">architecture</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.ImageImport.architecture" title="Permalink to this definition">¶</a></dt>
@@ -1808,9 +1761,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">oss_bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Save the exported OSS bucket.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ossObject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_import.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_import.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1860,6 +1810,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> Each custom image can be shared with up to 50 Alibaba Cloud accounts. You can submit a ticket to share with more users.</p>
 <p><strong>NOTE:</strong> After creating an ECS instance using a shared image, once the custom image owner releases the image sharing relationship or deletes the custom image, the instance cannot initialize the system disk.</p>
 <p><strong>NOTE:</strong> Available in 1.68.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_share_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_share_permission.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1871,9 +1822,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_share_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_share_permission.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.ImageSharePermission.account_id">
 <code class="sig-name descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.ImageSharePermission.account_id" title="Permalink to this definition">¶</a></dt>
@@ -1902,9 +1850,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_share_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_share_permission.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1948,18 +1893,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.Instance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocate_public_ip=None</em>, <em class="sig-param">auto_release_time=None</em>, <em class="sig-param">auto_renew_period=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">credit_specification=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dry_run=None</em>, <em class="sig-param">force_delete=None</em>, <em class="sig-param">host_name=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">include_data_disks=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">internet_charge_type=None</em>, <em class="sig-param">internet_max_bandwidth_in=None</em>, <em class="sig-param">internet_max_bandwidth_out=None</em>, <em class="sig-param">io_optimized=None</em>, <em class="sig-param">is_outdated=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">period_unit=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">renewal_status=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">role_name=None</em>, <em class="sig-param">security_enhancement_strategy=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">spot_price_limit=None</em>, <em class="sig-param">spot_strategy=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">system_disk_category=None</em>, <em class="sig-param">system_disk_size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">volume_tags=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.Instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Instance resource with the given unique name, props, and options.</p>
+<dd><p>Create a Instance resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] allocate_public_ip: It has been deprecated from version “1.7.0”. Setting “internet_max_bandwidth_out” larger than 0 can allocate a public ip address for an instance.
+:param pulumi.Input[str] auto_release_time: The automatic release time of the <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code> instance.</p>
+<blockquote>
+<div><p>The time follows the ISO 8601 standard and is in UTC time. Format: yyyy-MM-ddTHH:mm:ssZ. It must be at least half an hour later than the current time and less than 3 years since the current time.
+Set it to null can cancel automatic release attribute and the ECS instance will not be released automatically.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>allocate_public_ip</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – It has been deprecated from version “1.7.0”. Setting “internet_max_bandwidth_out” larger than 0 can allocate a public ip address for an instance.</p></li>
-<li><p><strong>auto_release_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The automatic release time of the <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code> instance. 
-The time follows the ISO 8601 standard and is in UTC time. Format: yyyy-MM-ddTHH:mm:ssZ. It must be at least half an hour later than the current time and less than 3 years since the current time.
-Set it to null can cancel automatic release attribute and the ECS instance will not be released automatically.</p></li>
-<li><p><strong>auto_renew_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Auto renewal period of an instance, in the unit of month. It is valid when <code class="docutils literal notranslate"><span class="pre">instance_charge_type</span></code> is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Default to 1. Valid value:</p></li>
-</ul>
+<dd class="field-odd"><p><strong>auto_renew_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Auto renewal period of an instance, in the unit of month. It is valid when <code class="docutils literal notranslate"><span class="pre">instance_charge_type</span></code> is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Default to 1. Valid value:</p>
 </dd>
 </dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- [1, 2, 3, 6, 12] when `period_unit` in &quot;Month&quot;
@@ -2120,9 +2065,6 @@ Default to <code class="docutils literal notranslate"><span class="pre">cloud_ef
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The snapshot ID used to initialize the data disk. If the size specified by snapshot is greater that the size of the disk, use the size specified by snapshot as the size of the data disk.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.Instance.allocate_public_ip">
 <code class="sig-name descname">allocate_public_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.Instance.allocate_public_ip" title="Permalink to this definition">¶</a></dt>
@@ -2625,9 +2567,6 @@ Default to <code class="docutils literal notranslate"><span class="pre">cloud_ef
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The snapshot ID used to initialize the data disk. If the size specified by snapshot is greater that the size of the disk, use the size specified by snapshot as the size of the data disk.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/instance.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2672,6 +2611,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ecs.KeyPair">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">KeyPair</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key_file=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">key_name_prefix=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.KeyPair" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a key pair resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2684,9 +2626,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.KeyPair.key_file">
 <code class="sig-name descname">key_file</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.KeyPair.key_file" title="Permalink to this definition">¶</a></dt>
@@ -2729,9 +2668,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2778,6 +2714,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a key pair attachment resource to bind key pair for several ECS instances.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> After the key pair is attached with sone instances, there instances must be rebooted to make the key pair affect.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair_attachment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2790,9 +2727,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.KeyPairAttachment.force">
 <code class="sig-name descname">force</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.KeyPairAttachment.force" title="Permalink to this definition">¶</a></dt>
@@ -2828,9 +2762,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2876,6 +2807,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">LaunchTemplate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_release_time=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">host_name=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">image_owner_alias=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">internet_charge_type=None</em>, <em class="sig-param">internet_max_bandwidth_in=None</em>, <em class="sig-param">internet_max_bandwidth_out=None</em>, <em class="sig-param">io_optimized=None</em>, <em class="sig-param">key_pair_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">ram_role_name=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">security_enhancement_strategy=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">spot_price_limit=None</em>, <em class="sig-param">spot_strategy=None</em>, <em class="sig-param">system_disk_category=None</em>, <em class="sig-param">system_disk_description=None</em>, <em class="sig-param">system_disk_name=None</em>, <em class="sig-param">system_disk_size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">userdata=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.LaunchTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ECS Launch Template resource.</p>
 <p>For information about Launch Template and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/73916.html">Launch Template</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/launch_template.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/launch_template.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3008,9 +2942,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The security group ID must be one in the same VPC.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The VSwitch ID for ENI. The instance must be in the same zone of the same VPC network as the ENI, but they may belong to different VSwitches.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/launch_template.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/launch_template.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.LaunchTemplate.auto_release_time">
 <code class="sig-name descname">auto_release_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.LaunchTemplate.auto_release_time" title="Permalink to this definition">¶</a></dt>
@@ -3377,9 +3308,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The security group ID must be one in the same VPC.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The VSwitch ID for ENI. The instance must be in the same zone of the same VPC network as the ENI, but they may belong to different VSwitches.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/launch_template.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/launch_template.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3426,6 +3354,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides an Reserved Instance resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.65.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/reserved_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/reserved_instance.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3446,9 +3375,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/reserved_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/reserved_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.ReservedInstance.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.ReservedInstance.description" title="Permalink to this definition">¶</a></dt>
@@ -3535,9 +3461,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/reserved_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/reserved_instance.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3581,28 +3504,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.SecurityGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">SecurityGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">inner_access=None</em>, <em class="sig-param">inner_access_policy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">security_group_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.SecurityGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecurityGroup resource with the given unique name, props, and options.</p>
+<dd><p>Create a SecurityGroup resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: The security group description. Defaults to null.
+:param pulumi.Input[bool] inner_access: Field ‘inner_access’ has been deprecated from provider version 1.55.3. Use ‘inner_access_policy’ replaces it.
+:param pulumi.Input[str] inner_access_policy: Whether to allow both machines to access each other on all ports in the same security group. Valid values: [“Accept”, “Drop”]
+:param pulumi.Input[str] name: The name of the security group. Defaults to null.
+:param pulumi.Input[str] resource_group_id: The Id of resource group which the security_group belongs.
+:param pulumi.Input[str] security_group_type: The type of the security group. Valid values:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">normal</span></code>: basic security group.
+<code class="docutils literal notranslate"><span class="pre">enterprise</span></code>: advanced security group For more information.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group description. Defaults to null.</p></li>
-<li><p><strong>inner_access</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Field ‘inner_access’ has been deprecated from provider version 1.55.3. Use ‘inner_access_policy’ replaces it.</p></li>
-<li><p><strong>inner_access_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether to allow both machines to access each other on all ports in the same security group. Valid values: [“Accept”, “Drop”]</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the security group. Defaults to null.</p></li>
-<li><p><strong>resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of resource group which the security_group belongs.</p></li>
-<li><p><strong>security_group_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the security group. Valid values:
-<code class="docutils literal notranslate"><span class="pre">normal</span></code>: basic security group.
-<code class="docutils literal notranslate"><span class="pre">enterprise</span></code>: advanced security group For more information.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/security_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.SecurityGroup.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.SecurityGroup.description" title="Permalink to this definition">¶</a></dt>
@@ -3677,9 +3599,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/security_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3723,19 +3642,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.ecs.SecurityGroupRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">SecurityGroupRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cidr_ip=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ip_protocol=None</em>, <em class="sig-param">nic_type=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">port_range=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">source_group_owner_account=None</em>, <em class="sig-param">source_security_group_id=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.SecurityGroupRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecurityGroupRule resource with the given unique name, props, and options.</p>
+<dd><p>Create a SecurityGroupRule resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cidr_ip: The target IP address range. The default value is 0.0.0.0/0 (which means no restriction will be applied). Other supported formats include 10.159.6.18/12. Only IPv4 is supported.
+:param pulumi.Input[str] description: The description of the security group rule. The description can be up to 1 to 512 characters in length. Defaults to null.
+:param pulumi.Input[str] ip_protocol: The protocol. Can be <code class="docutils literal notranslate"><span class="pre">tcp</span></code>, <code class="docutils literal notranslate"><span class="pre">udp</span></code>, <code class="docutils literal notranslate"><span class="pre">icmp</span></code>, <code class="docutils literal notranslate"><span class="pre">gre</span></code> or <code class="docutils literal notranslate"><span class="pre">all</span></code>.
+:param pulumi.Input[str] nic_type: Network type, can be either <code class="docutils literal notranslate"><span class="pre">internet</span></code> or <code class="docutils literal notranslate"><span class="pre">intranet</span></code>, the default value is <code class="docutils literal notranslate"><span class="pre">internet</span></code>.
+:param pulumi.Input[str] policy: Authorization policy, can be either <code class="docutils literal notranslate"><span class="pre">accept</span></code> or <code class="docutils literal notranslate"><span class="pre">drop</span></code>, the default value is <code class="docutils literal notranslate"><span class="pre">accept</span></code>.
+:param pulumi.Input[str] port_range: The range of port numbers relevant to the IP protocol. Default to “-1/-1”. When the protocol is tcp or udp, each side port number range from 1 to 65535 and ‘-1/-1’ will be invalid.</p>
+<blockquote>
+<div><p>For example, <code class="docutils literal notranslate"><span class="pre">1/200</span></code> means that the range of the port numbers is 1-200. Other protocols’ ‘port_range’ can only be “-1/-1”, and other values will be invalid.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>cidr_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target IP address range. The default value is 0.0.0.0/0 (which means no restriction will be applied). Other supported formats include 10.159.6.18/12. Only IPv4 is supported.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the security group rule. The description can be up to 1 to 512 characters in length. Defaults to null.</p></li>
-<li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol. Can be <code class="docutils literal notranslate"><span class="pre">tcp</span></code>, <code class="docutils literal notranslate"><span class="pre">udp</span></code>, <code class="docutils literal notranslate"><span class="pre">icmp</span></code>, <code class="docutils literal notranslate"><span class="pre">gre</span></code> or <code class="docutils literal notranslate"><span class="pre">all</span></code>.</p></li>
-<li><p><strong>nic_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network type, can be either <code class="docutils literal notranslate"><span class="pre">internet</span></code> or <code class="docutils literal notranslate"><span class="pre">intranet</span></code>, the default value is <code class="docutils literal notranslate"><span class="pre">internet</span></code>.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Authorization policy, can be either <code class="docutils literal notranslate"><span class="pre">accept</span></code> or <code class="docutils literal notranslate"><span class="pre">drop</span></code>, the default value is <code class="docutils literal notranslate"><span class="pre">accept</span></code>.</p></li>
-<li><p><strong>port_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The range of port numbers relevant to the IP protocol. Default to “-1/-1”. When the protocol is tcp or udp, each side port number range from 1 to 65535 and ‘-1/-1’ will be invalid.
-For example, <code class="docutils literal notranslate"><span class="pre">1/200</span></code> means that the range of the port numbers is 1-200. Other protocols’ ‘port_range’ can only be “-1/-1”, and other values will be invalid.</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Authorization policy priority, with parameter values: <code class="docutils literal notranslate"><span class="pre">1-100</span></code>, default value: 1.</p></li>
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group to apply this rule to.</p></li>
 <li><p><strong>source_group_owner_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Alibaba Cloud user account Id of the target security group when security groups are authorized across accounts.  This parameter is invalid if <code class="docutils literal notranslate"><span class="pre">cidr_ip</span></code> has already been set.</p></li>
@@ -3744,9 +3665,6 @@ For example, <code class="docutils literal notranslate"><span class="pre">1/200<
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/security_group_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/security_group_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.SecurityGroupRule.cidr_ip">
 <code class="sig-name descname">cidr_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.SecurityGroupRule.cidr_ip" title="Permalink to this definition">¶</a></dt>
@@ -3840,9 +3758,6 @@ For example, <code class="docutils literal notranslate"><span class="pre">1/200<
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/security_group_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/security_group_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3888,6 +3803,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">Snapshot</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disk_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.Snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ECS snapshot resource.</p>
 <p>For information about snapshot and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/25460.html">Snapshot</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3901,9 +3819,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.Snapshot.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.Snapshot.description" title="Permalink to this definition">¶</a></dt>
@@ -3947,9 +3862,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3997,6 +3909,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>For information about snapshot policy and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/25460.html">Snapshot</a>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.42.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot_policy.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4030,9 +3943,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 - The format is  an JSON array of [&quot;0&quot;, &quot;1&quot;, … &quot;23&quot;] and the time points are separated by commas (,).
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.ecs.SnapshotPolicy.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.SnapshotPolicy.name" title="Permalink to this definition">¶</a></dt>
@@ -4107,9 +4017,6 @@ properties used to qualify the lookup.</p>
 - The format is  an JSON array of [&quot;0&quot;, &quot;1&quot;, … &quot;23&quot;] and the time points are separated by commas (,).
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4154,6 +4061,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ecs.get_disks">
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_disks</code><span class="sig-paren">(</span><em class="sig-param">category=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the disks of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/disks.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/disks.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4182,15 +4092,15 @@ tagKey2 = &quot;tagValue2&quot;
 <dd class="field-odd"><p><strong>type</strong> (<em>str</em>) – Disk type. Possible values: <code class="docutils literal notranslate"><span class="pre">system</span></code> and <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/disks.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/disks.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.ecs.get_eips">
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_eips</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">in_use=None</em>, <em class="sig-param">ip_addresses=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_eips" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of EIPs (Elastic IP address) owned by an Alibaba Cloud account.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/eips.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/eips.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4202,9 +4112,6 @@ tagKey2 = &quot;tagValue2&quot;
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/eips.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/eips.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -4212,6 +4119,9 @@ tagKey2 = &quot;tagValue2&quot;
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_images</code><span class="sig-paren">(</span><em class="sig-param">most_recent=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_images" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides available image resources. It contains user’s private images, system images provided by Alibaba Cloud, 
 other public images and the ones available on the image market.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/images.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/images.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4221,9 +4131,6 @@ other public images and the ones available on the image market.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/images.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/images.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -4232,6 +4139,7 @@ other public images and the ones available on the image market.</p>
 <dd><p>This data source provides the ECS instance type families of Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.54.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instance_type_families.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instance_type_families.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4244,9 +4152,6 @@ other public images and the ones available on the image market.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instance_type_families.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instance_type_families.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -4256,6 +4161,7 @@ other public images and the ones available on the image market.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> By default, only the upgraded instance types are returned. If you want to get outdated instance types, you must set <code class="docutils literal notranslate"><span class="pre">is_outdated</span></code> to true.</p>
 <p><strong>NOTE:</strong> If one instance type is sold out, it will not be exported.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instance_types.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instance_types.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4274,15 +4180,15 @@ other public images and the ones available on the image market.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instance_types.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instance_types.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.ecs.get_instances">
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_instances</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">ram_role_name=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Instances data source list ECS instance resources according to their ID, name regex, image id, status and other fields.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instances.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4315,15 +4221,15 @@ tagKey2 = &quot;tagValue2&quot;
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instances.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.ecs.get_key_pairs">
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_key_pairs</code><span class="sig-paren">(</span><em class="sig-param">finger_print=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_key_pairs" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of key pairs in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/key_pairs.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/key_pairs.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4335,9 +4241,6 @@ tagKey2 = &quot;tagValue2&quot;
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/key_pairs.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/key_pairs.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -4371,6 +4274,9 @@ tagKey2 = &quot;tagValue2&quot;
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">ecs.getSecurityGroupRules</span></code> data source provides a collection of security permissions of a specific security group.
 Each collection item represents a single <code class="docutils literal notranslate"><span class="pre">ingress</span></code> or <code class="docutils literal notranslate"><span class="pre">egress</span></code> permission rule.
 The ID of the security group can be provided via a variable or the result from the other data source <code class="docutils literal notranslate"><span class="pre">ecs.getSecurityGroups</span></code>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/security_group_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/security_group_rules.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4382,15 +4288,15 @@ The ID of the security group can be provided via a variable or the result from t
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/security_group_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/security_group_rules.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.ecs.get_security_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_security_groups</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_security_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of Security Groups in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/security_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/security_groups.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4416,9 +4322,6 @@ tagKey2 = &quot;tagValue2&quot;
 <dd class="field-odd"><p><strong>vpc_id</strong> (<em>str</em>) – Used to retrieve security groups that belong to the specified VPC ID.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/security_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/security_groups.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">

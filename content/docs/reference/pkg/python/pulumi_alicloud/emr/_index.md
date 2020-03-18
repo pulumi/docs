@@ -15,17 +15,17 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.emr"></span><dl class="class">
 <dt id="pulumi_alicloud.emr.AwaitableGetDiskTypesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">AwaitableGetDiskTypesResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">types=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.AwaitableGetDiskTypesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">AwaitableGetDiskTypesResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">types=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.AwaitableGetDiskTypesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.emr.AwaitableGetInstanceTypesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">AwaitableGetInstanceTypesResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">support_local_storage=None</em>, <em class="sig-param">support_node_types=None</em>, <em class="sig-param">types=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.AwaitableGetInstanceTypesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">AwaitableGetInstanceTypesResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">support_local_storage=None</em>, <em class="sig-param">support_node_types=None</em>, <em class="sig-param">types=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.AwaitableGetInstanceTypesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.emr.AwaitableGetMainVersionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">AwaitableGetMainVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_types=None</em>, <em class="sig-param">emr_version=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">main_versions=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.AwaitableGetMainVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">AwaitableGetMainVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_types=None</em>, <em class="sig-param">emr_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">main_versions=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.AwaitableGetMainVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -34,6 +34,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a EMR Cluster resource. With this you can create, read, and release  EMR Cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.57.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/emr_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/emr_cluster.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -72,7 +73,7 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 <p>The <strong>host_groups</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoRenew</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Auto renew for prepaid, true of false. Default is false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto_renew</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Auto renew for prepaid, true of false. Default is false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">charge_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Data disk capacity.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Data disk count.</p></li>
@@ -87,9 +88,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">sysDiskCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - System disk capacity.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sysDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - System disk type. Supported value: cloud,cloud_efficiency,cloud_ssd,cloud_essd.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/emr_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/emr_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.emr.Cluster.charge_type">
 <code class="sig-name descname">charge_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.charge_type" title="Permalink to this definition">¶</a></dt>
@@ -113,7 +111,7 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">host_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.host_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoRenew</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Auto renew for prepaid, true of false. Default is false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto_renew</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Auto renew for prepaid, true of false. Default is false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">charge_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Data disk capacity.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskCount</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Data disk count.</p></li>
@@ -205,7 +203,7 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>host_groups</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoRenew</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Auto renew for prepaid, true of false. Default is false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto_renew</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Auto renew for prepaid, true of false. Default is false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">charge_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Data disk capacity.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Data disk count.</p></li>
@@ -220,9 +218,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">sysDiskCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - System disk capacity.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sysDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - System disk type. Supported value: cloud,cloud_efficiency,cloud_ssd,cloud_essd.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/emr_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/emr_cluster.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -265,8 +260,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.emr.GetDiskTypesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">GetDiskTypesResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">types=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.GetDiskTypesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">GetDiskTypesResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">types=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.GetDiskTypesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDiskTypes.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.emr.GetDiskTypesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetDiskTypesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.emr.GetDiskTypesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetDiskTypesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -279,18 +280,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of emr instance types. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.emr.GetDiskTypesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetDiskTypesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.emr.GetInstanceTypesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">GetInstanceTypesResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">support_local_storage=None</em>, <em class="sig-param">support_node_types=None</em>, <em class="sig-param">types=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.GetInstanceTypesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">GetInstanceTypesResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">support_local_storage=None</em>, <em class="sig-param">support_node_types=None</em>, <em class="sig-param">types=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.GetInstanceTypesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstanceTypes.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.emr.GetInstanceTypesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetInstanceTypesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.emr.GetInstanceTypesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetInstanceTypesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -309,22 +310,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The available zone id in Alibaba Cloud account</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.emr.GetInstanceTypesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetInstanceTypesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.emr.GetMainVersionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">GetMainVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_types=None</em>, <em class="sig-param">emr_version=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">main_versions=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.GetMainVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">GetMainVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_types=None</em>, <em class="sig-param">emr_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">main_versions=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.GetMainVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getMainVersions.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.emr.GetMainVersionsResult.emr_version">
 <code class="sig-name descname">emr_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetMainVersionsResult.emr_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The version of the emr cluster instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.emr.GetMainVersionsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetMainVersionsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -339,12 +340,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of versions of the emr cluster instance. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.emr.GetMainVersionsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetMainVersionsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="function">
@@ -354,6 +349,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 system disk types available in Alibaba Cloud account when create a emr cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.60.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_disk_types.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_disk_types.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -366,9 +362,6 @@ system disk types available in Alibaba Cloud account when create a emr cluster.<
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_disk_types.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_disk_types.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -378,6 +371,7 @@ system disk types available in Alibaba Cloud account when create a emr cluster.<
 instance types available in Alibaba Cloud account when create a emr cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.59.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_instance_types.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_instance_types.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -393,9 +387,6 @@ Possible values may be any one or combination of these: [“MASTER”, “CORE�
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_instance_types.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_instance_types.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -405,6 +396,7 @@ Possible values may be any one or combination of these: [“MASTER”, “CORE�
 main versions available in Alibaba Cloud account when create a emr cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.59.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_main_versions.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_main_versions.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -415,9 +407,6 @@ Possible values may be any one or combination of these: [“HADOOP”, “DRUID�
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_main_versions.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_main_versions.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

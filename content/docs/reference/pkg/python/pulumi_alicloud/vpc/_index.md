@@ -15,80 +15,71 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.vpc"></span><dl class="class">
 <dt id="pulumi_alicloud.vpc.AwaitableGetCommonBandwidthPackagesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetCommonBandwidthPackagesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">packages=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetCommonBandwidthPackagesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetCommonBandwidthPackagesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">packages=None</em>, <em class="sig-param">resource_group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetCommonBandwidthPackagesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.AwaitableGetForwardEntriesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetForwardEntriesResult</code><span class="sig-paren">(</span><em class="sig-param">entries=None</em>, <em class="sig-param">external_ip=None</em>, <em class="sig-param">forward_table_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">internal_ip=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetForwardEntriesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetForwardEntriesResult</code><span class="sig-paren">(</span><em class="sig-param">entries=None</em>, <em class="sig-param">external_ip=None</em>, <em class="sig-param">forward_table_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">internal_ip=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetForwardEntriesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.AwaitableGetNatGatewaysResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetNatGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param">gateways=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetNatGatewaysResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetNatGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param">gateways=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetNatGatewaysResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.AwaitableGetNetworksResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetNetworksResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpcs=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetNetworksResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetNetworksResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpcs=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetNetworksResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.AwaitableGetRouteEntriesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetRouteEntriesResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">entries=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetRouteEntriesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetRouteEntriesResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">entries=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetRouteEntriesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.AwaitableGetRouteTablesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetRouteTablesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tables=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetRouteTablesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetRouteTablesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tables=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetRouteTablesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.AwaitableGetRouterInterfacesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetRouterInterfacesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">interfaces=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">opposite_interface_id=None</em>, <em class="sig-param">opposite_interface_owner_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">router_id=None</em>, <em class="sig-param">router_type=None</em>, <em class="sig-param">specification=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetRouterInterfacesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetRouterInterfacesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">interfaces=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">opposite_interface_id=None</em>, <em class="sig-param">opposite_interface_owner_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">router_id=None</em>, <em class="sig-param">router_type=None</em>, <em class="sig-param">specification=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetRouterInterfacesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.AwaitableGetSnatEntriesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetSnatEntriesResult</code><span class="sig-paren">(</span><em class="sig-param">entries=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">snat_ip=None</em>, <em class="sig-param">snat_table_id=None</em>, <em class="sig-param">source_cidr=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetSnatEntriesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetSnatEntriesResult</code><span class="sig-paren">(</span><em class="sig-param">entries=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">snat_ip=None</em>, <em class="sig-param">snat_table_id=None</em>, <em class="sig-param">source_cidr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetSnatEntriesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.AwaitableGetSslVpnClientCertsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetSslVpnClientCertsResult</code><span class="sig-paren">(</span><em class="sig-param">certs=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">ssl_vpn_server_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetSslVpnClientCertsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetSslVpnClientCertsResult</code><span class="sig-paren">(</span><em class="sig-param">certs=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">ssl_vpn_server_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetSslVpnClientCertsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.AwaitableGetSslVpnServersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetSslVpnServersResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">servers=None</em>, <em class="sig-param">vpn_gateway_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetSslVpnServersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetSslVpnServersResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">servers=None</em>, <em class="sig-param">vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetSslVpnServersResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.AwaitableGetSwitchesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetSwitchesResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitches=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetSwitchesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">AwaitableGetSwitchesResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitches=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.AwaitableGetSwitchesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.CommonBandwithPackage">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">CommonBandwithPackage</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bandwidth=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">internet_charge_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ratio=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.CommonBandwithPackage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a CommonBandwithPackage resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The bandwidth of the common bandwidth package, in Mbps.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the common bandwidth package instance.</p></li>
-<li><p><strong>internet_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The billing method of the common bandwidth package. Valid values are “PayByBandwidth” and “PayBy95” and “PayByTraffic”. “PayBy95” is pay by classic 95th percentile pricing. International Account doesn’t supports “PayByBandwidth” and “PayBy95”. Default to “PayByTraffic”.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the common bandwidth package.</p></li>
-<li><p><strong>ratio</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Ratio of the common bandwidth package. It is valid when <code class="docutils literal notranslate"><span class="pre">internet_charge_type</span></code> is <code class="docutils literal notranslate"><span class="pre">PayBy95</span></code>. Default to 100. Valid values: [10-100].</p></li>
-<li><p><strong>resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of resource group which the common bandwidth package belongs.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/common_bandwidth_package.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/common_bandwidth_package.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a CommonBandwithPackage resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] bandwidth: The bandwidth of the common bandwidth package, in Mbps.
+:param pulumi.Input[str] description: The description of the common bandwidth package instance.
+:param pulumi.Input[str] internet_charge_type: The billing method of the common bandwidth package. Valid values are “PayByBandwidth” and “PayBy95” and “PayByTraffic”. “PayBy95” is pay by classic 95th percentile pricing. International Account doesn’t supports “PayByBandwidth” and “PayBy95”. Default to “PayByTraffic”.
+:param pulumi.Input[str] name: The name of the common bandwidth package.
+:param pulumi.Input[float] ratio: Ratio of the common bandwidth package. It is valid when <code class="docutils literal notranslate"><span class="pre">internet_charge_type</span></code> is <code class="docutils literal notranslate"><span class="pre">PayBy95</span></code>. Default to 100. Valid values: [10-100].
+:param pulumi.Input[str] resource_group_id: The Id of resource group which the common bandwidth package belongs.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.CommonBandwithPackage.bandwidth">
 <code class="sig-name descname">bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.CommonBandwithPackage.bandwidth" title="Permalink to this definition">¶</a></dt>
@@ -145,9 +136,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/common_bandwidth_package.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/common_bandwidth_package.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -191,20 +179,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.CommonBandwithPackageAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">CommonBandwithPackageAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bandwidth_package_id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.CommonBandwithPackageAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a CommonBandwithPackageAttachment resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bandwidth_package_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The bandwidth_package_id of the common bandwidth package attachment, the field can’t be changed.</p></li>
-<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance_id of the common bandwidth package attachment, the field can’t be changed.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/common_bandwidth_package_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/common_bandwidth_package_attachment.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a CommonBandwithPackageAttachment resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] bandwidth_package_id: The bandwidth_package_id of the common bandwidth package attachment, the field can’t be changed.
+:param pulumi.Input[str] instance_id: The instance_id of the common bandwidth package attachment, the field can’t be changed.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.CommonBandwithPackageAttachment.bandwidth_package_id">
 <code class="sig-name descname">bandwidth_package_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.CommonBandwithPackageAttachment.bandwidth_package_id" title="Permalink to this definition">¶</a></dt>
@@ -233,9 +212,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/common_bandwidth_package_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/common_bandwidth_package_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -280,6 +256,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.vpc.ForwardEntry">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">ForwardEntry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">external_ip=None</em>, <em class="sig-param">external_port=None</em>, <em class="sig-param">forward_table_id=None</em>, <em class="sig-param">internal_ip=None</em>, <em class="sig-param">internal_port=None</em>, <em class="sig-param">ip_protocol=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.ForwardEntry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a forward resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/forward_entry.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/forward_entry.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -295,9 +274,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/forward_entry.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/forward_entry.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.ForwardEntry.external_ip">
 <code class="sig-name descname">external_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.ForwardEntry.external_ip" title="Permalink to this definition">¶</a></dt>
@@ -368,9 +344,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/forward_entry.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/forward_entry.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -413,8 +386,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.GetCommonBandwidthPackagesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetCommonBandwidthPackagesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">packages=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetCommonBandwidthPackagesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetCommonBandwidthPackagesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">packages=None</em>, <em class="sig-param">resource_group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetCommonBandwidthPackagesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCommonBandwidthPackages.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.vpc.GetCommonBandwidthPackagesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetCommonBandwidthPackagesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.GetCommonBandwidthPackagesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetCommonBandwidthPackagesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -439,17 +418,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The Id of resource group which the common bandwidth package belongs.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.vpc.GetCommonBandwidthPackagesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetCommonBandwidthPackagesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.GetForwardEntriesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetForwardEntriesResult</code><span class="sig-paren">(</span><em class="sig-param">entries=None</em>, <em class="sig-param">external_ip=None</em>, <em class="sig-param">forward_table_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">internal_ip=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetForwardEntriesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetForwardEntriesResult</code><span class="sig-paren">(</span><em class="sig-param">entries=None</em>, <em class="sig-param">external_ip=None</em>, <em class="sig-param">forward_table_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">internal_ip=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetForwardEntriesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getForwardEntries.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.GetForwardEntriesResult.entries">
@@ -461,6 +434,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.vpc.GetForwardEntriesResult.external_ip">
 <code class="sig-name descname">external_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetForwardEntriesResult.external_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>The public IP address.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.vpc.GetForwardEntriesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetForwardEntriesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -481,22 +460,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of Forward Entries names.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.vpc.GetForwardEntriesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetForwardEntriesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.GetNatGatewaysResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetNatGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param">gateways=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetNatGatewaysResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetNatGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param">gateways=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetNatGatewaysResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNatGateways.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.GetNatGatewaysResult.gateways">
 <code class="sig-name descname">gateways</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetNatGatewaysResult.gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Nat gateways. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.vpc.GetNatGatewaysResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetNatGatewaysResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -517,22 +496,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The ID of the VPC.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.vpc.GetNatGatewaysResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetNatGatewaysResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.GetNetworksResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetNetworksResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpcs=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetNetworksResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetNetworksResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpcs=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetNetworksResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNetworks.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.GetNetworksResult.cidr_block">
 <code class="sig-name descname">cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetNetworksResult.cidr_block" title="Permalink to this definition">¶</a></dt>
 <dd><p>CIDR block of the VPC.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.vpc.GetNetworksResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetNetworksResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -571,17 +550,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of VPCs. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.vpc.GetNetworksResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetNetworksResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.GetRouteEntriesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetRouteEntriesResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">entries=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetRouteEntriesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetRouteEntriesResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">entries=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetRouteEntriesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRouteEntries.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.GetRouteEntriesResult.cidr_block">
@@ -593,6 +566,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.vpc.GetRouteEntriesResult.entries">
 <code class="sig-name descname">entries</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetRouteEntriesResult.entries" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Route Entries. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.vpc.GetRouteEntriesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetRouteEntriesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -613,18 +592,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The type of the route entry.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.vpc.GetRouteEntriesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetRouteEntriesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.GetRouteTablesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetRouteTablesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tables=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetRouteTablesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetRouteTablesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tables=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetRouteTablesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRouteTables.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.vpc.GetRouteTablesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetRouteTablesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.GetRouteTablesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetRouteTablesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -649,18 +628,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of Route Tables. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.vpc.GetRouteTablesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetRouteTablesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.GetRouterInterfacesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetRouterInterfacesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">interfaces=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">opposite_interface_id=None</em>, <em class="sig-param">opposite_interface_owner_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">router_id=None</em>, <em class="sig-param">router_type=None</em>, <em class="sig-param">specification=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetRouterInterfacesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetRouterInterfacesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">interfaces=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">opposite_interface_id=None</em>, <em class="sig-param">opposite_interface_owner_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">router_id=None</em>, <em class="sig-param">router_type=None</em>, <em class="sig-param">specification=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetRouterInterfacesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRouterInterfaces.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.vpc.GetRouterInterfacesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetRouterInterfacesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.GetRouterInterfacesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetRouterInterfacesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -721,22 +700,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Router interface status. Possible values: <code class="docutils literal notranslate"><span class="pre">Active</span></code>, <code class="docutils literal notranslate"><span class="pre">Inactive</span></code> and <code class="docutils literal notranslate"><span class="pre">Idle</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.vpc.GetRouterInterfacesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetRouterInterfacesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.GetSnatEntriesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetSnatEntriesResult</code><span class="sig-paren">(</span><em class="sig-param">entries=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">snat_ip=None</em>, <em class="sig-param">snat_table_id=None</em>, <em class="sig-param">source_cidr=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetSnatEntriesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetSnatEntriesResult</code><span class="sig-paren">(</span><em class="sig-param">entries=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">snat_ip=None</em>, <em class="sig-param">snat_table_id=None</em>, <em class="sig-param">source_cidr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetSnatEntriesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSnatEntries.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.GetSnatEntriesResult.entries">
 <code class="sig-name descname">entries</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetSnatEntriesResult.entries" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Snat Entries. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.vpc.GetSnatEntriesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetSnatEntriesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -757,18 +736,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The source CIDR block of the Snat Entry.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.vpc.GetSnatEntriesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetSnatEntriesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.GetSslVpnClientCertsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetSslVpnClientCertsResult</code><span class="sig-paren">(</span><em class="sig-param">certs=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">ssl_vpn_server_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetSslVpnClientCertsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetSslVpnClientCertsResult</code><span class="sig-paren">(</span><em class="sig-param">certs=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">ssl_vpn_server_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetSslVpnClientCertsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSslVpnClientCerts.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.vpc.GetSslVpnClientCertsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetSslVpnClientCertsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.GetSslVpnClientCertsResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetSslVpnClientCertsResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -787,18 +766,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>ID of the SSL-VPN Server.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.vpc.GetSslVpnClientCertsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetSslVpnClientCertsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.GetSslVpnServersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetSslVpnServersResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">servers=None</em>, <em class="sig-param">vpn_gateway_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetSslVpnServersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetSslVpnServersResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">servers=None</em>, <em class="sig-param">vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetSslVpnServersResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSslVpnServers.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.vpc.GetSslVpnServersResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetSslVpnServersResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.GetSslVpnServersResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetSslVpnServersResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -823,22 +802,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The ID of the VPN gateway instance.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.vpc.GetSslVpnServersResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetSslVpnServersResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.GetSwitchesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetSwitchesResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitches=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetSwitchesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">GetSwitchesResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitches=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.GetSwitchesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSwitches.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.GetSwitchesResult.cidr_block">
 <code class="sig-name descname">cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetSwitchesResult.cidr_block" title="Permalink to this definition">¶</a></dt>
 <dd><p>CIDR block of the VSwitch.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.vpc.GetSwitchesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetSwitchesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -877,32 +856,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>ID of the availability zone where the VSwitch is located.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.vpc.GetSwitchesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.GetSwitchesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.HAVip">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">HAVip</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.HAVip" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a HAVip resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the HaVip instance.</p></li>
-<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ip address of the HaVip. If not filled, the default will be assigned one from the vswitch.</p></li>
-<li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The vswitch_id of the HaVip, the field can’t be changed.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/havip.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/havip.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a HAVip resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: The description of the HaVip instance.
+:param pulumi.Input[str] ip_address: The ip address of the HaVip. If not filled, the default will be assigned one from the vswitch.
+:param pulumi.Input[str] vswitch_id: The vswitch_id of the HaVip, the field can’t be changed.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.HAVip.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.HAVip.description" title="Permalink to this definition">¶</a></dt>
@@ -938,9 +902,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/havip.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/havip.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -984,20 +945,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.HAVipAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">HAVipAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">havip_id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.HAVipAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a HAVipAttachment resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>havip_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The havip_id of the havip attachment, the field can’t be changed.</p></li>
-<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance_id of the havip attachment, the field can’t be changed.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/havip_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/havip_attachment.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a HAVipAttachment resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] havip_id: The havip_id of the havip attachment, the field can’t be changed.
+:param pulumi.Input[str] instance_id: The instance_id of the havip attachment, the field can’t be changed.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.HAVipAttachment.havip_id">
 <code class="sig-name descname">havip_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.HAVipAttachment.havip_id" title="Permalink to this definition">¶</a></dt>
@@ -1026,9 +978,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/havip_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/havip_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1072,24 +1021,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.NatGateway">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">NatGateway</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bandwidth_packages=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">specification=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.NatGateway" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a NatGateway resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bandwidth_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Defaults to null.</p></li>
-<li><p><strong>instance_charge*type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The billing method of the nat gateway. Valid values are “PrePaid” and “PostPaid”. Default to “PostPaid”.</p>
-</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the nat gateway. The value can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id3"><span class="problematic" id="id4">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Defaults to null.</p></li>
-<li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration that you will buy the resource, in month. It is valid when <code class="docutils literal notranslate"><span class="pre">instance_charge_type</span></code> is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify “period” and you can do that via web console.</p></li>
-<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – It has been deprecated from provider version 1.7.1, and new field ‘specification’ can replace it.</p></li>
-<li><p><strong>specification</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The specification of the nat gateway. Valid values are <code class="docutils literal notranslate"><span class="pre">Small</span></code>, <code class="docutils literal notranslate"><span class="pre">Middle</span></code> and <code class="docutils literal notranslate"><span class="pre">Large</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">Small</span></code>. Details refer to <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42757.htm">Nat Gateway Specification</a>.</p></li>
-<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a NatGateway resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] bandwidth_packages: A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
+:param pulumi.Input[str] description: Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Defaults to null.
+:param pulumi.Input[str] instance_charge<em>type: The billing method of the nat gateway. Valid values are “PrePaid” and “PostPaid”. Default to “PostPaid”.
+:param pulumi.Input[str] name: Name of the nat gateway. The value can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”</em>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Defaults to null.
+:param pulumi.Input[float] period: The duration that you will buy the resource, in month. It is valid when <code class="docutils literal notranslate"><span class="pre">instance_charge_type</span></code> is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify “period” and you can do that via web console.
+:param pulumi.Input[str] spec: It has been deprecated from provider version 1.7.1, and new field ‘specification’ can replace it.
+:param pulumi.Input[str] specification: The specification of the nat gateway. Valid values are <code class="docutils literal notranslate"><span class="pre">Small</span></code>, <code class="docutils literal notranslate"><span class="pre">Middle</span></code> and <code class="docutils literal notranslate"><span class="pre">Large</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">Small</span></code>. Details refer to <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42757.htm">Nat Gateway Specification</a>.
+:param pulumi.Input[str] vpc_id: The VPC ID.</p>
 <p>The <strong>bandwidth_packages</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bandwidth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
@@ -1097,9 +1039,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nat_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nat_gateway.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.NatGateway.bandwidth_package_ids">
 <code class="sig-name descname">bandwidth_package_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.NatGateway.bandwidth_package_ids" title="Permalink to this definition">¶</a></dt>
@@ -1189,7 +1128,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>forward_table_ids</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The nat gateway will auto create a snap and forward item, the <code class="docutils literal notranslate"><span class="pre">forward_table_ids</span></code> is the created one.</p></li>
 <li><p><strong>instance_charge*type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The billing method of the nat gateway. Valid values are “PrePaid” and “PostPaid”. Default to “PostPaid”.</p>
 </p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the nat gateway. The value can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id8"><span class="problematic" id="id9">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Defaults to null.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the nat gateway. The value can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id4"><span class="problematic" id="id5">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Defaults to null.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration that you will buy the resource, in month. It is valid when <code class="docutils literal notranslate"><span class="pre">instance_charge_type</span></code> is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify “period” and you can do that via web console.</p></li>
 <li><p><strong>snat_table_ids</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The nat gateway will auto create a snap and forward item, the <code class="docutils literal notranslate"><span class="pre">snat_table_ids</span></code> is the created one.</p></li>
 <li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – It has been deprecated from provider version 1.7.1, and new field ‘specification’ can replace it.</p></li>
@@ -1206,9 +1145,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nat_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nat_gateway.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1252,23 +1188,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.Network">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">Network</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cidr_block=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.Network" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Network resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the VPC.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC description. Defaults to null.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the VPC. Defaults to null.</p></li>
-<li><p><strong>resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of resource group which the VPC belongs.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpc.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Network resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cidr_block: The CIDR block for the VPC.
+:param pulumi.Input[str] description: The VPC description. Defaults to null.
+:param pulumi.Input[str] name: The name of the VPC. Defaults to null.
+:param pulumi.Input[str] resource_group_id: The Id of resource group which the VPC belongs.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.Network.cidr_block">
 <code class="sig-name descname">cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.Network.cidr_block" title="Permalink to this definition">¶</a></dt>
@@ -1332,9 +1259,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vpc.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1381,6 +1305,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a network acl resource to add network acls.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.43.0+. Currently, the resource are only available in Hongkong(cn-hongkong), India(ap-south-1), and Indonesia(ap-southeast-1) regions.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1393,9 +1318,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.NetworkAcl.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.NetworkAcl.description" title="Permalink to this definition">¶</a></dt>
@@ -1431,9 +1353,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1480,6 +1399,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a network acl attachment resource to associate network acls to vswitches.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.44.0+. Currently, the resource are only available in Hongkong(cn-hongkong), India(ap-south-1), and Indonesia(ap-southeast-1) regions.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_attachment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1496,9 +1416,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">resourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource id that the network acl will associate with.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource id that the network acl will associate with. Only support <code class="docutils literal notranslate"><span class="pre">VSwitch</span></code> now.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.NetworkAclAttachment.network_acl_id">
 <code class="sig-name descname">network_acl_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.NetworkAclAttachment.network_acl_id" title="Permalink to this definition">¶</a></dt>
@@ -1536,9 +1453,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">resourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource id that the network acl will associate with.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource id that the network acl will associate with. Only support <code class="docutils literal notranslate"><span class="pre">VSwitch</span></code> now.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1587,6 +1501,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> Available in 1.45.0+. Currently, the resource are only available in Hongkong(cn-hongkong), India(ap-south-1), and Indonesia(ap-southeast-1) regions.</p>
 <p><strong>NOTE:</strong> It doesn’t support concurrency and the order of the ingress and egress entries determines the priority.</p>
 <p><strong>NOTE:</strong> Using this resource need to open a whitelist.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_entries.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_entries.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1619,9 +1534,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol of the egress entry.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source_cidr_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The source ip of the ingress entry.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_entries.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_entries.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.NetworkAclEntries.egresses">
 <code class="sig-name descname">egresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.NetworkAclEntries.egresses" title="Permalink to this definition">¶</a></dt>
@@ -1695,9 +1607,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol of the egress entry.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source_cidr_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The source ip of the ingress entry.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_entries.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_entries.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1745,6 +1654,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>For information about Elastic Network Interface and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/58496.html">Elastic Network Interface</a>.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> Only one of private_ips or private_ips_count can be specified when assign private IPs.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1753,7 +1663,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the ENI. This description can have a string of 2 to 256 characters, It cannot begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the ENI. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“, “.”, “<a href="#id13"><span class="problematic" id="id14">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the ENI. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“, “.”, “<a href="#id9"><span class="problematic" id="id10">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
 <li><p><strong>private_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The primary private IP of the ENI.</p></li>
 <li><p><strong>private_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of secondary private IPs to assign to the ENI. Don’t use both private_ips and private_ips_count in the same ENI resource block.</p></li>
 <li><p><strong>private_ips_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of secondary private IPs to assign to the ENI. Don’t use both private_ips and private_ips_count in the same ENI resource block.</p></li>
@@ -1764,9 +1674,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.NetworkInterface.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.NetworkInterface.description" title="Permalink to this definition">¶</a></dt>
@@ -1841,7 +1748,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the ENI. This description can have a string of 2 to 256 characters, It cannot begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
 <li><p><strong>mac</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Available in 1.54.0+) The MAC address of an ENI.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the ENI. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“, “.”, “<a href="#id17"><span class="problematic" id="id18">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the ENI. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“, “.”, “<a href="#id13"><span class="problematic" id="id14">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
 <li><p><strong>private_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The primary private IP of the ENI.</p></li>
 <li><p><strong>private_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of secondary private IPs to assign to the ENI. Don’t use both private_ips and private_ips_count in the same ENI resource block.</p></li>
 <li><p><strong>private_ips_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of secondary private IPs to assign to the ENI. Don’t use both private_ips and private_ips_count in the same ENI resource block.</p></li>
@@ -1852,9 +1759,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1900,6 +1804,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">NetworkInterfaceAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.NetworkInterfaceAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Alicloud ECS Elastic Network Interface Attachment as a resource to attach ENI to or detach ENI from ECS Instances.</p>
 <p>For information about Elastic Network Interface and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/58496.html">Elastic Network Interface</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface_attachment.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1910,9 +1817,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.NetworkInterfaceAttachment.instance_id">
 <code class="sig-name descname">instance_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.NetworkInterfaceAttachment.instance_id" title="Permalink to this definition">¶</a></dt>
@@ -1941,9 +1845,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1987,20 +1888,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.RouteEntry">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">RouteEntry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">destination_cidrblock=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nexthop_id=None</em>, <em class="sig-param">nexthop_type=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">router_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.RouteEntry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a RouteEntry resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>destination*cidrblock</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The RouteEntry’s target network segment.</p>
-</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the route entry. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id22"><span class="problematic" id="id23">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
-<li><p><strong>nexthop_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The route entry’s next hop. ECS instance ID or VPC router interface ID.</p></li>
-<li><p><strong>nexthop_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The next hop type. Available values:</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a RouteEntry resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] destination<em>cidrblock: The RouteEntry’s target network segment.
+:param pulumi.Input[str] name: The name of the route entry. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”</em>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.
+:param pulumi.Input[str] nexthop_id: The route entry’s next hop. ECS instance ID or VPC router interface ID.
+:param pulumi.Input[str] nexthop_type: The next hop type. Available values:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- `Instance` (Default): Route the traffic destined for the destination CIDR block to an ECS instance in the VPC.
 - `RouterInterface`: Route the traffic destined for the destination CIDR block to a router interface.
 - `VpnGateway`: Route the traffic destined for the destination CIDR block to a VPN Gateway.
@@ -2017,9 +1911,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/route_entry.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/route_entry.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.RouteEntry.destination_cidrblock">
 <code class="sig-name descname">destination_cidrblock</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.RouteEntry.destination_cidrblock" title="Permalink to this definition">¶</a></dt>
@@ -2077,7 +1968,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>destination*cidrblock</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The RouteEntry’s target network segment.</p>
 </p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the route entry. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id26"><span class="problematic" id="id27">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the route entry. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id18"><span class="problematic" id="id19">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
 <li><p><strong>nexthop_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The route entry’s next hop. ECS instance ID or VPC router interface ID.</p></li>
 <li><p><strong>nexthop_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The next hop type. Available values:</p></li>
 </ul>
@@ -2099,9 +1990,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/route_entry.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/route_entry.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2145,22 +2033,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.RouteTable">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">RouteTable</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.RouteTable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a RouteTable resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the route table instance.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the route table.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The vpc_id of the route table, the field can’t be changed.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/route_table.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a RouteTable resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: The description of the route table instance.
+:param pulumi.Input[str] name: The name of the route table.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] vpc_id: The vpc_id of the route table, the field can’t be changed.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.RouteTable.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.RouteTable.description" title="Permalink to this definition">¶</a></dt>
@@ -2203,9 +2082,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/route_table.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2249,20 +2125,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.RouteTableAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">RouteTableAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.RouteTableAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a RouteTableAttachment resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The route_table_id of the route table attachment, the field can’t be changed.</p></li>
-<li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The vswitch_id of the route table attachment, the field can’t be changed.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/route_table_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/route_table_attachment.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a RouteTableAttachment resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] route_table_id: The route_table_id of the route table attachment, the field can’t be changed.
+:param pulumi.Input[str] vswitch_id: The vswitch_id of the route table attachment, the field can’t be changed.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.RouteTableAttachment.route_table_id">
 <code class="sig-name descname">route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.RouteTableAttachment.route_table_id" title="Permalink to this definition">¶</a></dt>
@@ -2291,9 +2158,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/route_table_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/route_table_attachment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2337,18 +2201,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.RouterInterface">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">RouterInterface</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">health_check_source_ip=None</em>, <em class="sig-param">health_check_target_ip=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opposite_access_point_id=None</em>, <em class="sig-param">opposite_region=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">router_id=None</em>, <em class="sig-param">router_type=None</em>, <em class="sig-param">specification=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.RouterInterface" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a RouterInterface resource with the given unique name, props, and options.</p>
+<dd><p>Create a RouterInterface resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: Description of the router interface. It can be 2-256 characters long or left blank. It cannot start with <a class="reference external" href="http://">http://</a> and <a class="reference external" href="https://">https://</a>.
+:param pulumi.Input[str] health_check_source_ip: Used as the Packet Source IP of health check for disaster recovery or ECMP. It is only valid when <code class="docutils literal notranslate"><span class="pre">router_type</span></code> is <code class="docutils literal notranslate"><span class="pre">VBR</span></code>. The IP must be an unused IP in the local VPC. It and <code class="docutils literal notranslate"><span class="pre">health_check_target_ip</span></code> must be specified at the same time.
+:param pulumi.Input[str] health_check_target_ip: Used as the Packet Target IP of health check for disaster recovery or ECMP. It is only valid when <code class="docutils literal notranslate"><span class="pre">router_type</span></code> is <code class="docutils literal notranslate"><span class="pre">VBR</span></code>. The IP must be an unused IP in the local VPC. It and <code class="docutils literal notranslate"><span class="pre">health_check_source_ip</span></code> must be specified at the same time.
+:param pulumi.Input[str] instance_charge_type: The billing method of the router interface. Valid values are “PrePaid” and “PostPaid”. Default to “PostPaid”. Router Interface doesn’t support “PrePaid” when region and opposite<em>region are the same.
+:param pulumi.Input[str] name: Name of the router interface. Length must be 2-80 characters long. Only Chinese characters, English letters, numbers, period (.), underline (</em>), or dash (-) are permitted.</p>
+<blockquote>
+<div><p>If it is not specified, the default value is interface ID. The name cannot start with <a class="reference external" href="http://">http://</a> and <a class="reference external" href="https://">https://</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the router interface. It can be 2-256 characters long or left blank. It cannot start with <a class="reference external" href="http://">http://</a> and <a class="reference external" href="https://">https://</a>.</p></li>
-<li><p><strong>health_check_source_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used as the Packet Source IP of health check for disaster recovery or ECMP. It is only valid when <code class="docutils literal notranslate"><span class="pre">router_type</span></code> is <code class="docutils literal notranslate"><span class="pre">VBR</span></code>. The IP must be an unused IP in the local VPC. It and <code class="docutils literal notranslate"><span class="pre">health_check_target_ip</span></code> must be specified at the same time.</p></li>
-<li><p><strong>health_check_target_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used as the Packet Target IP of health check for disaster recovery or ECMP. It is only valid when <code class="docutils literal notranslate"><span class="pre">router_type</span></code> is <code class="docutils literal notranslate"><span class="pre">VBR</span></code>. The IP must be an unused IP in the local VPC. It and <code class="docutils literal notranslate"><span class="pre">health_check_source_ip</span></code> must be specified at the same time.</p></li>
-<li><p><strong>instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The billing method of the router interface. Valid values are “PrePaid” and “PostPaid”. Default to “PostPaid”. Router Interface doesn’t support “PrePaid” when region and opposite<a href="#id28"><span class="problematic" id="id29">*</span></a>region are the same.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the router interface. Length must be 2-80 characters long. Only Chinese characters, English letters, numbers, period (.), underline (<a href="#id30"><span class="problematic" id="id31">*</span></a>), or dash (-) are permitted.
-If it is not specified, the default value is interface ID. The name cannot start with <a class="reference external" href="http://">http://</a> and <a class="reference external" href="https://">https://</a>.</p></li>
 <li><p><strong>opposite_access_point_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – It has been deprecated from version 1.11.0.</p></li>
 <li><p><strong>opposite_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Region of peer side.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration that you will buy the resource, in month. It is valid when <code class="docutils literal notranslate"><span class="pre">instance_charge_type</span></code> is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify “period” and you can do that via web console.</p></li>
@@ -2359,9 +2225,6 @@ If it is not specified, the default value is interface ID. The name cannot start
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/router_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/router_interface.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.RouterInterface.access_point_id">
 <code class="sig-name descname">access_point_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.RouterInterface.access_point_id" title="Permalink to this definition">¶</a></dt>
@@ -2480,8 +2343,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the router interface. It can be 2-256 characters long or left blank. It cannot start with <a class="reference external" href="http://">http://</a> and <a class="reference external" href="https://">https://</a>.</p></li>
 <li><p><strong>health_check_source_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used as the Packet Source IP of health check for disaster recovery or ECMP. It is only valid when <code class="docutils literal notranslate"><span class="pre">router_type</span></code> is <code class="docutils literal notranslate"><span class="pre">VBR</span></code>. The IP must be an unused IP in the local VPC. It and <code class="docutils literal notranslate"><span class="pre">health_check_target_ip</span></code> must be specified at the same time.</p></li>
 <li><p><strong>health_check_target_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used as the Packet Target IP of health check for disaster recovery or ECMP. It is only valid when <code class="docutils literal notranslate"><span class="pre">router_type</span></code> is <code class="docutils literal notranslate"><span class="pre">VBR</span></code>. The IP must be an unused IP in the local VPC. It and <code class="docutils literal notranslate"><span class="pre">health_check_source_ip</span></code> must be specified at the same time.</p></li>
-<li><p><strong>instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The billing method of the router interface. Valid values are “PrePaid” and “PostPaid”. Default to “PostPaid”. Router Interface doesn’t support “PrePaid” when region and opposite<a href="#id33"><span class="problematic" id="id34">*</span></a>region are the same.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the router interface. Length must be 2-80 characters long. Only Chinese characters, English letters, numbers, period (.), underline (<a href="#id35"><span class="problematic" id="id36">*</span></a>), or dash (-) are permitted.
+<li><p><strong>instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The billing method of the router interface. Valid values are “PrePaid” and “PostPaid”. Default to “PostPaid”. Router Interface doesn’t support “PrePaid” when region and opposite<a href="#id21"><span class="problematic" id="id22">*</span></a>region are the same.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the router interface. Length must be 2-80 characters long. Only Chinese characters, English letters, numbers, period (.), underline (<a href="#id23"><span class="problematic" id="id24">*</span></a>), or dash (-) are permitted.
 If it is not specified, the default value is interface ID. The name cannot start with <a class="reference external" href="http://">http://</a> and <a class="reference external" href="https://">https://</a>.</p></li>
 <li><p><strong>opposite_access_point_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – It has been deprecated from version 1.11.0.</p></li>
 <li><p><strong>opposite_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – It has been deprecated from version 1.11.0. Use resource alicloud_router_interface_connection’s ‘opposite_router_id’ instead.</p></li>
@@ -2498,9 +2361,6 @@ If it is not specified, the default value is interface ID. The name cannot start
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/router_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/router_interface.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2551,6 +2411,7 @@ After that, all of the two router interfaces will be active.</p>
 <p><strong>NOTE:</strong> If you want to changing opposite router interface, you can delete router interface and re-build them.</p>
 <p><strong>NOTE:</strong> A integrated router interface connection tunnel requires both InitiatingSide and AcceptingSide configuring opposite router interface.</p>
 <p><strong>NOTE:</strong> Please remember to add a <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> clause in the router interface connection from the InitiatingSide to the AcceptingSide, because the connection from the AcceptingSide to the InitiatingSide must be done first.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/router_interface_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/router_interface_connection.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2564,9 +2425,6 @@ After that, all of the two router interfaces will be active.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/router_interface_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/router_interface_connection.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.RouterInterfaceConnection.interface_id">
 <code class="sig-name descname">interface_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.RouterInterfaceConnection.interface_id" title="Permalink to this definition">¶</a></dt>
@@ -2609,9 +2467,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/router_interface_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/router_interface_connection.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2656,6 +2511,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.vpc.SnatEntry">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">SnatEntry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">snat_entry_name=None</em>, <em class="sig-param">snat_ip=None</em>, <em class="sig-param">snat_table_id=None</em>, <em class="sig-param">source_cidr=None</em>, <em class="sig-param">source_vswitch_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.SnatEntry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a snat resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snat.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snat.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2669,9 +2527,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snat_entry.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snat_entry.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.SnatEntry.snat_entry_id">
 <code class="sig-name descname">snat_entry_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.SnatEntry.snat_entry_id" title="Permalink to this definition">¶</a></dt>
@@ -2728,9 +2583,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snat_entry.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snat_entry.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2774,15 +2626,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.Subnet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">Subnet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">cidr_block=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.Subnet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Subnet resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Subnet resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_alicloud.vpc.Subnet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">cidr_block=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.Subnet.get" title="Permalink to this definition">¶</a></dt>
@@ -2840,24 +2686,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.vpc.Switch">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">Switch</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">cidr_block=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.Switch" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Switch resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ for the switch.</p></li>
-<li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the switch.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The switch description. Defaults to null.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the switch. Defaults to null.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vswitch.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vswitch.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Switch resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] availability_zone: The AZ for the switch.
+:param pulumi.Input[str] cidr_block: The CIDR block for the switch.
+:param pulumi.Input[str] description: The switch description. Defaults to null.
+:param pulumi.Input[str] name: The name of the switch. Defaults to null.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] vpc_id: The VPC ID.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.vpc.Switch.availability_zone">
 <code class="sig-name descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpc.Switch.availability_zone" title="Permalink to this definition">¶</a></dt>
@@ -2914,9 +2751,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vswitch.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/vswitch.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2971,6 +2805,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code>   - The address of the EIP.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allocation_id</span></code> - The ID of the EIP instance.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/common_bandwidth_packages.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/common_bandwidth_packages.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2980,9 +2817,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/common_bandwidth_packages.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/common_bandwidth_packages.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2991,6 +2825,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list of Forward Entries owned by an Alibaba Cloud account.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.37.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/forward_entries.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/forward_entries.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3003,9 +2838,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/forward_entries.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/forward_entries.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -3014,6 +2846,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list of Nat Gateways owned by an Alibaba Cloud account.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.37.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nat_gateways.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nat_gateways.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3024,15 +2857,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nat_gateways.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nat_gateways.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.vpc.get_networks">
 <code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">get_networks</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.get_networks" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides VPCs available to the user.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpcs.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpcs.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3047,9 +2880,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpcs.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpcs.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -3058,6 +2888,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list of Route Entries owned by an Alibaba Cloud account.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.37.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/route_entries.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/route_entries.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3069,9 +2900,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/route_entries.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/route_entries.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -3080,6 +2908,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list of Route Tables owned by an Alibaba Cloud account.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.36.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/route_tables.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/route_tables.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3092,9 +2921,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/route_tables.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/route_tables.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -3102,6 +2928,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">get_router_interfaces</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">opposite_interface_id=None</em>, <em class="sig-param">opposite_interface_owner_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">router_id=None</em>, <em class="sig-param">router_type=None</em>, <em class="sig-param">specification=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.get_router_interfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides information about <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/52412.htm">router interfaces</a>
 that connect VPCs together.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/router_interfaces.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/router_interfaces.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3118,9 +2947,6 @@ that connect VPCs together.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/router_interfaces.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/router_interfaces.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -3129,6 +2955,7 @@ that connect VPCs together.</p>
 <dd><p>This data source provides a list of Snat Entries owned by an Alibaba Cloud account.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.37.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/snat_entries.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/snat_entries.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3140,15 +2967,15 @@ that connect VPCs together.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/snat_entries.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/snat_entries.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.vpc.get_ssl_vpn_client_certs">
 <code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">get_ssl_vpn_client_certs</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">ssl_vpn_server_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.get_ssl_vpn_client_certs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SSL-VPN client certificates data source lists lots of SSL-VPN client certificates resource information owned by an Alicloud account.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ssl_vpn_client_certs.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ssl_vpn_client_certs.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3159,15 +2986,15 @@ that connect VPCs together.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ssl_vpn_client_certs.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ssl_vpn_client_certs.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.vpc.get_ssl_vpn_servers">
 <code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">get_ssl_vpn_servers</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpn_gateway_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.get_ssl_vpn_servers" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SSL-VPN servers data source lists lots of SSL-VPN servers resource information owned by an Alicloud account.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ssl_vpn_servers.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ssl_vpn_servers.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3178,15 +3005,15 @@ that connect VPCs together.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ssl_vpn_servers.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ssl_vpn_servers.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.vpc.get_switches">
 <code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">get_switches</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.get_switches" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of VSwitches owned by an Alibaba Cloud account.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vswitches.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vswitches.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3201,9 +3028,6 @@ that connect VPCs together.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vswitches.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vswitches.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

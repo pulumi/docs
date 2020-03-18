@@ -15,27 +15,27 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.oss"></span><dl class="class">
 <dt id="pulumi_alicloud.oss.AwaitableGetBucketObjectsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">AwaitableGetBucketObjectsResult</code><span class="sig-paren">(</span><em class="sig-param">bucket_name=None</em>, <em class="sig-param">key_prefix=None</em>, <em class="sig-param">key_regex=None</em>, <em class="sig-param">objects=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.AwaitableGetBucketObjectsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">AwaitableGetBucketObjectsResult</code><span class="sig-paren">(</span><em class="sig-param">bucket_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key_prefix=None</em>, <em class="sig-param">key_regex=None</em>, <em class="sig-param">objects=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.AwaitableGetBucketObjectsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.oss.AwaitableGetBucketsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">AwaitableGetBucketsResult</code><span class="sig-paren">(</span><em class="sig-param">buckets=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.AwaitableGetBucketsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">AwaitableGetBucketsResult</code><span class="sig-paren">(</span><em class="sig-param">buckets=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.AwaitableGetBucketsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.oss.AwaitableGetInstanceAttachmentsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">AwaitableGetInstanceAttachmentsResult</code><span class="sig-paren">(</span><em class="sig-param">attachments=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpc_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.AwaitableGetInstanceAttachmentsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">AwaitableGetInstanceAttachmentsResult</code><span class="sig-paren">(</span><em class="sig-param">attachments=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpc_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.AwaitableGetInstanceAttachmentsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.oss.AwaitableGetInstancesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.oss.AwaitableGetTablesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">AwaitableGetTablesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tables=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.AwaitableGetTablesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">AwaitableGetTablesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tables=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.AwaitableGetTablesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -44,6 +44,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a resource to create a oss bucket and set its attribution.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The bucket namespace is shared by all users of the OSS system. Please set bucket name as unique as possible.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -116,9 +117,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">errorDocument</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An absolute path to the document to return in case of a 4XX error.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">indexDocument</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Alicloud OSS returns this index document when requests are made to the root domain or any of the subfolders.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.oss.Bucket.acl">
 <code class="sig-name descname">acl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.Bucket.acl" title="Permalink to this definition">¶</a></dt>
@@ -358,9 +356,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">errorDocument</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An absolute path to the document to return in case of a 4XX error.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">indexDocument</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Alicloud OSS returns this index document when requests are made to the root domain or any of the subfolders.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -405,6 +400,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.oss.BucketObject">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">BucketObject</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_md5=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">expires=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.BucketObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to put a object(content or file) to a oss bucket.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket_object.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -427,9 +425,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket_object.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.oss.BucketObject.acl">
 <code class="sig-name descname">acl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.BucketObject.acl" title="Permalink to this definition">¶</a></dt>
@@ -562,9 +557,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket_object.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -607,25 +599,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.oss.GetBucketObjectsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">GetBucketObjectsResult</code><span class="sig-paren">(</span><em class="sig-param">bucket_name=None</em>, <em class="sig-param">key_prefix=None</em>, <em class="sig-param">key_regex=None</em>, <em class="sig-param">objects=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.GetBucketObjectsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">GetBucketObjectsResult</code><span class="sig-paren">(</span><em class="sig-param">bucket_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key_prefix=None</em>, <em class="sig-param">key_regex=None</em>, <em class="sig-param">objects=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.GetBucketObjectsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBucketObjects.</p>
-<dl class="attribute">
-<dt id="pulumi_alicloud.oss.GetBucketObjectsResult.objects">
-<code class="sig-name descname">objects</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.GetBucketObjectsResult.objects" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of bucket objects. Each element contains the following attributes:</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_alicloud.oss.GetBucketObjectsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.GetBucketObjectsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_alicloud.oss.GetBucketObjectsResult.objects">
+<code class="sig-name descname">objects</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.GetBucketObjectsResult.objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of bucket objects. Each element contains the following attributes:</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.oss.GetBucketsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">GetBucketsResult</code><span class="sig-paren">(</span><em class="sig-param">buckets=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.GetBucketsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">GetBucketsResult</code><span class="sig-paren">(</span><em class="sig-param">buckets=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.GetBucketsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBuckets.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.oss.GetBucketsResult.buckets">
@@ -634,27 +626,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.oss.GetBucketsResult.names">
-<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.GetBucketsResult.names" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of bucket names.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_alicloud.oss.GetBucketsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.GetBucketsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.oss.GetBucketsResult.names">
+<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.GetBucketsResult.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of bucket names.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.oss.GetInstanceAttachmentsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">GetInstanceAttachmentsResult</code><span class="sig-paren">(</span><em class="sig-param">attachments=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpc_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.GetInstanceAttachmentsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">GetInstanceAttachmentsResult</code><span class="sig-paren">(</span><em class="sig-param">attachments=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpc_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.GetInstanceAttachmentsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstanceAttachments.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.oss.GetInstanceAttachmentsResult.attachments">
 <code class="sig-name descname">attachments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.GetInstanceAttachmentsResult.attachments" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of instance attachments. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.oss.GetInstanceAttachmentsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.GetInstanceAttachmentsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -675,18 +673,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of vpc ids.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.oss.GetInstanceAttachmentsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.GetInstanceAttachmentsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.oss.GetInstancesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">GetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">GetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstances.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.oss.GetInstancesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.oss.GetInstancesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.GetInstancesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -711,18 +709,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The tags of the instance.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.oss.GetInstancesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.oss.GetTablesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">GetTablesResult</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tables=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.GetTablesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">GetTablesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tables=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.GetTablesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTables.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.oss.GetTablesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.GetTablesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.oss.GetTablesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.GetTablesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -747,18 +745,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of tables. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.oss.GetTablesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.GetTablesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.oss.get_bucket_objects">
 <code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">get_bucket_objects</code><span class="sig-paren">(</span><em class="sig-param">bucket_name=None</em>, <em class="sig-param">key_prefix=None</em>, <em class="sig-param">key_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.get_bucket_objects" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the objects of an OSS bucket.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/oss_bucket_objects.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/oss_bucket_objects.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -768,29 +763,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/oss_bucket_objects.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/oss_bucket_objects.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.oss.get_buckets">
 <code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">get_buckets</code><span class="sig-paren">(</span><em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.get_buckets" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the OSS buckets of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/oss_buckets.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/oss_buckets.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by bucket name.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/oss_buckets.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/oss_buckets.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.oss.get_instance_attachments">
 <code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">get_instance_attachments</code><span class="sig-paren">(</span><em class="sig-param">instance_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.get_instance_attachments" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the ots instance attachments of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_instance_attachments.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_instance_attachments.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -799,15 +794,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_instance_attachments.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_instance_attachments.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_alicloud.oss.get_instances">
 <code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">get_instances</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.get_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the ots instances of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_instances.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -827,9 +822,6 @@ tagKey2 = &quot;tagValue2&quot;
 ```
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_instances.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -838,6 +830,7 @@ tagKey2 = &quot;tagValue2&quot;
 <dd><p>This data source provides the ots tables of the current Alibaba Cloud user.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.40.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_tables.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_tables.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -848,9 +841,6 @@ tagKey2 = &quot;tagValue2&quot;
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_tables.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_tables.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

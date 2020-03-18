@@ -19,6 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a PolarDB account resource and used to manage databases.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.67.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_account.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_account.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -36,9 +37,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_account.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_account.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.polardb.Account.account_description">
 <code class="sig-name descname">account_description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.Account.account_description" title="Permalink to this definition">¶</a></dt>
@@ -104,9 +102,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_account.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_account.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -153,6 +148,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a PolarDB account privilege resource and used to grant several database some access privilege. A database can be granted by multiple account.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.67.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_account_privilege.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_account_privilege.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -166,9 +162,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_account_privilege.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_account_privilege.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.polardb.AccountPrivilege.account_name">
 <code class="sig-name descname">account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.AccountPrivilege.account_name" title="Permalink to this definition">¶</a></dt>
@@ -211,9 +204,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_account_privilege.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_account_privilege.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -256,17 +246,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.polardb.AwaitableGetAccountsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">AwaitableGetAccountsResult</code><span class="sig-paren">(</span><em class="sig-param">accounts=None</em>, <em class="sig-param">db_cluster_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.AwaitableGetAccountsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">AwaitableGetAccountsResult</code><span class="sig-paren">(</span><em class="sig-param">accounts=None</em>, <em class="sig-param">db_cluster_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.AwaitableGetAccountsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.polardb.AwaitableGetClustersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">AwaitableGetClustersResult</code><span class="sig-paren">(</span><em class="sig-param">clusters=None</em>, <em class="sig-param">db_type=None</em>, <em class="sig-param">description_regex=None</em>, <em class="sig-param">descriptions=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.AwaitableGetClustersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">AwaitableGetClustersResult</code><span class="sig-paren">(</span><em class="sig-param">clusters=None</em>, <em class="sig-param">db_type=None</em>, <em class="sig-param">description_regex=None</em>, <em class="sig-param">descriptions=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.AwaitableGetClustersResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.polardb.AwaitableGetDatabasesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">AwaitableGetDatabasesResult</code><span class="sig-paren">(</span><em class="sig-param">databases=None</em>, <em class="sig-param">db_cluster_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.AwaitableGetDatabasesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">AwaitableGetDatabasesResult</code><span class="sig-paren">(</span><em class="sig-param">databases=None</em>, <em class="sig-param">db_cluster_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.AwaitableGetDatabasesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -277,21 +267,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_alicloud.polardb.BackupPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">BackupPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">db_cluster_id=None</em>, <em class="sig-param">preferred_backup_periods=None</em>, <em class="sig-param">preferred_backup_time=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.BackupPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a BackupPolicy resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>db_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of cluster that can run database.</p></li>
-<li><p><strong>preferred_backup_periods</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – PolarDB Cluster backup period. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to [“Tuesday”, “Thursday”, “Saturday”].</p></li>
-<li><p><strong>preferred_backup_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – PolarDB Cluster backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to “02:00Z-03:00Z”. China time is 8 hours behind it.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_backup_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_backup_policy.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a BackupPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] db_cluster_id: The Id of cluster that can run database.
+:param pulumi.Input[list] preferred_backup_periods: PolarDB Cluster backup period. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to [“Tuesday”, “Thursday”, “Saturday”].
+:param pulumi.Input[str] preferred_backup_time: PolarDB Cluster backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to “02:00Z-03:00Z”. China time is 8 hours behind it.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.polardb.BackupPolicy.backup_retention_period">
 <code class="sig-name descname">backup_retention_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.BackupPolicy.backup_retention_period" title="Permalink to this definition">¶</a></dt>
@@ -334,9 +315,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_backup_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_backup_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -385,6 +363,7 @@ environment in the cloud. A PolarDB cluster can contain multiple user-created
 databases.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.66.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_cluster.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -424,9 +403,6 @@ databases.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.polardb.Cluster.auto_renew_period">
 <code class="sig-name descname">auto_renew_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.Cluster.auto_renew_period" title="Permalink to this definition">¶</a></dt>
@@ -571,9 +547,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_cluster.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -620,6 +593,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a PolarDB database resource. A DB database deployed in a DB cluster. A DB cluster can own multiple databases.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.66.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_database.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_database.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -634,9 +608,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_database.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_database.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.polardb.Database.character_set_name">
 <code class="sig-name descname">character_set_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.Database.character_set_name" title="Permalink to this definition">¶</a></dt>
@@ -680,9 +651,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_database.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_database.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -732,6 +700,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt><strong>NOTE:</strong> Available in v1.68.0+. Each PolarDB instance will allocate a intranet connection string automatically and its prefix is Cluster ID.</dt><dd><p>To avoid unnecessary conflict, please specified a internet connection prefix before applying the resource.</p>
 </dd>
 </dl>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_endpoint_address.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_endpoint_address.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -745,9 +714,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_endpoint_address.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_endpoint_address.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.polardb.EndpointAddress.connection_prefix">
 <code class="sig-name descname">connection_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.EndpointAddress.connection_prefix" title="Permalink to this definition">¶</a></dt>
@@ -811,9 +777,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_endpoint_address.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_endpoint_address.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -856,7 +819,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.polardb.GetAccountsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">GetAccountsResult</code><span class="sig-paren">(</span><em class="sig-param">accounts=None</em>, <em class="sig-param">db_cluster_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.GetAccountsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">GetAccountsResult</code><span class="sig-paren">(</span><em class="sig-param">accounts=None</em>, <em class="sig-param">db_cluster_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.GetAccountsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAccounts.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.polardb.GetAccountsResult.accounts">
@@ -865,22 +828,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.polardb.GetAccountsResult.names">
-<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetAccountsResult.names" title="Permalink to this definition">¶</a></dt>
-<dd><p>Account name of the cluster.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_alicloud.polardb.GetAccountsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetAccountsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.polardb.GetAccountsResult.names">
+<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetAccountsResult.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Account name of the cluster.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.polardb.GetClustersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">GetClustersResult</code><span class="sig-paren">(</span><em class="sig-param">clusters=None</em>, <em class="sig-param">db_type=None</em>, <em class="sig-param">description_regex=None</em>, <em class="sig-param">descriptions=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.GetClustersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">GetClustersResult</code><span class="sig-paren">(</span><em class="sig-param">clusters=None</em>, <em class="sig-param">db_type=None</em>, <em class="sig-param">description_regex=None</em>, <em class="sig-param">descriptions=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.GetClustersResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClusters.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.polardb.GetClustersResult.clusters">
@@ -901,6 +864,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_alicloud.polardb.GetClustersResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetClustersResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_alicloud.polardb.GetClustersResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetClustersResult.ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of RDS cluster IDs.</p>
@@ -912,17 +881,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Status of the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.polardb.GetClustersResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetClustersResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.polardb.GetDatabasesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">GetDatabasesResult</code><span class="sig-paren">(</span><em class="sig-param">databases=None</em>, <em class="sig-param">db_cluster_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.GetDatabasesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">GetDatabasesResult</code><span class="sig-paren">(</span><em class="sig-param">databases=None</em>, <em class="sig-param">db_cluster_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.GetDatabasesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDatabases.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.polardb.GetDatabasesResult.databases">
@@ -931,15 +894,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.polardb.GetDatabasesResult.names">
-<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetDatabasesResult.names" title="Permalink to this definition">¶</a></dt>
-<dd><p>database name of the cluster.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_alicloud.polardb.GetDatabasesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetDatabasesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.polardb.GetDatabasesResult.names">
+<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetDatabasesResult.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>database name of the cluster.</p>
 </dd></dl>
 
 </dd></dl>
@@ -975,6 +938,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 Filters support regular expression for the account name, searches by clusterId.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.70.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_accounts.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_accounts.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -984,9 +948,6 @@ Filters support regular expression for the account name, searches by clusterId.<
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_accounts.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_accounts.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -996,6 +957,7 @@ Filters support regular expression for the account name, searches by clusterId.<
 Filters support regular expression for the cluster description, searches by tags, and other filters which are listed below.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.66.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_clusters.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_clusters.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1012,9 +974,6 @@ Filters support regular expression for the cluster description, searches by tags
 <span class="o">-</span> <span class="n">Value</span><span class="p">:</span> <span class="n">It</span> <span class="n">can</span> <span class="n">be</span> <span class="n">up</span> <span class="n">to</span> <span class="mi">128</span> <span class="n">characters</span> <span class="ow">in</span> <span class="n">length</span><span class="o">.</span> <span class="n">It</span> <span class="n">cannot</span> <span class="n">begin</span> <span class="k">with</span> <span class="s2">&quot;aliyun&quot;</span><span class="p">,</span> <span class="s2">&quot;acs:&quot;</span><span class="p">,</span> <span class="s2">&quot;http://&quot;</span><span class="p">,</span> <span class="ow">or</span> <span class="s2">&quot;https://&quot;</span><span class="o">.</span> <span class="n">It</span> <span class="n">can</span> <span class="n">be</span> <span class="n">a</span> <span class="n">null</span> <span class="n">string</span><span class="o">.</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_clusters.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_clusters.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1024,6 +983,7 @@ Filters support regular expression for the cluster description, searches by tags
 Filters support regular expression for the database name, searches by clusterId.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.70.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_databases.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_databases.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1033,9 +993,6 @@ Filters support regular expression for the database name, searches by clusterId.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_databases.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_databases.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1045,6 +1002,7 @@ Filters support regular expression for the database name, searches by clusterId.
 Filters support regular expression for the cluster name, searches by clusterId, and other filters which are listed below.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.68.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_endpoints.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_endpoints.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1054,9 +1012,6 @@ Filters support regular expression for the cluster name, searches by clusterId, 
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_endpoints.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_endpoints.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

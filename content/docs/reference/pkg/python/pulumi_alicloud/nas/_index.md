@@ -20,6 +20,7 @@ anything, please consult the source <a class="reference external" href="https://
 <p>In NAS, the permission group acts as a whitelist that allows you to restrict file system access. You can allow specified IP addresses or CIDR blocks to access the file system, and assign different levels of access permission to different IP addresses or CIDR blocks by adding rules to the permission group.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.33.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -32,9 +33,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.nas.AccessGroup.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.AccessGroup.description" title="Permalink to this definition">¶</a></dt>
@@ -70,9 +68,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -120,6 +115,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>When NAS is activated, the Default VPC Permission Group is automatically generated. It allows all IP addresses in a VPC to access the mount point with full permissions. Full permissions include Read/Write permission with no restriction on root users.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.34.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -134,9 +130,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.nas.AccessRule.access_group_name">
 <code class="sig-name descname">access_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.AccessRule.access_group_name" title="Permalink to this definition">¶</a></dt>
@@ -193,9 +186,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -238,27 +228,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.nas.AwaitableGetAccessGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">AwaitableGetAccessGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.AwaitableGetAccessGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">AwaitableGetAccessGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.AwaitableGetAccessGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.nas.AwaitableGetAccessRulesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">AwaitableGetAccessRulesResult</code><span class="sig-paren">(</span><em class="sig-param">access_group_name=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">rw_access=None</em>, <em class="sig-param">source_cidr_ip=None</em>, <em class="sig-param">user_access=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.AwaitableGetAccessRulesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">AwaitableGetAccessRulesResult</code><span class="sig-paren">(</span><em class="sig-param">access_group_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">rw_access=None</em>, <em class="sig-param">source_cidr_ip=None</em>, <em class="sig-param">user_access=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.AwaitableGetAccessRulesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.nas.AwaitableGetFileSystemsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">AwaitableGetFileSystemsResult</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">descriptions=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">protocol_type=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">systems=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.AwaitableGetFileSystemsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">AwaitableGetFileSystemsResult</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">descriptions=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">protocol_type=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">systems=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.AwaitableGetFileSystemsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.nas.AwaitableGetMountTargetsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">AwaitableGetMountTargetsResult</code><span class="sig-paren">(</span><em class="sig-param">access_group_name=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">mount_target_domain=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">targets=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.AwaitableGetMountTargetsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">AwaitableGetMountTargetsResult</code><span class="sig-paren">(</span><em class="sig-param">access_group_name=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">mount_target_domain=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">targets=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.AwaitableGetMountTargetsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.nas.AwaitableGetProtocolsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">AwaitableGetProtocolsResult</code><span class="sig-paren">(</span><em class="sig-param">output_file=None</em>, <em class="sig-param">protocols=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.AwaitableGetProtocolsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">AwaitableGetProtocolsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">protocols=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.AwaitableGetProtocolsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -269,6 +259,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>For information about NAS file system and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/27530.htm">Manage file systems</a></p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.33.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_file_system.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -281,9 +272,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_file_system.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.nas.FileSystem.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.FileSystem.description" title="Permalink to this definition">¶</a></dt>
@@ -319,9 +307,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_file_system.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -364,7 +349,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.nas.GetAccessGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">GetAccessGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.GetAccessGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">GetAccessGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.GetAccessGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAccessGroups.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.nas.GetAccessGroupsResult.description">
@@ -376,6 +361,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.nas.GetAccessGroupsResult.groups">
 <code class="sig-name descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.GetAccessGroupsResult.groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of AccessGroups. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.nas.GetAccessGroupsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.GetAccessGroupsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -396,18 +387,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>AccessGroupType of the AccessGroup.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.nas.GetAccessGroupsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.GetAccessGroupsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.nas.GetAccessRulesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">GetAccessRulesResult</code><span class="sig-paren">(</span><em class="sig-param">access_group_name=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">rw_access=None</em>, <em class="sig-param">source_cidr_ip=None</em>, <em class="sig-param">user_access=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.GetAccessRulesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">GetAccessRulesResult</code><span class="sig-paren">(</span><em class="sig-param">access_group_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">rw_access=None</em>, <em class="sig-param">source_cidr_ip=None</em>, <em class="sig-param">user_access=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.GetAccessRulesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAccessRules.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.nas.GetAccessRulesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.GetAccessRulesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_alicloud.nas.GetAccessRulesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.GetAccessRulesResult.ids" title="Permalink to this definition">¶</a></dt>
@@ -438,22 +429,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>UserAccess of the AccessRule</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.nas.GetAccessRulesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.GetAccessRulesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.nas.GetFileSystemsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">GetFileSystemsResult</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">descriptions=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">protocol_type=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">systems=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.GetFileSystemsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">GetFileSystemsResult</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">descriptions=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">protocol_type=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">systems=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.GetFileSystemsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFileSystems.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.nas.GetFileSystemsResult.descriptions">
 <code class="sig-name descname">descriptions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.GetFileSystemsResult.descriptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of FileSystem descriptions.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.nas.GetFileSystemsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.GetFileSystemsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -480,22 +471,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of VPCs. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.nas.GetFileSystemsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.GetFileSystemsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.nas.GetMountTargetsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">GetMountTargetsResult</code><span class="sig-paren">(</span><em class="sig-param">access_group_name=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">mount_target_domain=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">targets=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.GetMountTargetsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">GetMountTargetsResult</code><span class="sig-paren">(</span><em class="sig-param">access_group_name=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">mount_target_domain=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">targets=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.GetMountTargetsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getMountTargets.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.nas.GetMountTargetsResult.access_group_name">
 <code class="sig-name descname">access_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.GetMountTargetsResult.access_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>AccessGroup of The MountTarget.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.nas.GetMountTargetsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.GetMountTargetsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -531,28 +522,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>VSwitchId of The MountTarget.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_alicloud.nas.GetMountTargetsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.GetMountTargetsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_alicloud.nas.GetProtocolsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">GetProtocolsResult</code><span class="sig-paren">(</span><em class="sig-param">output_file=None</em>, <em class="sig-param">protocols=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.GetProtocolsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">GetProtocolsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">protocols=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.GetProtocolsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProtocols.</p>
-<dl class="attribute">
-<dt id="pulumi_alicloud.nas.GetProtocolsResult.protocols">
-<code class="sig-name descname">protocols</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.GetProtocolsResult.protocols" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of supported protocol type..</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_alicloud.nas.GetProtocolsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.GetProtocolsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.nas.GetProtocolsResult.protocols">
+<code class="sig-name descname">protocols</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.GetProtocolsResult.protocols" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of supported protocol type..</p>
 </dd></dl>
 
 </dd></dl>
@@ -567,6 +552,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>NOTE: You must grant NAS with specific RAM permissions when creating a classic mount targets,
 and it only can be achieved by creating a classic mount target mannually.
 See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/60431.htm">Add a mount point</a> and <a class="reference external" href="https://www.alibabacloud.com/help/faq-detail/42176.htm">Why do I need RAM permissions to create a mount point in a classic network</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_mount_target.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_mount_target.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -580,9 +566,6 @@ See <a class="reference external" href="https://www.alibabacloud.com/help/doc-de
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_mount_target.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_mount_target.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_alicloud.nas.MountTarget.access_group_name">
 <code class="sig-name descname">access_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.MountTarget.access_group_name" title="Permalink to this definition">¶</a></dt>
@@ -625,9 +608,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_mount_target.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_mount_target.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -674,6 +654,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides user-available access groups. Use when you can create mount points</p>
 <blockquote>
 <div><p>NOTE: Available in 1.35.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_access_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_access_groups.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -684,9 +665,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_access_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_access_groups.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -695,6 +673,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides AccessRule available to the user.</p>
 <blockquote>
 <div><p>NOTE: Available in 1.35.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_access_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_access_rules.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -707,9 +686,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_access_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_access_rules.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -718,6 +694,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides FileSystems available to the user.</p>
 <blockquote>
 <div><p>NOTE: Available in 1.35.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_file_systems.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_file_systems.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -729,9 +706,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_file_systems.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_file_systems.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -740,6 +714,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides MountTargets available to the user.</p>
 <blockquote>
 <div><p>NOTE: Available in 1.35.0+</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_mount_targets.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_mount_targets.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -754,9 +729,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_mount_targets.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_mount_targets.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -765,6 +737,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provide  a data source to retrieve the type of protocol used to create NAS file system.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.42.0</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_protocols.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_protocols.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -774,9 +747,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_protocols.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_protocols.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>
