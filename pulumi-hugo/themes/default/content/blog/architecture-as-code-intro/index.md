@@ -56,7 +56,13 @@ const computeInstance = new gcp.compute.Instance("instance", {
 exports.instanceName = computeInstance.name;
 exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessConfigs[0].natIp);
 ```
+This is the configuration script.
 
+```bash
+#!/bin/bash
+echo "Hello, World!" > index.html
+nohup python -m SimpleHTTPServer 80 &
+```
 When the virtual machine is created, it reads a configuration file that creates a webserver. This a basic example, but it shows how to configure virtual machines programmatically, which is useful for scaling horizontally.
 
 ## Serverless
@@ -129,7 +135,77 @@ Service discovery
 - Automated rollbacks to last known good state
 Secrets management
 
-The following example is based on the [Kubernetes Guestbook](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/) application. The difference between this implementation and the original application is that instead of using YAML to declare the infrastructure, it uses a component written in TypeScript to create the service deployment which is implemented as `k8sjs`. The main program deploys an instance of Redis and the guestbook application using containers pulled from the Google Container Registry.
+The following example is based on the [Kubernetes Guestbook](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/) application. The difference between this implementation and the original application is that instead of using YAML to declare the infrastructure, it uses a component written in TypeScript to create the service deployment which is implemented as `k8sjs`.
+
+```ts
+import * as k8s from "@pulumi/kubernetes";
+import * as k8stypes from "@pulumi/kubernetes/types/input";
+import * as pulumi from "@pulumi/pulumi";
+
+/**
+ * ServiceDeployment is an example abstraction that uses a class to fold together the common pattern of a
+ * Kubernetes Deployment and its associated Service object.
+ */
+export class ServiceDeployment extends pulumi.ComponentResource {
+    public readonly deployment: k8s.apps.v1.Deployment;
+    public readonly service: k8s.core.v1.Service;
+    public readonly ipAddress?: pulumi.Output<string>;
+
+    constructor(name: string, args: ServiceDeploymentArgs, opts?: pulumi.ComponentResourceOptions) {
+        super("k8sjs:service:ServiceDeployment", name, {}, opts);
+
+        const labels = { app: name };
+        const container: k8stypes.core.v1.Container = {
+            name,
+            image: args.image,
+            resources: args.resources || { requests: { cpu: "100m", memory: "100Mi" } },
+            env: [{ name: "GET_HOSTS_FROM", value: "dns" }],
+            ports: args.ports && args.ports.map(p => ({ containerPort: p })),
+        };
+        this.deployment = new k8s.apps.v1.Deployment(name, {
+            spec: {
+                selector: { matchLabels: labels },
+                replicas: args.replicas || 1,
+                template: {
+                    metadata: { labels: labels },
+                    spec: { containers: [ container ] },
+                },
+            },
+        }, { parent: this });
+
+        this.service = new k8s.core.v1.Service(name, {
+            metadata: {
+                labels: this.deployment.metadata.labels,
+            },
+            spec: {
+                ports: args.ports && args.ports.map(p => ({ port: p, targetPort: p })),
+                selector: this.deployment.spec.template.metadata.labels,
+                // Minikube does not implement services of type `LoadBalancer`; require the user to specify if we're
+                // running on minikube, and if so, create only services of type ClusterIP.
+                type: args.allocateIpAddress ? (args.isMinikube ? "ClusterIP" : "LoadBalancer") : undefined,
+            },
+        }, { parent: this });
+
+        if (args.allocateIpAddress) {
+            this.ipAddress = args.isMinikube ?
+                this.service.spec.apply(spec => spec.clusterIP) :
+                this.service.status.apply(status => status.loadBalancer.ingress[0].ip);
+        }
+    }
+}
+
+export interface ServiceDeploymentArgs {
+    image: string;
+    resources?: k8stypes.core.v1.ResourceRequirements;
+    replicas?: number;
+    ports?: number[];
+    allocateIpAddress?: boolean;
+    isMinikube?: boolean;
+}
+```
+
+The main program deploys an instance of Redis and the guestbook application using containers pulled from the Google Container Registry.
+
 
 ```ts
 import * as pulumi from "@pulumi/pulumi";
@@ -158,7 +234,7 @@ const frontend = new k8sjs.ServiceDeployment("frontend", {
 export let frontendIp = frontend.ipAddress;
 ```
 
-The [original example](https://github.com/kubernetes/examples/tree/master/guestbook) defines the Service and Deployment in YAML. In the example above, the YAML is abstracted in a reusable component written in a modern programming language. The ability to reuse components gets us closer to implementing architecture as code.
+The [original example](https://github.com/kubernetes/examples/tree/master/guestbook) defines the Service and Deployment in YAML. In the example above, the YAML is abstracted in a reusable component written in a modern programming language. The [complete example](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook) is available on Github. As you can see, the ability to reuse components gets us closer to implementing architecture as code.
 
 ## Microservices
 
