@@ -1,5 +1,5 @@
 ---
-title: OpenStack Provider
+title: OpenStack
 meta_desc: The OpenStack provider for Pulumi can be used to provision any of the cloud resources available in OpenStack.
 menu:
   intro:
