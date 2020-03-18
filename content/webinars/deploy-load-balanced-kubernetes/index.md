@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Ephemeral Kubernetes"
-meta_desc: "Pulumi engineer, Mike Metral, walks through workflows around around ephemeral Kubernetes."
+title: "Deploy and Scale a Load-Balanced Kubernetes Service"
+meta_desc: "Deploy and scale a load-balanced Kubernetes service using Pulumi, including building, publishing, and running a private container image."
 
 # If the video is pre-recorded or live.
 pre_recorded: true
@@ -10,7 +10,7 @@ pre_recorded: true
 pulumi_tv: true
 
 # The preview image will be shown on the list page.
-preview_image: "https://img.youtube.com/vi/2oNolWWRZXQ/hqdefault.jpg"
+preview_image: "https://img.youtube.com/vi/X96EMLi8uJY/hqdefault.jpg"
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
@@ -20,7 +20,7 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinar
+type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page.
@@ -28,33 +28,33 @@ external: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "ephemeral-kubernetes"
+url_slug: "deploy-load-balanced-kubernetes"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Ephemeral Kubernetes"
+    title: "Deploy and Scale a Load-Balanced Kubernetes Service"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Ephemeral Kubernetes"
+    title: "Deploy and Scale a Load-Balanced Kubernetes Service"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: "https://www.youtube.com/embed/2oNolWWRZXQ"
+    youtube_url: "https://www.youtube.com/embed/X96EMLi8uJY"
     # Datetime of the webinar.
     datetime: 2019-02-05 10:00:00 -07:00
     # Description of the webinar.
     description: |
-        Pulumi engineer, Mike Metral, walks through workflows around around ephemeral Kubernetes.
+        Deploy and scale a load-balanced Kubernetes service using Pulumi, including building, publishing, and running a private container image.
 
     # The webinar presenters
     presenters:
-        - name: Mike Metral
-          role: Software Architect & Engineer, Pulumi
+        - name: Joe Duffy
+          role: Founder & CEO, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - How to use Pulumi in CI/CD and development to provision, manage, and test Kubernetes clusters and their applications.
+        - Deploy a scalable and load-balanced Kubernetes service.
 ---

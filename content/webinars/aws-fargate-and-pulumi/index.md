@@ -16,7 +16,7 @@ preview_image: "https://img.youtube.com/vi/M1Es9e9ICJA/hqdefault.jpg"
 unlisted: false
 
 # The layout of the landing page.
-type: webinar
+type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page.

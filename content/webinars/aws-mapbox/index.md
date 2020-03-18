@@ -16,7 +16,7 @@ preview_image: "/images/webinar/mapbox-on-demand.png"
 unlisted: false
 
 # The layout of the landing page.
-type: webinar
+type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page.

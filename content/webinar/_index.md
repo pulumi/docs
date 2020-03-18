@@ -1,5 +1,6 @@
 ---
+private: true
 title: Webinars
-meta_desc: |
-    Webinars about modern cloud native topics to connect, collaborate, and learn new techniques and best practices.
+meta_desc: Learn best practices and innovating techniques when interacting with cloud resources.
+redirect_to: /webinars
 ---
