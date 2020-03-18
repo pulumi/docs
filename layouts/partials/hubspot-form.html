@@ -1,9 +1,21 @@
 <script src="//js.hsforms.net/forms/v2.js"></script>
-<script>
-    hbspt.forms.create({
-        portalId: "4429525",
-        formId: {{ .hubspotFormID }},
-        css: "",
-        cssClass: "{{ .classNames }}",
-    });
-</script>
+{{ if .goToWebinarKey }}
+    <script>
+        hbspt.forms.create({
+            portalId: "4429525",
+            formId: {{ .hubspotFormID }},
+            css: "",
+            cssClass: "{{ .classNames }}",
+            goToWebinarWebinarKey: "{{ .goToWebinarKey }}",
+        });
+    </script>
+{{ else }}
+    <script>
+        hbspt.forms.create({
+            portalId: "4429525",
+            formId: {{ .hubspotFormID }},
+            css: "",
+            cssClass: "{{ .classNames }}",
+        });
+    </script>
+{{ end }}

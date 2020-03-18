@@ -1,0 +1,56 @@
+{{ define "hero" }}
+    <header class="header-hero-dark py-0 pt-16 px-4">
+        <div class="container mx-auto text-white md:flex justify-around items-center">
+            <div class="md:w-1/2">
+                <h1 class="text-white text-center">Webinars</h1>
+            </div>
+            <div class="md:w-1/2 md:ml-8">
+                <div class="text-center">
+                    <img class="inline-block w-56" src="/icons/icon-audience-devops.svg">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <img class="w-full h-20" src="/images/waves.svg">
+{{ end }}
+
+{{ define "main" }}
+    {{ $webinars := (where $.Pages "Type" "webinars") }}
+    {{ $non_pulumi_tv_webinars := (where $webinars ".Params.pulumi_tv" false)}}
+    <div class="container mx-auto">
+        <div class="justify-between py-10 md:py-24 px-5 md:px-20">
+            <div class="w-full">
+                <h2 id="upcomingWebinars" class="mb-8">Upcoming Webinars</h2>
+                <ul class="list-none mx-auto md:flex md:flex-wrap pl-0">
+                    {{ $live_webinars := (where $non_pulumi_tv_webinars ".Params.pre_recorded" false)}}
+                    {{ range $index, $webinar := (sort $live_webinars ".Params.main.datetime") }}
+                        {{ partial "webinar-list-item" . }}
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="w-full">
+                <h2 id="pulumiTV" class="mb-8">PulumiTV</h2>
+                <ul class="list-none md:flex md:flex-wrap pl-0">
+                    {{ $pulumi_tv_webinars := (where $webinars ".Params.pulumi_tv" true)}}
+                    {{ range $index, $webinar := (sort $pulumi_tv_webinars ".Params.main.datetime") }}
+                        {{ partial "webinar-list-item" . }}
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="w-full">
+                <h2 id="onDemand" class="mb-8">On Demand Webinars</h2>
+                <ul class="list-none md:flex md:flex-wrap pl-0">
+                    {{ $recorded_webinars := (where $non_pulumi_tv_webinars ".Params.pre_recorded" true)}}
+                    {{ range $index, $webinar := (sort $recorded_webinars ".Params.main.datetime") }}
+                        {{ partial "webinar-list-item" . }}
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {{ partial "social.html" . }}
+
+    {{ partial "learnmore-contactus.html" . }}
+{{ end }}
