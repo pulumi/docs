@@ -120,13 +120,13 @@ export const goEndpoint = functionGo.httpsTriggerUrl;
 
 Kubernetes is a container orchestration system for deploying, scaling, and managing your application. The components that make up the application are in containers, which packages the code with all dependencies included. Containers run on a cluster of nodes, and you declare how to allocate CPU and memory resources to each container. Kubernetes manages the containers by replacing containers that fail and killing containers that don't respond. It can also scale the number of containers as well as load balance the network traffic. These are some of the features that Kubernetes provides:
 
-Load balancing and traffic distribution across the cluster
+- Load balancing and traffic distribution across the cluster
 Service discovery
-Create and manage containers
-Remove failed containers and reassign their resources to a new container
-Mount storage systems such as local storage and storage on public cloud providers
-Automated deployments based on different deploy methods such as canary or blue/green deployments
-Automated rollbacks to last known good state
+- Create and manage containers
+- Remove failed containers and reassign their resources to a new container
+- Mount storage systems such as local storage and storage on public cloud providers
+- Automated deployments based on different deploy methods such as canary or blue/green deployments
+- Automated rollbacks to last known good state
 Secrets management
 
 The following example is based on the [Kubernetes Guestbook](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/) application. The difference between this implementation and the original application is that instead of using YAML to declare the infrastructure, it uses a component written in TypeScript to create the service deployment which is implemented as `k8sjs`. The main program deploys an instance of Redis and the guestbook application using containers pulled from the Google Container Registry.
@@ -164,11 +164,11 @@ The [original example](https://github.com/kubernetes/examples/tree/master/guestb
 
 Microservices are based on the idea that a component in the application is an encapsulation of a business capability. Services are independently deployable and communicate via web service requests, which has the advantage of redeploying only one or selected services and leaving the remaining components up and running. The [12-Factor app](https://12factor.net/) is the canonical pattern for microservice, which is summarized by:
 
-Use declarative methods to configure and deploy applications.
-Enforce maximum portability between environments by establishing a clean contract with the underlying operating system.
-Deploy on modern cloud platforms that diminish the need for servers and the requisite system administration.
-Establish continuous deployment by keeping development, testing, and production stages similar.
-Use platforms with the ability to scale without significant changes to architecture, development, or tooling.
+- Use declarative methods to configure and deploy applications.
+- Enforce maximum portability between environments by establishing a clean contract with the underlying operating system.
+- Deploy on modern cloud platforms that diminish the need for servers and the requisite system administration.
+- Establish continuous deployment by keeping development, testing, and production stages similar.
+- Use platforms with the ability to scale without significant changes to architecture, development, or tooling.
 
 In addition to Kubernetes, there are other platforms for deploying container-based applications. AWS Elastic Container Service, Google Cloud Run, and Azure Container Service provide alternatives to Kubernetes for container orchestration. The following code snippet demonstrates deploying a container with a Ruby application in Google Cloud Run. Note that the image is built using a local Docker engine and pushed to the Google Cloud Repository. The code shows that you can also set memory limits and concurrency for the container. The [full example](https://github.com/pulumi/examples/tree/master/gcp-ts-cloudrun) is available on Github.
 
