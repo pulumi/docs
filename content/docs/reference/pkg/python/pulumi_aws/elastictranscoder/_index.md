@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.elastictranscoder.Pipeline">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elastictranscoder.</code><code class="sig-name descname">Pipeline</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aws_kms_key_arn=None</em>, <em class="sig-param">content_config=None</em>, <em class="sig-param">content_config_permissions=None</em>, <em class="sig-param">input_bucket=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notifications=None</em>, <em class="sig-param">output_bucket=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">thumbnail_config=None</em>, <em class="sig-param">thumbnail_config_permissions=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Transcoder pipeline resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastictranscoder_pipeline.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastictranscoder_pipeline.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -38,7 +41,7 @@ anything, please consult the source <a class="reference external" href="https://
 <p>The <strong>content_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storageClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.</p></li>
 </ul>
 <p>The <strong>content_config_permissions</strong> object supports the following:</p>
 <ul class="simple">
@@ -56,7 +59,7 @@ anything, please consult the source <a class="reference external" href="https://
 <p>The <strong>thumbnail_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storageClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.</p></li>
 </ul>
 <p>The <strong>thumbnail_config_permissions</strong> object supports the following:</p>
 <ul class="simple">
@@ -64,9 +67,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">grantee</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The AWS user or group that you want to have access to thumbnail files.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">granteeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specify the type of value that appears in the <code class="docutils literal notranslate"><span class="pre">thumbnail_config_permissions.grantee</span></code> object.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastictranscoder_pipeline.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastictranscoder_pipeline.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elastictranscoder.Pipeline.aws_kms_key_arn">
 <code class="sig-name descname">aws_kms_key_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.aws_kms_key_arn" title="Permalink to this definition">¶</a></dt>
@@ -79,7 +79,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storageClass</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.</p></li>
 </ul>
 </dd></dl>
 
@@ -136,7 +136,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storageClass</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.</p></li>
 </ul>
 </dd></dl>
 
@@ -178,7 +178,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>content_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storageClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.</p></li>
 </ul>
 <p>The <strong>content_config_permissions</strong> object supports the following:</p>
 <ul class="simple">
@@ -196,7 +196,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>thumbnail_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storageClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.</p></li>
 </ul>
 <p>The <strong>thumbnail_config_permissions</strong> object supports the following:</p>
 <ul class="simple">
@@ -204,9 +204,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">grantee</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The AWS user or group that you want to have access to thumbnail files.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">granteeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specify the type of value that appears in the <code class="docutils literal notranslate"><span class="pre">thumbnail_config_permissions.grantee</span></code> object.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastictranscoder_pipeline.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastictranscoder_pipeline.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -251,6 +248,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elastictranscoder.Preset">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elastictranscoder.</code><code class="sig-name descname">Preset</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">audio=None</em>, <em class="sig-param">audio_codec_options=None</em>, <em class="sig-param">container=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">thumbnails=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">video=None</em>, <em class="sig-param">video_codec_options=None</em>, <em class="sig-param">video_watermarks=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Transcoder preset resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastictranscoder_preset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastictranscoder_preset.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -325,9 +325,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">verticalAlign</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The vertical position of the watermark unless you specify a nonzero value for <code class="docutils literal notranslate"><span class="pre">vertical_align</span></code>. Valid values are <code class="docutils literal notranslate"><span class="pre">Top</span></code>, <code class="docutils literal notranslate"><span class="pre">Bottom</span></code>, <code class="docutils literal notranslate"><span class="pre">Center</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">verticalOffset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The amount by which you want the vertical position of the watermark to be offset from the position specified by <code class="docutils literal notranslate"><span class="pre">vertical_align</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastictranscoder_preset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastictranscoder_preset.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elastictranscoder.Preset.audio">
 <code class="sig-name descname">audio</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.audio" title="Permalink to this definition">¶</a></dt>
@@ -510,9 +507,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">verticalAlign</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The vertical position of the watermark unless you specify a nonzero value for <code class="docutils literal notranslate"><span class="pre">vertical_align</span></code>. Valid values are <code class="docutils literal notranslate"><span class="pre">Top</span></code>, <code class="docutils literal notranslate"><span class="pre">Bottom</span></code>, <code class="docutils literal notranslate"><span class="pre">Center</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">verticalOffset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The amount by which you want the vertical position of the watermark to be offset from the position specified by <code class="docutils literal notranslate"><span class="pre">vertical_align</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastictranscoder_preset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastictranscoder_preset.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

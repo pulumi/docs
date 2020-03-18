@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.fsx.LustreFileSystem">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.fsx.</code><code class="sig-name descname">LustreFileSystem</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">export_path=None</em>, <em class="sig-param">import_path=None</em>, <em class="sig-param">imported_file_chunk_size=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">storage_capacity=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">weekly_maintenance_start_time=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.fsx.LustreFileSystem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a FSx Lustre File System. See the <a class="reference external" href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html">FSx Lustre Guide</a> for more information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/fsx_lustre_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/fsx_lustre_file_system.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -33,9 +36,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/fsx_lustre_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/fsx_lustre_file_system.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.fsx.LustreFileSystem.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.fsx.LustreFileSystem.arn" title="Permalink to this definition">¶</a></dt>
@@ -141,9 +141,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/fsx_lustre_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/fsx_lustre_file_system.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -190,6 +187,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a FSx Windows File System. See the <a class="reference external" href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/what-is.html">FSx Windows Guide</a> for more information.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Either the <code class="docutils literal notranslate"><span class="pre">active_directory_id</span></code> argument or <code class="docutils literal notranslate"><span class="pre">self_managed_active_directory</span></code> configuration block must be specified.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/fsx_windows_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/fsx_windows_file_system.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -221,9 +219,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password for the service account on your self-managed AD domain that Amazon FSx will use to join to your AD domain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user name for the service account on your self-managed AD domain that Amazon FSx will use to join to your AD domain.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/fsx_windows_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/fsx_windows_file_system.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.fsx.WindowsFileSystem.active_directory_id">
 <code class="sig-name descname">active_directory_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.fsx.WindowsFileSystem.active_directory_id" title="Permalink to this definition">¶</a></dt>
@@ -381,9 +376,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password for the service account on your self-managed AD domain that Amazon FSx will use to join to your AD domain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user name for the service account on your self-managed AD domain that Amazon FSx will use to join to your AD domain.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/fsx_windows_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/fsx_windows_file_system.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

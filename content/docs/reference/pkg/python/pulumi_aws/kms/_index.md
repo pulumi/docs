@@ -19,6 +19,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides an alias for a KMS customer master key. AWS Console enforces 1-to-1 mapping between aliases &amp; keys,
 but API (hence this provider too) allows you to create as many aliases as
 the <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html">account limits</a> allow you.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_alias.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -31,9 +34,6 @@ The name must start with the word “alias” followed by a forward slash (alias
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_alias.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Alias.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Alias.arn" title="Permalink to this definition">¶</a></dt>
@@ -85,9 +85,6 @@ The name must start with the word “alias” followed by a forward slash (alias
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_alias.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -130,27 +127,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kms.AwaitableGetAliasResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">AwaitableGetAliasResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">target_key_arn=None</em>, <em class="sig-param">target_key_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.AwaitableGetAliasResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">AwaitableGetAliasResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">target_key_arn=None</em>, <em class="sig-param">target_key_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.AwaitableGetAliasResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.kms.AwaitableGetCipherTextResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">AwaitableGetCipherTextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext_blob=None</em>, <em class="sig-param">context=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">plaintext=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.AwaitableGetCipherTextResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">AwaitableGetCipherTextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext_blob=None</em>, <em class="sig-param">context=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">plaintext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.AwaitableGetCipherTextResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.kms.AwaitableGetKeyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">AwaitableGetKeyResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">aws_account_id=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">customer_master_key_spec=None</em>, <em class="sig-param">deletion_date=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">expiration_model=None</em>, <em class="sig-param">grant_tokens=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">key_manager=None</em>, <em class="sig-param">key_state=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">origin=None</em>, <em class="sig-param">valid_to=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.AwaitableGetKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">AwaitableGetKeyResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">aws_account_id=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">customer_master_key_spec=None</em>, <em class="sig-param">deletion_date=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">expiration_model=None</em>, <em class="sig-param">grant_tokens=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">key_manager=None</em>, <em class="sig-param">key_state=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">origin=None</em>, <em class="sig-param">valid_to=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.AwaitableGetKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.kms.AwaitableGetSecretResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">AwaitableGetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">secrets=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.AwaitableGetSecretResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">AwaitableGetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">secrets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.AwaitableGetSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.kms.AwaitableGetSecretsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">AwaitableGetSecretsResult</code><span class="sig-paren">(</span><em class="sig-param">plaintext=None</em>, <em class="sig-param">secrets=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.AwaitableGetSecretsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">AwaitableGetSecretsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">plaintext=None</em>, <em class="sig-param">secrets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.AwaitableGetSecretsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -163,6 +160,7 @@ the <cite>``kms.Ciphertext`</cite> data source &lt;<a class="reference external"
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the plaintext be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_ciphertext.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -175,9 +173,6 @@ the <cite>``kms.Ciphertext`</cite> data source &lt;<a class="reference external"
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_ciphertext.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Ciphertext.ciphertext_blob">
 <code class="sig-name descname">ciphertext_blob</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Ciphertext.ciphertext_blob" title="Permalink to this definition">¶</a></dt>
@@ -220,9 +215,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_ciphertext.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -269,6 +261,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a KMS Customer Master Key that uses external key material. To instead manage a KMS Customer Master Key where AWS automatically generates and potentially rotates key material, see the <cite>``kms.Key`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/kms_key.html">https://www.terraform.io/docs/providers/aws/r/kms_key.html</a>&gt;`_.</p>
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the key material will be stored in the raw state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_external_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_external_key.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -285,9 +278,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_external_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_external_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.ExternalKey.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.ExternalKey.arn" title="Permalink to this definition">¶</a></dt>
@@ -380,9 +370,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_external_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_external_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -425,12 +412,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kms.GetAliasResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">GetAliasResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">target_key_arn=None</em>, <em class="sig-param">target_key_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetAliasResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">GetAliasResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">target_key_arn=None</em>, <em class="sig-param">target_key_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetAliasResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAlias.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetAliasResult.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.GetAliasResult.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Resource Name(ARN) of the key alias.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kms.GetAliasResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.GetAliasResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -445,17 +438,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Key identifier pointed to by the alias.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.kms.GetAliasResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.GetAliasResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.kms.GetCipherTextResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">GetCipherTextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext_blob=None</em>, <em class="sig-param">context=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">plaintext=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetCipherTextResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">GetCipherTextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext_blob=None</em>, <em class="sig-param">context=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">plaintext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetCipherTextResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCipherText.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetCipherTextResult.ciphertext_blob">
@@ -473,7 +460,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kms.GetKeyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">GetKeyResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">aws_account_id=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">customer_master_key_spec=None</em>, <em class="sig-param">deletion_date=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">expiration_model=None</em>, <em class="sig-param">grant_tokens=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">key_manager=None</em>, <em class="sig-param">key_state=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">origin=None</em>, <em class="sig-param">valid_to=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">GetKeyResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">aws_account_id=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">customer_master_key_spec=None</em>, <em class="sig-param">deletion_date=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">expiration_model=None</em>, <em class="sig-param">grant_tokens=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">key_manager=None</em>, <em class="sig-param">key_state=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">origin=None</em>, <em class="sig-param">valid_to=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKey.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetKeyResult.id">
@@ -485,7 +472,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kms.GetSecretResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">GetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">secrets=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetSecretResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">GetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">secrets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecret.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetSecretResult.id">
@@ -497,18 +484,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kms.GetSecretsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">GetSecretsResult</code><span class="sig-paren">(</span><em class="sig-param">plaintext=None</em>, <em class="sig-param">secrets=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetSecretsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">GetSecretsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">plaintext=None</em>, <em class="sig-param">secrets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetSecretsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecrets.</p>
-<dl class="attribute">
-<dt id="pulumi_aws.kms.GetSecretsResult.plaintext">
-<code class="sig-name descname">plaintext</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.GetSecretsResult.plaintext" title="Permalink to this definition">¶</a></dt>
-<dd><p>Map containing each <code class="docutils literal notranslate"><span class="pre">secret</span></code> <code class="docutils literal notranslate"><span class="pre">name</span></code> as the key with its decrypted plaintext value</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetSecretsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.GetSecretsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kms.GetSecretsResult.plaintext">
+<code class="sig-name descname">plaintext</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.GetSecretsResult.plaintext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Map containing each <code class="docutils literal notranslate"><span class="pre">secret</span></code> <code class="docutils literal notranslate"><span class="pre">name</span></code> as the key with its decrypted plaintext value</p>
 </dd></dl>
 
 </dd></dl>
@@ -517,6 +504,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.kms.Grant">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">Grant</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">constraints=None</em>, <em class="sig-param">grant_creation_tokens=None</em>, <em class="sig-param">grantee_principal=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">operations=None</em>, <em class="sig-param">retire_on_delete=None</em>, <em class="sig-param">retiring_principal=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Grant" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource-based access control mechanism for a KMS customer master key.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_grant.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_grant.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -547,9 +537,6 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 <li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextEquals</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextSubset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_grant.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_grant.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Grant.constraints">
 <code class="sig-name descname">constraints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Grant.constraints" title="Permalink to this definition">¶</a></dt>
@@ -653,9 +640,6 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 <li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextEquals</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextSubset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_grant.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_grant.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -700,6 +684,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.kms.Key">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">Key</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">customer_master_key_spec=None</em>, <em class="sig-param">deletion_window_in_days=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_key_rotation=None</em>, <em class="sig-param">is_enabled=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a KMS customer master key.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_key.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -719,9 +706,6 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">ENCRYPT
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Key.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Key.arn" title="Permalink to this definition">¶</a></dt>
@@ -809,9 +793,6 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">ENCRYPT
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -858,14 +839,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get the ARN of a KMS key alias.
 By using this data source, you can reference key alias
 without having to hard code the ARN as input.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_alias.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The display name of the alias. The name must start with the word “alias” followed by a forward slash (alias/)</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_alias.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -878,6 +859,7 @@ resource &lt;<a class="reference external" href="https://www.terraform.io/docs/p
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the plaintext be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_ciphertext.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -888,9 +870,6 @@ resource &lt;<a class="reference external" href="https://www.terraform.io/docs/p
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_ciphertext.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -900,6 +879,9 @@ resource &lt;<a class="reference external" href="https://www.terraform.io/docs/p
 the specified KMS Key with flexible key id input.
 This can be useful to reference key alias
 without having to hard code the ARN as input.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_key.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -914,15 +896,15 @@ without having to hard code the ARN as input.</p>
 * Alias ARN: E.g.: `arn:aws:kms:us-east-1:111122223333:alias/my-key`
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.kms.get_secret">
 <code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">get_secret</code><span class="sig-paren">(</span><em class="sig-param">secrets=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>!&gt; <strong>WARNING:</strong> This data source was removed in version 2.0.0 of the AWS Provider. You can migrate existing configurations to the <cite>``kms.getSecrets`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/kms_secrets.html">https://www.terraform.io/docs/providers/aws/d/kms_secrets.html</a>&gt;`_ following instructions available in the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/version-2-upgrade.html#data-source-aws_kms_secret">Version 2 Upgrade Guide</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secret.html.markdown</a>.</p>
+</div></blockquote>
 <p>The <strong>secrets</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">context</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
@@ -930,15 +912,15 @@ without having to hard code the ARN as input.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">payload</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secret.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.kms.get_secrets">
 <code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">get_secrets</code><span class="sig-paren">(</span><em class="sig-param">secrets=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_secrets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Decrypt multiple secrets from data encrypted with the AWS KMS service.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secrets.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secrets.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>secrets</strong> (<em>list</em>) – One or more encrypted payload definitions from the KMS service. See the Secret Definitions below.</p>
@@ -951,9 +933,6 @@ without having to hard code the ARN as input.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name to export this secret under in the attributes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">payload</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Base64 encoded payload, as returned from a KMS encrypt operation.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secrets.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secrets.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

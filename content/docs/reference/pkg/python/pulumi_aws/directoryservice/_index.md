@@ -15,13 +15,16 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.directoryservice"></span><dl class="class">
 <dt id="pulumi_aws.directoryservice.AwaitableGetDirectoryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">AwaitableGetDirectoryResult</code><span class="sig-paren">(</span><em class="sig-param">access_url=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">connect_settings=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">directory_id=None</em>, <em class="sig-param">dns_ip_addresses=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">enable_sso=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpc_settings=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.AwaitableGetDirectoryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">AwaitableGetDirectoryResult</code><span class="sig-paren">(</span><em class="sig-param">access_url=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">connect_settings=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">directory_id=None</em>, <em class="sig-param">dns_ip_addresses=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">enable_sso=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpc_settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.AwaitableGetDirectoryResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.directoryservice.ConditionalForwader">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">ConditionalForwader</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">directory_id=None</em>, <em class="sig-param">dns_ips=None</em>, <em class="sig-param">remote_domain_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.ConditionalForwader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a conditional forwarder for managed Microsoft AD in AWS Directory Service.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_conditional_forwarder.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_conditional_forwarder.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -33,9 +36,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_conditional_forwarder.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_conditional_forwarder.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directoryservice.ConditionalForwader.directory_id">
 <code class="sig-name descname">directory_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.ConditionalForwader.directory_id" title="Permalink to this definition">¶</a></dt>
@@ -71,9 +71,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_conditional_forwarder.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_conditional_forwarder.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -121,6 +118,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the password and customer username will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -154,9 +152,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier of the VPC that the directory is in.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directoryservice.Directory.access_url">
 <code class="sig-name descname">access_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.access_url" title="Permalink to this definition">¶</a></dt>
@@ -298,9 +293,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier of the VPC that the directory is in.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -343,7 +335,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directoryservice.GetDirectoryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">GetDirectoryResult</code><span class="sig-paren">(</span><em class="sig-param">access_url=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">connect_settings=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">directory_id=None</em>, <em class="sig-param">dns_ip_addresses=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">enable_sso=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpc_settings=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">GetDirectoryResult</code><span class="sig-paren">(</span><em class="sig-param">access_url=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">connect_settings=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">directory_id=None</em>, <em class="sig-param">dns_ip_addresses=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">enable_sso=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpc_settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDirectory.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.directoryservice.GetDirectoryResult.access_url">
@@ -382,6 +374,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.directoryservice.GetDirectoryResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.directoryservice.GetDirectoryResult.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The fully qualified name for the directory/connector.</p>
@@ -417,18 +415,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The directory type (<code class="docutils literal notranslate"><span class="pre">SimpleAD</span></code>, <code class="docutils literal notranslate"><span class="pre">ADConnector</span></code> or <code class="docutils literal notranslate"><span class="pre">MicrosoftAD</span></code>).</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.directoryservice.GetDirectoryResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.directoryservice.LogService">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">LogService</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">directory_id=None</em>, <em class="sig-param">log_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.LogService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Log subscription for AWS Directory Service that pushes logs to cloudwatch.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_log_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_log_subscription.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -439,9 +434,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_log_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_log_subscription.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directoryservice.LogService.directory_id">
 <code class="sig-name descname">directory_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.LogService.directory_id" title="Permalink to this definition">¶</a></dt>
@@ -470,9 +462,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_log_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_log_subscription.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -517,14 +506,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directoryservice.get_directory">
 <code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">get_directory</code><span class="sig-paren">(</span><em class="sig-param">directory_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.get_directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get attributes of AWS Directory Service directory (SimpleAD, Managed AD, AD Connector). It’s especially useful to refer AWS Managed AD or on-premise AD in AD Connector configuration.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/directory_service_directory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/directory_service_directory.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>directory_id</strong> (<em>str</em>) – The ID of the directory.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/directory_service_directory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/directory_service_directory.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

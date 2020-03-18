@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.sfn.Activity">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">Activity</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.Activity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Step Function Activity resource</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sfn_activity.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sfn_activity.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -27,9 +30,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sfn_activity.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sfn_activity.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.sfn.Activity.creation_date">
 <code class="sig-name descname">creation_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sfn.Activity.creation_date" title="Permalink to this definition">¶</a></dt>
@@ -65,9 +65,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sfn_activity.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sfn_activity.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -110,17 +107,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.sfn.AwaitableGetActivityResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">AwaitableGetActivityResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.AwaitableGetActivityResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">AwaitableGetActivityResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.AwaitableGetActivityResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.sfn.AwaitableGetStateMachineResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">AwaitableGetStateMachineResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">definition=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.AwaitableGetStateMachineResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">AwaitableGetStateMachineResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">definition=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.AwaitableGetStateMachineResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.sfn.GetActivityResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">GetActivityResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.GetActivityResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">GetActivityResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.GetActivityResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getActivity.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.sfn.GetActivityResult.creation_date">
@@ -138,7 +135,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.sfn.GetStateMachineResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">GetStateMachineResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">definition=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.GetStateMachineResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">GetStateMachineResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">definition=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.GetStateMachineResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getStateMachine.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.sfn.GetStateMachineResult.arn">
@@ -159,6 +156,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.sfn.GetStateMachineResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sfn.GetStateMachineResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.sfn.GetStateMachineResult.role_arn">
 <code class="sig-name descname">role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sfn.GetStateMachineResult.role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set to the role_arn used by the state function.</p>
@@ -170,18 +173,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Set to the current status of the state machine.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.sfn.GetStateMachineResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sfn.GetStateMachineResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.sfn.StateMachine">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">StateMachine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">definition=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.StateMachine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Step Function State Machine resource</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sfn_state_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sfn_state_machine.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -194,9 +194,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sfn_state_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sfn_state_machine.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.sfn.StateMachine.creation_date">
 <code class="sig-name descname">creation_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sfn.StateMachine.creation_date" title="Permalink to this definition">¶</a></dt>
@@ -253,9 +250,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sfn_state_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sfn_state_machine.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -300,6 +294,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.sfn.get_activity">
 <code class="sig-prename descclassname">pulumi_aws.sfn.</code><code class="sig-name descname">get_activity</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.get_activity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Step Functions Activity data source</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sfn_activity.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sfn_activity.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -308,9 +305,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sfn_activity.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sfn_activity.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -319,14 +313,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get the ARN of a State Machine in AWS Step
 Function (SFN). By using this data source, you can reference a
 state machine without having to hard code the ARNs as input.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sfn_state_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sfn_state_machine.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The friendly name of the state machine to match.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sfn_state_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sfn_state_machine.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

@@ -16,25 +16,53 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.healthcare"></span><dl class="class">
 <dt id="pulumi_gcp.healthcare.Dataset">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">Dataset</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">time_zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.Dataset" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Dataset resource with the given unique name, props, and options.</p>
+<dd><p>Create a Dataset resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] location: The location for the Dataset.
+:param pulumi.Input[str] name: The resource name for the Dataset.
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div><p>If it is not provided, the provider project is used.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default timezone used by this dataset. Must be a either a valid IANA time zone name such as “America/New_York” or
+empty, which defaults to UTC. This is used for parsing times in resources (e.g., HL7 messages) where no explicit
+timezone is specified.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.Dataset.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Dataset.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location for the Dataset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.Dataset.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Dataset.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name for the Dataset.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.Dataset.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Dataset.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.Dataset.self_link">
+<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Dataset.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fully qualified name of this dataset</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.Dataset.time_zone">
+<code class="sig-name descname">time_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Dataset.time_zone" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default timezone used by this dataset. Must be a either a valid IANA time zone name such as “America/New_York” or
+empty, which defaults to UTC. This is used for parsing times in resources (e.g., HL7 messages) where no explicit
+timezone is specified.</p>
 </dd></dl>
 
 <dl class="method">
@@ -48,14 +76,17 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location for the Dataset.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the Dataset.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified name of this dataset</p></li>
+<li><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default timezone used by this dataset. Must be a either a valid IANA time zone name such as “America/New_York” or
+empty, which defaults to UTC. This is used for parsing times in resources (e.g., HL7 messages) where no explicit
+timezone is specified.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -99,20 +130,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.healthcare.DatasetIamBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">DatasetIamBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.DatasetIamBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DatasetIamBinding resource with the given unique name, props, and options.</p>
+<dd><p>Create a DatasetIamBinding resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] dataset_id: The dataset ID, in the form</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}</span></code> or
+<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}</span></code>. In the second form, the provider’s
+project setting will be used as a fallback.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The dataset ID, in the form
-<code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}</span></code> or
-<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}</span></code>. In the second form, the provider’s
-project setting will be used as a fallback.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-</ul>
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
@@ -121,9 +152,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.DatasetIamBinding.dataset_id">
 <code class="sig-name descname">dataset_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.DatasetIamBinding.dataset_id" title="Permalink to this definition">¶</a></dt>
@@ -175,9 +203,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -221,20 +246,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.healthcare.DatasetIamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">DatasetIamMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.DatasetIamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DatasetIamMember resource with the given unique name, props, and options.</p>
+<dd><p>Create a DatasetIamMember resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] dataset_id: The dataset ID, in the form</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}</span></code> or
+<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}</span></code>. In the second form, the provider’s
+project setting will be used as a fallback.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The dataset ID, in the form
-<code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}</span></code> or
-<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}</span></code>. In the second form, the provider’s
-project setting will be used as a fallback.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-</ul>
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
@@ -243,9 +268,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.DatasetIamMember.dataset_id">
 <code class="sig-name descname">dataset_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.DatasetIamMember.dataset_id" title="Permalink to this definition">¶</a></dt>
@@ -297,9 +319,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -343,24 +362,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.healthcare.DatasetIamPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">DatasetIamPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.DatasetIamPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DatasetIamPolicy resource with the given unique name, props, and options.</p>
+<dd><p>Create a DatasetIamPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] dataset_id: The dataset ID, in the form</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}</span></code> or
+<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}</span></code>. In the second form, the provider’s
+project setting will be used as a fallback.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The dataset ID, in the form
-<code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}</span></code> or
-<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}</span></code>. In the second form, the provider’s
-project setting will be used as a fallback.</p></li>
-<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
-a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.DatasetIamPolicy.dataset_id">
 <code class="sig-name descname">dataset_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.DatasetIamPolicy.dataset_id" title="Permalink to this definition">¶</a></dt>
@@ -404,9 +420,6 @@ a <code class="docutils literal notranslate"><span class="pre">organizations.get
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -450,12 +463,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.healthcare.DicomStore">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">DicomStore</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dataset=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.DicomStore" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DicomStore resource with the given unique name, props, and options.</p>
+<dd><p>Create a DicomStore resource with the given unique name, props, and options.
+:param str resource<a href="#id1"><span class="problematic" id="id2">*</span></a>name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] dataset: Identifies the dataset addressed by this request. Must be in the format</p>
+<blockquote>
+<div><p>‘projects/{project}/locations/{location}/datasets/{dataset}’</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
+“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the DicomStore. ** Changing this property may recreate the Dicom store (removing all data) **</p></li>
+<li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
 </ul>
 </dd>
 </dl>
@@ -463,9 +488,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.DicomStore.dataset">
+<code class="sig-name descname">dataset</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.DicomStore.dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifies the dataset addressed by this request. Must be in the format
+‘projects/{project}/locations/{location}/datasets/{dataset}’</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.DicomStore.labels">
+<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.DicomStore.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}<em>-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}p{N}</em>-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
+“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.DicomStore.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.DicomStore.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name for the DicomStore. ** Changing this property may recreate the Dicom store (removing all data) **</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.DicomStore.notification_config">
+<code class="sig-name descname">notification_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.DicomStore.notification_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>A nested object resource</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.DicomStore.self_link">
+<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.DicomStore.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fully qualified name of this dataset</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.healthcare.DicomStore.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dataset=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_config=None</em>, <em class="sig-param">self_link=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.DicomStore.get" title="Permalink to this definition">¶</a></dt>
@@ -474,9 +535,21 @@ properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>resource*name</strong> (<em>str</em>) – <p>The unique name of the resulting resource.</p>
+</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dataset</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifies the dataset addressed by this request. Must be in the format
+‘projects/{project}/locations/{location}/datasets/{dataset}’</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
+“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the DicomStore. ** Changing this property may recreate the Dicom store (removing all data) **</p></li>
+<li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
+<li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified name of this dataset</p></li>
 </ul>
 </dd>
 </dl>
@@ -484,9 +557,6 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -530,20 +600,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.healthcare.DicomStoreIamBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">DicomStoreIamBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">dicom_store_id=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.DicomStoreIamBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DicomStoreIamBinding resource with the given unique name, props, and options.</p>
+<dd><p>Create a DicomStoreIamBinding resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] dicom_store_id: The DICOM store ID, in the form</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{dicom_store_name}</span></code> or
+<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{dicom_store_name}</span></code>. In the second form, the provider’s
+project setting will be used as a fallback.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>dicom_store_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DICOM store ID, in the form
-<code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{dicom_store_name}</span></code> or
-<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{dicom_store_name}</span></code>. In the second form, the provider’s
-project setting will be used as a fallback.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-</ul>
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
@@ -552,9 +622,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.DicomStoreIamBinding.dicom_store_id">
 <code class="sig-name descname">dicom_store_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.DicomStoreIamBinding.dicom_store_id" title="Permalink to this definition">¶</a></dt>
@@ -606,9 +673,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -652,20 +716,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.healthcare.DicomStoreIamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">DicomStoreIamMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">dicom_store_id=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.DicomStoreIamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DicomStoreIamMember resource with the given unique name, props, and options.</p>
+<dd><p>Create a DicomStoreIamMember resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] dicom_store_id: The DICOM store ID, in the form</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{dicom_store_name}</span></code> or
+<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{dicom_store_name}</span></code>. In the second form, the provider’s
+project setting will be used as a fallback.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>dicom_store_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DICOM store ID, in the form
-<code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{dicom_store_name}</span></code> or
-<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{dicom_store_name}</span></code>. In the second form, the provider’s
-project setting will be used as a fallback.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-</ul>
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
@@ -674,9 +738,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.DicomStoreIamMember.dicom_store_id">
 <code class="sig-name descname">dicom_store_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.DicomStoreIamMember.dicom_store_id" title="Permalink to this definition">¶</a></dt>
@@ -728,9 +789,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -774,24 +832,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.healthcare.DicomStoreIamPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">DicomStoreIamPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dicom_store_id=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.DicomStoreIamPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DicomStoreIamPolicy resource with the given unique name, props, and options.</p>
+<dd><p>Create a DicomStoreIamPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] dicom_store_id: The DICOM store ID, in the form</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{dicom_store_name}</span></code> or
+<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{dicom_store_name}</span></code>. In the second form, the provider’s
+project setting will be used as a fallback.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>dicom_store_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DICOM store ID, in the form
-<code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{dicom_store_name}</span></code> or
-<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{dicom_store_name}</span></code>. In the second form, the provider’s
-project setting will be used as a fallback.</p></li>
-<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
-a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.DicomStoreIamPolicy.dicom_store_id">
 <code class="sig-name descname">dicom_store_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.DicomStoreIamPolicy.dicom_store_id" title="Permalink to this definition">¶</a></dt>
@@ -835,9 +890,6 @@ a <code class="docutils literal notranslate"><span class="pre">organizations.get
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -881,12 +933,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.healthcare.FhirStore">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">FhirStore</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dataset=None</em>, <em class="sig-param">disable_referential_integrity=None</em>, <em class="sig-param">disable_resource_versioning=None</em>, <em class="sig-param">enable_history_import=None</em>, <em class="sig-param">enable_update_create=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_config=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a FhirStore resource with the given unique name, props, and options.</p>
+<dd><p>Create a FhirStore resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] dataset: Identifies the dataset addressed by this request. Must be in the format</p>
+<blockquote>
+<div><p>‘projects/{project}/locations/{location}/datasets/{dataset}’</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>disable_referential_integrity</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The
+default value is false, meaning that the API will enforce referential integrity and fail the requests that will result
+in inconsistent state in the FHIR store. When this field is set to true, the API will skip referential integrity check.
+Consequently, operations that rely on references, such as Patient.get$everything, will not return all the results if
+broken references exist. ** Changing this property may recreate the FHIR store (removing all data) **</p></li>
+<li><p><strong>disable_resource_versioning</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR
+store. If set to false, which is the default behavior, all write operations will cause historical versions to be
+recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set
+to true, no historical versions will be kept. The server will send back errors for attempts to read the historical
+versions. ** Changing this property may recreate the FHIR store (removing all data) **</p></li>
+<li><p><strong>enable_history_import</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow the bulk import API to accept history bundles and directly insert historical resource versions into the
+FHIR store. Importing resource histories creates resource interactions that appear to have occurred in the past, which
+clients may not want to allow. If set to false, history bundles within an import will fail with an error. ** Changing
+this property may recreate the FHIR store (removing all data) ** ** This property can be changed manually in the Google
+Cloud Healthcare admin console without recreating the FHIR store **</p></li>
+<li><p><strong>enable_update*create</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update operation to
+create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and
+attempts to Update a non-existent resource will return errors. Please treat the audit logs with appropriate levels of
+care if client-specified resource IDs contain sensitive data such as patient identifiers, those IDs will be part of the
+FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.</p>
+</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
+“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the FhirStore. ** Changing this property may recreate the FHIR store (removing all data) **</p></li>
+<li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FHIR specification version. Supported values include DSTU2, STU3 and R4. Defaults to STU3.</p></li>
 </ul>
 </dd>
 </dl>
@@ -894,9 +980,91 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.FhirStore.dataset">
+<code class="sig-name descname">dataset</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifies the dataset addressed by this request. Must be in the format
+‘projects/{project}/locations/{location}/datasets/{dataset}’</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.FhirStore.disable_referential_integrity">
+<code class="sig-name descname">disable_referential_integrity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.disable_referential_integrity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The
+default value is false, meaning that the API will enforce referential integrity and fail the requests that will result
+in inconsistent state in the FHIR store. When this field is set to true, the API will skip referential integrity check.
+Consequently, operations that rely on references, such as Patient.get$everything, will not return all the results if
+broken references exist. ** Changing this property may recreate the FHIR store (removing all data) **</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.FhirStore.disable_resource_versioning">
+<code class="sig-name descname">disable_resource_versioning</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.disable_resource_versioning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR
+store. If set to false, which is the default behavior, all write operations will cause historical versions to be
+recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set
+to true, no historical versions will be kept. The server will send back errors for attempts to read the historical
+versions. ** Changing this property may recreate the FHIR store (removing all data) **</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.FhirStore.enable_history_import">
+<code class="sig-name descname">enable_history_import</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.enable_history_import" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to allow the bulk import API to accept history bundles and directly insert historical resource versions into the
+FHIR store. Importing resource histories creates resource interactions that appear to have occurred in the past, which
+clients may not want to allow. If set to false, history bundles within an import will fail with an error. ** Changing
+this property may recreate the FHIR store (removing all data) ** ** This property can be changed manually in the Google
+Cloud Healthcare admin console without recreating the FHIR store **</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.FhirStore.enable_update_create">
+<code class="sig-name descname">enable_update_create</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.enable_update_create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update operation to
+create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and
+attempts to Update a non-existent resource will return errors. Please treat the audit logs with appropriate levels of
+care if client-specified resource IDs contain sensitive data such as patient identifiers, those IDs will be part of the
+FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.FhirStore.labels">
+<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}<em>-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}p{N}</em>-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
+“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.FhirStore.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name for the FhirStore. ** Changing this property may recreate the FHIR store (removing all data) **</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.FhirStore.notification_config">
+<code class="sig-name descname">notification_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.notification_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>A nested object resource</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.FhirStore.self_link">
+<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fully qualified name of this dataset</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.FhirStore.version">
+<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The FHIR specification version. Supported values include DSTU2, STU3 and R4. Defaults to STU3.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.healthcare.FhirStore.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dataset=None</em>, <em class="sig-param">disable_referential_integrity=None</em>, <em class="sig-param">disable_resource_versioning=None</em>, <em class="sig-param">enable_history_import=None</em>, <em class="sig-param">enable_update_create=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_config=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.get" title="Permalink to this definition">¶</a></dt>
@@ -908,6 +1076,39 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dataset</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifies the dataset addressed by this request. Must be in the format
+‘projects/{project}/locations/{location}/datasets/{dataset}’</p></li>
+<li><p><strong>disable_referential_integrity</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The
+default value is false, meaning that the API will enforce referential integrity and fail the requests that will result
+in inconsistent state in the FHIR store. When this field is set to true, the API will skip referential integrity check.
+Consequently, operations that rely on references, such as Patient.get$everything, will not return all the results if
+broken references exist. ** Changing this property may recreate the FHIR store (removing all data) **</p></li>
+<li><p><strong>disable_resource_versioning</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR
+store. If set to false, which is the default behavior, all write operations will cause historical versions to be
+recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set
+to true, no historical versions will be kept. The server will send back errors for attempts to read the historical
+versions. ** Changing this property may recreate the FHIR store (removing all data) **</p></li>
+<li><p><strong>enable_history_import</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow the bulk import API to accept history bundles and directly insert historical resource versions into the
+FHIR store. Importing resource histories creates resource interactions that appear to have occurred in the past, which
+clients may not want to allow. If set to false, history bundles within an import will fail with an error. ** Changing
+this property may recreate the FHIR store (removing all data) ** ** This property can be changed manually in the Google
+Cloud Healthcare admin console without recreating the FHIR store **</p></li>
+<li><p><strong>enable_update*create</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update operation to
+create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and
+attempts to Update a non-existent resource will return errors. Please treat the audit logs with appropriate levels of
+care if client-specified resource IDs contain sensitive data such as patient identifiers, those IDs will be part of the
+FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.</p>
+</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
+“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the FhirStore. ** Changing this property may recreate the FHIR store (removing all data) **</p></li>
+<li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
+<li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified name of this dataset</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FHIR specification version. Supported values include DSTU2, STU3 and R4. Defaults to STU3.</p></li>
 </ul>
 </dd>
 </dl>
@@ -915,9 +1116,6 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -961,20 +1159,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.healthcare.FhirStoreIamBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">FhirStoreIamBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">fhir_store_id=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStoreIamBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a FhirStoreIamBinding resource with the given unique name, props, and options.</p>
+<dd><p>Create a FhirStoreIamBinding resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] fhir_store_id: The FHIR store ID, in the form</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{fhir_store_name}</span></code> or
+<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{fhir_store_name}</span></code>. In the second form, the provider’s
+project setting will be used as a fallback.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>fhir_store_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FHIR store ID, in the form
-<code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{fhir_store_name}</span></code> or
-<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{fhir_store_name}</span></code>. In the second form, the provider’s
-project setting will be used as a fallback.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-</ul>
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
@@ -983,9 +1181,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.FhirStoreIamBinding.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStoreIamBinding.etag" title="Permalink to this definition">¶</a></dt>
@@ -1037,9 +1232,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1083,20 +1275,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.healthcare.FhirStoreIamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">FhirStoreIamMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">fhir_store_id=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStoreIamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a FhirStoreIamMember resource with the given unique name, props, and options.</p>
+<dd><p>Create a FhirStoreIamMember resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] fhir_store_id: The FHIR store ID, in the form</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{fhir_store_name}</span></code> or
+<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{fhir_store_name}</span></code>. In the second form, the provider’s
+project setting will be used as a fallback.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>fhir_store_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FHIR store ID, in the form
-<code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{fhir_store_name}</span></code> or
-<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{fhir_store_name}</span></code>. In the second form, the provider’s
-project setting will be used as a fallback.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-</ul>
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
@@ -1105,9 +1297,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.FhirStoreIamMember.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStoreIamMember.etag" title="Permalink to this definition">¶</a></dt>
@@ -1159,9 +1348,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1205,24 +1391,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.healthcare.FhirStoreIamPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">FhirStoreIamPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fhir_store_id=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStoreIamPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a FhirStoreIamPolicy resource with the given unique name, props, and options.</p>
+<dd><p>Create a FhirStoreIamPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] fhir_store_id: The FHIR store ID, in the form</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{fhir_store_name}</span></code> or
+<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{fhir_store_name}</span></code>. In the second form, the provider’s
+project setting will be used as a fallback.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>fhir_store_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FHIR store ID, in the form
-<code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{fhir_store_name}</span></code> or
-<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{fhir_store_name}</span></code>. In the second form, the provider’s
-project setting will be used as a fallback.</p></li>
-<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
-a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.FhirStoreIamPolicy.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStoreIamPolicy.etag" title="Permalink to this definition">¶</a></dt>
@@ -1266,9 +1449,6 @@ a <code class="docutils literal notranslate"><span class="pre">organizations.get
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1312,12 +1492,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.healthcare.Hl7Store">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">Hl7Store</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dataset=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_config=None</em>, <em class="sig-param">parser_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Hl7Store resource with the given unique name, props, and options.</p>
+<dd><p>Create a Hl7Store resource with the given unique name, props, and options.
+:param str resource<a href="#id9"><span class="problematic" id="id10">*</span></a>name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] dataset: Identifies the dataset addressed by this request. Must be in the format</p>
+<blockquote>
+<div><p>‘projects/{project}/locations/{location}/datasets/{dataset}’</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
+“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the Hl7V2Store. ** Changing this property may recreate the Hl7v2 store (removing all data) **</p></li>
+<li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
+<li><p><strong>parser_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
 </ul>
 </dd>
 </dl>
@@ -1330,9 +1523,55 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">allowNullHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">segmentTerminator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.Hl7Store.dataset">
+<code class="sig-name descname">dataset</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifies the dataset addressed by this request. Must be in the format
+‘projects/{project}/locations/{location}/datasets/{dataset}’</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.Hl7Store.labels">
+<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}<em>-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}p{N}</em>-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
+“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.Hl7Store.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name for the Hl7V2Store. ** Changing this property may recreate the Hl7v2 store (removing all data) **</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.Hl7Store.notification_config">
+<code class="sig-name descname">notification_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.notification_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>A nested object resource</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.Hl7Store.parser_config">
+<code class="sig-name descname">parser_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.parser_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>A nested object resource</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowNullHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentTerminator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.healthcare.Hl7Store.self_link">
+<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fully qualified name of this dataset</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.healthcare.Hl7Store.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dataset=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_config=None</em>, <em class="sig-param">parser_config=None</em>, <em class="sig-param">self_link=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.get" title="Permalink to this definition">¶</a></dt>
@@ -1341,9 +1580,22 @@ properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>resource*name</strong> (<em>str</em>) – <p>The unique name of the resulting resource.</p>
+</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dataset</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifies the dataset addressed by this request. Must be in the format
+‘projects/{project}/locations/{location}/datasets/{dataset}’</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
+“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the Hl7V2Store. ** Changing this property may recreate the Hl7v2 store (removing all data) **</p></li>
+<li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
+<li><p><strong>parser_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
+<li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified name of this dataset</p></li>
 </ul>
 </dd>
 </dl>
@@ -1356,9 +1608,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowNullHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">segmentTerminator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1402,20 +1651,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.healthcare.Hl7StoreIamBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">Hl7StoreIamBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">hl7_v2_store_id=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7StoreIamBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Hl7StoreIamBinding resource with the given unique name, props, and options.</p>
+<dd><p>Create a Hl7StoreIamBinding resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] hl7_v2_store_id: The HL7v2 store ID, in the form</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{hl7_v2_store_name}</span></code> or
+<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{hl7_v2_store_name}</span></code>. In the second form, the provider’s
+project setting will be used as a fallback.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>hl7_v2_store_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The HL7v2 store ID, in the form
-<code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{hl7_v2_store_name}</span></code> or
-<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{hl7_v2_store_name}</span></code>. In the second form, the provider’s
-project setting will be used as a fallback.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-</ul>
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
@@ -1424,9 +1673,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.Hl7StoreIamBinding.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7StoreIamBinding.etag" title="Permalink to this definition">¶</a></dt>
@@ -1478,9 +1724,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1524,20 +1767,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.healthcare.Hl7StoreIamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">Hl7StoreIamMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">hl7_v2_store_id=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7StoreIamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Hl7StoreIamMember resource with the given unique name, props, and options.</p>
+<dd><p>Create a Hl7StoreIamMember resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] hl7_v2_store_id: The HL7v2 store ID, in the form</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{hl7_v2_store_name}</span></code> or
+<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{hl7_v2_store_name}</span></code>. In the second form, the provider’s
+project setting will be used as a fallback.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>hl7_v2_store_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The HL7v2 store ID, in the form
-<code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{hl7_v2_store_name}</span></code> or
-<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{hl7_v2_store_name}</span></code>. In the second form, the provider’s
-project setting will be used as a fallback.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-</ul>
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
@@ -1546,9 +1789,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.Hl7StoreIamMember.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7StoreIamMember.etag" title="Permalink to this definition">¶</a></dt>
@@ -1600,9 +1840,6 @@ project setting will be used as a fallback.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1646,24 +1883,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.healthcare.Hl7StoreIamPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">Hl7StoreIamPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">hl7_v2_store_id=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7StoreIamPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Hl7StoreIamPolicy resource with the given unique name, props, and options.</p>
+<dd><p>Create a Hl7StoreIamPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] hl7_v2_store_id: The HL7v2 store ID, in the form</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{hl7_v2_store_name}</span></code> or
+<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{hl7_v2_store_name}</span></code>. In the second form, the provider’s
+project setting will be used as a fallback.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>hl7_v2_store_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The HL7v2 store ID, in the form
-<code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{dataset_name}/{hl7_v2_store_name}</span></code> or
-<code class="docutils literal notranslate"><span class="pre">{location_name}/{dataset_name}/{hl7_v2_store_name}</span></code>. In the second form, the provider’s
-project setting will be used as a fallback.</p></li>
-<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
-a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.Hl7StoreIamPolicy.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7StoreIamPolicy.etag" title="Permalink to this definition">¶</a></dt>
@@ -1707,9 +1941,6 @@ a <code class="docutils literal notranslate"><span class="pre">organizations.get
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

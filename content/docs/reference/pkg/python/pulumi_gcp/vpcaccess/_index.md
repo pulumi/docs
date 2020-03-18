@@ -16,25 +16,76 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.vpcaccess"></span><dl class="class">
 <dt id="pulumi_gcp.vpcaccess.Connector">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.vpcaccess.</code><code class="sig-name descname">Connector</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ip_cidr_range=None</em>, <em class="sig-param">max_throughput=None</em>, <em class="sig-param">min_throughput=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.vpcaccess.Connector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Connector resource with the given unique name, props, and options.</p>
+<dd><p>Create a Connector resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] ip_cidr_range: The range of internal addresses that follows RFC 4632 notation. Example: ‘10.132.0.0/28’.
+:param pulumi.Input[float] max_throughput: Maximum throughput of the connector in Mbps, must be greater than ‘min_throughput’. Default is 1000.
+:param pulumi.Input[float] min_throughput: Minimum throughput of the connector in Mbps. Default and min is 200.
+:param pulumi.Input[str] name: The name of the resource (Max 25 characters).
+:param pulumi.Input[str] network: Name of a VPC network.
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div><p>If it is not provided, the provider project is used.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region where the VPC Access connector resides</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/vpc_access_connector.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/vpc_access_connector.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.vpcaccess.Connector.ip_cidr_range">
+<code class="sig-name descname">ip_cidr_range</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.vpcaccess.Connector.ip_cidr_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>The range of internal addresses that follows RFC 4632 notation. Example: ‘10.132.0.0/28’.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.vpcaccess.Connector.max_throughput">
+<code class="sig-name descname">max_throughput</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.vpcaccess.Connector.max_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum throughput of the connector in Mbps, must be greater than ‘min_throughput’. Default is 1000.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.vpcaccess.Connector.min_throughput">
+<code class="sig-name descname">min_throughput</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.vpcaccess.Connector.min_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum throughput of the connector in Mbps. Default and min is 200.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.vpcaccess.Connector.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.vpcaccess.Connector.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource (Max 25 characters).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.vpcaccess.Connector.network">
+<code class="sig-name descname">network</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.vpcaccess.Connector.network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of a VPC network.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.vpcaccess.Connector.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.vpcaccess.Connector.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.vpcaccess.Connector.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.vpcaccess.Connector.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Region where the VPC Access connector resides</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.vpcaccess.Connector.self_link">
+<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.vpcaccess.Connector.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fully qualified name of this VPC connector</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.vpcaccess.Connector.state">
+<code class="sig-name descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.vpcaccess.Connector.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>State of the VPC access connector.</p>
 </dd></dl>
 
 <dl class="method">
@@ -48,14 +99,19 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>ip_cidr_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The range of internal addresses that follows RFC 4632 notation. Example: ‘10.132.0.0/28’.</p></li>
+<li><p><strong>max_throughput</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum throughput of the connector in Mbps, must be greater than ‘min_throughput’. Default is 1000.</p></li>
+<li><p><strong>min_throughput</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimum throughput of the connector in Mbps. Default and min is 200.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource (Max 25 characters).</p></li>
+<li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of a VPC network.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region where the VPC Access connector resides</p></li>
+<li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified name of this VPC connector</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – State of the VPC access connector.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/vpc_access_connector.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/vpc_access_connector.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

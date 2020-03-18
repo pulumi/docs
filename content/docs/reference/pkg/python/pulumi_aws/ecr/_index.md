@@ -15,22 +15,22 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.ecr"></span><dl class="class">
 <dt id="pulumi_aws.ecr.AwaitableGetCredentialsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">AwaitableGetCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">authorization_token=None</em>, <em class="sig-param">expires_at=None</em>, <em class="sig-param">proxy_endpoint=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.AwaitableGetCredentialsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">AwaitableGetCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">authorization_token=None</em>, <em class="sig-param">expires_at=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">proxy_endpoint=None</em>, <em class="sig-param">registry_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.AwaitableGetCredentialsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ecr.AwaitableGetImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">AwaitableGetImageResult</code><span class="sig-paren">(</span><em class="sig-param">image_digest=None</em>, <em class="sig-param">image_pushed_at=None</em>, <em class="sig-param">image_size_in_bytes=None</em>, <em class="sig-param">image_tag=None</em>, <em class="sig-param">image_tags=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">repository_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.AwaitableGetImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">AwaitableGetImageResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">image_digest=None</em>, <em class="sig-param">image_pushed_at=None</em>, <em class="sig-param">image_size_in_bytes=None</em>, <em class="sig-param">image_tag=None</em>, <em class="sig-param">image_tags=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">repository_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.AwaitableGetImageResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ecr.AwaitableGetRepositoryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">AwaitableGetRepositoryResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">repository_url=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.AwaitableGetRepositoryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">AwaitableGetRepositoryResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">repository_url=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.AwaitableGetRepositoryResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ecr.GetCredentialsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">GetCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">authorization_token=None</em>, <em class="sig-param">expires_at=None</em>, <em class="sig-param">proxy_endpoint=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.GetCredentialsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">GetCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">authorization_token=None</em>, <em class="sig-param">expires_at=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">proxy_endpoint=None</em>, <em class="sig-param">registry_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.GetCredentialsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCredentials.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ecr.GetCredentialsResult.id">
@@ -42,8 +42,14 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_aws.ecr.GetImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">GetImageResult</code><span class="sig-paren">(</span><em class="sig-param">image_digest=None</em>, <em class="sig-param">image_pushed_at=None</em>, <em class="sig-param">image_size_in_bytes=None</em>, <em class="sig-param">image_tag=None</em>, <em class="sig-param">image_tags=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">repository_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.GetImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">GetImageResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">image_digest=None</em>, <em class="sig-param">image_pushed_at=None</em>, <em class="sig-param">image_size_in_bytes=None</em>, <em class="sig-param">image_tag=None</em>, <em class="sig-param">image_tags=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">repository_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.GetImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getImage.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.ecr.GetImageResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetImageResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.ecr.GetImageResult.image_pushed_at">
 <code class="sig-name descname">image_pushed_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetImageResult.image_pushed_at" title="Permalink to this definition">¶</a></dt>
@@ -62,22 +68,22 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The list of tags associated with this image.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ecr.GetImageResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetImageResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.ecr.GetRepositoryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">GetRepositoryResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">repository_url=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.GetRepositoryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">GetRepositoryResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">repository_url=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.GetRepositoryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRepository.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ecr.GetRepositoryResult.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetRepositoryResult.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Full ARN of the repository.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ecr.GetRepositoryResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetRepositoryResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -98,12 +104,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>A mapping of tags assigned to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ecr.GetRepositoryResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetRepositoryResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -113,6 +113,7 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> Only one <code class="docutils literal notranslate"><span class="pre">ecr.LifecyclePolicy</span></code> resource can be used with the same ECR repository. To apply multiple rules, they must be combined in the <code class="docutils literal notranslate"><span class="pre">policy</span></code> JSON.</p>
 <p><strong>NOTE:</strong> The AWS ECR API seems to reorder rules based on <code class="docutils literal notranslate"><span class="pre">rulePriority</span></code>. If you define multiple rules that are not sorted in ascending <code class="docutils literal notranslate"><span class="pre">rulePriority</span></code> order in the this provider code, the resource will be flagged for recreation every deployment.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_lifecycle_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_lifecycle_policy.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -123,9 +124,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_lifecycle_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_lifecycle_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ecr.LifecyclePolicy.registry_id">
 <code class="sig-name descname">registry_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.LifecyclePolicy.registry_id" title="Permalink to this definition">¶</a></dt>
@@ -154,9 +152,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_lifecycle_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_lifecycle_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -201,6 +196,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ecr.Repository">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">Repository</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">image_scanning_configuration=None</em>, <em class="sig-param">image_tag_mutability=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.Repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Container Registry Repository.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -217,9 +215,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">scanOnPush</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether images are scanned after being pushed to the repository (true) or not scanned (false).</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ecr.Repository.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.Repository.arn" title="Permalink to this definition">¶</a></dt>
@@ -291,9 +286,6 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">scanOnPush</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether images are scanned after being pushed to the repository (true) or not scanned (false).</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -339,6 +331,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">RepositoryPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">repository=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.RepositoryPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Container Registry Repository Policy.</p>
 <p>Note that currently only one policy may be applied to a repository.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository_policy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -348,9 +343,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ecr.RepositoryPolicy.registry_id">
 <code class="sig-name descname">registry_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.RepositoryPolicy.registry_id" title="Permalink to this definition">¶</a></dt>
@@ -379,9 +371,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -432,6 +421,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ecr.get_image">
 <code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">get_image</code><span class="sig-paren">(</span><em class="sig-param">image_digest=None</em>, <em class="sig-param">image_tag=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">repository_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECR Image data source allows the details of an image with a particular tag or digest to be retrieved.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecr_image.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecr_image.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -442,23 +434,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecr_image.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecr_image.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ecr.get_repository">
 <code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">get_repository</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.get_repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECR Repository data source allows the ARN, Repository URI and Registry ID to be retrieved for an ECR repository.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecr_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecr_repository.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the ECR Repository.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecr_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecr_repository.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

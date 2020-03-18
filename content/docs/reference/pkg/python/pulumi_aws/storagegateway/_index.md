@@ -24,6 +24,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages an AWS Storage Gateway cache.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The Storage Gateway API provides no method to remove a cache disk. Destroying this resource does not perform any Storage Gateway actions.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cache.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cache.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -35,9 +36,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cache.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cache.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.storagegateway.Cache.disk_id">
 <code class="sig-name descname">disk_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.Cache.disk_id" title="Permalink to this definition">¶</a></dt>
@@ -66,9 +64,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cache.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cache.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -119,6 +114,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div></blockquote>
 <blockquote>
 <div><p><strong>NOTE:</strong> These examples are referencing the <cite>``storagegateway.Cache`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html">https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html</a>&gt;`_ resource <code class="docutils literal notranslate"><span class="pre">gateway_arn</span></code> attribute to ensure this provider properly adds cache before creating the volume. If you are not using this method, you may need to declare an expicit dependency (e.g. via <code class="docutils literal notranslate"><span class="pre">depends_on</span> <span class="pre">=</span> <span class="pre">[&quot;aws_storagegateway_cache.example&quot;]</span></code>) to ensure proper ordering.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cached_iscsi_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cached_iscsi_volume.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -135,9 +131,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cached_iscsi_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cached_iscsi_volume.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.storagegateway.CachesIscsiVolume.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.CachesIscsiVolume.arn" title="Permalink to this definition">¶</a></dt>
@@ -250,9 +243,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cached_iscsi_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cached_iscsi_volume.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -299,6 +289,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an AWS Storage Gateway file, tape, or volume gateway in the provider region.</p>
 <blockquote>
 <div><p>NOTE: The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">specified</span> <span class="pre">gateway</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">connected</span></code> errors during resource creation (gateway activation), ensure your gateway instance meets the <a class="reference external" href="https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html">Storage Gateway requirements</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -325,9 +316,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password of the user who has permission to add the gateway to the Active Directory domain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user name of user who has permission to add the gateway to the Active Directory domain.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.storagegateway.Gateway.activation_key">
 <code class="sig-name descname">activation_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.Gateway.activation_key" title="Permalink to this definition">¶</a></dt>
@@ -439,9 +427,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password of the user who has permission to add the gateway to the Active Directory domain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user name of user who has permission to add the gateway to the Active Directory domain.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -504,6 +489,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.NfsFileShare">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.storagegateway.</code><code class="sig-name descname">NfsFileShare</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_lists=None</em>, <em class="sig-param">default_storage_class=None</em>, <em class="sig-param">gateway_arn=None</em>, <em class="sig-param">guess_mime_type_enabled=None</em>, <em class="sig-param">kms_encrypted=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">location_arn=None</em>, <em class="sig-param">nfs_file_share_defaults=None</em>, <em class="sig-param">object_acl=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">requester_pays=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">squash=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.NfsFileShare" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Storage Gateway NFS File Share.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -533,9 +521,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">groupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The default group ID for the file share (unless the files have another group ID specified). Defaults to <code class="docutils literal notranslate"><span class="pre">65534</span></code> (<code class="docutils literal notranslate"><span class="pre">nfsnobody</span></code>). Valid values: <code class="docutils literal notranslate"><span class="pre">0</span></code> through <code class="docutils literal notranslate"><span class="pre">4294967294</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">owner_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The default owner ID for the file share (unless the files have another owner ID specified). Defaults to <code class="docutils literal notranslate"><span class="pre">65534</span></code> (<code class="docutils literal notranslate"><span class="pre">nfsnobody</span></code>). Valid values: <code class="docutils literal notranslate"><span class="pre">0</span></code> through <code class="docutils literal notranslate"><span class="pre">4294967294</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.storagegateway.NfsFileShare.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.NfsFileShare.arn" title="Permalink to this definition">¶</a></dt>
@@ -675,9 +660,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">groupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The default group ID for the file share (unless the files have another group ID specified). Defaults to <code class="docutils literal notranslate"><span class="pre">65534</span></code> (<code class="docutils literal notranslate"><span class="pre">nfsnobody</span></code>). Valid values: <code class="docutils literal notranslate"><span class="pre">0</span></code> through <code class="docutils literal notranslate"><span class="pre">4294967294</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">owner_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The default owner ID for the file share (unless the files have another owner ID specified). Defaults to <code class="docutils literal notranslate"><span class="pre">65534</span></code> (<code class="docutils literal notranslate"><span class="pre">nfsnobody</span></code>). Valid values: <code class="docutils literal notranslate"><span class="pre">0</span></code> through <code class="docutils literal notranslate"><span class="pre">4294967294</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -722,6 +704,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.SmbFileShare">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.storagegateway.</code><code class="sig-name descname">SmbFileShare</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authentication=None</em>, <em class="sig-param">default_storage_class=None</em>, <em class="sig-param">gateway_arn=None</em>, <em class="sig-param">guess_mime_type_enabled=None</em>, <em class="sig-param">invalid_user_lists=None</em>, <em class="sig-param">kms_encrypted=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">location_arn=None</em>, <em class="sig-param">object_acl=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">requester_pays=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">valid_user_lists=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.SmbFileShare" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Storage Gateway SMB File Share.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_smb_file_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_smb_file_share.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -744,9 +729,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_smb_file_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_smb_file_share.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.storagegateway.SmbFileShare.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.SmbFileShare.arn" title="Permalink to this definition">¶</a></dt>
@@ -873,9 +855,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_smb_file_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_smb_file_share.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -922,6 +901,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an AWS Storage Gateway upload buffer.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The Storage Gateway API provides no method to remove an upload buffer disk. Destroying this resource does not perform any Storage Gateway actions.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_upload_buffer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_upload_buffer.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -933,9 +913,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_upload_buffer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_upload_buffer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.storagegateway.UploadBuffer.disk_id">
 <code class="sig-name descname">disk_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.UploadBuffer.disk_id" title="Permalink to this definition">¶</a></dt>
@@ -964,9 +941,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_upload_buffer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_upload_buffer.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1013,6 +987,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an AWS Storage Gateway working storage.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The Storage Gateway API provides no method to remove a working storage disk. Destroying this resource does not perform any Storage Gateway actions.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_working_storage.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_working_storage.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1024,9 +999,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_working_storage.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_working_storage.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.storagegateway.WorkingStorage.disk_id">
 <code class="sig-name descname">disk_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.WorkingStorage.disk_id" title="Permalink to this definition">¶</a></dt>
@@ -1055,9 +1027,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_working_storage.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_working_storage.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1102,6 +1071,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.get_local_disk">
 <code class="sig-prename descclassname">pulumi_aws.storagegateway.</code><code class="sig-name descname">get_local_disk</code><span class="sig-paren">(</span><em class="sig-param">disk_node=None</em>, <em class="sig-param">disk_path=None</em>, <em class="sig-param">gateway_arn=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.get_local_disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Storage Gateway local disk. The disk identifier is useful for adding the disk as a cache or upload buffer to a gateway.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/storagegateway_local_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/storagegateway_local_disk.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1111,9 +1083,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/storagegateway_local_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/storagegateway_local_disk.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

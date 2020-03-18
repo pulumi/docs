@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.cloudfront"></span><dl class="class">
 <dt id="pulumi_aws.cloudfront.Distribution">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudfront.</code><code class="sig-name descname">Distribution</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aliases=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">custom_error_responses=None</em>, <em class="sig-param">default_cache_behavior=None</em>, <em class="sig-param">default_root_object=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">http_version=None</em>, <em class="sig-param">is_ipv6_enabled=None</em>, <em class="sig-param">logging_config=None</em>, <em class="sig-param">ordered_cache_behaviors=None</em>, <em class="sig-param">origins=None</em>, <em class="sig-param">origin_groups=None</em>, <em class="sig-param">price_class=None</em>, <em class="sig-param">restrictions=None</em>, <em class="sig-param">retain_on_delete=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">viewer_certificate=None</em>, <em class="sig-param">wait_for_deployment=None</em>, <em class="sig-param">web_acl_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudfront.</code><code class="sig-name descname">Distribution</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aliases=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">custom_error_responses=None</em>, <em class="sig-param">default_cache_behavior=None</em>, <em class="sig-param">default_root_object=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">http_version=None</em>, <em class="sig-param">is_ipv6_enabled=None</em>, <em class="sig-param">logging_config=None</em>, <em class="sig-param">ordered_cache_behaviors=None</em>, <em class="sig-param">origin_groups=None</em>, <em class="sig-param">origins=None</em>, <em class="sig-param">price_class=None</em>, <em class="sig-param">restrictions=None</em>, <em class="sig-param">retain_on_delete=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">viewer_certificate=None</em>, <em class="sig-param">wait_for_deployment=None</em>, <em class="sig-param">web_acl_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Amazon CloudFront web distribution.</p>
 <p>For information about CloudFront distributions, see the
 [Amazon CloudFront Developer Guide][1]. For specific information about creating
@@ -26,6 +26,7 @@ CloudFront API Reference.</p>
 after creation or modification. During this time, deletes to resources will be
 blocked. If you need to delete a distribution that is enabled and you do not
 want to wait, you need to use the <code class="docutils literal notranslate"><span class="pre">retain_on_delete</span></code> flag.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_distribution.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_distribution.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -53,9 +54,9 @@ to your distribution (maximum one).</p></li>
 <li><p><strong>ordered_cache_behaviors</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
 in order of precedence. The topmost cache behavior will have precedence 0.</p></li>
-<li><p><strong>origins</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more origins for this
-distribution (multiples allowed).</p></li>
 <li><p><strong>origin_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more origin_group for this
+distribution (multiples allowed).</p></li>
+<li><p><strong>origins</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more origins for this
 distribution (multiples allowed).</p></li>
 <li><p><strong>price_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The price class for this distribution. One of
 <code class="docutils literal notranslate"><span class="pre">PriceClass_All</span></code>, <code class="docutils literal notranslate"><span class="pre">PriceClass_200</span></code>, <code class="docutils literal notranslate"><span class="pre">PriceClass_100</span></code></p></li>
@@ -335,9 +336,6 @@ specified. If you have specified <code class="docutils literal notranslate"><spa
 must be specified.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslSupportMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_distribution.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_distribution.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cloudfront.Distribution.active_trusted_signers">
 <code class="sig-name descname">active_trusted_signers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.active_trusted_signers" title="Permalink to this definition">¶</a></dt>
@@ -627,6 +625,26 @@ of <code class="docutils literal notranslate"><span class="pre">allow-all</span>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.cloudfront.Distribution.origin_groups">
+<code class="sig-name descname">origin_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.origin_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more origin_group for this
+distribution (multiples allowed).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">failoverCriteria</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The failover criteria for when to failover to the secondary origin</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of HTTP status codes for the origin group</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">originId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier of the member origin</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier of the member origin</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.cloudfront.Distribution.origins">
 <code class="sig-name descname">origins</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.origins" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more origins for this
@@ -669,26 +687,6 @@ configuration information. If a custom origin is required, use
 identity][5] to associate with the origin.</p></li>
 </ul>
 </li>
-</ul>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.cloudfront.Distribution.origin_groups">
-<code class="sig-name descname">origin_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.origin_groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more origin_group for this
-distribution (multiples allowed).</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">failoverCriteria</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The failover criteria for when to failover to the secondary origin</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">statusCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of HTTP status codes for the origin group</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">originId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier of the member origin</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">originId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier of the member origin</p></li>
 </ul>
 </dd></dl>
 
@@ -791,7 +789,7 @@ region and the credentials configuring this argument must have
 
 <dl class="method">
 <dt id="pulumi_aws.cloudfront.Distribution.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_trusted_signers=None</em>, <em class="sig-param">aliases=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">caller_reference=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">custom_error_responses=None</em>, <em class="sig-param">default_cache_behavior=None</em>, <em class="sig-param">default_root_object=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">http_version=None</em>, <em class="sig-param">in_progress_validation_batches=None</em>, <em class="sig-param">is_ipv6_enabled=None</em>, <em class="sig-param">last_modified_time=None</em>, <em class="sig-param">logging_config=None</em>, <em class="sig-param">ordered_cache_behaviors=None</em>, <em class="sig-param">origins=None</em>, <em class="sig-param">origin_groups=None</em>, <em class="sig-param">price_class=None</em>, <em class="sig-param">restrictions=None</em>, <em class="sig-param">retain_on_delete=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">viewer_certificate=None</em>, <em class="sig-param">wait_for_deployment=None</em>, <em class="sig-param">web_acl_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_trusted_signers=None</em>, <em class="sig-param">aliases=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">caller_reference=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">custom_error_responses=None</em>, <em class="sig-param">default_cache_behavior=None</em>, <em class="sig-param">default_root_object=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">http_version=None</em>, <em class="sig-param">in_progress_validation_batches=None</em>, <em class="sig-param">is_ipv6_enabled=None</em>, <em class="sig-param">last_modified_time=None</em>, <em class="sig-param">logging_config=None</em>, <em class="sig-param">ordered_cache_behaviors=None</em>, <em class="sig-param">origin_groups=None</em>, <em class="sig-param">origins=None</em>, <em class="sig-param">price_class=None</em>, <em class="sig-param">restrictions=None</em>, <em class="sig-param">retain_on_delete=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">viewer_certificate=None</em>, <em class="sig-param">wait_for_deployment=None</em>, <em class="sig-param">web_acl_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Distribution resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -837,9 +835,9 @@ to your distribution (maximum one).</p></li>
 <li><p><strong>ordered_cache_behaviors</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
 in order of precedence. The topmost cache behavior will have precedence 0.</p></li>
-<li><p><strong>origins</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more origins for this
-distribution (multiples allowed).</p></li>
 <li><p><strong>origin_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more origin_group for this
+distribution (multiples allowed).</p></li>
+<li><p><strong>origins</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more origins for this
 distribution (multiples allowed).</p></li>
 <li><p><strong>price_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The price class for this distribution. One of
 <code class="docutils literal notranslate"><span class="pre">PriceClass_All</span></code>, <code class="docutils literal notranslate"><span class="pre">PriceClass_200</span></code>, <code class="docutils literal notranslate"><span class="pre">PriceClass_100</span></code></p></li>
@@ -1122,9 +1120,6 @@ specified. If you have specified <code class="docutils literal notranslate"><spa
 must be specified.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslSupportMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_distribution.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_distribution.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1173,6 +1168,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 [Amazon CloudFront Developer Guide][1]. For more information on generating
 origin access identities, see
 [Using an Origin Access Identity to Restrict Access to Your Amazon S3 Content][2].</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_origin_access_identity.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_origin_access_identity.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1182,9 +1180,6 @@ origin access identities, see
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_origin_access_identity.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_origin_access_identity.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cloudfront.OriginAccessIdentity.caller_reference">
 <code class="sig-name descname">caller_reference</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.OriginAccessIdentity.caller_reference" title="Permalink to this definition">¶</a></dt>
@@ -1255,9 +1250,6 @@ permission to an object in Amazon S3.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_origin_access_identity.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_origin_access_identity.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1301,22 +1293,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.cloudfront.PublicKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudfront.</code><code class="sig-name descname">PublicKey</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">encoded_key=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.PublicKey" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a PublicKey resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional comment about the public key.</p></li>
-<li><p><strong>encoded_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encoded public key that you want to add to CloudFront to use with features like field-level encryption.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the public key. By default generated by this provider.</p></li>
-<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the public key. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_public_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_public_key.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a PublicKey resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] comment: An optional comment about the public key.
+:param pulumi.Input[str] encoded_key: The encoded public key that you want to add to CloudFront to use with features like field-level encryption.
+:param pulumi.Input[str] name: The name for the public key. By default generated by this provider.
+:param pulumi.Input[str] name_prefix: The name for the public key. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.cloudfront.PublicKey.caller_reference">
 <code class="sig-name descname">caller_reference</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.PublicKey.caller_reference" title="Permalink to this definition">¶</a></dt>
@@ -1373,9 +1356,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_public_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_public_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

@@ -15,17 +15,17 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.servicequotas"></span><dl class="class">
 <dt id="pulumi_aws.servicequotas.AwaitableGetServiceQuotaResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">AwaitableGetServiceQuotaResult</code><span class="sig-paren">(</span><em class="sig-param">adjustable=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">default_value=None</em>, <em class="sig-param">global_quota=None</em>, <em class="sig-param">quota_code=None</em>, <em class="sig-param">quota_name=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.AwaitableGetServiceQuotaResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">AwaitableGetServiceQuotaResult</code><span class="sig-paren">(</span><em class="sig-param">adjustable=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">default_value=None</em>, <em class="sig-param">global_quota=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">quota_code=None</em>, <em class="sig-param">quota_name=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.AwaitableGetServiceQuotaResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.servicequotas.AwaitableGetServiceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">AwaitableGetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">service_code=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.AwaitableGetServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">AwaitableGetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">service_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.AwaitableGetServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.servicequotas.GetServiceQuotaResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">GetServiceQuotaResult</code><span class="sig-paren">(</span><em class="sig-param">adjustable=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">default_value=None</em>, <em class="sig-param">global_quota=None</em>, <em class="sig-param">quota_code=None</em>, <em class="sig-param">quota_name=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.GetServiceQuotaResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">GetServiceQuotaResult</code><span class="sig-paren">(</span><em class="sig-param">adjustable=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">default_value=None</em>, <em class="sig-param">global_quota=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">quota_code=None</em>, <em class="sig-param">quota_name=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.GetServiceQuotaResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServiceQuota.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.servicequotas.GetServiceQuotaResult.adjustable">
@@ -52,6 +52,12 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.servicequotas.GetServiceQuotaResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicequotas.GetServiceQuotaResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.servicequotas.GetServiceQuotaResult.service_name">
 <code class="sig-name descname">service_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicequotas.GetServiceQuotaResult.service_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the service.</p>
@@ -63,28 +69,22 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Current value of the service quota.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.servicequotas.GetServiceQuotaResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicequotas.GetServiceQuotaResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.servicequotas.GetServiceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">GetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">service_code=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.GetServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">GetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">service_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.GetServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getService.</p>
-<dl class="attribute">
-<dt id="pulumi_aws.servicequotas.GetServiceResult.service_code">
-<code class="sig-name descname">service_code</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicequotas.GetServiceResult.service_code" title="Permalink to this definition">¶</a></dt>
-<dd><p>Code of the service.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.servicequotas.GetServiceResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicequotas.GetServiceResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.servicequotas.GetServiceResult.service_code">
+<code class="sig-name descname">service_code</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicequotas.GetServiceResult.service_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Code of the service.</p>
 </dd></dl>
 
 </dd></dl>
@@ -93,6 +93,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.servicequotas.ServiceQuota">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">ServiceQuota</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">quota_code=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.ServiceQuota" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an individual Service Quota.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/servicequotas_service_quota.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/servicequotas_service_quota.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -104,9 +107,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/servicequotas_service_quota.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/servicequotas_service_quota.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.servicequotas.ServiceQuota.adjustable">
 <code class="sig-name descname">adjustable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicequotas.ServiceQuota.adjustable" title="Permalink to this definition">¶</a></dt>
@@ -179,9 +179,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/servicequotas_service_quota.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/servicequotas_service_quota.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -226,21 +223,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.servicequotas.get_service">
 <code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param">service_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Service Quotas Service.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>service_name</strong> (<em>str</em>) – <p>Service name to lookup within Service Quotas. Available values can be found with the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html">AWS CLI service-quotas list-services command</a>.</p>
 </p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.servicequotas.get_service_quota">
 <code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">get_service_quota</code><span class="sig-paren">(</span><em class="sig-param">quota_code=None</em>, <em class="sig-param">quota_name=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.get_service_quota" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Service Quota.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service_quota.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service_quota.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -253,9 +253,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service_quota.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service_quota.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

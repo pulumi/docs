@@ -24,6 +24,7 @@ successfully deleted; this is a limitation of this provider, and will go away in
 This provider is not able to delete App Engine applications.</p>
 </dd>
 </dl>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_application.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_application.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -32,6 +33,7 @@ This provider is not able to delete App Engine applications.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>auth_domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain to authenticate users with when using App Engine’s User API.</p></li>
 <li><p><strong>feature_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A block of optional settings to configure specific App Engine features:</p></li>
+<li><p><strong>iap</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings for enabling Cloud Identity Aware Proxy</p></li>
 <li><p><strong>location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://cloud.google.com/appengine/docs/locations">location</a>
 to serve the app from.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID to create the application under.
@@ -52,9 +54,6 @@ and liveness checks.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientSecretSha256</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_application.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_application.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.appengine.Application.app_id">
 <code class="sig-name descname">app_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.Application.app_id" title="Permalink to this definition">¶</a></dt>
@@ -99,6 +98,17 @@ and liveness checks.</p></li>
 <dt id="pulumi_gcp.appengine.Application.gcr_domain">
 <code class="sig-name descname">gcr_domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.Application.gcr_domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>The GCR domain used for storing managed Docker images for this app.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.Application.iap">
+<code class="sig-name descname">iap</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.Application.iap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settings for enabling Cloud Identity Aware Proxy</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauth2ClientSecretSha256</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -157,6 +167,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>default_hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default hostname for this app.</p></li>
 <li><p><strong>feature_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A block of optional settings to configure specific App Engine features:</p></li>
 <li><p><strong>gcr_domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCR domain used for storing managed Docker images for this app.</p></li>
+<li><p><strong>iap</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings for enabling Cloud Identity Aware Proxy</p></li>
 <li><p><strong>location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://cloud.google.com/appengine/docs/locations">location</a>
 to serve the app from.</p>
 </p></li>
@@ -186,9 +197,6 @@ and liveness checks.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_application.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_application.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -232,24 +240,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.appengine.ApplicationUrlDispatchRules">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.appengine.</code><code class="sig-name descname">ApplicationUrlDispatchRules</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dispatch_rules=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.appengine.ApplicationUrlDispatchRules" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ApplicationUrlDispatchRules resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ApplicationUrlDispatchRules resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] dispatch_rules: Rules to match an HTTP request and dispatch that request to a service.</p>
 <p>The <strong>dispatch_rules</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_application_url_dispatch_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_application_url_dispatch_rules.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.ApplicationUrlDispatchRules.dispatch_rules">
+<code class="sig-name descname">dispatch_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.ApplicationUrlDispatchRules.dispatch_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rules to match an HTTP request and dispatch that request to a service.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.appengine.ApplicationUrlDispatchRules.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dispatch_rules=None</em>, <em class="sig-param">project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.appengine.ApplicationUrlDispatchRules.get" title="Permalink to this definition">¶</a></dt>
@@ -261,6 +272,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dispatch_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Rules to match an HTTP request and dispatch that request to a service.</p></li>
 </ul>
 </dd>
 </dl>
@@ -270,9 +282,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_application_url_dispatch_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_application_url_dispatch_rules.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -316,31 +325,72 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.appengine.DomainMapping">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.appengine.</code><code class="sig-name descname">DomainMapping</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">override_strategy=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">ssl_settings=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.appengine.DomainMapping" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DomainMapping resource with the given unique name, props, and options.</p>
+<dd><p>Create a DomainMapping resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] domain_name: Relative name of the domain serving the application. Example: example.com.
+:param pulumi.Input[str] override_strategy: Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div><p>If it is not provided, the provider project is used.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>ssl_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.</p>
 </dd>
 </dl>
 <p>The <strong>ssl_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pendingManagedCertificateId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslManagementType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_domain_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_domain_mapping.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.DomainMapping.domain_name">
+<code class="sig-name descname">domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.DomainMapping.domain_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relative name of the domain serving the application. Example: example.com.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.DomainMapping.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.DomainMapping.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.DomainMapping.override_strategy">
+<code class="sig-name descname">override_strategy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.DomainMapping.override_strategy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.appengine.DomainMapping.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.DomainMapping.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.DomainMapping.resource_records">
+<code class="sig-name descname">resource_records</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.DomainMapping.resource_records" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource records required to configure this domain mapping. These records must be added to the domain’s DNS
+configuration in order to serve the application via this domain mapping.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rrdata</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.DomainMapping.ssl_settings">
+<code class="sig-name descname">ssl_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.DomainMapping.ssl_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pendingManagedCertificateId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sslManagementType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -354,8 +404,14 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Relative name of the domain serving the application. Example: example.com.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.</p></li>
+<li><p><strong>override_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>resource_records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The resource records required to configure this domain mapping. These records must be added to the domain’s DNS
+configuration in order to serve the application via this domain mapping.</p></li>
+<li><p><strong>ssl_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.</p></li>
 </ul>
 </dd>
 </dl>
@@ -367,13 +423,10 @@ If it is not provided, the provider project is used.</p></li>
 </ul>
 <p>The <strong>ssl_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pendingManagedCertificateId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslManagementType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_domain_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_domain_mapping.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -417,23 +470,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.appengine.EngineSplitTraffic">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.appengine.</code><code class="sig-name descname">EngineSplitTraffic</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">migrate_traffic=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">split=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.appengine.EngineSplitTraffic" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a EngineSplitTraffic resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a EngineSplitTraffic resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] migrate_traffic: If set to true traffic will be migrated to this version.
+:param pulumi.Input[str] service: The name of the service these settings apply to.
+:param pulumi.Input[dict] split: Mapping that defines fractional HTTP traffic diversion to different versions within the service.</p>
 <p>The <strong>split</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allocations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">shardBy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_service_split_traffic.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_service_split_traffic.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.EngineSplitTraffic.migrate_traffic">
+<code class="sig-name descname">migrate_traffic</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.EngineSplitTraffic.migrate_traffic" title="Permalink to this definition">¶</a></dt>
+<dd><p>If set to true traffic will be migrated to this version.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.EngineSplitTraffic.service">
+<code class="sig-name descname">service</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.EngineSplitTraffic.service" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the service these settings apply to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.EngineSplitTraffic.split">
+<code class="sig-name descname">split</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.EngineSplitTraffic.split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mapping that defines fractional HTTP traffic diversion to different versions within the service.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allocations</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shardBy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.appengine.EngineSplitTraffic.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">migrate_traffic=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">split=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.appengine.EngineSplitTraffic.get" title="Permalink to this definition">¶</a></dt>
@@ -445,6 +514,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>migrate_traffic</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to true traffic will be migrated to this version.</p></li>
+<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the service these settings apply to.</p></li>
+<li><p><strong>split</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Mapping that defines fractional HTTP traffic diversion to different versions within the service.</p></li>
 </ul>
 </dd>
 </dl>
@@ -453,9 +525,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">allocations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">shardBy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_service_split_traffic.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_service_split_traffic.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -499,25 +568,56 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.appengine.FirewallRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.appengine.</code><code class="sig-name descname">FirewallRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">source_range=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.appengine.FirewallRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a FirewallRule resource with the given unique name, props, and options.</p>
+<dd><p>Create a FirewallRule resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] action: The action to take if this rule matches.
+:param pulumi.Input[str] description: An optional string description of this rule.
+:param pulumi.Input[float] priority: A positive integer that defines the order of rule evaluation. Rules with the lowest priority are evaluated first. A</p>
+<blockquote>
+<div><p>default rule at priority Int32.MaxValue matches all IPv4 and IPv6 traffic when no previous rule matches. Only the action
+of this rule can be modified by the user.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>source_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IP address or range, defined using CIDR notation, of requests that this rule applies to.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_firewall_rule.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.FirewallRule.action">
+<code class="sig-name descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.FirewallRule.action" title="Permalink to this definition">¶</a></dt>
+<dd><p>The action to take if this rule matches.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.FirewallRule.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.FirewallRule.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional string description of this rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.FirewallRule.priority">
+<code class="sig-name descname">priority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.FirewallRule.priority" title="Permalink to this definition">¶</a></dt>
+<dd><p>A positive integer that defines the order of rule evaluation. Rules with the lowest priority are evaluated first. A
+default rule at priority Int32.MaxValue matches all IPv4 and IPv6 traffic when no previous rule matches. Only the action
+of this rule can be modified by the user.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.appengine.FirewallRule.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.FirewallRule.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.FirewallRule.source_range">
+<code class="sig-name descname">source_range</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.FirewallRule.source_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>IP address or range, defined using CIDR notation, of requests that this rule applies to.</p>
 </dd></dl>
 
 <dl class="method">
@@ -531,14 +631,17 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The action to take if this rule matches.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional string description of this rule.</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A positive integer that defines the order of rule evaluation. Rules with the lowest priority are evaluated first. A
+default rule at priority Int32.MaxValue matches all IPv4 and IPv6 traffic when no previous rule matches. Only the action
+of this rule can be modified by the user.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>source_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IP address or range, defined using CIDR notation, of requests that this rule applies to.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_firewall_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -582,16 +685,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.appengine.StandardAppVersion">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.appengine.</code><code class="sig-name descname">StandardAppVersion</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">delete_service_on_destroy=None</em>, <em class="sig-param">deployment=None</em>, <em class="sig-param">entrypoint=None</em>, <em class="sig-param">env_variables=None</em>, <em class="sig-param">handlers=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">libraries=None</em>, <em class="sig-param">noop_on_destroy=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">runtime_api_version=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">threadsafe=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a StandardAppVersion resource with the given unique name, props, and options.</p>
+<dd><p>Create a StandardAppVersion resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] delete_service_on_destroy: If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the service will be deleted if it is the last version.<span class="raw-html-m2r"><br></span>
+:param pulumi.Input[dict] deployment: Code and application artifacts that make up this version.
+:param pulumi.Input[dict] entrypoint: The entrypoint for the application.
+:param pulumi.Input[dict] env_variables: Environment variables available to the application.
+:param pulumi.Input[list] handlers: An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the</p>
+<blockquote>
+<div><p>request and other request handlers are not attempted.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>delete_service_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the service will be deleted if it is the last version.<span class="raw-html-m2r"><br></span></p></li>
+<li><p><strong>instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Instance class that is used to run this version. Valid values are AutomaticScaling F1, F2, F4, F4_1G (Only
+AutomaticScaling is supported at the moment)</p></li>
+<li><p><strong>libraries</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration for third-party Python runtime libraries that are required by the application.</p></li>
 <li><p><strong>noop_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the application version will not be deleted.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>runtime</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Desired runtime. Example python27.</p></li>
+<li><p><strong>runtime_api_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at
+<a class="reference external" href="https://cloud.google.com/appengine/docs/standard//config/appref">https://cloud.google.com/appengine/docs/standard//config/appref</a></p></li>
+<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AppEngine service resource</p></li>
+<li><p><strong>threadsafe</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether multiple requests can be dispatched to this version at once.</p></li>
+<li><p><strong>version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Relative name of the version within the service. For example, ‘v1’. Version names can contain only lowercase letters,
+numbers, or hyphens. Reserved names,”default”, “latest”, and any name with the prefix “ah-“.</p></li>
 </ul>
 </dd>
 </dl>
@@ -644,13 +764,99 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_standard_app_version.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_standard_app_version.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.appengine.StandardAppVersion.delete_service_on_destroy">
 <code class="sig-name descname">delete_service_on_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.delete_service_on_destroy" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the service will be deleted if it is the last version.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.StandardAppVersion.deployment">
+<code class="sig-name descname">deployment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.deployment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Code and application artifacts that make up this version.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">files</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sha1Sum</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zip</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">filesCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.StandardAppVersion.entrypoint">
+<code class="sig-name descname">entrypoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.entrypoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The entrypoint for the application.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">shell</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.StandardAppVersion.env_variables">
+<code class="sig-name descname">env_variables</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.env_variables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Environment variables available to the application.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.StandardAppVersion.handlers">
+<code class="sig-name descname">handlers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.handlers" title="Permalink to this definition">¶</a></dt>
+<dd><p>An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the
+request and other request handlers are not attempted.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authFailAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">login</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectHttpResponseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">script</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">scriptPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">staticFiles</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationReadable</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mimeType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireMatchingFile</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uploadPathRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.StandardAppVersion.instance_class">
+<code class="sig-name descname">instance_class</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.instance_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instance class that is used to run this version. Valid values are AutomaticScaling F1, F2, F4, F4_1G (Only
+AutomaticScaling is supported at the moment)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.StandardAppVersion.libraries">
+<code class="sig-name descname">libraries</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.libraries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration for third-party Python runtime libraries that are required by the application.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.StandardAppVersion.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Full path to the Version resource in the API. Example, “v1”.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -666,6 +872,38 @@ If it is not provided, the provider project is used.</p></li>
 If it is not provided, the provider project is used.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.StandardAppVersion.runtime">
+<code class="sig-name descname">runtime</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.runtime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Desired runtime. Example python27.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.StandardAppVersion.runtime_api_version">
+<code class="sig-name descname">runtime_api_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.runtime_api_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at
+<a class="reference external" href="https://cloud.google.com/appengine/docs/standard//config/appref">https://cloud.google.com/appengine/docs/standard//config/appref</a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.StandardAppVersion.service">
+<code class="sig-name descname">service</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.service" title="Permalink to this definition">¶</a></dt>
+<dd><p>AppEngine service resource</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.StandardAppVersion.threadsafe">
+<code class="sig-name descname">threadsafe</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.threadsafe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether multiple requests can be dispatched to this version at once.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.appengine.StandardAppVersion.version_id">
+<code class="sig-name descname">version_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.version_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relative name of the version within the service. For example, ‘v1’. Version names can contain only lowercase letters,
+numbers, or hyphens. Reserved names,”default”, “latest”, and any name with the prefix “ah-“.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.appengine.StandardAppVersion.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">delete_service_on_destroy=None</em>, <em class="sig-param">deployment=None</em>, <em class="sig-param">entrypoint=None</em>, <em class="sig-param">env_variables=None</em>, <em class="sig-param">handlers=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">libraries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">noop_on_destroy=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">runtime_api_version=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">threadsafe=None</em>, <em class="sig-param">version_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.appengine.StandardAppVersion.get" title="Permalink to this definition">¶</a></dt>
@@ -678,9 +916,25 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>delete_service_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the service will be deleted if it is the last version.<span class="raw-html-m2r"><br></span></p></li>
+<li><p><strong>deployment</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Code and application artifacts that make up this version.</p></li>
+<li><p><strong>entrypoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The entrypoint for the application.</p></li>
+<li><p><strong>env_variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Environment variables available to the application.</p></li>
+<li><p><strong>handlers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the
+request and other request handlers are not attempted.</p></li>
+<li><p><strong>instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Instance class that is used to run this version. Valid values are AutomaticScaling F1, F2, F4, F4_1G (Only
+AutomaticScaling is supported at the moment)</p></li>
+<li><p><strong>libraries</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration for third-party Python runtime libraries that are required by the application.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Full path to the Version resource in the API. Example, “v1”.</p></li>
 <li><p><strong>noop_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the application version will not be deleted.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>runtime</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Desired runtime. Example python27.</p></li>
+<li><p><strong>runtime_api_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at
+<a class="reference external" href="https://cloud.google.com/appengine/docs/standard//config/appref">https://cloud.google.com/appengine/docs/standard//config/appref</a></p></li>
+<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AppEngine service resource</p></li>
+<li><p><strong>threadsafe</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether multiple requests can be dispatched to this version at once.</p></li>
+<li><p><strong>version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Relative name of the version within the service. For example, ‘v1’. Version names can contain only lowercase letters,
+numbers, or hyphens. Reserved names,”default”, “latest”, and any name with the prefix “ah-“.</p></li>
 </ul>
 </dd>
 </dl>
@@ -733,9 +987,6 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_standard_app_version.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_standard_app_version.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

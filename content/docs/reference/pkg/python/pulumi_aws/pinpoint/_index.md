@@ -20,6 +20,7 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the Client ID and Client Secret will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_adm_channel.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_adm_channel.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -33,9 +34,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_adm_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_adm_channel.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.pinpoint.AdmChannel.application_id">
 <code class="sig-name descname">application_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pinpoint.AdmChannel.application_id" title="Permalink to this definition">¶</a></dt>
@@ -78,9 +76,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_adm_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_adm_channel.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -128,6 +123,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_channel.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_channel.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -149,9 +145,6 @@ If your default authentication type fails, Amazon Pinpoint doesn’t attempt to 
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_channel.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.pinpoint.ApnsChannel.application_id">
 <code class="sig-name descname">application_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pinpoint.ApnsChannel.application_id" title="Permalink to this definition">¶</a></dt>
@@ -235,9 +228,6 @@ If your default authentication type fails, Amazon Pinpoint doesn’t attempt to 
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_channel.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -285,6 +275,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_sandbox_channel.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_sandbox_channel.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -306,9 +297,6 @@ If your default authentication type fails, Amazon Pinpoint doesn’t attempt to 
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_sandbox_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_sandbox_channel.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.pinpoint.ApnsSandboxChannel.application_id">
 <code class="sig-name descname">application_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pinpoint.ApnsSandboxChannel.application_id" title="Permalink to this definition">¶</a></dt>
@@ -392,9 +380,6 @@ If your default authentication type fails, Amazon Pinpoint doesn’t attempt to 
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_sandbox_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_sandbox_channel.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -442,6 +427,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_voip_channel.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_voip_channel.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -463,9 +449,6 @@ If your default authentication type fails, Amazon Pinpoint doesn’t attempt to 
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_voip_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_voip_channel.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.pinpoint.ApnsVoipChannel.application_id">
 <code class="sig-name descname">application_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pinpoint.ApnsVoipChannel.application_id" title="Permalink to this definition">¶</a></dt>
@@ -549,9 +532,6 @@ If your default authentication type fails, Amazon Pinpoint doesn’t attempt to 
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_voip_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_voip_channel.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -599,6 +579,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_voip_sandbox_channel.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_voip_sandbox_channel.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -620,9 +601,6 @@ If your default authentication type fails, Amazon Pinpoint doesn’t attempt to 
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_voip_sandbox_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_voip_sandbox_channel.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.pinpoint.ApnsVoipSandboxChannel.application_id">
 <code class="sig-name descname">application_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pinpoint.ApnsVoipSandboxChannel.application_id" title="Permalink to this definition">¶</a></dt>
@@ -706,9 +684,6 @@ If your default authentication type fails, Amazon Pinpoint doesn’t attempt to 
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_voip_sandbox_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_voip_sandbox_channel.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -753,6 +728,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.pinpoint.App">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.pinpoint.</code><code class="sig-name descname">App</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">campaign_hook=None</em>, <em class="sig-param">limits=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">quiet_time=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.App" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Pinpoint App resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_app.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_app.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -785,9 +763,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default end time for quiet time in ISO 8601 format. Required if <code class="docutils literal notranslate"><span class="pre">start</span></code> is set</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default start time for quiet time in ISO 8601 format. Required if <code class="docutils literal notranslate"><span class="pre">end</span></code> is set</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_app.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_app.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.pinpoint.App.application_id">
 <code class="sig-name descname">application_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pinpoint.App.application_id" title="Permalink to this definition">¶</a></dt>
@@ -891,9 +866,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default end time for quiet time in ISO 8601 format. Required if <code class="docutils literal notranslate"><span class="pre">start</span></code> is set</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default start time for quiet time in ISO 8601 format. Required if <code class="docutils literal notranslate"><span class="pre">end</span></code> is set</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_app.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_app.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -941,6 +913,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the Api Key and Secret Key will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_baidu_channel.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_baidu_channel.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -954,9 +927,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_baidu_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_baidu_channel.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.pinpoint.BaiduChannel.api_key">
 <code class="sig-name descname">api_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pinpoint.BaiduChannel.api_key" title="Permalink to this definition">¶</a></dt>
@@ -999,9 +969,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_baidu_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_baidu_channel.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1046,6 +1013,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.pinpoint.EmailChannel">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.pinpoint.</code><code class="sig-name descname">EmailChannel</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">from_address=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.EmailChannel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Pinpoint SMS Channel resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_email_channel.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_email_channel.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1059,9 +1029,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_email_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_email_channel.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.pinpoint.EmailChannel.application_id">
 <code class="sig-name descname">application_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pinpoint.EmailChannel.application_id" title="Permalink to this definition">¶</a></dt>
@@ -1118,9 +1085,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_email_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_email_channel.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1165,6 +1129,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.pinpoint.EventStream">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.pinpoint.</code><code class="sig-name descname">EventStream</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">destination_stream_arn=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.EventStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Pinpoint Event Stream resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_event_stream.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_event_stream.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1176,9 +1143,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_event_stream.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_event_stream.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.pinpoint.EventStream.application_id">
 <code class="sig-name descname">application_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pinpoint.EventStream.application_id" title="Permalink to this definition">¶</a></dt>
@@ -1214,9 +1178,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_event_stream.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_event_stream.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1264,6 +1225,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> Api Key argument will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_gcm_channel.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_gcm_channel.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1276,9 +1238,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_gcm_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_gcm_channel.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.pinpoint.GcmChannel.api_key">
 <code class="sig-name descname">api_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pinpoint.GcmChannel.api_key" title="Permalink to this definition">¶</a></dt>
@@ -1314,9 +1273,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_gcm_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_gcm_channel.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1361,6 +1317,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.pinpoint.SmsChannel">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.pinpoint.</code><code class="sig-name descname">SmsChannel</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">sender_id=None</em>, <em class="sig-param">short_code=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.SmsChannel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Pinpoint SMS Channel resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_sms_channel.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_sms_channel.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1373,9 +1332,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_sms_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_sms_channel.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.pinpoint.SmsChannel.application_id">
 <code class="sig-name descname">application_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pinpoint.SmsChannel.application_id" title="Permalink to this definition">¶</a></dt>
@@ -1432,9 +1388,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_sms_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_sms_channel.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

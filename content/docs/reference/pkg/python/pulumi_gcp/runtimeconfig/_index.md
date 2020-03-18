@@ -20,6 +20,9 @@ anything, please consult the source <a class="reference external" href="https://
 <a class="reference external" href="https://cloud.google.com/deployment-manager/runtime-configurator/">official documentation</a>,
 or the
 <a class="reference external" href="https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/">JSON API</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -33,9 +36,6 @@ is not provided, the provider project is used.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.runtimeconfig.Config.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Config.description" title="Permalink to this definition">¶</a></dt>
@@ -75,9 +75,6 @@ is not provided, the provider project is used.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -121,19 +118,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.runtimeconfig.ConfigIamBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.runtimeconfig.</code><code class="sig-name descname">ConfigIamBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">config=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.runtimeconfig.ConfigIamBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ConfigIamBinding resource with the given unique name, props, and options.</p>
+<dd><p>Create a ConfigIamBinding resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] config: Used to find the parent resource to bind the IAM policy to
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div><p>If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">runtimeconfig.ConfigIamBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-</ul>
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
@@ -142,9 +139,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.runtimeconfig.ConfigIamBinding.config">
 <code class="sig-name descname">config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.runtimeconfig.ConfigIamBinding.config" title="Permalink to this definition">¶</a></dt>
@@ -199,9 +193,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config_iam_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -245,19 +236,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.runtimeconfig.ConfigIamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.runtimeconfig.</code><code class="sig-name descname">ConfigIamMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">config=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.runtimeconfig.ConfigIamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ConfigIamMember resource with the given unique name, props, and options.</p>
+<dd><p>Create a ConfigIamMember resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] config: Used to find the parent resource to bind the IAM policy to
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div><p>If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<dd class="field-odd"><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">runtimeconfig.ConfigIamBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-</ul>
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
@@ -266,9 +257,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.runtimeconfig.ConfigIamMember.config">
 <code class="sig-name descname">config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.runtimeconfig.ConfigIamMember.config" title="Permalink to this definition">¶</a></dt>
@@ -323,9 +311,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config_iam_member.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -369,23 +354,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.runtimeconfig.ConfigIamPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.runtimeconfig.</code><code class="sig-name descname">ConfigIamPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">config=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.runtimeconfig.ConfigIamPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ConfigIamPolicy resource with the given unique name, props, and options.</p>
+<dd><p>Create a ConfigIamPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] config: Used to find the parent resource to bind the IAM policy to
+:param pulumi.Input[str] policy_data: The policy data generated by</p>
+<blockquote>
+<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
-a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.runtimeconfig.ConfigIamPolicy.config">
 <code class="sig-name descname">config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.runtimeconfig.ConfigIamPolicy.config" title="Permalink to this definition">¶</a></dt>
@@ -432,9 +414,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config_iam_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -482,6 +461,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/deployment-manager/runtime-configurator/">official documentation</a>,
 or the
 <a class="reference external" href="https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/">JSON API</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_variable.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_variable.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -496,9 +478,6 @@ is not provided, the provider project is used.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_variable.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_variable.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.runtimeconfig.Variable.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variable.name" title="Permalink to this definition">¶</a></dt>
@@ -551,9 +530,6 @@ Example: “2016-10-09T12:33:37.578138407Z”.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_variable.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_variable.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

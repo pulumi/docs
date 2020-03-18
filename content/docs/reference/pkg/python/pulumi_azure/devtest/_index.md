@@ -15,17 +15,17 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.devtest"></span><dl class="class">
 <dt id="pulumi_azure.devtest.AwaitableGetLabResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">AwaitableGetLabResult</code><span class="sig-paren">(</span><em class="sig-param">artifacts_storage_account_id=None</em>, <em class="sig-param">default_premium_storage_account_id=None</em>, <em class="sig-param">default_storage_account_id=None</em>, <em class="sig-param">key_vault_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">premium_data_disk_storage_account_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unique_identifier=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.AwaitableGetLabResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">AwaitableGetLabResult</code><span class="sig-paren">(</span><em class="sig-param">artifacts_storage_account_id=None</em>, <em class="sig-param">default_premium_storage_account_id=None</em>, <em class="sig-param">default_storage_account_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key_vault_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">premium_data_disk_storage_account_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unique_identifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.AwaitableGetLabResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.devtest.AwaitableGetVirtualNetworkResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">AwaitableGetVirtualNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">allowed_subnets=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">subnet_overrides=None</em>, <em class="sig-param">unique_identifier=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.AwaitableGetVirtualNetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">AwaitableGetVirtualNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">allowed_subnets=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">subnet_overrides=None</em>, <em class="sig-param">unique_identifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.AwaitableGetVirtualNetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.devtest.GetLabResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">GetLabResult</code><span class="sig-paren">(</span><em class="sig-param">artifacts_storage_account_id=None</em>, <em class="sig-param">default_premium_storage_account_id=None</em>, <em class="sig-param">default_storage_account_id=None</em>, <em class="sig-param">key_vault_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">premium_data_disk_storage_account_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unique_identifier=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.GetLabResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">GetLabResult</code><span class="sig-paren">(</span><em class="sig-param">artifacts_storage_account_id=None</em>, <em class="sig-param">default_premium_storage_account_id=None</em>, <em class="sig-param">default_storage_account_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key_vault_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">premium_data_disk_storage_account_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unique_identifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.GetLabResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLab.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.devtest.GetLabResult.artifacts_storage_account_id">
@@ -43,6 +43,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.devtest.GetLabResult.default_storage_account_id">
 <code class="sig-name descname">default_storage_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.GetLabResult.default_storage_account_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Default Storage Account for this Dev Test Lab.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.devtest.GetLabResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.GetLabResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -81,22 +87,22 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The unique immutable identifier of the Dev Test Lab.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.devtest.GetLabResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.GetLabResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.devtest.GetVirtualNetworkResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">GetVirtualNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">allowed_subnets=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">subnet_overrides=None</em>, <em class="sig-param">unique_identifier=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.GetVirtualNetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">GetVirtualNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">allowed_subnets=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">subnet_overrides=None</em>, <em class="sig-param">unique_identifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.GetVirtualNetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVirtualNetwork.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.devtest.GetVirtualNetworkResult.allowed_subnets">
 <code class="sig-name descname">allowed_subnets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.GetVirtualNetworkResult.allowed_subnets" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of subnets enabled for the virtual network as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.devtest.GetVirtualNetworkResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.GetVirtualNetworkResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -111,18 +117,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The unique immutable identifier of the virtual network.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.devtest.GetVirtualNetworkResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.GetVirtualNetworkResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.devtest.Lab">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">Lab</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Lab" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Dev Test Lab.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_lab.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_lab.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -136,9 +139,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_lab.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_lab.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.devtest.Lab.artifacts_storage_account_id">
 <code class="sig-name descname">artifacts_storage_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.Lab.artifacts_storage_account_id" title="Permalink to this definition">¶</a></dt>
@@ -230,9 +230,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_lab.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_lab.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -277,6 +274,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.LinuxVirtualMachine">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">LinuxVirtualMachine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_claim=None</em>, <em class="sig-param">disallow_public_ip_address=None</em>, <em class="sig-param">gallery_image_reference=None</em>, <em class="sig-param">inbound_nat_rules=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">lab_subnet_name=None</em>, <em class="sig-param">lab_virtual_network_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notes=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">ssh_key=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.LinuxVirtualMachine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Linux Virtual Machine within a Dev Test Lab.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_linux_virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_linux_virtual_machine.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -311,13 +311,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>inbound_nat_rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">backendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">frontendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontend_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_linux_virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_linux_virtual_machine.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.devtest.LinuxVirtualMachine.allow_claim">
 <code class="sig-name descname">allow_claim</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.LinuxVirtualMachine.allow_claim" title="Permalink to this definition">¶</a></dt>
@@ -353,8 +350,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">inbound_nat_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.LinuxVirtualMachine.inbound_nat_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">inbound_nat_rule</span></code> blocks as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">backendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">frontendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontend_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -485,13 +482,10 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>inbound_nat_rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">backendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">frontendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontend_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_linux_virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_linux_virtual_machine.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -536,6 +530,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.Policy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">evaluator_type=None</em>, <em class="sig-param">fact_data=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy_set_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">threshold=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Policy within a Dev Test Policy Set.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_policy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -553,9 +550,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.devtest.Policy.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.Policy.description" title="Permalink to this definition">¶</a></dt>
@@ -633,9 +627,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -680,6 +671,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.Schedule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">Schedule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">daily_recurrence=None</em>, <em class="sig-param">hourly_recurrence=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_settings=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">task_type=None</em>, <em class="sig-param">time_zone_id=None</em>, <em class="sig-param">weekly_recurrence=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Schedule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages automated startup and shutdown schedules for Azure Dev Test Lab.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_schedule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_schedule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -715,9 +709,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The time each day when the schedule takes effect.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">week_days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of days that this schedule takes effect . Possible values include <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Thursday</span></code>, <code class="docutils literal notranslate"><span class="pre">Friday</span></code>, <code class="docutils literal notranslate"><span class="pre">Saturday</span></code> and <code class="docutils literal notranslate"><span class="pre">Sunday</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_schedule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_schedule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.devtest.Schedule.lab_name">
 <code class="sig-name descname">lab_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.Schedule.lab_name" title="Permalink to this definition">¶</a></dt>
@@ -807,9 +798,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The time each day when the schedule takes effect.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">week_days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of days that this schedule takes effect . Possible values include <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Thursday</span></code>, <code class="docutils literal notranslate"><span class="pre">Friday</span></code>, <code class="docutils literal notranslate"><span class="pre">Saturday</span></code> and <code class="docutils literal notranslate"><span class="pre">Sunday</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_schedule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_schedule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -854,6 +842,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.VirtualNetwork">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">VirtualNetwork</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">subnet=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.VirtualNetwork" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Virtual Network within a DevTest Lab.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_virtual_network.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_virtual_network.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -874,9 +865,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">useInVirtualMachineCreation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">usePublicIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_virtual_network.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_virtual_network.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.devtest.VirtualNetwork.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.VirtualNetwork.description" title="Permalink to this definition">¶</a></dt>
@@ -951,9 +939,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">useInVirtualMachineCreation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">usePublicIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_virtual_network.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_virtual_network.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -998,6 +983,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.WindowsVirtualMachine">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">WindowsVirtualMachine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_claim=None</em>, <em class="sig-param">disallow_public_ip_address=None</em>, <em class="sig-param">gallery_image_reference=None</em>, <em class="sig-param">inbound_nat_rules=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">lab_subnet_name=None</em>, <em class="sig-param">lab_virtual_network_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notes=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.WindowsVirtualMachine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Windows Virtual Machine within a Dev Test Lab.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_windows_virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_windows_virtual_machine.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1031,13 +1019,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>inbound_nat_rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">backendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">frontendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontend_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_windows_virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_windows_virtual_machine.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.devtest.WindowsVirtualMachine.allow_claim">
 <code class="sig-name descname">allow_claim</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.WindowsVirtualMachine.allow_claim" title="Permalink to this definition">¶</a></dt>
@@ -1073,8 +1058,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">inbound_nat_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.WindowsVirtualMachine.inbound_nat_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">inbound_nat_rule</span></code> blocks as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">backendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">frontendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontend_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -1198,13 +1183,10 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>inbound_nat_rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">backendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">frontendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontend_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_windows_virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_windows_virtual_machine.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1249,6 +1231,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.get_lab">
 <code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">get_lab</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.get_lab" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Dev Test Lab.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dev_test_lab.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dev_test_lab.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1257,15 +1242,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dev_test_lab.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dev_test_lab.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.devtest.get_virtual_network">
 <code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">get_virtual_network</code><span class="sig-paren">(</span><em class="sig-param">lab_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.get_virtual_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Dev Test Lab Virtual Network.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dev_test_virtual_network.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dev_test_virtual_network.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1275,9 +1260,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dev_test_virtual_network.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dev_test_virtual_network.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

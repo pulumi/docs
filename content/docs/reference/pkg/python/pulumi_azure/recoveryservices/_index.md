@@ -15,13 +15,19 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.recoveryservices"></span><dl class="class">
 <dt id="pulumi_azure.recoveryservices.AwaitableGetVaultResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.recoveryservices.</code><code class="sig-name descname">AwaitableGetVaultResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.AwaitableGetVaultResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.recoveryservices.</code><code class="sig-name descname">AwaitableGetVaultResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.AwaitableGetVaultResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.recoveryservices.GetVaultResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.recoveryservices.</code><code class="sig-name descname">GetVaultResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.GetVaultResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.recoveryservices.</code><code class="sig-name descname">GetVaultResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.GetVaultResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVault.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.recoveryservices.GetVaultResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.GetVaultResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azure.recoveryservices.GetVaultResult.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.GetVaultResult.location" title="Permalink to this definition">¶</a></dt>
@@ -40,18 +46,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>A mapping of tags assigned to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_azure.recoveryservices.GetVaultResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.GetVaultResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.recoveryservices.Vault">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.recoveryservices.</code><code class="sig-name descname">Vault</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">soft_delete_enabled=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.Vault" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Recovery Services Vault.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_vault.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_vault.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -66,9 +69,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_vault.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_vault.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.recoveryservices.Vault.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.Vault.location" title="Permalink to this definition">¶</a></dt>
@@ -125,9 +125,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_vault.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_vault.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -172,6 +169,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.recoveryservices.get_vault">
 <code class="sig-prename descclassname">pulumi_azure.recoveryservices.</code><code class="sig-name descname">get_vault</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.get_vault" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Recovery Services Vault.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/recovery_services_vault.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/recovery_services_vault.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -180,9 +180,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/recovery_services_vault.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/recovery_services_vault.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>
