@@ -56,6 +56,7 @@ const computeInstance = new gcp.compute.Instance("instance", {
 exports.instanceName = computeInstance.name;
 exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessConfigs[0].natIp);
 ```
+
 This is the configuration script.
 
 ```bash
@@ -63,6 +64,7 @@ This is the configuration script.
 echo "Hello, World!" > index.html
 nohup python -m SimpleHTTPServer 80 &
 ```
+
 When the virtual machine is created, it reads a configuration file that creates a webserver. This a basic example, but it shows how to configure virtual machines programmatically, which is useful for scaling horizontally.
 
 ## Serverless
@@ -205,7 +207,6 @@ export interface ServiceDeploymentArgs {
 ```
 
 The main program deploys an instance of Redis and the guestbook application using containers pulled from the Google Container Registry.
-
 
 ```ts
 import * as pulumi from "@pulumi/pulumi";
