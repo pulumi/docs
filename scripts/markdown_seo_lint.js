@@ -96,7 +96,7 @@ function searchForMarkdown(paths, result) {
     // If the path is a directory we want to add the contents of the directory
     // to the list.
     if (isDirectory) {
-        const contents = fs.readdirSync(fullPath).map(function(file) {
+        const contents = fs.readdirSync(fullPath).map(function (file) {
             return fullPath + "/" + file;
         });
         paths[0] = contents;
@@ -104,8 +104,8 @@ function searchForMarkdown(paths, result) {
         // Flatten the array.
         const newPaths = [].concat.apply([], paths);
         return searchForMarkdown(newPaths, result);
-    // Else check if the file suffix is a markdown
-    // and add it the resulting file list.
+        // Else check if the file suffix is a markdown
+        // and add it the resulting file list.
     }
     if (fileSuffix === "md") {
         try {
@@ -136,7 +136,7 @@ function searchForMarkdown(paths, result) {
                 };
                 result.files.push(fullPath);
             }
-        } catch(e) {
+        } catch (e) {
             // Include the error message in the front matter error object
             // so we can display it to the user.
             result.frontMatter[fullPath] = {
@@ -162,7 +162,7 @@ function searchForMarkdown(paths, result) {
  */
 function getMarkdownFiles(parentPath) {
     const fullParentPath = path.resolve(__dirname, parentPath)
-    const dirs = fs.readdirSync(fullParentPath).map(function(dir) {
+    const dirs = fs.readdirSync(fullParentPath).map(function (dir) {
         return path.join(parentPath, dir);
     });
 
@@ -183,7 +183,7 @@ function groupLintErrorOutput(result) {
 
     // Map over the key array so we can combine front matter errors
     // with the markdown lint errors.
-    const combinedErrors = keys.map(function(key) {
+    const combinedErrors = keys.map(function (key) {
         // Get the lint and front matter errors.
         const lintErrors = result[key];
         const frontMatterErrors = filesToLint.frontMatter[key];
@@ -217,7 +217,7 @@ function groupLintErrorOutput(result) {
     });
 
     // Filter out all null values from the combined result array.
-    const filteredErrors = combinedErrors.filter(function(err) {
+    const filteredErrors = combinedErrors.filter(function (err) {
         return err !== null;
     });
     return filteredErrors;
@@ -271,11 +271,11 @@ const result = markdownlint.sync(opts);
 const errors = groupLintErrorOutput(result);
 
 // Get the total number of errors.
-const errorsArray = errors.map(function(err) { return err.errors });
+const errorsArray = errors.map(function (err) { return err.errors });
 const errorsCount = [].concat.apply([], errorsArray).length;
 
 // Create the error output string.
-const errorOutput = errors.map(function(err) {
+const errorOutput = errors.map(function (err) {
     let msg = err.path + ":\n";
     for (let i = 0; i < err.errors.length; i++) {
         const error = err.errors[i];

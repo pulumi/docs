@@ -43,12 +43,16 @@ generate:
 	pulumi gen-markdown ./content/docs/reference/cli
 	./scripts/mktutorial.sh
 
+.PHONY: resource_docs
+resource_docs::
+	./scripts/gen_resource_docs.sh
+
 .PHONY: build
 build:
 	@echo -e "\033[0;32mBUILD ($(HUGO_ENVIRONMENT)):\033[0m"
 	yarn lint-markdown
 	NODE_ENV=production yarn --cwd components run build
-	NODE_ENV=production hugo --minify
+	./scripts/run-hugo-build.sh
 	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
 	rm -rf ./public/docs/search-data
 
