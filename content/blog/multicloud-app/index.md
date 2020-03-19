@@ -8,9 +8,9 @@ date: "2019-08-14"
 meta_image: "multicloud.png"
 ---
 
-Kubernetes clusters from the managed offerings of AWS EKS,
-Azure AKS, and GCP GKE all vary in configuration, management, and resource
-properties. This variance creates unnecessary complexity in cluster provisioning and app
+Kubernetes clusters from the managed platforms of AWS Elastic Kubernetes Service (EKS),
+Azure Kubernetes Service (AKS), and GCP Google Kubernetes Engine (GKE) all vary in configuration, management, and resource
+properties. This variance creates unnecessary complexity in cluster provisioning and application
 deployments, as well as for CI/CD and testing.
 
 Additionally, if you wanted to deploy the *same* app across multiple clusters
@@ -75,7 +75,7 @@ much anywhere `kubectl` works, even if Pulumi was not used to create the cluster
 ## Summary
 
 As shown in the code samples, it becomes relatively easy to provision and
-manage Kubernetes clusters, as well as deploy workloads to the cluster
+manage Kubernetes clusters across multiple clouds, as well as deploy workloads to the cluster
 regardless if they are managed by a cloud provider, or self-managed.
 
 The various SDKS allow you to leverage industry standard best-practices and
@@ -89,7 +89,7 @@ operates in the various contexts.
 ## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [get started today]({{< relref "/docs/get-started" >}}). Pulumi is open source and free to
+infrastructure and Kubernetes multi-cloud capabilities through code, [get started today]({{< relref "/docs/get-started" >}}). Pulumi is open source and free to
 use.
 
 For further examples on how to use Pulumi to create Kubernetes
