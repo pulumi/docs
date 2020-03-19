@@ -279,7 +279,7 @@ recent Volume.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvolumefilter">List[get_<wbr>volume_<wbr>filter]</a></code>
+                <code><a href="#getvolumefilter">List[Get<wbr>Volume<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -293,7 +293,7 @@ several valid keys, for a full reference, check out
         </tr>
     
         <tr>
-            <td class="align-top">most_<wbr>recent</td>
+            <td class="align-top">most<wbr>Recent</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -312,7 +312,7 @@ recent Volume.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -961,7 +961,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvolumefilter">List[get_<wbr>volume_<wbr>filter]</a></code>
+                <code><a href="#getvolumefilter">List[Get<wbr>Volume<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1009,7 +1009,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">most_<wbr>recent</td>
+            <td class="align-top">most<wbr>Recent</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1050,7 +1050,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags for the resource.
  {{% /md %}}
@@ -1073,7 +1073,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>

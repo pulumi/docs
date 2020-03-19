@@ -627,7 +627,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">pending_<wbr>tasks_<wbr>count</td>
+            <td class="align-top">pending<wbr>Tasks<wbr>Count</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -640,7 +640,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">registered_<wbr>container_<wbr>instances_<wbr>count</td>
+            <td class="align-top">registered<wbr>Container<wbr>Instances<wbr>Count</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -653,7 +653,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">running_<wbr>tasks_<wbr>count</td>
+            <td class="align-top">running<wbr>Tasks<wbr>Count</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -669,7 +669,7 @@ The following output properties are available:
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#getclustersetting">List[get_<wbr>cluster_<wbr>setting]</a></code>
+                <code><a href="#getclustersetting">List[Get<wbr>Cluster<wbr>Setting]</a></code>
             </td>
             <td class="align-top">{{% md %}} The settings associated with the ECS Cluster.
  {{% /md %}}

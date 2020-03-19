@@ -348,7 +348,7 @@ Name of s3 bucket to save the results of the query execution.
             <td class="align-top">encryption_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#databaseencryptionconfiguration">Dict[database_<wbr>encryption_<wbr>configuration]</a></code>
+                <code><a href="#databaseencryptionconfiguration">Dict[Database<wbr>Encryption<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -656,7 +656,7 @@ The following output properties are available:
             <td class="align-top">encryption_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#databaseencryptionconfiguration">Dict[database_<wbr>encryption_<wbr>configuration]</a></code>
+                <code><a href="#databaseencryptionconfiguration">Dict[Database<wbr>Encryption<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
  {{% /md %}}
@@ -1029,7 +1029,7 @@ Name of s3 bucket to save the results of the query execution.
             <td class="align-top">encryption_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#databaseencryptionconfiguration">Dict[database_<wbr>encryption_<wbr>configuration]</a></code>
+                <code><a href="#databaseencryptionconfiguration">Dict[Database<wbr>Encryption<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1263,7 +1263,7 @@ Name of the database to create.
     <tbody>
     
         <tr>
-            <td class="align-top">encryption_<wbr>option</td>
+            <td class="align-top">encryption<wbr>Option</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1277,7 +1277,7 @@ Name of the database to create.
         </tr>
     
         <tr>
-            <td class="align-top">kms_<wbr>key</td>
+            <td class="align-top">kms<wbr>Key</td>
             <td class="align-top">
                 
                 <code>str</code>

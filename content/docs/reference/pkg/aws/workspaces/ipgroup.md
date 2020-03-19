@@ -358,7 +358,7 @@ The name of the IP group.
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#ipgrouprule">List[ip_<wbr>group_<wbr>rule]</a></code>
+                <code><a href="#ipgrouprule">List[Ip<wbr>Group<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -373,7 +373,7 @@ One or more pairs specifying the IP group rule (in CIDR format) from which web r
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -660,7 +660,7 @@ The following output properties are available:
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#ipgrouprule">List[ip_<wbr>group_<wbr>rule]</a></code>
+                <code><a href="#ipgrouprule">List[Ip<wbr>Group<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more pairs specifying the IP group rule (in CIDR format) from which web requests originate.
  {{% /md %}}
@@ -673,7 +673,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1031,7 +1031,7 @@ The name of the IP group.
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#ipgrouprule">List[ip_<wbr>group_<wbr>rule]</a></code>
+                <code><a href="#ipgrouprule">List[Ip<wbr>Group<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1046,7 +1046,7 @@ One or more pairs specifying the IP group rule (in CIDR format) from which web r
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

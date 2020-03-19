@@ -305,7 +305,7 @@ Specifies the unique identifier of the version of the secret that you want to re
         </tr>
     
         <tr>
-            <td class="align-top">version_<wbr>stage</td>
+            <td class="align-top">version<wbr>Stage</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -795,7 +795,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">version_<wbr>stage</td>
+            <td class="align-top">version<wbr>Stage</td>
             <td class="align-top">
                 
                 <code>str</code>

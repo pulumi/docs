@@ -509,7 +509,7 @@ The ID of the Data Catalog in which to create the connection. If none is supplie
             <td class="align-top">connection_<wbr>properties</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -584,7 +584,7 @@ The name of the connection.
             <td class="align-top">physical_<wbr>connection_<wbr>requirements</td>
             <td class="align-top">
                 
-                <code><a href="#connectionphysicalconnectionrequirements">Dict[connection_<wbr>physical_<wbr>connection_<wbr>requirements]</a></code>
+                <code><a href="#connectionphysicalconnectionrequirements">Dict[Connection<wbr>Physical<wbr>Connection<wbr>Requirements]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -979,7 +979,7 @@ The following output properties are available:
             <td class="align-top">connection_<wbr>properties</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A map of key-value pairs used as parameters for this connection.
  {{% /md %}}
@@ -1044,7 +1044,7 @@ The following output properties are available:
             <td class="align-top">physical_<wbr>connection_<wbr>requirements</td>
             <td class="align-top">
                 
-                <code><a href="#connectionphysicalconnectionrequirements">Dict[connection_<wbr>physical_<wbr>connection_<wbr>requirements]</a></code>
+                <code><a href="#connectionphysicalconnectionrequirements">Dict[Connection<wbr>Physical<wbr>Connection<wbr>Requirements]</a></code>
             </td>
             <td class="align-top">{{% md %}} A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
  {{% /md %}}
@@ -1526,7 +1526,7 @@ The ID of the Data Catalog in which to create the connection. If none is supplie
             <td class="align-top">connection_<wbr>properties</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1601,7 +1601,7 @@ The name of the connection.
             <td class="align-top">physical_<wbr>connection_<wbr>requirements</td>
             <td class="align-top">
                 
-                <code><a href="#connectionphysicalconnectionrequirements">Dict[connection_<wbr>physical_<wbr>connection_<wbr>requirements]</a></code>
+                <code><a href="#connectionphysicalconnectionrequirements">Dict[Connection<wbr>Physical<wbr>Connection<wbr>Requirements]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1871,7 +1871,7 @@ The availability zone of the connection. This field is redundant and implied by 
         </tr>
     
         <tr>
-            <td class="align-top">security_<wbr>group_<wbr>id_<wbr>lists</td>
+            <td class="align-top">security<wbr>Group<wbr>Id<wbr>Lists</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

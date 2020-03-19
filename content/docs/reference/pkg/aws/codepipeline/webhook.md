@@ -470,7 +470,7 @@ The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICA
             <td class="align-top">authentication_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webhookauthenticationconfiguration">Dict[webhook_<wbr>authentication_<wbr>configuration]</a></code>
+                <code><a href="#webhookauthenticationconfiguration">Dict[Webhook<wbr>Authentication<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -485,7 +485,7 @@ An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#webhookfilter">List[webhook_<wbr>filter]</a></code>
+                <code><a href="#webhookfilter">List[Webhook<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -515,7 +515,7 @@ The name of the webhook.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -979,7 +979,7 @@ The following output properties are available:
             <td class="align-top">authentication_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webhookauthenticationconfiguration">Dict[webhook_<wbr>authentication_<wbr>configuration]</a></code>
+                <code><a href="#webhookauthenticationconfiguration">Dict[Webhook<wbr>Authentication<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
  {{% /md %}}
@@ -992,7 +992,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#webhookfilter">List[webhook_<wbr>filter]</a></code>
+                <code><a href="#webhookfilter">List[Webhook<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more `filter` blocks. Filter blocks are documented below.
  {{% /md %}}
@@ -1018,7 +1018,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1584,7 +1584,7 @@ The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICA
             <td class="align-top">authentication_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webhookauthenticationconfiguration">Dict[webhook_<wbr>authentication_<wbr>configuration]</a></code>
+                <code><a href="#webhookauthenticationconfiguration">Dict[Webhook<wbr>Authentication<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1599,7 +1599,7 @@ An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#webhookfilter">List[webhook_<wbr>filter]</a></code>
+                <code><a href="#webhookfilter">List[Webhook<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1629,7 +1629,7 @@ The name of the webhook.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1878,7 +1878,7 @@ The CodePipeline webhook&#39;s URL. POST events to this endpoint to trigger the 
     <tbody>
     
         <tr>
-            <td class="align-top">allowed_<wbr>ip_<wbr>range</td>
+            <td class="align-top">allowed<wbr>Ip<wbr>Range</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1892,7 +1892,7 @@ The CodePipeline webhook&#39;s URL. POST events to this endpoint to trigger the 
         </tr>
     
         <tr>
-            <td class="align-top">secret_<wbr>token</td>
+            <td class="align-top">secret<wbr>Token</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2091,7 +2091,7 @@ The CodePipeline webhook&#39;s URL. POST events to this endpoint to trigger the 
     <tbody>
     
         <tr>
-            <td class="align-top">json_<wbr>path</td>
+            <td class="align-top">json<wbr>Path</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2105,7 +2105,7 @@ The CodePipeline webhook&#39;s URL. POST events to this endpoint to trigger the 
         </tr>
     
         <tr>
-            <td class="align-top">match_<wbr>equals</td>
+            <td class="align-top">match<wbr>Equals</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -314,7 +314,7 @@ The name of the thing type.
             <td class="align-top">properties</td>
             <td class="align-top">
                 
-                <code><a href="#thingtypeproperties">Dict[thing_<wbr>type_<wbr>properties]</a></code>
+                <code><a href="#thingtypeproperties">Dict[Thing<wbr>Type<wbr>Properties]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -618,7 +618,7 @@ The following output properties are available:
             <td class="align-top">properties</td>
             <td class="align-top">
                 
-                <code><a href="#thingtypeproperties">Dict[thing_<wbr>type_<wbr>properties]</a></code>
+                <code><a href="#thingtypeproperties">Dict[Thing<wbr>Type<wbr>Properties]</a></code>
             </td>
             <td class="align-top">{{% md %}} , Configuration block that can contain the following properties of the thing type:
  {{% /md %}}
@@ -995,7 +995,7 @@ The name of the thing type.
             <td class="align-top">properties</td>
             <td class="align-top">
                 
-                <code><a href="#thingtypeproperties">Dict[thing_<wbr>type_<wbr>properties]</a></code>
+                <code><a href="#thingtypeproperties">Dict[Thing<wbr>Type<wbr>Properties]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1220,7 +1220,7 @@ The description of the thing type.
         </tr>
     
         <tr>
-            <td class="align-top">searchable_<wbr>attributes</td>
+            <td class="align-top">searchable<wbr>Attributes</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

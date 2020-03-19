@@ -897,7 +897,7 @@ The Amazon Resource Name (ARN) associated of the target.
             <td class="align-top">batch_<wbr>target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetbatchtarget">Dict[event_<wbr>target_<wbr>batch_<wbr>target]</a></code>
+                <code><a href="#eventtargetbatchtarget">Dict[Event<wbr>Target<wbr>Batch<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -912,7 +912,7 @@ Parameters used when you are using the rule to invoke an Amazon Batch Job. Docum
             <td class="align-top">ecs_<wbr>target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetecstarget">Dict[event_<wbr>target_<wbr>ecs_<wbr>target]</a></code>
+                <code><a href="#eventtargetecstarget">Dict[Event<wbr>Target<wbr>Ecs<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -958,7 +958,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">input_<wbr>transformer</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetinputtransformer">Dict[event_<wbr>target_<wbr>input_<wbr>transformer]</a></code>
+                <code><a href="#eventtargetinputtransformer">Dict[Event<wbr>Target<wbr>Input<wbr>Transformer]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -973,7 +973,7 @@ Parameters used when you are providing a custom input to a target based on certa
             <td class="align-top">kinesis_<wbr>target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetkinesistarget">Dict[event_<wbr>target_<wbr>kinesis_<wbr>target]</a></code>
+                <code><a href="#eventtargetkinesistarget">Dict[Event<wbr>Target<wbr>Kinesis<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1018,7 +1018,7 @@ The name of the rule you want to add targets to.
             <td class="align-top">run_<wbr>command_<wbr>targets</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetruncommandtarget">List[event_<wbr>target_<wbr>run_<wbr>command_<wbr>target]</a></code>
+                <code><a href="#eventtargetruncommandtarget">List[Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1033,7 +1033,7 @@ Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Do
             <td class="align-top">sqs_<wbr>target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetsqstarget">Dict[event_<wbr>target_<wbr>sqs_<wbr>target]</a></code>
+                <code><a href="#eventtargetsqstarget">Dict[Event<wbr>Target<wbr>Sqs<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1641,7 +1641,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">batch_<wbr>target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetbatchtarget">Dict[event_<wbr>target_<wbr>batch_<wbr>target]</a></code>
+                <code><a href="#eventtargetbatchtarget">Dict[Event<wbr>Target<wbr>Batch<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
  {{% /md %}}
@@ -1654,7 +1654,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">ecs_<wbr>target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetecstarget">Dict[event_<wbr>target_<wbr>ecs_<wbr>target]</a></code>
+                <code><a href="#eventtargetecstarget">Dict[Event<wbr>Target<wbr>Ecs<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
  {{% /md %}}
@@ -1694,7 +1694,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">input_<wbr>transformer</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetinputtransformer">Dict[event_<wbr>target_<wbr>input_<wbr>transformer]</a></code>
+                <code><a href="#eventtargetinputtransformer">Dict[Event<wbr>Target<wbr>Input<wbr>Transformer]</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are providing a custom input to a target based on certain event data.
  {{% /md %}}
@@ -1707,7 +1707,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">kinesis_<wbr>target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetkinesistarget">Dict[event_<wbr>target_<wbr>kinesis_<wbr>target]</a></code>
+                <code><a href="#eventtargetkinesistarget">Dict[Event<wbr>Target<wbr>Kinesis<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
  {{% /md %}}
@@ -1746,7 +1746,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">run_<wbr>command_<wbr>targets</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetruncommandtarget">List[event_<wbr>target_<wbr>run_<wbr>command_<wbr>target]</a></code>
+                <code><a href="#eventtargetruncommandtarget">List[Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
  {{% /md %}}
@@ -1759,7 +1759,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">sqs_<wbr>target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetsqstarget">Dict[event_<wbr>target_<wbr>sqs_<wbr>target]</a></code>
+                <code><a href="#eventtargetsqstarget">Dict[Event<wbr>Target<wbr>Sqs<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
  {{% /md %}}
@@ -2482,7 +2482,7 @@ The Amazon Resource Name (ARN) associated of the target.
             <td class="align-top">batch_<wbr>target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetbatchtarget">Dict[event_<wbr>target_<wbr>batch_<wbr>target]</a></code>
+                <code><a href="#eventtargetbatchtarget">Dict[Event<wbr>Target<wbr>Batch<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2497,7 +2497,7 @@ Parameters used when you are using the rule to invoke an Amazon Batch Job. Docum
             <td class="align-top">ecs_<wbr>target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetecstarget">Dict[event_<wbr>target_<wbr>ecs_<wbr>target]</a></code>
+                <code><a href="#eventtargetecstarget">Dict[Event<wbr>Target<wbr>Ecs<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2543,7 +2543,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">input_<wbr>transformer</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetinputtransformer">Dict[event_<wbr>target_<wbr>input_<wbr>transformer]</a></code>
+                <code><a href="#eventtargetinputtransformer">Dict[Event<wbr>Target<wbr>Input<wbr>Transformer]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2558,7 +2558,7 @@ Parameters used when you are providing a custom input to a target based on certa
             <td class="align-top">kinesis_<wbr>target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetkinesistarget">Dict[event_<wbr>target_<wbr>kinesis_<wbr>target]</a></code>
+                <code><a href="#eventtargetkinesistarget">Dict[Event<wbr>Target<wbr>Kinesis<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2603,7 +2603,7 @@ The name of the rule you want to add targets to.
             <td class="align-top">run_<wbr>command_<wbr>targets</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetruncommandtarget">List[event_<wbr>target_<wbr>run_<wbr>command_<wbr>target]</a></code>
+                <code><a href="#eventtargetruncommandtarget">List[Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2618,7 +2618,7 @@ Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Do
             <td class="align-top">sqs_<wbr>target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetsqstarget">Dict[event_<wbr>target_<wbr>sqs_<wbr>target]</a></code>
+                <code><a href="#eventtargetsqstarget">Dict[Event<wbr>Target<wbr>Sqs<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2933,7 +2933,7 @@ The name to use for this execution of the job, if the target is an AWS Batch job
     <tbody>
     
         <tr>
-            <td class="align-top">array_<wbr>size</td>
+            <td class="align-top">array<wbr>Size</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2948,7 +2948,7 @@ The size of the array, if this is an array batch job. Valid values are integers 
         </tr>
     
         <tr>
-            <td class="align-top">job_<wbr>attempts</td>
+            <td class="align-top">job<wbr>Attempts</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2963,7 +2963,7 @@ The number of times to attempt to retry, if the job fails. Valid values are 1 to
         </tr>
     
         <tr>
-            <td class="align-top">job_<wbr>definition</td>
+            <td class="align-top">job<wbr>Definition</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2978,7 +2978,7 @@ The ARN or name of the job definition to use if the event target is an AWS Batch
         </tr>
     
         <tr>
-            <td class="align-top">job_<wbr>name</td>
+            <td class="align-top">job<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3397,7 +3397,7 @@ Specifies the launch type on which your task is running. The launch type that yo
             <td class="align-top">network_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetecstargetnetworkconfiguration">Dict[event_<wbr>target_<wbr>ecs_<wbr>target_<wbr>network_<wbr>configuration]</a></code>
+                <code><a href="#eventtargetecstargetnetworkconfiguration">Dict[Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3424,7 +3424,7 @@ Specifies the platform version for the task. Specify only the numeric portion of
         </tr>
     
         <tr>
-            <td class="align-top">task_<wbr>count</td>
+            <td class="align-top">task<wbr>Count</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3439,7 +3439,7 @@ The number of tasks to create based on the TaskDefinition. The default is 1.
         </tr>
     
         <tr>
-            <td class="align-top">task_<wbr>definition_<wbr>arn</td>
+            <td class="align-top">task<wbr>Definition<wbr>Arn</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3690,7 +3690,7 @@ The subnets associated with the task or service.
     <tbody>
     
         <tr>
-            <td class="align-top">assign_<wbr>public_<wbr>ip</td>
+            <td class="align-top">assign<wbr>Public<wbr>Ip</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -3926,10 +3926,10 @@ Structure containing the template body.
     <tbody>
     
         <tr>
-            <td class="align-top">input_<wbr>paths</td>
+            <td class="align-top">input<wbr>Paths</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3941,7 +3941,7 @@ Key value pairs specified in the form of JSONPath (for example, time = $.time)
         </tr>
     
         <tr>
-            <td class="align-top">input_<wbr>template</td>
+            <td class="align-top">input<wbr>Template</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4102,7 +4102,7 @@ The JSON path to be extracted from the event and used as the partition key.
     <tbody>
     
         <tr>
-            <td class="align-top">partition_<wbr>key_<wbr>path</td>
+            <td class="align-top">partition<wbr>Key<wbr>Path</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4484,7 +4484,7 @@ The FIFO message group ID to use as the target.
     <tbody>
     
         <tr>
-            <td class="align-top">message_<wbr>group_<wbr>id</td>
+            <td class="align-top">message<wbr>Group<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>

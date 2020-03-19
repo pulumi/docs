@@ -490,7 +490,7 @@ The DHCP options id of the desired VPC.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcfilter">List[get_<wbr>vpc_<wbr>filter]</a></code>
+                <code><a href="#getvpcfilter">List[Get<wbr>Vpc<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -536,7 +536,7 @@ Can be either `&#34;pending&#34;` or `&#34;available&#34;`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1279,10 +1279,10 @@ selected VPC. May be any of `&#34;default&#34;`, `&#34;dedicated&#34;`, or `&#34
         </tr>
     
         <tr>
-            <td class="align-top">cidr_<wbr>block_<wbr>associations</td>
+            <td class="align-top">cidr<wbr>Block<wbr>Associations</td>
             <td class="align-top">
                 
-                <code><a href="#getvpccidrblockassociation">List[get_<wbr>vpc_<wbr>cidr_<wbr>block_<wbr>association]</a></code>
+                <code><a href="#getvpccidrblockassociation">List[Get<wbr>Vpc<wbr>Cidr<wbr>Block<wbr>Association]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1344,7 +1344,7 @@ selected VPC. May be any of `&#34;default&#34;`, `&#34;dedicated&#34;`, or `&#34
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcfilter">List[get_<wbr>vpc_<wbr>filter]</a></code>
+                <code><a href="#getvpcfilter">List[Get<wbr>Vpc<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1447,7 +1447,7 @@ selected VPC. May be any of `&#34;default&#34;`, `&#34;dedicated&#34;`, or `&#34
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

@@ -398,7 +398,7 @@ A list of virtual gateways for propagation.
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#defaultroutetableroute">List[default_<wbr>route_<wbr>table_<wbr>route]</a></code>
+                <code><a href="#defaultroutetableroute">List[Default<wbr>Route<wbr>Table<wbr>Route]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -414,7 +414,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -796,7 +796,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#defaultroutetableroute">List[default_<wbr>route_<wbr>table_<wbr>route]</a></code>
+                <code><a href="#defaultroutetableroute">List[Default<wbr>Route<wbr>Table<wbr>Route]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of route objects. Their keys are documented below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -810,7 +810,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1289,7 +1289,7 @@ A list of virtual gateways for propagation.
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#defaultroutetableroute">List[default_<wbr>route_<wbr>table_<wbr>route]</a></code>
+                <code><a href="#defaultroutetableroute">List[Default<wbr>Route<wbr>Table<wbr>Route]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1305,7 +1305,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

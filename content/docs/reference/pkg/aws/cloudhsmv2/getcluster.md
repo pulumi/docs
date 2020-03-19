@@ -627,7 +627,7 @@ The number of available cluster certificates may vary depending on state of the 
             <td class="align-top">cluster_<wbr>certificates</td>
             <td class="align-top">
                 
-                <code><a href="#getclusterclustercertificates">Dict[get_<wbr>cluster_<wbr>cluster_<wbr>certificates]</a></code>
+                <code><a href="#getclusterclustercertificates">Dict[Get<wbr>Cluster<wbr>Cluster<wbr>Certificates]</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of cluster certificates.
 * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
@@ -1035,7 +1035,7 @@ The number of available cluster certificates may vary depending on state of the 
     <tbody>
     
         <tr>
-            <td class="align-top">aws_<wbr>hardware_<wbr>certificate</td>
+            <td class="align-top">aws<wbr>Hardware<wbr>Certificate</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1049,7 +1049,7 @@ The number of available cluster certificates may vary depending on state of the 
         </tr>
     
         <tr>
-            <td class="align-top">cluster_<wbr>certificate</td>
+            <td class="align-top">cluster<wbr>Certificate</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1063,7 +1063,7 @@ The number of available cluster certificates may vary depending on state of the 
         </tr>
     
         <tr>
-            <td class="align-top">cluster_<wbr>csr</td>
+            <td class="align-top">cluster<wbr>Csr</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1077,7 +1077,7 @@ The number of available cluster certificates may vary depending on state of the 
         </tr>
     
         <tr>
-            <td class="align-top">hsm_<wbr>certificate</td>
+            <td class="align-top">hsm<wbr>Certificate</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1091,7 +1091,7 @@ The number of available cluster certificates may vary depending on state of the 
         </tr>
     
         <tr>
-            <td class="align-top">manufacturer_<wbr>hardware_<wbr>certificate</td>
+            <td class="align-top">manufacturer<wbr>Hardware<wbr>Certificate</td>
             <td class="align-top">
                 
                 <code>str</code>

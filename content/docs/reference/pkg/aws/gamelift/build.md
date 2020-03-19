@@ -395,7 +395,7 @@ Operating system that the game server binaries are built to run on. e.g. `WINDOW
             <td class="align-top">storage_<wbr>location</td>
             <td class="align-top">
                 
-                <code><a href="#buildstoragelocation">Dict[build_<wbr>storage_<wbr>location]</a></code>
+                <code><a href="#buildstoragelocation">Dict[Build<wbr>Storage<wbr>Location]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -410,7 +410,7 @@ Information indicating where your game build files are stored. See below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -807,7 +807,7 @@ The following output properties are available:
             <td class="align-top">storage_<wbr>location</td>
             <td class="align-top">
                 
-                <code><a href="#buildstoragelocation">Dict[build_<wbr>storage_<wbr>location]</a></code>
+                <code><a href="#buildstoragelocation">Dict[Build<wbr>Storage<wbr>Location]</a></code>
             </td>
             <td class="align-top">{{% md %}} Information indicating where your game build files are stored. See below.
  {{% /md %}}
@@ -820,7 +820,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1300,7 +1300,7 @@ Operating system that the game server binaries are built to run on. e.g. `WINDOW
             <td class="align-top">storage_<wbr>location</td>
             <td class="align-top">
                 
-                <code><a href="#buildstoragelocation">Dict[build_<wbr>storage_<wbr>location]</a></code>
+                <code><a href="#buildstoragelocation">Dict[Build<wbr>Storage<wbr>Location]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1315,7 +1315,7 @@ Information indicating where your game build files are stored. See below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

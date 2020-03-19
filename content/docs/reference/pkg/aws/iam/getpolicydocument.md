@@ -356,7 +356,7 @@ IAM policy document version. Valid values: `2008-10-17`, `2012-10-17`. Defaults 
     <tbody>
     
         <tr>
-            <td class="align-top">override_<wbr>json</td>
+            <td class="align-top">override<wbr>Json</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -389,7 +389,7 @@ An ID for the policy document.
         </tr>
     
         <tr>
-            <td class="align-top">source_<wbr>json</td>
+            <td class="align-top">source<wbr>Json</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -410,7 +410,7 @@ json.  Statements without an `sid` cannot be overwritten.
             <td class="align-top">statements</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatement">List[get_<wbr>policy_<wbr>document_<wbr>statement]</a></code>
+                <code><a href="#getpolicydocumentstatement">List[Get<wbr>Policy<wbr>Document<wbr>Statement]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -817,7 +817,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">override_<wbr>json</td>
+            <td class="align-top">override<wbr>Json</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -841,7 +841,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">source_<wbr>json</td>
+            <td class="align-top">source<wbr>Json</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -856,7 +856,7 @@ The following output properties are available:
             <td class="align-top">statements</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatement">List[get_<wbr>policy_<wbr>document_<wbr>statement]</a></code>
+                <code><a href="#getpolicydocumentstatement">List[Get<wbr>Policy<wbr>Document<wbr>Statement]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1440,7 +1440,7 @@ or denies. For example, ``[&#34;ec2:RunInstances&#34;, &#34;s3:*&#34;]``.
             <td class="align-top">conditions</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementcondition">List[get_<wbr>policy_<wbr>document_<wbr>statement_<wbr>condition]</a></code>
+                <code><a href="#getpolicydocumentstatementcondition">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1470,7 +1470,7 @@ statement allows or denies the given actions. The default is &#34;Allow&#34;.
         </tr>
     
         <tr>
-            <td class="align-top">not_<wbr>actions</td>
+            <td class="align-top">not<wbr>Actions</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -1487,10 +1487,10 @@ listed.
         </tr>
     
         <tr>
-            <td class="align-top">not_<wbr>principals</td>
+            <td class="align-top">not<wbr>Principals</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementnotprincipal">List[get_<wbr>policy_<wbr>document_<wbr>statement_<wbr>not_<wbr>principal]</a></code>
+                <code><a href="#getpolicydocumentstatementnotprincipal">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1503,7 +1503,7 @@ the statement does *not* apply to.
         </tr>
     
         <tr>
-            <td class="align-top">not_<wbr>resources</td>
+            <td class="align-top">not<wbr>Resources</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -1523,7 +1523,7 @@ does *not* apply to. Used to apply a policy statement to all resources
             <td class="align-top">principals</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementprincipal">List[get_<wbr>policy_<wbr>document_<wbr>statement_<wbr>principal]</a></code>
+                <code><a href="#getpolicydocumentstatementprincipal">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

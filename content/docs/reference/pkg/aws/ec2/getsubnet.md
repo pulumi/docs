@@ -649,7 +649,7 @@ The cidr block of the desired subnet.
         </tr>
     
         <tr>
-            <td class="align-top">default_<wbr>for_<wbr>az</td>
+            <td class="align-top">default<wbr>For<wbr>Az</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -668,7 +668,7 @@ subnet must be the default subnet for its associated availability zone.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsubnetfilter">List[get_<wbr>subnet_<wbr>filter]</a></code>
+                <code><a href="#getsubnetfilter">List[Get<wbr>Subnet<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -728,7 +728,7 @@ The state that the desired subnet must have.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1458,7 +1458,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">default_<wbr>for_<wbr>az</td>
+            <td class="align-top">default<wbr>For<wbr>Az</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1473,7 +1473,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsubnetfilter">List[get_<wbr>subnet_<wbr>filter]</a></code>
+                <code><a href="#getsubnetfilter">List[Get<wbr>Subnet<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1558,7 +1558,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

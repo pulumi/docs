@@ -397,7 +397,7 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">endpoint_<wbr>address</td>
+            <td class="align-top">endpoint<wbr>Address</td>
             <td class="align-top">
                 
                 <code>str</code>

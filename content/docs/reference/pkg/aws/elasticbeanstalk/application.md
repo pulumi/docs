@@ -338,7 +338,7 @@ Key-value mapping of tags for the Elastic Beanstalk Application.
             <td class="align-top">appversion_<wbr>lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappversionlifecycle">Dict[application_<wbr>appversion_<wbr>lifecycle]</a></code>
+                <code><a href="#applicationappversionlifecycle">Dict[Application<wbr>Appversion<wbr>Lifecycle]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -382,7 +382,7 @@ The name of the application, must be unique within your account
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -683,7 +683,7 @@ The following output properties are available:
             <td class="align-top">appversion_<wbr>lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappversionlifecycle">Dict[application_<wbr>appversion_<wbr>lifecycle]</a></code>
+                <code><a href="#applicationappversionlifecycle">Dict[Application<wbr>Appversion<wbr>Lifecycle]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -734,7 +734,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of tags for the Elastic Beanstalk Application.
  {{% /md %}}
@@ -1108,7 +1108,7 @@ Key-value mapping of tags for the Elastic Beanstalk Application.
             <td class="align-top">appversion_<wbr>lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappversionlifecycle">Dict[application_<wbr>appversion_<wbr>lifecycle]</a></code>
+                <code><a href="#applicationappversionlifecycle">Dict[Application<wbr>Appversion<wbr>Lifecycle]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1167,7 +1167,7 @@ The name of the application, must be unique within your account
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1467,7 +1467,7 @@ The ARN of an IAM service role under which the application version is deleted.  
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>source_<wbr>from_<wbr>s3</td>
+            <td class="align-top">delete<wbr>Source<wbr>From<wbr>S3</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1482,7 +1482,7 @@ Set to `true` to delete a version&#39;s source bundle from S3 when the applicati
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>age_<wbr>in_<wbr>days</td>
+            <td class="align-top">max<wbr>Age<wbr>In<wbr>Days</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1497,7 +1497,7 @@ The number of days to retain an application version (&#39;max_age_in_days&#39; a
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>count</td>
+            <td class="align-top">max<wbr>Count</td>
             <td class="align-top">
                 
                 <code>float</code>

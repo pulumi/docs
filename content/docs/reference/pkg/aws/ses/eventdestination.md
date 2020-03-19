@@ -517,7 +517,7 @@ Send the events to an SNS Topic destination
             <td class="align-top">cloudwatch_<wbr>destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">List[event_<wbr>destination_<wbr>cloudwatch_<wbr>destination]</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">List[Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -562,7 +562,7 @@ If true, the event destination will be enabled
             <td class="align-top">kinesis_<wbr>destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">Dict[event_<wbr>destination_<wbr>kinesis_<wbr>destination]</a></code>
+                <code><a href="#eventdestinationkinesisdestination">Dict[Event<wbr>Destination<wbr>Kinesis<wbr>Destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -607,7 +607,7 @@ The name of the event destination
             <td class="align-top">sns_<wbr>destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">Dict[event_<wbr>destination_<wbr>sns_<wbr>destination]</a></code>
+                <code><a href="#eventdestinationsnsdestination">Dict[Event<wbr>Destination<wbr>Sns<wbr>Destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -989,7 +989,7 @@ The following output properties are available:
             <td class="align-top">cloudwatch_<wbr>destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">List[event_<wbr>destination_<wbr>cloudwatch_<wbr>destination]</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">List[Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} CloudWatch destination for the events
  {{% /md %}}
@@ -1028,7 +1028,7 @@ The following output properties are available:
             <td class="align-top">kinesis_<wbr>destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">Dict[event_<wbr>destination_<wbr>kinesis_<wbr>destination]</a></code>
+                <code><a href="#eventdestinationkinesisdestination">Dict[Event<wbr>Destination<wbr>Kinesis<wbr>Destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} Send the events to a kinesis firehose destination
  {{% /md %}}
@@ -1067,7 +1067,7 @@ The following output properties are available:
             <td class="align-top">sns_<wbr>destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">Dict[event_<wbr>destination_<wbr>sns_<wbr>destination]</a></code>
+                <code><a href="#eventdestinationsnsdestination">Dict[Event<wbr>Destination<wbr>Sns<wbr>Destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} Send the events to an SNS Topic destination
  {{% /md %}}
@@ -1534,7 +1534,7 @@ Send the events to an SNS Topic destination
             <td class="align-top">cloudwatch_<wbr>destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">List[event_<wbr>destination_<wbr>cloudwatch_<wbr>destination]</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">List[Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1579,7 +1579,7 @@ If true, the event destination will be enabled
             <td class="align-top">kinesis_<wbr>destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">Dict[event_<wbr>destination_<wbr>kinesis_<wbr>destination]</a></code>
+                <code><a href="#eventdestinationkinesisdestination">Dict[Event<wbr>Destination<wbr>Kinesis<wbr>Destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1624,7 +1624,7 @@ The name of the event destination
             <td class="align-top">sns_<wbr>destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">Dict[event_<wbr>destination_<wbr>sns_<wbr>destination]</a></code>
+                <code><a href="#eventdestinationsnsdestination">Dict[Event<wbr>Destination<wbr>Sns<wbr>Destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1894,7 +1894,7 @@ The default value for the event
         </tr>
     
         <tr>
-            <td class="align-top">dimension_<wbr>name</td>
+            <td class="align-top">dimension<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1909,7 +1909,7 @@ The name for the dimension
         </tr>
     
         <tr>
-            <td class="align-top">value_<wbr>source</td>
+            <td class="align-top">value<wbr>Source</td>
             <td class="align-top">
                 
                 <code>str</code>

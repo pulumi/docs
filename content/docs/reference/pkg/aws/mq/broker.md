@@ -947,7 +947,7 @@ The name of the broker.
             <td class="align-top">configuration</td>
             <td class="align-top">
                 
-                <code><a href="#brokerconfiguration">Dict[broker_<wbr>configuration]</a></code>
+                <code><a href="#brokerconfiguration">Dict[Broker<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -977,7 +977,7 @@ The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STAN
             <td class="align-top">encryption_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#brokerencryptionoptions">Dict[broker_<wbr>encryption_<wbr>options]</a></code>
+                <code><a href="#brokerencryptionoptions">Dict[Broker<wbr>Encryption<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1037,7 +1037,7 @@ The broker&#39;s instance type. e.g. `mq.t2.micro` or `mq.m4.large`
             <td class="align-top">logs</td>
             <td class="align-top">
                 
-                <code><a href="#brokerlogs">Dict[broker_<wbr>logs]</a></code>
+                <code><a href="#brokerlogs">Dict[Broker<wbr>Logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1052,7 +1052,7 @@ Logging configuration of the broker. See below.
             <td class="align-top">maintenance_<wbr>window_<wbr>start_<wbr>time</td>
             <td class="align-top">
                 
-                <code><a href="#brokermaintenancewindowstarttime">Dict[broker_<wbr>maintenance_<wbr>window_<wbr>start_<wbr>time]</a></code>
+                <code><a href="#brokermaintenancewindowstarttime">Dict[Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1112,7 +1112,7 @@ The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deploy
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1127,7 +1127,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">users</td>
             <td class="align-top">
                 
-                <code><a href="#brokeruser">List[broker_<wbr>user]</a></code>
+                <code><a href="#brokeruser">List[Broker<wbr>User]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2018,7 +2018,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">configuration</td>
             <td class="align-top">
                 
-                <code><a href="#brokerconfiguration">Dict[broker_<wbr>configuration]</a></code>
+                <code><a href="#brokerconfiguration">Dict[Broker<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration of the broker. See below.
  {{% /md %}}
@@ -2044,7 +2044,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">encryption_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#brokerencryptionoptions">Dict[broker_<wbr>encryption_<wbr>options]</a></code>
+                <code><a href="#brokerencryptionoptions">Dict[Broker<wbr>Encryption<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing encryption options. See below.
  {{% /md %}}
@@ -2096,7 +2096,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">instances</td>
             <td class="align-top">
                 
-                <code><a href="#brokerinstance">List[broker_<wbr>instance]</a></code>
+                <code><a href="#brokerinstance">List[Broker<wbr>Instance]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of information about allocated brokers (both active &amp; standby).
 * `instances.0.console_url` - The URL of the broker&#39;s [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
@@ -2117,7 +2117,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">logs</td>
             <td class="align-top">
                 
-                <code><a href="#brokerlogs">Dict[broker_<wbr>logs]</a></code>
+                <code><a href="#brokerlogs">Dict[Broker<wbr>Logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} Logging configuration of the broker. See below.
  {{% /md %}}
@@ -2130,7 +2130,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">maintenance_<wbr>window_<wbr>start_<wbr>time</td>
             <td class="align-top">
                 
-                <code><a href="#brokermaintenancewindowstarttime">Dict[broker_<wbr>maintenance_<wbr>window_<wbr>start_<wbr>time]</a></code>
+                <code><a href="#brokermaintenancewindowstarttime">Dict[Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time]</a></code>
             </td>
             <td class="align-top">{{% md %}} Maintenance window start time. See below.
  {{% /md %}}
@@ -2182,7 +2182,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2195,7 +2195,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">users</td>
             <td class="align-top">
                 
-                <code><a href="#brokeruser">List[broker_<wbr>user]</a></code>
+                <code><a href="#brokeruser">List[Broker<wbr>User]</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of all ActiveMQ usernames for the specified broker. See below.
  {{% /md %}}
@@ -3245,7 +3245,7 @@ The name of the broker.
             <td class="align-top">configuration</td>
             <td class="align-top">
                 
-                <code><a href="#brokerconfiguration">Dict[broker_<wbr>configuration]</a></code>
+                <code><a href="#brokerconfiguration">Dict[Broker<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3275,7 +3275,7 @@ The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STAN
             <td class="align-top">encryption_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#brokerencryptionoptions">Dict[broker_<wbr>encryption_<wbr>options]</a></code>
+                <code><a href="#brokerencryptionoptions">Dict[Broker<wbr>Encryption<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3335,7 +3335,7 @@ The broker&#39;s instance type. e.g. `mq.t2.micro` or `mq.m4.large`
             <td class="align-top">instances</td>
             <td class="align-top">
                 
-                <code><a href="#brokerinstance">List[broker_<wbr>instance]</a></code>
+                <code><a href="#brokerinstance">List[Broker<wbr>Instance]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3358,7 +3358,7 @@ A list of information about allocated brokers (both active &amp; standby).
             <td class="align-top">logs</td>
             <td class="align-top">
                 
-                <code><a href="#brokerlogs">Dict[broker_<wbr>logs]</a></code>
+                <code><a href="#brokerlogs">Dict[Broker<wbr>Logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3373,7 +3373,7 @@ Logging configuration of the broker. See below.
             <td class="align-top">maintenance_<wbr>window_<wbr>start_<wbr>time</td>
             <td class="align-top">
                 
-                <code><a href="#brokermaintenancewindowstarttime">Dict[broker_<wbr>maintenance_<wbr>window_<wbr>start_<wbr>time]</a></code>
+                <code><a href="#brokermaintenancewindowstarttime">Dict[Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3433,7 +3433,7 @@ The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deploy
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3448,7 +3448,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">users</td>
             <td class="align-top">
                 
-                <code><a href="#brokeruser">List[broker_<wbr>user]</a></code>
+                <code><a href="#brokeruser">List[Broker<wbr>User]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3894,7 +3894,7 @@ Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (
         </tr>
     
         <tr>
-            <td class="align-top">use_<wbr>aws_<wbr>owned_<wbr>key</td>
+            <td class="align-top">use<wbr>Aws<wbr>Owned<wbr>Key</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -4136,7 +4136,7 @@ Boolean to enable an AWS owned Key Management Service (KMS) Customer Master Key 
     <tbody>
     
         <tr>
-            <td class="align-top">console_<wbr>url</td>
+            <td class="align-top">console<wbr>Url</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4635,7 +4635,7 @@ The time zone, UTC by default, in either the Country/City format, or the UTC off
     <tbody>
     
         <tr>
-            <td class="align-top">day_<wbr>of_<wbr>week</td>
+            <td class="align-top">day<wbr>Of<wbr>Week</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4650,7 +4650,7 @@ The day of the week. e.g. `MONDAY`, `TUESDAY`, or `WEDNESDAY`
         </tr>
     
         <tr>
-            <td class="align-top">time_<wbr>of_<wbr>day</td>
+            <td class="align-top">time<wbr>Of<wbr>Day</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4665,7 +4665,7 @@ The time, in 24-hour format. e.g. `02:00`
         </tr>
     
         <tr>
-            <td class="align-top">time_<wbr>zone</td>
+            <td class="align-top">time<wbr>Zone</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4961,7 +4961,7 @@ The username of the user.
     <tbody>
     
         <tr>
-            <td class="align-top">console_<wbr>access</td>
+            <td class="align-top">console<wbr>Access</td>
             <td class="align-top">
                 
                 <code>bool</code>

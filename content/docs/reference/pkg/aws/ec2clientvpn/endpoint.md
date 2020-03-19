@@ -568,7 +568,7 @@ The transport protocol to be used by the VPN session. Default value is `udp`.
             <td class="align-top">authentication_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointauthenticationoptions">Dict[endpoint_<wbr>authentication_<wbr>options]</a></code>
+                <code><a href="#endpointauthenticationoptions">Dict[Endpoint<wbr>Authentication<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -598,7 +598,7 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
             <td class="align-top">connection_<wbr>log_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconnectionlogoptions">Dict[endpoint_<wbr>connection_<wbr>log_<wbr>options]</a></code>
+                <code><a href="#endpointconnectionlogoptions">Dict[Endpoint<wbr>Connection<wbr>Log<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -673,7 +673,7 @@ Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `fal
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1226,7 +1226,7 @@ The following output properties are available:
             <td class="align-top">authentication_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointauthenticationoptions">Dict[endpoint_<wbr>authentication_<wbr>options]</a></code>
+                <code><a href="#endpointauthenticationoptions">Dict[Endpoint<wbr>Authentication<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the authentication method to be used to authenticate clients.
  {{% /md %}}
@@ -1252,7 +1252,7 @@ The following output properties are available:
             <td class="align-top">connection_<wbr>log_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconnectionlogoptions">Dict[endpoint_<wbr>connection_<wbr>log_<wbr>options]</a></code>
+                <code><a href="#endpointconnectionlogoptions">Dict[Endpoint<wbr>Connection<wbr>Log<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the client connection logging options.
  {{% /md %}}
@@ -1343,7 +1343,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2003,7 +2003,7 @@ The transport protocol to be used by the VPN session. Default value is `udp`.
             <td class="align-top">authentication_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointauthenticationoptions">Dict[endpoint_<wbr>authentication_<wbr>options]</a></code>
+                <code><a href="#endpointauthenticationoptions">Dict[Endpoint<wbr>Authentication<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2033,7 +2033,7 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
             <td class="align-top">connection_<wbr>log_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconnectionlogoptions">Dict[endpoint_<wbr>connection_<wbr>log_<wbr>options]</a></code>
+                <code><a href="#endpointconnectionlogoptions">Dict[Endpoint<wbr>Connection<wbr>Log<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2138,7 +2138,7 @@ The current state of the Client VPN endpoint.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2423,7 +2423,7 @@ The ID of the Active Directory to be used for authentication if type is `directo
         </tr>
     
         <tr>
-            <td class="align-top">root_<wbr>certificate_<wbr>chain_<wbr>arn</td>
+            <td class="align-top">root<wbr>Certificate<wbr>Chain<wbr>Arn</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2689,7 +2689,7 @@ Indicates whether connection logging is enabled.
     <tbody>
     
         <tr>
-            <td class="align-top">cloudwatch_<wbr>log_<wbr>group</td>
+            <td class="align-top">cloudwatch<wbr>Log<wbr>Group</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2704,7 +2704,7 @@ The name of the CloudWatch Logs log group.
         </tr>
     
         <tr>
-            <td class="align-top">cloudwatch_<wbr>log_<wbr>stream</td>
+            <td class="align-top">cloudwatch<wbr>Log<wbr>Stream</td>
             <td class="align-top">
                 
                 <code>str</code>

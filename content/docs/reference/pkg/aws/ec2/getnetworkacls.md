@@ -298,7 +298,7 @@ The VPC ID that you want to filter from.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkaclsfilter">List[get_<wbr>network_<wbr>acls_<wbr>filter]</a></code>
+                <code><a href="#getnetworkaclsfilter">List[Get<wbr>Network<wbr>Acls<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -313,7 +313,7 @@ Custom filter block as described below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -625,7 +625,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkaclsfilter">List[get_<wbr>network_<wbr>acls_<wbr>filter]</a></code>
+                <code><a href="#getnetworkaclsfilter">List[Get<wbr>Network<wbr>Acls<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -663,7 +663,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

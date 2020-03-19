@@ -1069,7 +1069,7 @@ The access key for API operations. You can retrieve this from the &#39;Security 
             <td class="align-top">assume_<wbr>role</td>
             <td class="align-top">
                 
-                <code><a href="#providerassumerole">Dict[provider_<wbr>assume_<wbr>role]</a></code>
+                <code><a href="#providerassumerole">Dict[Provider<wbr>Assume<wbr>Role]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1083,7 +1083,7 @@ The access key for API operations. You can retrieve this from the &#39;Security 
             <td class="align-top">endpoints</td>
             <td class="align-top">
                 
-                <code><a href="#providerendpoint">List[provider_<wbr>endpoint]</a></code>
+                <code><a href="#providerendpoint">List[Provider<wbr>Endpoint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1616,7 +1616,7 @@ session token. A session token is only required if you are using temporary secur
     <tbody>
     
         <tr>
-            <td class="align-top">external_<wbr>id</td>
+            <td class="align-top">external<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8423,7 +8423,7 @@ session token. A session token is only required if you are using temporary secur
         </tr>
     
         <tr>
-            <td class="align-top">kinesis_<wbr>analytics</td>
+            <td class="align-top">kinesis<wbr>Analytics</td>
             <td class="align-top">
                 
                 <code>str</code>

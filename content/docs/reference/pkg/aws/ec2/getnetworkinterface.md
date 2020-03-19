@@ -259,7 +259,7 @@ The identifier for the network interface.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkinterfacefilter">List[get_<wbr>network_<wbr>interface_<wbr>filter]</a></code>
+                <code><a href="#getnetworkinterfacefilter">List[Get<wbr>Network<wbr>Interface<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -289,7 +289,7 @@ The identifier for the network interface.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1091,7 +1091,7 @@ The following output properties are available:
             <td class="align-top">associations</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkinterfaceassociation">List[get_<wbr>network_<wbr>interface_<wbr>association]</a></code>
+                <code><a href="#getnetworkinterfaceassociation">List[Get<wbr>Network<wbr>Interface<wbr>Association]</a></code>
             </td>
             <td class="align-top">{{% md %}} The association information for an Elastic IP address (IPv4) associated with the network interface. See supported fields below.
  {{% /md %}}
@@ -1104,7 +1104,7 @@ The following output properties are available:
             <td class="align-top">attachments</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkinterfaceattachment">List[get_<wbr>network_<wbr>interface_<wbr>attachment]</a></code>
+                <code><a href="#getnetworkinterfaceattachment">List[Get<wbr>Network<wbr>Interface<wbr>Attachment]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1142,7 +1142,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkinterfacefilter">List[get_<wbr>network_<wbr>interface_<wbr>filter]</a></code>
+                <code><a href="#getnetworkinterfacefilter">List[Get<wbr>Network<wbr>Interface<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1163,7 +1163,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">interface_<wbr>type</td>
+            <td class="align-top">interface<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1254,7 +1254,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">requester_<wbr>id</td>
+            <td class="align-top">requester<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1296,7 +1296,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Any tags assigned to the network interface.
  {{% /md %}}
@@ -1680,7 +1680,7 @@ The association ID.
         </tr>
     
         <tr>
-            <td class="align-top">ip_<wbr>owner_<wbr>id</td>
+            <td class="align-top">ip<wbr>Owner<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1695,7 +1695,7 @@ The ID of the Elastic IP address owner.
         </tr>
     
         <tr>
-            <td class="align-top">public_<wbr>dns_<wbr>name</td>
+            <td class="align-top">public<wbr>Dns<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>

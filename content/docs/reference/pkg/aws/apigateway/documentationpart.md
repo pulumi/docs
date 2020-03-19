@@ -293,7 +293,7 @@ The ID of the associated Rest API
             <td class="align-top">location</td>
             <td class="align-top">
                 
-                <code><a href="#documentationpartlocation">Dict[documentation_<wbr>part_<wbr>location]</a></code>
+                <code><a href="#documentationpartlocation">Dict[Documentation<wbr>Part<wbr>Location]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -549,7 +549,7 @@ The following output properties are available:
             <td class="align-top">location</td>
             <td class="align-top">
                 
-                <code><a href="#documentationpartlocation">Dict[documentation_<wbr>part_<wbr>location]</a></code>
+                <code><a href="#documentationpartlocation">Dict[Documentation<wbr>Part<wbr>Location]</a></code>
             </td>
             <td class="align-top">{{% md %}} The location of the targeted API entity of the to-be-created documentation part. See below.
  {{% /md %}}
@@ -862,7 +862,7 @@ The ID of the associated Rest API
             <td class="align-top">location</td>
             <td class="align-top">
                 
-                <code><a href="#documentationpartlocation">Dict[documentation_<wbr>part_<wbr>location]</a></code>
+                <code><a href="#documentationpartlocation">Dict[Documentation<wbr>Part<wbr>Location]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

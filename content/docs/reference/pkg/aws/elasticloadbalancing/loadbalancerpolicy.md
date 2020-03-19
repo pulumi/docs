@@ -417,7 +417,7 @@ The load balancer on which the policy is defined.
             <td class="align-top">policy_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerpolicypolicyattribute">List[load_<wbr>balancer_<wbr>policy_<wbr>policy_<wbr>attribute]</a></code>
+                <code><a href="#loadbalancerpolicypolicyattribute">List[Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -725,7 +725,7 @@ The following output properties are available:
             <td class="align-top">policy_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerpolicypolicyattribute">List[load_<wbr>balancer_<wbr>policy_<wbr>policy_<wbr>attribute]</a></code>
+                <code><a href="#loadbalancerpolicypolicyattribute">List[Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute]</a></code>
             </td>
             <td class="align-top">{{% md %}} Policy attribute to apply to the policy.
  {{% /md %}}
@@ -1098,7 +1098,7 @@ The load balancer on which the policy is defined.
             <td class="align-top">policy_<wbr>attributes</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerpolicypolicyattribute">List[load_<wbr>balancer_<wbr>policy_<wbr>policy_<wbr>attribute]</a></code>
+                <code><a href="#loadbalancerpolicypolicyattribute">List[Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

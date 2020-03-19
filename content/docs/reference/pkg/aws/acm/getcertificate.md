@@ -374,7 +374,7 @@ The domain of the certificate to look up. If no certificate is found with this n
         </tr>
     
         <tr>
-            <td class="align-top">key_<wbr>types</td>
+            <td class="align-top">key<wbr>Types</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -389,7 +389,7 @@ A list of key algorithms to filter certificates. By default, ACM does not return
         </tr>
     
         <tr>
-            <td class="align-top">most_<wbr>recent</td>
+            <td class="align-top">most<wbr>Recent</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -827,7 +827,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">key_<wbr>types</td>
+            <td class="align-top">key<wbr>Types</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -839,7 +839,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">most_<wbr>recent</td>
+            <td class="align-top">most<wbr>Recent</td>
             <td class="align-top">
                 
                 <code>bool</code>

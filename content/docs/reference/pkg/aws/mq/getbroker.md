@@ -305,7 +305,7 @@ The unique name of the mq broker.
     <tbody>
     
         <tr>
-            <td class="align-top">broker_<wbr>id</td>
+            <td class="align-top">broker<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -338,7 +338,7 @@ The unique name of the mq broker.
             <td class="align-top">logs</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerlogs">Dict[get_<wbr>broker_<wbr>logs]</a></code>
+                <code><a href="#getbrokerlogs">Dict[Get<wbr>Broker<wbr>Logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -352,7 +352,7 @@ The unique name of the mq broker.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1169,7 +1169,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">broker_<wbr>id</td>
+            <td class="align-top">broker<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1196,7 +1196,7 @@ The following output properties are available:
             <td class="align-top">configuration</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerconfiguration">Dict[get_<wbr>broker_<wbr>configuration]</a></code>
+                <code><a href="#getbrokerconfiguration">Dict[Get<wbr>Broker<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1220,7 +1220,7 @@ The following output properties are available:
             <td class="align-top">encryption_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerencryptionoption">List[get_<wbr>broker_<wbr>encryption_<wbr>option]</a></code>
+                <code><a href="#getbrokerencryptionoption">List[Get<wbr>Broker<wbr>Encryption<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1281,7 +1281,7 @@ The following output properties are available:
             <td class="align-top">instances</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerinstance">List[get_<wbr>broker_<wbr>instance]</a></code>
+                <code><a href="#getbrokerinstance">List[Get<wbr>Broker<wbr>Instance]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1293,7 +1293,7 @@ The following output properties are available:
             <td class="align-top">logs</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerlogs">Dict[get_<wbr>broker_<wbr>logs]</a></code>
+                <code><a href="#getbrokerlogs">Dict[Get<wbr>Broker<wbr>Logs]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1305,7 +1305,7 @@ The following output properties are available:
             <td class="align-top">maintenance_<wbr>window_<wbr>start_<wbr>time</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokermaintenancewindowstarttime">Dict[get_<wbr>broker_<wbr>maintenance_<wbr>window_<wbr>start_<wbr>time]</a></code>
+                <code><a href="#getbrokermaintenancewindowstarttime">Dict[Get<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1353,7 +1353,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1365,7 +1365,7 @@ The following output properties are available:
             <td class="align-top">users</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokeruser">List[get_<wbr>broker_<wbr>user]</a></code>
+                <code><a href="#getbrokeruser">List[Get<wbr>Broker<wbr>User]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1791,7 +1791,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">use_<wbr>aws_<wbr>owned_<wbr>key</td>
+            <td class="align-top">use<wbr>Aws<wbr>Owned<wbr>Key</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -2032,7 +2032,7 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">console_<wbr>url</td>
+            <td class="align-top">console<wbr>Url</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2514,7 +2514,7 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">day_<wbr>of_<wbr>week</td>
+            <td class="align-top">day<wbr>Of<wbr>Week</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2528,7 +2528,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">time_<wbr>of_<wbr>day</td>
+            <td class="align-top">time<wbr>Of<wbr>Day</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2542,7 +2542,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">time_<wbr>zone</td>
+            <td class="align-top">time<wbr>Zone</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2783,7 +2783,7 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">console_<wbr>access</td>
+            <td class="align-top">console<wbr>Access</td>
             <td class="align-top">
                 
                 <code>bool</code>

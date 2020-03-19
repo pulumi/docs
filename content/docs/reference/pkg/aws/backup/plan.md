@@ -305,7 +305,7 @@ The display name of a backup plan.
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">List[plan_<wbr>rule]</a></code>
+                <code><a href="#planrule">List[Plan<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -320,7 +320,7 @@ A rule object that specifies a scheduled task that is used to back up a selectio
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -650,7 +650,7 @@ The following output properties are available:
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">List[plan_<wbr>rule]</a></code>
+                <code><a href="#planrule">List[Plan<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} A rule object that specifies a scheduled task that is used to back up a selection of resources.
  {{% /md %}}
@@ -663,7 +663,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Metadata that you can assign to help organize the plans you create.
  {{% /md %}}
@@ -1083,7 +1083,7 @@ The display name of a backup plan.
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">List[plan_<wbr>rule]</a></code>
+                <code><a href="#planrule">List[Plan<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1098,7 +1098,7 @@ A rule object that specifies a scheduled task that is used to back up a selectio
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1548,7 +1548,7 @@ The name of a logical container where backups are stored.
     <tbody>
     
         <tr>
-            <td class="align-top">completion_<wbr>window</td>
+            <td class="align-top">completion<wbr>Window</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1566,7 +1566,7 @@ The amount of time AWS Backup attempts a backup before canceling the job and ret
             <td class="align-top">lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#planrulelifecycle">Dict[plan_<wbr>rule_<wbr>lifecycle]</a></code>
+                <code><a href="#planrulelifecycle">Dict[Plan<wbr>Rule<wbr>Lifecycle]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1578,10 +1578,10 @@ The lifecycle defines when a protected resource is transitioned to cold storage 
         </tr>
     
         <tr>
-            <td class="align-top">recovery_<wbr>point_<wbr>tags</td>
+            <td class="align-top">recovery<wbr>Point<wbr>Tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1623,7 +1623,7 @@ A CRON expression specifying when AWS Backup initiates a backup job.
         </tr>
     
         <tr>
-            <td class="align-top">start_<wbr>window</td>
+            <td class="align-top">start<wbr>Window</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1638,7 +1638,7 @@ The amount of time in minutes before beginning a backup.
         </tr>
     
         <tr>
-            <td class="align-top">target_<wbr>vault_<wbr>name</td>
+            <td class="align-top">target<wbr>Vault<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1844,7 +1844,7 @@ Specifies the number of days after creation that a recovery point is deleted. Mu
     <tbody>
     
         <tr>
-            <td class="align-top">cold_<wbr>storage_<wbr>after</td>
+            <td class="align-top">cold<wbr>Storage<wbr>After</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1859,7 +1859,7 @@ Specifies the number of days after creation that a recovery point is moved to co
         </tr>
     
         <tr>
-            <td class="align-top">delete_<wbr>after</td>
+            <td class="align-top">delete<wbr>After</td>
             <td class="align-top">
                 
                 <code>float</code>

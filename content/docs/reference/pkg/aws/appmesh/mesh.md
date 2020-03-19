@@ -316,7 +316,7 @@ The name to use for the service mesh.
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#meshspec">Dict[mesh_<wbr>spec]</a></code>
+                <code><a href="#meshspec">Dict[Mesh<wbr>Spec]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -331,7 +331,7 @@ The service mesh specification to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -726,7 +726,7 @@ The following output properties are available:
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#meshspec">Dict[mesh_<wbr>spec]</a></code>
+                <code><a href="#meshspec">Dict[Mesh<wbr>Spec]</a></code>
             </td>
             <td class="align-top">{{% md %}} The service mesh specification to apply.
  {{% /md %}}
@@ -739,7 +739,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1221,7 +1221,7 @@ The name to use for the service mesh.
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#meshspec">Dict[mesh_<wbr>spec]</a></code>
+                <code><a href="#meshspec">Dict[Mesh<wbr>Spec]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1236,7 +1236,7 @@ The service mesh specification to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1398,10 +1398,10 @@ A mapping of tags to assign to the resource.
     <tbody>
     
         <tr>
-            <td class="align-top">egress_<wbr>filter</td>
+            <td class="align-top">egress<wbr>Filter</td>
             <td class="align-top">
                 
-                <code><a href="#meshspecegressfilter">Dict[mesh_<wbr>spec_<wbr>egress_<wbr>filter]</a></code>
+                <code><a href="#meshspecegressfilter">Dict[Mesh<wbr>Spec<wbr>Egress<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -374,7 +374,7 @@ The directory identifier for registration in WorkSpaces service.
             <td class="align-top">self_<wbr>service_<wbr>permissions</td>
             <td class="align-top">
                 
-                <code><a href="#directoryselfservicepermissions">Dict[directory_<wbr>self_<wbr>service_<wbr>permissions]</a></code>
+                <code><a href="#directoryselfservicepermissions">Dict[Directory<wbr>Self<wbr>Service<wbr>Permissions]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -404,7 +404,7 @@ The identifiers of the subnets where the directory resides.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -682,7 +682,7 @@ The following output properties are available:
             <td class="align-top">self_<wbr>service_<wbr>permissions</td>
             <td class="align-top">
                 
-                <code><a href="#directoryselfservicepermissions">Dict[directory_<wbr>self_<wbr>service_<wbr>permissions]</a></code>
+                <code><a href="#directoryselfservicepermissions">Dict[Directory<wbr>Self<wbr>Service<wbr>Permissions]</a></code>
             </td>
             <td class="align-top">{{% md %}} The permissions to enable or disable self-service capabilities.
  {{% /md %}}
@@ -708,7 +708,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the WorkSpaces directory.
  {{% /md %}}
@@ -1055,7 +1055,7 @@ The directory identifier for registration in WorkSpaces service.
             <td class="align-top">self_<wbr>service_<wbr>permissions</td>
             <td class="align-top">
                 
-                <code><a href="#directoryselfservicepermissions">Dict[directory_<wbr>self_<wbr>service_<wbr>permissions]</a></code>
+                <code><a href="#directoryselfservicepermissions">Dict[Directory<wbr>Self<wbr>Service<wbr>Permissions]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1085,7 +1085,7 @@ The identifiers of the subnets where the directory resides.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1430,7 +1430,7 @@ Whether WorkSpaces directory users can switch the running mode of their workspac
     <tbody>
     
         <tr>
-            <td class="align-top">change_<wbr>compute_<wbr>type</td>
+            <td class="align-top">change<wbr>Compute<wbr>Type</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1445,7 +1445,7 @@ Whether WorkSpaces directory users can change the compute type (bundle) for thei
         </tr>
     
         <tr>
-            <td class="align-top">increase_<wbr>volume_<wbr>size</td>
+            <td class="align-top">increase<wbr>Volume<wbr>Size</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1460,7 +1460,7 @@ Whether WorkSpaces directory users can increase the volume size of the drives on
         </tr>
     
         <tr>
-            <td class="align-top">rebuild_<wbr>workspace</td>
+            <td class="align-top">rebuild<wbr>Workspace</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1475,7 +1475,7 @@ Whether WorkSpaces directory users can rebuild the operating system of a workspa
         </tr>
     
         <tr>
-            <td class="align-top">restart_<wbr>workspace</td>
+            <td class="align-top">restart<wbr>Workspace</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1490,7 +1490,7 @@ Whether WorkSpaces directory users can restart their workspace. Default `true`.
         </tr>
     
         <tr>
-            <td class="align-top">switch_<wbr>running_<wbr>mode</td>
+            <td class="align-top">switch<wbr>Running<wbr>Mode</td>
             <td class="align-top">
                 
                 <code>bool</code>

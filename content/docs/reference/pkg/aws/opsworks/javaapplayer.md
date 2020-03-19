@@ -1466,7 +1466,7 @@ Whether to enable Elastic Load Balancing connection draining.
             <td class="align-top">ebs_<wbr>volumes</td>
             <td class="align-top">
                 
-                <code><a href="#javaapplayerebsvolume">List[java_<wbr>app_<wbr>layer_<wbr>ebs_<wbr>volume]</a></code>
+                <code><a href="#javaapplayerebsvolume">List[Java<wbr>App<wbr>Layer<wbr>Ebs<wbr>Volume]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2862,7 +2862,7 @@ The following output properties are available:
             <td class="align-top">ebs_<wbr>volumes</td>
             <td class="align-top">
                 
-                <code><a href="#javaapplayerebsvolume">List[java_<wbr>app_<wbr>layer_<wbr>ebs_<wbr>volume]</a></code>
+                <code><a href="#javaapplayerebsvolume">List[Java<wbr>App<wbr>Layer<wbr>Ebs<wbr>Volume]</a></code>
             </td>
             <td class="align-top">{{% md %}} `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
  {{% /md %}}
@@ -4459,7 +4459,7 @@ Whether to enable Elastic Load Balancing connection draining.
             <td class="align-top">ebs_<wbr>volumes</td>
             <td class="align-top">
                 
-                <code><a href="#javaapplayerebsvolume">List[java_<wbr>app_<wbr>layer_<wbr>ebs_<wbr>volume]</a></code>
+                <code><a href="#javaapplayerebsvolume">List[Java<wbr>App<wbr>Layer<wbr>Ebs<wbr>Volume]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5051,7 +5051,7 @@ Whether to use EBS-optimized instances.
         </tr>
     
         <tr>
-            <td class="align-top">mount_<wbr>point</td>
+            <td class="align-top">mount<wbr>Point</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5065,7 +5065,7 @@ Whether to use EBS-optimized instances.
         </tr>
     
         <tr>
-            <td class="align-top">number_<wbr>of_<wbr>disks</td>
+            <td class="align-top">number<wbr>Of<wbr>Disks</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -5079,7 +5079,7 @@ Whether to use EBS-optimized instances.
         </tr>
     
         <tr>
-            <td class="align-top">raid_<wbr>level</td>
+            <td class="align-top">raid<wbr>Level</td>
             <td class="align-top">
                 
                 <code>str</code>

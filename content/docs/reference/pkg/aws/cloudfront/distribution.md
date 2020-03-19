@@ -1298,7 +1298,7 @@ distribution.
             <td class="align-top">custom_<wbr>error_<wbr>responses</td>
             <td class="align-top">
                 
-                <code><a href="#distributioncustomerrorresponse">List[distribution_<wbr>custom_<wbr>error_<wbr>response]</a></code>
+                <code><a href="#distributioncustomerrorresponse">List[Distribution<wbr>Custom<wbr>Error<wbr>Response]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1313,7 +1313,7 @@ One or more custom error response elements (multiples allowed).
             <td class="align-top">default_<wbr>cache_<wbr>behavior</td>
             <td class="align-top">
                 
-                <code><a href="#distributiondefaultcachebehavior">Dict[distribution_<wbr>default_<wbr>cache_<wbr>behavior]</a></code>
+                <code><a href="#distributiondefaultcachebehavior">Dict[Distribution<wbr>Default<wbr>Cache<wbr>Behavior]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1393,7 +1393,7 @@ Whether the IPv6 is enabled for the distribution.
             <td class="align-top">logging_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#distributionloggingconfig">Dict[distribution_<wbr>logging_<wbr>config]</a></code>
+                <code><a href="#distributionloggingconfig">Dict[Distribution<wbr>Logging<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1410,7 +1410,7 @@ to your distribution (maximum one).
             <td class="align-top">ordered_<wbr>cache_<wbr>behaviors</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorderedcachebehavior">List[distribution_<wbr>ordered_<wbr>cache_<wbr>behavior]</a></code>
+                <code><a href="#distributionorderedcachebehavior">List[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1427,7 +1427,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
             <td class="align-top">origin_<wbr>groups</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigingroup">List[distribution_<wbr>origin_<wbr>group]</a></code>
+                <code><a href="#distributionorigingroup">List[Distribution<wbr>Origin<wbr>Group]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1443,7 +1443,7 @@ distribution (multiples allowed).
             <td class="align-top">origins</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigin">List[distribution_<wbr>origin]</a></code>
+                <code><a href="#distributionorigin">List[Distribution<wbr>Origin]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1475,7 +1475,7 @@ The price class for this distribution. One of
             <td class="align-top">restrictions</td>
             <td class="align-top">
                 
-                <code><a href="#distributionrestrictions">Dict[distribution_<wbr>restrictions]</a></code>
+                <code><a href="#distributionrestrictions">Dict[Distribution<wbr>Restrictions]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1508,7 +1508,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1523,7 +1523,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">viewer_<wbr>certificate</td>
             <td class="align-top">
                 
-                <code><a href="#distributionviewercertificate">Dict[distribution_<wbr>viewer_<wbr>certificate]</a></code>
+                <code><a href="#distributionviewercertificate">Dict[Distribution<wbr>Viewer<wbr>Certificate]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2867,7 +2867,7 @@ region and the credentials configuring this argument must have
             <td class="align-top">active_<wbr>trusted_<wbr>signers</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} The key pair IDs that CloudFront is aware of for
 each trusted signer, if the distribution is set up to serve private content
@@ -2937,7 +2937,7 @@ distribution.
             <td class="align-top">custom_<wbr>error_<wbr>responses</td>
             <td class="align-top">
                 
-                <code><a href="#distributioncustomerrorresponse">List[distribution_<wbr>custom_<wbr>error_<wbr>response]</a></code>
+                <code><a href="#distributioncustomerrorresponse">List[Distribution<wbr>Custom<wbr>Error<wbr>Response]</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more custom error response elements (multiples allowed).
  {{% /md %}}
@@ -2950,7 +2950,7 @@ distribution.
             <td class="align-top">default_<wbr>cache_<wbr>behavior</td>
             <td class="align-top">
                 
-                <code><a href="#distributiondefaultcachebehavior">Dict[distribution_<wbr>default_<wbr>cache_<wbr>behavior]</a></code>
+                <code><a href="#distributiondefaultcachebehavior">Dict[Distribution<wbr>Default<wbr>Cache<wbr>Behavior]</a></code>
             </td>
             <td class="align-top">{{% md %}} The default cache behavior for this distribution (maximum
 one).
@@ -3090,7 +3090,7 @@ currently in progress.
             <td class="align-top">logging_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#distributionloggingconfig">Dict[distribution_<wbr>logging_<wbr>config]</a></code>
+                <code><a href="#distributionloggingconfig">Dict[Distribution<wbr>Logging<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} The logging
 configuration that controls how logs are written
@@ -3105,7 +3105,7 @@ to your distribution (maximum one).
             <td class="align-top">ordered_<wbr>cache_<wbr>behaviors</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorderedcachebehavior">List[distribution_<wbr>ordered_<wbr>cache_<wbr>behavior]</a></code>
+                <code><a href="#distributionorderedcachebehavior">List[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior]</a></code>
             </td>
             <td class="align-top">{{% md %}} An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -3120,7 +3120,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
             <td class="align-top">origin_<wbr>groups</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigingroup">List[distribution_<wbr>origin_<wbr>group]</a></code>
+                <code><a href="#distributionorigingroup">List[Distribution<wbr>Origin<wbr>Group]</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more origin_group for this
 distribution (multiples allowed).
@@ -3134,7 +3134,7 @@ distribution (multiples allowed).
             <td class="align-top">origins</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigin">List[distribution_<wbr>origin]</a></code>
+                <code><a href="#distributionorigin">List[Distribution<wbr>Origin]</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more origins for this
 distribution (multiples allowed).
@@ -3162,7 +3162,7 @@ distribution (multiples allowed).
             <td class="align-top">restrictions</td>
             <td class="align-top">
                 
-                <code><a href="#distributionrestrictions">Dict[distribution_<wbr>restrictions]</a></code>
+                <code><a href="#distributionrestrictions">Dict[Distribution<wbr>Restrictions]</a></code>
             </td>
             <td class="align-top">{{% md %}} The restriction
 configuration for this distribution (maximum one).
@@ -3206,7 +3206,7 @@ CloudFront system.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -3219,7 +3219,7 @@ CloudFront system.
             <td class="align-top">viewer_<wbr>certificate</td>
             <td class="align-top">
                 
-                <code><a href="#distributionviewercertificate">Dict[distribution_<wbr>viewer_<wbr>certificate]</a></code>
+                <code><a href="#distributionviewercertificate">Dict[Distribution<wbr>Viewer<wbr>Certificate]</a></code>
             </td>
             <td class="align-top">{{% md %}} The SSL
 configuration for this distribution (maximum
@@ -4770,7 +4770,7 @@ region and the credentials configuring this argument must have
             <td class="align-top">active_<wbr>trusted_<wbr>signers</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4850,7 +4850,7 @@ distribution.
             <td class="align-top">custom_<wbr>error_<wbr>responses</td>
             <td class="align-top">
                 
-                <code><a href="#distributioncustomerrorresponse">List[distribution_<wbr>custom_<wbr>error_<wbr>response]</a></code>
+                <code><a href="#distributioncustomerrorresponse">List[Distribution<wbr>Custom<wbr>Error<wbr>Response]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4865,7 +4865,7 @@ One or more custom error response elements (multiples allowed).
             <td class="align-top">default_<wbr>cache_<wbr>behavior</td>
             <td class="align-top">
                 
-                <code><a href="#distributiondefaultcachebehavior">Dict[distribution_<wbr>default_<wbr>cache_<wbr>behavior]</a></code>
+                <code><a href="#distributiondefaultcachebehavior">Dict[Distribution<wbr>Default<wbr>Cache<wbr>Behavior]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5025,7 +5025,7 @@ The date and time the distribution was last modified.
             <td class="align-top">logging_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#distributionloggingconfig">Dict[distribution_<wbr>logging_<wbr>config]</a></code>
+                <code><a href="#distributionloggingconfig">Dict[Distribution<wbr>Logging<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5042,7 +5042,7 @@ to your distribution (maximum one).
             <td class="align-top">ordered_<wbr>cache_<wbr>behaviors</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorderedcachebehavior">List[distribution_<wbr>ordered_<wbr>cache_<wbr>behavior]</a></code>
+                <code><a href="#distributionorderedcachebehavior">List[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5059,7 +5059,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
             <td class="align-top">origin_<wbr>groups</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigingroup">List[distribution_<wbr>origin_<wbr>group]</a></code>
+                <code><a href="#distributionorigingroup">List[Distribution<wbr>Origin<wbr>Group]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5075,7 +5075,7 @@ distribution (multiples allowed).
             <td class="align-top">origins</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigin">List[distribution_<wbr>origin]</a></code>
+                <code><a href="#distributionorigin">List[Distribution<wbr>Origin]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5107,7 +5107,7 @@ The price class for this distribution. One of
             <td class="align-top">restrictions</td>
             <td class="align-top">
                 
-                <code><a href="#distributionrestrictions">Dict[distribution_<wbr>restrictions]</a></code>
+                <code><a href="#distributionrestrictions">Dict[Distribution<wbr>Restrictions]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5157,7 +5157,7 @@ CloudFront system.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5172,7 +5172,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">viewer_<wbr>certificate</td>
             <td class="align-top">
                 
-                <code><a href="#distributionviewercertificate">Dict[distribution_<wbr>viewer_<wbr>certificate]</a></code>
+                <code><a href="#distributionviewercertificate">Dict[Distribution<wbr>Viewer<wbr>Certificate]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5525,7 +5525,7 @@ example, `/custom_404.html`).
     <tbody>
     
         <tr>
-            <td class="align-top">error_<wbr>caching_<wbr>min_<wbr>ttl</td>
+            <td class="align-top">error<wbr>Caching<wbr>Min<wbr>Ttl</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -5542,7 +5542,7 @@ origin to see whether the object has been updated.
         </tr>
     
         <tr>
-            <td class="align-top">error_<wbr>code</td>
+            <td class="align-top">error<wbr>Code</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -5558,7 +5558,7 @@ customize.
         </tr>
     
         <tr>
-            <td class="align-top">response_<wbr>code</td>
+            <td class="align-top">response<wbr>Code</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -5574,7 +5574,7 @@ to return with the custom error page to the viewer.
         </tr>
     
         <tr>
-            <td class="align-top">response_<wbr>page_<wbr>path</td>
+            <td class="align-top">response<wbr>Page<wbr>Path</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -6345,7 +6345,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
     <tbody>
     
         <tr>
-            <td class="align-top">allowed_<wbr>methods</td>
+            <td class="align-top">allowed<wbr>Methods</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -6361,7 +6361,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
         </tr>
     
         <tr>
-            <td class="align-top">cached_<wbr>methods</td>
+            <td class="align-top">cached<wbr>Methods</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -6394,7 +6394,7 @@ the request header (default: `false`).
         </tr>
     
         <tr>
-            <td class="align-top">default_<wbr>ttl</td>
+            <td class="align-top">default<wbr>Ttl</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -6412,7 +6412,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
         </tr>
     
         <tr>
-            <td class="align-top">field_<wbr>level_<wbr>encryption_<wbr>id</td>
+            <td class="align-top">field<wbr>Level<wbr>Encryption<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -6427,10 +6427,10 @@ Field level encryption configuration ID
         </tr>
     
         <tr>
-            <td class="align-top">forwarded_<wbr>values</td>
+            <td class="align-top">forwarded<wbr>Values</td>
             <td class="align-top">
                 
-                <code><a href="#distributiondefaultcachebehaviorforwardedvalues">Dict[distribution_<wbr>default_<wbr>cache_<wbr>behavior_<wbr>forwarded_<wbr>values]</a></code>
+                <code><a href="#distributiondefaultcachebehaviorforwardedvalues">Dict[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6443,10 +6443,10 @@ handles query strings, cookies and headers (maximum one).
         </tr>
     
         <tr>
-            <td class="align-top">lambda_<wbr>function_<wbr>associations</td>
+            <td class="align-top">lambda<wbr>Function<wbr>Associations</td>
             <td class="align-top">
                 
-                <code><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">List[distribution_<wbr>default_<wbr>cache_<wbr>behavior_<wbr>lambda_<wbr>function_<wbr>association]</a></code>
+                <code><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">List[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6459,7 +6459,7 @@ specific actions. Defined below, maximum 4.
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>ttl</td>
+            <td class="align-top">max<wbr>Ttl</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -6478,7 +6478,7 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
         </tr>
     
         <tr>
-            <td class="align-top">min_<wbr>ttl</td>
+            <td class="align-top">min<wbr>Ttl</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -6495,7 +6495,7 @@ whether the object has been updated. Defaults to 0 seconds.
         </tr>
     
         <tr>
-            <td class="align-top">smooth_<wbr>streaming</td>
+            <td class="align-top">smooth<wbr>Streaming</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -6512,7 +6512,7 @@ associated with this cache behavior.
         </tr>
     
         <tr>
-            <td class="align-top">target_<wbr>origin_<wbr>id</td>
+            <td class="align-top">target<wbr>Origin<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -6529,7 +6529,7 @@ either for a cache behavior or for the default cache behavior.
         </tr>
     
         <tr>
-            <td class="align-top">trusted_<wbr>signers</td>
+            <td class="align-top">trusted<wbr>Signers</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -6545,7 +6545,7 @@ allow to create signed URLs for private content.
         </tr>
     
         <tr>
-            <td class="align-top">viewer_<wbr>protocol_<wbr>policy</td>
+            <td class="align-top">viewer<wbr>Protocol<wbr>Policy</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -6868,7 +6868,7 @@ value of `true` for `query_string`, all query string keys are cached.
             <td class="align-top">cookies</td>
             <td class="align-top">
                 
-                <code><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Dict[distribution_<wbr>default_<wbr>cache_<wbr>behavior_<wbr>forwarded_<wbr>values_<wbr>cookies]</a></code>
+                <code><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Dict[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6898,7 +6898,7 @@ headers.
         </tr>
     
         <tr>
-            <td class="align-top">query_<wbr>string</td>
+            <td class="align-top">query<wbr>String</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -6914,7 +6914,7 @@ query strings to the origin that is associated with this cache behavior.
         </tr>
     
         <tr>
-            <td class="align-top">query_<wbr>string_<wbr>cache_<wbr>keys</td>
+            <td class="align-top">query<wbr>String<wbr>Cache<wbr>Keys</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -7156,7 +7156,7 @@ subsequent `whitelisted_names`
         </tr>
     
         <tr>
-            <td class="align-top">whitelisted_<wbr>names</td>
+            <td class="align-top">whitelisted<wbr>Names</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -7415,7 +7415,7 @@ ARN of the Lambda function.
     <tbody>
     
         <tr>
-            <td class="align-top">event_<wbr>type</td>
+            <td class="align-top">event<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7432,7 +7432,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         </tr>
     
         <tr>
-            <td class="align-top">include_<wbr>body</td>
+            <td class="align-top">include<wbr>Body</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -7447,7 +7447,7 @@ When set to true it exposes the request body to the lambda function. Defaults to
         </tr>
     
         <tr>
-            <td class="align-top">lambda_<wbr>arn</td>
+            <td class="align-top">lambda<wbr>Arn</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7723,7 +7723,7 @@ example, `myawslogbucket.s3.amazonaws.com`.
         </tr>
     
         <tr>
-            <td class="align-top">include_<wbr>cookies</td>
+            <td class="align-top">include<wbr>Cookies</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -8558,7 +8558,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
     <tbody>
     
         <tr>
-            <td class="align-top">allowed_<wbr>methods</td>
+            <td class="align-top">allowed<wbr>Methods</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -8574,7 +8574,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
         </tr>
     
         <tr>
-            <td class="align-top">cached_<wbr>methods</td>
+            <td class="align-top">cached<wbr>Methods</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -8607,7 +8607,7 @@ the request header (default: `false`).
         </tr>
     
         <tr>
-            <td class="align-top">default_<wbr>ttl</td>
+            <td class="align-top">default<wbr>Ttl</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -8625,7 +8625,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
         </tr>
     
         <tr>
-            <td class="align-top">field_<wbr>level_<wbr>encryption_<wbr>id</td>
+            <td class="align-top">field<wbr>Level<wbr>Encryption<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8640,10 +8640,10 @@ Field level encryption configuration ID
         </tr>
     
         <tr>
-            <td class="align-top">forwarded_<wbr>values</td>
+            <td class="align-top">forwarded<wbr>Values</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorderedcachebehaviorforwardedvalues">Dict[distribution_<wbr>ordered_<wbr>cache_<wbr>behavior_<wbr>forwarded_<wbr>values]</a></code>
+                <code><a href="#distributionorderedcachebehaviorforwardedvalues">Dict[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -8656,10 +8656,10 @@ handles query strings, cookies and headers (maximum one).
         </tr>
     
         <tr>
-            <td class="align-top">lambda_<wbr>function_<wbr>associations</td>
+            <td class="align-top">lambda<wbr>Function<wbr>Associations</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorderedcachebehaviorlambdafunctionassociation">List[distribution_<wbr>ordered_<wbr>cache_<wbr>behavior_<wbr>lambda_<wbr>function_<wbr>association]</a></code>
+                <code><a href="#distributionorderedcachebehaviorlambdafunctionassociation">List[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8672,7 +8672,7 @@ specific actions. Defined below, maximum 4.
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>ttl</td>
+            <td class="align-top">max<wbr>Ttl</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -8691,7 +8691,7 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
         </tr>
     
         <tr>
-            <td class="align-top">min_<wbr>ttl</td>
+            <td class="align-top">min<wbr>Ttl</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -8708,7 +8708,7 @@ whether the object has been updated. Defaults to 0 seconds.
         </tr>
     
         <tr>
-            <td class="align-top">path_<wbr>pattern</td>
+            <td class="align-top">path<wbr>Pattern</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8724,7 +8724,7 @@ specifies which requests you want this cache behavior to apply to.
         </tr>
     
         <tr>
-            <td class="align-top">smooth_<wbr>streaming</td>
+            <td class="align-top">smooth<wbr>Streaming</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -8741,7 +8741,7 @@ associated with this cache behavior.
         </tr>
     
         <tr>
-            <td class="align-top">target_<wbr>origin_<wbr>id</td>
+            <td class="align-top">target<wbr>Origin<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8758,7 +8758,7 @@ either for a cache behavior or for the default cache behavior.
         </tr>
     
         <tr>
-            <td class="align-top">trusted_<wbr>signers</td>
+            <td class="align-top">trusted<wbr>Signers</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -8774,7 +8774,7 @@ allow to create signed URLs for private content.
         </tr>
     
         <tr>
-            <td class="align-top">viewer_<wbr>protocol_<wbr>policy</td>
+            <td class="align-top">viewer<wbr>Protocol<wbr>Policy</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -9097,7 +9097,7 @@ value of `true` for `query_string`, all query string keys are cached.
             <td class="align-top">cookies</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Dict[distribution_<wbr>ordered_<wbr>cache_<wbr>behavior_<wbr>forwarded_<wbr>values_<wbr>cookies]</a></code>
+                <code><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Dict[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -9127,7 +9127,7 @@ headers.
         </tr>
     
         <tr>
-            <td class="align-top">query_<wbr>string</td>
+            <td class="align-top">query<wbr>String</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -9143,7 +9143,7 @@ query strings to the origin that is associated with this cache behavior.
         </tr>
     
         <tr>
-            <td class="align-top">query_<wbr>string_<wbr>cache_<wbr>keys</td>
+            <td class="align-top">query<wbr>String<wbr>Cache<wbr>Keys</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -9385,7 +9385,7 @@ subsequent `whitelisted_names`
         </tr>
     
         <tr>
-            <td class="align-top">whitelisted_<wbr>names</td>
+            <td class="align-top">whitelisted<wbr>Names</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -9644,7 +9644,7 @@ ARN of the Lambda function.
     <tbody>
     
         <tr>
-            <td class="align-top">event_<wbr>type</td>
+            <td class="align-top">event<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -9661,7 +9661,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         </tr>
     
         <tr>
-            <td class="align-top">include_<wbr>body</td>
+            <td class="align-top">include<wbr>Body</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -9676,7 +9676,7 @@ When set to true it exposes the request body to the lambda function. Defaults to
         </tr>
     
         <tr>
-            <td class="align-top">lambda_<wbr>arn</td>
+            <td class="align-top">lambda<wbr>Arn</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -10089,10 +10089,10 @@ configuration information. If a custom origin is required, use
     <tbody>
     
         <tr>
-            <td class="align-top">custom_<wbr>headers</td>
+            <td class="align-top">custom<wbr>Headers</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigincustomheader">List[distribution_<wbr>origin_<wbr>custom_<wbr>header]</a></code>
+                <code><a href="#distributionorigincustomheader">List[Distribution<wbr>Origin<wbr>Custom<wbr>Header]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -10106,10 +10106,10 @@ One or more sub-resources with `name` and
         </tr>
     
         <tr>
-            <td class="align-top">custom_<wbr>origin_<wbr>config</td>
+            <td class="align-top">custom<wbr>Origin<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigincustomoriginconfig">Dict[distribution_<wbr>origin_<wbr>custom_<wbr>origin_<wbr>config]</a></code>
+                <code><a href="#distributionorigincustomoriginconfig">Dict[Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -10139,7 +10139,7 @@ web site of your custom origin.
         </tr>
     
         <tr>
-            <td class="align-top">origin_<wbr>id</td>
+            <td class="align-top">origin<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -10154,7 +10154,7 @@ The unique identifier of the member origin
         </tr>
     
         <tr>
-            <td class="align-top">origin_<wbr>path</td>
+            <td class="align-top">origin<wbr>Path</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -10171,10 +10171,10 @@ custom origin.
         </tr>
     
         <tr>
-            <td class="align-top">s3_<wbr>origin_<wbr>config</td>
+            <td class="align-top">s3Origin<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigins3originconfig">Dict[distribution_<wbr>origin_<wbr>s3_<wbr>origin_<wbr>config]</a></code>
+                <code><a href="#distributionorigins3originconfig">Dict[Distribution<wbr>Origin<wbr>S3Origin<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -10781,7 +10781,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
     <tbody>
     
         <tr>
-            <td class="align-top">http_<wbr>port</td>
+            <td class="align-top">http<wbr>Port</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -10796,7 +10796,7 @@ The HTTP port the custom origin listens on.
         </tr>
     
         <tr>
-            <td class="align-top">https_<wbr>port</td>
+            <td class="align-top">https<wbr>Port</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -10811,7 +10811,7 @@ The HTTPS port the custom origin listens on.
         </tr>
     
         <tr>
-            <td class="align-top">origin_<wbr>keepalive_<wbr>timeout</td>
+            <td class="align-top">origin<wbr>Keepalive<wbr>Timeout</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -10826,7 +10826,7 @@ The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of `6
         </tr>
     
         <tr>
-            <td class="align-top">origin_<wbr>protocol_<wbr>policy</td>
+            <td class="align-top">origin<wbr>Protocol<wbr>Policy</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -10842,7 +10842,7 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
         </tr>
     
         <tr>
-            <td class="align-top">origin_<wbr>read_<wbr>timeout</td>
+            <td class="align-top">origin<wbr>Read<wbr>Timeout</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -10857,7 +10857,7 @@ The Custom Read timeout, in seconds. By default, AWS enforces a limit of `60`. B
         </tr>
     
         <tr>
-            <td class="align-top">origin_<wbr>ssl_<wbr>protocols</td>
+            <td class="align-top">origin<wbr>Ssl<wbr>Protocols</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -11110,10 +11110,10 @@ The unique identifier of the member origin
     <tbody>
     
         <tr>
-            <td class="align-top">failover_<wbr>criteria</td>
+            <td class="align-top">failover<wbr>Criteria</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigingroupfailovercriteria">Dict[distribution_<wbr>origin_<wbr>group_<wbr>failover_<wbr>criteria]</a></code>
+                <code><a href="#distributionorigingroupfailovercriteria">Dict[Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -11128,7 +11128,7 @@ The failover criteria for when to failover to the secondary origin
             <td class="align-top">members</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigingroupmember">List[distribution_<wbr>origin_<wbr>group_<wbr>member]</a></code>
+                <code><a href="#distributionorigingroupmember">List[Distribution<wbr>Origin<wbr>Group<wbr>Member]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -11140,7 +11140,7 @@ Ordered member configuration blocks assigned to the origin group, where the firs
         </tr>
     
         <tr>
-            <td class="align-top">origin_<wbr>id</td>
+            <td class="align-top">origin<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -11301,10 +11301,10 @@ A list of HTTP status codes for the origin group
     <tbody>
     
         <tr>
-            <td class="align-top">status_<wbr>codes</td>
+            <td class="align-top">status<wbr>Codes</td>
             <td class="align-top">
                 
-                <code>List[integer]</code>
+                <code>List[Integer]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -11462,7 +11462,7 @@ The unique identifier of the member origin
     <tbody>
     
         <tr>
-            <td class="align-top">origin_<wbr>id</td>
+            <td class="align-top">origin<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -11626,7 +11626,7 @@ identity][5] to associate with the origin.
     <tbody>
     
         <tr>
-            <td class="align-top">origin_<wbr>access_<wbr>identity</td>
+            <td class="align-top">origin<wbr>Access<wbr>Identity</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -11785,10 +11785,10 @@ identity][5] to associate with the origin.
     <tbody>
     
         <tr>
-            <td class="align-top">geo_<wbr>restriction</td>
+            <td class="align-top">geo<wbr>Restriction</td>
             <td class="align-top">
                 
-                <code><a href="#distributionrestrictionsgeorestriction">Dict[distribution_<wbr>restrictions_<wbr>geo_<wbr>restriction]</a></code>
+                <code><a href="#distributionrestrictionsgeorestriction">Dict[Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -12019,7 +12019,7 @@ distribute your content (`blacklist`).
         </tr>
     
         <tr>
-            <td class="align-top">restriction_<wbr>type</td>
+            <td class="align-top">restriction<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -12407,7 +12407,7 @@ must be specified.
     <tbody>
     
         <tr>
-            <td class="align-top">acm_<wbr>certificate_<wbr>arn</td>
+            <td class="align-top">acm<wbr>Certificate<wbr>Arn</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -12425,7 +12425,7 @@ certificate must be in  US-EAST-1.
         </tr>
     
         <tr>
-            <td class="align-top">cloudfront_<wbr>default_<wbr>certificate</td>
+            <td class="align-top">cloudfront<wbr>Default<wbr>Certificate</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -12442,7 +12442,7 @@ distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
         </tr>
     
         <tr>
-            <td class="align-top">iam_<wbr>certificate_<wbr>id</td>
+            <td class="align-top">iam<wbr>Certificate<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -12459,7 +12459,7 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
         </tr>
     
         <tr>
-            <td class="align-top">minimum_<wbr>protocol_<wbr>version</td>
+            <td class="align-top">minimum<wbr>Protocol<wbr>Version</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -12483,7 +12483,7 @@ must be specified.
         </tr>
     
         <tr>
-            <td class="align-top">ssl_<wbr>support_<wbr>method</td>
+            <td class="align-top">ssl<wbr>Support<wbr>Method</td>
             <td class="align-top">
                 
                 <code>str</code>

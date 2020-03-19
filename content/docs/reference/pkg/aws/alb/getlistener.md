@@ -733,7 +733,7 @@ The following output properties are available:
             <td class="align-top">default_<wbr>actions</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultaction">List[get_<wbr>listener_<wbr>default_<wbr>action]</a></code>
+                <code><a href="#getlistenerdefaultaction">List[Get<wbr>Listener<wbr>Default<wbr>Action]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1203,10 +1203,10 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">authenticate_<wbr>cognitos</td>
+            <td class="align-top">authenticate<wbr>Cognitos</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionauthenticatecognito">List[get_<wbr>listener_<wbr>default_<wbr>action_<wbr>authenticate_<wbr>cognito]</a></code>
+                <code><a href="#getlistenerdefaultactionauthenticatecognito">List[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1217,10 +1217,10 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">authenticate_<wbr>oidcs</td>
+            <td class="align-top">authenticate<wbr>Oidcs</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionauthenticateoidc">List[get_<wbr>listener_<wbr>default_<wbr>action_<wbr>authenticate_<wbr>oidc]</a></code>
+                <code><a href="#getlistenerdefaultactionauthenticateoidc">List[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1231,10 +1231,10 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">fixed_<wbr>responses</td>
+            <td class="align-top">fixed<wbr>Responses</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionfixedresponse">List[get_<wbr>listener_<wbr>default_<wbr>action_<wbr>fixed_<wbr>response]</a></code>
+                <code><a href="#getlistenerdefaultactionfixedresponse">List[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1262,7 +1262,7 @@ The following output properties are available:
             <td class="align-top">redirects</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionredirect">List[get_<wbr>listener_<wbr>default_<wbr>action_<wbr>redirect]</a></code>
+                <code><a href="#getlistenerdefaultactionredirect">List[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1738,10 +1738,10 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">authentication_<wbr>request_<wbr>extra_<wbr>params</td>
+            <td class="align-top">authentication<wbr>Request<wbr>Extra<wbr>Params</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1752,7 +1752,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">on_<wbr>unauthenticated_<wbr>request</td>
+            <td class="align-top">on<wbr>Unauthenticated<wbr>Request</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1780,7 +1780,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">session_<wbr>cookie_<wbr>name</td>
+            <td class="align-top">session<wbr>Cookie<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1794,7 +1794,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">session_<wbr>timeout</td>
+            <td class="align-top">session<wbr>Timeout</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1808,7 +1808,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">user_<wbr>pool_<wbr>arn</td>
+            <td class="align-top">user<wbr>Pool<wbr>Arn</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1822,7 +1822,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">user_<wbr>pool_<wbr>client_<wbr>id</td>
+            <td class="align-top">user<wbr>Pool<wbr>Client<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1836,7 +1836,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">user_<wbr>pool_<wbr>domain</td>
+            <td class="align-top">user<wbr>Pool<wbr>Domain</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2413,10 +2413,10 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">authentication_<wbr>request_<wbr>extra_<wbr>params</td>
+            <td class="align-top">authentication<wbr>Request<wbr>Extra<wbr>Params</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2427,7 +2427,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">authorization_<wbr>endpoint</td>
+            <td class="align-top">authorization<wbr>Endpoint</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2483,7 +2483,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">on_<wbr>unauthenticated_<wbr>request</td>
+            <td class="align-top">on<wbr>Unauthenticated<wbr>Request</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2511,7 +2511,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">session_<wbr>cookie_<wbr>name</td>
+            <td class="align-top">session<wbr>Cookie<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2525,7 +2525,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">session_<wbr>timeout</td>
+            <td class="align-top">session<wbr>Timeout</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2539,7 +2539,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">token_<wbr>endpoint</td>
+            <td class="align-top">token<wbr>Endpoint</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2553,7 +2553,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">user_<wbr>info_<wbr>endpoint</td>
+            <td class="align-top">user<wbr>Info<wbr>Endpoint</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2808,7 +2808,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">message_<wbr>body</td>
+            <td class="align-top">message<wbr>Body</td>
             <td class="align-top">
                 
                 <code>str</code>

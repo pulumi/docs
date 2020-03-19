@@ -625,7 +625,7 @@ Whether running instances should be terminated if the total target capacity of t
             <td class="align-top">launch_<wbr>template_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#fleetlaunchtemplateconfig">Dict[fleet_<wbr>launch_<wbr>template_<wbr>config]</a></code>
+                <code><a href="#fleetlaunchtemplateconfig">Dict[Fleet<wbr>Launch<wbr>Template<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -640,7 +640,7 @@ Nested argument containing EC2 Launch Template configurations. Defined below.
             <td class="align-top">on_<wbr>demand_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetondemandoptions">Dict[fleet_<wbr>on_<wbr>demand_<wbr>options]</a></code>
+                <code><a href="#fleetondemandoptions">Dict[Fleet<wbr>On<wbr>Demand<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -670,7 +670,7 @@ Whether EC2 Fleet should replace unhealthy instances. Defaults to `false`.
             <td class="align-top">spot_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetspotoptions">Dict[fleet_<wbr>spot_<wbr>options]</a></code>
+                <code><a href="#fleetspotoptions">Dict[Fleet<wbr>Spot<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -685,7 +685,7 @@ Nested argument containing Spot configurations. Defined below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -700,7 +700,7 @@ Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Te
             <td class="align-top">target_<wbr>capacity_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#fleettargetcapacityspecification">Dict[fleet_<wbr>target_<wbr>capacity_<wbr>specification]</a></code>
+                <code><a href="#fleettargetcapacityspecification">Dict[Fleet<wbr>Target<wbr>Capacity<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1257,7 +1257,7 @@ The following output properties are available:
             <td class="align-top">launch_<wbr>template_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#fleetlaunchtemplateconfig">Dict[fleet_<wbr>launch_<wbr>template_<wbr>config]</a></code>
+                <code><a href="#fleetlaunchtemplateconfig">Dict[Fleet<wbr>Launch<wbr>Template<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing EC2 Launch Template configurations. Defined below.
  {{% /md %}}
@@ -1270,7 +1270,7 @@ The following output properties are available:
             <td class="align-top">on_<wbr>demand_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetondemandoptions">Dict[fleet_<wbr>on_<wbr>demand_<wbr>options]</a></code>
+                <code><a href="#fleetondemandoptions">Dict[Fleet<wbr>On<wbr>Demand<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing On-Demand configurations. Defined below.
  {{% /md %}}
@@ -1296,7 +1296,7 @@ The following output properties are available:
             <td class="align-top">spot_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetspotoptions">Dict[fleet_<wbr>spot_<wbr>options]</a></code>
+                <code><a href="#fleetspotoptions">Dict[Fleet<wbr>Spot<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing Spot configurations. Defined below.
  {{% /md %}}
@@ -1309,7 +1309,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Template.
  {{% /md %}}
@@ -1322,7 +1322,7 @@ The following output properties are available:
             <td class="align-top">target_<wbr>capacity_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#fleettargetcapacityspecification">Dict[fleet_<wbr>target_<wbr>capacity_<wbr>specification]</a></code>
+                <code><a href="#fleettargetcapacityspecification">Dict[Fleet<wbr>Target<wbr>Capacity<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing target capacity configurations. Defined below.
  {{% /md %}}
@@ -1978,7 +1978,7 @@ Whether running instances should be terminated if the total target capacity of t
             <td class="align-top">launch_<wbr>template_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#fleetlaunchtemplateconfig">Dict[fleet_<wbr>launch_<wbr>template_<wbr>config]</a></code>
+                <code><a href="#fleetlaunchtemplateconfig">Dict[Fleet<wbr>Launch<wbr>Template<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1993,7 +1993,7 @@ Nested argument containing EC2 Launch Template configurations. Defined below.
             <td class="align-top">on_<wbr>demand_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetondemandoptions">Dict[fleet_<wbr>on_<wbr>demand_<wbr>options]</a></code>
+                <code><a href="#fleetondemandoptions">Dict[Fleet<wbr>On<wbr>Demand<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2023,7 +2023,7 @@ Whether EC2 Fleet should replace unhealthy instances. Defaults to `false`.
             <td class="align-top">spot_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetspotoptions">Dict[fleet_<wbr>spot_<wbr>options]</a></code>
+                <code><a href="#fleetspotoptions">Dict[Fleet<wbr>Spot<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2038,7 +2038,7 @@ Nested argument containing Spot configurations. Defined below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2053,7 +2053,7 @@ Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Te
             <td class="align-top">target_<wbr>capacity_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#fleettargetcapacityspecification">Dict[fleet_<wbr>target_<wbr>capacity_<wbr>specification]</a></code>
+                <code><a href="#fleettargetcapacityspecification">Dict[Fleet<wbr>Target<wbr>Capacity<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2308,10 +2308,10 @@ Nested argument(s) containing parameters to override the same parameters in the 
     <tbody>
     
         <tr>
-            <td class="align-top">launch_<wbr>template_<wbr>specification</td>
+            <td class="align-top">launch<wbr>Template<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">Dict[fleet_<wbr>launch_<wbr>template_<wbr>config_<wbr>launch_<wbr>template_<wbr>specification]</a></code>
+                <code><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">Dict[Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2326,7 +2326,7 @@ Nested argument containing EC2 Launch Template to use. Defined below.
             <td class="align-top">overrides</td>
             <td class="align-top">
                 
-                <code><a href="#fleetlaunchtemplateconfigoverride">List[fleet_<wbr>launch_<wbr>template_<wbr>config_<wbr>override]</a></code>
+                <code><a href="#fleetlaunchtemplateconfigoverride">List[Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2574,7 +2574,7 @@ Version number of the launch template.
     <tbody>
     
         <tr>
-            <td class="align-top">launch_<wbr>template_<wbr>id</td>
+            <td class="align-top">launch<wbr>Template<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2589,7 +2589,7 @@ ID of the launch template.
         </tr>
     
         <tr>
-            <td class="align-top">launch_<wbr>template_<wbr>name</td>
+            <td class="align-top">launch<wbr>Template<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3020,7 +3020,7 @@ Instance type.
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>price</td>
+            <td class="align-top">max<wbr>Price</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3065,7 +3065,7 @@ ID of the subnet in which to launch the instances.
         </tr>
     
         <tr>
-            <td class="align-top">weighted_<wbr>capacity</td>
+            <td class="align-top">weighted<wbr>Capacity</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3492,7 +3492,7 @@ How to allocate the target capacity across the Spot pools. Valid values: `divers
         </tr>
     
         <tr>
-            <td class="align-top">instance_<wbr>interruption_<wbr>behavior</td>
+            <td class="align-top">instance<wbr>Interruption<wbr>Behavior</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3803,7 +3803,7 @@ The number of units to request, filled using `default_target_capacity_type`.
     <tbody>
     
         <tr>
-            <td class="align-top">default_<wbr>target_<wbr>capacity_<wbr>type</td>
+            <td class="align-top">default<wbr>Target<wbr>Capacity<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3818,7 +3818,7 @@ Default target capacity type. Valid values: `on-demand`, `spot`.
         </tr>
     
         <tr>
-            <td class="align-top">on_<wbr>demand_<wbr>target_<wbr>capacity</td>
+            <td class="align-top">on<wbr>Demand<wbr>Target<wbr>Capacity</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3833,7 +3833,7 @@ The number of On-Demand units to request.
         </tr>
     
         <tr>
-            <td class="align-top">spot_<wbr>target_<wbr>capacity</td>
+            <td class="align-top">spot<wbr>Target<wbr>Capacity</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3848,7 +3848,7 @@ The number of Spot units to request.
         </tr>
     
         <tr>
-            <td class="align-top">total_<wbr>target_<wbr>capacity</td>
+            <td class="align-top">total<wbr>Target<wbr>Capacity</td>
             <td class="align-top">
                 
                 <code>float</code>

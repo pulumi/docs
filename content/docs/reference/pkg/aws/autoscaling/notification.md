@@ -321,7 +321,7 @@ A list of AutoScaling Group Names
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code>List[notification_<wbr>type]</code>
+                <code>List[Notification<wbr>Type]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -579,7 +579,7 @@ notifications. Acceptable values are documented [in the AWS documentation here][
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code>List[notification_<wbr>type]</code>
+                <code>List[Notification<wbr>Type]</code>
             </td>
             <td class="align-top">{{% md %}} A list of Notification Types that trigger
 notifications. Acceptable values are documented [in the AWS documentation here][1]
@@ -898,7 +898,7 @@ A list of AutoScaling Group Names
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code>List[notification_<wbr>type]</code>
+                <code>List[Notification<wbr>Type]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

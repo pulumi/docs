@@ -271,7 +271,7 @@ a pair on the desired Internet Gateway.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinternetgatewayfilter">List[get_<wbr>internet_<wbr>gateway_<wbr>filter]</a></code>
+                <code><a href="#getinternetgatewayfilter">List[Get<wbr>Internet<wbr>Gateway<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -283,7 +283,7 @@ Custom filter block as described below.
         </tr>
     
         <tr>
-            <td class="align-top">internet_<wbr>gateway_<wbr>id</td>
+            <td class="align-top">internet<wbr>Gateway<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -301,7 +301,7 @@ The id of the specific Internet Gateway to retrieve.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -634,7 +634,7 @@ The following output properties are available:
             <td class="align-top">attachments</td>
             <td class="align-top">
                 
-                <code><a href="#getinternetgatewayattachment">List[get_<wbr>internet_<wbr>gateway_<wbr>attachment]</a></code>
+                <code><a href="#getinternetgatewayattachment">List[Get<wbr>Internet<wbr>Gateway<wbr>Attachment]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -646,7 +646,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinternetgatewayfilter">List[get_<wbr>internet_<wbr>gateway_<wbr>filter]</a></code>
+                <code><a href="#getinternetgatewayfilter">List[Get<wbr>Internet<wbr>Gateway<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -668,7 +668,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">internet_<wbr>gateway_<wbr>id</td>
+            <td class="align-top">internet<wbr>Gateway<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -696,7 +696,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

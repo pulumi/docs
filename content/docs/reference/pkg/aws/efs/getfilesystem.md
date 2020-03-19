@@ -292,7 +292,7 @@ The ID that identifies the file system (e.g. fs-ccfc0d65).
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -952,7 +952,7 @@ The following output properties are available:
             <td class="align-top">lifecycle_<wbr>policy</td>
             <td class="align-top">
                 
-                <code><a href="#getfilesystemlifecyclepolicy">Dict[get_<wbr>file_<wbr>system_<wbr>lifecycle_<wbr>policy]</a></code>
+                <code><a href="#getfilesystemlifecyclepolicy">Dict[Get<wbr>File<wbr>System<wbr>Lifecycle<wbr>Policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object.
  {{% /md %}}
@@ -992,7 +992,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1162,7 +1162,7 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">transition_<wbr>to_<wbr>ia</td>
+            <td class="align-top">transition<wbr>To<wbr>Ia</td>
             <td class="align-top">
                 
                 <code>str</code>

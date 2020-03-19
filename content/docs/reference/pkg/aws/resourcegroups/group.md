@@ -374,7 +374,7 @@ The resource group&#39;s name. A resource group name can have a maximum of 127 c
             <td class="align-top">resource_<wbr>query</td>
             <td class="align-top">
                 
-                <code><a href="#groupresourcequery">Dict[group_<wbr>resource_<wbr>query]</a></code>
+                <code><a href="#groupresourcequery">Dict[Group<wbr>Resource<wbr>Query]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -389,7 +389,7 @@ A `resource_query` block. Resource queries are documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -732,7 +732,7 @@ The following output properties are available:
             <td class="align-top">resource_<wbr>query</td>
             <td class="align-top">
                 
-                <code><a href="#groupresourcequery">Dict[group_<wbr>resource_<wbr>query]</a></code>
+                <code><a href="#groupresourcequery">Dict[Group<wbr>Resource<wbr>Query]</a></code>
             </td>
             <td class="align-top">{{% md %}} A `resource_query` block. Resource queries are documented below.
  {{% /md %}}
@@ -745,7 +745,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1167,7 +1167,7 @@ The resource group&#39;s name. A resource group name can have a maximum of 127 c
             <td class="align-top">resource_<wbr>query</td>
             <td class="align-top">
                 
-                <code><a href="#groupresourcequery">Dict[group_<wbr>resource_<wbr>query]</a></code>
+                <code><a href="#groupresourcequery">Dict[Group<wbr>Resource<wbr>Query]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1182,7 +1182,7 @@ A `resource_query` block. Resource queries are documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

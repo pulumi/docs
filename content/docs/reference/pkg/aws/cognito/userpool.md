@@ -1006,7 +1006,7 @@ The verification message templates configuration.
             <td class="align-top">admin_<wbr>create_<wbr>user_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfig">Dict[user_<wbr>pool_<wbr>admin_<wbr>create_<wbr>user_<wbr>config]</a></code>
+                <code><a href="#userpooladmincreateuserconfig">Dict[User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1051,7 +1051,7 @@ The attributes to be auto-verified. Possible values: email, phone_number.
             <td class="align-top">device_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpooldeviceconfiguration">Dict[user_<wbr>pool_<wbr>device_<wbr>configuration]</a></code>
+                <code><a href="#userpooldeviceconfiguration">Dict[User<wbr>Pool<wbr>Device<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1066,7 +1066,7 @@ The configuration for the user pool&#39;s device tracking.
             <td class="align-top">email_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolemailconfiguration">Dict[user_<wbr>pool_<wbr>email_<wbr>configuration]</a></code>
+                <code><a href="#userpoolemailconfiguration">Dict[User<wbr>Pool<wbr>Email<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1111,7 +1111,7 @@ A string representing the email verification subject. Conflicts with `verificati
             <td class="align-top">lambda_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#userpoollambdaconfig">Dict[user_<wbr>pool_<wbr>lambda_<wbr>config]</a></code>
+                <code><a href="#userpoollambdaconfig">Dict[User<wbr>Pool<wbr>Lambda<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1156,7 +1156,7 @@ The name of the attribute.
             <td class="align-top">password_<wbr>policy</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolpasswordpolicy">Dict[user_<wbr>pool_<wbr>password_<wbr>policy]</a></code>
+                <code><a href="#userpoolpasswordpolicy">Dict[User<wbr>Pool<wbr>Password<wbr>Policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1171,7 +1171,7 @@ A container for information about the user pool password policy.
             <td class="align-top">schemas</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschema">List[user_<wbr>pool_<wbr>schema]</a></code>
+                <code><a href="#userpoolschema">List[User<wbr>Pool<wbr>Schema]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1201,7 +1201,7 @@ A string representing the SMS authentication message.
             <td class="align-top">sms_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolsmsconfiguration">Dict[user_<wbr>pool_<wbr>sms_<wbr>configuration]</a></code>
+                <code><a href="#userpoolsmsconfiguration">Dict[User<wbr>Pool<wbr>Sms<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1231,7 +1231,7 @@ A string representing the SMS verification message. Conflicts with `verification
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1246,7 +1246,7 @@ A mapping of tags to assign to the User Pool.
             <td class="align-top">user_<wbr>pool_<wbr>add_<wbr>ons</td>
             <td class="align-top">
                 
-                <code><a href="#userpooluserpooladdons">Dict[user_<wbr>pool_<wbr>user_<wbr>pool_<wbr>add_<wbr>ons]</a></code>
+                <code><a href="#userpooluserpooladdons">Dict[User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1276,7 +1276,7 @@ Specifies whether email addresses or phone numbers can be specified as usernames
             <td class="align-top">verification_<wbr>message_<wbr>template</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolverificationmessagetemplate">Dict[user_<wbr>pool_<wbr>verification_<wbr>message_<wbr>template]</a></code>
+                <code><a href="#userpoolverificationmessagetemplate">Dict[User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2282,7 +2282,7 @@ The following output properties are available:
             <td class="align-top">admin_<wbr>create_<wbr>user_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfig">Dict[user_<wbr>pool_<wbr>admin_<wbr>create_<wbr>user_<wbr>config]</a></code>
+                <code><a href="#userpooladmincreateuserconfig">Dict[User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} The configuration for AdminCreateUser requests.
  {{% /md %}}
@@ -2347,7 +2347,7 @@ The following output properties are available:
             <td class="align-top">device_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpooldeviceconfiguration">Dict[user_<wbr>pool_<wbr>device_<wbr>configuration]</a></code>
+                <code><a href="#userpooldeviceconfiguration">Dict[User<wbr>Pool<wbr>Device<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} The configuration for the user pool&#39;s device tracking.
  {{% /md %}}
@@ -2360,7 +2360,7 @@ The following output properties are available:
             <td class="align-top">email_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolemailconfiguration">Dict[user_<wbr>pool_<wbr>email_<wbr>configuration]</a></code>
+                <code><a href="#userpoolemailconfiguration">Dict[User<wbr>Pool<wbr>Email<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} The Email Configuration.
  {{% /md %}}
@@ -2412,7 +2412,7 @@ The following output properties are available:
             <td class="align-top">lambda_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#userpoollambdaconfig">Dict[user_<wbr>pool_<wbr>lambda_<wbr>config]</a></code>
+                <code><a href="#userpoollambdaconfig">Dict[User<wbr>Pool<wbr>Lambda<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} A container for the AWS Lambda triggers associated with the user pool.
  {{% /md %}}
@@ -2464,7 +2464,7 @@ The following output properties are available:
             <td class="align-top">password_<wbr>policy</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolpasswordpolicy">Dict[user_<wbr>pool_<wbr>password_<wbr>policy]</a></code>
+                <code><a href="#userpoolpasswordpolicy">Dict[User<wbr>Pool<wbr>Password<wbr>Policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} A container for information about the user pool password policy.
  {{% /md %}}
@@ -2477,7 +2477,7 @@ The following output properties are available:
             <td class="align-top">schemas</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschema">List[user_<wbr>pool_<wbr>schema]</a></code>
+                <code><a href="#userpoolschema">List[User<wbr>Pool<wbr>Schema]</a></code>
             </td>
             <td class="align-top">{{% md %}} A container with the schema attributes of a user pool. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Maximum of 50 attributes.
  {{% /md %}}
@@ -2503,7 +2503,7 @@ The following output properties are available:
             <td class="align-top">sms_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolsmsconfiguration">Dict[user_<wbr>pool_<wbr>sms_<wbr>configuration]</a></code>
+                <code><a href="#userpoolsmsconfiguration">Dict[User<wbr>Pool<wbr>Sms<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} The SMS Configuration.
  {{% /md %}}
@@ -2529,7 +2529,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the User Pool.
  {{% /md %}}
@@ -2542,7 +2542,7 @@ The following output properties are available:
             <td class="align-top">user_<wbr>pool_<wbr>add_<wbr>ons</td>
             <td class="align-top">
                 
-                <code><a href="#userpooluserpooladdons">Dict[user_<wbr>pool_<wbr>user_<wbr>pool_<wbr>add_<wbr>ons]</a></code>
+                <code><a href="#userpooluserpooladdons">Dict[User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for user pool add-ons to enable user pool advanced security mode features.
  {{% /md %}}
@@ -2568,7 +2568,7 @@ The following output properties are available:
             <td class="align-top">verification_<wbr>message_<wbr>template</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolverificationmessagetemplate">Dict[user_<wbr>pool_<wbr>verification_<wbr>message_<wbr>template]</a></code>
+                <code><a href="#userpoolverificationmessagetemplate">Dict[User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template]</a></code>
             </td>
             <td class="align-top">{{% md %}} The verification message templates configuration.
  {{% /md %}}
@@ -3755,7 +3755,7 @@ The verification message templates configuration.
             <td class="align-top">admin_<wbr>create_<wbr>user_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfig">Dict[user_<wbr>pool_<wbr>admin_<wbr>create_<wbr>user_<wbr>config]</a></code>
+                <code><a href="#userpooladmincreateuserconfig">Dict[User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3830,7 +3830,7 @@ The date the user pool was created.
             <td class="align-top">device_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpooldeviceconfiguration">Dict[user_<wbr>pool_<wbr>device_<wbr>configuration]</a></code>
+                <code><a href="#userpooldeviceconfiguration">Dict[User<wbr>Pool<wbr>Device<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3845,7 +3845,7 @@ The configuration for the user pool&#39;s device tracking.
             <td class="align-top">email_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolemailconfiguration">Dict[user_<wbr>pool_<wbr>email_<wbr>configuration]</a></code>
+                <code><a href="#userpoolemailconfiguration">Dict[User<wbr>Pool<wbr>Email<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3905,7 +3905,7 @@ The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws
             <td class="align-top">lambda_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#userpoollambdaconfig">Dict[user_<wbr>pool_<wbr>lambda_<wbr>config]</a></code>
+                <code><a href="#userpoollambdaconfig">Dict[User<wbr>Pool<wbr>Lambda<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3965,7 +3965,7 @@ The name of the attribute.
             <td class="align-top">password_<wbr>policy</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolpasswordpolicy">Dict[user_<wbr>pool_<wbr>password_<wbr>policy]</a></code>
+                <code><a href="#userpoolpasswordpolicy">Dict[User<wbr>Pool<wbr>Password<wbr>Policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3980,7 +3980,7 @@ A container for information about the user pool password policy.
             <td class="align-top">schemas</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschema">List[user_<wbr>pool_<wbr>schema]</a></code>
+                <code><a href="#userpoolschema">List[User<wbr>Pool<wbr>Schema]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4010,7 +4010,7 @@ A string representing the SMS authentication message.
             <td class="align-top">sms_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolsmsconfiguration">Dict[user_<wbr>pool_<wbr>sms_<wbr>configuration]</a></code>
+                <code><a href="#userpoolsmsconfiguration">Dict[User<wbr>Pool<wbr>Sms<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4040,7 +4040,7 @@ A string representing the SMS verification message. Conflicts with `verification
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4055,7 +4055,7 @@ A mapping of tags to assign to the User Pool.
             <td class="align-top">user_<wbr>pool_<wbr>add_<wbr>ons</td>
             <td class="align-top">
                 
-                <code><a href="#userpooluserpooladdons">Dict[user_<wbr>pool_<wbr>user_<wbr>pool_<wbr>add_<wbr>ons]</a></code>
+                <code><a href="#userpooluserpooladdons">Dict[User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4085,7 +4085,7 @@ Specifies whether email addresses or phone numbers can be specified as usernames
             <td class="align-top">verification_<wbr>message_<wbr>template</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolverificationmessagetemplate">Dict[user_<wbr>pool_<wbr>verification_<wbr>message_<wbr>template]</a></code>
+                <code><a href="#userpoolverificationmessagetemplate">Dict[User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4340,7 +4340,7 @@ The invite message template structure.
     <tbody>
     
         <tr>
-            <td class="align-top">allow_<wbr>admin_<wbr>create_<wbr>user_<wbr>only</td>
+            <td class="align-top">allow<wbr>Admin<wbr>Create<wbr>User<wbr>Only</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -4355,10 +4355,10 @@ Set to True if only the administrator is allowed to create user profiles. Set to
         </tr>
     
         <tr>
-            <td class="align-top">invite_<wbr>message_<wbr>template</td>
+            <td class="align-top">invite<wbr>Message<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfiginvitemessagetemplate">Dict[user_<wbr>pool_<wbr>admin_<wbr>create_<wbr>user_<wbr>config_<wbr>invite_<wbr>message_<wbr>template]</a></code>
+                <code><a href="#userpooladmincreateuserconfiginvitemessagetemplate">Dict[User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4370,7 +4370,7 @@ The invite message template structure.
         </tr>
     
         <tr>
-            <td class="align-top">unused_<wbr>account_<wbr>validity_<wbr>days</td>
+            <td class="align-top">unused<wbr>Account<wbr>Validity<wbr>Days</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -4621,7 +4621,7 @@ The SMS message template. Must contain the `{####}` placeholder. Conflicts with 
     <tbody>
     
         <tr>
-            <td class="align-top">email_<wbr>message</td>
+            <td class="align-top">email<wbr>Message</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4636,7 +4636,7 @@ The email message template. Must contain the `{####}` placeholder. Conflicts wit
         </tr>
     
         <tr>
-            <td class="align-top">email_<wbr>subject</td>
+            <td class="align-top">email<wbr>Subject</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4651,7 +4651,7 @@ The subject line for the email message template. Conflicts with `email_verificat
         </tr>
     
         <tr>
-            <td class="align-top">sms_<wbr>message</td>
+            <td class="align-top">sms<wbr>Message</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4857,7 +4857,7 @@ If true, a device is only remembered on user prompt.
     <tbody>
     
         <tr>
-            <td class="align-top">challenge_<wbr>required_<wbr>on_<wbr>new_<wbr>device</td>
+            <td class="align-top">challenge<wbr>Required<wbr>On<wbr>New<wbr>Device</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -4872,7 +4872,7 @@ Indicates whether a challenge is required on a new device. Only applicable to a 
         </tr>
     
         <tr>
-            <td class="align-top">device_<wbr>only_<wbr>remembered_<wbr>on_<wbr>user_<wbr>prompt</td>
+            <td class="align-top">device<wbr>Only<wbr>Remembered<wbr>On<wbr>User<wbr>Prompt</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -5123,7 +5123,7 @@ The ARN of the email source.
     <tbody>
     
         <tr>
-            <td class="align-top">email_<wbr>sending_<wbr>account</td>
+            <td class="align-top">email<wbr>Sending<wbr>Account</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5138,7 +5138,7 @@ Instruct Cognito to either use its built-in functional or Amazon SES to send out
         </tr>
     
         <tr>
-            <td class="align-top">reply_<wbr>to_<wbr>email_<wbr>address</td>
+            <td class="align-top">reply<wbr>To<wbr>Email<wbr>Address</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5719,7 +5719,7 @@ Verifies the authentication challenge response.
     <tbody>
     
         <tr>
-            <td class="align-top">create_<wbr>auth_<wbr>challenge</td>
+            <td class="align-top">create<wbr>Auth<wbr>Challenge</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5734,7 +5734,7 @@ The ARN of the lambda creating an authentication challenge.
         </tr>
     
         <tr>
-            <td class="align-top">custom_<wbr>message</td>
+            <td class="align-top">custom<wbr>Message</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5749,7 +5749,7 @@ A custom Message AWS Lambda trigger.
         </tr>
     
         <tr>
-            <td class="align-top">define_<wbr>auth_<wbr>challenge</td>
+            <td class="align-top">define<wbr>Auth<wbr>Challenge</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5764,7 +5764,7 @@ Defines the authentication challenge.
         </tr>
     
         <tr>
-            <td class="align-top">post_<wbr>authentication</td>
+            <td class="align-top">post<wbr>Authentication</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5779,7 +5779,7 @@ A post-authentication AWS Lambda trigger.
         </tr>
     
         <tr>
-            <td class="align-top">post_<wbr>confirmation</td>
+            <td class="align-top">post<wbr>Confirmation</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5794,7 +5794,7 @@ A post-confirmation AWS Lambda trigger.
         </tr>
     
         <tr>
-            <td class="align-top">pre_<wbr>authentication</td>
+            <td class="align-top">pre<wbr>Authentication</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5809,7 +5809,7 @@ A pre-authentication AWS Lambda trigger.
         </tr>
     
         <tr>
-            <td class="align-top">pre_<wbr>sign_<wbr>up</td>
+            <td class="align-top">pre<wbr>Sign<wbr>Up</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5824,7 +5824,7 @@ A pre-registration AWS Lambda trigger.
         </tr>
     
         <tr>
-            <td class="align-top">pre_<wbr>token_<wbr>generation</td>
+            <td class="align-top">pre<wbr>Token<wbr>Generation</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5839,7 +5839,7 @@ Allow to customize identity token claims before token generation.
         </tr>
     
         <tr>
-            <td class="align-top">user_<wbr>migration</td>
+            <td class="align-top">user<wbr>Migration</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5854,7 +5854,7 @@ The user migration Lambda config type.
         </tr>
     
         <tr>
-            <td class="align-top">verify_<wbr>auth_<wbr>challenge_<wbr>response</td>
+            <td class="align-top">verify<wbr>Auth<wbr>Challenge<wbr>Response</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -6240,7 +6240,7 @@ In the password policy you have set, refers to the number of days a temporary pa
     <tbody>
     
         <tr>
-            <td class="align-top">minimum_<wbr>length</td>
+            <td class="align-top">minimum<wbr>Length</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -6255,7 +6255,7 @@ The minimum length of the password policy that you have set.
         </tr>
     
         <tr>
-            <td class="align-top">require_<wbr>lowercase</td>
+            <td class="align-top">require<wbr>Lowercase</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -6300,7 +6300,7 @@ Whether you have required users to use at least one symbol in their password.
         </tr>
     
         <tr>
-            <td class="align-top">require_<wbr>uppercase</td>
+            <td class="align-top">require<wbr>Uppercase</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -6315,7 +6315,7 @@ Whether you have required users to use at least one uppercase letter in their pa
         </tr>
     
         <tr>
-            <td class="align-top">temporary_<wbr>password_<wbr>validity_<wbr>days</td>
+            <td class="align-top">temporary<wbr>Password<wbr>Validity<wbr>Days</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -6746,7 +6746,7 @@ Specifies whether a user pool attribute is required. If the attribute is require
     <tbody>
     
         <tr>
-            <td class="align-top">attribute_<wbr>data_<wbr>type</td>
+            <td class="align-top">attribute<wbr>Data<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -6761,7 +6761,7 @@ The attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime
         </tr>
     
         <tr>
-            <td class="align-top">developer_<wbr>only_<wbr>attribute</td>
+            <td class="align-top">developer<wbr>Only<wbr>Attribute</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -6806,10 +6806,10 @@ The name of the attribute.
         </tr>
     
         <tr>
-            <td class="align-top">number_<wbr>attribute_<wbr>constraints</td>
+            <td class="align-top">number<wbr>Attribute<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschemanumberattributeconstraints">Dict[user_<wbr>pool_<wbr>schema_<wbr>number_<wbr>attribute_<wbr>constraints]</a></code>
+                <code><a href="#userpoolschemanumberattributeconstraints">Dict[User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6836,10 +6836,10 @@ Specifies whether a user pool attribute is required. If the attribute is require
         </tr>
     
         <tr>
-            <td class="align-top">string_<wbr>attribute_<wbr>constraints</td>
+            <td class="align-top">string<wbr>Attribute<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschemastringattributeconstraints">Dict[user_<wbr>pool_<wbr>schema_<wbr>string_<wbr>attribute_<wbr>constraints]</a></code>
+                <code><a href="#userpoolschemastringattributeconstraints">Dict[User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7042,7 +7042,7 @@ The minimum value of an attribute that is of the number data type.
     <tbody>
     
         <tr>
-            <td class="align-top">max_<wbr>value</td>
+            <td class="align-top">max<wbr>Value</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7057,7 +7057,7 @@ The maximum value of an attribute that is of the number data type.
         </tr>
     
         <tr>
-            <td class="align-top">min_<wbr>value</td>
+            <td class="align-top">min<wbr>Value</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7263,7 +7263,7 @@ The minimum length of an attribute value of the string type.
     <tbody>
     
         <tr>
-            <td class="align-top">max_<wbr>length</td>
+            <td class="align-top">max<wbr>Length</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7278,7 +7278,7 @@ The maximum length of an attribute value of the string type.
         </tr>
     
         <tr>
-            <td class="align-top">min_<wbr>length</td>
+            <td class="align-top">min<wbr>Length</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7484,7 +7484,7 @@ The ARN of the Amazon SNS caller. This is usually the IAM role that you&#39;ve g
     <tbody>
     
         <tr>
-            <td class="align-top">external_<wbr>id</td>
+            <td class="align-top">external<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7499,7 +7499,7 @@ The external ID used in IAM role trust relationships. For more information about
         </tr>
     
         <tr>
-            <td class="align-top">sns_<wbr>caller_<wbr>arn</td>
+            <td class="align-top">sns<wbr>Caller<wbr>Arn</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7660,7 +7660,7 @@ The mode for advanced security, must be one of `OFF`, `AUDIT` or `ENFORCED`.
     <tbody>
     
         <tr>
-            <td class="align-top">advanced_<wbr>security_<wbr>mode</td>
+            <td class="align-top">advanced<wbr>Security<wbr>Mode</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8046,7 +8046,7 @@ The SMS message template. Must contain the `{####}` placeholder. Conflicts with 
     <tbody>
     
         <tr>
-            <td class="align-top">default_<wbr>email_<wbr>option</td>
+            <td class="align-top">default<wbr>Email<wbr>Option</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8061,7 +8061,7 @@ The default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LI
         </tr>
     
         <tr>
-            <td class="align-top">email_<wbr>message</td>
+            <td class="align-top">email<wbr>Message</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8076,7 +8076,7 @@ The email message template. Must contain the `{####}` placeholder. Conflicts wit
         </tr>
     
         <tr>
-            <td class="align-top">email_<wbr>message_<wbr>by_<wbr>link</td>
+            <td class="align-top">email<wbr>Message<wbr>By<wbr>Link</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8091,7 +8091,7 @@ The email message template for sending a confirmation link to the user, it must 
         </tr>
     
         <tr>
-            <td class="align-top">email_<wbr>subject</td>
+            <td class="align-top">email<wbr>Subject</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8106,7 +8106,7 @@ The subject line for the email message template. Conflicts with `email_verificat
         </tr>
     
         <tr>
-            <td class="align-top">email_<wbr>subject_<wbr>by_<wbr>link</td>
+            <td class="align-top">email<wbr>Subject<wbr>By<wbr>Link</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8121,7 +8121,7 @@ The subject line for the email message template for sending a confirmation link 
         </tr>
     
         <tr>
-            <td class="align-top">sms_<wbr>message</td>
+            <td class="align-top">sms<wbr>Message</td>
             <td class="align-top">
                 
                 <code>str</code>

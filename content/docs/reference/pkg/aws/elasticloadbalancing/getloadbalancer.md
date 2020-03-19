@@ -238,7 +238,7 @@ The unique name of the load balancer.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1070,7 +1070,7 @@ The following output properties are available:
             <td class="align-top">access_<wbr>logs</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalanceraccesslogs">Dict[get_<wbr>load_<wbr>balancer_<wbr>access_<wbr>logs]</a></code>
+                <code><a href="#getloadbalanceraccesslogs">Dict[Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1154,7 +1154,7 @@ The following output properties are available:
             <td class="align-top">health_<wbr>check</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalancerhealthcheck">Dict[get_<wbr>load_<wbr>balancer_<wbr>health_<wbr>check]</a></code>
+                <code><a href="#getloadbalancerhealthcheck">Dict[Get<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1215,7 +1215,7 @@ The following output properties are available:
             <td class="align-top">listeners</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalancerlistener">List[get_<wbr>load_<wbr>balancer_<wbr>listener]</a></code>
+                <code><a href="#getloadbalancerlistener">List[Get<wbr>Load<wbr>Balancer<wbr>Listener]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1287,7 +1287,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1949,7 +1949,7 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">healthy_<wbr>threshold</td>
+            <td class="align-top">healthy<wbr>Threshold</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2005,7 +2005,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">unhealthy_<wbr>threshold</td>
+            <td class="align-top">unhealthy<wbr>Threshold</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2344,7 +2344,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">instance_<wbr>protocol</td>
+            <td class="align-top">instance<wbr>Protocol</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2372,7 +2372,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">lb_<wbr>protocol</td>
+            <td class="align-top">lb<wbr>Protocol</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2386,7 +2386,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">ssl_<wbr>certificate_<wbr>id</td>
+            <td class="align-top">ssl<wbr>Certificate<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>

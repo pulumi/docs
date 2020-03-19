@@ -468,7 +468,7 @@ The ARN of the policy that is used to set the permissions boundary for the user.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -923,7 +923,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of tags for the IAM user
  {{% /md %}}
@@ -1486,7 +1486,7 @@ The ARN of the policy that is used to set the permissions boundary for the user.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

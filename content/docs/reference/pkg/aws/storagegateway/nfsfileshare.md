@@ -889,7 +889,7 @@ The ARN of the backed storage used for storing file data.
             <td class="align-top">nfs_<wbr>file_<wbr>share_<wbr>defaults</td>
             <td class="align-top">
                 
-                <code><a href="#nfsfilesharenfsfilesharedefaults">Dict[nfs_<wbr>file_<wbr>share_<wbr>nfs_<wbr>file_<wbr>share_<wbr>defaults]</a></code>
+                <code><a href="#nfsfilesharenfsfilesharedefaults">Dict[Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -979,7 +979,7 @@ Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSqua
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1829,7 +1829,7 @@ The following output properties are available:
             <td class="align-top">nfs_<wbr>file_<wbr>share_<wbr>defaults</td>
             <td class="align-top">
                 
-                <code><a href="#nfsfilesharenfsfilesharedefaults">Dict[nfs_<wbr>file_<wbr>share_<wbr>nfs_<wbr>file_<wbr>share_<wbr>defaults]</a></code>
+                <code><a href="#nfsfilesharenfsfilesharedefaults">Dict[Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument with file share default values. More information below.
  {{% /md %}}
@@ -1907,7 +1907,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -2914,7 +2914,7 @@ The ARN of the backed storage used for storing file data.
             <td class="align-top">nfs_<wbr>file_<wbr>share_<wbr>defaults</td>
             <td class="align-top">
                 
-                <code><a href="#nfsfilesharenfsfilesharedefaults">Dict[nfs_<wbr>file_<wbr>share_<wbr>nfs_<wbr>file_<wbr>share_<wbr>defaults]</a></code>
+                <code><a href="#nfsfilesharenfsfilesharedefaults">Dict[Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3004,7 +3004,7 @@ Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSqua
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3304,7 +3304,7 @@ The default owner ID for the file share (unless the files have another owner ID 
     <tbody>
     
         <tr>
-            <td class="align-top">directory_<wbr>mode</td>
+            <td class="align-top">directory<wbr>Mode</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3319,7 +3319,7 @@ The Unix directory mode in the string form &#34;nnnn&#34;. Defaults to `&#34;077
         </tr>
     
         <tr>
-            <td class="align-top">file_<wbr>mode</td>
+            <td class="align-top">file<wbr>Mode</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3334,7 +3334,7 @@ The Unix file mode in the string form &#34;nnnn&#34;. Defaults to `&#34;0666&#34
         </tr>
     
         <tr>
-            <td class="align-top">group_<wbr>id</td>
+            <td class="align-top">group<wbr>Id</td>
             <td class="align-top">
                 
                 <code>float</code>

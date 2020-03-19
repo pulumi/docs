@@ -1998,7 +1998,7 @@ The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` ne
             <td class="align-top">logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">Dict[cluster_<wbr>logging]</a></code>
+                <code><a href="#clusterlogging">Dict[Cluster<wbr>Logging]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2167,7 +2167,7 @@ The name of the cluster the source snapshot was created from.
             <td class="align-top">snapshot_<wbr>copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">Dict[cluster_<wbr>snapshot_<wbr>copy]</a></code>
+                <code><a href="#clustersnapshotcopy">Dict[Cluster<wbr>Snapshot<wbr>Copy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2197,7 +2197,7 @@ The name of the snapshot from which to create the new cluster.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4022,7 +4022,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
             <td class="align-top">logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">Dict[cluster_<wbr>logging]</a></code>
+                <code><a href="#clusterlogging">Dict[Cluster<wbr>Logging]</a></code>
             </td>
             <td class="align-top">{{% md %}} Logging, documented below.
  {{% /md %}}
@@ -4169,7 +4169,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
             <td class="align-top">snapshot_<wbr>copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">Dict[cluster_<wbr>snapshot_<wbr>copy]</a></code>
+                <code><a href="#clustersnapshotcopy">Dict[Cluster<wbr>Snapshot<wbr>Copy]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration of automatic copy of snapshots from one region to another. Documented below.
  {{% /md %}}
@@ -4195,7 +4195,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -6319,7 +6319,7 @@ The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` ne
             <td class="align-top">logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">Dict[cluster_<wbr>logging]</a></code>
+                <code><a href="#clusterlogging">Dict[Cluster<wbr>Logging]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6488,7 +6488,7 @@ The name of the cluster the source snapshot was created from.
             <td class="align-top">snapshot_<wbr>copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">Dict[cluster_<wbr>snapshot_<wbr>copy]</a></code>
+                <code><a href="#clustersnapshotcopy">Dict[Cluster<wbr>Snapshot<wbr>Copy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6518,7 +6518,7 @@ The name of the snapshot from which to create the new cluster.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7073,7 +7073,7 @@ The number of days to retain automated snapshots in the destination region after
     <tbody>
     
         <tr>
-            <td class="align-top">destination_<wbr>region</td>
+            <td class="align-top">destination<wbr>Region</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7088,7 +7088,7 @@ The destination region that you want to copy snapshots to.
         </tr>
     
         <tr>
-            <td class="align-top">grant_<wbr>name</td>
+            <td class="align-top">grant<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>

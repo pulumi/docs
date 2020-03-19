@@ -510,7 +510,7 @@ The rule type. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -525,7 +525,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">target_<wbr>ips</td>
             <td class="align-top">
                 
-                <code><a href="#resolverruletargetip">List[resolver_<wbr>rule_<wbr>target_<wbr>ip]</a></code>
+                <code><a href="#resolverruletargetip">List[Resolver<wbr>Rule<wbr>Target<wbr>Ip]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1088,7 +1088,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1101,7 +1101,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
             <td class="align-top">target_<wbr>ips</td>
             <td class="align-top">
                 
-                <code><a href="#resolverruletargetip">List[resolver_<wbr>rule_<wbr>target_<wbr>ip]</a></code>
+                <code><a href="#resolverruletargetip">List[Resolver<wbr>Rule<wbr>Target<wbr>Ip]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) indicating the IPs that you want Resolver to forward DNS queries to (documented below).
 This argument should only be specified for `FORWARD` type rules.
@@ -1775,7 +1775,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1790,7 +1790,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">target_<wbr>ips</td>
             <td class="align-top">
                 
-                <code><a href="#resolverruletargetip">List[resolver_<wbr>rule_<wbr>target_<wbr>ip]</a></code>
+                <code><a href="#resolverruletargetip">List[Resolver<wbr>Rule<wbr>Target<wbr>Ip]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

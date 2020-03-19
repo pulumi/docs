@@ -480,7 +480,7 @@ The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: 
             <td class="align-top">certificate_<wbr>authority_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthoritycertificateauthorityconfiguration">Dict[certificate_<wbr>authority_<wbr>certificate_<wbr>authority_<wbr>configuration]</a></code>
+                <code><a href="#certificateauthoritycertificateauthorityconfiguration">Dict[Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -525,7 +525,7 @@ The number of days to make a CA restorable after it has been deleted, must be be
             <td class="align-top">revocation_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthorityrevocationconfiguration">Dict[certificate_<wbr>authority_<wbr>revocation_<wbr>configuration]</a></code>
+                <code><a href="#certificateauthorityrevocationconfiguration">Dict[Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -540,7 +540,7 @@ Nested argument containing revocation configuration. Defined below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1236,7 +1236,7 @@ The following output properties are available:
             <td class="align-top">certificate_<wbr>authority_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthoritycertificateauthorityconfiguration">Dict[certificate_<wbr>authority_<wbr>certificate_<wbr>authority_<wbr>configuration]</a></code>
+                <code><a href="#certificateauthoritycertificateauthorityconfiguration">Dict[Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing algorithms and certificate subject information. Defined below.
  {{% /md %}}
@@ -1327,7 +1327,7 @@ The following output properties are available:
             <td class="align-top">revocation_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthorityrevocationconfiguration">Dict[certificate_<wbr>authority_<wbr>revocation_<wbr>configuration]</a></code>
+                <code><a href="#certificateauthorityrevocationconfiguration">Dict[Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing revocation configuration. Defined below.
  {{% /md %}}
@@ -1366,7 +1366,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Specifies a key-value map of user-defined tags that are attached to the certificate authority.
  {{% /md %}}
@@ -2191,7 +2191,7 @@ Base64-encoded certificate authority (CA) certificate. Only available after the 
             <td class="align-top">certificate_<wbr>authority_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthoritycertificateauthorityconfiguration">Dict[certificate_<wbr>authority_<wbr>certificate_<wbr>authority_<wbr>configuration]</a></code>
+                <code><a href="#certificateauthoritycertificateauthorityconfiguration">Dict[Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2296,7 +2296,7 @@ The number of days to make a CA restorable after it has been deleted, must be be
             <td class="align-top">revocation_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthorityrevocationconfiguration">Dict[certificate_<wbr>authority_<wbr>revocation_<wbr>configuration]</a></code>
+                <code><a href="#certificateauthorityrevocationconfiguration">Dict[Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2341,7 +2341,7 @@ Status of the certificate authority.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2611,7 +2611,7 @@ Nested argument that contains X.500 distinguished name information. At least one
     <tbody>
     
         <tr>
-            <td class="align-top">key_<wbr>algorithm</td>
+            <td class="align-top">key<wbr>Algorithm</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2626,7 +2626,7 @@ Type of the public key algorithm and size, in bits, of the key pair that your ke
         </tr>
     
         <tr>
-            <td class="align-top">signing_<wbr>algorithm</td>
+            <td class="align-top">signing<wbr>Algorithm</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2644,7 +2644,7 @@ Name of the algorithm your private CA uses to sign certificate requests. Valid v
             <td class="align-top">subject</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthoritycertificateauthorityconfigurationsubject">Dict[certificate_<wbr>authority_<wbr>certificate_<wbr>authority_<wbr>configuration_<wbr>subject]</a></code>
+                <code><a href="#certificateauthoritycertificateauthorityconfigurationsubject">Dict[Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Subject]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3342,7 +3342,7 @@ A title such as Mr. or Ms. which is pre-pended to the name to refer formally to 
     <tbody>
     
         <tr>
-            <td class="align-top">common_<wbr>name</td>
+            <td class="align-top">common<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3372,7 +3372,7 @@ Two digit code that specifies the country in which the certificate subject locat
         </tr>
     
         <tr>
-            <td class="align-top">distinguished_<wbr>name_<wbr>qualifier</td>
+            <td class="align-top">distinguished<wbr>Name<wbr>Qualifier</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3387,7 +3387,7 @@ Disambiguating information for the certificate subject.
         </tr>
     
         <tr>
-            <td class="align-top">generation_<wbr>qualifier</td>
+            <td class="align-top">generation<wbr>Qualifier</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3402,7 +3402,7 @@ Typically a qualifier appended to the name of an individual. Examples include Jr
         </tr>
     
         <tr>
-            <td class="align-top">given_<wbr>name</td>
+            <td class="align-top">given<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3462,7 +3462,7 @@ Legal name of the organization with which the certificate subject is affiliated.
         </tr>
     
         <tr>
-            <td class="align-top">organizational_<wbr>unit</td>
+            <td class="align-top">organizational<wbr>Unit</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3683,10 +3683,10 @@ Nested argument containing configuration of the certificate revocation list (CRL
     <tbody>
     
         <tr>
-            <td class="align-top">crl_<wbr>configuration</td>
+            <td class="align-top">crl<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">Dict[certificate_<wbr>authority_<wbr>revocation_<wbr>configuration_<wbr>crl_<wbr>configuration]</a></code>
+                <code><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">Dict[Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3979,7 +3979,7 @@ Name of the S3 bucket that contains the CRL. If you do not provide a value for t
     <tbody>
     
         <tr>
-            <td class="align-top">custom_<wbr>cname</td>
+            <td class="align-top">custom<wbr>Cname</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4009,7 +4009,7 @@ Boolean value that specifies whether certificate revocation lists (CRLs) are ena
         </tr>
     
         <tr>
-            <td class="align-top">expiration_<wbr>in_<wbr>days</td>
+            <td class="align-top">expiration<wbr>In<wbr>Days</td>
             <td class="align-top">
                 
                 <code>float</code>

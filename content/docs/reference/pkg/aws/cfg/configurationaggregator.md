@@ -370,7 +370,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">account_<wbr>aggregation_<wbr>source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatoraccountaggregationsource">Dict[configuration_<wbr>aggregator_<wbr>account_<wbr>aggregation_<wbr>source]</a></code>
+                <code><a href="#configurationaggregatoraccountaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -400,7 +400,7 @@ The name of the configuration aggregator.
             <td class="align-top">organization_<wbr>aggregation_<wbr>source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatororganizationaggregationsource">Dict[configuration_<wbr>aggregator_<wbr>organization_<wbr>aggregation_<wbr>source]</a></code>
+                <code><a href="#configurationaggregatororganizationaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -415,7 +415,7 @@ The organization to aggregate config data from as documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -719,7 +719,7 @@ The following output properties are available:
             <td class="align-top">account_<wbr>aggregation_<wbr>source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatoraccountaggregationsource">Dict[configuration_<wbr>aggregator_<wbr>account_<wbr>aggregation_<wbr>source]</a></code>
+                <code><a href="#configurationaggregatoraccountaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} The account(s) to aggregate config data from as documented below.
  {{% /md %}}
@@ -758,7 +758,7 @@ The following output properties are available:
             <td class="align-top">organization_<wbr>aggregation_<wbr>source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatororganizationaggregationsource">Dict[configuration_<wbr>aggregator_<wbr>organization_<wbr>aggregation_<wbr>source]</a></code>
+                <code><a href="#configurationaggregatororganizationaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} The organization to aggregate config data from as documented below.
  {{% /md %}}
@@ -771,7 +771,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1148,7 +1148,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">account_<wbr>aggregation_<wbr>source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatoraccountaggregationsource">Dict[configuration_<wbr>aggregator_<wbr>account_<wbr>aggregation_<wbr>source]</a></code>
+                <code><a href="#configurationaggregatoraccountaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1193,7 +1193,7 @@ The name of the configuration aggregator.
             <td class="align-top">organization_<wbr>aggregation_<wbr>source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatororganizationaggregationsource">Dict[configuration_<wbr>aggregator_<wbr>organization_<wbr>aggregation_<wbr>source]</a></code>
+                <code><a href="#configurationaggregatororganizationaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1208,7 +1208,7 @@ The organization to aggregate config data from as documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1478,7 +1478,7 @@ List of 12-digit account IDs of the account(s) being aggregated.
         </tr>
     
         <tr>
-            <td class="align-top">all_<wbr>regions</td>
+            <td class="align-top">all<wbr>Regions</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1744,7 +1744,7 @@ ARN of the IAM role used to retrieve AWS Organization details associated with th
     <tbody>
     
         <tr>
-            <td class="align-top">all_<wbr>regions</td>
+            <td class="align-top">all<wbr>Regions</td>
             <td class="align-top">
                 
                 <code>bool</code>

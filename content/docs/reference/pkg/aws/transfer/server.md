@@ -592,7 +592,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">endpoint_<wbr>details</td>
             <td class="align-top">
                 
-                <code><a href="#serverendpointdetails">Dict[server_<wbr>endpoint_<wbr>details]</a></code>
+                <code><a href="#serverendpointdetails">Dict[Server<wbr>Endpoint<wbr>Details]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -697,7 +697,7 @@ Amazon Resource Name (ARN) of an IAM role that allows the service to write your 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1315,7 +1315,7 @@ The following output properties are available:
             <td class="align-top">endpoint_<wbr>details</td>
             <td class="align-top">
                 
-                <code><a href="#serverendpointdetails">Dict[server_<wbr>endpoint_<wbr>details]</a></code>
+                <code><a href="#serverendpointdetails">Dict[Server<wbr>Endpoint<wbr>Details]</a></code>
             </td>
             <td class="align-top">{{% md %}} The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
  {{% /md %}}
@@ -1419,7 +1419,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2154,7 +2154,7 @@ The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.ama
             <td class="align-top">endpoint_<wbr>details</td>
             <td class="align-top">
                 
-                <code><a href="#serverendpointdetails">Dict[server_<wbr>endpoint_<wbr>details]</a></code>
+                <code><a href="#serverendpointdetails">Dict[Server<wbr>Endpoint<wbr>Details]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2274,7 +2274,7 @@ Amazon Resource Name (ARN) of an IAM role that allows the service to write your 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

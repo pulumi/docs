@@ -313,7 +313,7 @@ The service name that can be specified when creating a VPC endpoint.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1023,7 +1023,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">service_<wbr>id</td>
+            <td class="align-top">service<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1064,7 +1064,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the resource.
  {{% /md %}}
@@ -1074,7 +1074,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">vpc_<wbr>endpoint_<wbr>policy_<wbr>supported</td>
+            <td class="align-top">vpc<wbr>Endpoint<wbr>Policy<wbr>Supported</td>
             <td class="align-top">
                 
                 <code>bool</code>

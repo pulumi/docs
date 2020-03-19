@@ -495,7 +495,7 @@ An array of strings that either contain Amazon Resource Names (ARNs) or match pa
             <td class="align-top">selection_<wbr>tags</td>
             <td class="align-top">
                 
-                <code><a href="#selectionselectiontag">List[selection_<wbr>selection_<wbr>tag]</a></code>
+                <code><a href="#selectionselectiontag">List[Selection<wbr>Selection<wbr>Tag]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -851,7 +851,7 @@ The following output properties are available:
             <td class="align-top">selection_<wbr>tags</td>
             <td class="align-top">
                 
-                <code><a href="#selectionselectiontag">List[selection_<wbr>selection_<wbr>tag]</a></code>
+                <code><a href="#selectionselectiontag">List[Selection<wbr>Selection<wbr>Tag]</a></code>
             </td>
             <td class="align-top">{{% md %}} Tag-based conditions used to specify a set of resources to assign to a backup plan.
  {{% /md %}}
@@ -1288,7 +1288,7 @@ An array of strings that either contain Amazon Resource Names (ARNs) or match pa
             <td class="align-top">selection_<wbr>tags</td>
             <td class="align-top">
                 
-                <code><a href="#selectionselectiontag">List[selection_<wbr>selection_<wbr>tag]</a></code>
+                <code><a href="#selectionselectiontag">List[Selection<wbr>Selection<wbr>Tag]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

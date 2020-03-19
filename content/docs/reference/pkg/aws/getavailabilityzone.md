@@ -671,7 +671,7 @@ searches only within that region.
         </tr>
     
         <tr>
-            <td class="align-top">name_<wbr>suffix</td>
+            <td class="align-top">name<wbr>Suffix</td>
             <td class="align-top">
                 
                 <code>str</code>

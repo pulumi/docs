@@ -975,7 +975,7 @@ The type of predefined worker that is allocated when a job runs. Accepts a value
             <td class="align-top">command</td>
             <td class="align-top">
                 
-                <code><a href="#jobcommand">Dict[job_<wbr>command]</a></code>
+                <code><a href="#jobcommand">Dict[Job<wbr>Command]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1005,7 +1005,7 @@ The list of connections used for this job.
             <td class="align-top">default_<wbr>arguments</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1035,7 +1035,7 @@ Description of the job.
             <td class="align-top">execution_<wbr>property</td>
             <td class="align-top">
                 
-                <code><a href="#jobexecutionproperty">Dict[job_<wbr>execution_<wbr>property]</a></code>
+                <code><a href="#jobexecutionproperty">Dict[Job<wbr>Execution<wbr>Property]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1110,7 +1110,7 @@ The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python
             <td class="align-top">notification_<wbr>property</td>
             <td class="align-top">
                 
-                <code><a href="#jobnotificationproperty">Dict[job_<wbr>notification_<wbr>property]</a></code>
+                <code><a href="#jobnotificationproperty">Dict[Job<wbr>Notification<wbr>Property]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1170,7 +1170,7 @@ The name of the Security Configuration to be associated with the job.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2037,7 +2037,7 @@ The following output properties are available:
             <td class="align-top">command</td>
             <td class="align-top">
                 
-                <code><a href="#jobcommand">Dict[job_<wbr>command]</a></code>
+                <code><a href="#jobcommand">Dict[Job<wbr>Command]</a></code>
             </td>
             <td class="align-top">{{% md %}} The command of the job. Defined below.
  {{% /md %}}
@@ -2063,7 +2063,7 @@ The following output properties are available:
             <td class="align-top">default_<wbr>arguments</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html) topic in the developer guide.
  {{% /md %}}
@@ -2089,7 +2089,7 @@ The following output properties are available:
             <td class="align-top">execution_<wbr>property</td>
             <td class="align-top">
                 
-                <code><a href="#jobexecutionproperty">Dict[job_<wbr>execution_<wbr>property]</a></code>
+                <code><a href="#jobexecutionproperty">Dict[Job<wbr>Execution<wbr>Property]</a></code>
             </td>
             <td class="align-top">{{% md %}} Execution property of the job. Defined below.
  {{% /md %}}
@@ -2154,7 +2154,7 @@ The following output properties are available:
             <td class="align-top">notification_<wbr>property</td>
             <td class="align-top">
                 
-                <code><a href="#jobnotificationproperty">Dict[job_<wbr>notification_<wbr>property]</a></code>
+                <code><a href="#jobnotificationproperty">Dict[Job<wbr>Notification<wbr>Property]</a></code>
             </td>
             <td class="align-top">{{% md %}} Notification property of the job. Defined below.
  {{% /md %}}
@@ -2206,7 +2206,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -3224,7 +3224,7 @@ Amazon Resource Name (ARN) of Glue Job
             <td class="align-top">command</td>
             <td class="align-top">
                 
-                <code><a href="#jobcommand">Dict[job_<wbr>command]</a></code>
+                <code><a href="#jobcommand">Dict[Job<wbr>Command]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3254,7 +3254,7 @@ The list of connections used for this job.
             <td class="align-top">default_<wbr>arguments</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3284,7 +3284,7 @@ Description of the job.
             <td class="align-top">execution_<wbr>property</td>
             <td class="align-top">
                 
-                <code><a href="#jobexecutionproperty">Dict[job_<wbr>execution_<wbr>property]</a></code>
+                <code><a href="#jobexecutionproperty">Dict[Job<wbr>Execution<wbr>Property]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3359,7 +3359,7 @@ The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python
             <td class="align-top">notification_<wbr>property</td>
             <td class="align-top">
                 
-                <code><a href="#jobnotificationproperty">Dict[job_<wbr>notification_<wbr>property]</a></code>
+                <code><a href="#jobnotificationproperty">Dict[Job<wbr>Notification<wbr>Property]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3419,7 +3419,7 @@ The name of the Security Configuration to be associated with the job.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3719,7 +3719,7 @@ The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python
         </tr>
     
         <tr>
-            <td class="align-top">python_<wbr>version</td>
+            <td class="align-top">python<wbr>Version</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3734,7 +3734,7 @@ The Python version being used to execute a Python shell job. Allowed values are 
         </tr>
     
         <tr>
-            <td class="align-top">script_<wbr>location</td>
+            <td class="align-top">script<wbr>Location</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3895,7 +3895,7 @@ The maximum number of concurrent runs allowed for a job. The default is 1.
     <tbody>
     
         <tr>
-            <td class="align-top">max_<wbr>concurrent_<wbr>runs</td>
+            <td class="align-top">max<wbr>Concurrent<wbr>Runs</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -4056,7 +4056,7 @@ After a job run starts, the number of minutes to wait before sending a job run d
     <tbody>
     
         <tr>
-            <td class="align-top">notify_<wbr>delay_<wbr>after</td>
+            <td class="align-top">notify<wbr>Delay<wbr>After</td>
             <td class="align-top">
                 
                 <code>float</code>

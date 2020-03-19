@@ -497,7 +497,7 @@ Returns information on a specific snapshot_id.
         </tr>
     
         <tr>
-            <td class="align-top">include_<wbr>public</td>
+            <td class="align-top">include<wbr>Public</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -513,7 +513,7 @@ copied or restored by any AWS account, otherwise set this value to false. The de
         </tr>
     
         <tr>
-            <td class="align-top">include_<wbr>shared</td>
+            <td class="align-top">include<wbr>Shared</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -530,7 +530,7 @@ The default is `false`.
         </tr>
     
         <tr>
-            <td class="align-top">most_<wbr>recent</td>
+            <td class="align-top">most<wbr>Recent</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -565,7 +565,7 @@ included in the returned results by default. Possible values are, `automated`, `
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1575,7 +1575,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">include_<wbr>public</td>
+            <td class="align-top">include<wbr>Public</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1587,7 +1587,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">include_<wbr>shared</td>
+            <td class="align-top">include<wbr>Shared</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1625,7 +1625,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">most_<wbr>recent</td>
+            <td class="align-top">most<wbr>Recent</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1650,7 +1650,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">snapshot_<wbr>create_<wbr>time</td>
+            <td class="align-top">snapshot<wbr>Create<wbr>Time</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1716,7 +1716,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags for the resource.
  {{% /md %}}

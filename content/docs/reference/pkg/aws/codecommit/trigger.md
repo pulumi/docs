@@ -265,7 +265,7 @@ The name for the repository. This needs to be less than 100 characters.
             <td class="align-top">triggers</td>
             <td class="align-top">
                 
-                <code><a href="#triggertrigger">List[trigger_<wbr>trigger]</a></code>
+                <code><a href="#triggertrigger">List[Trigger<wbr>Trigger]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -509,7 +509,7 @@ The following output properties are available:
             <td class="align-top">triggers</td>
             <td class="align-top">
                 
-                <code><a href="#triggertrigger">List[trigger_<wbr>trigger]</a></code>
+                <code><a href="#triggertrigger">List[Trigger<wbr>Trigger]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -818,7 +818,7 @@ The name for the repository. This needs to be less than 100 characters.
             <td class="align-top">triggers</td>
             <td class="align-top">
                 
-                <code><a href="#triggertrigger">List[trigger_<wbr>trigger]</a></code>
+                <code><a href="#triggertrigger">List[Trigger<wbr>Trigger]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1177,7 +1177,7 @@ The branches that will be included in the trigger configuration. If no branches 
         </tr>
     
         <tr>
-            <td class="align-top">custom_<wbr>data</td>
+            <td class="align-top">custom<wbr>Data</td>
             <td class="align-top">
                 
                 <code>str</code>

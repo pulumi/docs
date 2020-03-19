@@ -236,7 +236,7 @@ If multiple API Gateway VPC Links are found with this name, an error will be ret
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -663,7 +663,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">status_<wbr>message</td>
+            <td class="align-top">status<wbr>Message</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -679,7 +679,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -689,7 +689,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">target_<wbr>arns</td>
+            <td class="align-top">target<wbr>Arns</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

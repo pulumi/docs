@@ -470,7 +470,7 @@ Name of the DataSync Task.
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#taskoptions">Dict[task_<wbr>options]</a></code>
+                <code><a href="#taskoptions">Dict[Task<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -500,7 +500,7 @@ Amazon Resource Name (ARN) of source DataSync Location.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -934,7 +934,7 @@ The following output properties are available:
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#taskoptions">Dict[task_<wbr>options]</a></code>
+                <code><a href="#taskoptions">Dict[Task<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
  {{% /md %}}
@@ -960,7 +960,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value pairs of resource tags to assign to the DataSync Task.
  {{% /md %}}
@@ -1487,7 +1487,7 @@ Name of the DataSync Task.
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#taskoptions">Dict[task_<wbr>options]</a></code>
+                <code><a href="#taskoptions">Dict[Task<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1517,7 +1517,7 @@ Amazon Resource Name (ARN) of source DataSync Location.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2057,7 +2057,7 @@ A file metadata that shows the last time a file was accessed (that is when the f
         </tr>
     
         <tr>
-            <td class="align-top">bytes_<wbr>per_<wbr>second</td>
+            <td class="align-top">bytes<wbr>Per<wbr>Second</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2102,7 +2102,7 @@ A file metadata that indicates the last time a file was modified (written to) be
         </tr>
     
         <tr>
-            <td class="align-top">posix_<wbr>permissions</td>
+            <td class="align-top">posix<wbr>Permissions</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2117,7 +2117,7 @@ Determines which users or groups can access a file for a specific purpose such a
         </tr>
     
         <tr>
-            <td class="align-top">preserve_<wbr>deleted_<wbr>files</td>
+            <td class="align-top">preserve<wbr>Deleted<wbr>Files</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2132,7 +2132,7 @@ Whether files deleted in the source should be removed or preserved in the destin
         </tr>
     
         <tr>
-            <td class="align-top">preserve_<wbr>devices</td>
+            <td class="align-top">preserve<wbr>Devices</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2162,7 +2162,7 @@ User identifier of the file&#39;s owners. Valid values: `BOTH`, `INT_VALUE`, `NA
         </tr>
     
         <tr>
-            <td class="align-top">verify_<wbr>mode</td>
+            <td class="align-top">verify<wbr>Mode</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -326,7 +326,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">user_<wbr>id</td>
+            <td class="align-top">user<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>

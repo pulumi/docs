@@ -671,7 +671,7 @@ was created.
         </tr>
     
         <tr>
-            <td class="align-top">role_<wbr>id</td>
+            <td class="align-top">role<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>

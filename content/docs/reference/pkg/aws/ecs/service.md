@@ -1233,7 +1233,7 @@ If `true`, this provider will wait for the service to reach a steady state (like
             <td class="align-top">capacity_<wbr>provider_<wbr>strategies</td>
             <td class="align-top">
                 
-                <code><a href="#servicecapacityproviderstrategy">List[service_<wbr>capacity_<wbr>provider_<wbr>strategy]</a></code>
+                <code><a href="#servicecapacityproviderstrategy">List[Service<wbr>Capacity<wbr>Provider<wbr>Strategy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1263,7 +1263,7 @@ ARN of an ECS cluster
             <td class="align-top">deployment_<wbr>controller</td>
             <td class="align-top">
                 
-                <code><a href="#servicedeploymentcontroller">Dict[service_<wbr>deployment_<wbr>controller]</a></code>
+                <code><a href="#servicedeploymentcontroller">Dict[Service<wbr>Deployment<wbr>Controller]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1383,7 +1383,7 @@ The launch type on which to run your service. The valid values are `EC2` and `FA
             <td class="align-top">load_<wbr>balancers</td>
             <td class="align-top">
                 
-                <code><a href="#serviceloadbalancer">List[service_<wbr>load_<wbr>balancer]</a></code>
+                <code><a href="#serviceloadbalancer">List[Service<wbr>Load<wbr>Balancer]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1413,7 +1413,7 @@ The name of the service (up to 255 letters, numbers, hyphens, and underscores)
             <td class="align-top">network_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#servicenetworkconfiguration">Dict[service_<wbr>network_<wbr>configuration]</a></code>
+                <code><a href="#servicenetworkconfiguration">Dict[Service<wbr>Network<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1428,7 +1428,7 @@ The network configuration for the service. This parameter is required for task d
             <td class="align-top">ordered_<wbr>placement_<wbr>strategies</td>
             <td class="align-top">
                 
-                <code><a href="#serviceorderedplacementstrategy">List[service_<wbr>ordered_<wbr>placement_<wbr>strategy]</a></code>
+                <code><a href="#serviceorderedplacementstrategy">List[Service<wbr>Ordered<wbr>Placement<wbr>Strategy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1443,7 +1443,7 @@ Service level strategy rules that are taken into consideration during task place
             <td class="align-top">placement_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#serviceplacementconstraint">List[service_<wbr>placement_<wbr>constraint]</a></code>
+                <code><a href="#serviceplacementconstraint">List[Service<wbr>Placement<wbr>Constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1504,7 +1504,7 @@ The scheduling strategy to use for the service. The valid values are `REPLICA` a
             <td class="align-top">service_<wbr>registries</td>
             <td class="align-top">
                 
-                <code><a href="#serviceserviceregistries">Dict[service_<wbr>service_<wbr>registries]</a></code>
+                <code><a href="#serviceserviceregistries">Dict[Service<wbr>Service<wbr>Registries]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1519,7 +1519,7 @@ The service discovery registries for the service. The maximum number of `service
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2519,7 +2519,7 @@ The following output properties are available:
             <td class="align-top">capacity_<wbr>provider_<wbr>strategies</td>
             <td class="align-top">
                 
-                <code><a href="#servicecapacityproviderstrategy">List[service_<wbr>capacity_<wbr>provider_<wbr>strategy]</a></code>
+                <code><a href="#servicecapacityproviderstrategy">List[Service<wbr>Capacity<wbr>Provider<wbr>Strategy]</a></code>
             </td>
             <td class="align-top">{{% md %}} The capacity provider strategy to use for the service. Can be one or more.  Defined below.
  {{% /md %}}
@@ -2545,7 +2545,7 @@ The following output properties are available:
             <td class="align-top">deployment_<wbr>controller</td>
             <td class="align-top">
                 
-                <code><a href="#servicedeploymentcontroller">Dict[service_<wbr>deployment_<wbr>controller]</a></code>
+                <code><a href="#servicedeploymentcontroller">Dict[Service<wbr>Deployment<wbr>Controller]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing deployment controller configuration. Defined below.
  {{% /md %}}
@@ -2649,7 +2649,7 @@ The following output properties are available:
             <td class="align-top">load_<wbr>balancers</td>
             <td class="align-top">
                 
-                <code><a href="#serviceloadbalancer">List[service_<wbr>load_<wbr>balancer]</a></code>
+                <code><a href="#serviceloadbalancer">List[Service<wbr>Load<wbr>Balancer]</a></code>
             </td>
             <td class="align-top">{{% md %}} A load balancer block. Load balancers documented below.
  {{% /md %}}
@@ -2675,7 +2675,7 @@ The following output properties are available:
             <td class="align-top">network_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#servicenetworkconfiguration">Dict[service_<wbr>network_<wbr>configuration]</a></code>
+                <code><a href="#servicenetworkconfiguration">Dict[Service<wbr>Network<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
  {{% /md %}}
@@ -2688,7 +2688,7 @@ The following output properties are available:
             <td class="align-top">ordered_<wbr>placement_<wbr>strategies</td>
             <td class="align-top">
                 
-                <code><a href="#serviceorderedplacementstrategy">List[service_<wbr>ordered_<wbr>placement_<wbr>strategy]</a></code>
+                <code><a href="#serviceorderedplacementstrategy">List[Service<wbr>Ordered<wbr>Placement<wbr>Strategy]</a></code>
             </td>
             <td class="align-top">{{% md %}} Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. The maximum number of `ordered_placement_strategy` blocks is `5`. Defined below.
  {{% /md %}}
@@ -2701,7 +2701,7 @@ The following output properties are available:
             <td class="align-top">placement_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#serviceplacementconstraint">List[service_<wbr>placement_<wbr>constraint]</a></code>
+                <code><a href="#serviceplacementconstraint">List[Service<wbr>Placement<wbr>Constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} rules that are taken into consideration during task placement. Maximum number of
 `placement_constraints` is `10`. Defined below.
@@ -2754,7 +2754,7 @@ The following output properties are available:
             <td class="align-top">service_<wbr>registries</td>
             <td class="align-top">
                 
-                <code><a href="#serviceserviceregistries">Dict[service_<wbr>service_<wbr>registries]</a></code>
+                <code><a href="#serviceserviceregistries">Dict[Service<wbr>Service<wbr>Registries]</a></code>
             </td>
             <td class="align-top">{{% md %}} The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
  {{% /md %}}
@@ -2767,7 +2767,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -3938,7 +3938,7 @@ If `true`, this provider will wait for the service to reach a steady state (like
             <td class="align-top">capacity_<wbr>provider_<wbr>strategies</td>
             <td class="align-top">
                 
-                <code><a href="#servicecapacityproviderstrategy">List[service_<wbr>capacity_<wbr>provider_<wbr>strategy]</a></code>
+                <code><a href="#servicecapacityproviderstrategy">List[Service<wbr>Capacity<wbr>Provider<wbr>Strategy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3968,7 +3968,7 @@ ARN of an ECS cluster
             <td class="align-top">deployment_<wbr>controller</td>
             <td class="align-top">
                 
-                <code><a href="#servicedeploymentcontroller">Dict[service_<wbr>deployment_<wbr>controller]</a></code>
+                <code><a href="#servicedeploymentcontroller">Dict[Service<wbr>Deployment<wbr>Controller]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4088,7 +4088,7 @@ The launch type on which to run your service. The valid values are `EC2` and `FA
             <td class="align-top">load_<wbr>balancers</td>
             <td class="align-top">
                 
-                <code><a href="#serviceloadbalancer">List[service_<wbr>load_<wbr>balancer]</a></code>
+                <code><a href="#serviceloadbalancer">List[Service<wbr>Load<wbr>Balancer]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4118,7 +4118,7 @@ The name of the service (up to 255 letters, numbers, hyphens, and underscores)
             <td class="align-top">network_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#servicenetworkconfiguration">Dict[service_<wbr>network_<wbr>configuration]</a></code>
+                <code><a href="#servicenetworkconfiguration">Dict[Service<wbr>Network<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4133,7 +4133,7 @@ The network configuration for the service. This parameter is required for task d
             <td class="align-top">ordered_<wbr>placement_<wbr>strategies</td>
             <td class="align-top">
                 
-                <code><a href="#serviceorderedplacementstrategy">List[service_<wbr>ordered_<wbr>placement_<wbr>strategy]</a></code>
+                <code><a href="#serviceorderedplacementstrategy">List[Service<wbr>Ordered<wbr>Placement<wbr>Strategy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4148,7 +4148,7 @@ Service level strategy rules that are taken into consideration during task place
             <td class="align-top">placement_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#serviceplacementconstraint">List[service_<wbr>placement_<wbr>constraint]</a></code>
+                <code><a href="#serviceplacementconstraint">List[Service<wbr>Placement<wbr>Constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4209,7 +4209,7 @@ The scheduling strategy to use for the service. The valid values are `REPLICA` a
             <td class="align-top">service_<wbr>registries</td>
             <td class="align-top">
                 
-                <code><a href="#serviceserviceregistries">Dict[service_<wbr>service_<wbr>registries]</a></code>
+                <code><a href="#serviceserviceregistries">Dict[Service<wbr>Service<wbr>Registries]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4224,7 +4224,7 @@ The service discovery registries for the service. The maximum number of `service
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4514,7 +4514,7 @@ If `true`, this provider will wait for the service to reach a steady state (like
         </tr>
     
         <tr>
-            <td class="align-top">capacity_<wbr>provider</td>
+            <td class="align-top">capacity<wbr>Provider</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4982,7 +4982,7 @@ If `true`, this provider will wait for the service to reach a steady state (like
         </tr>
     
         <tr>
-            <td class="align-top">container_<wbr>port</td>
+            <td class="align-top">container<wbr>Port</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -4996,7 +4996,7 @@ If `true`, this provider will wait for the service to reach a steady state (like
         </tr>
     
         <tr>
-            <td class="align-top">elb_<wbr>name</td>
+            <td class="align-top">elb<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5251,7 +5251,7 @@ If `true`, this provider will wait for the service to reach a steady state (like
     <tbody>
     
         <tr>
-            <td class="align-top">assign_<wbr>public_<wbr>ip</td>
+            <td class="align-top">assign<wbr>Public<wbr>Ip</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -6002,7 +6002,7 @@ If `true`, this provider will wait for the service to reach a steady state (like
         </tr>
     
         <tr>
-            <td class="align-top">container_<wbr>port</td>
+            <td class="align-top">container<wbr>Port</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -6030,7 +6030,7 @@ If `true`, this provider will wait for the service to reach a steady state (like
         </tr>
     
         <tr>
-            <td class="align-top">registry_<wbr>arn</td>
+            <td class="align-top">registry<wbr>Arn</td>
             <td class="align-top">
                 
                 <code>str</code>

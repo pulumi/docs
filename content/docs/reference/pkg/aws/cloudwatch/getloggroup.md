@@ -229,7 +229,7 @@ The name of the Cloudwatch log group
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -618,7 +618,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">creation_<wbr>time</td>
+            <td class="align-top">creation<wbr>Time</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -685,7 +685,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}

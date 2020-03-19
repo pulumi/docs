@@ -381,7 +381,7 @@ The name of the attribute
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#sslnegotiationpolicyattribute">List[ssl_<wbr>negotiation_<wbr>policy_<wbr>attribute]</a></code>
+                <code><a href="#sslnegotiationpolicyattribute">List[Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -703,7 +703,7 @@ should be attached.
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#sslnegotiationpolicyattribute">List[ssl_<wbr>negotiation_<wbr>policy_<wbr>attribute]</a></code>
+                <code><a href="#sslnegotiationpolicyattribute">List[Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute]</a></code>
             </td>
             <td class="align-top">{{% md %}} An SSL Negotiation policy attribute. Each has two properties:
  {{% /md %}}
@@ -1086,7 +1086,7 @@ The name of the attribute
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#sslnegotiationpolicyattribute">List[ssl_<wbr>negotiation_<wbr>policy_<wbr>attribute]</a></code>
+                <code><a href="#sslnegotiationpolicyattribute">List[Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

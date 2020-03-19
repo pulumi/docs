@@ -257,7 +257,7 @@ exactly match a pair on desired instances.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancesfilter">List[get_<wbr>instances_<wbr>filter]</a></code>
+                <code><a href="#getinstancesfilter">List[Get<wbr>Instances<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -271,7 +271,7 @@ several valid keys, for a full reference, check out
         </tr>
     
         <tr>
-            <td class="align-top">instance_<wbr>state_<wbr>names</td>
+            <td class="align-top">instance<wbr>State<wbr>Names</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -286,10 +286,10 @@ A list of instance states that should be applicable to the desired instances. Th
         </tr>
     
         <tr>
-            <td class="align-top">instance_<wbr>tags</td>
+            <td class="align-top">instance<wbr>Tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -664,7 +664,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancesfilter">List[get_<wbr>instances_<wbr>filter]</a></code>
+                <code><a href="#getinstancesfilter">List[Get<wbr>Instances<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -699,7 +699,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">instance_<wbr>state_<wbr>names</td>
+            <td class="align-top">instance<wbr>State<wbr>Names</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -711,10 +711,10 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">instance_<wbr>tags</td>
+            <td class="align-top">instance<wbr>Tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -736,7 +736,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">public_<wbr>ips</td>
+            <td class="align-top">public<wbr>Ips</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

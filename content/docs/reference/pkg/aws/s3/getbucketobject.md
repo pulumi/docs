@@ -425,7 +425,7 @@ The full path to the object inside the bucket
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1589,7 +1589,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">content_<wbr>length</td>
+            <td class="align-top">content<wbr>Length</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1695,7 +1695,7 @@ The following output properties are available:
             <td class="align-top">metadata</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A map of metadata stored with the object in S3
  {{% /md %}}
@@ -1769,7 +1769,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">sse_<wbr>kms_<wbr>key_<wbr>id</td>
+            <td class="align-top">sse<wbr>Kms<wbr>Key<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1798,7 +1798,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the object.
  {{% /md %}}
@@ -1821,7 +1821,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">website_<wbr>redirect_<wbr>location</td>
+            <td class="align-top">website<wbr>Redirect<wbr>Location</td>
             <td class="align-top">
                 
                 <code>str</code>

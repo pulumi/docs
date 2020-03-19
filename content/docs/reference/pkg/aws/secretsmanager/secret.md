@@ -677,7 +677,7 @@ Specifies the ARN of the Lambda function that can rotate the secret.
             <td class="align-top">rotation_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#secretrotationrules">Dict[secret_<wbr>rotation_<wbr>rules]</a></code>
+                <code><a href="#secretrotationrules">Dict[Secret<wbr>Rotation<wbr>Rules]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -692,7 +692,7 @@ A structure that defines the rotation configuration for this secret. Defined bel
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1343,7 +1343,7 @@ The following output properties are available:
             <td class="align-top">rotation_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#secretrotationrules">Dict[secret_<wbr>rotation_<wbr>rules]</a></code>
+                <code><a href="#secretrotationrules">Dict[Secret<wbr>Rotation<wbr>Rules]</a></code>
             </td>
             <td class="align-top">{{% md %}} A structure that defines the rotation configuration for this secret. Defined below.
  {{% /md %}}
@@ -1356,7 +1356,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Specifies a key-value map of user-defined tags that are attached to the secret.
  {{% /md %}}
@@ -2134,7 +2134,7 @@ Specifies the ARN of the Lambda function that can rotate the secret.
             <td class="align-top">rotation_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#secretrotationrules">Dict[secret_<wbr>rotation_<wbr>rules]</a></code>
+                <code><a href="#secretrotationrules">Dict[Secret<wbr>Rotation<wbr>Rules]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2149,7 +2149,7 @@ A structure that defines the rotation configuration for this secret. Defined bel
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2314,7 +2314,7 @@ Specifies the number of days between automatic scheduled rotations of the secret
     <tbody>
     
         <tr>
-            <td class="align-top">automatically_<wbr>after_<wbr>days</td>
+            <td class="align-top">automatically<wbr>After<wbr>Days</td>
             <td class="align-top">
                 
                 <code>float</code>

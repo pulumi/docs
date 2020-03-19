@@ -279,7 +279,7 @@ One or more AWS accounts IDs that can create volumes from the snapshot.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsnapshotidsfilter">List[get_<wbr>snapshot_<wbr>ids_<wbr>filter]</a></code>
+                <code><a href="#getsnapshotidsfilter">List[Get<wbr>Snapshot<wbr>Ids<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -308,7 +308,7 @@ Returns the snapshots owned by the specified owner id. Multiple owners can be sp
         </tr>
     
         <tr>
-            <td class="align-top">restorable_<wbr>by_<wbr>user_<wbr>ids</td>
+            <td class="align-top">restorable<wbr>By<wbr>User<wbr>Ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -604,7 +604,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsnapshotidsfilter">List[get_<wbr>snapshot_<wbr>ids_<wbr>filter]</a></code>
+                <code><a href="#getsnapshotidsfilter">List[Get<wbr>Snapshot<wbr>Ids<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -650,7 +650,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">restorable_<wbr>by_<wbr>user_<wbr>ids</td>
+            <td class="align-top">restorable<wbr>By<wbr>User<wbr>Ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

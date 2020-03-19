@@ -649,7 +649,7 @@ Watermark parameters for the video parameters (documented below)
             <td class="align-top">audio</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudio">Dict[preset_<wbr>audio]</a></code>
+                <code><a href="#presetaudio">Dict[Preset<wbr>Audio]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -664,7 +664,7 @@ Audio parameters object (documented below).
             <td class="align-top">audio_<wbr>codec_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudiocodecoptions">Dict[preset_<wbr>audio_<wbr>codec_<wbr>options]</a></code>
+                <code><a href="#presetaudiocodecoptions">Dict[Preset<wbr>Audio<wbr>Codec<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -724,7 +724,7 @@ The name of the preset. (maximum 40 characters)
             <td class="align-top">thumbnails</td>
             <td class="align-top">
                 
-                <code><a href="#presetthumbnails">Dict[preset_<wbr>thumbnails]</a></code>
+                <code><a href="#presetthumbnails">Dict[Preset<wbr>Thumbnails]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -753,7 +753,7 @@ Thumbnail parameters object (documented below)
             <td class="align-top">video</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideo">Dict[preset_<wbr>video]</a></code>
+                <code><a href="#presetvideo">Dict[Preset<wbr>Video]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -768,7 +768,7 @@ Video parameters object (documented below)
             <td class="align-top">video_<wbr>codec_<wbr>options</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -782,7 +782,7 @@ Video parameters object (documented below)
             <td class="align-top">video_<wbr>watermarks</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideowatermark">List[preset_<wbr>video_<wbr>watermark]</a></code>
+                <code><a href="#presetvideowatermark">List[Preset<wbr>Video<wbr>Watermark]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1327,7 +1327,7 @@ The following output properties are available:
             <td class="align-top">audio</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudio">Dict[preset_<wbr>audio]</a></code>
+                <code><a href="#presetaudio">Dict[Preset<wbr>Audio]</a></code>
             </td>
             <td class="align-top">{{% md %}} Audio parameters object (documented below).
  {{% /md %}}
@@ -1340,7 +1340,7 @@ The following output properties are available:
             <td class="align-top">audio_<wbr>codec_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudiocodecoptions">Dict[preset_<wbr>audio_<wbr>codec_<wbr>options]</a></code>
+                <code><a href="#presetaudiocodecoptions">Dict[Preset<wbr>Audio<wbr>Codec<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} Codec options for the audio parameters (documented below)
  {{% /md %}}
@@ -1392,7 +1392,7 @@ The following output properties are available:
             <td class="align-top">thumbnails</td>
             <td class="align-top">
                 
-                <code><a href="#presetthumbnails">Dict[preset_<wbr>thumbnails]</a></code>
+                <code><a href="#presetthumbnails">Dict[Preset<wbr>Thumbnails]</a></code>
             </td>
             <td class="align-top">{{% md %}} Thumbnail parameters object (documented below)
  {{% /md %}}
@@ -1417,7 +1417,7 @@ The following output properties are available:
             <td class="align-top">video</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideo">Dict[preset_<wbr>video]</a></code>
+                <code><a href="#presetvideo">Dict[Preset<wbr>Video]</a></code>
             </td>
             <td class="align-top">{{% md %}} Video parameters object (documented below)
  {{% /md %}}
@@ -1430,7 +1430,7 @@ The following output properties are available:
             <td class="align-top">video_<wbr>codec_<wbr>options</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1442,7 +1442,7 @@ The following output properties are available:
             <td class="align-top">video_<wbr>watermarks</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideowatermark">List[preset_<wbr>video_<wbr>watermark]</a></code>
+                <code><a href="#presetvideowatermark">List[Preset<wbr>Video<wbr>Watermark]</a></code>
             </td>
             <td class="align-top">{{% md %}} Watermark parameters for the video parameters (documented below)
 * `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
@@ -2098,7 +2098,7 @@ Watermark parameters for the video parameters (documented below)
             <td class="align-top">audio</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudio">Dict[preset_<wbr>audio]</a></code>
+                <code><a href="#presetaudio">Dict[Preset<wbr>Audio]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2113,7 +2113,7 @@ Audio parameters object (documented below).
             <td class="align-top">audio_<wbr>codec_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudiocodecoptions">Dict[preset_<wbr>audio_<wbr>codec_<wbr>options]</a></code>
+                <code><a href="#presetaudiocodecoptions">Dict[Preset<wbr>Audio<wbr>Codec<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2173,7 +2173,7 @@ The name of the preset. (maximum 40 characters)
             <td class="align-top">thumbnails</td>
             <td class="align-top">
                 
-                <code><a href="#presetthumbnails">Dict[preset_<wbr>thumbnails]</a></code>
+                <code><a href="#presetthumbnails">Dict[Preset<wbr>Thumbnails]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2202,7 +2202,7 @@ Thumbnail parameters object (documented below)
             <td class="align-top">video</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideo">Dict[preset_<wbr>video]</a></code>
+                <code><a href="#presetvideo">Dict[Preset<wbr>Video]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2217,7 +2217,7 @@ Video parameters object (documented below)
             <td class="align-top">video_<wbr>codec_<wbr>options</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2231,7 +2231,7 @@ Video parameters object (documented below)
             <td class="align-top">video_<wbr>watermarks</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideowatermark">List[preset_<wbr>video_<wbr>watermark]</a></code>
+                <code><a href="#presetvideowatermark">List[Preset<wbr>Video<wbr>Watermark]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2577,7 +2577,7 @@ The sample rate of the audio stream in the output file, in hertz. Valid values a
     <tbody>
     
         <tr>
-            <td class="align-top">audio_<wbr>packing_<wbr>mode</td>
+            <td class="align-top">audio<wbr>Packing<wbr>Mode</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2592,7 +2592,7 @@ The method of organizing audio channels and tracks. Use Audio:Channels to specif
         </tr>
     
         <tr>
-            <td class="align-top">bit_<wbr>rate</td>
+            <td class="align-top">bit<wbr>Rate</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2637,7 +2637,7 @@ The video codec for the output file. Valid values are `gif`, `H.264`, `mpeg2`, `
         </tr>
     
         <tr>
-            <td class="align-top">sample_<wbr>rate</td>
+            <td class="align-top">sample<wbr>Rate</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2933,7 +2933,7 @@ Whether audio samples are represented with negative and positive numbers (signed
     <tbody>
     
         <tr>
-            <td class="align-top">bit_<wbr>depth</td>
+            <td class="align-top">bit<wbr>Depth</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2948,7 +2948,7 @@ The bit depth of a sample is how many bits of information are included in the au
         </tr>
     
         <tr>
-            <td class="align-top">bit_<wbr>order</td>
+            <td class="align-top">bit<wbr>Order</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3454,7 +3454,7 @@ A value that controls scaling of the watermark. Valid values are: `Fit`, `Stretc
     <tbody>
     
         <tr>
-            <td class="align-top">aspect_<wbr>ratio</td>
+            <td class="align-top">aspect<wbr>Ratio</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3499,7 +3499,7 @@ The approximate number of seconds between thumbnails. The value must be an integ
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>height</td>
+            <td class="align-top">max<wbr>Height</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3514,7 +3514,7 @@ The maximum height of the watermark.
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>width</td>
+            <td class="align-top">max<wbr>Width</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3529,7 +3529,7 @@ The maximum width of the watermark.
         </tr>
     
         <tr>
-            <td class="align-top">padding_<wbr>policy</td>
+            <td class="align-top">padding<wbr>Policy</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3559,7 +3559,7 @@ The width and height of the video in the output file, in pixels. Valid values ar
         </tr>
     
         <tr>
-            <td class="align-top">sizing_<wbr>policy</td>
+            <td class="align-top">sizing<wbr>Policy</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4260,7 +4260,7 @@ A value that controls scaling of the watermark. Valid values are: `Fit`, `Stretc
     <tbody>
     
         <tr>
-            <td class="align-top">aspect_<wbr>ratio</td>
+            <td class="align-top">aspect<wbr>Ratio</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4275,7 +4275,7 @@ The display aspect ratio of the video in the output file. Valid values are: `aut
         </tr>
     
         <tr>
-            <td class="align-top">bit_<wbr>rate</td>
+            <td class="align-top">bit<wbr>Rate</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4305,7 +4305,7 @@ The video codec for the output file. Valid values are `gif`, `H.264`, `mpeg2`, `
         </tr>
     
         <tr>
-            <td class="align-top">display_<wbr>aspect_<wbr>ratio</td>
+            <td class="align-top">display<wbr>Aspect<wbr>Ratio</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4320,7 +4320,7 @@ The value that Elastic Transcoder adds to the metadata in the output file. If yo
         </tr>
     
         <tr>
-            <td class="align-top">fixed_<wbr>gop</td>
+            <td class="align-top">fixed<wbr>Gop</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4335,7 +4335,7 @@ Whether to use a fixed value for Video:FixedGOP. Not applicable for containers o
         </tr>
     
         <tr>
-            <td class="align-top">frame_<wbr>rate</td>
+            <td class="align-top">frame<wbr>Rate</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4350,7 +4350,7 @@ The frames per second for the video stream in the output file. The following val
         </tr>
     
         <tr>
-            <td class="align-top">keyframes_<wbr>max_<wbr>dist</td>
+            <td class="align-top">keyframes<wbr>Max<wbr>Dist</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4365,7 +4365,7 @@ The maximum number of frames between key frames. Not applicable for containers o
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>frame_<wbr>rate</td>
+            <td class="align-top">max<wbr>Frame<wbr>Rate</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4380,7 +4380,7 @@ If you specify auto for FrameRate, Elastic Transcoder uses the frame rate of the
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>height</td>
+            <td class="align-top">max<wbr>Height</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4395,7 +4395,7 @@ The maximum height of the watermark.
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>width</td>
+            <td class="align-top">max<wbr>Width</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4410,7 +4410,7 @@ The maximum width of the watermark.
         </tr>
     
         <tr>
-            <td class="align-top">padding_<wbr>policy</td>
+            <td class="align-top">padding<wbr>Policy</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4440,7 +4440,7 @@ The width and height of the video in the output file, in pixels. Valid values ar
         </tr>
     
         <tr>
-            <td class="align-top">sizing_<wbr>policy</td>
+            <td class="align-top">sizing<wbr>Policy</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5006,7 +5006,7 @@ The amount by which you want the vertical position of the watermark to be offset
     <tbody>
     
         <tr>
-            <td class="align-top">horizontal_<wbr>align</td>
+            <td class="align-top">horizontal<wbr>Align</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5021,7 +5021,7 @@ The horizontal position of the watermark unless you specify a nonzero value for 
         </tr>
     
         <tr>
-            <td class="align-top">horizontal_<wbr>offset</td>
+            <td class="align-top">horizontal<wbr>Offset</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5051,7 +5051,7 @@ A unique identifier for the settings for one watermark. The value of Id can be u
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>height</td>
+            <td class="align-top">max<wbr>Height</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5066,7 +5066,7 @@ The maximum height of the watermark.
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>width</td>
+            <td class="align-top">max<wbr>Width</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5096,7 +5096,7 @@ A percentage that indicates how much you want a watermark to obscure the video i
         </tr>
     
         <tr>
-            <td class="align-top">sizing_<wbr>policy</td>
+            <td class="align-top">sizing<wbr>Policy</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5126,7 +5126,7 @@ A value that determines how Elastic Transcoder interprets values that you specif
         </tr>
     
         <tr>
-            <td class="align-top">vertical_<wbr>align</td>
+            <td class="align-top">vertical<wbr>Align</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5141,7 +5141,7 @@ The vertical position of the watermark unless you specify a nonzero value for `v
         </tr>
     
         <tr>
-            <td class="align-top">vertical_<wbr>offset</td>
+            <td class="align-top">vertical<wbr>Offset</td>
             <td class="align-top">
                 
                 <code>str</code>

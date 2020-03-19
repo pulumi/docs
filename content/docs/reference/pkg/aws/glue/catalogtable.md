@@ -838,7 +838,7 @@ A map of initialization parameters for the SerDe, in key-value form.
             <td class="align-top">partition_<wbr>keys</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablepartitionkey">List[catalog_<wbr>table_<wbr>partition_<wbr>key]</a></code>
+                <code><a href="#catalogtablepartitionkey">List[Catalog<wbr>Table<wbr>Partition<wbr>Key]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -868,7 +868,7 @@ Retention time for this table.
             <td class="align-top">storage_<wbr>descriptor</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptor">Dict[catalog_<wbr>table_<wbr>storage_<wbr>descriptor]</a></code>
+                <code><a href="#catalogtablestoragedescriptor">Dict[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1568,7 +1568,7 @@ The following output properties are available:
             <td class="align-top">partition_<wbr>keys</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablepartitionkey">List[catalog_<wbr>table_<wbr>partition_<wbr>key]</a></code>
+                <code><a href="#catalogtablepartitionkey">List[Catalog<wbr>Table<wbr>Partition<wbr>Key]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
  {{% /md %}}
@@ -1594,7 +1594,7 @@ The following output properties are available:
             <td class="align-top">storage_<wbr>descriptor</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptor">Dict[catalog_<wbr>table_<wbr>storage_<wbr>descriptor]</a></code>
+                <code><a href="#catalogtablestoragedescriptor">Dict[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor]</a></code>
             </td>
             <td class="align-top">{{% md %}} A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
  {{% /md %}}
@@ -2415,7 +2415,7 @@ A map of initialization parameters for the SerDe, in key-value form.
             <td class="align-top">partition_<wbr>keys</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablepartitionkey">List[catalog_<wbr>table_<wbr>partition_<wbr>key]</a></code>
+                <code><a href="#catalogtablepartitionkey">List[Catalog<wbr>Table<wbr>Partition<wbr>Key]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2445,7 +2445,7 @@ Retention time for this table.
             <td class="align-top">storage_<wbr>descriptor</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptor">Dict[catalog_<wbr>table_<wbr>storage_<wbr>descriptor]</a></code>
+                <code><a href="#catalogtablestoragedescriptor">Dict[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3431,7 +3431,7 @@ True if the table data is stored in subdirectories, or False if not.
     <tbody>
     
         <tr>
-            <td class="align-top">bucket_<wbr>columns</td>
+            <td class="align-top">bucket<wbr>Columns</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -3449,7 +3449,7 @@ A list of reducer grouping columns, clustering columns, and bucketing columns in
             <td class="align-top">columns</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptorcolumn">List[catalog_<wbr>table_<wbr>storage_<wbr>descriptor_<wbr>column]</a></code>
+                <code><a href="#catalogtablestoragedescriptorcolumn">List[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3476,7 +3476,7 @@ True if the data in the table is compressed, or False if not.
         </tr>
     
         <tr>
-            <td class="align-top">input_<wbr>format</td>
+            <td class="align-top">input<wbr>Format</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3506,7 +3506,7 @@ The physical location of the table. By default this takes the form of the wareho
         </tr>
     
         <tr>
-            <td class="align-top">number_<wbr>of_<wbr>buckets</td>
+            <td class="align-top">number<wbr>Of<wbr>Buckets</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3521,7 +3521,7 @@ Must be specified if the table contains any dimension columns.
         </tr>
     
         <tr>
-            <td class="align-top">output_<wbr>format</td>
+            <td class="align-top">output<wbr>Format</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3551,10 +3551,10 @@ A map of initialization parameters for the SerDe, in key-value form.
         </tr>
     
         <tr>
-            <td class="align-top">ser_<wbr>de_<wbr>info</td>
+            <td class="align-top">ser<wbr>De<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptorserdeinfo">Dict[catalog_<wbr>table_<wbr>storage_<wbr>descriptor_<wbr>ser_<wbr>de_<wbr>info]</a></code>
+                <code><a href="#catalogtablestoragedescriptorserdeinfo">Dict[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3566,10 +3566,10 @@ Serialization/deserialization (SerDe) information.
         </tr>
     
         <tr>
-            <td class="align-top">skewed_<wbr>info</td>
+            <td class="align-top">skewed<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptorskewedinfo">Dict[catalog_<wbr>table_<wbr>storage_<wbr>descriptor_<wbr>skewed_<wbr>info]</a></code>
+                <code><a href="#catalogtablestoragedescriptorskewedinfo">Dict[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3581,10 +3581,10 @@ Information about values that appear very frequently in a column (skewed values)
         </tr>
     
         <tr>
-            <td class="align-top">sort_<wbr>columns</td>
+            <td class="align-top">sort<wbr>Columns</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptorsortcolumn">List[catalog_<wbr>table_<wbr>storage_<wbr>descriptor_<wbr>sort_<wbr>column]</a></code>
+                <code><a href="#catalogtablestoragedescriptorsortcolumn">List[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3596,7 +3596,7 @@ A list of Order objects specifying the sort order of each bucket in the table.
         </tr>
     
         <tr>
-            <td class="align-top">stored_<wbr>as_<wbr>sub_<wbr>directories</td>
+            <td class="align-top">stored<wbr>As<wbr>Sub<wbr>Directories</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -4158,7 +4158,7 @@ A map of initialization parameters for the SerDe, in key-value form.
         </tr>
     
         <tr>
-            <td class="align-top">serialization_<wbr>library</td>
+            <td class="align-top">serialization<wbr>Library</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4409,7 +4409,7 @@ A mapping of skewed values to the columns that contain them.
     <tbody>
     
         <tr>
-            <td class="align-top">skewed_<wbr>column_<wbr>names</td>
+            <td class="align-top">skewed<wbr>Column<wbr>Names</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -4424,7 +4424,7 @@ A list of names of columns that contain skewed values.
         </tr>
     
         <tr>
-            <td class="align-top">skewed_<wbr>column_<wbr>value_<wbr>location_<wbr>maps</td>
+            <td class="align-top">skewed<wbr>Column<wbr>Value<wbr>Location<wbr>Maps</td>
             <td class="align-top">
                 
                 <code>Dict[str, str]</code>
@@ -4439,7 +4439,7 @@ A list of values that appear so frequently as to be considered skewed.
         </tr>
     
         <tr>
-            <td class="align-top">skewed_<wbr>column_<wbr>values</td>
+            <td class="align-top">skewed<wbr>Column<wbr>Values</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -4660,7 +4660,7 @@ The name of the column.
         </tr>
     
         <tr>
-            <td class="align-top">sort_<wbr>order</td>
+            <td class="align-top">sort<wbr>Order</td>
             <td class="align-top">
                 
                 <code>float</code>

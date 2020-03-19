@@ -929,7 +929,7 @@ use the default behavior, which is an exponential backoff
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentsetting">List[environment_<wbr>setting]</a></code>
+                <code><a href="#environmentsetting">List[Environment<wbr>Setting]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -962,7 +962,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2085,7 +2085,7 @@ out.
             <td class="align-top">all_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentallsetting">List[environment_<wbr>all_<wbr>setting]</a></code>
+                <code><a href="#environmentallsetting">List[Environment<wbr>All<wbr>Setting]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
@@ -2288,7 +2288,7 @@ use the default behavior, which is an exponential backoff
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentsetting">List[environment_<wbr>setting]</a></code>
+                <code><a href="#environmentsetting">List[Environment<wbr>Setting]</a></code>
             </td>
             <td class="align-top">{{% md %}} Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -2317,7 +2317,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A set of tags to apply to the Environment.
  {{% /md %}}
@@ -3626,7 +3626,7 @@ out.
             <td class="align-top">all_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentallsetting">List[environment_<wbr>all_<wbr>setting]</a></code>
+                <code><a href="#environmentallsetting">List[Environment<wbr>All<wbr>Setting]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3859,7 +3859,7 @@ SQS queues in use by this Environment.
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentsetting">List[environment_<wbr>setting]</a></code>
+                <code><a href="#environmentsetting">List[Environment<wbr>Setting]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3892,7 +3892,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

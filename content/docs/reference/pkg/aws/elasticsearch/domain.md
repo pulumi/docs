@@ -953,7 +953,7 @@ IAM policy document specifying the access policies for the domain
             <td class="align-top">advanced_<wbr>options</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -971,7 +971,7 @@ domain on every apply.
             <td class="align-top">cluster_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#domainclusterconfig">Dict[domain_<wbr>cluster_<wbr>config]</a></code>
+                <code><a href="#domainclusterconfig">Dict[Domain<wbr>Cluster<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -986,7 +986,7 @@ Cluster configuration of the domain, see below.
             <td class="align-top">cognito_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domaincognitooptions">Dict[domain_<wbr>cognito_<wbr>options]</a></code>
+                <code><a href="#domaincognitooptions">Dict[Domain<wbr>Cognito<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1000,7 +1000,7 @@ Cluster configuration of the domain, see below.
             <td class="align-top">domain_<wbr>endpoint_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domaindomainendpointoptions">Dict[domain_<wbr>domain_<wbr>endpoint_<wbr>options]</a></code>
+                <code><a href="#domaindomainendpointoptions">Dict[Domain<wbr>Domain<wbr>Endpoint<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1030,7 +1030,7 @@ Name of the domain.
             <td class="align-top">ebs_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domainebsoptions">Dict[domain_<wbr>ebs_<wbr>options]</a></code>
+                <code><a href="#domainebsoptions">Dict[Domain<wbr>Ebs<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1060,7 +1060,7 @@ The version of Elasticsearch to deploy. Defaults to `1.5`
             <td class="align-top">encrypt_<wbr>at_<wbr>rest</td>
             <td class="align-top">
                 
-                <code><a href="#domainencryptatrest">Dict[domain_<wbr>encrypt_<wbr>at_<wbr>rest]</a></code>
+                <code><a href="#domainencryptatrest">Dict[Domain<wbr>Encrypt<wbr>At<wbr>Rest]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1075,7 +1075,7 @@ Encrypt at rest options. Only available for [certain instance types](http://docs
             <td class="align-top">log_<wbr>publishing_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domainlogpublishingoption">List[domain_<wbr>log_<wbr>publishing_<wbr>option]</a></code>
+                <code><a href="#domainlogpublishingoption">List[Domain<wbr>Log<wbr>Publishing<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1090,7 +1090,7 @@ Options for publishing slow logs to CloudWatch Logs.
             <td class="align-top">node_<wbr>to_<wbr>node_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#domainnodetonodeencryption">Dict[domain_<wbr>node_<wbr>to_<wbr>node_<wbr>encryption]</a></code>
+                <code><a href="#domainnodetonodeencryption">Dict[Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1105,7 +1105,7 @@ Node-to-node encryption options. See below.
             <td class="align-top">snapshot_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domainsnapshotoptions">Dict[domain_<wbr>snapshot_<wbr>options]</a></code>
+                <code><a href="#domainsnapshotoptions">Dict[Domain<wbr>Snapshot<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1120,7 +1120,7 @@ Snapshot related options, see below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1135,7 +1135,7 @@ A mapping of tags to assign to the resource
             <td class="align-top">vpc_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domainvpcoptions">Dict[domain_<wbr>vpc_<wbr>options]</a></code>
+                <code><a href="#domainvpcoptions">Dict[Domain<wbr>Vpc<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1971,7 +1971,7 @@ domain on every apply.
             <td class="align-top">advanced_<wbr>options</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value string pairs to specify advanced configuration options.
 Note that the values for these configuration options must be strings (wrapped in quotes) or they
@@ -2000,7 +2000,7 @@ domain on every apply.
             <td class="align-top">cluster_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#domainclusterconfig">Dict[domain_<wbr>cluster_<wbr>config]</a></code>
+                <code><a href="#domainclusterconfig">Dict[Domain<wbr>Cluster<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Cluster configuration of the domain, see below.
  {{% /md %}}
@@ -2013,7 +2013,7 @@ domain on every apply.
             <td class="align-top">cognito_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domaincognitooptions">Dict[domain_<wbr>cognito_<wbr>options]</a></code>
+                <code><a href="#domaincognitooptions">Dict[Domain<wbr>Cognito<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2025,7 +2025,7 @@ domain on every apply.
             <td class="align-top">domain_<wbr>endpoint_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domaindomainendpointoptions">Dict[domain_<wbr>domain_<wbr>endpoint_<wbr>options]</a></code>
+                <code><a href="#domaindomainendpointoptions">Dict[Domain<wbr>Domain<wbr>Endpoint<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain endpoint HTTP(S) related options. See below.
  {{% /md %}}
@@ -2064,7 +2064,7 @@ domain on every apply.
             <td class="align-top">ebs_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domainebsoptions">Dict[domain_<wbr>ebs_<wbr>options]</a></code>
+                <code><a href="#domainebsoptions">Dict[Domain<wbr>Ebs<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). See below.
  {{% /md %}}
@@ -2090,7 +2090,7 @@ domain on every apply.
             <td class="align-top">encrypt_<wbr>at_<wbr>rest</td>
             <td class="align-top">
                 
-                <code><a href="#domainencryptatrest">Dict[domain_<wbr>encrypt_<wbr>at_<wbr>rest]</a></code>
+                <code><a href="#domainencryptatrest">Dict[Domain<wbr>Encrypt<wbr>At<wbr>Rest]</a></code>
             </td>
             <td class="align-top">{{% md %}} Encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). See below.
  {{% /md %}}
@@ -2131,7 +2131,7 @@ domain on every apply.
             <td class="align-top">log_<wbr>publishing_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domainlogpublishingoption">List[domain_<wbr>log_<wbr>publishing_<wbr>option]</a></code>
+                <code><a href="#domainlogpublishingoption">List[Domain<wbr>Log<wbr>Publishing<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}} Options for publishing slow logs to CloudWatch Logs.
  {{% /md %}}
@@ -2144,7 +2144,7 @@ domain on every apply.
             <td class="align-top">node_<wbr>to_<wbr>node_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#domainnodetonodeencryption">Dict[domain_<wbr>node_<wbr>to_<wbr>node_<wbr>encryption]</a></code>
+                <code><a href="#domainnodetonodeencryption">Dict[Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} Node-to-node encryption options. See below.
  {{% /md %}}
@@ -2157,7 +2157,7 @@ domain on every apply.
             <td class="align-top">snapshot_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domainsnapshotoptions">Dict[domain_<wbr>snapshot_<wbr>options]</a></code>
+                <code><a href="#domainsnapshotoptions">Dict[Domain<wbr>Snapshot<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} Snapshot related options, see below.
  {{% /md %}}
@@ -2170,7 +2170,7 @@ domain on every apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource
  {{% /md %}}
@@ -2183,7 +2183,7 @@ domain on every apply.
             <td class="align-top">vpc_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domainvpcoptions">Dict[domain_<wbr>vpc_<wbr>options]</a></code>
+                <code><a href="#domainvpcoptions">Dict[Domain<wbr>Vpc<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC related options, see below. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)).
  {{% /md %}}
@@ -3172,7 +3172,7 @@ IAM policy document specifying the access policies for the domain
             <td class="align-top">advanced_<wbr>options</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3205,7 +3205,7 @@ Amazon Resource Name (ARN) of the domain.
             <td class="align-top">cluster_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#domainclusterconfig">Dict[domain_<wbr>cluster_<wbr>config]</a></code>
+                <code><a href="#domainclusterconfig">Dict[Domain<wbr>Cluster<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3220,7 +3220,7 @@ Cluster configuration of the domain, see below.
             <td class="align-top">cognito_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domaincognitooptions">Dict[domain_<wbr>cognito_<wbr>options]</a></code>
+                <code><a href="#domaincognitooptions">Dict[Domain<wbr>Cognito<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3234,7 +3234,7 @@ Cluster configuration of the domain, see below.
             <td class="align-top">domain_<wbr>endpoint_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domaindomainendpointoptions">Dict[domain_<wbr>domain_<wbr>endpoint_<wbr>options]</a></code>
+                <code><a href="#domaindomainendpointoptions">Dict[Domain<wbr>Domain<wbr>Endpoint<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3279,7 +3279,7 @@ Name of the domain.
             <td class="align-top">ebs_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domainebsoptions">Dict[domain_<wbr>ebs_<wbr>options]</a></code>
+                <code><a href="#domainebsoptions">Dict[Domain<wbr>Ebs<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3309,7 +3309,7 @@ The version of Elasticsearch to deploy. Defaults to `1.5`
             <td class="align-top">encrypt_<wbr>at_<wbr>rest</td>
             <td class="align-top">
                 
-                <code><a href="#domainencryptatrest">Dict[domain_<wbr>encrypt_<wbr>at_<wbr>rest]</a></code>
+                <code><a href="#domainencryptatrest">Dict[Domain<wbr>Encrypt<wbr>At<wbr>Rest]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3356,7 +3356,7 @@ Domain-specific endpoint for kibana without https scheme.
             <td class="align-top">log_<wbr>publishing_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domainlogpublishingoption">List[domain_<wbr>log_<wbr>publishing_<wbr>option]</a></code>
+                <code><a href="#domainlogpublishingoption">List[Domain<wbr>Log<wbr>Publishing<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3371,7 +3371,7 @@ Options for publishing slow logs to CloudWatch Logs.
             <td class="align-top">node_<wbr>to_<wbr>node_<wbr>encryption</td>
             <td class="align-top">
                 
-                <code><a href="#domainnodetonodeencryption">Dict[domain_<wbr>node_<wbr>to_<wbr>node_<wbr>encryption]</a></code>
+                <code><a href="#domainnodetonodeencryption">Dict[Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3386,7 +3386,7 @@ Node-to-node encryption options. See below.
             <td class="align-top">snapshot_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domainsnapshotoptions">Dict[domain_<wbr>snapshot_<wbr>options]</a></code>
+                <code><a href="#domainsnapshotoptions">Dict[Domain<wbr>Snapshot<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3401,7 +3401,7 @@ Snapshot related options, see below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3416,7 +3416,7 @@ A mapping of tags to assign to the resource
             <td class="align-top">vpc_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#domainvpcoptions">Dict[domain_<wbr>vpc_<wbr>options]</a></code>
+                <code><a href="#domainvpcoptions">Dict[Domain<wbr>Vpc<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3851,7 +3851,7 @@ Indicates whether zone awareness is enabled. To enable awareness with three Avai
     <tbody>
     
         <tr>
-            <td class="align-top">dedicated_<wbr>master_<wbr>count</td>
+            <td class="align-top">dedicated<wbr>Master<wbr>Count</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3866,7 +3866,7 @@ Number of dedicated master nodes in the cluster
         </tr>
     
         <tr>
-            <td class="align-top">dedicated_<wbr>master_<wbr>enabled</td>
+            <td class="align-top">dedicated<wbr>Master<wbr>Enabled</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -3881,7 +3881,7 @@ Indicates whether dedicated master nodes are enabled for the cluster.
         </tr>
     
         <tr>
-            <td class="align-top">dedicated_<wbr>master_<wbr>type</td>
+            <td class="align-top">dedicated<wbr>Master<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3926,10 +3926,10 @@ Instance type of data nodes in the cluster.
         </tr>
     
         <tr>
-            <td class="align-top">zone_<wbr>awareness_<wbr>config</td>
+            <td class="align-top">zone<wbr>Awareness<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#domainclusterconfigzoneawarenessconfig">Dict[domain_<wbr>cluster_<wbr>config_<wbr>zone_<wbr>awareness_<wbr>config]</a></code>
+                <code><a href="#domainclusterconfigzoneawarenessconfig">Dict[Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3941,7 +3941,7 @@ Configuration block containing zone awareness settings. Documented below.
         </tr>
     
         <tr>
-            <td class="align-top">zone_<wbr>awareness_<wbr>enabled</td>
+            <td class="align-top">zone<wbr>Awareness<wbr>Enabled</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -4102,7 +4102,7 @@ Number of Availability Zones for the domain to use with `zone_awareness_enabled`
     <tbody>
     
         <tr>
-            <td class="align-top">availability_<wbr>zone_<wbr>count</td>
+            <td class="align-top">availability<wbr>Zone<wbr>Count</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -4646,7 +4646,7 @@ Whether or not to require HTTPS
     <tbody>
     
         <tr>
-            <td class="align-top">enforce_<wbr>https</td>
+            <td class="align-top">enforce<wbr>Https</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -4661,7 +4661,7 @@ Whether or not to require HTTPS
         </tr>
     
         <tr>
-            <td class="align-top">tls_<wbr>security_<wbr>policy</td>
+            <td class="align-top">tls<wbr>Security<wbr>Policy</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4962,7 +4962,7 @@ The type of EBS volumes attached to data nodes.
     <tbody>
     
         <tr>
-            <td class="align-top">ebs_<wbr>enabled</td>
+            <td class="align-top">ebs<wbr>Enabled</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -5009,7 +5009,7 @@ The size of EBS volumes attached to data nodes (in GB).
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5511,7 +5511,7 @@ Specifies whether Amazon Cognito authentication with Kibana is enabled or not
         </tr>
     
         <tr>
-            <td class="align-top">log_<wbr>type</td>
+            <td class="align-top">log<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5836,7 +5836,7 @@ snapshot of the indices in the domain.
     <tbody>
     
         <tr>
-            <td class="align-top">automated_<wbr>snapshot_<wbr>start_<wbr>hour</td>
+            <td class="align-top">automated<wbr>Snapshot<wbr>Start<wbr>Hour</td>
             <td class="align-top">
                 
                 <code>float</code>

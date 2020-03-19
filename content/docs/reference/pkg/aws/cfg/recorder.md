@@ -325,7 +325,7 @@ The name of the recorder. Defaults to `default`. Changing it recreates the resou
             <td class="align-top">recording_<wbr>group</td>
             <td class="align-top">
                 
-                <code><a href="#recorderrecordinggroup">Dict[recorder_<wbr>recording_<wbr>group]</a></code>
+                <code><a href="#recorderrecordinggroup">Dict[Recorder<wbr>Recording<wbr>Group]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -587,7 +587,7 @@ See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-p
             <td class="align-top">recording_<wbr>group</td>
             <td class="align-top">
                 
-                <code><a href="#recorderrecordinggroup">Dict[recorder_<wbr>recording_<wbr>group]</a></code>
+                <code><a href="#recorderrecordinggroup">Dict[Recorder<wbr>Recording<wbr>Group]</a></code>
             </td>
             <td class="align-top">{{% md %}} Recording group - see below.
  {{% /md %}}
@@ -910,7 +910,7 @@ The name of the recorder. Defaults to `default`. Changing it recreates the resou
             <td class="align-top">recording_<wbr>group</td>
             <td class="align-top">
                 
-                <code><a href="#recorderrecordinggroup">Dict[recorder_<wbr>recording_<wbr>group]</a></code>
+                <code><a href="#recorderrecordinggroup">Dict[Recorder<wbr>Recording<wbr>Group]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1197,7 +1197,7 @@ See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIRefe
     <tbody>
     
         <tr>
-            <td class="align-top">all_<wbr>supported</td>
+            <td class="align-top">all<wbr>Supported</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1214,7 +1214,7 @@ Conflicts with `resource_types`. Defaults to `true`.
         </tr>
     
         <tr>
-            <td class="align-top">include_<wbr>global_<wbr>resource_<wbr>types</td>
+            <td class="align-top">include<wbr>Global<wbr>Resource<wbr>Types</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1230,7 +1230,7 @@ with the resources that it records. Requires `all_supported = true`. Conflicts w
         </tr>
     
         <tr>
-            <td class="align-top">resource_<wbr>types</td>
+            <td class="align-top">resource<wbr>Types</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

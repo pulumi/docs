@@ -525,7 +525,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">group_<wbr>id</td>
+            <td class="align-top">group<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -579,7 +579,7 @@ The following output properties are available:
             <td class="align-top">users</td>
             <td class="align-top">
                 
-                <code><a href="#getgroupuser">List[get_<wbr>group_<wbr>user]</a></code>
+                <code><a href="#getgroupuser">List[Get<wbr>Group<wbr>User]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of objects containing group member information. See supported fields below.
  {{% /md %}}
@@ -905,7 +905,7 @@ The path to the iam user.
         </tr>
     
         <tr>
-            <td class="align-top">user_<wbr>id</td>
+            <td class="align-top">user<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>

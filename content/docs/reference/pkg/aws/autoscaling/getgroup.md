@@ -1169,7 +1169,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">new_<wbr>instances_<wbr>protected_<wbr>from_<wbr>scale_<wbr>in</td>
+            <td class="align-top">new<wbr>Instances<wbr>Protected<wbr>From<wbr>Scale<wbr>In</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1246,7 +1246,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">vpc_<wbr>zone_<wbr>identifier</td>
+            <td class="align-top">vpc<wbr>Zone<wbr>Identifier</td>
             <td class="align-top">
                 
                 <code>str</code>

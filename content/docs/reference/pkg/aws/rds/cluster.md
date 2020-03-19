@@ -2312,7 +2312,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">s3_<wbr>import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">Dict[cluster_<wbr>s3_<wbr>import]</a></code>
+                <code><a href="#clusters3import">Dict[Cluster<wbr>S3Import]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2326,7 +2326,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">scaling_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">Dict[cluster_<wbr>scaling_<wbr>configuration]</a></code>
+                <code><a href="#clusterscalingconfiguration">Dict[Cluster<wbr>Scaling<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2401,7 +2401,7 @@ Specifies whether the DB cluster is encrypted. The default is `false` for `provi
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4586,7 +4586,7 @@ load-balanced across replicas
             <td class="align-top">s3_<wbr>import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">Dict[cluster_<wbr>s3_<wbr>import]</a></code>
+                <code><a href="#clusters3import">Dict[Cluster<wbr>S3Import]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -4598,7 +4598,7 @@ load-balanced across replicas
             <td class="align-top">scaling_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">Dict[cluster_<wbr>scaling_<wbr>configuration]</a></code>
+                <code><a href="#clusterscalingconfiguration">Dict[Cluster<wbr>Scaling<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
  {{% /md %}}
@@ -4663,7 +4663,7 @@ load-balanced across replicas
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the DB cluster.
  {{% /md %}}
@@ -7201,7 +7201,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">s3_<wbr>import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">Dict[cluster_<wbr>s3_<wbr>import]</a></code>
+                <code><a href="#clusters3import">Dict[Cluster<wbr>S3Import]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7215,7 +7215,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">scaling_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">Dict[cluster_<wbr>scaling_<wbr>configuration]</a></code>
+                <code><a href="#clusterscalingconfiguration">Dict[Cluster<wbr>Scaling<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7290,7 +7290,7 @@ Specifies whether the DB cluster is encrypted. The default is `false` for `provi
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7681,7 +7681,7 @@ Can be blank, but is the path to your backup
         </tr>
     
         <tr>
-            <td class="align-top">ingestion_<wbr>role</td>
+            <td class="align-top">ingestion<wbr>Role</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7696,7 +7696,7 @@ Role applied to load the data.
         </tr>
     
         <tr>
-            <td class="align-top">source_<wbr>engine</td>
+            <td class="align-top">source<wbr>Engine</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7711,7 +7711,7 @@ Source engine for the backup
         </tr>
     
         <tr>
-            <td class="align-top">source_<wbr>engine_<wbr>version</td>
+            <td class="align-top">source<wbr>Engine<wbr>Version</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8052,7 +8052,7 @@ The action to take when the timeout is reached. Valid values: `ForceApplyCapacit
     <tbody>
     
         <tr>
-            <td class="align-top">auto_<wbr>pause</td>
+            <td class="align-top">auto<wbr>Pause</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -8097,7 +8097,7 @@ The minimum capacity. The minimum capacity must be lesser than or equal to the m
         </tr>
     
         <tr>
-            <td class="align-top">seconds_<wbr>until_<wbr>auto_<wbr>pause</td>
+            <td class="align-top">seconds<wbr>Until<wbr>Auto<wbr>Pause</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -8112,7 +8112,7 @@ The time, in seconds, before an Aurora DB cluster in serverless mode is paused. 
         </tr>
     
         <tr>
-            <td class="align-top">timeout_<wbr>action</td>
+            <td class="align-top">timeout<wbr>Action</td>
             <td class="align-top">
                 
                 <code>str</code>

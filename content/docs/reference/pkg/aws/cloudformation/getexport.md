@@ -440,7 +440,7 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">exporting_<wbr>stack_<wbr>id</td>
+            <td class="align-top">exporting<wbr>Stack<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>

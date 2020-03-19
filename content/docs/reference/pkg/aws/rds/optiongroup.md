@@ -569,7 +569,7 @@ The description of the option group. Defaults to &#34;Managed by Pulumi&#34;.
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoption">List[option_<wbr>group_<wbr>option]</a></code>
+                <code><a href="#optiongroupoption">List[Option<wbr>Group<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -584,7 +584,7 @@ A list of Options to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1083,7 +1083,7 @@ The following output properties are available:
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoption">List[option_<wbr>group_<wbr>option]</a></code>
+                <code><a href="#optiongroupoption">List[Option<wbr>Group<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of Options to apply.
  {{% /md %}}
@@ -1096,7 +1096,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1698,7 +1698,7 @@ The description of the option group. Defaults to &#34;Managed by Pulumi&#34;.
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoption">List[option_<wbr>group_<wbr>option]</a></code>
+                <code><a href="#optiongroupoption">List[Option<wbr>Group<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1713,7 +1713,7 @@ A list of Options to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2103,7 +2103,7 @@ A list of VPC Security Groups for which the option is enabled.
     <tbody>
     
         <tr>
-            <td class="align-top">db_<wbr>security_<wbr>group_<wbr>memberships</td>
+            <td class="align-top">db<wbr>Security<wbr>Group<wbr>Memberships</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -2118,7 +2118,7 @@ A list of DB Security Groups for which the option is enabled.
         </tr>
     
         <tr>
-            <td class="align-top">option_<wbr>name</td>
+            <td class="align-top">option<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2133,10 +2133,10 @@ The Name of the Option (e.g. MEMCACHED).
         </tr>
     
         <tr>
-            <td class="align-top">option_<wbr>settings</td>
+            <td class="align-top">option<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoptionoptionsetting">List[option_<wbr>group_<wbr>option_<wbr>option_<wbr>setting]</a></code>
+                <code><a href="#optiongroupoptionoptionsetting">List[Option<wbr>Group<wbr>Option<wbr>Option<wbr>Setting]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2178,7 +2178,7 @@ The version of the option (e.g. 13.1.0.0).
         </tr>
     
         <tr>
-            <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>memberships</td>
+            <td class="align-top">vpc<wbr>Security<wbr>Group<wbr>Memberships</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

@@ -411,7 +411,7 @@ Returns information on a specific snapshot_id.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsnapshotfilter">List[get_<wbr>snapshot_<wbr>filter]</a></code>
+                <code><a href="#getsnapshotfilter">List[Get<wbr>Snapshot<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -425,7 +425,7 @@ several valid keys, for a full reference, check out
         </tr>
     
         <tr>
-            <td class="align-top">most_<wbr>recent</td>
+            <td class="align-top">most<wbr>Recent</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -455,7 +455,7 @@ Returns the snapshots owned by the specified owner id. Multiple owners can be sp
         </tr>
     
         <tr>
-            <td class="align-top">restorable_<wbr>by_<wbr>user_<wbr>ids</td>
+            <td class="align-top">restorable<wbr>By<wbr>User<wbr>Ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -470,7 +470,7 @@ One or more AWS accounts IDs that can create volumes from the snapshot.
         </tr>
     
         <tr>
-            <td class="align-top">snapshot_<wbr>ids</td>
+            <td class="align-top">snapshot<wbr>Ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -488,7 +488,7 @@ Returns information on a specific snapshot_id.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1284,7 +1284,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsnapshotfilter">List[get_<wbr>snapshot_<wbr>filter]</a></code>
+                <code><a href="#getsnapshotfilter">List[Get<wbr>Snapshot<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1319,7 +1319,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">most_<wbr>recent</td>
+            <td class="align-top">most<wbr>Recent</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1369,7 +1369,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">restorable_<wbr>by_<wbr>user_<wbr>ids</td>
+            <td class="align-top">restorable<wbr>By<wbr>User<wbr>Ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -1394,7 +1394,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">snapshot_<wbr>ids</td>
+            <td class="align-top">snapshot<wbr>Ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -1422,7 +1422,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags for the resource.
  {{% /md %}}

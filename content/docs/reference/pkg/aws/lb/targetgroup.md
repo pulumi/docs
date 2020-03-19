@@ -848,7 +848,7 @@ The amount time for Elastic Load Balancing to wait before changing the state of 
             <td class="align-top">health_<wbr>check</td>
             <td class="align-top">
                 
-                <code><a href="#targetgrouphealthcheck">Dict[target_<wbr>group_<wbr>health_<wbr>check]</a></code>
+                <code><a href="#targetgrouphealthcheck">Dict[Target<wbr>Group<wbr>Health<wbr>Check]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -983,7 +983,7 @@ The amount time for targets to warm up before the load balancer sends them a ful
             <td class="align-top">stickiness</td>
             <td class="align-top">
                 
-                <code><a href="#targetgroupstickiness">Dict[target_<wbr>group_<wbr>stickiness]</a></code>
+                <code><a href="#targetgroupstickiness">Dict[Target<wbr>Group<wbr>Stickiness]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -998,7 +998,7 @@ A Stickiness block. Stickiness blocks are documented below. `stickiness` is only
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1820,7 +1820,7 @@ You can&#39;t specify publicly routable IP addresses.
             <td class="align-top">health_<wbr>check</td>
             <td class="align-top">
                 
-                <code><a href="#targetgrouphealthcheck">Dict[target_<wbr>group_<wbr>health_<wbr>check]</a></code>
+                <code><a href="#targetgrouphealthcheck">Dict[Target<wbr>Group<wbr>Health<wbr>Check]</a></code>
             </td>
             <td class="align-top">{{% md %}} A Health Check block. Health Check blocks are documented below.
  {{% /md %}}
@@ -1937,7 +1937,7 @@ You can&#39;t specify publicly routable IP addresses.
             <td class="align-top">stickiness</td>
             <td class="align-top">
                 
-                <code><a href="#targetgroupstickiness">Dict[target_<wbr>group_<wbr>stickiness]</a></code>
+                <code><a href="#targetgroupstickiness">Dict[Target<wbr>Group<wbr>Stickiness]</a></code>
             </td>
             <td class="align-top">{{% md %}} A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if used with Load Balancers of type `Application`
  {{% /md %}}
@@ -1950,7 +1950,7 @@ You can&#39;t specify publicly routable IP addresses.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2913,7 +2913,7 @@ The amount time for Elastic Load Balancing to wait before changing the state of 
             <td class="align-top">health_<wbr>check</td>
             <td class="align-top">
                 
-                <code><a href="#targetgrouphealthcheck">Dict[target_<wbr>group_<wbr>health_<wbr>check]</a></code>
+                <code><a href="#targetgrouphealthcheck">Dict[Target<wbr>Group<wbr>Health<wbr>Check]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3048,7 +3048,7 @@ The amount time for targets to warm up before the load balancer sends them a ful
             <td class="align-top">stickiness</td>
             <td class="align-top">
                 
-                <code><a href="#targetgroupstickiness">Dict[target_<wbr>group_<wbr>stickiness]</a></code>
+                <code><a href="#targetgroupstickiness">Dict[Target<wbr>Group<wbr>Stickiness]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3063,7 +3063,7 @@ A Stickiness block. Stickiness blocks are documented below. `stickiness` is only
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3638,7 +3638,7 @@ Indicates whether  health checks are enabled. Defaults to true.
         </tr>
     
         <tr>
-            <td class="align-top">healthy_<wbr>threshold</td>
+            <td class="align-top">healthy<wbr>Threshold</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3742,7 +3742,7 @@ The amount of time, in seconds, during which no response means a failed health c
         </tr>
     
         <tr>
-            <td class="align-top">unhealthy_<wbr>threshold</td>
+            <td class="align-top">unhealthy<wbr>Threshold</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3994,7 +3994,7 @@ The type of sticky sessions. The only current possible value is `lb_cookie`.
     <tbody>
     
         <tr>
-            <td class="align-top">cookie_<wbr>duration</td>
+            <td class="align-top">cookie<wbr>Duration</td>
             <td class="align-top">
                 
                 <code>float</code>

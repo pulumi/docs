@@ -634,7 +634,7 @@ The resolver type. Valid values are `UNIT` and `PIPELINE`.
             <td class="align-top">pipeline_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#resolverpipelineconfig">Dict[resolver_<wbr>pipeline_<wbr>config]</a></code>
+                <code><a href="#resolverpipelineconfig">Dict[Resolver<wbr>Pipeline<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1204,7 +1204,7 @@ The following output properties are available:
             <td class="align-top">pipeline_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#resolverpipelineconfig">Dict[resolver_<wbr>pipeline_<wbr>config]</a></code>
+                <code><a href="#resolverpipelineconfig">Dict[Resolver<wbr>Pipeline<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} The PipelineConfig. A `pipeline_config` block is documented below.
  {{% /md %}}
@@ -1875,7 +1875,7 @@ The resolver type. Valid values are `UNIT` and `PIPELINE`.
             <td class="align-top">pipeline_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#resolverpipelineconfig">Dict[resolver_<wbr>pipeline_<wbr>config]</a></code>
+                <code><a href="#resolverpipelineconfig">Dict[Resolver<wbr>Pipeline<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

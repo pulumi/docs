@@ -1608,7 +1608,7 @@ for the cache cluster.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2866,7 +2866,7 @@ are applied immediately, or during the next maintenance window. Default is
             <td class="align-top">cache_<wbr>nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clustercachenode">List[cluster_<wbr>cache_<wbr>node]</a></code>
+                <code><a href="#clustercachenode">List[Cluster<wbr>Cache<wbr>Node]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of node objects including `id`, `address`, `port` and `availability_zone`.
 Referenceable e.g. as `${aws_elasticache_cluster.bar.cache_nodes.0.address}`
@@ -3164,7 +3164,7 @@ for the cache cluster.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource
  {{% /md %}}
@@ -4629,7 +4629,7 @@ Specifies whether the nodes in this Memcached node group are created in a single
             <td class="align-top">cache_<wbr>nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clustercachenode">List[cluster_<wbr>cache_<wbr>node]</a></code>
+                <code><a href="#clustercachenode">List[Cluster<wbr>Cache<wbr>Node]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4969,7 +4969,7 @@ for the cache cluster.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

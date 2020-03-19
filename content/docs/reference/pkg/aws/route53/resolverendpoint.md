@@ -418,7 +418,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
             <td class="align-top">ip_<wbr>addresses</td>
             <td class="align-top">
                 
-                <code><a href="#resolverendpointipaddress">List[resolver_<wbr>endpoint_<wbr>ip_<wbr>address]</a></code>
+                <code><a href="#resolverendpointipaddress">List[Resolver<wbr>Endpoint<wbr>Ip<wbr>Address]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -464,7 +464,7 @@ The ID of one or more security groups that you want to use to control access to 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -896,7 +896,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
             <td class="align-top">ip_<wbr>addresses</td>
             <td class="align-top">
                 
-                <code><a href="#resolverendpointipaddress">List[resolver_<wbr>endpoint_<wbr>ip_<wbr>address]</a></code>
+                <code><a href="#resolverendpointipaddress">List[Resolver<wbr>Endpoint<wbr>Ip<wbr>Address]</a></code>
             </td>
             <td class="align-top">{{% md %}} The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
@@ -936,7 +936,7 @@ to your network (for outbound endpoints) or on the way from your network to your
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1459,7 +1459,7 @@ The ID of the VPC that you want to create the resolver endpoint in.
             <td class="align-top">ip_<wbr>addresses</td>
             <td class="align-top">
                 
-                <code><a href="#resolverendpointipaddress">List[resolver_<wbr>endpoint_<wbr>ip_<wbr>address]</a></code>
+                <code><a href="#resolverendpointipaddress">List[Resolver<wbr>Endpoint<wbr>Ip<wbr>Address]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1505,7 +1505,7 @@ The ID of one or more security groups that you want to use to control access to 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1772,7 +1772,7 @@ The IP address in the subnet that you want to use for DNS queries.
         </tr>
     
         <tr>
-            <td class="align-top">ip_<wbr>id</td>
+            <td class="align-top">ip<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>

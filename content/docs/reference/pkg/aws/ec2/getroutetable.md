@@ -415,7 +415,7 @@ The id of the VPC that the desired Route Table belongs to.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablefilter">List[get_<wbr>route_<wbr>table_<wbr>filter]</a></code>
+                <code><a href="#getroutetablefilter">List[Get<wbr>Route<wbr>Table<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -475,7 +475,7 @@ The id of a Subnet which is connected to the Route Table (not exported if not pa
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -976,7 +976,7 @@ The following output properties are available:
             <td class="align-top">associations</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetableassociation">List[get_<wbr>route_<wbr>table_<wbr>association]</a></code>
+                <code><a href="#getroutetableassociation">List[Get<wbr>Route<wbr>Table<wbr>Association]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -988,7 +988,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablefilter">List[get_<wbr>route_<wbr>table_<wbr>filter]</a></code>
+                <code><a href="#getroutetablefilter">List[Get<wbr>Route<wbr>Table<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1052,7 +1052,7 @@ The following output properties are available:
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetableroute">List[get_<wbr>route_<wbr>table_<wbr>route]</a></code>
+                <code><a href="#getroutetableroute">List[Get<wbr>Route<wbr>Table<wbr>Route]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1077,7 +1077,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1459,7 +1459,7 @@ If the Association due to the Main Route Table.
         </tr>
     
         <tr>
-            <td class="align-top">route_<wbr>table_<wbr>association_<wbr>id</td>
+            <td class="align-top">route<wbr>Table<wbr>Association<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -495,7 +495,7 @@ A map of the API models used for the response&#39;s content type
             <td class="align-top">response_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, boolean]</code>
+                <code>Dict[str, Boolean]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -915,7 +915,7 @@ would define that the header `X-Some-Header` can be provided on the response.
             <td class="align-top">response_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, boolean]</code>
+                <code>Dict[str, Boolean]</code>
             </td>
             <td class="align-top">{{% md %}} A map of response parameters that can be sent to the caller.
 For example: `response_parameters = { &#34;method.response.header.X-Some-Header&#34; = true }`
@@ -1416,7 +1416,7 @@ A map of the API models used for the response&#39;s content type
             <td class="align-top">response_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, boolean]</code>
+                <code>Dict[str, Boolean]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

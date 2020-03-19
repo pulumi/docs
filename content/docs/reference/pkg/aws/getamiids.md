@@ -374,7 +374,7 @@ Used to sort AMIs by creation time.
     <tbody>
     
         <tr>
-            <td class="align-top">executable_<wbr>users</td>
+            <td class="align-top">executable<wbr>Users</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -393,7 +393,7 @@ permission on  the image. Valid items are the numeric account ID or `self`.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getamiidsfilter">List[get_<wbr>ami_<wbr>ids_<wbr>filter]</a></code>
+                <code><a href="#getamiidsfilter">List[Get<wbr>Ami<wbr>Ids<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -407,7 +407,7 @@ are several valid keys, for a full reference, check out
         </tr>
     
         <tr>
-            <td class="align-top">name_<wbr>regex</td>
+            <td class="align-top">name<wbr>Regex</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -441,7 +441,7 @@ List of AMI owners to limit search. At least 1 value must be specified. Valid va
         </tr>
     
         <tr>
-            <td class="align-top">sort_<wbr>ascending</td>
+            <td class="align-top">sort<wbr>Ascending</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -806,7 +806,7 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">executable_<wbr>users</td>
+            <td class="align-top">executable<wbr>Users</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -821,7 +821,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getamiidsfilter">List[get_<wbr>ami_<wbr>ids_<wbr>filter]</a></code>
+                <code><a href="#getamiidsfilter">List[Get<wbr>Ami<wbr>Ids<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -855,7 +855,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">name_<wbr>regex</td>
+            <td class="align-top">name<wbr>Regex</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -879,7 +879,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">sort_<wbr>ascending</td>
+            <td class="align-top">sort<wbr>Ascending</td>
             <td class="align-top">
                 
                 <code>bool</code>

@@ -887,7 +887,7 @@ Key-value mapping of resource tags
             <td class="align-top">catalog_<wbr>targets</td>
             <td class="align-top">
                 
-                <code><a href="#crawlercatalogtarget">List[crawler_<wbr>catalog_<wbr>target]</a></code>
+                <code><a href="#crawlercatalogtarget">List[Crawler<wbr>Catalog<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -961,7 +961,7 @@ Description of the crawler.
             <td class="align-top">dynamodb_<wbr>targets</td>
             <td class="align-top">
                 
-                <code><a href="#crawlerdynamodbtarget">List[crawler_<wbr>dynamodb_<wbr>target]</a></code>
+                <code><a href="#crawlerdynamodbtarget">List[Crawler<wbr>Dynamodb<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -976,7 +976,7 @@ List of nested DynamoDB target arguments. See below.
             <td class="align-top">jdbc_<wbr>targets</td>
             <td class="align-top">
                 
-                <code><a href="#crawlerjdbctarget">List[crawler_<wbr>jdbc_<wbr>target]</a></code>
+                <code><a href="#crawlerjdbctarget">List[Crawler<wbr>Jdbc<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1021,7 +1021,7 @@ The IAM role friendly name (including path without leading slash), or ARN of an 
             <td class="align-top">s3_<wbr>targets</td>
             <td class="align-top">
                 
-                <code><a href="#crawlers3target">List[crawler_<wbr>s3_<wbr>target]</a></code>
+                <code><a href="#crawlers3target">List[Crawler<wbr>S3Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1051,7 +1051,7 @@ A cron expression used to specify the schedule. For more information, see [Time-
             <td class="align-top">schema_<wbr>change_<wbr>policy</td>
             <td class="align-top">
                 
-                <code><a href="#crawlerschemachangepolicy">Dict[crawler_<wbr>schema_<wbr>change_<wbr>policy]</a></code>
+                <code><a href="#crawlerschemachangepolicy">Dict[Crawler<wbr>Schema<wbr>Change<wbr>Policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1096,7 +1096,7 @@ The table prefix used for catalog tables that are created.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1839,7 +1839,7 @@ The following output properties are available:
             <td class="align-top">catalog_<wbr>targets</td>
             <td class="align-top">
                 
-                <code><a href="#crawlercatalogtarget">List[crawler_<wbr>catalog_<wbr>target]</a></code>
+                <code><a href="#crawlercatalogtarget">List[Crawler<wbr>Catalog<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1903,7 +1903,7 @@ The following output properties are available:
             <td class="align-top">dynamodb_<wbr>targets</td>
             <td class="align-top">
                 
-                <code><a href="#crawlerdynamodbtarget">List[crawler_<wbr>dynamodb_<wbr>target]</a></code>
+                <code><a href="#crawlerdynamodbtarget">List[Crawler<wbr>Dynamodb<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of nested DynamoDB target arguments. See below.
  {{% /md %}}
@@ -1916,7 +1916,7 @@ The following output properties are available:
             <td class="align-top">jdbc_<wbr>targets</td>
             <td class="align-top">
                 
-                <code><a href="#crawlerjdbctarget">List[crawler_<wbr>jdbc_<wbr>target]</a></code>
+                <code><a href="#crawlerjdbctarget">List[Crawler<wbr>Jdbc<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of nested JBDC target arguments. See below.
  {{% /md %}}
@@ -1955,7 +1955,7 @@ The following output properties are available:
             <td class="align-top">s3_<wbr>targets</td>
             <td class="align-top">
                 
-                <code><a href="#crawlers3target">List[crawler_<wbr>s3_<wbr>target]</a></code>
+                <code><a href="#crawlers3target">List[Crawler<wbr>S3Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} List nested Amazon S3 target arguments. See below.
  {{% /md %}}
@@ -1981,7 +1981,7 @@ The following output properties are available:
             <td class="align-top">schema_<wbr>change_<wbr>policy</td>
             <td class="align-top">
                 
-                <code><a href="#crawlerschemachangepolicy">Dict[crawler_<wbr>schema_<wbr>change_<wbr>policy]</a></code>
+                <code><a href="#crawlerschemachangepolicy">Dict[Crawler<wbr>Schema<wbr>Change<wbr>Policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} Policy for the crawler&#39;s update and deletion behavior.
  {{% /md %}}
@@ -2020,7 +2020,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -2904,7 +2904,7 @@ The ARN of the crawler
             <td class="align-top">catalog_<wbr>targets</td>
             <td class="align-top">
                 
-                <code><a href="#crawlercatalogtarget">List[crawler_<wbr>catalog_<wbr>target]</a></code>
+                <code><a href="#crawlercatalogtarget">List[Crawler<wbr>Catalog<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2978,7 +2978,7 @@ Description of the crawler.
             <td class="align-top">dynamodb_<wbr>targets</td>
             <td class="align-top">
                 
-                <code><a href="#crawlerdynamodbtarget">List[crawler_<wbr>dynamodb_<wbr>target]</a></code>
+                <code><a href="#crawlerdynamodbtarget">List[Crawler<wbr>Dynamodb<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2993,7 +2993,7 @@ List of nested DynamoDB target arguments. See below.
             <td class="align-top">jdbc_<wbr>targets</td>
             <td class="align-top">
                 
-                <code><a href="#crawlerjdbctarget">List[crawler_<wbr>jdbc_<wbr>target]</a></code>
+                <code><a href="#crawlerjdbctarget">List[Crawler<wbr>Jdbc<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3038,7 +3038,7 @@ The IAM role friendly name (including path without leading slash), or ARN of an 
             <td class="align-top">s3_<wbr>targets</td>
             <td class="align-top">
                 
-                <code><a href="#crawlers3target">List[crawler_<wbr>s3_<wbr>target]</a></code>
+                <code><a href="#crawlers3target">List[Crawler<wbr>S3Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3068,7 +3068,7 @@ A cron expression used to specify the schedule. For more information, see [Time-
             <td class="align-top">schema_<wbr>change_<wbr>policy</td>
             <td class="align-top">
                 
-                <code><a href="#crawlerschemachangepolicy">Dict[crawler_<wbr>schema_<wbr>change_<wbr>policy]</a></code>
+                <code><a href="#crawlerschemachangepolicy">Dict[Crawler<wbr>Schema<wbr>Change<wbr>Policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3113,7 +3113,7 @@ The table prefix used for catalog tables that are created.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3750,7 +3750,7 @@ The path to the Amazon S3 target.
     <tbody>
     
         <tr>
-            <td class="align-top">connection_<wbr>name</td>
+            <td class="align-top">connection<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4207,7 +4207,7 @@ The update behavior when the crawler finds a changed schema. Valid values: `LOG`
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>behavior</td>
+            <td class="align-top">delete<wbr>Behavior</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4222,7 +4222,7 @@ The deletion behavior when the crawler finds a deleted object. Valid values: `LO
         </tr>
     
         <tr>
-            <td class="align-top">update_<wbr>behavior</td>
+            <td class="align-top">update<wbr>Behavior</td>
             <td class="align-top">
                 
                 <code>str</code>

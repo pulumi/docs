@@ -1088,7 +1088,7 @@ Configuration for the builds to run inside a VPC. VPC config blocks are document
             <td class="align-top">artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectartifacts">Dict[project_<wbr>artifacts]</a></code>
+                <code><a href="#projectartifacts">Dict[Project<wbr>Artifacts]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1133,7 +1133,7 @@ How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until ti
             <td class="align-top">cache</td>
             <td class="align-top">
                 
-                <code><a href="#projectcache">Dict[project_<wbr>cache]</a></code>
+                <code><a href="#projectcache">Dict[Project<wbr>Cache]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1178,7 +1178,7 @@ The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used fo
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code><a href="#projectenvironment">Dict[project_<wbr>environment]</a></code>
+                <code><a href="#projectenvironment">Dict[Project<wbr>Environment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1193,7 +1193,7 @@ Information about the project&#39;s build environment. Environment blocks are do
             <td class="align-top">logs_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#projectlogsconfig">Dict[project_<wbr>logs_<wbr>config]</a></code>
+                <code><a href="#projectlogsconfig">Dict[Project<wbr>Logs<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1238,7 +1238,7 @@ How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued be
             <td class="align-top">secondary_<wbr>artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondaryartifact">List[project_<wbr>secondary_<wbr>artifact]</a></code>
+                <code><a href="#projectsecondaryartifact">List[Project<wbr>Secondary<wbr>Artifact]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1253,7 +1253,7 @@ A set of secondary artifacts to be used inside the build. Secondary artifacts bl
             <td class="align-top">secondary_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondarysource">List[project_<wbr>secondary_<wbr>source]</a></code>
+                <code><a href="#projectsecondarysource">List[Project<wbr>Secondary<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1283,7 +1283,7 @@ The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) r
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code><a href="#projectsource">Dict[project_<wbr>source]</a></code>
+                <code><a href="#projectsource">Dict[Project<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1313,7 +1313,7 @@ A version of the build input to be built for this project. If not specified, the
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1328,7 +1328,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#projectvpcconfig">Dict[project_<wbr>vpc_<wbr>config]</a></code>
+                <code><a href="#projectvpcconfig">Dict[Project<wbr>Vpc<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2191,7 +2191,7 @@ The following output properties are available:
             <td class="align-top">artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectartifacts">Dict[project_<wbr>artifacts]</a></code>
+                <code><a href="#projectartifacts">Dict[Project<wbr>Artifacts]</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the project&#39;s build output artifacts. Artifact blocks are documented below.
  {{% /md %}}
@@ -2243,7 +2243,7 @@ The following output properties are available:
             <td class="align-top">cache</td>
             <td class="align-top">
                 
-                <code><a href="#projectcache">Dict[project_<wbr>cache]</a></code>
+                <code><a href="#projectcache">Dict[Project<wbr>Cache]</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the cache storage for the project. Cache blocks are documented below.
  {{% /md %}}
@@ -2282,7 +2282,7 @@ The following output properties are available:
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code><a href="#projectenvironment">Dict[project_<wbr>environment]</a></code>
+                <code><a href="#projectenvironment">Dict[Project<wbr>Environment]</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the project&#39;s build environment. Environment blocks are documented below.
  {{% /md %}}
@@ -2295,7 +2295,7 @@ The following output properties are available:
             <td class="align-top">logs_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#projectlogsconfig">Dict[project_<wbr>logs_<wbr>config]</a></code>
+                <code><a href="#projectlogsconfig">Dict[Project<wbr>Logs<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration for the builds to store log data to CloudWatch or S3.
  {{% /md %}}
@@ -2334,7 +2334,7 @@ The following output properties are available:
             <td class="align-top">secondary_<wbr>artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondaryartifact">List[project_<wbr>secondary_<wbr>artifact]</a></code>
+                <code><a href="#projectsecondaryartifact">List[Project<wbr>Secondary<wbr>Artifact]</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
  {{% /md %}}
@@ -2347,7 +2347,7 @@ The following output properties are available:
             <td class="align-top">secondary_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondarysource">List[project_<wbr>secondary_<wbr>source]</a></code>
+                <code><a href="#projectsecondarysource">List[Project<wbr>Secondary<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
  {{% /md %}}
@@ -2373,7 +2373,7 @@ The following output properties are available:
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code><a href="#projectsource">Dict[project_<wbr>source]</a></code>
+                <code><a href="#projectsource">Dict[Project<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the project&#39;s input source code. Source blocks are documented below.
  {{% /md %}}
@@ -2399,7 +2399,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2412,7 +2412,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#projectvpcconfig">Dict[project_<wbr>vpc_<wbr>config]</a></code>
+                <code><a href="#projectvpcconfig">Dict[Project<wbr>Vpc<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
  {{% /md %}}
@@ -3434,7 +3434,7 @@ The ARN of the CodeBuild project.
             <td class="align-top">artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectartifacts">Dict[project_<wbr>artifacts]</a></code>
+                <code><a href="#projectartifacts">Dict[Project<wbr>Artifacts]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3494,7 +3494,7 @@ How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until ti
             <td class="align-top">cache</td>
             <td class="align-top">
                 
-                <code><a href="#projectcache">Dict[project_<wbr>cache]</a></code>
+                <code><a href="#projectcache">Dict[Project<wbr>Cache]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3539,7 +3539,7 @@ The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used fo
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code><a href="#projectenvironment">Dict[project_<wbr>environment]</a></code>
+                <code><a href="#projectenvironment">Dict[Project<wbr>Environment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3554,7 +3554,7 @@ Information about the project&#39;s build environment. Environment blocks are do
             <td class="align-top">logs_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#projectlogsconfig">Dict[project_<wbr>logs_<wbr>config]</a></code>
+                <code><a href="#projectlogsconfig">Dict[Project<wbr>Logs<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3599,7 +3599,7 @@ How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued be
             <td class="align-top">secondary_<wbr>artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondaryartifact">List[project_<wbr>secondary_<wbr>artifact]</a></code>
+                <code><a href="#projectsecondaryartifact">List[Project<wbr>Secondary<wbr>Artifact]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3614,7 +3614,7 @@ A set of secondary artifacts to be used inside the build. Secondary artifacts bl
             <td class="align-top">secondary_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondarysource">List[project_<wbr>secondary_<wbr>source]</a></code>
+                <code><a href="#projectsecondarysource">List[Project<wbr>Secondary<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3644,7 +3644,7 @@ The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) r
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code><a href="#projectsource">Dict[project_<wbr>source]</a></code>
+                <code><a href="#projectsource">Dict[Project<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3674,7 +3674,7 @@ A version of the build input to be built for this project. If not specified, the
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3689,7 +3689,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#projectvpcconfig">Dict[project_<wbr>vpc_<wbr>config]</a></code>
+                <code><a href="#projectvpcconfig">Dict[Project<wbr>Vpc<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4214,7 +4214,7 @@ The type of repository that contains the source code to be built. Valid values f
     <tbody>
     
         <tr>
-            <td class="align-top">artifact_<wbr>identifier</td>
+            <td class="align-top">artifact<wbr>Identifier</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4229,7 +4229,7 @@ The artifact identifier. Must be the same specified inside AWS CodeBuild buildsp
         </tr>
     
         <tr>
-            <td class="align-top">encryption_<wbr>disabled</td>
+            <td class="align-top">encryption<wbr>Disabled</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -4274,7 +4274,7 @@ The name of the project. If `type` is set to `S3`, this is the name of the outpu
         </tr>
     
         <tr>
-            <td class="align-top">namespace_<wbr>type</td>
+            <td class="align-top">namespace<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4289,7 +4289,7 @@ The namespace to use in storing build artifacts. If `type` is set to `S3`, then 
         </tr>
     
         <tr>
-            <td class="align-top">override_<wbr>artifact_<wbr>name</td>
+            <td class="align-top">override<wbr>Artifact<wbr>Name</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -5106,7 +5106,7 @@ The ARN of the S3 bucket, path prefix and object key that contains the PEM-encod
         </tr>
     
         <tr>
-            <td class="align-top">compute_<wbr>type</td>
+            <td class="align-top">compute<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5121,10 +5121,10 @@ Information about the compute resources the build project will use. Available va
         </tr>
     
         <tr>
-            <td class="align-top">environment_<wbr>variables</td>
+            <td class="align-top">environment<wbr>Variables</td>
             <td class="align-top">
                 
-                <code><a href="#projectenvironmentenvironmentvariable">List[project_<wbr>environment_<wbr>environment_<wbr>variable]</a></code>
+                <code><a href="#projectenvironmentenvironmentvariable">List[Project<wbr>Environment<wbr>Environment<wbr>Variable]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5151,7 +5151,7 @@ The Docker image to use for this build project. Valid values include [Docker ima
         </tr>
     
         <tr>
-            <td class="align-top">image_<wbr>pull_<wbr>credentials_<wbr>type</td>
+            <td class="align-top">image<wbr>Pull<wbr>Credentials<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5166,7 +5166,7 @@ The type of credentials AWS CodeBuild uses to pull images in your build. Availab
         </tr>
     
         <tr>
-            <td class="align-top">privileged_<wbr>mode</td>
+            <td class="align-top">privileged<wbr>Mode</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -5181,10 +5181,10 @@ If set to true, enables running the Docker daemon inside a Docker container. Def
         </tr>
     
         <tr>
-            <td class="align-top">registry_<wbr>credential</td>
+            <td class="align-top">registry<wbr>Credential</td>
             <td class="align-top">
                 
-                <code><a href="#projectenvironmentregistrycredential">Dict[project_<wbr>environment_<wbr>registry_<wbr>credential]</a></code>
+                <code><a href="#projectenvironmentregistrycredential">Dict[Project<wbr>Environment<wbr>Registry<wbr>Credential]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5698,7 +5698,7 @@ The Amazon Resource Name (ARN) or name of credentials created using AWS Secrets 
         </tr>
     
         <tr>
-            <td class="align-top">credential_<wbr>provider</td>
+            <td class="align-top">credential<wbr>Provider</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5904,10 +5904,10 @@ Configuration for the builds to store logs to S3.
     <tbody>
     
         <tr>
-            <td class="align-top">cloudwatch_<wbr>logs</td>
+            <td class="align-top">cloudwatch<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#projectlogsconfigcloudwatchlogs">Dict[project_<wbr>logs_<wbr>config_<wbr>cloudwatch_<wbr>logs]</a></code>
+                <code><a href="#projectlogsconfigcloudwatchlogs">Dict[Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5919,10 +5919,10 @@ Configuration for the builds to store logs to CloudWatch
         </tr>
     
         <tr>
-            <td class="align-top">s3_<wbr>logs</td>
+            <td class="align-top">s3Logs</td>
             <td class="align-top">
                 
-                <code><a href="#projectlogsconfigs3logs">Dict[project_<wbr>logs_<wbr>config_<wbr>s3_<wbr>logs]</a></code>
+                <code><a href="#projectlogsconfigs3logs">Dict[Project<wbr>Logs<wbr>Config<wbr>S3Logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6200,7 +6200,7 @@ Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISA
         </tr>
     
         <tr>
-            <td class="align-top">stream_<wbr>name</td>
+            <td class="align-top">stream<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -6451,7 +6451,7 @@ Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISA
     <tbody>
     
         <tr>
-            <td class="align-top">encryption_<wbr>disabled</td>
+            <td class="align-top">encryption<wbr>Disabled</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -7002,7 +7002,7 @@ The type of repository that contains the source code to be built. Valid values f
     <tbody>
     
         <tr>
-            <td class="align-top">artifact_<wbr>identifier</td>
+            <td class="align-top">artifact<wbr>Identifier</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7017,7 +7017,7 @@ The artifact identifier. Must be the same specified inside AWS CodeBuild buildsp
         </tr>
     
         <tr>
-            <td class="align-top">encryption_<wbr>disabled</td>
+            <td class="align-top">encryption<wbr>Disabled</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -7062,7 +7062,7 @@ The name of the project. If `type` is set to `S3`, this is the name of the outpu
         </tr>
     
         <tr>
-            <td class="align-top">namespace_<wbr>type</td>
+            <td class="align-top">namespace<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7077,7 +7077,7 @@ The namespace to use in storing build artifacts. If `type` is set to `S3`, then 
         </tr>
     
         <tr>
-            <td class="align-top">override_<wbr>artifact_<wbr>name</td>
+            <td class="align-top">override<wbr>Artifact<wbr>Name</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -7646,7 +7646,7 @@ The type of repository that contains the source code to be built. Valid values f
             <td class="align-top">auths</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondarysourceauth">List[project_<wbr>secondary_<wbr>source_<wbr>auth]</a></code>
+                <code><a href="#projectsecondarysourceauth">List[Project<wbr>Secondary<wbr>Source<wbr>Auth]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7673,7 +7673,7 @@ The build spec declaration to use for this build project&#39;s related builds.
         </tr>
     
         <tr>
-            <td class="align-top">git_<wbr>clone_<wbr>depth</td>
+            <td class="align-top">git<wbr>Clone<wbr>Depth</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -7688,10 +7688,10 @@ Truncate git history to this many commits.
         </tr>
     
         <tr>
-            <td class="align-top">git_<wbr>submodules_<wbr>config</td>
+            <td class="align-top">git<wbr>Submodules<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondarysourcegitsubmodulesconfig">Dict[project_<wbr>secondary_<wbr>source_<wbr>git_<wbr>submodules_<wbr>config]</a></code>
+                <code><a href="#projectsecondarysourcegitsubmodulesconfig">Dict[Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7703,7 +7703,7 @@ Information about the Git submodules configuration for an AWS CodeBuild build pr
         </tr>
     
         <tr>
-            <td class="align-top">insecure_<wbr>ssl</td>
+            <td class="align-top">insecure<wbr>Ssl</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -7733,7 +7733,7 @@ The location of the source code from git or s3.
         </tr>
     
         <tr>
-            <td class="align-top">report_<wbr>build_<wbr>status</td>
+            <td class="align-top">report<wbr>Build<wbr>Status</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -7748,7 +7748,7 @@ Set to `true` to report the status of a build&#39;s start and finish to your sou
         </tr>
     
         <tr>
-            <td class="align-top">source_<wbr>identifier</td>
+            <td class="align-top">source<wbr>Identifier</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8145,7 +8145,7 @@ If set to true, fetches Git submodules for the AWS CodeBuild build project.
     <tbody>
     
         <tr>
-            <td class="align-top">fetch_<wbr>submodules</td>
+            <td class="align-top">fetch<wbr>Submodules</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -8624,7 +8624,7 @@ The type of repository that contains the source code to be built. Valid values f
             <td class="align-top">auths</td>
             <td class="align-top">
                 
-                <code><a href="#projectsourceauth">List[project_<wbr>source_<wbr>auth]</a></code>
+                <code><a href="#projectsourceauth">List[Project<wbr>Source<wbr>Auth]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8651,7 +8651,7 @@ The build spec declaration to use for this build project&#39;s related builds.
         </tr>
     
         <tr>
-            <td class="align-top">git_<wbr>clone_<wbr>depth</td>
+            <td class="align-top">git<wbr>Clone<wbr>Depth</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -8666,10 +8666,10 @@ Truncate git history to this many commits.
         </tr>
     
         <tr>
-            <td class="align-top">git_<wbr>submodules_<wbr>config</td>
+            <td class="align-top">git<wbr>Submodules<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#projectsourcegitsubmodulesconfig">Dict[project_<wbr>source_<wbr>git_<wbr>submodules_<wbr>config]</a></code>
+                <code><a href="#projectsourcegitsubmodulesconfig">Dict[Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8681,7 +8681,7 @@ Information about the Git submodules configuration for an AWS CodeBuild build pr
         </tr>
     
         <tr>
-            <td class="align-top">insecure_<wbr>ssl</td>
+            <td class="align-top">insecure<wbr>Ssl</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -8711,7 +8711,7 @@ The location of the source code from git or s3.
         </tr>
     
         <tr>
-            <td class="align-top">report_<wbr>build_<wbr>status</td>
+            <td class="align-top">report<wbr>Build<wbr>Status</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -9108,7 +9108,7 @@ If set to true, fetches Git submodules for the AWS CodeBuild build project.
     <tbody>
     
         <tr>
-            <td class="align-top">fetch_<wbr>submodules</td>
+            <td class="align-top">fetch<wbr>Submodules</td>
             <td class="align-top">
                 
                 <code>bool</code>

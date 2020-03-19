@@ -431,7 +431,7 @@ A classifier for XML content. Defined below.
             <td class="align-top">csv_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiercsvclassifier">Dict[classifier_<wbr>csv_<wbr>classifier]</a></code>
+                <code><a href="#classifiercsvclassifier">Dict[Classifier<wbr>Csv<wbr>Classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -446,7 +446,7 @@ A classifier for Csv content. Defined below.
             <td class="align-top">grok_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiergrokclassifier">Dict[classifier_<wbr>grok_<wbr>classifier]</a></code>
+                <code><a href="#classifiergrokclassifier">Dict[Classifier<wbr>Grok<wbr>Classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -461,7 +461,7 @@ A classifier that uses grok patterns. Defined below.
             <td class="align-top">json_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierjsonclassifier">Dict[classifier_<wbr>json_<wbr>classifier]</a></code>
+                <code><a href="#classifierjsonclassifier">Dict[Classifier<wbr>Json<wbr>Classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -491,7 +491,7 @@ The name of the classifier.
             <td class="align-top">xml_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierxmlclassifier">Dict[classifier_<wbr>xml_<wbr>classifier]</a></code>
+                <code><a href="#classifierxmlclassifier">Dict[Classifier<wbr>Xml<wbr>Classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -795,7 +795,7 @@ The following output properties are available:
             <td class="align-top">csv_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiercsvclassifier">Dict[classifier_<wbr>csv_<wbr>classifier]</a></code>
+                <code><a href="#classifiercsvclassifier">Dict[Classifier<wbr>Csv<wbr>Classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} A classifier for Csv content. Defined below.
  {{% /md %}}
@@ -808,7 +808,7 @@ The following output properties are available:
             <td class="align-top">grok_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiergrokclassifier">Dict[classifier_<wbr>grok_<wbr>classifier]</a></code>
+                <code><a href="#classifiergrokclassifier">Dict[Classifier<wbr>Grok<wbr>Classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} A classifier that uses grok patterns. Defined below.
  {{% /md %}}
@@ -821,7 +821,7 @@ The following output properties are available:
             <td class="align-top">json_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierjsonclassifier">Dict[classifier_<wbr>json_<wbr>classifier]</a></code>
+                <code><a href="#classifierjsonclassifier">Dict[Classifier<wbr>Json<wbr>Classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} A classifier for JSON content. Defined below.
  {{% /md %}}
@@ -847,7 +847,7 @@ The following output properties are available:
             <td class="align-top">xml_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierxmlclassifier">Dict[classifier_<wbr>xml_<wbr>classifier]</a></code>
+                <code><a href="#classifierxmlclassifier">Dict[Classifier<wbr>Xml<wbr>Classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} A classifier for XML content. Defined below.
  {{% /md %}}
@@ -1224,7 +1224,7 @@ A classifier for XML content. Defined below.
             <td class="align-top">csv_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiercsvclassifier">Dict[classifier_<wbr>csv_<wbr>classifier]</a></code>
+                <code><a href="#classifiercsvclassifier">Dict[Classifier<wbr>Csv<wbr>Classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1239,7 +1239,7 @@ A classifier for Csv content. Defined below.
             <td class="align-top">grok_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiergrokclassifier">Dict[classifier_<wbr>grok_<wbr>classifier]</a></code>
+                <code><a href="#classifiergrokclassifier">Dict[Classifier<wbr>Grok<wbr>Classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1254,7 +1254,7 @@ A classifier that uses grok patterns. Defined below.
             <td class="align-top">json_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierjsonclassifier">Dict[classifier_<wbr>json_<wbr>classifier]</a></code>
+                <code><a href="#classifierjsonclassifier">Dict[Classifier<wbr>Json<wbr>Classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1284,7 +1284,7 @@ The name of the classifier.
             <td class="align-top">xml_<wbr>classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierxmlclassifier">Dict[classifier_<wbr>xml_<wbr>classifier]</a></code>
+                <code><a href="#classifierxmlclassifier">Dict[Classifier<wbr>Xml<wbr>Classifier]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1674,7 +1674,7 @@ A custom symbol to denote what combines content into a single column value. It m
     <tbody>
     
         <tr>
-            <td class="align-top">allow_<wbr>single_<wbr>column</td>
+            <td class="align-top">allow<wbr>Single<wbr>Column</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1689,7 +1689,7 @@ Enables the processing of files that contain only one column.
         </tr>
     
         <tr>
-            <td class="align-top">contains_<wbr>header</td>
+            <td class="align-top">contains<wbr>Header</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1719,7 +1719,7 @@ The delimiter used in the Csv to separate columns.
         </tr>
     
         <tr>
-            <td class="align-top">disable_<wbr>value_<wbr>trimming</td>
+            <td class="align-top">disable<wbr>Value<wbr>Trimming</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1749,7 +1749,7 @@ A list of strings representing column names.
         </tr>
     
         <tr>
-            <td class="align-top">quote_<wbr>symbol</td>
+            <td class="align-top">quote<wbr>Symbol</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2015,7 +2015,7 @@ An identifier of the data format that the classifier matches.
         </tr>
     
         <tr>
-            <td class="align-top">custom_<wbr>patterns</td>
+            <td class="align-top">custom<wbr>Patterns</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2030,7 +2030,7 @@ Custom grok patterns used by this classifier.
         </tr>
     
         <tr>
-            <td class="align-top">grok_<wbr>pattern</td>
+            <td class="align-top">grok<wbr>Pattern</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2191,7 +2191,7 @@ A `JsonPath` string defining the JSON data for the classifier to classify. AWS G
     <tbody>
     
         <tr>
-            <td class="align-top">json_<wbr>path</td>
+            <td class="align-top">json<wbr>Path</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2412,7 +2412,7 @@ An identifier of the data format that the classifier matches.
         </tr>
     
         <tr>
-            <td class="align-top">row_<wbr>tag</td>
+            <td class="align-top">row<wbr>Tag</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -794,7 +794,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">sync_<wbr>token</td>
+            <td class="align-top">sync<wbr>Token</td>
             <td class="align-top">
                 
                 <code>float</code>

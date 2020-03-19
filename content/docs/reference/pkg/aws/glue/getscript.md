@@ -440,10 +440,10 @@ The programming language of the resulting code from the DAG. Defaults to `PYTHON
     <tbody>
     
         <tr>
-            <td class="align-top">dag_<wbr>edges</td>
+            <td class="align-top">dag<wbr>Edges</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagedge">List[get_<wbr>script_<wbr>dag_<wbr>edge]</a></code>
+                <code><a href="#getscriptdagedge">List[Get<wbr>Script<wbr>Dag<wbr>Edge]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -455,10 +455,10 @@ A list of the edges in the DAG. Defined below.
         </tr>
     
         <tr>
-            <td class="align-top">dag_<wbr>nodes</td>
+            <td class="align-top">dag<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagnode">List[get_<wbr>script_<wbr>dag_<wbr>node]</a></code>
+                <code><a href="#getscriptdagnode">List[Get<wbr>Script<wbr>Dag<wbr>Node]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -805,10 +805,10 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">dag_<wbr>edges</td>
+            <td class="align-top">dag<wbr>Edges</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagedge">List[get_<wbr>script_<wbr>dag_<wbr>edge]</a></code>
+                <code><a href="#getscriptdagedge">List[Get<wbr>Script<wbr>Dag<wbr>Edge]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -817,10 +817,10 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">dag_<wbr>nodes</td>
+            <td class="align-top">dag<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagnode">List[get_<wbr>script_<wbr>dag_<wbr>node]</a></code>
+                <code><a href="#getscriptdagnode">List[Get<wbr>Script<wbr>Dag<wbr>Node]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -854,7 +854,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">python_<wbr>script</td>
+            <td class="align-top">python<wbr>Script</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -867,7 +867,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">scala_<wbr>code</td>
+            <td class="align-top">scala<wbr>Code</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1151,7 +1151,7 @@ The ID of the node at which the edge ends.
         </tr>
     
         <tr>
-            <td class="align-top">target_<wbr>parameter</td>
+            <td class="align-top">target<wbr>Parameter</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1450,7 +1450,7 @@ The type of node this is.
             <td class="align-top">args</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagnodearg">List[get_<wbr>script_<wbr>dag_<wbr>node_<wbr>arg]</a></code>
+                <code><a href="#getscriptdagnodearg">List[Get<wbr>Script<wbr>Dag<wbr>Node<wbr>Arg]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1477,7 +1477,7 @@ A node identifier that is unique within the node&#39;s graph.
         </tr>
     
         <tr>
-            <td class="align-top">line_<wbr>number</td>
+            <td class="align-top">line<wbr>Number</td>
             <td class="align-top">
                 
                 <code>float</code>

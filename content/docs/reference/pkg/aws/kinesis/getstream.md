@@ -232,7 +232,7 @@ The name of the Kinesis Stream.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -741,7 +741,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">closed_<wbr>shards</td>
+            <td class="align-top">closed<wbr>Shards</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -754,7 +754,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">creation_<wbr>timestamp</td>
+            <td class="align-top">creation<wbr>Timestamp</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -793,7 +793,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">open_<wbr>shards</td>
+            <td class="align-top">open<wbr>Shards</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -848,7 +848,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assigned to the stream.
  {{% /md %}}

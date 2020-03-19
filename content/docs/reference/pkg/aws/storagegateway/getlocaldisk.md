@@ -260,7 +260,7 @@ The Amazon Resource Name (ARN) of the gateway.
     <tbody>
     
         <tr>
-            <td class="align-top">disk_<wbr>node</td>
+            <td class="align-top">disk<wbr>Node</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -275,7 +275,7 @@ The device node of the local disk to retrieve. For example, `/dev/sdb`.
         </tr>
     
         <tr>
-            <td class="align-top">disk_<wbr>path</td>
+            <td class="align-top">disk<wbr>Path</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -599,7 +599,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">disk_<wbr>node</td>
+            <td class="align-top">disk<wbr>Node</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -611,7 +611,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">disk_<wbr>path</td>
+            <td class="align-top">disk<wbr>Path</td>
             <td class="align-top">
                 
                 <code>str</code>

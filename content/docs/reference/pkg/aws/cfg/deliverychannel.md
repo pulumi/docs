@@ -464,7 +464,7 @@ The prefix for the specified S3 bucket.
             <td class="align-top">snapshot_<wbr>delivery_<wbr>properties</td>
             <td class="align-top">
                 
-                <code><a href="#deliverychannelsnapshotdeliveryproperties">Dict[delivery_<wbr>channel_<wbr>snapshot_<wbr>delivery_<wbr>properties]</a></code>
+                <code><a href="#deliverychannelsnapshotdeliveryproperties">Dict[Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -822,7 +822,7 @@ The following output properties are available:
             <td class="align-top">snapshot_<wbr>delivery_<wbr>properties</td>
             <td class="align-top">
                 
-                <code><a href="#deliverychannelsnapshotdeliveryproperties">Dict[delivery_<wbr>channel_<wbr>snapshot_<wbr>delivery_<wbr>properties]</a></code>
+                <code><a href="#deliverychannelsnapshotdeliveryproperties">Dict[Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties]</a></code>
             </td>
             <td class="align-top">{{% md %}} Options for how AWS Config delivers configuration snapshots. See below
  {{% /md %}}
@@ -1257,7 +1257,7 @@ The prefix for the specified S3 bucket.
             <td class="align-top">snapshot_<wbr>delivery_<wbr>properties</td>
             <td class="align-top">
                 
-                <code><a href="#deliverychannelsnapshotdeliveryproperties">Dict[delivery_<wbr>channel_<wbr>snapshot_<wbr>delivery_<wbr>properties]</a></code>
+                <code><a href="#deliverychannelsnapshotdeliveryproperties">Dict[Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1443,7 +1443,7 @@ Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIRefe
     <tbody>
     
         <tr>
-            <td class="align-top">delivery_<wbr>frequency</td>
+            <td class="align-top">delivery<wbr>Frequency</td>
             <td class="align-top">
                 
                 <code>str</code>

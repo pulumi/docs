@@ -274,7 +274,7 @@ Ordered list of preferred EC2 Instance Types. The first match in this list will 
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancetypeofferingfilter">List[get_<wbr>instance_<wbr>type_<wbr>offering_<wbr>filter]</a></code>
+                <code><a href="#getinstancetypeofferingfilter">List[Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -286,7 +286,7 @@ One or more configuration blocks containing name-values filters. See the [EC2 AP
         </tr>
     
         <tr>
-            <td class="align-top">location_<wbr>type</td>
+            <td class="align-top">location<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -301,7 +301,7 @@ Location type. Defaults to `region`. Valid values: `availability-zone`, `availab
         </tr>
     
         <tr>
-            <td class="align-top">preferred_<wbr>instance_<wbr>types</td>
+            <td class="align-top">preferred<wbr>Instance<wbr>Types</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -600,7 +600,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancetypeofferingfilter">List[get_<wbr>instance_<wbr>type_<wbr>offering_<wbr>filter]</a></code>
+                <code><a href="#getinstancetypeofferingfilter">List[Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -635,7 +635,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">location_<wbr>type</td>
+            <td class="align-top">location<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -647,7 +647,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">preferred_<wbr>instance_<wbr>types</td>
+            <td class="align-top">preferred<wbr>Instance<wbr>Types</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

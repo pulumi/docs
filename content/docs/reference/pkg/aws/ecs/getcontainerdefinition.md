@@ -789,7 +789,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">disable_<wbr>networking</td>
+            <td class="align-top">disable<wbr>Networking</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -802,7 +802,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">docker_<wbr>labels</td>
+            <td class="align-top">docker<wbr>Labels</td>
             <td class="align-top">
                 
                 <code>Dict[str, str]</code>
@@ -854,7 +854,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">image_<wbr>digest</td>
+            <td class="align-top">image<wbr>Digest</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -880,7 +880,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">memory_<wbr>reservation</td>
+            <td class="align-top">memory<wbr>Reservation</td>
             <td class="align-top">
                 
                 <code>float</code>

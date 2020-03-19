@@ -474,7 +474,7 @@ The following output properties are available:
             <td class="align-top">appversion_<wbr>lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#getapplicationappversionlifecycle">Dict[get_<wbr>application_<wbr>appversion_<wbr>lifecycle]</a></code>
+                <code><a href="#getapplicationappversionlifecycle">Dict[Get<wbr>Application<wbr>Appversion<wbr>Lifecycle]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -820,7 +820,7 @@ The ARN of an IAM service role under which the application version is deleted.  
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>source_<wbr>from_<wbr>s3</td>
+            <td class="align-top">delete<wbr>Source<wbr>From<wbr>S3</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -835,7 +835,7 @@ Specifies whether delete a version&#39;s source bundle from S3 when the applicat
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>age_<wbr>in_<wbr>days</td>
+            <td class="align-top">max<wbr>Age<wbr>In<wbr>Days</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -850,7 +850,7 @@ The number of days to retain an application version.
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>count</td>
+            <td class="align-top">max<wbr>Count</td>
             <td class="align-top">
                 
                 <code>float</code>

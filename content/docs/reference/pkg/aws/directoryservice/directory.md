@@ -806,7 +806,7 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
             <td class="align-top">connect_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryconnectsettings">Dict[directory_<wbr>connect_<wbr>settings]</a></code>
+                <code><a href="#directoryconnectsettings">Dict[Directory<wbr>Connect<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -926,7 +926,7 @@ The size of the directory (`Small` or `Large` are accepted values).
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -956,7 +956,7 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
             <td class="align-top">vpc_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryvpcsettings">Dict[directory_<wbr>vpc_<wbr>settings]</a></code>
+                <code><a href="#directoryvpcsettings">Dict[Directory<wbr>Vpc<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1676,7 +1676,7 @@ The following output properties are available:
             <td class="align-top">connect_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryconnectsettings">Dict[directory_<wbr>connect_<wbr>settings]</a></code>
+                <code><a href="#directoryconnectsettings">Dict[Directory<wbr>Connect<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} Connector related information about the directory. Fields documented below.
  {{% /md %}}
@@ -1806,7 +1806,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1832,7 +1832,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryvpcsettings">Dict[directory_<wbr>vpc_<wbr>settings]</a></code>
+                <code><a href="#directoryvpcsettings">Dict[Directory<wbr>Vpc<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC related information about the directory. Fields documented below.
  {{% /md %}}
@@ -2689,7 +2689,7 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
             <td class="align-top">connect_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryconnectsettings">Dict[directory_<wbr>connect_<wbr>settings]</a></code>
+                <code><a href="#directoryconnectsettings">Dict[Directory<wbr>Connect<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2839,7 +2839,7 @@ The size of the directory (`Small` or `Large` are accepted values).
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2869,7 +2869,7 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
             <td class="align-top">vpc_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryvpcsettings">Dict[directory_<wbr>vpc_<wbr>settings]</a></code>
+                <code><a href="#directoryvpcsettings">Dict[Directory<wbr>Vpc<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3169,7 +3169,7 @@ The identifier of the VPC that the directory is in.
     <tbody>
     
         <tr>
-            <td class="align-top">customer_<wbr>dns_<wbr>ips</td>
+            <td class="align-top">customer<wbr>Dns<wbr>Ips</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -3184,7 +3184,7 @@ The DNS IP addresses of the domain to connect to.
         </tr>
     
         <tr>
-            <td class="align-top">customer_<wbr>username</td>
+            <td class="align-top">customer<wbr>Username</td>
             <td class="align-top">
                 
                 <code>str</code>

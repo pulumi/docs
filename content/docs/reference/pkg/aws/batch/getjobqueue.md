@@ -617,10 +617,10 @@ of the job queue.
         </tr>
     
         <tr>
-            <td class="align-top">compute_<wbr>environment_<wbr>orders</td>
+            <td class="align-top">compute<wbr>Environment<wbr>Orders</td>
             <td class="align-top">
                 
-                <code><a href="#getjobqueuecomputeenvironmentorder">List[get_<wbr>job_<wbr>queue_<wbr>compute_<wbr>environment_<wbr>order]</a></code>
+                <code><a href="#getjobqueuecomputeenvironmentorder">List[Get<wbr>Job<wbr>Queue<wbr>Compute<wbr>Environment<wbr>Order]</a></code>
             </td>
             <td class="align-top">{{% md %}} The compute environments that are attached to the job queue and the order in
 which job placement is preferred. Compute environments are selected for job placement in ascending order.
@@ -902,7 +902,7 @@ of the job queue.
     <tbody>
     
         <tr>
-            <td class="align-top">compute_<wbr>environment</td>
+            <td class="align-top">compute<wbr>Environment</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -263,7 +263,7 @@ The name or description of the Size Constraint Set.
             <td class="align-top">size_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#sizeconstraintsetsizeconstraint">List[size_<wbr>constraint_<wbr>set_<wbr>size_<wbr>constraint]</a></code>
+                <code><a href="#sizeconstraintsetsizeconstraint">List[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -511,7 +511,7 @@ The following output properties are available:
             <td class="align-top">size_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#sizeconstraintsetsizeconstraint">List[size_<wbr>constraint_<wbr>set_<wbr>size_<wbr>constraint]</a></code>
+                <code><a href="#sizeconstraintsetsizeconstraint">List[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the parts of web requests that you want to inspect the size of.
  {{% /md %}}
@@ -824,7 +824,7 @@ The name or description of the Size Constraint Set.
             <td class="align-top">size_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#sizeconstraintsetsizeconstraint">List[size_<wbr>constraint_<wbr>set_<wbr>size_<wbr>constraint]</a></code>
+                <code><a href="#sizeconstraintsetsizeconstraint">List[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1165,10 +1165,10 @@ See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint
         </tr>
     
         <tr>
-            <td class="align-top">field_<wbr>to_<wbr>match</td>
+            <td class="align-top">field<wbr>To<wbr>Match</td>
             <td class="align-top">
                 
-                <code><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Dict[size_<wbr>constraint_<wbr>set_<wbr>size_<wbr>constraint_<wbr>field_<wbr>to_<wbr>match]</a></code>
+                <code><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Dict[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1196,7 +1196,7 @@ Valid values are between 0 - 21474836480 bytes (0 - 20 GB).
         </tr>
     
         <tr>
-            <td class="align-top">text_<wbr>transformation</td>
+            <td class="align-top">text<wbr>Transformation</td>
             <td class="align-top">
                 
                 <code>str</code>

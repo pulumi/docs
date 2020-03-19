@@ -542,7 +542,7 @@ The principal that is given permission to retire the grant by using RetireGrant 
             <td class="align-top">constraints</td>
             <td class="align-top">
                 
-                <code><a href="#grantconstraint">List[grant_<wbr>constraint]</a></code>
+                <code><a href="#grantconstraint">List[Grant<wbr>Constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1150,7 +1150,7 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
             <td class="align-top">constraints</td>
             <td class="align-top">
                 
-                <code><a href="#grantconstraint">List[grant_<wbr>constraint]</a></code>
+                <code><a href="#grantconstraint">List[Grant<wbr>Constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
  {{% /md %}}
@@ -1873,7 +1873,7 @@ The principal that is given permission to retire the grant by using RetireGrant 
             <td class="align-top">constraints</td>
             <td class="align-top">
                 
-                <code><a href="#grantconstraint">List[grant_<wbr>constraint]</a></code>
+                <code><a href="#grantconstraint">List[Grant<wbr>Constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2213,7 +2213,7 @@ The principal that is given permission to retire the grant by using RetireGrant 
     <tbody>
     
         <tr>
-            <td class="align-top">encryption_<wbr>context_<wbr>equals</td>
+            <td class="align-top">encryption<wbr>Context<wbr>Equals</td>
             <td class="align-top">
                 
                 <code>Dict[str, str]</code>
@@ -2227,7 +2227,7 @@ The principal that is given permission to retire the grant by using RetireGrant 
         </tr>
     
         <tr>
-            <td class="align-top">encryption_<wbr>context_<wbr>subset</td>
+            <td class="align-top">encryption<wbr>Context<wbr>Subset</td>
             <td class="align-top">
                 
                 <code>Dict[str, str]</code>

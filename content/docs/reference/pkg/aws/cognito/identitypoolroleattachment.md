@@ -365,7 +365,7 @@ An identity pool ID in the format REGION:GUID.
             <td class="align-top">role_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentrolemapping">List[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>role_<wbr>mapping]</a></code>
+                <code><a href="#identitypoolroleattachmentrolemapping">List[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -380,7 +380,7 @@ A List of Role Mapping.
             <td class="align-top">roles</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentroles">Dict[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>roles]</a></code>
+                <code><a href="#identitypoolroleattachmentroles">Dict[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -619,7 +619,7 @@ The following output properties are available:
             <td class="align-top">role_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentrolemapping">List[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>role_<wbr>mapping]</a></code>
+                <code><a href="#identitypoolroleattachmentrolemapping">List[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} A List of Role Mapping.
  {{% /md %}}
@@ -632,7 +632,7 @@ The following output properties are available:
             <td class="align-top">roles</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentroles">Dict[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>roles]</a></code>
+                <code><a href="#identitypoolroleattachmentroles">Dict[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles]</a></code>
             </td>
             <td class="align-top">{{% md %}} The map of roles associated with this pool. For a given role, the key will be either &#34;authenticated&#34; or &#34;unauthenticated&#34; and the value will be the Role ARN.
  {{% /md %}}
@@ -934,7 +934,7 @@ An identity pool ID in the format REGION:GUID.
             <td class="align-top">role_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentrolemapping">List[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>role_<wbr>mapping]</a></code>
+                <code><a href="#identitypoolroleattachmentrolemapping">List[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -949,7 +949,7 @@ A List of Role Mapping.
             <td class="align-top">roles</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentroles">Dict[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>roles]</a></code>
+                <code><a href="#identitypoolroleattachmentroles">Dict[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1249,7 +1249,7 @@ The role mapping type.
     <tbody>
     
         <tr>
-            <td class="align-top">ambiguous_<wbr>role_<wbr>resolution</td>
+            <td class="align-top">ambiguous<wbr>Role<wbr>Resolution</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1279,10 +1279,10 @@ A string identifying the identity provider, for example, &#34;graph.facebook.com
         </tr>
     
         <tr>
-            <td class="align-top">mapping_<wbr>rules</td>
+            <td class="align-top">mapping<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentrolemappingmappingrule">List[identity_<wbr>pool_<wbr>role_<wbr>attachment_<wbr>role_<wbr>mapping_<wbr>mapping_<wbr>rule]</a></code>
+                <code><a href="#identitypoolroleattachmentrolemappingmappingrule">List[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1605,7 +1605,7 @@ The claim name that must be present in the token, for example, &#34;isAdmin&#34;
         </tr>
     
         <tr>
-            <td class="align-top">match_<wbr>type</td>
+            <td class="align-top">match<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>

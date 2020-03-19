@@ -234,7 +234,7 @@ The name of the cluster
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -899,7 +899,7 @@ The following output properties are available:
             <td class="align-top">certificate_<wbr>authority</td>
             <td class="align-top">
                 
-                <code><a href="#getclustercertificateauthority">Dict[get_<wbr>cluster_<wbr>certificate_<wbr>authority]</a></code>
+                <code><a href="#getclustercertificateauthority">Dict[Get<wbr>Cluster<wbr>Certificate<wbr>Authority]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing `certificate-authority-data` for your cluster.
  {{% /md %}}
@@ -964,7 +964,7 @@ The following output properties are available:
             <td class="align-top">identities</td>
             <td class="align-top">
                 
-                <code><a href="#getclusteridentity">List[get_<wbr>cluster_<wbr>identity]</a></code>
+                <code><a href="#getclusteridentity">List[Get<wbr>Cluster<wbr>Identity]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. For an example using this information to enable IAM Roles for Service Accounts, see the [`aws.eks.Cluster` resource documentation](https://www.terraform.io/docs/providers/aws/r/eks_cluster.html).
  {{% /md %}}
@@ -1028,7 +1028,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags.
  {{% /md %}}
@@ -1054,7 +1054,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#getclustervpcconfig">Dict[get_<wbr>cluster_<wbr>vpc_<wbr>config]</a></code>
+                <code><a href="#getclustervpcconfig">Dict[Get<wbr>Cluster<wbr>Vpc<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested list containing VPC configuration for the cluster.
  {{% /md %}}
@@ -1379,7 +1379,7 @@ Nested attribute containing [OpenID Connect](https://openid.net/connect/) identi
             <td class="align-top">oidcs</td>
             <td class="align-top">
                 
-                <code><a href="#getclusteridentityoidc">List[get_<wbr>cluster_<wbr>identity_<wbr>oidc]</a></code>
+                <code><a href="#getclusteridentityoidc">List[Get<wbr>Cluster<wbr>Identity<wbr>Oidc]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1968,7 +1968,7 @@ The VPC associated with your cluster.
     <tbody>
     
         <tr>
-            <td class="align-top">cluster_<wbr>security_<wbr>group_<wbr>id</td>
+            <td class="align-top">cluster<wbr>Security<wbr>Group<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1983,7 +1983,7 @@ The cluster security group that was created by Amazon EKS for the cluster.
         </tr>
     
         <tr>
-            <td class="align-top">endpoint_<wbr>private_<wbr>access</td>
+            <td class="align-top">endpoint<wbr>Private<wbr>Access</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1998,7 +1998,7 @@ Indicates whether or not the Amazon EKS private API server endpoint is enabled.
         </tr>
     
         <tr>
-            <td class="align-top">endpoint_<wbr>public_<wbr>access</td>
+            <td class="align-top">endpoint<wbr>Public<wbr>Access</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -2013,7 +2013,7 @@ Indicates whether or not the Amazon EKS public API server endpoint is enabled.
         </tr>
     
         <tr>
-            <td class="align-top">public_<wbr>access_<wbr>cidrs</td>
+            <td class="align-top">public<wbr>Access<wbr>Cidrs</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

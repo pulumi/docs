@@ -350,7 +350,7 @@ Amazon Resource Name (ARN) of the S3 Bucket.
             <td class="align-top">s3_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#s3locations3config">Dict[s3_<wbr>location_<wbr>s3_<wbr>config]</a></code>
+                <code><a href="#s3locations3config">Dict[S3Location<wbr>S3Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -380,7 +380,7 @@ Prefix to perform actions as source or destination.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -746,7 +746,7 @@ The following output properties are available:
             <td class="align-top">s3_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#s3locations3config">Dict[s3_<wbr>location_<wbr>s3_<wbr>config]</a></code>
+                <code><a href="#s3locations3config">Dict[S3Location<wbr>S3Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing information for connecting to S3.
  {{% /md %}}
@@ -772,7 +772,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value pairs of resource tags to assign to the DataSync Location.
  {{% /md %}}
@@ -1233,7 +1233,7 @@ Amazon Resource Name (ARN) of the S3 Bucket.
             <td class="align-top">s3_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#s3locations3config">Dict[s3_<wbr>location_<wbr>s3_<wbr>config]</a></code>
+                <code><a href="#s3locations3config">Dict[S3Location<wbr>S3Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1263,7 +1263,7 @@ Prefix to perform actions as source or destination.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1442,7 +1442,7 @@ Amazon Resource Names (ARN) of the IAM Role used to connect to the S3 Bucket.
     <tbody>
     
         <tr>
-            <td class="align-top">bucket_<wbr>access_<wbr>role_<wbr>arn</td>
+            <td class="align-top">bucket<wbr>Access<wbr>Role<wbr>Arn</td>
             <td class="align-top">
                 
                 <code>str</code>

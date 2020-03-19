@@ -455,7 +455,7 @@ A character used to group keys (Default: none)
         </tr>
     
         <tr>
-            <td class="align-top">encoding_<wbr>type</td>
+            <td class="align-top">encoding<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -470,7 +470,7 @@ Encodes keys using this method (Default: none; besides none, only &#34;url&#34; 
         </tr>
     
         <tr>
-            <td class="align-top">fetch_<wbr>owner</td>
+            <td class="align-top">fetch<wbr>Owner</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -485,7 +485,7 @@ Boolean specifying whether to populate the owner list (Default: false)
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>keys</td>
+            <td class="align-top">max<wbr>Keys</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -515,7 +515,7 @@ Limits results to object keys with this prefix (Default: none)
         </tr>
     
         <tr>
-            <td class="align-top">start_<wbr>after</td>
+            <td class="align-top">start<wbr>After</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1045,7 +1045,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">common_<wbr>prefixes</td>
+            <td class="align-top">common<wbr>Prefixes</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -1070,7 +1070,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">encoding_<wbr>type</td>
+            <td class="align-top">encoding<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1082,7 +1082,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">fetch_<wbr>owner</td>
+            <td class="align-top">fetch<wbr>Owner</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1120,7 +1120,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>keys</td>
+            <td class="align-top">max<wbr>Keys</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1157,7 +1157,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">start_<wbr>after</td>
+            <td class="align-top">start<wbr>After</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -224,7 +224,7 @@ AWS documentation for reference solution stack names.
     <tbody>
     
         <tr>
-            <td class="align-top">most_<wbr>recent</td>
+            <td class="align-top">most<wbr>Recent</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -240,7 +240,7 @@ recent solution stack.
         </tr>
     
         <tr>
-            <td class="align-top">name_<wbr>regex</td>
+            <td class="align-top">name<wbr>Regex</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -515,7 +515,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">most_<wbr>recent</td>
+            <td class="align-top">most<wbr>Recent</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -540,7 +540,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">name_<wbr>regex</td>
+            <td class="align-top">name<wbr>Regex</td>
             <td class="align-top">
                 
                 <code>str</code>
