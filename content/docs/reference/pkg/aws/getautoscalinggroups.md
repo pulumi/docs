@@ -192,7 +192,7 @@ A filter used to scope the list e.g. by tags. See [related docs](http://docs.aws
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getautoscalinggroupsfilter">List[get_<wbr>autoscaling_<wbr>groups_<wbr>filter]</a></code>
+                <code><a href="#getautoscalinggroupsfilter">List[Get<wbr>Autoscaling<wbr>Groups<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -468,7 +468,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getautoscalinggroupsfilter">List[get_<wbr>autoscaling_<wbr>groups_<wbr>filter]</a></code>
+                <code><a href="#getautoscalinggroupsfilter">List[Get<wbr>Autoscaling<wbr>Groups<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

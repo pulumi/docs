@@ -942,7 +942,7 @@ The type of source to use. For example, &#34;archive&#34;.
             <td class="align-top">app_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappsource">List[application_<wbr>app_<wbr>source]</a></code>
+                <code><a href="#applicationappsource">List[Application<wbr>App<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1092,7 +1092,7 @@ Whether to enable SSL for the app. This must be set in order to let `ssl_configu
             <td class="align-top">environments</td>
             <td class="align-top">
                 
-                <code><a href="#applicationenvironment">List[application_<wbr>environment]</a></code>
+                <code><a href="#applicationenvironment">List[Application<wbr>Environment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1152,7 +1152,7 @@ A short, machine-readable name for the application. This can only be defined on 
             <td class="align-top">ssl_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#applicationsslconfiguration">List[application_<wbr>ssl_<wbr>configuration]</a></code>
+                <code><a href="#applicationsslconfiguration">List[Application<wbr>Ssl<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1954,7 +1954,7 @@ The following output properties are available:
             <td class="align-top">app_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappsource">List[application_<wbr>app_<wbr>source]</a></code>
+                <code><a href="#applicationappsource">List[Application<wbr>App<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} SCM configuration of the app as described below.
  {{% /md %}}
@@ -2084,7 +2084,7 @@ The following output properties are available:
             <td class="align-top">environments</td>
             <td class="align-top">
                 
-                <code><a href="#applicationenvironment">List[application_<wbr>environment]</a></code>
+                <code><a href="#applicationenvironment">List[Application<wbr>Environment]</a></code>
             </td>
             <td class="align-top">{{% md %}} Object to define environment variables.  Object is described below.
  {{% /md %}}
@@ -2136,7 +2136,7 @@ The following output properties are available:
             <td class="align-top">ssl_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#applicationsslconfiguration">List[application_<wbr>ssl_<wbr>configuration]</a></code>
+                <code><a href="#applicationsslconfiguration">List[Application<wbr>Ssl<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} The SSL configuration of the app. Object is described below.
  {{% /md %}}
@@ -3079,7 +3079,7 @@ The type of source to use. For example, &#34;archive&#34;.
             <td class="align-top">app_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappsource">List[application_<wbr>app_<wbr>source]</a></code>
+                <code><a href="#applicationappsource">List[Application<wbr>App<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3229,7 +3229,7 @@ Whether to enable SSL for the app. This must be set in order to let `ssl_configu
             <td class="align-top">environments</td>
             <td class="align-top">
                 
-                <code><a href="#applicationenvironment">List[application_<wbr>environment]</a></code>
+                <code><a href="#applicationenvironment">List[Application<wbr>Environment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3289,7 +3289,7 @@ A short, machine-readable name for the application. This can only be defined on 
             <td class="align-top">ssl_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#applicationsslconfiguration">List[application_<wbr>ssl_<wbr>configuration]</a></code>
+                <code><a href="#applicationsslconfiguration">List[Application<wbr>Ssl<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3732,7 +3732,7 @@ For sources that are version-aware, the revision to use.
         </tr>
     
         <tr>
-            <td class="align-top">ssh_<wbr>key</td>
+            <td class="align-top">ssh<wbr>Key</td>
             <td class="align-top">
                 
                 <code>str</code>

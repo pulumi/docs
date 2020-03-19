@@ -466,7 +466,7 @@ modified, added, or removed.** It will be left in its current state
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">List[default_<wbr>security_<wbr>group_<wbr>egress]</a></code>
+                <code><a href="#defaultsecuritygroupegress">List[Default<wbr>Security<wbr>Group<wbr>Egress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -482,7 +482,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">List[default_<wbr>security_<wbr>group_<wbr>ingress]</a></code>
+                <code><a href="#defaultsecuritygroupingress">List[Default<wbr>Security<wbr>Group<wbr>Ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -512,7 +512,7 @@ ingress rule. Each ingress block supports fields documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1020,7 +1020,7 @@ modified, added, or removed.** It will be left in its current state
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">List[default_<wbr>security_<wbr>group_<wbr>egress]</a></code>
+                <code><a href="#defaultsecuritygroupegress">List[Default<wbr>Security<wbr>Group<wbr>Egress]</a></code>
             </td>
             <td class="align-top">{{% md %}} Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -1034,7 +1034,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">List[default_<wbr>security_<wbr>group_<wbr>ingress]</a></code>
+                <code><a href="#defaultsecuritygroupingress">List[Default<wbr>Security<wbr>Group<wbr>Ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -1086,7 +1086,7 @@ ingress rule. Each ingress block supports fields documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1693,7 +1693,7 @@ The description of the security group
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">List[default_<wbr>security_<wbr>group_<wbr>egress]</a></code>
+                <code><a href="#defaultsecuritygroupegress">List[Default<wbr>Security<wbr>Group<wbr>Egress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1709,7 +1709,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">List[default_<wbr>security_<wbr>group_<wbr>ingress]</a></code>
+                <code><a href="#defaultsecuritygroupingress">List[Default<wbr>Security<wbr>Group<wbr>Ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1769,7 +1769,7 @@ The owner ID.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

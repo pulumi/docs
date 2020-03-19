@@ -599,7 +599,7 @@ The name of the rule
             <td class="align-top">scope</td>
             <td class="align-top">
                 
-                <code><a href="#rulescope">Dict[rule_<wbr>scope]</a></code>
+                <code><a href="#rulescope">Dict[Rule<wbr>Scope]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -614,7 +614,7 @@ Scope defines which resources can trigger an evaluation for the rule as document
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code><a href="#rulesource">Dict[rule_<wbr>source]</a></code>
+                <code><a href="#rulesource">Dict[Rule<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -630,7 +630,7 @@ the function to evaluate your AWS resources as documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1175,7 +1175,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             <td class="align-top">scope</td>
             <td class="align-top">
                 
-                <code><a href="#rulescope">Dict[rule_<wbr>scope]</a></code>
+                <code><a href="#rulescope">Dict[Rule<wbr>Scope]</a></code>
             </td>
             <td class="align-top">{{% md %}} Scope defines which resources can trigger an evaluation for the rule as documented below.
  {{% /md %}}
@@ -1188,7 +1188,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code><a href="#rulesource">Dict[rule_<wbr>source]</a></code>
+                <code><a href="#rulesource">Dict[Rule<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} Source specifies the rule owner, the rule identifier, and the notifications that cause
 the function to evaluate your AWS resources as documented below.
@@ -1202,7 +1202,7 @@ the function to evaluate your AWS resources as documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1856,7 +1856,7 @@ The ID of the config rule
             <td class="align-top">scope</td>
             <td class="align-top">
                 
-                <code><a href="#rulescope">Dict[rule_<wbr>scope]</a></code>
+                <code><a href="#rulescope">Dict[Rule<wbr>Scope]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1871,7 +1871,7 @@ Scope defines which resources can trigger an evaluation for the rule as document
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code><a href="#rulesource">Dict[rule_<wbr>source]</a></code>
+                <code><a href="#rulesource">Dict[Rule<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1887,7 +1887,7 @@ the function to evaluate your AWS resources as documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2199,7 +2199,7 @@ The tag value applied to only those AWS resources that you want to trigger an ev
     <tbody>
     
         <tr>
-            <td class="align-top">compliance_<wbr>resource_<wbr>id</td>
+            <td class="align-top">compliance<wbr>Resource<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2215,7 +2215,7 @@ If you specify a resource ID, you must specify one resource type for `compliance
         </tr>
     
         <tr>
-            <td class="align-top">compliance_<wbr>resource_<wbr>types</td>
+            <td class="align-top">compliance<wbr>Resource<wbr>Types</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -2232,7 +2232,7 @@ a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http
         </tr>
     
         <tr>
-            <td class="align-top">tag_<wbr>key</td>
+            <td class="align-top">tag<wbr>Key</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2248,7 +2248,7 @@ want to trigger an evaluation for the rule.
         </tr>
     
         <tr>
-            <td class="align-top">tag_<wbr>value</td>
+            <td class="align-top">tag<wbr>Value</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2514,10 +2514,10 @@ Indicates whether AWS or the customer owns and manages the AWS Config rule. Vali
         </tr>
     
         <tr>
-            <td class="align-top">source_<wbr>details</td>
+            <td class="align-top">source<wbr>Details</td>
             <td class="align-top">
                 
-                <code><a href="#rulesourcesourcedetail">List[rule_<wbr>source_<wbr>source_<wbr>detail]</a></code>
+                <code><a href="#rulesourcesourcedetail">List[Rule<wbr>Source<wbr>Source<wbr>Detail]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2529,7 +2529,7 @@ Provides the source and type of the event that causes AWS Config to evaluate you
         </tr>
     
         <tr>
-            <td class="align-top">source_<wbr>identifier</td>
+            <td class="align-top">source<wbr>Identifier</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2786,7 +2786,7 @@ The type of notification that triggers AWS Config to run an evaluation for a rul
     <tbody>
     
         <tr>
-            <td class="align-top">event_<wbr>source</td>
+            <td class="align-top">event<wbr>Source</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2818,7 +2818,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
         </tr>
     
         <tr>
-            <td class="align-top">message_<wbr>type</td>
+            <td class="align-top">message<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>

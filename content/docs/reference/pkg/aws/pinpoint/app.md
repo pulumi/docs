@@ -427,7 +427,7 @@ Key-value mapping of resource tags
             <td class="align-top">campaign_<wbr>hook</td>
             <td class="align-top">
                 
-                <code><a href="#appcampaignhook">Dict[app_<wbr>campaign_<wbr>hook]</a></code>
+                <code><a href="#appcampaignhook">Dict[App<wbr>Campaign<wbr>Hook]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -442,7 +442,7 @@ The default campaign limits for the app. These limits apply to each campaign for
             <td class="align-top">limits</td>
             <td class="align-top">
                 
-                <code><a href="#applimits">Dict[app_<wbr>limits]</a></code>
+                <code><a href="#applimits">Dict[App<wbr>Limits]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -487,7 +487,7 @@ The name of the Pinpoint application. Conflicts with `name`
             <td class="align-top">quiet_<wbr>time</td>
             <td class="align-top">
                 
-                <code><a href="#appquiettime">Dict[app_<wbr>quiet_<wbr>time]</a></code>
+                <code><a href="#appquiettime">Dict[App<wbr>Quiet<wbr>Time]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -502,7 +502,7 @@ The default quiet time for the app. Each campaign for this app sends no messages
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -949,7 +949,7 @@ The following output properties are available:
             <td class="align-top">campaign_<wbr>hook</td>
             <td class="align-top">
                 
-                <code><a href="#appcampaignhook">Dict[app_<wbr>campaign_<wbr>hook]</a></code>
+                <code><a href="#appcampaignhook">Dict[App<wbr>Campaign<wbr>Hook]</a></code>
             </td>
             <td class="align-top">{{% md %}} The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
  {{% /md %}}
@@ -962,7 +962,7 @@ The following output properties are available:
             <td class="align-top">limits</td>
             <td class="align-top">
                 
-                <code><a href="#applimits">Dict[app_<wbr>limits]</a></code>
+                <code><a href="#applimits">Dict[App<wbr>Limits]</a></code>
             </td>
             <td class="align-top">{{% md %}} The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
  {{% /md %}}
@@ -1001,7 +1001,7 @@ The following output properties are available:
             <td class="align-top">quiet_<wbr>time</td>
             <td class="align-top">
                 
-                <code><a href="#appquiettime">Dict[app_<wbr>quiet_<wbr>time]</a></code>
+                <code><a href="#appquiettime">Dict[App<wbr>Quiet<wbr>Time]</a></code>
             </td>
             <td class="align-top">{{% md %}} The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
  {{% /md %}}
@@ -1014,7 +1014,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1556,7 +1556,7 @@ Amazon Resource Name (ARN) of the PinPoint Application
             <td class="align-top">campaign_<wbr>hook</td>
             <td class="align-top">
                 
-                <code><a href="#appcampaignhook">Dict[app_<wbr>campaign_<wbr>hook]</a></code>
+                <code><a href="#appcampaignhook">Dict[App<wbr>Campaign<wbr>Hook]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1571,7 +1571,7 @@ The default campaign limits for the app. These limits apply to each campaign for
             <td class="align-top">limits</td>
             <td class="align-top">
                 
-                <code><a href="#applimits">Dict[app_<wbr>limits]</a></code>
+                <code><a href="#applimits">Dict[App<wbr>Limits]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1616,7 +1616,7 @@ The name of the Pinpoint application. Conflicts with `name`
             <td class="align-top">quiet_<wbr>time</td>
             <td class="align-top">
                 
-                <code><a href="#appquiettime">Dict[app_<wbr>quiet_<wbr>time]</a></code>
+                <code><a href="#appquiettime">Dict[App<wbr>Quiet<wbr>Time]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1631,7 +1631,7 @@ The default quiet time for the app. Each campaign for this app sends no messages
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1886,7 +1886,7 @@ Web URL to call for hook. If the URL has authentication specified it will be add
     <tbody>
     
         <tr>
-            <td class="align-top">lambda_<wbr>function_<wbr>name</td>
+            <td class="align-top">lambda<wbr>Function<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1916,7 +1916,7 @@ What mode Lambda should be invoked in. Valid values for this parameter are `DELI
         </tr>
     
         <tr>
-            <td class="align-top">web_<wbr>url</td>
+            <td class="align-top">web<wbr>Url</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2227,7 +2227,7 @@ The maximum number of messages that the campaign can send daily.
         </tr>
     
         <tr>
-            <td class="align-top">maximum_<wbr>duration</td>
+            <td class="align-top">maximum<wbr>Duration</td>
             <td class="align-top">
                 
                 <code>float</code>

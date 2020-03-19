@@ -455,7 +455,7 @@ Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS
             <td class="align-top">selectors</td>
             <td class="align-top">
                 
-                <code><a href="#fargateprofileselector">List[fargate_<wbr>profile_<wbr>selector]</a></code>
+                <code><a href="#fargateprofileselector">List[Fargate<wbr>Profile<wbr>Selector]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -485,7 +485,7 @@ Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. Th
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -958,7 +958,7 @@ The following output properties are available:
             <td class="align-top">selectors</td>
             <td class="align-top">
                 
-                <code><a href="#fargateprofileselector">List[fargate_<wbr>profile_<wbr>selector]</a></code>
+                <code><a href="#fargateprofileselector">List[Fargate<wbr>Profile<wbr>Selector]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
  {{% /md %}}
@@ -997,7 +997,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags.
  {{% /md %}}
@@ -1569,7 +1569,7 @@ Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS
             <td class="align-top">selectors</td>
             <td class="align-top">
                 
-                <code><a href="#fargateprofileselector">List[fargate_<wbr>profile_<wbr>selector]</a></code>
+                <code><a href="#fargateprofileselector">List[Fargate<wbr>Profile<wbr>Selector]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1614,7 +1614,7 @@ Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. Th
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

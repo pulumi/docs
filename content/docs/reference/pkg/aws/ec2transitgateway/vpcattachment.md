@@ -560,7 +560,7 @@ Identifiers of EC2 Subnets.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1119,7 +1119,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value tags for the EC2 Transit Gateway VPC Attachment.
  {{% /md %}}
@@ -1786,7 +1786,7 @@ Identifiers of EC2 Subnets.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

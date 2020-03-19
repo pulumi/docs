@@ -229,7 +229,7 @@ The name of the launch template.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1425,7 +1425,7 @@ Interfaces below for more details.
             <td class="align-top">block_<wbr>device_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateblockdevicemapping">List[get_<wbr>launch_<wbr>template_<wbr>block_<wbr>device_<wbr>mapping]</a></code>
+                <code><a href="#getlaunchtemplateblockdevicemapping">List[Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specify volumes to attach to the instance besides the volumes specified by the AMI.
  {{% /md %}}
@@ -1438,7 +1438,7 @@ Interfaces below for more details.
             <td class="align-top">credit_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplatecreditspecification">List[get_<wbr>launch_<wbr>template_<wbr>credit_<wbr>specification]</a></code>
+                <code><a href="#getlaunchtemplatecreditspecification">List[Get<wbr>Launch<wbr>Template<wbr>Credit<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -1505,7 +1505,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">elastic_<wbr>gpu_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateelasticgpuspecification">List[get_<wbr>launch_<wbr>template_<wbr>elastic_<wbr>gpu_<wbr>specification]</a></code>
+                <code><a href="#getlaunchtemplateelasticgpuspecification">List[Get<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -1519,7 +1519,7 @@ below for more details.
             <td class="align-top">iam_<wbr>instance_<wbr>profiles</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateiaminstanceprofile">List[get_<wbr>launch_<wbr>template_<wbr>iam_<wbr>instance_<wbr>profile]</a></code>
+                <code><a href="#getlaunchtemplateiaminstanceprofile">List[Get<wbr>Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile]</a></code>
             </td>
             <td class="align-top">{{% md %}} The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -1573,7 +1573,7 @@ below for more details.
             <td class="align-top">instance_<wbr>market_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateinstancemarketoption">List[get_<wbr>launch_<wbr>template_<wbr>instance_<wbr>market_<wbr>option]</a></code>
+                <code><a href="#getlaunchtemplateinstancemarketoption">List[Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}} The market (purchasing) option for the instance.
 below for details.
@@ -1639,7 +1639,7 @@ below for details.
             <td class="align-top">monitorings</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplatemonitoring">List[get_<wbr>launch_<wbr>template_<wbr>monitoring]</a></code>
+                <code><a href="#getlaunchtemplatemonitoring">List[Get<wbr>Launch<wbr>Template<wbr>Monitoring]</a></code>
             </td>
             <td class="align-top">{{% md %}} The monitoring option for the instance.
  {{% /md %}}
@@ -1664,7 +1664,7 @@ below for details.
             <td class="align-top">network_<wbr>interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplatenetworkinterface">List[get_<wbr>launch_<wbr>template_<wbr>network_<wbr>interface]</a></code>
+                <code><a href="#getlaunchtemplatenetworkinterface">List[Get<wbr>Launch<wbr>Template<wbr>Network<wbr>Interface]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -1678,7 +1678,7 @@ Interfaces below for more details.
             <td class="align-top">placements</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateplacement">List[get_<wbr>launch_<wbr>template_<wbr>placement]</a></code>
+                <code><a href="#getlaunchtemplateplacement">List[Get<wbr>Launch<wbr>Template<wbr>Placement]</a></code>
             </td>
             <td class="align-top">{{% md %}} The placement of the instance.
  {{% /md %}}
@@ -1718,7 +1718,7 @@ Interfaces below for more details.
             <td class="align-top">tag_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplatetagspecification">List[get_<wbr>launch_<wbr>template_<wbr>tag_<wbr>specification]</a></code>
+                <code><a href="#getlaunchtemplatetagspecification">List[Get<wbr>Launch<wbr>Template<wbr>Tag<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} The tags to apply to the resources during launch.
  {{% /md %}}
@@ -1731,7 +1731,7 @@ Interfaces below for more details.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} (Optional) A mapping of tags to assign to the launch template.
  {{% /md %}}
@@ -2058,7 +2058,7 @@ Interfaces below for more details.
             <td class="align-top">ebs</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateblockdevicemappingeb">List[get_<wbr>launch_<wbr>template_<wbr>block_<wbr>device_<wbr>mapping_<wbr>eb]</a></code>
+                <code><a href="#getlaunchtemplateblockdevicemappingeb">List[Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Eb]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2069,7 +2069,7 @@ Interfaces below for more details.
         </tr>
     
         <tr>
-            <td class="align-top">no_<wbr>device</td>
+            <td class="align-top">no<wbr>Device</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2083,7 +2083,7 @@ Interfaces below for more details.
         </tr>
     
         <tr>
-            <td class="align-top">virtual_<wbr>name</td>
+            <td class="align-top">virtual<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2492,7 +2492,7 @@ Interfaces below for more details.
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2576,7 +2576,7 @@ Interfaces below for more details.
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2733,7 +2733,7 @@ Interfaces below for more details.
     <tbody>
     
         <tr>
-            <td class="align-top">cpu_<wbr>credits</td>
+            <td class="align-top">cpu<wbr>Credits</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3310,7 +3310,7 @@ The name of the launch template.
     <tbody>
     
         <tr>
-            <td class="align-top">market_<wbr>type</td>
+            <td class="align-top">market<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3327,7 +3327,7 @@ The name of the launch template.
             <td class="align-top">spot_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateinstancemarketoptionspotoption">List[get_<wbr>launch_<wbr>template_<wbr>instance_<wbr>market_<wbr>option_<wbr>spot_<wbr>option]</a></code>
+                <code><a href="#getlaunchtemplateinstancemarketoptionspotoption">List[Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option<wbr>Spot<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3663,7 +3663,7 @@ The name of the launch template.
         </tr>
     
         <tr>
-            <td class="align-top">instance_<wbr>interruption_<wbr>behavior</td>
+            <td class="align-top">instance<wbr>Interruption<wbr>Behavior</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3677,7 +3677,7 @@ The name of the launch template.
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>price</td>
+            <td class="align-top">max<wbr>Price</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3691,7 +3691,7 @@ The name of the launch template.
         </tr>
     
         <tr>
-            <td class="align-top">spot_<wbr>instance_<wbr>type</td>
+            <td class="align-top">spot<wbr>Instance<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4498,7 +4498,7 @@ Description of the launch template.
         </tr>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -4541,7 +4541,7 @@ Description of the launch template.
         </tr>
     
         <tr>
-            <td class="align-top">ipv4_<wbr>address_<wbr>count</td>
+            <td class="align-top">ipv4Address<wbr>Count</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -4555,7 +4555,7 @@ Description of the launch template.
         </tr>
     
         <tr>
-            <td class="align-top">ipv4_<wbr>addresses</td>
+            <td class="align-top">ipv4Addresses</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -5062,7 +5062,7 @@ Description of the launch template.
         </tr>
     
         <tr>
-            <td class="align-top">spread_<wbr>domain</td>
+            <td class="align-top">spread<wbr>Domain</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5295,7 +5295,7 @@ Description of the launch template.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -337,7 +337,7 @@ The name of the accelerator.
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratorattributes">Dict[accelerator_<wbr>attributes]</a></code>
+                <code><a href="#acceleratorattributes">Dict[Accelerator<wbr>Attributes]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -770,7 +770,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratorattributes">Dict[accelerator_<wbr>attributes]</a></code>
+                <code><a href="#acceleratorattributes">Dict[Accelerator<wbr>Attributes]</a></code>
             </td>
             <td class="align-top">{{% md %}} The attributes of the accelerator. Fields documented below.
  {{% /md %}}
@@ -837,7 +837,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             <td class="align-top">ip_<wbr>sets</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratoripset">List[accelerator_<wbr>ip_<wbr>set]</a></code>
+                <code><a href="#acceleratoripset">List[Accelerator<wbr>Ip<wbr>Set]</a></code>
             </td>
             <td class="align-top">{{% md %}} IP address set associated with the accelerator.
  {{% /md %}}
@@ -1323,7 +1323,7 @@ The name of the accelerator.
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratorattributes">Dict[accelerator_<wbr>attributes]</a></code>
+                <code><a href="#acceleratorattributes">Dict[Accelerator<wbr>Attributes]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1400,7 +1400,7 @@ The value for the address type must be `IPV4`.
             <td class="align-top">ip_<wbr>sets</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratoripset">List[accelerator_<wbr>ip_<wbr>set]</a></code>
+                <code><a href="#acceleratoripset">List[Accelerator<wbr>Ip<wbr>Set]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1670,7 +1670,7 @@ The prefix for the location in the Amazon S3 bucket for the flow logs.
     <tbody>
     
         <tr>
-            <td class="align-top">flow_<wbr>logs_<wbr>enabled</td>
+            <td class="align-top">flow<wbr>Logs<wbr>Enabled</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1685,7 +1685,7 @@ Indicates whether flow logs are enabled.
         </tr>
     
         <tr>
-            <td class="align-top">flow_<wbr>logs_<wbr>s3_<wbr>bucket</td>
+            <td class="align-top">flow<wbr>Logs<wbr>S3Bucket</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1700,7 +1700,7 @@ The name of the Amazon S3 bucket for the flow logs.
         </tr>
     
         <tr>
-            <td class="align-top">flow_<wbr>logs_<wbr>s3_<wbr>prefix</td>
+            <td class="align-top">flow<wbr>Logs<wbr>S3Prefix</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1921,7 +1921,7 @@ A list of IP addresses in the IP address set.
         </tr>
     
         <tr>
-            <td class="align-top">ip_<wbr>family</td>
+            <td class="align-top">ip<wbr>Family</td>
             <td class="align-top">
                 
                 <code>str</code>

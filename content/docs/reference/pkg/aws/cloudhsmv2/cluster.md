@@ -410,7 +410,7 @@ The IDs of subnets in which cluster will operate.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -885,7 +885,7 @@ The following output properties are available:
             <td class="align-top">cluster_<wbr>certificates</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclustercertificates">Dict[cluster_<wbr>cluster_<wbr>certificates]</a></code>
+                <code><a href="#clusterclustercertificates">Dict[Cluster<wbr>Cluster<wbr>Certificates]</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of cluster certificates.
 * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
@@ -981,7 +981,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1566,7 +1566,7 @@ The id of the VPC that the CloudHSM cluster resides in.
             <td class="align-top">cluster_<wbr>certificates</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclustercertificates">Dict[cluster_<wbr>cluster_<wbr>certificates]</a></code>
+                <code><a href="#clusterclustercertificates">Dict[Cluster<wbr>Cluster<wbr>Certificates]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1676,7 +1676,7 @@ The IDs of subnets in which cluster will operate.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2021,7 +2021,7 @@ The id of the VPC that the CloudHSM cluster resides in.
     <tbody>
     
         <tr>
-            <td class="align-top">aws_<wbr>hardware_<wbr>certificate</td>
+            <td class="align-top">aws<wbr>Hardware<wbr>Certificate</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2035,7 +2035,7 @@ The id of the VPC that the CloudHSM cluster resides in.
         </tr>
     
         <tr>
-            <td class="align-top">cluster_<wbr>certificate</td>
+            <td class="align-top">cluster<wbr>Certificate</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2049,7 +2049,7 @@ The id of the VPC that the CloudHSM cluster resides in.
         </tr>
     
         <tr>
-            <td class="align-top">cluster_<wbr>csr</td>
+            <td class="align-top">cluster<wbr>Csr</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2063,7 +2063,7 @@ The id of the VPC that the CloudHSM cluster resides in.
         </tr>
     
         <tr>
-            <td class="align-top">hsm_<wbr>certificate</td>
+            <td class="align-top">hsm<wbr>Certificate</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2077,7 +2077,7 @@ The id of the VPC that the CloudHSM cluster resides in.
         </tr>
     
         <tr>
-            <td class="align-top">manufacturer_<wbr>hardware_<wbr>certificate</td>
+            <td class="align-top">manufacturer<wbr>Hardware<wbr>Certificate</td>
             <td class="align-top">
                 
                 <code>str</code>

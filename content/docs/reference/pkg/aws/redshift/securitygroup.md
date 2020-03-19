@@ -303,7 +303,7 @@ The description of the Redshift security group. Defaults to &#34;Managed by Pulu
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">List[security_<wbr>group_<wbr>ingress]</a></code>
+                <code><a href="#securitygroupingress">List[Security<wbr>Group<wbr>Ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -557,7 +557,7 @@ The following output properties are available:
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">List[security_<wbr>group_<wbr>ingress]</a></code>
+                <code><a href="#securitygroupingress">List[Security<wbr>Group<wbr>Ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of ingress rules.
  {{% /md %}}
@@ -872,7 +872,7 @@ The description of the Redshift security group. Defaults to &#34;Managed by Pulu
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">List[security_<wbr>group_<wbr>ingress]</a></code>
+                <code><a href="#securitygroupingress">List[Security<wbr>Group<wbr>Ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1160,7 +1160,7 @@ The CIDR block to accept
         </tr>
     
         <tr>
-            <td class="align-top">security_<wbr>group_<wbr>name</td>
+            <td class="align-top">security<wbr>Group<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1175,7 +1175,7 @@ The name of the security group to authorize
         </tr>
     
         <tr>
-            <td class="align-top">security_<wbr>group_<wbr>owner_<wbr>id</td>
+            <td class="align-top">security<wbr>Group<wbr>Owner<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>

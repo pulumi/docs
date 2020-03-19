@@ -1519,7 +1519,7 @@ Creates a unique bucket name beginning with the specified prefix. Conflicts with
             <td class="align-top">cors_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#bucketcorsrule">List[bucket_<wbr>cors_<wbr>rule]</a></code>
+                <code><a href="#bucketcorsrule">List[Bucket<wbr>Cors<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1549,7 +1549,7 @@ A boolean that indicates all objects (including any [locked objects](https://doc
             <td class="align-top">grants</td>
             <td class="align-top">
                 
-                <code><a href="#bucketgrant">List[bucket_<wbr>grant]</a></code>
+                <code><a href="#bucketgrant">List[Bucket<wbr>Grant]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1579,7 +1579,7 @@ The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rand
             <td class="align-top">lifecycle_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#bucketlifecyclerule">List[bucket_<wbr>lifecycle_<wbr>rule]</a></code>
+                <code><a href="#bucketlifecyclerule">List[Bucket<wbr>Lifecycle<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1594,7 +1594,7 @@ A configuration of [object lifecycle management](http://docs.aws.amazon.com/Amaz
             <td class="align-top">loggings</td>
             <td class="align-top">
                 
-                <code><a href="#bucketlogging">List[bucket_<wbr>logging]</a></code>
+                <code><a href="#bucketlogging">List[Bucket<wbr>Logging]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1609,7 +1609,7 @@ A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/Ma
             <td class="align-top">object_<wbr>lock_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#bucketobjectlockconfiguration">Dict[bucket_<wbr>object_<wbr>lock_<wbr>configuration]</a></code>
+                <code><a href="#bucketobjectlockconfiguration">Dict[Bucket<wbr>Object<wbr>Lock<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1654,7 +1654,7 @@ If specified, the AWS region this bucket should reside in. Otherwise, the region
             <td class="align-top">replication_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#bucketreplicationconfiguration">Dict[bucket_<wbr>replication_<wbr>configuration]</a></code>
+                <code><a href="#bucketreplicationconfiguration">Dict[Bucket<wbr>Replication<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1687,7 +1687,7 @@ developer guide for more information.
             <td class="align-top">server_<wbr>side_<wbr>encryption_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#bucketserversideencryptionconfiguration">Dict[bucket_<wbr>server_<wbr>side_<wbr>encryption_<wbr>configuration]</a></code>
+                <code><a href="#bucketserversideencryptionconfiguration">Dict[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1702,7 +1702,7 @@ A configuration of [server-side encryption configuration](http://docs.aws.amazon
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1718,7 +1718,7 @@ The rule applies only to objects having all the tags in its tagset.
             <td class="align-top">versioning</td>
             <td class="align-top">
                 
-                <code><a href="#bucketversioning">Dict[bucket_<wbr>versioning]</a></code>
+                <code><a href="#bucketversioning">Dict[Bucket<wbr>Versioning]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1733,7 +1733,7 @@ A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioni
             <td class="align-top">website</td>
             <td class="align-top">
                 
-                <code><a href="#bucketwebsite">Dict[bucket_<wbr>website]</a></code>
+                <code><a href="#bucketwebsite">Dict[Bucket<wbr>Website]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2911,7 +2911,7 @@ The rule applies only to objects having all the tags in its tagset.
             <td class="align-top">cors_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#bucketcorsrule">List[bucket_<wbr>cors_<wbr>rule]</a></code>
+                <code><a href="#bucketcorsrule">List[Bucket<wbr>Cors<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
  {{% /md %}}
@@ -2937,7 +2937,7 @@ The rule applies only to objects having all the tags in its tagset.
             <td class="align-top">grants</td>
             <td class="align-top">
                 
-                <code><a href="#bucketgrant">List[bucket_<wbr>grant]</a></code>
+                <code><a href="#bucketgrant">List[Bucket<wbr>Grant]</a></code>
             </td>
             <td class="align-top">{{% md %}} An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
  {{% /md %}}
@@ -2963,7 +2963,7 @@ The rule applies only to objects having all the tags in its tagset.
             <td class="align-top">lifecycle_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#bucketlifecyclerule">List[bucket_<wbr>lifecycle_<wbr>rule]</a></code>
+                <code><a href="#bucketlifecyclerule">List[Bucket<wbr>Lifecycle<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
  {{% /md %}}
@@ -2976,7 +2976,7 @@ The rule applies only to objects having all the tags in its tagset.
             <td class="align-top">loggings</td>
             <td class="align-top">
                 
-                <code><a href="#bucketlogging">List[bucket_<wbr>logging]</a></code>
+                <code><a href="#bucketlogging">List[Bucket<wbr>Logging]</a></code>
             </td>
             <td class="align-top">{{% md %}} A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
  {{% /md %}}
@@ -2989,7 +2989,7 @@ The rule applies only to objects having all the tags in its tagset.
             <td class="align-top">object_<wbr>lock_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#bucketobjectlockconfiguration">Dict[bucket_<wbr>object_<wbr>lock_<wbr>configuration]</a></code>
+                <code><a href="#bucketobjectlockconfiguration">Dict[Bucket<wbr>Object<wbr>Lock<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
  {{% /md %}}
@@ -3028,7 +3028,7 @@ The rule applies only to objects having all the tags in its tagset.
             <td class="align-top">replication_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#bucketreplicationconfiguration">Dict[bucket_<wbr>replication_<wbr>configuration]</a></code>
+                <code><a href="#bucketreplicationconfiguration">Dict[Bucket<wbr>Replication<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
  {{% /md %}}
@@ -3057,7 +3057,7 @@ developer guide for more information.
             <td class="align-top">server_<wbr>side_<wbr>encryption_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#bucketserversideencryptionconfiguration">Dict[bucket_<wbr>server_<wbr>side_<wbr>encryption_<wbr>configuration]</a></code>
+                <code><a href="#bucketserversideencryptionconfiguration">Dict[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
  {{% /md %}}
@@ -3070,7 +3070,7 @@ developer guide for more information.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags that identifies subset of objects to which the rule applies.
 The rule applies only to objects having all the tags in its tagset.
@@ -3084,7 +3084,7 @@ The rule applies only to objects having all the tags in its tagset.
             <td class="align-top">versioning</td>
             <td class="align-top">
                 
-                <code><a href="#bucketversioning">Dict[bucket_<wbr>versioning]</a></code>
+                <code><a href="#bucketversioning">Dict[Bucket<wbr>Versioning]</a></code>
             </td>
             <td class="align-top">{{% md %}} A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
  {{% /md %}}
@@ -3097,7 +3097,7 @@ The rule applies only to objects having all the tags in its tagset.
             <td class="align-top">website</td>
             <td class="align-top">
                 
-                <code><a href="#bucketwebsite">Dict[bucket_<wbr>website]</a></code>
+                <code><a href="#bucketwebsite">Dict[Bucket<wbr>Website]</a></code>
             </td>
             <td class="align-top">{{% md %}} A website object (documented below).
  {{% /md %}}
@@ -4472,7 +4472,7 @@ The bucket region-specific domain name. The bucket domain name including the reg
             <td class="align-top">cors_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#bucketcorsrule">List[bucket_<wbr>cors_<wbr>rule]</a></code>
+                <code><a href="#bucketcorsrule">List[Bucket<wbr>Cors<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4502,7 +4502,7 @@ A boolean that indicates all objects (including any [locked objects](https://doc
             <td class="align-top">grants</td>
             <td class="align-top">
                 
-                <code><a href="#bucketgrant">List[bucket_<wbr>grant]</a></code>
+                <code><a href="#bucketgrant">List[Bucket<wbr>Grant]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4532,7 +4532,7 @@ The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rand
             <td class="align-top">lifecycle_<wbr>rules</td>
             <td class="align-top">
                 
-                <code><a href="#bucketlifecyclerule">List[bucket_<wbr>lifecycle_<wbr>rule]</a></code>
+                <code><a href="#bucketlifecyclerule">List[Bucket<wbr>Lifecycle<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4547,7 +4547,7 @@ A configuration of [object lifecycle management](http://docs.aws.amazon.com/Amaz
             <td class="align-top">loggings</td>
             <td class="align-top">
                 
-                <code><a href="#bucketlogging">List[bucket_<wbr>logging]</a></code>
+                <code><a href="#bucketlogging">List[Bucket<wbr>Logging]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4562,7 +4562,7 @@ A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/Ma
             <td class="align-top">object_<wbr>lock_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#bucketobjectlockconfiguration">Dict[bucket_<wbr>object_<wbr>lock_<wbr>configuration]</a></code>
+                <code><a href="#bucketobjectlockconfiguration">Dict[Bucket<wbr>Object<wbr>Lock<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4607,7 +4607,7 @@ If specified, the AWS region this bucket should reside in. Otherwise, the region
             <td class="align-top">replication_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#bucketreplicationconfiguration">Dict[bucket_<wbr>replication_<wbr>configuration]</a></code>
+                <code><a href="#bucketreplicationconfiguration">Dict[Bucket<wbr>Replication<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4640,7 +4640,7 @@ developer guide for more information.
             <td class="align-top">server_<wbr>side_<wbr>encryption_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#bucketserversideencryptionconfiguration">Dict[bucket_<wbr>server_<wbr>side_<wbr>encryption_<wbr>configuration]</a></code>
+                <code><a href="#bucketserversideencryptionconfiguration">Dict[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4655,7 +4655,7 @@ A configuration of [server-side encryption configuration](http://docs.aws.amazon
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4671,7 +4671,7 @@ The rule applies only to objects having all the tags in its tagset.
             <td class="align-top">versioning</td>
             <td class="align-top">
                 
-                <code><a href="#bucketversioning">Dict[bucket_<wbr>versioning]</a></code>
+                <code><a href="#bucketversioning">Dict[Bucket<wbr>Versioning]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4686,7 +4686,7 @@ A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioni
             <td class="align-top">website</td>
             <td class="align-top">
                 
-                <code><a href="#bucketwebsite">Dict[bucket_<wbr>website]</a></code>
+                <code><a href="#bucketwebsite">Dict[Bucket<wbr>Website]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5061,7 +5061,7 @@ Specifies time in seconds that browser can cache the response for a preflight re
     <tbody>
     
         <tr>
-            <td class="align-top">allowed_<wbr>headers</td>
+            <td class="align-top">allowed<wbr>Headers</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -5076,7 +5076,7 @@ Specifies which headers are allowed.
         </tr>
     
         <tr>
-            <td class="align-top">allowed_<wbr>methods</td>
+            <td class="align-top">allowed<wbr>Methods</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -5091,7 +5091,7 @@ Specifies which methods are allowed. Can be `GET`, `PUT`, `POST`, `DELETE` or `H
         </tr>
     
         <tr>
-            <td class="align-top">allowed_<wbr>origins</td>
+            <td class="align-top">allowed<wbr>Origins</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -5106,7 +5106,7 @@ Specifies which origins are allowed.
         </tr>
     
         <tr>
-            <td class="align-top">expose_<wbr>headers</td>
+            <td class="align-top">expose<wbr>Headers</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -5121,7 +5121,7 @@ Specifies expose header in the response.
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>age_<wbr>seconds</td>
+            <td class="align-top">max<wbr>Age<wbr>Seconds</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -5986,7 +5986,7 @@ Specifies a period in the object&#39;s transitions (documented below).
     <tbody>
     
         <tr>
-            <td class="align-top">abort_<wbr>incomplete_<wbr>multipart_<wbr>upload_<wbr>days</td>
+            <td class="align-top">abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -6019,7 +6019,7 @@ Boolean which indicates if this criteria is enabled.
             <td class="align-top">expiration</td>
             <td class="align-top">
                 
-                <code><a href="#bucketlifecycleruleexpiration">Dict[bucket_<wbr>lifecycle_<wbr>rule_<wbr>expiration]</a></code>
+                <code><a href="#bucketlifecycleruleexpiration">Dict[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6046,10 +6046,10 @@ Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
         </tr>
     
         <tr>
-            <td class="align-top">noncurrent_<wbr>version_<wbr>expiration</td>
+            <td class="align-top">noncurrent<wbr>Version<wbr>Expiration</td>
             <td class="align-top">
                 
-                <code><a href="#bucketlifecyclerulenoncurrentversionexpiration">Dict[bucket_<wbr>lifecycle_<wbr>rule_<wbr>noncurrent_<wbr>version_<wbr>expiration]</a></code>
+                <code><a href="#bucketlifecyclerulenoncurrentversionexpiration">Dict[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6061,10 +6061,10 @@ Specifies when noncurrent object versions expire (documented below).
         </tr>
     
         <tr>
-            <td class="align-top">noncurrent_<wbr>version_<wbr>transitions</td>
+            <td class="align-top">noncurrent<wbr>Version<wbr>Transitions</td>
             <td class="align-top">
                 
-                <code><a href="#bucketlifecyclerulenoncurrentversiontransition">List[bucket_<wbr>lifecycle_<wbr>rule_<wbr>noncurrent_<wbr>version_<wbr>transition]</a></code>
+                <code><a href="#bucketlifecyclerulenoncurrentversiontransition">List[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6094,7 +6094,7 @@ Object keyname prefix that identifies subset of objects to which the rule applie
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6110,7 +6110,7 @@ The rule applies only to objects having all the tags in its tagset.
             <td class="align-top">transitions</td>
             <td class="align-top">
                 
-                <code><a href="#bucketlifecycleruletransition">List[bucket_<wbr>lifecycle_<wbr>rule_<wbr>transition]</a></code>
+                <code><a href="#bucketlifecycleruletransition">List[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6388,7 +6388,7 @@ The number of days that you want to specify for the default retention period.
         </tr>
     
         <tr>
-            <td class="align-top">expired_<wbr>object_<wbr>delete_<wbr>marker</td>
+            <td class="align-top">expired<wbr>Object<wbr>Delete<wbr>Marker</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -7257,7 +7257,7 @@ To specify a key prefix for log objects.
     <tbody>
     
         <tr>
-            <td class="align-top">target_<wbr>bucket</td>
+            <td class="align-top">target<wbr>Bucket</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7272,7 +7272,7 @@ The name of the bucket that will receive the log objects.
         </tr>
     
         <tr>
-            <td class="align-top">target_<wbr>prefix</td>
+            <td class="align-top">target<wbr>Prefix</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7478,7 +7478,7 @@ The Object Lock rule in place for this bucket.
     <tbody>
     
         <tr>
-            <td class="align-top">object_<wbr>lock_<wbr>enabled</td>
+            <td class="align-top">object<wbr>Lock<wbr>Enabled</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7496,7 +7496,7 @@ Indicates whether this bucket has an Object Lock configuration enabled. Valid va
             <td class="align-top">rule</td>
             <td class="align-top">
                 
-                <code><a href="#bucketobjectlockconfigurationrule">Dict[bucket_<wbr>object_<wbr>lock_<wbr>configuration_<wbr>rule]</a></code>
+                <code><a href="#bucketobjectlockconfigurationrule">Dict[Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7654,10 +7654,10 @@ The default retention period that you want to apply to new objects placed in thi
     <tbody>
     
         <tr>
-            <td class="align-top">default_<wbr>retention</td>
+            <td class="align-top">default<wbr>Retention</td>
             <td class="align-top">
                 
-                <code><a href="#bucketobjectlockconfigurationruledefaultretention">Dict[bucket_<wbr>object_<wbr>lock_<wbr>configuration_<wbr>rule_<wbr>default_<wbr>retention]</a></code>
+                <code><a href="#bucketobjectlockconfigurationruledefaultretention">Dict[Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Default<wbr>Retention]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -8159,7 +8159,7 @@ The ARN of the IAM role for Amazon S3 to assume when replicating the objects.
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#bucketreplicationconfigurationrule">List[bucket_<wbr>replication_<wbr>configuration_<wbr>rule]</a></code>
+                <code><a href="#bucketreplicationconfigurationrule">List[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -8590,7 +8590,7 @@ The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if s
             <td class="align-top">destination</td>
             <td class="align-top">
                 
-                <code><a href="#bucketreplicationconfigurationruledestination">Dict[bucket_<wbr>replication_<wbr>configuration_<wbr>rule_<wbr>destination]</a></code>
+                <code><a href="#bucketreplicationconfigurationruledestination">Dict[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -8605,7 +8605,7 @@ Specifies the destination for the rule (documented below).
             <td class="align-top">filter</td>
             <td class="align-top">
                 
-                <code><a href="#bucketreplicationconfigurationrulefilter">Dict[bucket_<wbr>replication_<wbr>configuration_<wbr>rule_<wbr>filter]</a></code>
+                <code><a href="#bucketreplicationconfigurationrulefilter">Dict[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8662,10 +8662,10 @@ The priority associated with the rule.
         </tr>
     
         <tr>
-            <td class="align-top">source_<wbr>selection_<wbr>criteria</td>
+            <td class="align-top">source<wbr>Selection<wbr>Criteria</td>
             <td class="align-top">
                 
-                <code><a href="#bucketreplicationconfigurationrulesourceselectioncriteria">Dict[bucket_<wbr>replication_<wbr>configuration_<wbr>rule_<wbr>source_<wbr>selection_<wbr>criteria]</a></code>
+                <code><a href="#bucketreplicationconfigurationrulesourceselectioncriteria">Dict[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9021,10 +9021,10 @@ The class of storage used to store the object. Can be `STANDARD`, `REDUCED_REDUN
     <tbody>
     
         <tr>
-            <td class="align-top">access_<wbr>control_<wbr>translation</td>
+            <td class="align-top">access<wbr>Control<wbr>Translation</td>
             <td class="align-top">
                 
-                <code><a href="#bucketreplicationconfigurationruledestinationaccesscontroltranslation">Dict[bucket_<wbr>replication_<wbr>configuration_<wbr>rule_<wbr>destination_<wbr>access_<wbr>control_<wbr>translation]</a></code>
+                <code><a href="#bucketreplicationconfigurationruledestinationaccesscontroltranslation">Dict[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Access<wbr>Control<wbr>Translation]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9066,7 +9066,7 @@ The ARN of the S3 bucket where you want Amazon S3 to store replicas of the objec
         </tr>
     
         <tr>
-            <td class="align-top">replica_<wbr>kms_<wbr>key_<wbr>id</td>
+            <td class="align-top">replica<wbr>Kms<wbr>Key<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -9470,7 +9470,7 @@ Object keyname prefix that identifies subset of objects to which the rule applie
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9632,10 +9632,10 @@ in `destination` must be specified as well.
     <tbody>
     
         <tr>
-            <td class="align-top">sse_<wbr>kms_<wbr>encrypted_<wbr>objects</td>
+            <td class="align-top">sse<wbr>Kms<wbr>Encrypted<wbr>Objects</td>
             <td class="align-top">
                 
-                <code><a href="#bucketreplicationconfigurationrulesourceselectioncriteriassekmsencryptedobjects">Dict[bucket_<wbr>replication_<wbr>configuration_<wbr>rule_<wbr>source_<wbr>selection_<wbr>criteria_<wbr>sse_<wbr>kms_<wbr>encrypted_<wbr>objects]</a></code>
+                <code><a href="#bucketreplicationconfigurationrulesourceselectioncriteriassekmsencryptedobjects">Dict[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9958,7 +9958,7 @@ The Object Lock rule in place for this bucket.
             <td class="align-top">rule</td>
             <td class="align-top">
                 
-                <code><a href="#bucketserversideencryptionconfigurationrule">Dict[bucket_<wbr>server_<wbr>side_<wbr>encryption_<wbr>configuration_<wbr>rule]</a></code>
+                <code><a href="#bucketserversideencryptionconfigurationrule">Dict[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -10116,10 +10116,10 @@ A single object for setting server-side encryption by default. (documented below
     <tbody>
     
         <tr>
-            <td class="align-top">apply_<wbr>server_<wbr>side_<wbr>encryption_<wbr>by_<wbr>default</td>
+            <td class="align-top">apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default</td>
             <td class="align-top">
                 
-                <code><a href="#bucketserversideencryptionconfigurationruleapplyserversideencryptionbydefault">Dict[bucket_<wbr>server_<wbr>side_<wbr>encryption_<wbr>configuration_<wbr>rule_<wbr>apply_<wbr>server_<wbr>side_<wbr>encryption_<wbr>by_<wbr>default]</a></code>
+                <code><a href="#bucketserversideencryptionconfigurationruleapplyserversideencryptionbydefault">Dict[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -10337,7 +10337,7 @@ The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used
         </tr>
     
         <tr>
-            <td class="align-top">sse_<wbr>algorithm</td>
+            <td class="align-top">sse<wbr>Algorithm</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -10558,7 +10558,7 @@ Boolean which indicates if this criteria is enabled.
         </tr>
     
         <tr>
-            <td class="align-top">mfa_<wbr>delete</td>
+            <td class="align-top">mfa<wbr>Delete</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -10857,7 +10857,7 @@ describing redirect behavior and when redirects are applied.
     <tbody>
     
         <tr>
-            <td class="align-top">error_<wbr>document</td>
+            <td class="align-top">error<wbr>Document</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -10872,7 +10872,7 @@ An absolute path to the document to return in case of a 4XX error.
         </tr>
     
         <tr>
-            <td class="align-top">index_<wbr>document</td>
+            <td class="align-top">index<wbr>Document</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -10887,7 +10887,7 @@ Amazon S3 returns this index document when requests are made to the root domain 
         </tr>
     
         <tr>
-            <td class="align-top">redirect_<wbr>all_<wbr>requests_<wbr>to</td>
+            <td class="align-top">redirect<wbr>All<wbr>Requests<wbr>To</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -10902,7 +10902,7 @@ A hostname to redirect all website requests for this bucket to. Hostname can opt
         </tr>
     
         <tr>
-            <td class="align-top">routing_<wbr>rules</td>
+            <td class="align-top">routing<wbr>Rules</td>
             <td class="align-top">
                 
                 <code>Dict[str, Any]</code>

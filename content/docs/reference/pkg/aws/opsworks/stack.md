@@ -1248,7 +1248,7 @@ Version of the configuration manager to use. Defaults to &#34;11.4&#34;.
             <td class="align-top">custom_<wbr>cookbooks_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#stackcustomcookbookssource">List[stack_<wbr>custom_<wbr>cookbooks_<wbr>source]</a></code>
+                <code><a href="#stackcustomcookbookssource">List[Stack<wbr>Custom<wbr>Cookbooks<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1448,7 +1448,7 @@ The ARN of an IAM role that the OpsWorks service will act as.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2632,7 +2632,7 @@ security groups apply to created instances.
             <td class="align-top">custom_<wbr>cookbooks_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#stackcustomcookbookssource">List[stack_<wbr>custom_<wbr>cookbooks_<wbr>source]</a></code>
+                <code><a href="#stackcustomcookbookssource">List[Stack<wbr>Custom<wbr>Cookbooks<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} When `use_custom_cookbooks` is set, provide this sub-object as
 described below.
@@ -2818,7 +2818,7 @@ within this stack.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -4195,7 +4195,7 @@ Version of the configuration manager to use. Defaults to &#34;11.4&#34;.
             <td class="align-top">custom_<wbr>cookbooks_<wbr>sources</td>
             <td class="align-top">
                 
-                <code><a href="#stackcustomcookbookssource">List[stack_<wbr>custom_<wbr>cookbooks_<wbr>source]</a></code>
+                <code><a href="#stackcustomcookbookssource">List[Stack<wbr>Custom<wbr>Cookbooks<wbr>Source]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4409,7 +4409,7 @@ The ARN of an IAM role that the OpsWorks service will act as.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4856,7 +4856,7 @@ The id of the VPC that this stack belongs to.
         </tr>
     
         <tr>
-            <td class="align-top">ssh_<wbr>key</td>
+            <td class="align-top">ssh<wbr>Key</td>
             <td class="align-top">
                 
                 <code>str</code>

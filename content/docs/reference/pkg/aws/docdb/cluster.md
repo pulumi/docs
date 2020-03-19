@@ -1549,7 +1549,7 @@ Specifies whether the DB cluster is encrypted. The default is `false`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3135,7 +3135,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the DB cluster.
  {{% /md %}}
@@ -4982,7 +4982,7 @@ Specifies whether the DB cluster is encrypted. The default is `false`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

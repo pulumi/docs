@@ -678,7 +678,7 @@ A domain name for which the certificate should be issued
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#certificateoptions">Dict[certificate_<wbr>options]</a></code>
+                <code><a href="#certificateoptions">Dict[Certificate<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -722,7 +722,7 @@ A list of domains that should be SANs in the issued certificate
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1384,7 +1384,7 @@ The following output properties are available:
             <td class="align-top">domain_<wbr>validation_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#certificatedomainvalidationoption">List[certificate_<wbr>domain_<wbr>validation_<wbr>option]</a></code>
+                <code><a href="#certificatedomainvalidationoption">List[Certificate<wbr>Domain<wbr>Validation<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
  {{% /md %}}
@@ -1397,7 +1397,7 @@ The following output properties are available:
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#certificateoptions">Dict[certificate_<wbr>options]</a></code>
+                <code><a href="#certificateoptions">Dict[Certificate<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1435,7 +1435,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2233,7 +2233,7 @@ A domain name for which the certificate should be issued
             <td class="align-top">domain_<wbr>validation_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#certificatedomainvalidationoption">List[certificate_<wbr>domain_<wbr>validation_<wbr>option]</a></code>
+                <code><a href="#certificatedomainvalidationoption">List[Certificate<wbr>Domain<wbr>Validation<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2248,7 +2248,7 @@ A list of attributes to feed into other resources to complete certificate valida
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#certificateoptions">Dict[certificate_<wbr>options]</a></code>
+                <code><a href="#certificateoptions">Dict[Certificate<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2292,7 +2292,7 @@ A list of domains that should be SANs in the issued certificate
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2638,7 +2638,7 @@ A domain name for which the certificate should be issued
         </tr>
     
         <tr>
-            <td class="align-top">resource_<wbr>record_<wbr>name</td>
+            <td class="align-top">resource<wbr>Record<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2653,7 +2653,7 @@ The name of the DNS record to create to validate the certificate
         </tr>
     
         <tr>
-            <td class="align-top">resource_<wbr>record_<wbr>type</td>
+            <td class="align-top">resource<wbr>Record<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2668,7 +2668,7 @@ The type of DNS record to create
         </tr>
     
         <tr>
-            <td class="align-top">resource_<wbr>record_<wbr>value</td>
+            <td class="align-top">resource<wbr>Record<wbr>Value</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2826,7 +2826,7 @@ The value the DNS record needs to have
     <tbody>
     
         <tr>
-            <td class="align-top">certificate_<wbr>transparency_<wbr>logging_<wbr>preference</td>
+            <td class="align-top">certificate<wbr>Transparency<wbr>Logging<wbr>Preference</td>
             <td class="align-top">
                 
                 <code>str</code>

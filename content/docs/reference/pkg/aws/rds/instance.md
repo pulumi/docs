@@ -3403,7 +3403,7 @@ for more information on using Replication.
             <td class="align-top">s3_<wbr>import</td>
             <td class="align-top">
                 
-                <code><a href="#instances3import">Dict[instance_<wbr>s3_<wbr>import]</a></code>
+                <code><a href="#instances3import">Dict[Instance<wbr>S3Import]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3506,7 +3506,7 @@ specified, &#34;gp2&#34; if not.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6832,7 +6832,7 @@ for more information on using Replication.
             <td class="align-top">s3_<wbr>import</td>
             <td class="align-top">
                 
-                <code><a href="#instances3import">Dict[instance_<wbr>s3_<wbr>import]</a></code>
+                <code><a href="#instances3import">Dict[Instance<wbr>S3Import]</a></code>
             </td>
             <td class="align-top">{{% md %}} Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
  {{% /md %}}
@@ -6936,7 +6936,7 @@ specified, &#34;gp2&#34; if not.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -10741,7 +10741,7 @@ The RDS Resource ID of this instance.
             <td class="align-top">s3_<wbr>import</td>
             <td class="align-top">
                 
-                <code><a href="#instances3import">Dict[instance_<wbr>s3_<wbr>import]</a></code>
+                <code><a href="#instances3import">Dict[Instance<wbr>S3Import]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -10859,7 +10859,7 @@ specified, &#34;gp2&#34; if not.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -11285,7 +11285,7 @@ Can be blank, but is the path to your backup
         </tr>
     
         <tr>
-            <td class="align-top">ingestion_<wbr>role</td>
+            <td class="align-top">ingestion<wbr>Role</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -11300,7 +11300,7 @@ Role applied to load the data.
         </tr>
     
         <tr>
-            <td class="align-top">source_<wbr>engine</td>
+            <td class="align-top">source<wbr>Engine</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -11315,7 +11315,7 @@ Source engine for the backup
         </tr>
     
         <tr>
-            <td class="align-top">source_<wbr>engine_<wbr>version</td>
+            <td class="align-top">source<wbr>Engine<wbr>Version</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -232,7 +232,7 @@ The name of the REST API to look up. If no REST API is found with this name, an 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -858,7 +858,7 @@ The following output properties are available:
             <td class="align-top">endpoint_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getrestapiendpointconfiguration">List[get_<wbr>rest_<wbr>api_<wbr>endpoint_<wbr>configuration]</a></code>
+                <code><a href="#getrestapiendpointconfiguration">List[Get<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} The endpoint configuration of this RestApi showing the endpoint types of the API.
  {{% /md %}}
@@ -948,7 +948,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags.
  {{% /md %}}
@@ -1162,7 +1162,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">vpc_<wbr>endpoint_<wbr>ids</td>
+            <td class="align-top">vpc<wbr>Endpoint<wbr>Ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

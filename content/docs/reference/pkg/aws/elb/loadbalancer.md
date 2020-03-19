@@ -940,7 +940,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">access_<wbr>logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">Dict[load_<wbr>balancer_<wbr>access_<wbr>logs]</a></code>
+                <code><a href="#loadbalanceraccesslogs">Dict[Load<wbr>Balancer<wbr>Access<wbr>Logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1015,7 +1015,7 @@ Enable cross-zone load balancing. Default: `true`
             <td class="align-top">health_<wbr>check</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerhealthcheck">Dict[load_<wbr>balancer_<wbr>health_<wbr>check]</a></code>
+                <code><a href="#loadbalancerhealthcheck">Dict[Load<wbr>Balancer<wbr>Health<wbr>Check]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1075,7 +1075,7 @@ If true, ELB will be an internal ELB.
             <td class="align-top">listeners</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerlistener">List[load_<wbr>balancer_<wbr>listener]</a></code>
+                <code><a href="#loadbalancerlistener">List[Load<wbr>Balancer<wbr>Listener]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1169,7 +1169,7 @@ A list of subnet IDs to attach to the ELB.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2076,7 +2076,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">access_<wbr>logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">Dict[load_<wbr>balancer_<wbr>access_<wbr>logs]</a></code>
+                <code><a href="#loadbalanceraccesslogs">Dict[Load<wbr>Balancer<wbr>Access<wbr>Logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} An Access Logs block. Access Logs documented below.
  {{% /md %}}
@@ -2167,7 +2167,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">health_<wbr>check</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerhealthcheck">Dict[load_<wbr>balancer_<wbr>health_<wbr>check]</a></code>
+                <code><a href="#loadbalancerhealthcheck">Dict[Load<wbr>Balancer<wbr>Health<wbr>Check]</a></code>
             </td>
             <td class="align-top">{{% md %}} A health_check block. Health Check documented below.
  {{% /md %}}
@@ -2219,7 +2219,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">listeners</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerlistener">List[load_<wbr>balancer_<wbr>listener]</a></code>
+                <code><a href="#loadbalancerlistener">List[Load<wbr>Balancer<wbr>Listener]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of listener blocks. Listeners documented below.
  {{% /md %}}
@@ -2316,7 +2316,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -3399,7 +3399,7 @@ The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
             <td class="align-top">access_<wbr>logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">Dict[load_<wbr>balancer_<wbr>access_<wbr>logs]</a></code>
+                <code><a href="#loadbalanceraccesslogs">Dict[Load<wbr>Balancer<wbr>Access<wbr>Logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3504,7 +3504,7 @@ The DNS name of the ELB
             <td class="align-top">health_<wbr>check</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerhealthcheck">Dict[load_<wbr>balancer_<wbr>health_<wbr>check]</a></code>
+                <code><a href="#loadbalancerhealthcheck">Dict[Load<wbr>Balancer<wbr>Health<wbr>Check]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3564,7 +3564,7 @@ If true, ELB will be an internal ELB.
             <td class="align-top">listeners</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerlistener">List[load_<wbr>balancer_<wbr>listener]</a></code>
+                <code><a href="#loadbalancerlistener">List[Load<wbr>Balancer<wbr>Listener]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3675,7 +3675,7 @@ A list of subnet IDs to attach to the ELB.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4385,7 +4385,7 @@ The number of checks before the instance is declared unhealthy.
     <tbody>
     
         <tr>
-            <td class="align-top">healthy_<wbr>threshold</td>
+            <td class="align-top">healthy<wbr>Threshold</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -4448,7 +4448,7 @@ The length of time before the check times out.
         </tr>
     
         <tr>
-            <td class="align-top">unhealthy_<wbr>threshold</td>
+            <td class="align-top">unhealthy<wbr>Threshold</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -4813,7 +4813,7 @@ The port on the instance to route to
         </tr>
     
         <tr>
-            <td class="align-top">instance_<wbr>protocol</td>
+            <td class="align-top">instance<wbr>Protocol</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4844,7 +4844,7 @@ The port to listen on for the load balancer
         </tr>
     
         <tr>
-            <td class="align-top">lb_<wbr>protocol</td>
+            <td class="align-top">lb<wbr>Protocol</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4860,7 +4860,7 @@ The protocol to listen on. Valid values are `HTTP`,
         </tr>
     
         <tr>
-            <td class="align-top">ssl_<wbr>certificate_<wbr>id</td>
+            <td class="align-top">ssl<wbr>Certificate<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>

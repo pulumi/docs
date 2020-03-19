@@ -657,7 +657,7 @@ The AWS service namespace of the scalable target. Documentation can be found in 
             <td class="align-top">step_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policystepscalingpolicyconfiguration">Dict[policy_<wbr>step_<wbr>scaling_<wbr>policy_<wbr>configuration]</a></code>
+                <code><a href="#policystepscalingpolicyconfiguration">Dict[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -672,7 +672,7 @@ Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;
             <td class="align-top">target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">Dict[policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration]</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfiguration">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1171,7 +1171,7 @@ The following output properties are available:
             <td class="align-top">step_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policystepscalingpolicyconfiguration">Dict[policy_<wbr>step_<wbr>scaling_<wbr>policy_<wbr>configuration]</a></code>
+                <code><a href="#policystepscalingpolicyconfiguration">Dict[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
  {{% /md %}}
@@ -1184,7 +1184,7 @@ The following output properties are available:
             <td class="align-top">target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">Dict[policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration]</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfiguration">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
  {{% /md %}}
@@ -1786,7 +1786,7 @@ The AWS service namespace of the scalable target. Documentation can be found in 
             <td class="align-top">step_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policystepscalingpolicyconfiguration">Dict[policy_<wbr>step_<wbr>scaling_<wbr>policy_<wbr>configuration]</a></code>
+                <code><a href="#policystepscalingpolicyconfiguration">Dict[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1801,7 +1801,7 @@ Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;
             <td class="align-top">target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">Dict[policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration]</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfiguration">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2190,7 +2190,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
             <td class="align-top">step_<wbr>adjustments</td>
             <td class="align-top">
                 
-                <code><a href="#policystepscalingpolicyconfigurationstepadjustment">List[policy_<wbr>step_<wbr>scaling_<wbr>policy_<wbr>configuration_<wbr>step_<wbr>adjustment]</a></code>
+                <code><a href="#policystepscalingpolicyconfigurationstepadjustment">List[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2428,7 +2428,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
     <tbody>
     
         <tr>
-            <td class="align-top">metric_<wbr>interval_<wbr>lower_<wbr>bound</td>
+            <td class="align-top">metric<wbr>Interval<wbr>Lower<wbr>Bound</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2442,7 +2442,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
         </tr>
     
         <tr>
-            <td class="align-top">metric_<wbr>interval_<wbr>upper_<wbr>bound</td>
+            <td class="align-top">metric<wbr>Interval<wbr>Upper<wbr>Bound</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2823,10 +2823,10 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
     <tbody>
     
         <tr>
-            <td class="align-top">customized_<wbr>metric_<wbr>specification</td>
+            <td class="align-top">customized<wbr>Metric<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Dict[policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration_<wbr>customized_<wbr>metric_<wbr>specification]</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2837,7 +2837,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
         </tr>
     
         <tr>
-            <td class="align-top">disable_<wbr>scale_<wbr>in</td>
+            <td class="align-top">disable<wbr>Scale<wbr>In</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -2851,10 +2851,10 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
         </tr>
     
         <tr>
-            <td class="align-top">predefined_<wbr>metric_<wbr>specification</td>
+            <td class="align-top">predefined<wbr>Metric<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Dict[policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration_<wbr>predefined_<wbr>metric_<wbr>specification]</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2865,21 +2865,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
         </tr>
     
         <tr>
-            <td class="align-top">scale_<wbr>in_<wbr>cooldown</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">scale_<wbr>out_<wbr>cooldown</td>
+            <td class="align-top">scale<wbr>In<wbr>Cooldown</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2893,7 +2879,21 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
         </tr>
     
         <tr>
-            <td class="align-top">target_<wbr>value</td>
+            <td class="align-top">scale<wbr>Out<wbr>Cooldown</td>
+            <td class="align-top">
+                
+                <code>float</code>
+            </td>
+            <td class="align-top">{{% md %}} 
+ (Optional)
+ {{% /md %}}
+
+            
+            </td>
+        </tr>
+    
+        <tr>
+            <td class="align-top">target<wbr>Value</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3221,7 +3221,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
             <td class="align-top">dimensions</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List[policy_<wbr>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration_<wbr>customized_<wbr>metric_<wbr>specification_<wbr>dimension]</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3690,7 +3690,7 @@ The name of the policy.
     <tbody>
     
         <tr>
-            <td class="align-top">predefined_<wbr>metric_<wbr>type</td>
+            <td class="align-top">predefined<wbr>Metric<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3704,7 +3704,7 @@ The name of the policy.
         </tr>
     
         <tr>
-            <td class="align-top">resource_<wbr>label</td>
+            <td class="align-top">resource<wbr>Label</td>
             <td class="align-top">
                 
                 <code>str</code>

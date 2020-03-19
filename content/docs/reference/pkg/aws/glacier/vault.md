@@ -393,7 +393,7 @@ The name of the Vault. Names can be between 1 and 255 characters long and the va
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code><a href="#vaultnotification">List[vault_<wbr>notification]</a></code>
+                <code><a href="#vaultnotification">List[Vault<wbr>Notification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -408,7 +408,7 @@ The notifications for the Vault. Fields documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -807,7 +807,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code><a href="#vaultnotification">List[vault_<wbr>notification]</a></code>
+                <code><a href="#vaultnotification">List[Vault<wbr>Notification]</a></code>
             </td>
             <td class="align-top">{{% md %}} The notifications for the Vault. Fields documented below.
  {{% /md %}}
@@ -820,7 +820,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1306,7 +1306,7 @@ The name of the Vault. Names can be between 1 and 255 characters long and the va
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code><a href="#vaultnotification">List[vault_<wbr>notification]</a></code>
+                <code><a href="#vaultnotification">List[Vault<wbr>Notification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1321,7 +1321,7 @@ The notifications for the Vault. Fields documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

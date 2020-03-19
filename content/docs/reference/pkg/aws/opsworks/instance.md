@@ -2277,7 +2277,7 @@ by default.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">List[instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceebsblockdevice">List[Instance<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2336,7 +2336,7 @@ If true, the launched EC2 instance will be EBS-optimized.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">List[instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceephemeralblockdevice">List[Instance<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2616,7 +2616,7 @@ The public IP address assigned to the instance, if applicable.
             <td class="align-top">root_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">List[instance_<wbr>root_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instancerootblockdevice">List[Instance<wbr>Root<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4730,7 +4730,7 @@ by default.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">List[instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceebsblockdevice">List[Instance<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -4794,7 +4794,7 @@ instance.  See Block Devices below for details.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">List[instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceephemeralblockdevice">List[Instance<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize Ephemeral (also known as
 &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
@@ -5036,7 +5036,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC
             <td class="align-top">root_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">List[instance_<wbr>root_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instancerootblockdevice">List[Instance<wbr>Root<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -7455,7 +7455,7 @@ by default.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">List[instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceebsblockdevice">List[Instance<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7529,7 +7529,7 @@ EC2 instance ID
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">List[instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instanceephemeralblockdevice">List[Instance<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7809,7 +7809,7 @@ The public IP address assigned to the instance, if applicable.
             <td class="align-top">root_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">List[instance_<wbr>root_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#instancerootblockdevice">List[Instance<wbr>Root<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8359,7 +8359,7 @@ will use. Can be either `&#34;paravirtual&#34;` or `&#34;hvm&#34;`.
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -8429,7 +8429,7 @@ will use. Can be either `&#34;paravirtual&#34;` or `&#34;hvm&#34;`.
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8642,7 +8642,7 @@ will use. Can be either `&#34;paravirtual&#34;` or `&#34;hvm&#34;`.
         </tr>
     
         <tr>
-            <td class="align-top">virtual_<wbr>name</td>
+            <td class="align-top">virtual<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8925,7 +8925,7 @@ will use. Can be either `&#34;paravirtual&#34;` or `&#34;hvm&#34;`.
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -8967,7 +8967,7 @@ will use. Can be either `&#34;paravirtual&#34;` or `&#34;hvm&#34;`.
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>

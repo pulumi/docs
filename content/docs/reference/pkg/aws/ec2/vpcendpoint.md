@@ -776,7 +776,7 @@ The ID of one or more subnets in which to create a network interface for the end
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1604,7 +1604,7 @@ Defaults to `false`.
             <td class="align-top">dns_<wbr>entries</td>
             <td class="align-top">
                 
-                <code><a href="#vpcendpointdnsentry">List[vpc_<wbr>endpoint_<wbr>dns_<wbr>entry]</a></code>
+                <code><a href="#vpcendpointdnsentry">List[Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry]</a></code>
             </td>
             <td class="align-top">{{% md %}} The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
  {{% /md %}}
@@ -1760,7 +1760,7 @@ Defaults to `false`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2733,7 +2733,7 @@ The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of
             <td class="align-top">dns_<wbr>entries</td>
             <td class="align-top">
                 
-                <code><a href="#vpcendpointdnsentry">List[vpc_<wbr>endpoint_<wbr>dns_<wbr>entry]</a></code>
+                <code><a href="#vpcendpointdnsentry">List[Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2913,7 +2913,7 @@ The ID of one or more subnets in which to create a network interface for the end
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

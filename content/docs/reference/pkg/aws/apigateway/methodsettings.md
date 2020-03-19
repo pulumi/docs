@@ -402,7 +402,7 @@ The ID of the REST API
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#methodsettingssettings">Dict[method_<wbr>settings_<wbr>settings]</a></code>
+                <code><a href="#methodsettingssettings">Dict[Method<wbr>Settings<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -708,7 +708,7 @@ The following output properties are available:
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#methodsettingssettings">Dict[method_<wbr>settings_<wbr>settings]</a></code>
+                <code><a href="#methodsettingssettings">Dict[Method<wbr>Settings<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} The settings block, see below.
  {{% /md %}}
@@ -1083,7 +1083,7 @@ The ID of the REST API
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#methodsettingssettings">Dict[method_<wbr>settings_<wbr>settings]</a></code>
+                <code><a href="#methodsettingssettings">Dict[Method<wbr>Settings<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1668,7 +1668,7 @@ Specifies how to handle unauthorized requests for cache invalidation. The availa
     <tbody>
     
         <tr>
-            <td class="align-top">cache_<wbr>data_<wbr>encrypted</td>
+            <td class="align-top">cache<wbr>Data<wbr>Encrypted</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1683,7 +1683,7 @@ Specifies whether the cached responses are encrypted.
         </tr>
     
         <tr>
-            <td class="align-top">cache_<wbr>ttl_<wbr>in_<wbr>seconds</td>
+            <td class="align-top">cache<wbr>Ttl<wbr>In<wbr>Seconds</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1698,7 +1698,7 @@ Specifies the time to live (TTL), in seconds, for cached responses. The higher t
         </tr>
     
         <tr>
-            <td class="align-top">caching_<wbr>enabled</td>
+            <td class="align-top">caching<wbr>Enabled</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1713,7 +1713,7 @@ Specifies whether responses should be cached and returned for requests. A cache 
         </tr>
     
         <tr>
-            <td class="align-top">data_<wbr>trace_<wbr>enabled</td>
+            <td class="align-top">data<wbr>Trace<wbr>Enabled</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1728,7 +1728,7 @@ Specifies whether data trace logging is enabled for this method, which effects t
         </tr>
     
         <tr>
-            <td class="align-top">logging_<wbr>level</td>
+            <td class="align-top">logging<wbr>Level</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1743,7 +1743,7 @@ Specifies the logging level for this method, which effects the log entries pushe
         </tr>
     
         <tr>
-            <td class="align-top">metrics_<wbr>enabled</td>
+            <td class="align-top">metrics<wbr>Enabled</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1758,7 +1758,7 @@ Specifies whether Amazon CloudWatch metrics are enabled for this method.
         </tr>
     
         <tr>
-            <td class="align-top">require_<wbr>authorization_<wbr>for_<wbr>cache_<wbr>control</td>
+            <td class="align-top">require<wbr>Authorization<wbr>For<wbr>Cache<wbr>Control</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1773,7 +1773,7 @@ Specifies whether authorization is required for a cache invalidation request.
         </tr>
     
         <tr>
-            <td class="align-top">throttling_<wbr>burst_<wbr>limit</td>
+            <td class="align-top">throttling<wbr>Burst<wbr>Limit</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1788,7 +1788,7 @@ Specifies the throttling burst limit.
         </tr>
     
         <tr>
-            <td class="align-top">throttling_<wbr>rate_<wbr>limit</td>
+            <td class="align-top">throttling<wbr>Rate<wbr>Limit</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1803,7 +1803,7 @@ Specifies the throttling rate limit.
         </tr>
     
         <tr>
-            <td class="align-top">unauthorized_<wbr>cache_<wbr>control_<wbr>header_<wbr>strategy</td>
+            <td class="align-top">unauthorized<wbr>Cache<wbr>Control<wbr>Header<wbr>Strategy</td>
             <td class="align-top">
                 
                 <code>str</code>

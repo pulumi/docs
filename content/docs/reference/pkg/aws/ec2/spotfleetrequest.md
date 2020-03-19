@@ -1099,7 +1099,7 @@ the number of Spot pools that you specify.
             <td class="align-top">launch_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecification">List[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification]</a></code>
+                <code><a href="#spotfleetrequestlaunchspecification">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2216,7 +2216,7 @@ the number of Spot pools that you specify.
             <td class="align-top">launch_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecification">List[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification]</a></code>
+                <code><a href="#spotfleetrequestlaunchspecification">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
@@ -3493,7 +3493,7 @@ the number of Spot pools that you specify.
             <td class="align-top">launch_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecification">List[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification]</a></code>
+                <code><a href="#spotfleetrequestlaunchspecification">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4661,7 +4661,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecificationebsblockdevice">List[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#spotfleetrequestlaunchspecificationebsblockdevice">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4689,7 +4689,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">List[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4714,7 +4714,7 @@ A mapping of tags to assign to the resource.
         </tr>
     
         <tr>
-            <td class="align-top">iam_<wbr>instance_<wbr>profile_<wbr>arn</td>
+            <td class="align-top">iam<wbr>Instance<wbr>Profile<wbr>Arn</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4801,7 +4801,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">root_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecificationrootblockdevice">List[spot_<wbr>fleet_<wbr>request_<wbr>launch_<wbr>specification_<wbr>root_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#spotfleetrequestlaunchspecificationrootblockdevice">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4844,7 +4844,7 @@ The maximum bid price per unit hour.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4884,7 +4884,7 @@ A mapping of tags to assign to the resource.
         </tr>
     
         <tr>
-            <td class="align-top">weighted_<wbr>capacity</td>
+            <td class="align-top">weighted<wbr>Capacity</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5335,7 +5335,7 @@ A mapping of tags to assign to the resource.
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -5433,7 +5433,7 @@ A mapping of tags to assign to the resource.
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5646,7 +5646,7 @@ A mapping of tags to assign to the resource.
         </tr>
     
         <tr>
-            <td class="align-top">virtual_<wbr>name</td>
+            <td class="align-top">virtual<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -6013,7 +6013,7 @@ A mapping of tags to assign to the resource.
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -6083,7 +6083,7 @@ A mapping of tags to assign to the resource.
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>

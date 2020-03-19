@@ -2184,7 +2184,7 @@ If set to to 1, hyperthreading is disabled on the launched instance. Defaults to
             <td class="align-top">credit_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestcreditspecification">Dict[spot_<wbr>instance_<wbr>request_<wbr>credit_<wbr>specification]</a></code>
+                <code><a href="#spotinstancerequestcreditspecification">Dict[Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2215,7 +2215,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestebsblockdevice">List[spot_<wbr>instance_<wbr>request_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#spotinstancerequestebsblockdevice">List[Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2250,7 +2250,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestephemeralblockdevice">List[spot_<wbr>instance_<wbr>request_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#spotinstancerequestephemeralblockdevice">List[Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2451,7 +2451,7 @@ If true, the launched EC2 instance will have detailed monitoring enabled. (Avail
             <td class="align-top">network_<wbr>interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestnetworkinterface">List[spot_<wbr>instance_<wbr>request_<wbr>network_<wbr>interface]</a></code>
+                <code><a href="#spotinstancerequestnetworkinterface">List[Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2497,7 +2497,7 @@ instance in a VPC.
             <td class="align-top">root_<wbr>block_<wbr>device</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestrootblockdevice">Dict[spot_<wbr>instance_<wbr>request_<wbr>root_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#spotinstancerequestrootblockdevice">Dict[Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2590,7 +2590,7 @@ The VPC Subnet ID to launch in.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2680,7 +2680,7 @@ The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/ht
             <td class="align-top">volume_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4982,7 +4982,7 @@ only supported on creation of instance type that support CPU Options
             <td class="align-top">credit_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestcreditspecification">Dict[spot_<wbr>instance_<wbr>request_<wbr>credit_<wbr>specification]</a></code>
+                <code><a href="#spotinstancerequestcreditspecification">Dict[Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize the credit specification of the instance. See Credit Specification below for more details.
  {{% /md %}}
@@ -5009,7 +5009,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestebsblockdevice">List[spot_<wbr>instance_<wbr>request_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#spotinstancerequestebsblockdevice">List[Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
@@ -5040,7 +5040,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestephemeralblockdevice">List[spot_<wbr>instance_<wbr>request_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#spotinstancerequestephemeralblockdevice">List[Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize Ephemeral (also known as
 &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
@@ -5227,7 +5227,7 @@ If left empty instances are launched and terminated individually.
             <td class="align-top">network_<wbr>interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestnetworkinterface">List[spot_<wbr>instance_<wbr>request_<wbr>network_<wbr>interface]</a></code>
+                <code><a href="#spotinstancerequestnetworkinterface">List[Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
  {{% /md %}}
@@ -5333,7 +5333,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC
             <td class="align-top">root_<wbr>block_<wbr>device</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestrootblockdevice">Dict[spot_<wbr>instance_<wbr>request_<wbr>root_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#spotinstancerequestrootblockdevice">Dict[Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -5458,7 +5458,7 @@ the instance is terminated, the spot request will be closed.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -5536,7 +5536,7 @@ the instance is terminated, the spot request will be closed.
             <td class="align-top">volume_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the devices created by the instance at launch time.
  {{% /md %}}
@@ -8197,7 +8197,7 @@ If set to to 1, hyperthreading is disabled on the launched instance. Defaults to
             <td class="align-top">credit_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestcreditspecification">Dict[spot_<wbr>instance_<wbr>request_<wbr>credit_<wbr>specification]</a></code>
+                <code><a href="#spotinstancerequestcreditspecification">Dict[Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8228,7 +8228,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestebsblockdevice">List[spot_<wbr>instance_<wbr>request_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#spotinstancerequestebsblockdevice">List[Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8263,7 +8263,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestephemeralblockdevice">List[spot_<wbr>instance_<wbr>request_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#spotinstancerequestephemeralblockdevice">List[Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8478,7 +8478,7 @@ If true, the launched EC2 instance will have detailed monitoring enabled. (Avail
             <td class="align-top">network_<wbr>interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestnetworkinterface">List[spot_<wbr>instance_<wbr>request_<wbr>network_<wbr>interface]</a></code>
+                <code><a href="#spotinstancerequestnetworkinterface">List[Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8600,7 +8600,7 @@ The public IP address assigned to the instance, if applicable.
             <td class="align-top">root_<wbr>block_<wbr>device</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestrootblockdevice">Dict[spot_<wbr>instance_<wbr>request_<wbr>root_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#spotinstancerequestrootblockdevice">Dict[Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8743,7 +8743,7 @@ The VPC Subnet ID to launch in.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8833,7 +8833,7 @@ The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/ht
             <td class="align-top">volume_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9027,7 +9027,7 @@ timeout of 10m is reached.
     <tbody>
     
         <tr>
-            <td class="align-top">cpu_<wbr>credits</td>
+            <td class="align-top">cpu<wbr>Credits</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -9562,7 +9562,7 @@ or `&#34;io1&#34;`. (Default: `&#34;gp2&#34;`).
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -9686,7 +9686,7 @@ The size of the volume in gibibytes (GiB).
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -9959,7 +9959,7 @@ The name of the block device to mount on the instance.
         </tr>
     
         <tr>
-            <td class="align-top">no_<wbr>device</td>
+            <td class="align-top">no<wbr>Device</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -9974,7 +9974,7 @@ Suppresses the specified device included in the AMI&#39;s block device mapping.
         </tr>
     
         <tr>
-            <td class="align-top">virtual_<wbr>name</td>
+            <td class="align-top">virtual<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -10224,7 +10224,7 @@ on instance termination (Default: `true`).
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -10699,7 +10699,7 @@ or `&#34;io1&#34;`. (Default: `&#34;gp2&#34;`).
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -10793,7 +10793,7 @@ The size of the volume in gibibytes (GiB).
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -552,7 +552,7 @@ Whether the identity pool supports unauthenticated logins or not.
             <td class="align-top">cognito_<wbr>identity_<wbr>providers</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolcognitoidentityprovider">List[identity_<wbr>pool_<wbr>cognito_<wbr>identity_<wbr>provider]</a></code>
+                <code><a href="#identitypoolcognitoidentityprovider">List[Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -643,7 +643,7 @@ Key-Value pairs mapping provider names to provider app IDs.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1132,7 +1132,7 @@ backend and the Cognito service to communicate about the developer provider.
             <td class="align-top">cognito_<wbr>identity_<wbr>providers</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolcognitoidentityprovider">List[identity_<wbr>pool_<wbr>cognito_<wbr>identity_<wbr>provider]</a></code>
+                <code><a href="#identitypoolcognitoidentityprovider">List[Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} An array of Amazon Cognito Identity user pools and their client IDs.
  {{% /md %}}
@@ -1211,7 +1211,7 @@ backend and the Cognito service to communicate about the developer provider.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the Identity Pool.
  {{% /md %}}
@@ -1801,7 +1801,7 @@ The ARN of the identity pool.
             <td class="align-top">cognito_<wbr>identity_<wbr>providers</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolcognitoidentityprovider">List[identity_<wbr>pool_<wbr>cognito_<wbr>identity_<wbr>provider]</a></code>
+                <code><a href="#identitypoolcognitoidentityprovider">List[Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1892,7 +1892,7 @@ Key-Value pairs mapping provider names to provider app IDs.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2177,7 +2177,7 @@ The provider name for an Amazon Cognito Identity User Pool.
         </tr>
     
         <tr>
-            <td class="align-top">server_<wbr>side_<wbr>token_<wbr>check</td>
+            <td class="align-top">server<wbr>Side<wbr>Token<wbr>Check</td>
             <td class="align-top">
                 
                 <code>bool</code>

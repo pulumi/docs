@@ -495,7 +495,7 @@ The throttling limits of the usage plan.
             <td class="align-top">api_<wbr>stages</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanapistage">List[usage_<wbr>plan_<wbr>api_<wbr>stage]</a></code>
+                <code><a href="#usageplanapistage">List[Usage<wbr>Plan<wbr>Api<wbr>Stage]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -555,7 +555,7 @@ The AWS Markeplace product identifier to associate with the usage plan as a SaaS
             <td class="align-top">quota_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanquotasettings">Dict[usage_<wbr>plan_<wbr>quota_<wbr>settings]</a></code>
+                <code><a href="#usageplanquotasettings">Dict[Usage<wbr>Plan<wbr>Quota<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -570,7 +570,7 @@ The quota settings of the usage plan.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -585,7 +585,7 @@ Key-value mapping of resource tags
             <td class="align-top">throttle_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanthrottlesettings">Dict[usage_<wbr>plan_<wbr>throttle_<wbr>settings]</a></code>
+                <code><a href="#usageplanthrottlesettings">Dict[Usage<wbr>Plan<wbr>Throttle<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1006,7 +1006,7 @@ The following output properties are available:
             <td class="align-top">api_<wbr>stages</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanapistage">List[usage_<wbr>plan_<wbr>api_<wbr>stage]</a></code>
+                <code><a href="#usageplanapistage">List[Usage<wbr>Plan<wbr>Api<wbr>Stage]</a></code>
             </td>
             <td class="align-top">{{% md %}} The associated API stages of the usage plan.
  {{% /md %}}
@@ -1071,7 +1071,7 @@ The following output properties are available:
             <td class="align-top">quota_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanquotasettings">Dict[usage_<wbr>plan_<wbr>quota_<wbr>settings]</a></code>
+                <code><a href="#usageplanquotasettings">Dict[Usage<wbr>Plan<wbr>Quota<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} The quota settings of the usage plan.
  {{% /md %}}
@@ -1084,7 +1084,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1097,7 +1097,7 @@ The following output properties are available:
             <td class="align-top">throttle_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanthrottlesettings">Dict[usage_<wbr>plan_<wbr>throttle_<wbr>settings]</a></code>
+                <code><a href="#usageplanthrottlesettings">Dict[Usage<wbr>Plan<wbr>Throttle<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} The throttling limits of the usage plan.
  {{% /md %}}
@@ -1609,7 +1609,7 @@ The throttling limits of the usage plan.
             <td class="align-top">api_<wbr>stages</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanapistage">List[usage_<wbr>plan_<wbr>api_<wbr>stage]</a></code>
+                <code><a href="#usageplanapistage">List[Usage<wbr>Plan<wbr>Api<wbr>Stage]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1684,7 +1684,7 @@ The AWS Markeplace product identifier to associate with the usage plan as a SaaS
             <td class="align-top">quota_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanquotasettings">Dict[usage_<wbr>plan_<wbr>quota_<wbr>settings]</a></code>
+                <code><a href="#usageplanquotasettings">Dict[Usage<wbr>Plan<wbr>Quota<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1699,7 +1699,7 @@ The quota settings of the usage plan.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1714,7 +1714,7 @@ Key-value mapping of resource tags
             <td class="align-top">throttle_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanthrottlesettings">Dict[usage_<wbr>plan_<wbr>throttle_<wbr>settings]</a></code>
+                <code><a href="#usageplanthrottlesettings">Dict[Usage<wbr>Plan<wbr>Throttle<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2426,7 +2426,7 @@ The API request steady-state rate limit.
     <tbody>
     
         <tr>
-            <td class="align-top">burst_<wbr>limit</td>
+            <td class="align-top">burst<wbr>Limit</td>
             <td class="align-top">
                 
                 <code>float</code>

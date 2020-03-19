@@ -269,7 +269,7 @@ The name of the set
             <td class="align-top">xss_<wbr>match_<wbr>tuples</td>
             <td class="align-top">
                 
-                <code><a href="#xssmatchsetxssmatchtuple">List[xss_<wbr>match_<wbr>set_<wbr>xss_<wbr>match_<wbr>tuple]</a></code>
+                <code><a href="#xssmatchsetxssmatchtuple">List[Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -469,7 +469,7 @@ The following output properties are available:
             <td class="align-top">xss_<wbr>match_<wbr>tuples</td>
             <td class="align-top">
                 
-                <code><a href="#xssmatchsetxssmatchtuple">List[xss_<wbr>match_<wbr>set_<wbr>xss_<wbr>match_<wbr>tuple]</a></code>
+                <code><a href="#xssmatchsetxssmatchtuple">List[Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple]</a></code>
             </td>
             <td class="align-top">{{% md %}} The parts of web requests that you want to inspect for cross-site scripting attacks.
  {{% /md %}}
@@ -726,7 +726,7 @@ The name of the set
             <td class="align-top">xss_<wbr>match_<wbr>tuples</td>
             <td class="align-top">
                 
-                <code><a href="#xssmatchsetxssmatchtuple">List[xss_<wbr>match_<wbr>set_<wbr>xss_<wbr>match_<wbr>tuple]</a></code>
+                <code><a href="#xssmatchsetxssmatchtuple">List[Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -936,10 +936,10 @@ Which text transformation, if any, to perform on the web request before inspecti
     <tbody>
     
         <tr>
-            <td class="align-top">field_<wbr>to_<wbr>match</td>
+            <td class="align-top">field<wbr>To<wbr>Match</td>
             <td class="align-top">
                 
-                <code><a href="#xssmatchsetxssmatchtuplefieldtomatch">Dict[xss_<wbr>match_<wbr>set_<wbr>xss_<wbr>match_<wbr>tuple_<wbr>field_<wbr>to_<wbr>match]</a></code>
+                <code><a href="#xssmatchsetxssmatchtuplefieldtomatch">Dict[Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -951,7 +951,7 @@ Specifies where in a web request to look for cross-site scripting attacks.
         </tr>
     
         <tr>
-            <td class="align-top">text_<wbr>transformation</td>
+            <td class="align-top">text<wbr>Transformation</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -365,7 +365,7 @@ Name of the alias.
             <td class="align-top">routing_<wbr>strategy</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingstrategy">Dict[alias_<wbr>routing_<wbr>strategy]</a></code>
+                <code><a href="#aliasroutingstrategy">Dict[Alias<wbr>Routing<wbr>Strategy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -380,7 +380,7 @@ Specifies the fleet and/or routing type to use for the alias.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -723,7 +723,7 @@ The following output properties are available:
             <td class="align-top">routing_<wbr>strategy</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingstrategy">Dict[alias_<wbr>routing_<wbr>strategy]</a></code>
+                <code><a href="#aliasroutingstrategy">Dict[Alias<wbr>Routing<wbr>Strategy]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the fleet and/or routing type to use for the alias.
  {{% /md %}}
@@ -736,7 +736,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1158,7 +1158,7 @@ Name of the alias.
             <td class="align-top">routing_<wbr>strategy</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingstrategy">Dict[alias_<wbr>routing_<wbr>strategy]</a></code>
+                <code><a href="#aliasroutingstrategy">Dict[Alias<wbr>Routing<wbr>Strategy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1173,7 +1173,7 @@ Specifies the fleet and/or routing type to use for the alias.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1428,7 +1428,7 @@ Type of routing strategy. e.g. `SIMPLE` or `TERMINAL`
     <tbody>
     
         <tr>
-            <td class="align-top">fleet_<wbr>id</td>
+            <td class="align-top">fleet<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>

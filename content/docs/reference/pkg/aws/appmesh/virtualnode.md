@@ -499,7 +499,7 @@ The name to use for the virtual node.
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespec">Dict[virtual_<wbr>node_<wbr>spec]</a></code>
+                <code><a href="#virtualnodespec">Dict[Virtual<wbr>Node<wbr>Spec]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -514,7 +514,7 @@ The virtual node specification to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -961,7 +961,7 @@ The following output properties are available:
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespec">Dict[virtual_<wbr>node_<wbr>spec]</a></code>
+                <code><a href="#virtualnodespec">Dict[Virtual<wbr>Node<wbr>Spec]</a></code>
             </td>
             <td class="align-top">{{% md %}} The virtual node specification to apply.
  {{% /md %}}
@@ -974,7 +974,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1516,7 +1516,7 @@ The name to use for the virtual node.
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespec">Dict[virtual_<wbr>node_<wbr>spec]</a></code>
+                <code><a href="#virtualnodespec">Dict[Virtual<wbr>Node<wbr>Spec]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1531,7 +1531,7 @@ The virtual node specification to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1834,7 +1834,7 @@ The service discovery information for the virtual node.
             <td class="align-top">backends</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecbackend">List[virtual_<wbr>node_<wbr>spec_<wbr>backend]</a></code>
+                <code><a href="#virtualnodespecbackend">List[Virtual<wbr>Node<wbr>Spec<wbr>Backend]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1849,7 +1849,7 @@ The backends to which the virtual node is expected to send outbound traffic.
             <td class="align-top">listener</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespeclistener">Dict[virtual_<wbr>node_<wbr>spec_<wbr>listener]</a></code>
+                <code><a href="#virtualnodespeclistener">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Listener]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1864,7 +1864,7 @@ The listeners from which the virtual node is expected to receive inbound traffic
             <td class="align-top">logging</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespeclogging">Dict[virtual_<wbr>node_<wbr>spec_<wbr>logging]</a></code>
+                <code><a href="#virtualnodespeclogging">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Logging]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1876,10 +1876,10 @@ The inbound and outbound access logging information for the virtual node.
         </tr>
     
         <tr>
-            <td class="align-top">service_<wbr>discovery</td>
+            <td class="align-top">service<wbr>Discovery</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecservicediscovery">Dict[virtual_<wbr>node_<wbr>spec_<wbr>service_<wbr>discovery]</a></code>
+                <code><a href="#virtualnodespecservicediscovery">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2037,10 +2037,10 @@ Specifies a virtual service to use as a backend for a virtual node.
     <tbody>
     
         <tr>
-            <td class="align-top">virtual_<wbr>service</td>
+            <td class="align-top">virtual<wbr>Service</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecbackendvirtualservice">Dict[virtual_<wbr>node_<wbr>spec_<wbr>backend_<wbr>virtual_<wbr>service]</a></code>
+                <code><a href="#virtualnodespecbackendvirtualservice">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2198,7 +2198,7 @@ The name of the virtual service that is acting as a virtual node backend.
     <tbody>
     
         <tr>
-            <td class="align-top">virtual_<wbr>service_<wbr>name</td>
+            <td class="align-top">virtual<wbr>Service<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2407,7 +2407,7 @@ The port mapping information for the listener.
             <td class="align-top">health_<wbr>check</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespeclistenerhealthcheck">Dict[virtual_<wbr>node_<wbr>spec_<wbr>listener_<wbr>health_<wbr>check]</a></code>
+                <code><a href="#virtualnodespeclistenerhealthcheck">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2419,10 +2419,10 @@ The health check information for the listener.
         </tr>
     
         <tr>
-            <td class="align-top">port_<wbr>mapping</td>
+            <td class="align-top">port<wbr>Mapping</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespeclistenerportmapping">Dict[virtual_<wbr>node_<wbr>spec_<wbr>listener_<wbr>port_<wbr>mapping]</a></code>
+                <code><a href="#virtualnodespeclistenerportmapping">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2850,7 +2850,7 @@ The number of consecutive failed health checks that must occur before declaring 
     <tbody>
     
         <tr>
-            <td class="align-top">healthy_<wbr>threshold</td>
+            <td class="align-top">healthy<wbr>Threshold</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2866,7 +2866,7 @@ The number of consecutive successful health checks that must occur before declar
         </tr>
     
         <tr>
-            <td class="align-top">interval_<wbr>millis</td>
+            <td class="align-top">interval<wbr>Millis</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2925,7 +2925,7 @@ The protocol for the health check request. Valid values are `http` and `tcp`.
         </tr>
     
         <tr>
-            <td class="align-top">timeout_<wbr>millis</td>
+            <td class="align-top">timeout<wbr>Millis</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2940,7 +2940,7 @@ The amount of time to wait when receiving a response from the health check, in m
         </tr>
     
         <tr>
-            <td class="align-top">unhealthy_<wbr>threshold</td>
+            <td class="align-top">unhealthy<wbr>Threshold</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3322,10 +3322,10 @@ The access log configuration for a virtual node.
     <tbody>
     
         <tr>
-            <td class="align-top">access_<wbr>log</td>
+            <td class="align-top">access<wbr>Log</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecloggingaccesslog">Dict[virtual_<wbr>node_<wbr>spec_<wbr>logging_<wbr>access_<wbr>log]</a></code>
+                <code><a href="#virtualnodespecloggingaccesslog">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3486,7 +3486,7 @@ The file object to send virtual node access logs to.
             <td class="align-top">file</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecloggingaccesslogfile">Dict[virtual_<wbr>node_<wbr>spec_<wbr>logging_<wbr>access_<wbr>log_<wbr>file]</a></code>
+                <code><a href="#virtualnodespecloggingaccesslogfile">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3850,10 +3850,10 @@ Specifies the DNS service name for the virtual node.
     <tbody>
     
         <tr>
-            <td class="align-top">aws_<wbr>cloud_<wbr>map</td>
+            <td class="align-top">aws<wbr>Cloud<wbr>Map</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecservicediscoveryawscloudmap">Dict[virtual_<wbr>node_<wbr>spec_<wbr>service_<wbr>discovery_<wbr>aws_<wbr>cloud_<wbr>map]</a></code>
+                <code><a href="#virtualnodespecservicediscoveryawscloudmap">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3868,7 +3868,7 @@ Specifies any AWS Cloud Map information for the virtual node.
             <td class="align-top">dns</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecservicediscoverydns">Dict[virtual_<wbr>node_<wbr>spec_<wbr>service_<wbr>discovery_<wbr>dns]</a></code>
+                <code><a href="#virtualnodespecservicediscoverydns">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4134,7 +4134,7 @@ A string map that contains attributes with values that you can use to filter ins
         </tr>
     
         <tr>
-            <td class="align-top">namespace_<wbr>name</td>
+            <td class="align-top">namespace<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>

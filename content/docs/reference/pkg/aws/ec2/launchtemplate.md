@@ -1427,7 +1427,7 @@ A list of security group IDs to associate with.
             <td class="align-top">block_<wbr>device_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateblockdevicemapping">List[launch_<wbr>template_<wbr>block_<wbr>device_<wbr>mapping]</a></code>
+                <code><a href="#launchtemplateblockdevicemapping">List[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1443,7 +1443,7 @@ See Block Devices below for details.
             <td class="align-top">capacity_<wbr>reservation_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecapacityreservationspecification">Dict[launch_<wbr>template_<wbr>capacity_<wbr>reservation_<wbr>specification]</a></code>
+                <code><a href="#launchtemplatecapacityreservationspecification">Dict[Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1458,7 +1458,7 @@ Targeting for EC2 capacity reservations. See Capacity Reservation Specification 
             <td class="align-top">cpu_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecpuoptions">Dict[launch_<wbr>template_<wbr>cpu_<wbr>options]</a></code>
+                <code><a href="#launchtemplatecpuoptions">Dict[Launch<wbr>Template<wbr>Cpu<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1473,7 +1473,7 @@ The CPU options for the instance. See CPU Options below for more details.
             <td class="align-top">credit_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecreditspecification">Dict[launch_<wbr>template_<wbr>credit_<wbr>specification]</a></code>
+                <code><a href="#launchtemplatecreditspecification">Dict[Launch<wbr>Template<wbr>Credit<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1535,7 +1535,7 @@ If `true`, the launched EC2 instance will be EBS-optimized.
             <td class="align-top">elastic_<wbr>gpu_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticgpuspecification">List[launch_<wbr>template_<wbr>elastic_<wbr>gpu_<wbr>specification]</a></code>
+                <code><a href="#launchtemplateelasticgpuspecification">List[Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1551,7 +1551,7 @@ below for more details.
             <td class="align-top">elastic_<wbr>inference_<wbr>accelerator</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticinferenceaccelerator">Dict[launch_<wbr>template_<wbr>elastic_<wbr>inference_<wbr>accelerator]</a></code>
+                <code><a href="#launchtemplateelasticinferenceaccelerator">Dict[Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1566,7 +1566,7 @@ Configuration block containing an Elastic Inference Accelerator to attach to the
             <td class="align-top">iam_<wbr>instance_<wbr>profile</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateiaminstanceprofile">Dict[launch_<wbr>template_<wbr>iam_<wbr>instance_<wbr>profile]</a></code>
+                <code><a href="#launchtemplateiaminstanceprofile">Dict[Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1613,7 +1613,7 @@ Shutdown behavior for the instance. Can be `stop` or `terminate`.
             <td class="align-top">instance_<wbr>market_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateinstancemarketoptions">Dict[launch_<wbr>template_<wbr>instance_<wbr>market_<wbr>options]</a></code>
+                <code><a href="#launchtemplateinstancemarketoptions">Dict[Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1674,7 +1674,7 @@ The key name to use for the instance.
             <td class="align-top">license_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatelicensespecification">List[launch_<wbr>template_<wbr>license_<wbr>specification]</a></code>
+                <code><a href="#launchtemplatelicensespecification">List[Launch<wbr>Template<wbr>License<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1689,7 +1689,7 @@ A list of license specifications to associate with. See License Specification be
             <td class="align-top">monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatemonitoring">Dict[launch_<wbr>template_<wbr>monitoring]</a></code>
+                <code><a href="#launchtemplatemonitoring">Dict[Launch<wbr>Template<wbr>Monitoring]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1734,7 +1734,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">network_<wbr>interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatenetworkinterface">List[launch_<wbr>template_<wbr>network_<wbr>interface]</a></code>
+                <code><a href="#launchtemplatenetworkinterface">List[Launch<wbr>Template<wbr>Network<wbr>Interface]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1750,7 +1750,7 @@ Interfaces below for more details.
             <td class="align-top">placement</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateplacement">Dict[launch_<wbr>template_<wbr>placement]</a></code>
+                <code><a href="#launchtemplateplacement">Dict[Launch<wbr>Template<wbr>Placement]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1796,7 +1796,7 @@ A list of security group names to associate with. If you are creating Instances 
             <td class="align-top">tag_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatetagspecification">List[launch_<wbr>template_<wbr>tag_<wbr>specification]</a></code>
+                <code><a href="#launchtemplatetagspecification">List[Launch<wbr>Template<wbr>Tag<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1811,7 +1811,7 @@ The tags to apply to the resources during launch. See Tag Specifications below f
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3199,7 +3199,7 @@ Interfaces below for more details.
             <td class="align-top">block_<wbr>device_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateblockdevicemapping">List[launch_<wbr>template_<wbr>block_<wbr>device_<wbr>mapping]</a></code>
+                <code><a href="#launchtemplateblockdevicemapping">List[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.
@@ -3213,7 +3213,7 @@ See Block Devices below for details.
             <td class="align-top">capacity_<wbr>reservation_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecapacityreservationspecification">Dict[launch_<wbr>template_<wbr>capacity_<wbr>reservation_<wbr>specification]</a></code>
+                <code><a href="#launchtemplatecapacityreservationspecification">Dict[Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
  {{% /md %}}
@@ -3226,7 +3226,7 @@ See Block Devices below for details.
             <td class="align-top">cpu_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecpuoptions">Dict[launch_<wbr>template_<wbr>cpu_<wbr>options]</a></code>
+                <code><a href="#launchtemplatecpuoptions">Dict[Launch<wbr>Template<wbr>Cpu<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} The CPU options for the instance. See CPU Options below for more details.
  {{% /md %}}
@@ -3239,7 +3239,7 @@ See Block Devices below for details.
             <td class="align-top">credit_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecreditspecification">Dict[launch_<wbr>template_<wbr>credit_<wbr>specification]</a></code>
+                <code><a href="#launchtemplatecreditspecification">Dict[Launch<wbr>Template<wbr>Credit<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -3306,7 +3306,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">elastic_<wbr>gpu_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticgpuspecification">List[launch_<wbr>template_<wbr>elastic_<wbr>gpu_<wbr>specification]</a></code>
+                <code><a href="#launchtemplateelasticgpuspecification">List[Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -3320,7 +3320,7 @@ below for more details.
             <td class="align-top">elastic_<wbr>inference_<wbr>accelerator</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticinferenceaccelerator">Dict[launch_<wbr>template_<wbr>elastic_<wbr>inference_<wbr>accelerator]</a></code>
+                <code><a href="#launchtemplateelasticinferenceaccelerator">Dict[Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
  {{% /md %}}
@@ -3333,7 +3333,7 @@ below for more details.
             <td class="align-top">iam_<wbr>instance_<wbr>profile</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateiaminstanceprofile">Dict[launch_<wbr>template_<wbr>iam_<wbr>instance_<wbr>profile]</a></code>
+                <code><a href="#launchtemplateiaminstanceprofile">Dict[Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile]</a></code>
             </td>
             <td class="align-top">{{% md %}} The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -3374,7 +3374,7 @@ below for more details.
             <td class="align-top">instance_<wbr>market_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateinstancemarketoptions">Dict[launch_<wbr>template_<wbr>instance_<wbr>market_<wbr>options]</a></code>
+                <code><a href="#launchtemplateinstancemarketoptions">Dict[Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -3440,7 +3440,7 @@ below for details.
             <td class="align-top">license_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatelicensespecification">List[launch_<wbr>template_<wbr>license_<wbr>specification]</a></code>
+                <code><a href="#launchtemplatelicensespecification">List[Launch<wbr>Template<wbr>License<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of license specifications to associate with. See License Specification below for more details.
  {{% /md %}}
@@ -3453,7 +3453,7 @@ below for details.
             <td class="align-top">monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatemonitoring">Dict[launch_<wbr>template_<wbr>monitoring]</a></code>
+                <code><a href="#launchtemplatemonitoring">Dict[Launch<wbr>Template<wbr>Monitoring]</a></code>
             </td>
             <td class="align-top">{{% md %}} The monitoring option for the instance. See Monitoring below for more details.
  {{% /md %}}
@@ -3492,7 +3492,7 @@ below for details.
             <td class="align-top">network_<wbr>interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatenetworkinterface">List[launch_<wbr>template_<wbr>network_<wbr>interface]</a></code>
+                <code><a href="#launchtemplatenetworkinterface">List[Launch<wbr>Template<wbr>Network<wbr>Interface]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -3506,7 +3506,7 @@ Interfaces below for more details.
             <td class="align-top">placement</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateplacement">Dict[launch_<wbr>template_<wbr>placement]</a></code>
+                <code><a href="#launchtemplateplacement">Dict[Launch<wbr>Template<wbr>Placement]</a></code>
             </td>
             <td class="align-top">{{% md %}} The placement of the instance. See Placement below for more details.
  {{% /md %}}
@@ -3546,7 +3546,7 @@ Interfaces below for more details.
             <td class="align-top">tag_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatetagspecification">List[launch_<wbr>template_<wbr>tag_<wbr>specification]</a></code>
+                <code><a href="#launchtemplatetagspecification">List[Launch<wbr>Template<wbr>Tag<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} The tags to apply to the resources during launch. See Tag Specifications below for more details.
  {{% /md %}}
@@ -3559,7 +3559,7 @@ Interfaces below for more details.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the launch template.
  {{% /md %}}
@@ -5174,7 +5174,7 @@ Amazon Resource Name (ARN) of the launch template.
             <td class="align-top">block_<wbr>device_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateblockdevicemapping">List[launch_<wbr>template_<wbr>block_<wbr>device_<wbr>mapping]</a></code>
+                <code><a href="#launchtemplateblockdevicemapping">List[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5190,7 +5190,7 @@ See Block Devices below for details.
             <td class="align-top">capacity_<wbr>reservation_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecapacityreservationspecification">Dict[launch_<wbr>template_<wbr>capacity_<wbr>reservation_<wbr>specification]</a></code>
+                <code><a href="#launchtemplatecapacityreservationspecification">Dict[Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5205,7 +5205,7 @@ Targeting for EC2 capacity reservations. See Capacity Reservation Specification 
             <td class="align-top">cpu_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecpuoptions">Dict[launch_<wbr>template_<wbr>cpu_<wbr>options]</a></code>
+                <code><a href="#launchtemplatecpuoptions">Dict[Launch<wbr>Template<wbr>Cpu<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5220,7 +5220,7 @@ The CPU options for the instance. See CPU Options below for more details.
             <td class="align-top">credit_<wbr>specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecreditspecification">Dict[launch_<wbr>template_<wbr>credit_<wbr>specification]</a></code>
+                <code><a href="#launchtemplatecreditspecification">Dict[Launch<wbr>Template<wbr>Credit<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5297,7 +5297,7 @@ If `true`, the launched EC2 instance will be EBS-optimized.
             <td class="align-top">elastic_<wbr>gpu_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticgpuspecification">List[launch_<wbr>template_<wbr>elastic_<wbr>gpu_<wbr>specification]</a></code>
+                <code><a href="#launchtemplateelasticgpuspecification">List[Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5313,7 +5313,7 @@ below for more details.
             <td class="align-top">elastic_<wbr>inference_<wbr>accelerator</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticinferenceaccelerator">Dict[launch_<wbr>template_<wbr>elastic_<wbr>inference_<wbr>accelerator]</a></code>
+                <code><a href="#launchtemplateelasticinferenceaccelerator">Dict[Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5328,7 +5328,7 @@ Configuration block containing an Elastic Inference Accelerator to attach to the
             <td class="align-top">iam_<wbr>instance_<wbr>profile</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateiaminstanceprofile">Dict[launch_<wbr>template_<wbr>iam_<wbr>instance_<wbr>profile]</a></code>
+                <code><a href="#launchtemplateiaminstanceprofile">Dict[Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5375,7 +5375,7 @@ Shutdown behavior for the instance. Can be `stop` or `terminate`.
             <td class="align-top">instance_<wbr>market_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateinstancemarketoptions">Dict[launch_<wbr>template_<wbr>instance_<wbr>market_<wbr>options]</a></code>
+                <code><a href="#launchtemplateinstancemarketoptions">Dict[Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5451,7 +5451,7 @@ The latest version of the launch template.
             <td class="align-top">license_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatelicensespecification">List[launch_<wbr>template_<wbr>license_<wbr>specification]</a></code>
+                <code><a href="#launchtemplatelicensespecification">List[Launch<wbr>Template<wbr>License<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5466,7 +5466,7 @@ A list of license specifications to associate with. See License Specification be
             <td class="align-top">monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatemonitoring">Dict[launch_<wbr>template_<wbr>monitoring]</a></code>
+                <code><a href="#launchtemplatemonitoring">Dict[Launch<wbr>Template<wbr>Monitoring]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5511,7 +5511,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">network_<wbr>interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatenetworkinterface">List[launch_<wbr>template_<wbr>network_<wbr>interface]</a></code>
+                <code><a href="#launchtemplatenetworkinterface">List[Launch<wbr>Template<wbr>Network<wbr>Interface]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5527,7 +5527,7 @@ Interfaces below for more details.
             <td class="align-top">placement</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateplacement">Dict[launch_<wbr>template_<wbr>placement]</a></code>
+                <code><a href="#launchtemplateplacement">Dict[Launch<wbr>Template<wbr>Placement]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5573,7 +5573,7 @@ A list of security group names to associate with. If you are creating Instances 
             <td class="align-top">tag_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatetagspecification">List[launch_<wbr>template_<wbr>tag_<wbr>specification]</a></code>
+                <code><a href="#launchtemplatetagspecification">List[Launch<wbr>Template<wbr>Tag<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5588,7 +5588,7 @@ The tags to apply to the resources during launch. See Tag Specifications below f
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5942,7 +5942,7 @@ The name of the device to mount.
             <td class="align-top">ebs</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateblockdevicemappingebs">Dict[launch_<wbr>template_<wbr>block_<wbr>device_<wbr>mapping_<wbr>ebs]</a></code>
+                <code><a href="#launchtemplateblockdevicemappingebs">Dict[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5954,7 +5954,7 @@ Configure EBS volume properties.
         </tr>
     
         <tr>
-            <td class="align-top">no_<wbr>device</td>
+            <td class="align-top">no<wbr>Device</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5969,7 +5969,7 @@ Suppresses the specified device included in the AMI&#39;s block device mapping.
         </tr>
     
         <tr>
-            <td class="align-top">virtual_<wbr>name</td>
+            <td class="align-top">virtual<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -6381,7 +6381,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -6465,7 +6465,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -6664,7 +6664,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
     <tbody>
     
         <tr>
-            <td class="align-top">capacity_<wbr>reservation_<wbr>preference</td>
+            <td class="align-top">capacity<wbr>Reservation<wbr>Preference</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -6678,10 +6678,10 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         </tr>
     
         <tr>
-            <td class="align-top">capacity_<wbr>reservation_<wbr>target</td>
+            <td class="align-top">capacity<wbr>Reservation<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Dict[launch_<wbr>template_<wbr>capacity_<wbr>reservation_<wbr>specification_<wbr>capacity_<wbr>reservation_<wbr>target]</a></code>
+                <code><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Dict[Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6835,7 +6835,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
     <tbody>
     
         <tr>
-            <td class="align-top">capacity_<wbr>reservation_<wbr>id</td>
+            <td class="align-top">capacity<wbr>Reservation<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7034,7 +7034,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
     <tbody>
     
         <tr>
-            <td class="align-top">core_<wbr>count</td>
+            <td class="align-top">core<wbr>Count</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -7048,7 +7048,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         </tr>
     
         <tr>
-            <td class="align-top">threads_<wbr>per_<wbr>core</td>
+            <td class="align-top">threads<wbr>Per<wbr>Core</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -7205,7 +7205,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
     <tbody>
     
         <tr>
-            <td class="align-top">cpu_<wbr>credits</td>
+            <td class="align-top">cpu<wbr>Credits</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7947,7 +7947,7 @@ The name of the launch template. If you leave this blank, this provider will aut
     <tbody>
     
         <tr>
-            <td class="align-top">market_<wbr>type</td>
+            <td class="align-top">market<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7964,7 +7964,7 @@ The name of the launch template. If you leave this blank, this provider will aut
             <td class="align-top">spot_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateinstancemarketoptionsspotoptions">Dict[launch_<wbr>template_<wbr>instance_<wbr>market_<wbr>options_<wbr>spot_<wbr>options]</a></code>
+                <code><a href="#launchtemplateinstancemarketoptionsspotoptions">Dict[Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8300,7 +8300,7 @@ The name of the launch template. If you leave this blank, this provider will aut
         </tr>
     
         <tr>
-            <td class="align-top">instance_<wbr>interruption_<wbr>behavior</td>
+            <td class="align-top">instance<wbr>Interruption<wbr>Behavior</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8314,7 +8314,7 @@ The name of the launch template. If you leave this blank, this provider will aut
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>price</td>
+            <td class="align-top">max<wbr>Price</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8328,7 +8328,7 @@ The name of the launch template. If you leave this blank, this provider will aut
         </tr>
     
         <tr>
-            <td class="align-top">spot_<wbr>instance_<wbr>type</td>
+            <td class="align-top">spot<wbr>Instance<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -9292,7 +9292,7 @@ Description of the launch template.
         </tr>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -9335,7 +9335,7 @@ Description of the launch template.
         </tr>
     
         <tr>
-            <td class="align-top">ipv4_<wbr>address_<wbr>count</td>
+            <td class="align-top">ipv4Address<wbr>Count</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -9349,7 +9349,7 @@ Description of the launch template.
         </tr>
     
         <tr>
-            <td class="align-top">ipv4_<wbr>addresses</td>
+            <td class="align-top">ipv4Addresses</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -9856,7 +9856,7 @@ Description of the launch template.
         </tr>
     
         <tr>
-            <td class="align-top">spread_<wbr>domain</td>
+            <td class="align-top">spread<wbr>Domain</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -10089,7 +10089,7 @@ A mapping of tags to assign to the launch template.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

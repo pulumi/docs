@@ -512,7 +512,7 @@ A longer, human-readable description for the AMI.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amifrominstanceebsblockdevice">List[ami_<wbr>from_<wbr>instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amifrominstanceebsblockdevice">List[Ami<wbr>From<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -528,7 +528,7 @@ attached to created instances. The structure of this block is described below.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amifrominstanceephemeralblockdevice">List[ami_<wbr>from_<wbr>instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amifrominstanceephemeralblockdevice">List[Ami<wbr>From<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -592,7 +592,7 @@ The id of the instance to use as the basis of the AMI.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1417,7 +1417,7 @@ changes the set of further arguments that are required, as described below.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amifrominstanceebsblockdevice">List[ami_<wbr>from_<wbr>instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amifrominstanceebsblockdevice">List[Ami<wbr>From<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -1444,7 +1444,7 @@ attached to created instances. The structure of this block is described below.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amifrominstanceephemeralblockdevice">List[ami_<wbr>from_<wbr>instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amifrominstanceephemeralblockdevice">List[Ami<wbr>From<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -1593,7 +1593,7 @@ for created instances. No other value is supported at this time.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2582,7 +2582,7 @@ A longer, human-readable description for the AMI.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amifrominstanceebsblockdevice">List[ami_<wbr>from_<wbr>instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amifrominstanceebsblockdevice">List[Ami<wbr>From<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2613,7 +2613,7 @@ Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amifrominstanceephemeralblockdevice">List[ami_<wbr>from_<wbr>instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amifrominstanceephemeralblockdevice">List[Ami<wbr>From<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2784,7 +2784,7 @@ for created instances. No other value is supported at this time.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3215,7 +3215,7 @@ changes the set of further arguments that are required, as described below.
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -3299,7 +3299,7 @@ changes the set of further arguments that are required, as described below.
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3512,7 +3512,7 @@ changes the set of further arguments that are required, as described below.
         </tr>
     
         <tr>
-            <td class="align-top">virtual_<wbr>name</td>
+            <td class="align-top">virtual<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>

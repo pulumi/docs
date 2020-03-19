@@ -473,7 +473,7 @@ Key-value mapping of resource tags
             <td class="align-top">default_<wbr>action</td>
             <td class="align-top">
                 
-                <code><a href="#webacldefaultaction">Dict[web_<wbr>acl_<wbr>default_<wbr>action]</a></code>
+                <code><a href="#webacldefaultaction">Dict[Web<wbr>Acl<wbr>Default<wbr>Action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -488,7 +488,7 @@ Configuration block with action that you want AWS WAF to take when a request doe
             <td class="align-top">logging_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfiguration">Dict[web_<wbr>acl_<wbr>logging_<wbr>configuration]</a></code>
+                <code><a href="#webaclloggingconfiguration">Dict[Web<wbr>Acl<wbr>Logging<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -533,7 +533,7 @@ The name or description of the web ACL.
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#webaclrule">List[web_<wbr>acl_<wbr>rule]</a></code>
+                <code><a href="#webaclrule">List[Web<wbr>Acl<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -548,7 +548,7 @@ Configuration blocks containing rules to associate with the web ACL and the sett
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -943,7 +943,7 @@ The following output properties are available:
             <td class="align-top">default_<wbr>action</td>
             <td class="align-top">
                 
-                <code><a href="#webacldefaultaction">Dict[web_<wbr>acl_<wbr>default_<wbr>action]</a></code>
+                <code><a href="#webacldefaultaction">Dict[Web<wbr>Acl<wbr>Default<wbr>Action]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with action that you want AWS WAF to take when a request doesn&#39;t match the criteria in any of the rules that are associated with the web ACL. Detailed below.
  {{% /md %}}
@@ -956,7 +956,7 @@ The following output properties are available:
             <td class="align-top">logging_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfiguration">Dict[web_<wbr>acl_<wbr>logging_<wbr>configuration]</a></code>
+                <code><a href="#webaclloggingconfiguration">Dict[Web<wbr>Acl<wbr>Logging<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block to enable WAF logging. Detailed below.
  {{% /md %}}
@@ -995,7 +995,7 @@ The following output properties are available:
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#webaclrule">List[web_<wbr>acl_<wbr>rule]</a></code>
+                <code><a href="#webaclrule">List[Web<wbr>Acl<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration blocks containing rules to associate with the web ACL and the settings for each rule. Detailed below.
  {{% /md %}}
@@ -1008,7 +1008,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1490,7 +1490,7 @@ The ARN of the WAF WebACL.
             <td class="align-top">default_<wbr>action</td>
             <td class="align-top">
                 
-                <code><a href="#webacldefaultaction">Dict[web_<wbr>acl_<wbr>default_<wbr>action]</a></code>
+                <code><a href="#webacldefaultaction">Dict[Web<wbr>Acl<wbr>Default<wbr>Action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1505,7 +1505,7 @@ Configuration block with action that you want AWS WAF to take when a request doe
             <td class="align-top">logging_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfiguration">Dict[web_<wbr>acl_<wbr>logging_<wbr>configuration]</a></code>
+                <code><a href="#webaclloggingconfiguration">Dict[Web<wbr>Acl<wbr>Logging<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1550,7 +1550,7 @@ The name or description of the web ACL.
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#webaclrule">List[web_<wbr>acl_<wbr>rule]</a></code>
+                <code><a href="#webaclrule">List[Web<wbr>Acl<wbr>Rule]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1565,7 +1565,7 @@ Configuration blocks containing rules to associate with the web ACL and the sett
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1951,10 +1951,10 @@ Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream
         </tr>
     
         <tr>
-            <td class="align-top">redacted_<wbr>fields</td>
+            <td class="align-top">redacted<wbr>Fields</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfigurationredactedfields">Dict[web_<wbr>acl_<wbr>logging_<wbr>configuration_<wbr>redacted_<wbr>fields]</a></code>
+                <code><a href="#webaclloggingconfigurationredactedfields">Dict[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2112,10 +2112,10 @@ Set of configuration blocks for fields to redact. Detailed below.
     <tbody>
     
         <tr>
-            <td class="align-top">field_<wbr>to_<wbr>matches</td>
+            <td class="align-top">field<wbr>To<wbr>Matches</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">List[web_<wbr>acl_<wbr>logging_<wbr>configuration_<wbr>redacted_<wbr>fields_<wbr>field_<wbr>to_<wbr>match]</a></code>
+                <code><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">List[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2680,7 +2680,7 @@ The rule type, either `REGULAR`, as defined by [Rule](http://docs.aws.amazon.com
             <td class="align-top">action</td>
             <td class="align-top">
                 
-                <code><a href="#webaclruleaction">Dict[web_<wbr>acl_<wbr>rule_<wbr>action]</a></code>
+                <code><a href="#webaclruleaction">Dict[Web<wbr>Acl<wbr>Rule<wbr>Action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2692,10 +2692,10 @@ The action that CloudFront or AWS WAF takes when a web request matches the condi
         </tr>
     
         <tr>
-            <td class="align-top">override_<wbr>action</td>
+            <td class="align-top">override<wbr>Action</td>
             <td class="align-top">
                 
-                <code><a href="#webaclruleoverrideaction">Dict[web_<wbr>acl_<wbr>rule_<wbr>override_<wbr>action]</a></code>
+                <code><a href="#webaclruleoverrideaction">Dict[Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

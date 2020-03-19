@@ -456,7 +456,7 @@ The role name to include in the profile.
             <td class="align-top">roles</td>
             <td class="align-top">
                 
-                <code>List[role>]</code>
+                <code>List[Role>]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1578,7 +1578,7 @@ The role name to include in the profile.
             <td class="align-top">roles</td>
             <td class="align-top">
                 
-                <code>List[role>]</code>
+                <code>List[Role>]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -560,7 +560,7 @@ The percentage of traffic to send to an AWS Region. Additional traffic is distri
             <td class="align-top">endpoint_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#endpointgroupendpointconfiguration">List[endpoint_<wbr>group_<wbr>endpoint_<wbr>configuration]</a></code>
+                <code><a href="#endpointgroupendpointconfiguration">List[Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1140,7 +1140,7 @@ The following output properties are available:
             <td class="align-top">endpoint_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#endpointgroupendpointconfiguration">List[endpoint_<wbr>group_<wbr>endpoint_<wbr>configuration]</a></code>
+                <code><a href="#endpointgroupendpointconfiguration">List[Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of endpoint objects. Fields documented below.
  {{% /md %}}
@@ -1801,7 +1801,7 @@ The percentage of traffic to send to an AWS Region. Additional traffic is distri
             <td class="align-top">endpoint_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#endpointgroupendpointconfiguration">List[endpoint_<wbr>group_<wbr>endpoint_<wbr>configuration]</a></code>
+                <code><a href="#endpointgroupendpointconfiguration">List[Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

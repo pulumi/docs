@@ -729,7 +729,7 @@ Human-readable description of the fleet.
             <td class="align-top">ec2_<wbr>inbound_<wbr>permissions</td>
             <td class="align-top">
                 
-                <code><a href="#fleetec2inboundpermission">List[fleet_<wbr>ec2_<wbr>inbound_<wbr>permission]</a></code>
+                <code><a href="#fleetec2inboundpermission">List[Fleet<wbr>Ec2Inbound<wbr>Permission]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -834,7 +834,7 @@ Game session protection policy to apply to all instances in this fleet. e.g. `Fu
             <td class="align-top">resource_<wbr>creation_<wbr>limit_<wbr>policy</td>
             <td class="align-top">
                 
-                <code><a href="#fleetresourcecreationlimitpolicy">Dict[fleet_<wbr>resource_<wbr>creation_<wbr>limit_<wbr>policy]</a></code>
+                <code><a href="#fleetresourcecreationlimitpolicy">Dict[Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -849,7 +849,7 @@ Policy that limits the number of game sessions an individual player can create o
             <td class="align-top">runtime_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#fleetruntimeconfiguration">Dict[fleet_<wbr>runtime_<wbr>configuration]</a></code>
+                <code><a href="#fleetruntimeconfiguration">Dict[Fleet<wbr>Runtime<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -864,7 +864,7 @@ Instructions for launching server processes on each instance in the fleet. See b
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1594,7 +1594,7 @@ The following output properties are available:
             <td class="align-top">ec2_<wbr>inbound_<wbr>permissions</td>
             <td class="align-top">
                 
-                <code><a href="#fleetec2inboundpermission">List[fleet_<wbr>ec2_<wbr>inbound_<wbr>permission]</a></code>
+                <code><a href="#fleetec2inboundpermission">List[Fleet<wbr>Ec2Inbound<wbr>Permission]</a></code>
             </td>
             <td class="align-top">{{% md %}} Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
  {{% /md %}}
@@ -1710,7 +1710,7 @@ The following output properties are available:
             <td class="align-top">resource_<wbr>creation_<wbr>limit_<wbr>policy</td>
             <td class="align-top">
                 
-                <code><a href="#fleetresourcecreationlimitpolicy">Dict[fleet_<wbr>resource_<wbr>creation_<wbr>limit_<wbr>policy]</a></code>
+                <code><a href="#fleetresourcecreationlimitpolicy">Dict[Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
  {{% /md %}}
@@ -1723,7 +1723,7 @@ The following output properties are available:
             <td class="align-top">runtime_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#fleetruntimeconfiguration">Dict[fleet_<wbr>runtime_<wbr>configuration]</a></code>
+                <code><a href="#fleetruntimeconfiguration">Dict[Fleet<wbr>Runtime<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Instructions for launching server processes on each instance in the fleet. See below.
  {{% /md %}}
@@ -1736,7 +1736,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -2605,7 +2605,7 @@ Human-readable description of the fleet.
             <td class="align-top">ec2_<wbr>inbound_<wbr>permissions</td>
             <td class="align-top">
                 
-                <code><a href="#fleetec2inboundpermission">List[fleet_<wbr>ec2_<wbr>inbound_<wbr>permission]</a></code>
+                <code><a href="#fleetec2inboundpermission">List[Fleet<wbr>Ec2Inbound<wbr>Permission]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2739,7 +2739,7 @@ Operating system of the fleet&#39;s computing resources.
             <td class="align-top">resource_<wbr>creation_<wbr>limit_<wbr>policy</td>
             <td class="align-top">
                 
-                <code><a href="#fleetresourcecreationlimitpolicy">Dict[fleet_<wbr>resource_<wbr>creation_<wbr>limit_<wbr>policy]</a></code>
+                <code><a href="#fleetresourcecreationlimitpolicy">Dict[Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2754,7 +2754,7 @@ Policy that limits the number of game sessions an individual player can create o
             <td class="align-top">runtime_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#fleetruntimeconfiguration">Dict[fleet_<wbr>runtime_<wbr>configuration]</a></code>
+                <code><a href="#fleetruntimeconfiguration">Dict[Fleet<wbr>Runtime<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2769,7 +2769,7 @@ Instructions for launching server processes on each instance in the fleet. See b
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3084,7 +3084,7 @@ Starting value for a range of allowed port numbers.
         </tr>
     
         <tr>
-            <td class="align-top">ip_<wbr>range</td>
+            <td class="align-top">ip<wbr>Range</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3320,7 +3320,7 @@ Time span used in evaluating the resource creation limit policy.
     <tbody>
     
         <tr>
-            <td class="align-top">new_<wbr>game_<wbr>sessions_<wbr>per_<wbr>creator</td>
+            <td class="align-top">new<wbr>Game<wbr>Sessions<wbr>Per<wbr>Creator</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3335,7 +3335,7 @@ Maximum number of game sessions that an individual can create during the policy 
         </tr>
     
         <tr>
-            <td class="align-top">policy_<wbr>period_<wbr>in_<wbr>minutes</td>
+            <td class="align-top">policy<wbr>Period<wbr>In<wbr>Minutes</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3586,7 +3586,7 @@ Collection of server process configurations that describe which server processes
     <tbody>
     
         <tr>
-            <td class="align-top">game_<wbr>session_<wbr>activation_<wbr>timeout_<wbr>seconds</td>
+            <td class="align-top">game<wbr>Session<wbr>Activation<wbr>Timeout<wbr>Seconds</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3601,7 +3601,7 @@ Maximum amount of time (in seconds) that a game session can remain in status `AC
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>concurrent_<wbr>game_<wbr>session_<wbr>activations</td>
+            <td class="align-top">max<wbr>Concurrent<wbr>Game<wbr>Session<wbr>Activations</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3616,10 +3616,10 @@ Maximum number of game sessions with status `ACTIVATING` to allow on an instance
         </tr>
     
         <tr>
-            <td class="align-top">server_<wbr>processes</td>
+            <td class="align-top">server<wbr>Processes</td>
             <td class="align-top">
                 
-                <code><a href="#fleetruntimeconfigurationserverprocess">List[fleet_<wbr>runtime_<wbr>configuration_<wbr>server_<wbr>process]</a></code>
+                <code><a href="#fleetruntimeconfigurationserverprocess">List[Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3867,7 +3867,7 @@ Optional list of parameters to pass to the server executable on launch.
     <tbody>
     
         <tr>
-            <td class="align-top">concurrent_<wbr>executions</td>
+            <td class="align-top">concurrent<wbr>Executions</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3882,7 +3882,7 @@ Number of server processes using this configuration to run concurrently on an in
         </tr>
     
         <tr>
-            <td class="align-top">launch_<wbr>path</td>
+            <td class="align-top">launch<wbr>Path</td>
             <td class="align-top">
                 
                 <code>str</code>

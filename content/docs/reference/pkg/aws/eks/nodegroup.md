@@ -830,7 +830,7 @@ AMI version of the EKS Node Group. Defaults to latest version for Kubernetes ver
             <td class="align-top">remote_<wbr>access</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupremoteaccess">Dict[node_<wbr>group_<wbr>remote_<wbr>access]</a></code>
+                <code><a href="#nodegroupremoteaccess">Dict[Node<wbr>Group<wbr>Remote<wbr>Access]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -845,7 +845,7 @@ Configuration block with remote access settings. Detailed below.
             <td class="align-top">scaling_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupscalingconfig">Dict[node_<wbr>group_<wbr>scaling_<wbr>config]</a></code>
+                <code><a href="#nodegroupscalingconfig">Dict[Node<wbr>Group<wbr>Scaling<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -875,7 +875,7 @@ Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets m
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1724,7 +1724,7 @@ The following output properties are available:
             <td class="align-top">remote_<wbr>access</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupremoteaccess">Dict[node_<wbr>group_<wbr>remote_<wbr>access]</a></code>
+                <code><a href="#nodegroupremoteaccess">Dict[Node<wbr>Group<wbr>Remote<wbr>Access]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with remote access settings. Detailed below.
  {{% /md %}}
@@ -1737,7 +1737,7 @@ The following output properties are available:
             <td class="align-top">resources</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupresource">List[node_<wbr>group_<wbr>resource]</a></code>
+                <code><a href="#nodegroupresource">List[Node<wbr>Group<wbr>Resource]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of objects containing information about underlying resources.
  {{% /md %}}
@@ -1750,7 +1750,7 @@ The following output properties are available:
             <td class="align-top">scaling_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupscalingconfig">Dict[node_<wbr>group_<wbr>scaling_<wbr>config]</a></code>
+                <code><a href="#nodegroupscalingconfig">Dict[Node<wbr>Group<wbr>Scaling<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with scaling settings. Detailed below.
  {{% /md %}}
@@ -1789,7 +1789,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags.
  {{% /md %}}
@@ -2793,7 +2793,7 @@ AMI version of the EKS Node Group. Defaults to latest version for Kubernetes ver
             <td class="align-top">remote_<wbr>access</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupremoteaccess">Dict[node_<wbr>group_<wbr>remote_<wbr>access]</a></code>
+                <code><a href="#nodegroupremoteaccess">Dict[Node<wbr>Group<wbr>Remote<wbr>Access]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2808,7 +2808,7 @@ Configuration block with remote access settings. Detailed below.
             <td class="align-top">resources</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupresource">List[node_<wbr>group_<wbr>resource]</a></code>
+                <code><a href="#nodegroupresource">List[Node<wbr>Group<wbr>Resource]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2823,7 +2823,7 @@ List of objects containing information about underlying resources.
             <td class="align-top">scaling_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupscalingconfig">Dict[node_<wbr>group_<wbr>scaling_<wbr>config]</a></code>
+                <code><a href="#nodegroupscalingconfig">Dict[Node<wbr>Group<wbr>Scaling<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2868,7 +2868,7 @@ Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets m
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3092,7 +3092,7 @@ Set of EC2 Security Group IDs to allow SSH access (port 22) from on the worker n
     <tbody>
     
         <tr>
-            <td class="align-top">ec2_<wbr>ssh_<wbr>key</td>
+            <td class="align-top">ec2Ssh<wbr>Key</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3107,7 +3107,7 @@ EC2 Key Pair name that provides access for SSH communication with the worker nod
         </tr>
     
         <tr>
-            <td class="align-top">source_<wbr>security_<wbr>group_<wbr>ids</td>
+            <td class="align-top">source<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -3316,7 +3316,7 @@ Identifier of the remote access EC2 Security Group.
             <td class="align-top">autoscaling_<wbr>groups</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupresourceautoscalinggroup">List[node_<wbr>group_<wbr>resource_<wbr>autoscaling_<wbr>group]</a></code>
+                <code><a href="#nodegroupresourceautoscalinggroup">List[Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3328,7 +3328,7 @@ List of objects containing information about AutoScaling Groups.
         </tr>
     
         <tr>
-            <td class="align-top">remote_<wbr>access_<wbr>security_<wbr>group_<wbr>id</td>
+            <td class="align-top">remote<wbr>Access<wbr>Security<wbr>Group<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3740,7 +3740,7 @@ Minimum number of worker nodes.
     <tbody>
     
         <tr>
-            <td class="align-top">desired_<wbr>size</td>
+            <td class="align-top">desired<wbr>Size</td>
             <td class="align-top">
                 
                 <code>float</code>

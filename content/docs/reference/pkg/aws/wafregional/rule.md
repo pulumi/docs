@@ -384,7 +384,7 @@ The name or description of the rule.
             <td class="align-top">predicates</td>
             <td class="align-top">
                 
-                <code><a href="#rulepredicate">List[rule_<wbr>predicate]</a></code>
+                <code><a href="#rulepredicate">List[Rule<wbr>Predicate]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -399,7 +399,7 @@ The objects to include in a rule (documented below).
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -742,7 +742,7 @@ The following output properties are available:
             <td class="align-top">predicates</td>
             <td class="align-top">
                 
-                <code><a href="#rulepredicate">List[rule_<wbr>predicate]</a></code>
+                <code><a href="#rulepredicate">List[Rule<wbr>Predicate]</a></code>
             </td>
             <td class="align-top">{{% md %}} The objects to include in a rule (documented below).
  {{% /md %}}
@@ -755,7 +755,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1177,7 +1177,7 @@ The name or description of the rule.
             <td class="align-top">predicates</td>
             <td class="align-top">
                 
-                <code><a href="#rulepredicate">List[rule_<wbr>predicate]</a></code>
+                <code><a href="#rulepredicate">List[Rule<wbr>Predicate]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1192,7 +1192,7 @@ The objects to include in a rule (documented below).
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1438,7 +1438,7 @@ Key-value mapping of resource tags
     <tbody>
     
         <tr>
-            <td class="align-top">data_<wbr>id</td>
+            <td class="align-top">data<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>

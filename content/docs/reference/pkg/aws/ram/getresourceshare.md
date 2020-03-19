@@ -321,7 +321,7 @@ The owner of the resource share. Valid values are SELF or OTHER-ACCOUNTS
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getresourcesharefilter">List[get_<wbr>resource_<wbr>share_<wbr>filter]</a></code>
+                <code><a href="#getresourcesharefilter">List[Get<wbr>Resource<wbr>Share<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -366,7 +366,7 @@ The owner of the resource share. Valid values are SELF or OTHER-ACCOUNTS
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -752,7 +752,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getresourcesharefilter">List[get_<wbr>resource_<wbr>share_<wbr>filter]</a></code>
+                <code><a href="#getresourcesharefilter">List[Get<wbr>Resource<wbr>Share<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -814,7 +814,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} The Tags attached to the RAM share
  {{% /md %}}

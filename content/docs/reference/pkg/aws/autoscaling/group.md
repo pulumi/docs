@@ -1830,7 +1830,7 @@ Capacity below.)
             <td class="align-top">enabled_<wbr>metrics</td>
             <td class="align-top">
                 
-                <code>List[metric]</code>
+                <code>List[Metric]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1899,7 +1899,7 @@ Time (in seconds) after instance comes into service before checking health.
             <td class="align-top">initial_<wbr>lifecycle_<wbr>hooks</td>
             <td class="align-top">
                 
-                <code><a href="#groupinitiallifecyclehook">List[group_<wbr>initial_<wbr>lifecycle_<wbr>hook]</a></code>
+                <code><a href="#groupinitiallifecyclehook">List[Group<wbr>Initial<wbr>Lifecycle<wbr>Hook]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1935,7 +1935,7 @@ The name of the launch configuration to use.
             <td class="align-top">launch_<wbr>template</td>
             <td class="align-top">
                 
-                <code><a href="#grouplaunchtemplate">Dict[group_<wbr>launch_<wbr>template]</a></code>
+                <code><a href="#grouplaunchtemplate">Dict[Group<wbr>Launch<wbr>Template]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2045,7 +2045,7 @@ The minimum size of the auto scale group.
             <td class="align-top">mixed_<wbr>instances_<wbr>policy</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicy">Dict[group_<wbr>mixed_<wbr>instances_<wbr>policy]</a></code>
+                <code><a href="#groupmixedinstancespolicy">Dict[Group<wbr>Mixed<wbr>Instances<wbr>Policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2154,7 +2154,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code><a href="#grouptag">List[group_<wbr>tag]</a></code>
+                <code><a href="#grouptag">List[Group<wbr>Tag]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2169,7 +2169,7 @@ A list of tag blocks. Tags documented below.
             <td class="align-top">tags_<wbr>collection</td>
             <td class="align-top">
                 
-                <code>List[any>]</code>
+                <code>List[Any>]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3706,7 +3706,7 @@ Capacity below.)
             <td class="align-top">enabled_<wbr>metrics</td>
             <td class="align-top">
                 
-                <code>List[metric]</code>
+                <code>List[Metric]</code>
             </td>
             <td class="align-top">{{% md %}} A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
 * `wait_for_capacity_timeout` (Default: &#34;10m&#34;) A maximum
@@ -3767,7 +3767,7 @@ behavior and potentially leaves resources dangling.
             <td class="align-top">initial_<wbr>lifecycle_<wbr>hooks</td>
             <td class="align-top">
                 
-                <code><a href="#groupinitiallifecyclehook">List[group_<wbr>initial_<wbr>lifecycle_<wbr>hook]</a></code>
+                <code><a href="#groupinitiallifecyclehook">List[Group<wbr>Initial<wbr>Lifecycle<wbr>Hook]</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
@@ -3799,7 +3799,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
             <td class="align-top">launch_<wbr>template</td>
             <td class="align-top">
                 
-                <code><a href="#grouplaunchtemplate">Dict[group_<wbr>launch_<wbr>template]</a></code>
+                <code><a href="#grouplaunchtemplate">Dict[Group<wbr>Launch<wbr>Template]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
  {{% /md %}}
@@ -3895,7 +3895,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
             <td class="align-top">mixed_<wbr>instances_<wbr>policy</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicy">Dict[group_<wbr>mixed_<wbr>instances_<wbr>policy]</a></code>
+                <code><a href="#groupmixedinstancespolicy">Dict[Group<wbr>Mixed<wbr>Instances<wbr>Policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
  {{% /md %}}
@@ -3990,7 +3990,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code><a href="#grouptag">List[group_<wbr>tag]</a></code>
+                <code><a href="#grouptag">List[Group<wbr>Tag]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of tag blocks. Tags documented below.
  {{% /md %}}
@@ -4003,7 +4003,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">tags_<wbr>collection</td>
             <td class="align-top">
                 
-                <code>List[any>]</code>
+                <code>List[Any>]</code>
             </td>
             <td class="align-top">{{% md %}} A list of tag blocks (maps). Tags documented below.
  {{% /md %}}
@@ -5767,7 +5767,7 @@ Capacity below.)
             <td class="align-top">enabled_<wbr>metrics</td>
             <td class="align-top">
                 
-                <code>List[metric]</code>
+                <code>List[Metric]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5836,7 +5836,7 @@ Time (in seconds) after instance comes into service before checking health.
             <td class="align-top">initial_<wbr>lifecycle_<wbr>hooks</td>
             <td class="align-top">
                 
-                <code><a href="#groupinitiallifecyclehook">List[group_<wbr>initial_<wbr>lifecycle_<wbr>hook]</a></code>
+                <code><a href="#groupinitiallifecyclehook">List[Group<wbr>Initial<wbr>Lifecycle<wbr>Hook]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5872,7 +5872,7 @@ The name of the launch configuration to use.
             <td class="align-top">launch_<wbr>template</td>
             <td class="align-top">
                 
-                <code><a href="#grouplaunchtemplate">Dict[group_<wbr>launch_<wbr>template]</a></code>
+                <code><a href="#grouplaunchtemplate">Dict[Group<wbr>Launch<wbr>Template]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5982,7 +5982,7 @@ The minimum size of the auto scale group.
             <td class="align-top">mixed_<wbr>instances_<wbr>policy</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicy">Dict[group_<wbr>mixed_<wbr>instances_<wbr>policy]</a></code>
+                <code><a href="#groupmixedinstancespolicy">Dict[Group<wbr>Mixed<wbr>Instances<wbr>Policy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6091,7 +6091,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code><a href="#grouptag">List[group_<wbr>tag]</a></code>
+                <code><a href="#grouptag">List[Group<wbr>Tag]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6106,7 +6106,7 @@ A list of tag blocks. Tags documented below.
             <td class="align-top">tags_<wbr>collection</td>
             <td class="align-top">
                 
-                <code>List[any>]</code>
+                <code>List[Any>]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7172,10 +7172,10 @@ Nested argument containing launch template settings along with the overrides to 
     <tbody>
     
         <tr>
-            <td class="align-top">instances_<wbr>distribution</td>
+            <td class="align-top">instances<wbr>Distribution</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicyinstancesdistribution">Dict[group_<wbr>mixed_<wbr>instances_<wbr>policy_<wbr>instances_<wbr>distribution]</a></code>
+                <code><a href="#groupmixedinstancespolicyinstancesdistribution">Dict[Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7190,7 +7190,7 @@ Nested argument containing settings on how to mix on-demand and Spot instances i
             <td class="align-top">launch_<wbr>template</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicylaunchtemplate">Dict[group_<wbr>mixed_<wbr>instances_<wbr>policy_<wbr>launch_<wbr>template]</a></code>
+                <code><a href="#groupmixedinstancespolicylaunchtemplate">Dict[Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7573,7 +7573,7 @@ Maximum price per unit hour that the user is willing to pay for the Spot instanc
     <tbody>
     
         <tr>
-            <td class="align-top">on_<wbr>demand_<wbr>allocation_<wbr>strategy</td>
+            <td class="align-top">on<wbr>Demand<wbr>Allocation<wbr>Strategy</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7588,7 +7588,7 @@ Strategy to use when launching on-demand instances. Valid values: `prioritized`.
         </tr>
     
         <tr>
-            <td class="align-top">on_<wbr>demand_<wbr>base_<wbr>capacity</td>
+            <td class="align-top">on<wbr>Demand<wbr>Base<wbr>Capacity</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -7603,7 +7603,7 @@ Absolute minimum amount of desired capacity that must be fulfilled by on-demand 
         </tr>
     
         <tr>
-            <td class="align-top">on_<wbr>demand_<wbr>percentage_<wbr>above_<wbr>base_<wbr>capacity</td>
+            <td class="align-top">on<wbr>Demand<wbr>Percentage<wbr>Above<wbr>Base<wbr>Capacity</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -7618,7 +7618,7 @@ Percentage split between on-demand and Spot instances above the base on-demand c
         </tr>
     
         <tr>
-            <td class="align-top">spot_<wbr>allocation_<wbr>strategy</td>
+            <td class="align-top">spot<wbr>Allocation<wbr>Strategy</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7633,7 +7633,7 @@ How to allocate capacity across the Spot pools. Valid values: `lowest-price`, `c
         </tr>
     
         <tr>
-            <td class="align-top">spot_<wbr>instance_<wbr>pools</td>
+            <td class="align-top">spot<wbr>Instance<wbr>Pools</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -7648,7 +7648,7 @@ Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scalin
         </tr>
     
         <tr>
-            <td class="align-top">spot_<wbr>max_<wbr>price</td>
+            <td class="align-top">spot<wbr>Max<wbr>Price</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7854,10 +7854,10 @@ List of nested arguments provides the ability to specify multiple instance types
     <tbody>
     
         <tr>
-            <td class="align-top">launch_<wbr>template_<wbr>specification</td>
+            <td class="align-top">launch<wbr>Template<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Dict[group_<wbr>mixed_<wbr>instances_<wbr>policy_<wbr>launch_<wbr>template_<wbr>launch_<wbr>template_<wbr>specification]</a></code>
+                <code><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Dict[Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7872,7 +7872,7 @@ Nested argument defines the Launch Template. Defined below.
             <td class="align-top">overrides</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicylaunchtemplateoverride">List[group_<wbr>mixed_<wbr>instances_<wbr>policy_<wbr>launch_<wbr>template_<wbr>override]</a></code>
+                <code><a href="#groupmixedinstancespolicylaunchtemplateoverride">List[Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8120,7 +8120,7 @@ Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$D
     <tbody>
     
         <tr>
-            <td class="align-top">launch_<wbr>template_<wbr>id</td>
+            <td class="align-top">launch<wbr>Template<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8135,7 +8135,7 @@ The ID of the launch template. Conflicts with `launch_template_name`.
         </tr>
     
         <tr>
-            <td class="align-top">launch_<wbr>template_<wbr>name</td>
+            <td class="align-top">launch<wbr>Template<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8371,7 +8371,7 @@ Override the instance type in the Launch Template.
         </tr>
     
         <tr>
-            <td class="align-top">weighted_<wbr>capacity</td>
+            <td class="align-top">weighted<wbr>Capacity</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -8640,7 +8640,7 @@ Key
         </tr>
     
         <tr>
-            <td class="align-top">propagate_<wbr>at_<wbr>launch</td>
+            <td class="align-top">propagate<wbr>At<wbr>Launch</td>
             <td class="align-top">
                 
                 <code>bool</code>

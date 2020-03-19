@@ -558,7 +558,7 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
             <td class="align-top">default_<wbr>actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultaction">List[listener_<wbr>default_<wbr>action]</a></code>
+                <code><a href="#listenerdefaultaction">List[Listener<wbr>Default<wbr>Action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1026,7 +1026,7 @@ The following output properties are available:
             <td class="align-top">default_<wbr>actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultaction">List[listener_<wbr>default_<wbr>action]</a></code>
+                <code><a href="#listenerdefaultaction">List[Listener<wbr>Default<wbr>Action]</a></code>
             </td>
             <td class="align-top">{{% md %}} An Action block. Action blocks are documented below.
  {{% /md %}}
@@ -1575,7 +1575,7 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
             <td class="align-top">default_<wbr>actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultaction">List[listener_<wbr>default_<wbr>action]</a></code>
+                <code><a href="#listenerdefaultaction">List[Listener<wbr>Default<wbr>Action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2061,10 +2061,10 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
     <tbody>
     
         <tr>
-            <td class="align-top">authenticate_<wbr>cognito</td>
+            <td class="align-top">authenticate<wbr>Cognito</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionauthenticatecognito">Dict[listener_<wbr>default_<wbr>action_<wbr>authenticate_<wbr>cognito]</a></code>
+                <code><a href="#listenerdefaultactionauthenticatecognito">Dict[Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2075,10 +2075,10 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
         </tr>
     
         <tr>
-            <td class="align-top">authenticate_<wbr>oidc</td>
+            <td class="align-top">authenticate<wbr>Oidc</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionauthenticateoidc">Dict[listener_<wbr>default_<wbr>action_<wbr>authenticate_<wbr>oidc]</a></code>
+                <code><a href="#listenerdefaultactionauthenticateoidc">Dict[Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2089,10 +2089,10 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
         </tr>
     
         <tr>
-            <td class="align-top">fixed_<wbr>response</td>
+            <td class="align-top">fixed<wbr>Response</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionfixedresponse">Dict[listener_<wbr>default_<wbr>action_<wbr>fixed_<wbr>response]</a></code>
+                <code><a href="#listenerdefaultactionfixedresponse">Dict[Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2121,7 +2121,7 @@ Information for creating an action that returns a custom HTTP response. Required
             <td class="align-top">redirect</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionredirect">Dict[listener_<wbr>default_<wbr>action_<wbr>redirect]</a></code>
+                <code><a href="#listenerdefaultactionredirect">Dict[Listener<wbr>Default<wbr>Action<wbr>Redirect]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2624,10 +2624,10 @@ The domain prefix or fully-qualified domain name of the Cognito user pool.
     <tbody>
     
         <tr>
-            <td class="align-top">authentication_<wbr>request_<wbr>extra_<wbr>params</td>
+            <td class="align-top">authentication<wbr>Request<wbr>Extra<wbr>Params</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2639,7 +2639,7 @@ The query parameters to include in the redirect request to the authorization end
         </tr>
     
         <tr>
-            <td class="align-top">on_<wbr>unauthenticated_<wbr>request</td>
+            <td class="align-top">on<wbr>Unauthenticated<wbr>Request</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2669,7 +2669,7 @@ The set of user claims to be requested from the IdP.
         </tr>
     
         <tr>
-            <td class="align-top">session_<wbr>cookie_<wbr>name</td>
+            <td class="align-top">session<wbr>Cookie<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2684,7 +2684,7 @@ The name of the cookie used to maintain session information.
         </tr>
     
         <tr>
-            <td class="align-top">session_<wbr>timeout</td>
+            <td class="align-top">session<wbr>Timeout</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2699,7 +2699,7 @@ The maximum duration of the authentication session, in seconds.
         </tr>
     
         <tr>
-            <td class="align-top">user_<wbr>pool_<wbr>arn</td>
+            <td class="align-top">user<wbr>Pool<wbr>Arn</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2714,7 +2714,7 @@ The ARN of the Cognito user pool.
         </tr>
     
         <tr>
-            <td class="align-top">user_<wbr>pool_<wbr>client_<wbr>id</td>
+            <td class="align-top">user<wbr>Pool<wbr>Client<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2729,7 +2729,7 @@ The ID of the Cognito user pool client.
         </tr>
     
         <tr>
-            <td class="align-top">user_<wbr>pool_<wbr>domain</td>
+            <td class="align-top">user<wbr>Pool<wbr>Domain</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3340,10 +3340,10 @@ The user info endpoint of the IdP.
     <tbody>
     
         <tr>
-            <td class="align-top">authentication_<wbr>request_<wbr>extra_<wbr>params</td>
+            <td class="align-top">authentication<wbr>Request<wbr>Extra<wbr>Params</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3355,7 +3355,7 @@ The query parameters to include in the redirect request to the authorization end
         </tr>
     
         <tr>
-            <td class="align-top">authorization_<wbr>endpoint</td>
+            <td class="align-top">authorization<wbr>Endpoint</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3415,7 +3415,7 @@ The OIDC issuer identifier of the IdP.
         </tr>
     
         <tr>
-            <td class="align-top">on_<wbr>unauthenticated_<wbr>request</td>
+            <td class="align-top">on<wbr>Unauthenticated<wbr>Request</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3445,7 +3445,7 @@ The set of user claims to be requested from the IdP.
         </tr>
     
         <tr>
-            <td class="align-top">session_<wbr>cookie_<wbr>name</td>
+            <td class="align-top">session<wbr>Cookie<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3460,7 +3460,7 @@ The name of the cookie used to maintain session information.
         </tr>
     
         <tr>
-            <td class="align-top">session_<wbr>timeout</td>
+            <td class="align-top">session<wbr>Timeout</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3475,7 +3475,7 @@ The maximum duration of the authentication session, in seconds.
         </tr>
     
         <tr>
-            <td class="align-top">token_<wbr>endpoint</td>
+            <td class="align-top">token<wbr>Endpoint</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3490,7 +3490,7 @@ The token endpoint of the IdP.
         </tr>
     
         <tr>
-            <td class="align-top">user_<wbr>info_<wbr>endpoint</td>
+            <td class="align-top">user<wbr>Info<wbr>Endpoint</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3756,7 +3756,7 @@ The content type. Valid values are `text/plain`, `text/css`, `text/html`, `appli
         </tr>
     
         <tr>
-            <td class="align-top">message_<wbr>body</td>
+            <td class="align-top">message<wbr>Body</td>
             <td class="align-top">
                 
                 <code>str</code>

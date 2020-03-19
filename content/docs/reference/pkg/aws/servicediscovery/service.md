@@ -478,7 +478,7 @@ The description of the service.
             <td class="align-top">dns_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#servicednsconfig">Dict[service_<wbr>dns_<wbr>config]</a></code>
+                <code><a href="#servicednsconfig">Dict[Service<wbr>Dns<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -493,7 +493,7 @@ A complex type that contains information about the resource record sets that you
             <td class="align-top">health_<wbr>check_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckconfig">Dict[service_<wbr>health_<wbr>check_<wbr>config]</a></code>
+                <code><a href="#servicehealthcheckconfig">Dict[Service<wbr>Health<wbr>Check<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -508,7 +508,7 @@ A complex type that contains settings for an optional health check. Only for Pub
             <td class="align-top">health_<wbr>check_<wbr>custom_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckcustomconfig">Dict[service_<wbr>health_<wbr>check_<wbr>custom_<wbr>config]</a></code>
+                <code><a href="#servicehealthcheckcustomconfig">Dict[Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -946,7 +946,7 @@ The following output properties are available:
             <td class="align-top">dns_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#servicednsconfig">Dict[service_<wbr>dns_<wbr>config]</a></code>
+                <code><a href="#servicednsconfig">Dict[Service<wbr>Dns<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
  {{% /md %}}
@@ -959,7 +959,7 @@ The following output properties are available:
             <td class="align-top">health_<wbr>check_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckconfig">Dict[service_<wbr>health_<wbr>check_<wbr>config]</a></code>
+                <code><a href="#servicehealthcheckconfig">Dict[Service<wbr>Health<wbr>Check<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
  {{% /md %}}
@@ -972,7 +972,7 @@ The following output properties are available:
             <td class="align-top">health_<wbr>check_<wbr>custom_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckcustomconfig">Dict[service_<wbr>health_<wbr>check_<wbr>custom_<wbr>config]</a></code>
+                <code><a href="#servicehealthcheckcustomconfig">Dict[Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} A complex type that contains settings for ECS managed health checks.
  {{% /md %}}
@@ -1495,7 +1495,7 @@ The description of the service.
             <td class="align-top">dns_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#servicednsconfig">Dict[service_<wbr>dns_<wbr>config]</a></code>
+                <code><a href="#servicednsconfig">Dict[Service<wbr>Dns<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1510,7 +1510,7 @@ A complex type that contains information about the resource record sets that you
             <td class="align-top">health_<wbr>check_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckconfig">Dict[service_<wbr>health_<wbr>check_<wbr>config]</a></code>
+                <code><a href="#servicehealthcheckconfig">Dict[Service<wbr>Health<wbr>Check<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1525,7 +1525,7 @@ A complex type that contains settings for an optional health check. Only for Pub
             <td class="align-top">health_<wbr>check_<wbr>custom_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckcustomconfig">Dict[service_<wbr>health_<wbr>check_<wbr>custom_<wbr>config]</a></code>
+                <code><a href="#servicehealthcheckcustomconfig">Dict[Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1810,10 +1810,10 @@ The routing policy that you want to apply to all records that Route 53 creates w
     <tbody>
     
         <tr>
-            <td class="align-top">dns_<wbr>records</td>
+            <td class="align-top">dns<wbr>Records</td>
             <td class="align-top">
                 
-                <code><a href="#servicednsconfigdnsrecord">List[service_<wbr>dns_<wbr>config_<wbr>dns_<wbr>record]</a></code>
+                <code><a href="#servicednsconfigdnsrecord">List[Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1840,7 +1840,7 @@ The ID of the namespace to use for DNS configuration.
         </tr>
     
         <tr>
-            <td class="align-top">routing_<wbr>policy</td>
+            <td class="align-top">routing<wbr>Policy</td>
             <td class="align-top">
                 
                 <code>str</code>

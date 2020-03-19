@@ -976,7 +976,7 @@ Setting this to `false` will pause logging.
             <td class="align-top">event_<wbr>selectors</td>
             <td class="align-top">
                 
-                <code><a href="#traileventselector">List[trail_<wbr>event_<wbr>selector]</a></code>
+                <code><a href="#traileventselector">List[Trail<wbr>Event<wbr>Selector]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1115,7 +1115,7 @@ defined for notification of log file delivery.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1941,7 +1941,7 @@ Setting this to `false` will pause logging.
             <td class="align-top">event_<wbr>selectors</td>
             <td class="align-top">
                 
-                <code><a href="#traileventselector">List[trail_<wbr>event_<wbr>selector]</a></code>
+                <code><a href="#traileventselector">List[Trail<wbr>Event<wbr>Selector]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
  {{% /md %}}
@@ -2075,7 +2075,7 @@ defined for notification of log file delivery.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the trail
  {{% /md %}}
@@ -3050,7 +3050,7 @@ Setting this to `false` will pause logging.
             <td class="align-top">event_<wbr>selectors</td>
             <td class="align-top">
                 
-                <code><a href="#traileventselector">List[trail_<wbr>event_<wbr>selector]</a></code>
+                <code><a href="#traileventselector">List[Trail<wbr>Event<wbr>Selector]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3204,7 +3204,7 @@ defined for notification of log file delivery.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3459,10 +3459,10 @@ Specify if you want your trail to log read-only events, write-only events, or al
     <tbody>
     
         <tr>
-            <td class="align-top">data_<wbr>resources</td>
+            <td class="align-top">data<wbr>Resources</td>
             <td class="align-top">
                 
-                <code><a href="#traileventselectordataresource">List[trail_<wbr>event_<wbr>selector_<wbr>data_<wbr>resource]</a></code>
+                <code><a href="#traileventselectordataresource">List[Trail<wbr>Event<wbr>Selector<wbr>Data<wbr>Resource]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3474,7 +3474,7 @@ Specifies logging data events. Fields documented below.
         </tr>
     
         <tr>
-            <td class="align-top">include_<wbr>management_<wbr>events</td>
+            <td class="align-top">include<wbr>Management<wbr>Events</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -3489,7 +3489,7 @@ Specify if you want your event selector to include management events for your tr
         </tr>
     
         <tr>
-            <td class="align-top">read_<wbr>write_<wbr>type</td>
+            <td class="align-top">read<wbr>Write<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>

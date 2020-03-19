@@ -428,7 +428,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclegress">List[default_<wbr>network_<wbr>acl_<wbr>egress]</a></code>
+                <code><a href="#defaultnetworkaclegress">List[Default<wbr>Network<wbr>Acl<wbr>Egress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -443,7 +443,7 @@ Specifies an egress rule. Parameters defined below.
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclingress">List[default_<wbr>network_<wbr>acl_<wbr>ingress]</a></code>
+                <code><a href="#defaultnetworkaclingress">List[Default<wbr>Network<wbr>Acl<wbr>Ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -474,7 +474,7 @@ notes below on managing Subnets in the Default Network ACL
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -876,7 +876,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclegress">List[default_<wbr>network_<wbr>acl_<wbr>egress]</a></code>
+                <code><a href="#defaultnetworkaclegress">List[Default<wbr>Network<wbr>Acl<wbr>Egress]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an egress rule. Parameters defined below.
  {{% /md %}}
@@ -889,7 +889,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclingress">List[default_<wbr>network_<wbr>acl_<wbr>ingress]</a></code>
+                <code><a href="#defaultnetworkaclingress">List[Default<wbr>Network<wbr>Acl<wbr>Ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an ingress rule. Parameters defined below.
  {{% /md %}}
@@ -929,7 +929,7 @@ notes below on managing Subnets in the Default Network ACL
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1431,7 +1431,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclegress">List[default_<wbr>network_<wbr>acl_<wbr>egress]</a></code>
+                <code><a href="#defaultnetworkaclegress">List[Default<wbr>Network<wbr>Acl<wbr>Egress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1446,7 +1446,7 @@ Specifies an egress rule. Parameters defined below.
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclingress">List[default_<wbr>network_<wbr>acl_<wbr>ingress]</a></code>
+                <code><a href="#defaultnetworkaclingress">List[Default<wbr>Network<wbr>Acl<wbr>Ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1492,7 +1492,7 @@ notes below on managing Subnets in the Default Network ACL
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2145,7 +2145,7 @@ protocol, you must specify a from and to port of 0.
         </tr>
     
         <tr>
-            <td class="align-top">rule_<wbr>no</td>
+            <td class="align-top">rule<wbr>No</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2794,7 +2794,7 @@ protocol, you must specify a from and to port of 0.
         </tr>
     
         <tr>
-            <td class="align-top">rule_<wbr>no</td>
+            <td class="align-top">rule<wbr>No</td>
             <td class="align-top">
                 
                 <code>float</code>

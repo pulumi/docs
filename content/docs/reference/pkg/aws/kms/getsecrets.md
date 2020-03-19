@@ -161,7 +161,7 @@ One or more encrypted payload definitions from the KMS service. See the Secret D
             <td class="align-top">secrets</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretssecret">List[get_<wbr>secrets_<wbr>secret]</a></code>
+                <code><a href="#getsecretssecret">List[Get<wbr>Secrets<wbr>Secret]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -411,7 +411,7 @@ The following output properties are available:
             <td class="align-top">secrets</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretssecret">List[get_<wbr>secrets_<wbr>secret]</a></code>
+                <code><a href="#getsecretssecret">List[Get<wbr>Secrets<wbr>Secret]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -721,7 +721,7 @@ An optional mapping that makes up the Encryption Context for the secret.
         </tr>
     
         <tr>
-            <td class="align-top">grant_<wbr>tokens</td>
+            <td class="align-top">grant<wbr>Tokens</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

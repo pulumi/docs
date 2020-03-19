@@ -369,7 +369,7 @@ The IP address of the gateway&#39;s Internet-routable external interface.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -679,7 +679,7 @@ supports at this time is &#34;ipsec.1&#34;.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Tags to apply to the gateway.
  {{% /md %}}
@@ -1058,7 +1058,7 @@ The IP address of the gateway&#39;s Internet-routable external interface.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -248,7 +248,7 @@ desired security groups.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsecuritygroupsfilter">List[get_<wbr>security_<wbr>groups_<wbr>filter]</a></code>
+                <code><a href="#getsecuritygroupsfilter">List[Get<wbr>Security<wbr>Groups<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -265,7 +265,7 @@ several valid keys, for a full reference, check out
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -568,7 +568,7 @@ unless the `vpc-id` filter is also used.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsecuritygroupsfilter">List[get_<wbr>security_<wbr>groups_<wbr>filter]</a></code>
+                <code><a href="#getsecuritygroupsfilter">List[Get<wbr>Security<wbr>Groups<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -606,7 +606,7 @@ unless the `vpc-id` filter is also used.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

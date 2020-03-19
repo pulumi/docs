@@ -853,7 +853,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">access_<wbr>logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">Dict[load_<wbr>balancer_<wbr>access_<wbr>logs]</a></code>
+                <code><a href="#loadbalanceraccesslogs">Dict[Load<wbr>Balancer<wbr>Access<wbr>Logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1022,7 +1022,7 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
             <td class="align-top">subnet_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancersubnetmapping">List[load_<wbr>balancer_<wbr>subnet_<wbr>mapping]</a></code>
+                <code><a href="#loadbalancersubnetmapping">List[Load<wbr>Balancer<wbr>Subnet<wbr>Mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1054,7 +1054,7 @@ for load balancers of type `network` will force a recreation of the resource.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1919,7 +1919,7 @@ for load balancers of type `network` will force a recreation of the resource.
             <td class="align-top">access_<wbr>logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">Dict[load_<wbr>balancer_<wbr>access_<wbr>logs]</a></code>
+                <code><a href="#loadbalanceraccesslogs">Dict[Load<wbr>Balancer<wbr>Access<wbr>Logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} An Access Logs block. Access Logs documented below.
  {{% /md %}}
@@ -2105,7 +2105,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
             <td class="align-top">subnet_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancersubnetmapping">List[load_<wbr>balancer_<wbr>subnet_<wbr>mapping]</a></code>
+                <code><a href="#loadbalancersubnetmapping">List[Load<wbr>Balancer<wbr>Subnet<wbr>Mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} A subnet mapping block as documented below.
  {{% /md %}}
@@ -2133,7 +2133,7 @@ for load balancers of type `network` will force a recreation of the resource.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -3180,7 +3180,7 @@ The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alia
             <td class="align-top">access_<wbr>logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">Dict[load_<wbr>balancer_<wbr>access_<wbr>logs]</a></code>
+                <code><a href="#loadbalanceraccesslogs">Dict[Load<wbr>Balancer<wbr>Access<wbr>Logs]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3394,7 +3394,7 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
             <td class="align-top">subnet_<wbr>mappings</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancersubnetmapping">List[load_<wbr>balancer_<wbr>subnet_<wbr>mapping]</a></code>
+                <code><a href="#loadbalancersubnetmapping">List[Load<wbr>Balancer<wbr>Subnet<wbr>Mapping]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3426,7 +3426,7 @@ for load balancers of type `network` will force a recreation of the resource.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

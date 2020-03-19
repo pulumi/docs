@@ -379,7 +379,7 @@ A name for the resource server.
             <td class="align-top">scopes</td>
             <td class="align-top">
                 
-                <code><a href="#resourceserverscope">List[resource_<wbr>server_<wbr>scope]</a></code>
+                <code><a href="#resourceserverscope">List[Resource<wbr>Server<wbr>Scope]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -733,7 +733,7 @@ The following output properties are available:
             <td class="align-top">scopes</td>
             <td class="align-top">
                 
-                <code><a href="#resourceserverscope">List[resource_<wbr>server_<wbr>scope]</a></code>
+                <code><a href="#resourceserverscope">List[Resource<wbr>Server<wbr>Scope]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of Authorization Scope.
  {{% /md %}}
@@ -1164,7 +1164,7 @@ A list of all scopes configured for this resource server in the format identifie
             <td class="align-top">scopes</td>
             <td class="align-top">
                 
-                <code><a href="#resourceserverscope">List[resource_<wbr>server_<wbr>scope]</a></code>
+                <code><a href="#resourceserverscope">List[Resource<wbr>Server<wbr>Scope]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1388,7 +1388,7 @@ The scope name.
     <tbody>
     
         <tr>
-            <td class="align-top">scope_<wbr>description</td>
+            <td class="align-top">scope<wbr>Description</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1403,7 +1403,7 @@ The scope description.
         </tr>
     
         <tr>
-            <td class="align-top">scope_<wbr>name</td>
+            <td class="align-top">scope<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -584,7 +584,7 @@ The following output properties are available:
             <td class="align-top">accounts</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationaccount">List[get_<wbr>organization_<wbr>account]</a></code>
+                <code><a href="#getorganizationaccount">List[Get<wbr>Organization<wbr>Account]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
  {{% /md %}}
@@ -701,7 +701,7 @@ The following output properties are available:
             <td class="align-top">non_<wbr>master_<wbr>accounts</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationnonmasteraccount">List[get_<wbr>organization_<wbr>non_<wbr>master_<wbr>account]</a></code>
+                <code><a href="#getorganizationnonmasteraccount">List[Get<wbr>Organization<wbr>Non<wbr>Master<wbr>Account]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
  {{% /md %}}
@@ -714,7 +714,7 @@ The following output properties are available:
             <td class="align-top">roots</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationroot">List[get_<wbr>organization_<wbr>root]</a></code>
+                <code><a href="#getorganizationroot">List[Get<wbr>Organization<wbr>Root]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization roots. All elements have these attributes:
  {{% /md %}}
@@ -1857,10 +1857,10 @@ The name of the policy type
         </tr>
     
         <tr>
-            <td class="align-top">policy_<wbr>types</td>
+            <td class="align-top">policy<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationrootpolicytype">List[get_<wbr>organization_<wbr>root_<wbr>policy_<wbr>type]</a></code>
+                <code><a href="#getorganizationrootpolicytype">List[Get<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

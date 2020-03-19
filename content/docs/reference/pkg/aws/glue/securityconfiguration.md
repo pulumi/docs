@@ -252,7 +252,7 @@ Name of the security configuration.
             <td class="align-top">encryption_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfiguration">Dict[security_<wbr>configuration_<wbr>encryption_<wbr>configuration]</a></code>
+                <code><a href="#securityconfigurationencryptionconfiguration">Dict[Security<wbr>Configuration<wbr>Encryption<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -454,7 +454,7 @@ The following output properties are available:
             <td class="align-top">encryption_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfiguration">Dict[security_<wbr>configuration_<wbr>encryption_<wbr>configuration]</a></code>
+                <code><a href="#securityconfigurationencryptionconfiguration">Dict[Security<wbr>Configuration<wbr>Encryption<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing encryption configuration. Detailed below.
  {{% /md %}}
@@ -709,7 +709,7 @@ Name of the security configuration.
             <td class="align-top">encryption_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfiguration">Dict[security_<wbr>configuration_<wbr>encryption_<wbr>configuration]</a></code>
+                <code><a href="#securityconfigurationencryptionconfiguration">Dict[Security<wbr>Configuration<wbr>Encryption<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -973,10 +973,10 @@ A `s3_encryption ` block as described below, which contains encryption configura
     <tbody>
     
         <tr>
-            <td class="align-top">cloudwatch_<wbr>encryption</td>
+            <td class="align-top">cloudwatch<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfigurationcloudwatchencryption">Dict[security_<wbr>configuration_<wbr>encryption_<wbr>configuration_<wbr>cloudwatch_<wbr>encryption]</a></code>
+                <code><a href="#securityconfigurationencryptionconfigurationcloudwatchencryption">Dict[Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Cloudwatch<wbr>Encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -987,10 +987,10 @@ A `s3_encryption ` block as described below, which contains encryption configura
         </tr>
     
         <tr>
-            <td class="align-top">job_<wbr>bookmarks_<wbr>encryption</td>
+            <td class="align-top">job<wbr>Bookmarks<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfigurationjobbookmarksencryption">Dict[security_<wbr>configuration_<wbr>encryption_<wbr>configuration_<wbr>job_<wbr>bookmarks_<wbr>encryption]</a></code>
+                <code><a href="#securityconfigurationencryptionconfigurationjobbookmarksencryption">Dict[Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Job<wbr>Bookmarks<wbr>Encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1001,10 +1001,10 @@ A `s3_encryption ` block as described below, which contains encryption configura
         </tr>
     
         <tr>
-            <td class="align-top">s3_<wbr>encryption</td>
+            <td class="align-top">s3Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfigurations3encryption">Dict[security_<wbr>configuration_<wbr>encryption_<wbr>configuration_<wbr>s3_<wbr>encryption]</a></code>
+                <code><a href="#securityconfigurationencryptionconfigurations3encryption">Dict[Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>S3Encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1207,7 +1207,7 @@ Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
     <tbody>
     
         <tr>
-            <td class="align-top">cloudwatch_<wbr>encryption_<wbr>mode</td>
+            <td class="align-top">cloudwatch<wbr>Encryption<wbr>Mode</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1428,7 +1428,7 @@ Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
     <tbody>
     
         <tr>
-            <td class="align-top">job_<wbr>bookmarks_<wbr>encryption_<wbr>mode</td>
+            <td class="align-top">job<wbr>Bookmarks<wbr>Encryption<wbr>Mode</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1664,7 +1664,7 @@ Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
         </tr>
     
         <tr>
-            <td class="align-top">s3_<wbr>encryption_<wbr>mode</td>
+            <td class="align-top">s3Encryption<wbr>Mode</td>
             <td class="align-top">
                 
                 <code>str</code>

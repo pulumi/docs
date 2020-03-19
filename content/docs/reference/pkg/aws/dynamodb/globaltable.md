@@ -293,7 +293,7 @@ The name of the global table. Must match underlying DynamoDB Table names in all 
             <td class="align-top">replicas</td>
             <td class="align-top">
                 
-                <code><a href="#globaltablereplica">List[global_<wbr>table_<wbr>replica]</a></code>
+                <code><a href="#globaltablereplica">List[Global<wbr>Table<wbr>Replica]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -545,7 +545,7 @@ The following output properties are available:
             <td class="align-top">replicas</td>
             <td class="align-top">
                 
-                <code><a href="#globaltablereplica">List[global_<wbr>table_<wbr>replica]</a></code>
+                <code><a href="#globaltablereplica">List[Global<wbr>Table<wbr>Replica]</a></code>
             </td>
             <td class="align-top">{{% md %}} Underlying DynamoDB Table. At least 1 replica must be defined. See below.
  {{% /md %}}
@@ -862,7 +862,7 @@ The name of the global table. Must match underlying DynamoDB Table names in all 
             <td class="align-top">replicas</td>
             <td class="align-top">
                 
-                <code><a href="#globaltablereplica">List[global_<wbr>table_<wbr>replica]</a></code>
+                <code><a href="#globaltablereplica">List[Global<wbr>Table<wbr>Replica]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1027,7 +1027,7 @@ AWS region name of replica DynamoDB Table. e.g. `us-east-1`
     <tbody>
     
         <tr>
-            <td class="align-top">region_<wbr>name</td>
+            <td class="align-top">region<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>

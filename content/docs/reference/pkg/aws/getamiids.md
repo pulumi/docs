@@ -393,7 +393,7 @@ permission on  the image. Valid items are the numeric account ID or `self`.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getamiidsfilter">List[get_<wbr>ami_<wbr>ids_<wbr>filter]</a></code>
+                <code><a href="#getamiidsfilter">List[Get<wbr>Ami<wbr>Ids<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -821,7 +821,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getamiidsfilter">List[get_<wbr>ami_<wbr>ids_<wbr>filter]</a></code>
+                <code><a href="#getamiidsfilter">List[Get<wbr>Ami<wbr>Ids<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

@@ -408,7 +408,7 @@ The ID of the associated VPC.
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclegress">List[network_<wbr>acl_<wbr>egress]</a></code>
+                <code><a href="#networkaclegress">List[Network<wbr>Acl<wbr>Egress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -424,7 +424,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclingress">List[network_<wbr>acl_<wbr>ingress]</a></code>
+                <code><a href="#networkaclingress">List[Network<wbr>Acl<wbr>Ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -455,7 +455,7 @@ A list of Subnet IDs to apply the ACL to
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -819,7 +819,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclegress">List[network_<wbr>acl_<wbr>egress]</a></code>
+                <code><a href="#networkaclegress">List[Network<wbr>Acl<wbr>Egress]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an egress rule. Parameters defined below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -833,7 +833,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclingress">List[network_<wbr>acl_<wbr>ingress]</a></code>
+                <code><a href="#networkaclingress">List[Network<wbr>Acl<wbr>Ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an ingress rule. Parameters defined below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -873,7 +873,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1314,7 +1314,7 @@ The ID of the associated VPC.
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclegress">List[network_<wbr>acl_<wbr>egress]</a></code>
+                <code><a href="#networkaclegress">List[Network<wbr>Acl<wbr>Egress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1330,7 +1330,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclingress">List[network_<wbr>acl_<wbr>ingress]</a></code>
+                <code><a href="#networkaclingress">List[Network<wbr>Acl<wbr>Ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1376,7 +1376,7 @@ A list of Subnet IDs to apply the ACL to
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2029,7 +2029,7 @@ protocol, you must specify a from and to port of 0.
         </tr>
     
         <tr>
-            <td class="align-top">rule_<wbr>no</td>
+            <td class="align-top">rule<wbr>No</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2678,7 +2678,7 @@ protocol, you must specify a from and to port of 0.
         </tr>
     
         <tr>
-            <td class="align-top">rule_<wbr>no</td>
+            <td class="align-top">rule<wbr>No</td>
             <td class="align-top">
                 
                 <code>float</code>

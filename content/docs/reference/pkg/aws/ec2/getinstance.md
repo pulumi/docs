@@ -414,7 +414,7 @@ exactly match a pair on the desired Instance.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancefilter">List[get_<wbr>instance_<wbr>filter]</a></code>
+                <code><a href="#getinstancefilter">List[Get<wbr>Instance<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -476,7 +476,7 @@ Specify the exact Instance ID with which to populate the data source.
             <td class="align-top">instance_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -492,7 +492,7 @@ exactly match a pair on the desired Instance.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2096,7 +2096,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">credit_<wbr>specifications</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancecreditspecification">List[get_<wbr>instance_<wbr>credit_<wbr>specification]</a></code>
+                <code><a href="#getinstancecreditspecification">List[Get<wbr>Instance<wbr>Credit<wbr>Specification]</a></code>
             </td>
             <td class="align-top">{{% md %}} The credit specification of the Instance.
  {{% /md %}}
@@ -2121,7 +2121,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstanceebsblockdevice">List[get_<wbr>instance_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#getinstanceebsblockdevice">List[Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} The EBS block device mappings of the Instance.
  {{% /md %}}
@@ -2147,7 +2147,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstanceephemeralblockdevice">List[get_<wbr>instance_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#getinstanceephemeralblockdevice">List[Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} The ephemeral block device mappings of the Instance.
  {{% /md %}}
@@ -2160,7 +2160,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancefilter">List[get_<wbr>instance_<wbr>filter]</a></code>
+                <code><a href="#getinstancefilter">List[Get<wbr>Instance<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2260,7 +2260,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">instance_<wbr>tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2408,7 +2408,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">root_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancerootblockdevice">List[get_<wbr>instance_<wbr>root_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#getinstancerootblockdevice">List[Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} The root block device mappings of the Instance
  {{% /md %}}
@@ -2460,7 +2460,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the Instance.
  {{% /md %}}
@@ -2670,7 +2670,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
     <tbody>
     
         <tr>
-            <td class="align-top">cpu_<wbr>credits</td>
+            <td class="align-top">cpu<wbr>Credits</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3184,7 +3184,7 @@ The type of the volume.
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -3302,7 +3302,7 @@ The size of the volume, in GiB.
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3568,7 +3568,7 @@ The physical name of the device.
         </tr>
     
         <tr>
-            <td class="align-top">no_<wbr>device</td>
+            <td class="align-top">no<wbr>Device</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -3583,7 +3583,7 @@ Whether the specified device included in the device mapping was suppressed or no
         </tr>
     
         <tr>
-            <td class="align-top">virtual_<wbr>name</td>
+            <td class="align-top">virtual<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4221,7 +4221,7 @@ The type of the volume.
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -4309,7 +4309,7 @@ The size of the volume, in GiB.
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>

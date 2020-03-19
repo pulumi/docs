@@ -598,7 +598,7 @@ A longer, human-readable description for the AMI.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amicopyebsblockdevice">List[ami_<wbr>copy_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amicopyebsblockdevice">List[Ami<wbr>Copy<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -629,7 +629,7 @@ Specifies whether the destination snapshots of the copied image should be encryp
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amicopyephemeralblockdevice">List[ami_<wbr>copy_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amicopyephemeralblockdevice">List[Ami<wbr>Copy<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -707,7 +707,7 @@ same as the AWS provider region in order to create a copy within the same region
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1607,7 +1607,7 @@ changes the set of further arguments that are required, as described below.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amicopyebsblockdevice">List[ami_<wbr>copy_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amicopyebsblockdevice">List[Ami<wbr>Copy<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -1647,7 +1647,7 @@ attached to created instances. The structure of this block is described below.
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amicopyephemeralblockdevice">List[ami_<wbr>copy_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amicopyephemeralblockdevice">List[Ami<wbr>Copy<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -1808,7 +1808,7 @@ for created instances. No other value is supported at this time.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2884,7 +2884,7 @@ A longer, human-readable description for the AMI.
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amicopyebsblockdevice">List[ami_<wbr>copy_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amicopyebsblockdevice">List[Ami<wbr>Copy<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2930,7 +2930,7 @@ Specifies whether the destination snapshots of the copied image should be encryp
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#amicopyephemeralblockdevice">List[ami_<wbr>copy_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#amicopyephemeralblockdevice">List[Ami<wbr>Copy<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3115,7 +3115,7 @@ for created instances. No other value is supported at this time.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3549,7 +3549,7 @@ Specifies whether the destination snapshots of the copied image should be encryp
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -3634,7 +3634,7 @@ Specifies whether the destination snapshots of the copied image should be encryp
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3847,7 +3847,7 @@ Specifies whether the destination snapshots of the copied image should be encryp
         </tr>
     
         <tr>
-            <td class="align-top">virtual_<wbr>name</td>
+            <td class="align-top">virtual<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>

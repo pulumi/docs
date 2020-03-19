@@ -698,7 +698,7 @@ The CIDR block of the requester VPC of the specific VPC Peering Connection to re
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcpeeringconnectionfilter">List[get_<wbr>vpc_<wbr>peering_<wbr>connection_<wbr>filter]</a></code>
+                <code><a href="#getvpcpeeringconnectionfilter">List[Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -833,7 +833,7 @@ The status of the specific VPC Peering Connection to retrieve.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1475,7 +1475,7 @@ The following output properties are available:
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code>Dict[str, boolean]</code>
+                <code>Dict[str, Boolean]</code>
             </td>
             <td class="align-top">{{% md %}} A configuration block that describes [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options set for the accepter VPC.
@@ -1501,7 +1501,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcpeeringconnectionfilter">List[get_<wbr>vpc_<wbr>peering_<wbr>connection_<wbr>filter]</a></code>
+                <code><a href="#getvpcpeeringconnectionfilter">List[Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1597,7 +1597,7 @@ The following output properties are available:
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code>Dict[str, boolean]</code>
+                <code>Dict[str, Boolean]</code>
             </td>
             <td class="align-top">{{% md %}} A configuration block that describes [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options set for the requester VPC.
@@ -1623,7 +1623,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

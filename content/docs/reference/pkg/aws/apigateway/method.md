@@ -748,7 +748,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
             <td class="align-top">request_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, boolean]</code>
+                <code>Dict[str, Boolean]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1382,7 +1382,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
             <td class="align-top">request_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, boolean]</code>
+                <code>Dict[str, Boolean]</code>
             </td>
             <td class="align-top">{{% md %}} A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
 For example: `request_parameters = {&#34;method.request.header.X-Some-Header&#34; = true &#34;method.request.querystring.some-query-param&#34; = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
@@ -2125,7 +2125,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
             <td class="align-top">request_<wbr>parameters</td>
             <td class="align-top">
                 
-                <code>Dict[str, boolean]</code>
+                <code>Dict[str, Boolean]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -446,7 +446,7 @@ Name for the alias you are creating. Pattern: `(?!^[0-9]&#43;$)([a-zA-Z0-9-_]&#4
             <td class="align-top">routing_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingconfig">Dict[alias_<wbr>routing_<wbr>config]</a></code>
+                <code><a href="#aliasroutingconfig">Dict[Alias<wbr>Routing<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -906,7 +906,7 @@ The following output properties are available:
             <td class="align-top">routing_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingconfig">Dict[alias_<wbr>routing_<wbr>config]</a></code>
+                <code><a href="#aliasroutingconfig">Dict[Alias<wbr>Routing<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} The Lambda alias&#39; route configuration settings. Fields documented below
  {{% /md %}}
@@ -1463,7 +1463,7 @@ Name for the alias you are creating. Pattern: `(?!^[0-9]&#43;$)([a-zA-Z0-9-_]&#4
             <td class="align-top">routing_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingconfig">Dict[alias_<wbr>routing_<wbr>config]</a></code>
+                <code><a href="#aliasroutingconfig">Dict[Alias<wbr>Routing<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1628,10 +1628,10 @@ A map that defines the proportion of events that should be sent to different ver
     <tbody>
     
         <tr>
-            <td class="align-top">additional_<wbr>version_<wbr>weights</td>
+            <td class="align-top">additional<wbr>Version<wbr>Weights</td>
             <td class="align-top">
                 
-                <code>Dict[str, number]</code>
+                <code>Dict[str, Number]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

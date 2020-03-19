@@ -483,7 +483,7 @@ A name for the HTTP header in the client request that will be matched on.
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#routespec">Dict[route_<wbr>spec]</a></code>
+                <code><a href="#routespec">Dict[Route<wbr>Spec]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -498,7 +498,7 @@ The route specification to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -999,7 +999,7 @@ The following output properties are available:
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#routespec">Dict[route_<wbr>spec]</a></code>
+                <code><a href="#routespec">Dict[Route<wbr>Spec]</a></code>
             </td>
             <td class="align-top">{{% md %}} The route specification to apply.
  {{% /md %}}
@@ -1012,7 +1012,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1612,7 +1612,7 @@ A name for the HTTP header in the client request that will be matched on.
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#routespec">Dict[route_<wbr>spec]</a></code>
+                <code><a href="#routespec">Dict[Route<wbr>Spec]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1627,7 +1627,7 @@ The route specification to apply.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1900,10 +1900,10 @@ The TCP routing information for the route.
     <tbody>
     
         <tr>
-            <td class="align-top">http_<wbr>route</td>
+            <td class="align-top">http<wbr>Route</td>
             <td class="align-top">
                 
-                <code><a href="#routespechttproute">Dict[route_<wbr>spec_<wbr>http_<wbr>route]</a></code>
+                <code><a href="#routespechttproute">Dict[Route<wbr>Spec<wbr>Http<wbr>Route]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1931,10 +1931,10 @@ Routes are matched based on the specified value, where `0` is the highest priori
         </tr>
     
         <tr>
-            <td class="align-top">tcp_<wbr>route</td>
+            <td class="align-top">tcp<wbr>Route</td>
             <td class="align-top">
                 
-                <code><a href="#routespectcproute">Dict[route_<wbr>spec_<wbr>tcp_<wbr>route]</a></code>
+                <code><a href="#routespectcproute">Dict[Route<wbr>Spec<wbr>Tcp<wbr>Route]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2140,7 +2140,7 @@ The method and value to match the header value sent with a request. Specify one 
             <td class="align-top">action</td>
             <td class="align-top">
                 
-                <code><a href="#routespechttprouteaction">Dict[route_<wbr>spec_<wbr>http_<wbr>route_<wbr>action]</a></code>
+                <code><a href="#routespechttprouteaction">Dict[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2155,7 +2155,7 @@ The action to take if a match is determined.
             <td class="align-top">match</td>
             <td class="align-top">
                 
-                <code><a href="#routespechttproutematch">Dict[route_<wbr>spec_<wbr>http_<wbr>route_<wbr>match]</a></code>
+                <code><a href="#routespechttproutematch">Dict[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2316,10 +2316,10 @@ You can specify one or more targets and their relative weights with which to dis
     <tbody>
     
         <tr>
-            <td class="align-top">weighted_<wbr>targets</td>
+            <td class="align-top">weighted<wbr>Targets</td>
             <td class="align-top">
                 
-                <code><a href="#routespechttprouteactionweightedtarget">List[route_<wbr>spec_<wbr>http_<wbr>route_<wbr>action_<wbr>weighted_<wbr>target]</a></code>
+                <code><a href="#routespechttprouteactionweightedtarget">List[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2523,7 +2523,7 @@ The relative weight of the weighted target. An integer between 0 and 100.
     <tbody>
     
         <tr>
-            <td class="align-top">virtual_<wbr>node</td>
+            <td class="align-top">virtual<wbr>Node</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2840,7 +2840,7 @@ The client request header scheme to match on. Valid values: `http`, `https`.
             <td class="align-top">headers</td>
             <td class="align-top">
                 
-                <code><a href="#routespechttproutematchheader">List[route_<wbr>spec_<wbr>http_<wbr>route_<wbr>match_<wbr>header]</a></code>
+                <code><a href="#routespechttproutematchheader">List[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3152,7 +3152,7 @@ If `true`, the match is on the opposite of the `match` method and value. Default
             <td class="align-top">match</td>
             <td class="align-top">
                 
-                <code><a href="#routespechttproutematchheadermatch">Dict[route_<wbr>spec_<wbr>http_<wbr>route_<wbr>match_<wbr>header_<wbr>match]</a></code>
+                <code><a href="#routespechttproutematchheadermatch">Dict[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3539,7 +3539,7 @@ The header value sent by the client must begin with the specified characters.
             <td class="align-top">range</td>
             <td class="align-top">
                 
-                <code><a href="#routespechttproutematchheadermatchrange">Dict[route_<wbr>spec_<wbr>http_<wbr>route_<wbr>match_<wbr>header_<wbr>match_<wbr>range]</a></code>
+                <code><a href="#routespechttproutematchheadermatchrange">Dict[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3950,7 +3950,7 @@ The action to take if a match is determined.
             <td class="align-top">action</td>
             <td class="align-top">
                 
-                <code><a href="#routespectcprouteaction">Dict[route_<wbr>spec_<wbr>tcp_<wbr>route_<wbr>action]</a></code>
+                <code><a href="#routespectcprouteaction">Dict[Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4111,10 +4111,10 @@ You can specify one or more targets and their relative weights with which to dis
     <tbody>
     
         <tr>
-            <td class="align-top">weighted_<wbr>targets</td>
+            <td class="align-top">weighted<wbr>Targets</td>
             <td class="align-top">
                 
-                <code><a href="#routespectcprouteactionweightedtarget">List[route_<wbr>spec_<wbr>tcp_<wbr>route_<wbr>action_<wbr>weighted_<wbr>target]</a></code>
+                <code><a href="#routespectcprouteactionweightedtarget">List[Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4318,7 +4318,7 @@ The relative weight of the weighted target. An integer between 0 and 100.
     <tbody>
     
         <tr>
-            <td class="align-top">virtual_<wbr>node</td>
+            <td class="align-top">virtual<wbr>Node</td>
             <td class="align-top">
                 
                 <code>str</code>

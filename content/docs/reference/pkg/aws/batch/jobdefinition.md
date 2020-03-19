@@ -517,7 +517,7 @@ Specifies the parameter substitution placeholders to set in the job definition.
             <td class="align-top">retry_<wbr>strategy</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitionretrystrategy">Dict[job_<wbr>definition_<wbr>retry_<wbr>strategy]</a></code>
+                <code><a href="#jobdefinitionretrystrategy">Dict[Job<wbr>Definition<wbr>Retry<wbr>Strategy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -533,7 +533,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             <td class="align-top">timeout</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitiontimeout">Dict[job_<wbr>definition_<wbr>timeout]</a></code>
+                <code><a href="#jobdefinitiontimeout">Dict[Job<wbr>Definition<wbr>Timeout]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1028,7 +1028,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             <td class="align-top">retry_<wbr>strategy</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitionretrystrategy">Dict[job_<wbr>definition_<wbr>retry_<wbr>strategy]</a></code>
+                <code><a href="#jobdefinitionretrystrategy">Dict[Job<wbr>Definition<wbr>Retry<wbr>Strategy]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
@@ -1055,7 +1055,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             <td class="align-top">timeout</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitiontimeout">Dict[job_<wbr>definition_<wbr>timeout]</a></code>
+                <code><a href="#jobdefinitiontimeout">Dict[Job<wbr>Definition<wbr>Timeout]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
  {{% /md %}}
@@ -1647,7 +1647,7 @@ Specifies the parameter substitution placeholders to set in the job definition.
             <td class="align-top">retry_<wbr>strategy</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitionretrystrategy">Dict[job_<wbr>definition_<wbr>retry_<wbr>strategy]</a></code>
+                <code><a href="#jobdefinitionretrystrategy">Dict[Job<wbr>Definition<wbr>Retry<wbr>Strategy]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1678,7 +1678,7 @@ The revision of the job definition.
             <td class="align-top">timeout</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitiontimeout">Dict[job_<wbr>definition_<wbr>timeout]</a></code>
+                <code><a href="#jobdefinitiontimeout">Dict[Job<wbr>Definition<wbr>Timeout]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2012,7 +2012,7 @@ The type of job definition.  Must be `container`
     <tbody>
     
         <tr>
-            <td class="align-top">attempt_<wbr>duration_<wbr>seconds</td>
+            <td class="align-top">attempt<wbr>Duration<wbr>Seconds</td>
             <td class="align-top">
                 
                 <code>float</code>

@@ -1049,7 +1049,7 @@ The following output properties are available:
             <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationebsblockdevice">List[get_<wbr>launch_<wbr>configuration_<wbr>ebs_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#getlaunchconfigurationebsblockdevice">List[Get<wbr>Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} The EBS Block Devices attached to the instance.
  {{% /md %}}
@@ -1088,7 +1088,7 @@ The following output properties are available:
             <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationephemeralblockdevice">List[get_<wbr>launch_<wbr>configuration_<wbr>ephemeral_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#getlaunchconfigurationephemeralblockdevice">List[Get<wbr>Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} The Ephemeral volumes on the instance.
  {{% /md %}}
@@ -1192,7 +1192,7 @@ The following output properties are available:
             <td class="align-top">root_<wbr>block_<wbr>devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationrootblockdevice">List[get_<wbr>launch_<wbr>configuration_<wbr>root_<wbr>block_<wbr>device]</a></code>
+                <code><a href="#getlaunchconfigurationrootblockdevice">List[Get<wbr>Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device]</a></code>
             </td>
             <td class="align-top">{{% md %}} The Root Block Device of the instance.
  {{% /md %}}
@@ -1688,7 +1688,7 @@ The Type of the volume.
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1778,7 +1778,7 @@ The Size of the volume.
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1999,7 +1999,7 @@ The Name of the device.
         </tr>
     
         <tr>
-            <td class="align-top">virtual_<wbr>name</td>
+            <td class="align-top">virtual<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2340,7 +2340,7 @@ The Type of the volume.
     <tbody>
     
         <tr>
-            <td class="align-top">delete_<wbr>on_<wbr>termination</td>
+            <td class="align-top">delete<wbr>On<wbr>Termination</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -2400,7 +2400,7 @@ The Size of the volume.
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -229,7 +229,7 @@ The ID of the directory.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -979,7 +979,7 @@ The following output properties are available:
             <td class="align-top">connect_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#getdirectoryconnectsetting">List[get_<wbr>directory_<wbr>connect_<wbr>setting]</a></code>
+                <code><a href="#getdirectoryconnectsetting">List[Get<wbr>Directory<wbr>Connect<wbr>Setting]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1120,7 +1120,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the directory/connector.
  {{% /md %}}
@@ -1146,7 +1146,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#getdirectoryvpcsetting">List[get_<wbr>directory_<wbr>vpc_<wbr>setting]</a></code>
+                <code><a href="#getdirectoryvpcsetting">List[Get<wbr>Directory<wbr>Vpc<wbr>Setting]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1441,7 +1441,7 @@ The ID of the VPC that the connector is in.
     <tbody>
     
         <tr>
-            <td class="align-top">customer_<wbr>dns_<wbr>ips</td>
+            <td class="align-top">customer<wbr>Dns<wbr>Ips</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -1456,7 +1456,7 @@ The DNS IP addresses of the domain to connect to.
         </tr>
     
         <tr>
-            <td class="align-top">customer_<wbr>username</td>
+            <td class="align-top">customer<wbr>Username</td>
             <td class="align-top">
                 
                 <code>str</code>

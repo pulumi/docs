@@ -994,7 +994,7 @@ The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the 
             <td class="align-top">mongodb_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#endpointmongodbsettings">Dict[endpoint_<wbr>mongodb_<wbr>settings]</a></code>
+                <code><a href="#endpointmongodbsettings">Dict[Endpoint<wbr>Mongodb<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1039,7 +1039,7 @@ The port used by the endpoint database.
             <td class="align-top">s3_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#endpoints3settings">Dict[endpoint_<wbr>s3_<wbr>settings]</a></code>
+                <code><a href="#endpoints3settings">Dict[Endpoint<wbr>S3Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1099,7 +1099,7 @@ The SSL mode to use for the connection. Can be one of `none | require | verify-c
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1990,7 +1990,7 @@ The following output properties are available:
             <td class="align-top">mongodb_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#endpointmongodbsettings">Dict[endpoint_<wbr>mongodb_<wbr>settings]</a></code>
+                <code><a href="#endpointmongodbsettings">Dict[Endpoint<wbr>Mongodb<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
  {{% /md %}}
@@ -2029,7 +2029,7 @@ The following output properties are available:
             <td class="align-top">s3_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#endpoints3settings">Dict[endpoint_<wbr>s3_<wbr>settings]</a></code>
+                <code><a href="#endpoints3settings">Dict[Endpoint<wbr>S3Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
  {{% /md %}}
@@ -2081,7 +2081,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -3131,7 +3131,7 @@ The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the 
             <td class="align-top">mongodb_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#endpointmongodbsettings">Dict[endpoint_<wbr>mongodb_<wbr>settings]</a></code>
+                <code><a href="#endpointmongodbsettings">Dict[Endpoint<wbr>Mongodb<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3176,7 +3176,7 @@ The port used by the endpoint database.
             <td class="align-top">s3_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#endpoints3settings">Dict[endpoint_<wbr>s3_<wbr>settings]</a></code>
+                <code><a href="#endpoints3settings">Dict[Endpoint<wbr>S3Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3236,7 +3236,7 @@ The SSL mode to use for the connection. Can be one of `none | require | verify-c
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3623,7 +3623,7 @@ The user name to be used to login to the endpoint database.
     <tbody>
     
         <tr>
-            <td class="align-top">auth_<wbr>mechanism</td>
+            <td class="align-top">auth<wbr>Mechanism</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3637,7 +3637,7 @@ The user name to be used to login to the endpoint database.
         </tr>
     
         <tr>
-            <td class="align-top">auth_<wbr>source</td>
+            <td class="align-top">auth<wbr>Source</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3665,7 +3665,7 @@ The user name to be used to login to the endpoint database.
         </tr>
     
         <tr>
-            <td class="align-top">docs_<wbr>to_<wbr>investigate</td>
+            <td class="align-top">docs<wbr>To<wbr>Investigate</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3679,7 +3679,7 @@ The user name to be used to login to the endpoint database.
         </tr>
     
         <tr>
-            <td class="align-top">extract_<wbr>doc_<wbr>id</td>
+            <td class="align-top">extract<wbr>Doc<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3693,7 +3693,7 @@ The user name to be used to login to the endpoint database.
         </tr>
     
         <tr>
-            <td class="align-top">nesting_<wbr>level</td>
+            <td class="align-top">nesting<wbr>Level</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4102,7 +4102,7 @@ The user name to be used to login to the endpoint database.
     <tbody>
     
         <tr>
-            <td class="align-top">bucket_<wbr>folder</td>
+            <td class="align-top">bucket<wbr>Folder</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4130,7 +4130,7 @@ The user name to be used to login to the endpoint database.
         </tr>
     
         <tr>
-            <td class="align-top">compression_<wbr>type</td>
+            <td class="align-top">compression<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4144,7 +4144,7 @@ The user name to be used to login to the endpoint database.
         </tr>
     
         <tr>
-            <td class="align-top">csv_<wbr>delimiter</td>
+            <td class="align-top">csv<wbr>Delimiter</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4158,7 +4158,7 @@ The user name to be used to login to the endpoint database.
         </tr>
     
         <tr>
-            <td class="align-top">csv_<wbr>row_<wbr>delimiter</td>
+            <td class="align-top">csv<wbr>Row<wbr>Delimiter</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4172,7 +4172,7 @@ The user name to be used to login to the endpoint database.
         </tr>
     
         <tr>
-            <td class="align-top">external_<wbr>table_<wbr>definition</td>
+            <td class="align-top">external<wbr>Table<wbr>Definition</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4186,7 +4186,7 @@ The user name to be used to login to the endpoint database.
         </tr>
     
         <tr>
-            <td class="align-top">service_<wbr>access_<wbr>role_<wbr>arn</td>
+            <td class="align-top">service<wbr>Access<wbr>Role<wbr>Arn</td>
             <td class="align-top">
                 
                 <code>str</code>

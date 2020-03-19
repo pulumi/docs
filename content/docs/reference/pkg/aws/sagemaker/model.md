@@ -483,7 +483,7 @@ Specifies the VPC that you want your model to connect to. VpcConfig is used in h
             <td class="align-top">containers</td>
             <td class="align-top">
                 
-                <code><a href="#modelcontainer">List[model_<wbr>container]</a></code>
+                <code><a href="#modelcontainer">List[Model<wbr>Container]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -543,7 +543,7 @@ The name of the model (must be unique). If omitted, this provider will assign a 
             <td class="align-top">primary_<wbr>container</td>
             <td class="align-top">
                 
-                <code><a href="#modelprimarycontainer">Dict[model_<wbr>primary_<wbr>container]</a></code>
+                <code><a href="#modelprimarycontainer">Dict[Model<wbr>Primary<wbr>Container]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -558,7 +558,7 @@ The primary docker image containing inference code that is used when the model i
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -573,7 +573,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#modelvpcconfig">Dict[model_<wbr>vpc_<wbr>config]</a></code>
+                <code><a href="#modelvpcconfig">Dict[Model<wbr>Vpc<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1007,7 +1007,7 @@ The following output properties are available:
             <td class="align-top">containers</td>
             <td class="align-top">
                 
-                <code><a href="#modelcontainer">List[model_<wbr>container]</a></code>
+                <code><a href="#modelcontainer">List[Model<wbr>Container]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies containers in the inference pipeline. If not specified, the `primary_container` argument is required. Fields are documented below.
  {{% /md %}}
@@ -1059,7 +1059,7 @@ The following output properties are available:
             <td class="align-top">primary_<wbr>container</td>
             <td class="align-top">
                 
-                <code><a href="#modelprimarycontainer">Dict[model_<wbr>primary_<wbr>container]</a></code>
+                <code><a href="#modelprimarycontainer">Dict[Model<wbr>Primary<wbr>Container]</a></code>
             </td>
             <td class="align-top">{{% md %}} The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
  {{% /md %}}
@@ -1072,7 +1072,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1085,7 +1085,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#modelvpcconfig">Dict[model_<wbr>vpc_<wbr>config]</a></code>
+                <code><a href="#modelvpcconfig">Dict[Model<wbr>Vpc<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
  {{% /md %}}
@@ -1612,7 +1612,7 @@ The Amazon Resource Name (ARN) assigned by AWS to this model.
             <td class="align-top">containers</td>
             <td class="align-top">
                 
-                <code><a href="#modelcontainer">List[model_<wbr>container]</a></code>
+                <code><a href="#modelcontainer">List[Model<wbr>Container]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1672,7 +1672,7 @@ The name of the model (must be unique). If omitted, this provider will assign a 
             <td class="align-top">primary_<wbr>container</td>
             <td class="align-top">
                 
-                <code><a href="#modelprimarycontainer">Dict[model_<wbr>primary_<wbr>container]</a></code>
+                <code><a href="#modelprimarycontainer">Dict[Model<wbr>Primary<wbr>Container]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1687,7 +1687,7 @@ The primary docker image containing inference code that is used when the model i
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1702,7 +1702,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">vpc_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#modelvpcconfig">Dict[model_<wbr>vpc_<wbr>config]</a></code>
+                <code><a href="#modelvpcconfig">Dict[Model<wbr>Vpc<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1990,7 +1990,7 @@ Specifies the VPC that you want your model to connect to. VpcConfig is used in h
     <tbody>
     
         <tr>
-            <td class="align-top">container_<wbr>hostname</td>
+            <td class="align-top">container<wbr>Hostname</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2007,7 +2007,7 @@ Specifies the VPC that you want your model to connect to. VpcConfig is used in h
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2032,7 +2032,7 @@ Specifies the VPC that you want your model to connect to. VpcConfig is used in h
         </tr>
     
         <tr>
-            <td class="align-top">model_<wbr>data_<wbr>url</td>
+            <td class="align-top">model<wbr>Data<wbr>Url</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2315,7 +2315,7 @@ Specifies the VPC that you want your model to connect to. VpcConfig is used in h
     <tbody>
     
         <tr>
-            <td class="align-top">container_<wbr>hostname</td>
+            <td class="align-top">container<wbr>Hostname</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2332,7 +2332,7 @@ Specifies the VPC that you want your model to connect to. VpcConfig is used in h
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2357,7 +2357,7 @@ Specifies the VPC that you want your model to connect to. VpcConfig is used in h
         </tr>
     
         <tr>
-            <td class="align-top">model_<wbr>data_<wbr>url</td>
+            <td class="align-top">model<wbr>Data<wbr>Url</td>
             <td class="align-top">
                 
                 <code>str</code>

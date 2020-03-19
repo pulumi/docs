@@ -339,7 +339,7 @@ Key-value pairs of resource tags to assign to the DataSync Location.
             <td class="align-top">ec2_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#efslocationec2config">Dict[efs_<wbr>location_<wbr>ec2_<wbr>config]</a></code>
+                <code><a href="#efslocationec2config">Dict[Efs<wbr>Location<wbr>Ec2Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -384,7 +384,7 @@ Subdirectory to perform actions as source or destination. Default `/`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -737,7 +737,7 @@ The following output properties are available:
             <td class="align-top">ec2_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#efslocationec2config">Dict[efs_<wbr>location_<wbr>ec2_<wbr>config]</a></code>
+                <code><a href="#efslocationec2config">Dict[Efs<wbr>Location<wbr>Ec2Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing EC2 configurations for connecting to the EFS File System.
  {{% /md %}}
@@ -776,7 +776,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value pairs of resource tags to assign to the DataSync Location.
  {{% /md %}}
@@ -1222,7 +1222,7 @@ Amazon Resource Name (ARN) of the DataSync Location.
             <td class="align-top">ec2_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#efslocationec2config">Dict[efs_<wbr>location_<wbr>ec2_<wbr>config]</a></code>
+                <code><a href="#efslocationec2config">Dict[Efs<wbr>Location<wbr>Ec2Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1267,7 +1267,7 @@ Subdirectory to perform actions as source or destination. Default `/`.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1491,7 +1491,7 @@ Amazon Resource Name (ARN) of the EC2 Subnet that is associated with the EFS Mou
     <tbody>
     
         <tr>
-            <td class="align-top">security_<wbr>group_<wbr>arns</td>
+            <td class="align-top">security<wbr>Group<wbr>Arns</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -1506,7 +1506,7 @@ List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associa
         </tr>
     
         <tr>
-            <td class="align-top">subnet_<wbr>arn</td>
+            <td class="align-top">subnet<wbr>Arn</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -464,7 +464,7 @@ Specifies whether the pricing plan for the queue is on-demand or reserved. Valid
             <td class="align-top">reservation_<wbr>plan_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#queuereservationplansettings">Dict[queue_<wbr>reservation_<wbr>plan_<wbr>settings]</a></code>
+                <code><a href="#queuereservationplansettings">Dict[Queue<wbr>Reservation<wbr>Plan<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -494,7 +494,7 @@ A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUS
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -928,7 +928,7 @@ The following output properties are available:
             <td class="align-top">reservation_<wbr>plan_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#queuereservationplansettings">Dict[queue_<wbr>reservation_<wbr>plan_<wbr>settings]</a></code>
+                <code><a href="#queuereservationplansettings">Dict[Queue<wbr>Reservation<wbr>Plan<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} A detail pricing plan of the  reserved queue. See below.
  {{% /md %}}
@@ -954,7 +954,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1481,7 +1481,7 @@ Specifies whether the pricing plan for the queue is on-demand or reserved. Valid
             <td class="align-top">reservation_<wbr>plan_<wbr>settings</td>
             <td class="align-top">
                 
-                <code><a href="#queuereservationplansettings">Dict[queue_<wbr>reservation_<wbr>plan_<wbr>settings]</a></code>
+                <code><a href="#queuereservationplansettings">Dict[Queue<wbr>Reservation<wbr>Plan<wbr>Settings]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1511,7 +1511,7 @@ A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUS
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1781,7 +1781,7 @@ The length of the term of your reserved queue pricing plan commitment. Valid val
         </tr>
     
         <tr>
-            <td class="align-top">renewal_<wbr>type</td>
+            <td class="align-top">renewal<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1796,7 +1796,7 @@ Specifies whether the term of your reserved queue pricing plan. Valid values are
         </tr>
     
         <tr>
-            <td class="align-top">reserved_<wbr>slots</td>
+            <td class="align-top">reserved<wbr>Slots</td>
             <td class="align-top">
                 
                 <code>float</code>

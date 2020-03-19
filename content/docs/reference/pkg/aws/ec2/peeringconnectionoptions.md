@@ -378,7 +378,7 @@ The ID of the requester VPC peering connection.
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsaccepter">Dict[peering_<wbr>connection_<wbr>options_<wbr>accepter]</a></code>
+                <code><a href="#peeringconnectionoptionsaccepter">Dict[Peering<wbr>Connection<wbr>Options<wbr>Accepter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -395,7 +395,7 @@ the peering connection (a maximum of one).
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsrequester">Dict[peering_<wbr>connection_<wbr>options_<wbr>requester]</a></code>
+                <code><a href="#peeringconnectionoptionsrequester">Dict[Peering<wbr>Connection<wbr>Options<wbr>Requester]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -650,7 +650,7 @@ the peering connection (a maximum of one).
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsaccepter">Dict[peering_<wbr>connection_<wbr>options_<wbr>accepter]</a></code>
+                <code><a href="#peeringconnectionoptionsaccepter">Dict[Peering<wbr>Connection<wbr>Options<wbr>Accepter]</a></code>
             </td>
             <td class="align-top">{{% md %}} An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -665,7 +665,7 @@ the peering connection (a maximum of one).
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsrequester">Dict[peering_<wbr>connection_<wbr>options_<wbr>requester]</a></code>
+                <code><a href="#peeringconnectionoptionsrequester">Dict[Peering<wbr>Connection<wbr>Options<wbr>Requester]</a></code>
             </td>
             <td class="align-top">{{% md %}} A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
@@ -979,7 +979,7 @@ The ID of the requester VPC peering connection.
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsaccepter">Dict[peering_<wbr>connection_<wbr>options_<wbr>accepter]</a></code>
+                <code><a href="#peeringconnectionoptionsaccepter">Dict[Peering<wbr>Connection<wbr>Options<wbr>Accepter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -996,7 +996,7 @@ the peering connection (a maximum of one).
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsrequester">Dict[peering_<wbr>connection_<wbr>options_<wbr>requester]</a></code>
+                <code><a href="#peeringconnectionoptionsrequester">Dict[Peering<wbr>Connection<wbr>Options<wbr>Requester]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1283,7 +1283,7 @@ connection. This option is not supported for inter-region VPC peering.
     <tbody>
     
         <tr>
-            <td class="align-top">allow_<wbr>classic_<wbr>link_<wbr>to_<wbr>remote_<wbr>vpc</td>
+            <td class="align-top">allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1300,7 +1300,7 @@ to the remote VPC. This option is not supported for inter-region VPC peering.
         </tr>
     
         <tr>
-            <td class="align-top">allow_<wbr>remote_<wbr>vpc_<wbr>dns_<wbr>resolution</td>
+            <td class="align-top">allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1316,7 +1316,7 @@ private IP addresses when queried from instances in the peer VPC.
         </tr>
     
         <tr>
-            <td class="align-top">allow_<wbr>vpc_<wbr>to_<wbr>remote_<wbr>classic_<wbr>link</td>
+            <td class="align-top">allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1584,7 +1584,7 @@ connection. This option is not supported for inter-region VPC peering.
     <tbody>
     
         <tr>
-            <td class="align-top">allow_<wbr>classic_<wbr>link_<wbr>to_<wbr>remote_<wbr>vpc</td>
+            <td class="align-top">allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1601,7 +1601,7 @@ to the remote VPC. This option is not supported for inter-region VPC peering.
         </tr>
     
         <tr>
-            <td class="align-top">allow_<wbr>remote_<wbr>vpc_<wbr>dns_<wbr>resolution</td>
+            <td class="align-top">allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1617,7 +1617,7 @@ private IP addresses when queried from instances in the peer VPC.
         </tr>
     
         <tr>
-            <td class="align-top">allow_<wbr>vpc_<wbr>to_<wbr>remote_<wbr>classic_<wbr>link</td>
+            <td class="align-top">allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</td>
             <td class="align-top">
                 
                 <code>bool</code>

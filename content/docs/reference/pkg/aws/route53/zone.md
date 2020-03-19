@@ -528,7 +528,7 @@ This is the name of the hosted zone.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -543,7 +543,7 @@ A mapping of tags to assign to the zone.
             <td class="align-top">vpcs</td>
             <td class="align-top">
                 
-                <code><a href="#zonevpc">List[zone_<wbr>vpc]</a></code>
+                <code><a href="#zonevpc">List[Zone<wbr>Vpc]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1033,7 +1033,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the zone.
  {{% /md %}}
@@ -1046,7 +1046,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             <td class="align-top">vpcs</td>
             <td class="align-top">
                 
-                <code><a href="#zonevpc">List[zone_<wbr>vpc]</a></code>
+                <code><a href="#zonevpc">List[Zone<wbr>Vpc]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
  {{% /md %}}
@@ -1650,7 +1650,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1665,7 +1665,7 @@ A mapping of tags to assign to the zone.
             <td class="align-top">vpcs</td>
             <td class="align-top">
                 
-                <code><a href="#zonevpc">List[zone_<wbr>vpc]</a></code>
+                <code><a href="#zonevpc">List[Zone<wbr>Vpc]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

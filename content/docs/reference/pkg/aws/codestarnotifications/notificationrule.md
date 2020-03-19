@@ -534,7 +534,7 @@ The status of the notification rule. Possible values are `ENABLED` and `DISABLED
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -549,7 +549,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">List[notification_<wbr>rule_<wbr>target]</a></code>
+                <code><a href="#notificationruletarget">List[Notification<wbr>Rule<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1052,7 +1052,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1065,7 +1065,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">List[notification_<wbr>rule_<wbr>target]</a></code>
+                <code><a href="#notificationruletarget">List[Notification<wbr>Rule<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
  {{% /md %}}
@@ -1671,7 +1671,7 @@ The status of the notification rule. Possible values are `ENABLED` and `DISABLED
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1686,7 +1686,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">List[notification_<wbr>rule_<wbr>target]</a></code>
+                <code><a href="#notificationruletarget">List[Notification<wbr>Rule<wbr>Target]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

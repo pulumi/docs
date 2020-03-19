@@ -1565,7 +1565,7 @@ A list of EC2 availability zones in which the replication group&#39;s cache clus
             <td class="align-top">cluster_<wbr>mode</td>
             <td class="align-top">
                 
-                <code><a href="#replicationgroupclustermode">Dict[replication_<wbr>group_<wbr>cluster_<wbr>mode]</a></code>
+                <code><a href="#replicationgroupclustermode">Dict[Replication<wbr>Group<wbr>Cluster<wbr>Mode]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1861,7 +1861,7 @@ The name of the cache subnet group to be used for the replication group.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3266,7 +3266,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
             <td class="align-top">cluster_<wbr>mode</td>
             <td class="align-top">
                 
-                <code><a href="#replicationgroupclustermode">Dict[replication_<wbr>group_<wbr>cluster_<wbr>mode]</a></code>
+                <code><a href="#replicationgroupclustermode">Dict[Replication<wbr>Group<wbr>Cluster<wbr>Mode]</a></code>
             </td>
             <td class="align-top">{{% md %}} Create a native redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed.
  {{% /md %}}
@@ -3563,7 +3563,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource
  {{% /md %}}
@@ -5201,7 +5201,7 @@ A list of EC2 availability zones in which the replication group&#39;s cache clus
             <td class="align-top">cluster_<wbr>mode</td>
             <td class="align-top">
                 
-                <code><a href="#replicationgroupclustermode">Dict[replication_<wbr>group_<wbr>cluster_<wbr>mode]</a></code>
+                <code><a href="#replicationgroupclustermode">Dict[Replication<wbr>Group<wbr>Cluster<wbr>Mode]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5542,7 +5542,7 @@ The name of the cache subnet group to be used for the replication group.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5767,7 +5767,7 @@ Specify the number of replica nodes in each node group. Valid values are 0 to 5.
     <tbody>
     
         <tr>
-            <td class="align-top">num_<wbr>node_<wbr>groups</td>
+            <td class="align-top">num<wbr>Node<wbr>Groups</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -5782,7 +5782,7 @@ Specify the number of node groups (shards) for this Redis replication group. Cha
         </tr>
     
         <tr>
-            <td class="align-top">replicas_<wbr>per_<wbr>node_<wbr>group</td>
+            <td class="align-top">replicas<wbr>Per<wbr>Node<wbr>Group</td>
             <td class="align-top">
                 
                 <code>float</code>

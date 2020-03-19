@@ -559,7 +559,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">attachments</td>
             <td class="align-top">
                 
-                <code><a href="#networkinterfaceattachment">List[network_<wbr>interface_<wbr>attachment]</a></code>
+                <code><a href="#networkinterfaceattachment">List[Network<wbr>Interface<wbr>Attachment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -678,7 +678,7 @@ Subnet ID to create the ENI in.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1213,7 +1213,7 @@ The following output properties are available:
             <td class="align-top">attachments</td>
             <td class="align-top">
                 
-                <code><a href="#networkinterfaceattachment">List[network_<wbr>interface_<wbr>attachment]</a></code>
+                <code><a href="#networkinterfaceattachment">List[Network<wbr>Interface<wbr>Attachment]</a></code>
             </td>
             <td class="align-top">{{% md %}} Block to define the attachment of the ENI. Documented below.
  {{% /md %}}
@@ -1342,7 +1342,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1986,7 +1986,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">attachments</td>
             <td class="align-top">
                 
-                <code><a href="#networkinterfaceattachment">List[network_<wbr>interface_<wbr>attachment]</a></code>
+                <code><a href="#networkinterfaceattachment">List[Network<wbr>Interface<wbr>Attachment]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2135,7 +2135,7 @@ Subnet ID to create the ENI in.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

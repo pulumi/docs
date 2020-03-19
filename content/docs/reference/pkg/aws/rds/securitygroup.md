@@ -351,7 +351,7 @@ The description of the DB security group. Defaults to &#34;Managed by Pulumi&#34
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">List[security_<wbr>group_<wbr>ingress]</a></code>
+                <code><a href="#securitygroupingress">List[Security<wbr>Group<wbr>Ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -381,7 +381,7 @@ The name of the DB security group.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -711,7 +711,7 @@ The following output properties are available:
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">List[security_<wbr>group_<wbr>ingress]</a></code>
+                <code><a href="#securitygroupingress">List[Security<wbr>Group<wbr>Ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of ingress rules.
  {{% /md %}}
@@ -737,7 +737,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1144,7 +1144,7 @@ The description of the DB security group. Defaults to &#34;Managed by Pulumi&#34
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">List[security_<wbr>group_<wbr>ingress]</a></code>
+                <code><a href="#securitygroupingress">List[Security<wbr>Group<wbr>Ingress]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1174,7 +1174,7 @@ The name of the DB security group.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1507,7 +1507,7 @@ The ID of the security group to authorize
         </tr>
     
         <tr>
-            <td class="align-top">security_<wbr>group_<wbr>name</td>
+            <td class="align-top">security<wbr>Group<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1522,7 +1522,7 @@ The name of the security group to authorize
         </tr>
     
         <tr>
-            <td class="align-top">security_<wbr>group_<wbr>owner_<wbr>id</td>
+            <td class="align-top">security<wbr>Group<wbr>Owner<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>

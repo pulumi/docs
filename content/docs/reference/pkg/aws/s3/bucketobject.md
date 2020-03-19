@@ -1537,7 +1537,7 @@ for the object. Can be either &#34;`STANDARD`&#34;, &#34;`REDUCED_REDUNDANCY`&#3
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2845,7 +2845,7 @@ for the object. Can be either &#34;`STANDARD`&#34;, &#34;`REDUCED_REDUNDANCY`&#3
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the object.
  {{% /md %}}
@@ -4386,7 +4386,7 @@ for the object. Can be either &#34;`STANDARD`&#34;, &#34;`REDUCED_REDUNDANCY`&#3
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

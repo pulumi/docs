@@ -417,7 +417,7 @@ The user(s) the policy should be applied to
             <td class="align-top">groups</td>
             <td class="align-top">
                 
-                <code>List[group>]</code>
+                <code>List[Group>]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -462,7 +462,7 @@ The ARN of the policy you want to apply
             <td class="align-top">roles</td>
             <td class="align-top">
                 
-                <code>List[role>]</code>
+                <code>List[Role>]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -477,7 +477,7 @@ The role(s) the policy should be applied to
             <td class="align-top">users</td>
             <td class="align-top">
                 
-                <code>List[user>]</code>
+                <code>List[User>]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1210,7 +1210,7 @@ The user(s) the policy should be applied to
             <td class="align-top">groups</td>
             <td class="align-top">
                 
-                <code>List[group>]</code>
+                <code>List[Group>]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1255,7 +1255,7 @@ The ARN of the policy you want to apply
             <td class="align-top">roles</td>
             <td class="align-top">
                 
-                <code>List[role>]</code>
+                <code>List[Role>]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1270,7 +1270,7 @@ The role(s) the policy should be applied to
             <td class="align-top">users</td>
             <td class="align-top">
                 
-                <code>List[user>]</code>
+                <code>List[User>]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

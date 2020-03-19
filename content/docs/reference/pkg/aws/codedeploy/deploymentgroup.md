@@ -967,7 +967,7 @@ Configuration block(s) of the triggers for the deployment group (documented belo
             <td class="align-top">alarm_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupalarmconfiguration">Dict[deployment_<wbr>group_<wbr>alarm_<wbr>configuration]</a></code>
+                <code><a href="#deploymentgroupalarmconfiguration">Dict[Deployment<wbr>Group<wbr>Alarm<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -997,7 +997,7 @@ The name of the application.
             <td class="align-top">auto_<wbr>rollback_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupautorollbackconfiguration">Dict[deployment_<wbr>group_<wbr>auto_<wbr>rollback_<wbr>configuration]</a></code>
+                <code><a href="#deploymentgroupautorollbackconfiguration">Dict[Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1027,7 +1027,7 @@ Autoscaling groups associated with the deployment group.
             <td class="align-top">blue_<wbr>green_<wbr>deployment_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfig">Dict[deployment_<wbr>group_<wbr>blue_<wbr>green_<wbr>deployment_<wbr>config]</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfig">Dict[Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1072,7 +1072,7 @@ The name of the deployment group.
             <td class="align-top">deployment_<wbr>style</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupdeploymentstyle">Dict[deployment_<wbr>group_<wbr>deployment_<wbr>style]</a></code>
+                <code><a href="#deploymentgroupdeploymentstyle">Dict[Deployment<wbr>Group<wbr>Deployment<wbr>Style]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1087,7 +1087,7 @@ Configuration block of the type of deployment, either in-place or blue/green, yo
             <td class="align-top">ec2_<wbr>tag_<wbr>filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagfilter">List[deployment_<wbr>group_<wbr>ec2_<wbr>tag_<wbr>filter]</a></code>
+                <code><a href="#deploymentgroupec2tagfilter">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1102,7 +1102,7 @@ Tag filters associated with the deployment group. See the AWS docs for details.
             <td class="align-top">ec2_<wbr>tag_<wbr>sets</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagset">List[deployment_<wbr>group_<wbr>ec2_<wbr>tag_<wbr>set]</a></code>
+                <code><a href="#deploymentgroupec2tagset">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1117,7 +1117,7 @@ Configuration block(s) of Tag filters associated with the deployment group, whic
             <td class="align-top">ecs_<wbr>service</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupecsservice">Dict[deployment_<wbr>group_<wbr>ecs_<wbr>service]</a></code>
+                <code><a href="#deploymentgroupecsservice">Dict[Deployment<wbr>Group<wbr>Ecs<wbr>Service]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1132,7 +1132,7 @@ Configuration block(s) of the ECS services for a deployment group (documented be
             <td class="align-top">load_<wbr>balancer_<wbr>info</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfo">Dict[deployment_<wbr>group_<wbr>load_<wbr>balancer_<wbr>info]</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfo">Dict[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1147,7 +1147,7 @@ Single configuration block of the load balancer to use in a blue/green deploymen
             <td class="align-top">on_<wbr>premises_<wbr>instance_<wbr>tag_<wbr>filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouponpremisesinstancetagfilter">List[deployment_<wbr>group_<wbr>on_<wbr>premises_<wbr>instance_<wbr>tag_<wbr>filter]</a></code>
+                <code><a href="#deploymentgrouponpremisesinstancetagfilter">List[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1177,7 +1177,7 @@ The service role ARN that allows deployments.
             <td class="align-top">trigger_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouptriggerconfiguration">List[deployment_<wbr>group_<wbr>trigger_<wbr>configuration]</a></code>
+                <code><a href="#deploymentgrouptriggerconfiguration">List[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1871,7 +1871,7 @@ The following output properties are available:
             <td class="align-top">alarm_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupalarmconfiguration">Dict[deployment_<wbr>group_<wbr>alarm_<wbr>configuration]</a></code>
+                <code><a href="#deploymentgroupalarmconfiguration">Dict[Deployment<wbr>Group<wbr>Alarm<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block of alarms associated with the deployment group (documented below).
  {{% /md %}}
@@ -1897,7 +1897,7 @@ The following output properties are available:
             <td class="align-top">auto_<wbr>rollback_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupautorollbackconfiguration">Dict[deployment_<wbr>group_<wbr>auto_<wbr>rollback_<wbr>configuration]</a></code>
+                <code><a href="#deploymentgroupautorollbackconfiguration">Dict[Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
  {{% /md %}}
@@ -1923,7 +1923,7 @@ The following output properties are available:
             <td class="align-top">blue_<wbr>green_<wbr>deployment_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfig">Dict[deployment_<wbr>group_<wbr>blue_<wbr>green_<wbr>deployment_<wbr>config]</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfig">Dict[Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block of the blue/green deployment options for a deployment group (documented below).
  {{% /md %}}
@@ -1962,7 +1962,7 @@ The following output properties are available:
             <td class="align-top">deployment_<wbr>style</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupdeploymentstyle">Dict[deployment_<wbr>group_<wbr>deployment_<wbr>style]</a></code>
+                <code><a href="#deploymentgroupdeploymentstyle">Dict[Deployment<wbr>Group<wbr>Deployment<wbr>Style]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
  {{% /md %}}
@@ -1975,7 +1975,7 @@ The following output properties are available:
             <td class="align-top">ec2_<wbr>tag_<wbr>filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagfilter">List[deployment_<wbr>group_<wbr>ec2_<wbr>tag_<wbr>filter]</a></code>
+                <code><a href="#deploymentgroupec2tagfilter">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} Tag filters associated with the deployment group. See the AWS docs for details.
  {{% /md %}}
@@ -1988,7 +1988,7 @@ The following output properties are available:
             <td class="align-top">ec2_<wbr>tag_<wbr>sets</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagset">List[deployment_<wbr>group_<wbr>ec2_<wbr>tag_<wbr>set]</a></code>
+                <code><a href="#deploymentgroupec2tagset">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
  {{% /md %}}
@@ -2001,7 +2001,7 @@ The following output properties are available:
             <td class="align-top">ecs_<wbr>service</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupecsservice">Dict[deployment_<wbr>group_<wbr>ecs_<wbr>service]</a></code>
+                <code><a href="#deploymentgroupecsservice">Dict[Deployment<wbr>Group<wbr>Ecs<wbr>Service]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) of the ECS services for a deployment group (documented below).
  {{% /md %}}
@@ -2014,7 +2014,7 @@ The following output properties are available:
             <td class="align-top">load_<wbr>balancer_<wbr>info</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfo">Dict[deployment_<wbr>group_<wbr>load_<wbr>balancer_<wbr>info]</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfo">Dict[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info]</a></code>
             </td>
             <td class="align-top">{{% md %}} Single configuration block of the load balancer to use in a blue/green deployment (documented below).
  {{% /md %}}
@@ -2027,7 +2027,7 @@ The following output properties are available:
             <td class="align-top">on_<wbr>premises_<wbr>instance_<wbr>tag_<wbr>filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouponpremisesinstancetagfilter">List[deployment_<wbr>group_<wbr>on_<wbr>premises_<wbr>instance_<wbr>tag_<wbr>filter]</a></code>
+                <code><a href="#deploymentgrouponpremisesinstancetagfilter">List[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} On premise tag filters associated with the group. See the AWS docs for details.
  {{% /md %}}
@@ -2053,7 +2053,7 @@ The following output properties are available:
             <td class="align-top">trigger_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouptriggerconfiguration">List[deployment_<wbr>group_<wbr>trigger_<wbr>configuration]</a></code>
+                <code><a href="#deploymentgrouptriggerconfiguration">List[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) of the triggers for the deployment group (documented below).
  {{% /md %}}
@@ -2880,7 +2880,7 @@ Configuration block(s) of the triggers for the deployment group (documented belo
             <td class="align-top">alarm_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupalarmconfiguration">Dict[deployment_<wbr>group_<wbr>alarm_<wbr>configuration]</a></code>
+                <code><a href="#deploymentgroupalarmconfiguration">Dict[Deployment<wbr>Group<wbr>Alarm<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2910,7 +2910,7 @@ The name of the application.
             <td class="align-top">auto_<wbr>rollback_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupautorollbackconfiguration">Dict[deployment_<wbr>group_<wbr>auto_<wbr>rollback_<wbr>configuration]</a></code>
+                <code><a href="#deploymentgroupautorollbackconfiguration">Dict[Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2940,7 +2940,7 @@ Autoscaling groups associated with the deployment group.
             <td class="align-top">blue_<wbr>green_<wbr>deployment_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfig">Dict[deployment_<wbr>group_<wbr>blue_<wbr>green_<wbr>deployment_<wbr>config]</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfig">Dict[Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2985,7 +2985,7 @@ The name of the deployment group.
             <td class="align-top">deployment_<wbr>style</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupdeploymentstyle">Dict[deployment_<wbr>group_<wbr>deployment_<wbr>style]</a></code>
+                <code><a href="#deploymentgroupdeploymentstyle">Dict[Deployment<wbr>Group<wbr>Deployment<wbr>Style]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3000,7 +3000,7 @@ Configuration block of the type of deployment, either in-place or blue/green, yo
             <td class="align-top">ec2_<wbr>tag_<wbr>filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagfilter">List[deployment_<wbr>group_<wbr>ec2_<wbr>tag_<wbr>filter]</a></code>
+                <code><a href="#deploymentgroupec2tagfilter">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3015,7 +3015,7 @@ Tag filters associated with the deployment group. See the AWS docs for details.
             <td class="align-top">ec2_<wbr>tag_<wbr>sets</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagset">List[deployment_<wbr>group_<wbr>ec2_<wbr>tag_<wbr>set]</a></code>
+                <code><a href="#deploymentgroupec2tagset">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3030,7 +3030,7 @@ Configuration block(s) of Tag filters associated with the deployment group, whic
             <td class="align-top">ecs_<wbr>service</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupecsservice">Dict[deployment_<wbr>group_<wbr>ecs_<wbr>service]</a></code>
+                <code><a href="#deploymentgroupecsservice">Dict[Deployment<wbr>Group<wbr>Ecs<wbr>Service]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3045,7 +3045,7 @@ Configuration block(s) of the ECS services for a deployment group (documented be
             <td class="align-top">load_<wbr>balancer_<wbr>info</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfo">Dict[deployment_<wbr>group_<wbr>load_<wbr>balancer_<wbr>info]</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfo">Dict[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3060,7 +3060,7 @@ Single configuration block of the load balancer to use in a blue/green deploymen
             <td class="align-top">on_<wbr>premises_<wbr>instance_<wbr>tag_<wbr>filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouponpremisesinstancetagfilter">List[deployment_<wbr>group_<wbr>on_<wbr>premises_<wbr>instance_<wbr>tag_<wbr>filter]</a></code>
+                <code><a href="#deploymentgrouponpremisesinstancetagfilter">List[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3090,7 +3090,7 @@ The service role ARN that allows deployments.
             <td class="align-top">trigger_<wbr>configurations</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouptriggerconfiguration">List[deployment_<wbr>group_<wbr>trigger_<wbr>configuration]</a></code>
+                <code><a href="#deploymentgrouptriggerconfiguration">List[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3381,7 +3381,7 @@ Indicates whether a defined automatic rollback configuration is currently enable
         </tr>
     
         <tr>
-            <td class="align-top">ignore_<wbr>poll_<wbr>alarm_<wbr>failure</td>
+            <td class="align-top">ignore<wbr>Poll<wbr>Alarm<wbr>Failure</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -3855,10 +3855,10 @@ Information about whether to terminate instances in the original fleet during a 
     <tbody>
     
         <tr>
-            <td class="align-top">deployment_<wbr>ready_<wbr>option</td>
+            <td class="align-top">deployment<wbr>Ready<wbr>Option</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Dict[deployment_<wbr>group_<wbr>blue_<wbr>green_<wbr>deployment_<wbr>config_<wbr>deployment_<wbr>ready_<wbr>option]</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Dict[Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3870,10 +3870,10 @@ Information about the action to take when newly provisioned instances are ready 
         </tr>
     
         <tr>
-            <td class="align-top">green_<wbr>fleet_<wbr>provisioning_<wbr>option</td>
+            <td class="align-top">green<wbr>Fleet<wbr>Provisioning<wbr>Option</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Dict[deployment_<wbr>group_<wbr>blue_<wbr>green_<wbr>deployment_<wbr>config_<wbr>green_<wbr>fleet_<wbr>provisioning_<wbr>option]</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Dict[Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3885,10 +3885,10 @@ Information about how instances are provisioned for a replacement environment in
         </tr>
     
         <tr>
-            <td class="align-top">terminate_<wbr>blue_<wbr>instances_<wbr>on_<wbr>deployment_<wbr>success</td>
+            <td class="align-top">terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Dict[deployment_<wbr>group_<wbr>blue_<wbr>green_<wbr>deployment_<wbr>config_<wbr>terminate_<wbr>blue_<wbr>instances_<wbr>on_<wbr>deployment_<wbr>success]</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Dict[Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4097,7 +4097,7 @@ The number of minutes to wait before the status of a blue/green deployment chang
     <tbody>
     
         <tr>
-            <td class="align-top">action_<wbr>on_<wbr>timeout</td>
+            <td class="align-top">action<wbr>On<wbr>Timeout</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4114,7 +4114,7 @@ When to reroute traffic from an original environment to a replacement environmen
         </tr>
     
         <tr>
-            <td class="align-top">wait_<wbr>time_<wbr>in_<wbr>minutes</td>
+            <td class="align-top">wait<wbr>Time<wbr>In<wbr>Minutes</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -4512,7 +4512,7 @@ The action to take on instances in the original environment after a successful b
         </tr>
     
         <tr>
-            <td class="align-top">termination_<wbr>wait_<wbr>time_<wbr>in_<wbr>minutes</td>
+            <td class="align-top">termination<wbr>Wait<wbr>Time<wbr>In<wbr>Minutes</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -4718,7 +4718,7 @@ Indicates whether to run an in-place deployment or a blue/green deployment. Vali
     <tbody>
     
         <tr>
-            <td class="align-top">deployment_<wbr>option</td>
+            <td class="align-top">deployment<wbr>Option</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4733,7 +4733,7 @@ Indicates whether to route deployment traffic behind a load balancer. Valid Valu
         </tr>
     
         <tr>
-            <td class="align-top">deployment_<wbr>type</td>
+            <td class="align-top">deployment<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -5178,7 +5178,7 @@ Tag filters associated with the deployment group. See the AWS docs for details.
             <td class="align-top">ec2_<wbr>tag_<wbr>filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagsetec2tagfilter">List[deployment_<wbr>group_<wbr>ec2_<wbr>tag_<wbr>set_<wbr>ec2_<wbr>tag_<wbr>filter]</a></code>
+                <code><a href="#deploymentgroupec2tagsetec2tagfilter">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5928,10 +5928,10 @@ The (Application/Network Load Balancer) target group pair to use in a deployment
     <tbody>
     
         <tr>
-            <td class="align-top">elb_<wbr>infos</td>
+            <td class="align-top">elb<wbr>Infos</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfoelbinfo">List[deployment_<wbr>group_<wbr>load_<wbr>balancer_<wbr>info_<wbr>elb_<wbr>info]</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfoelbinfo">List[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5943,10 +5943,10 @@ The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target
         </tr>
     
         <tr>
-            <td class="align-top">target_<wbr>group_<wbr>infos</td>
+            <td class="align-top">target<wbr>Group<wbr>Infos</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">List[deployment_<wbr>group_<wbr>load_<wbr>balancer_<wbr>info_<wbr>target_<wbr>group_<wbr>info]</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">List[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5958,10 +5958,10 @@ The (Application/Network Load Balancer) target group to use in a deployment. Con
         </tr>
     
         <tr>
-            <td class="align-top">target_<wbr>group_<wbr>pair_<wbr>info</td>
+            <td class="align-top">target<wbr>Group<wbr>Pair<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Dict[deployment_<wbr>group_<wbr>load_<wbr>balancer_<wbr>info_<wbr>target_<wbr>group_<wbr>pair_<wbr>info]</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Dict[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6531,10 +6531,10 @@ Configuration block for the test traffic route (documented below).
     <tbody>
     
         <tr>
-            <td class="align-top">prod_<wbr>traffic_<wbr>route</td>
+            <td class="align-top">prod<wbr>Traffic<wbr>Route</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Dict[deployment_<wbr>group_<wbr>load_<wbr>balancer_<wbr>info_<wbr>target_<wbr>group_<wbr>pair_<wbr>info_<wbr>prod_<wbr>traffic_<wbr>route]</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Dict[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6546,10 +6546,10 @@ Configuration block for the production traffic route (documented below).
         </tr>
     
         <tr>
-            <td class="align-top">target_<wbr>groups</td>
+            <td class="align-top">target<wbr>Groups</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">List[deployment_<wbr>group_<wbr>load_<wbr>balancer_<wbr>info_<wbr>target_<wbr>group_<wbr>pair_<wbr>info_<wbr>target_<wbr>group]</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">List[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6561,10 +6561,10 @@ Configuration blocks for a target group within a target group pair (documented b
         </tr>
     
         <tr>
-            <td class="align-top">test_<wbr>traffic_<wbr>route</td>
+            <td class="align-top">test<wbr>Traffic<wbr>Route</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Dict[deployment_<wbr>group_<wbr>load_<wbr>balancer_<wbr>info_<wbr>target_<wbr>group_<wbr>pair_<wbr>info_<wbr>test_<wbr>traffic_<wbr>route]</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Dict[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6722,7 +6722,7 @@ List of Amazon Resource Names (ARNs) of the load balancer listeners.
     <tbody>
     
         <tr>
-            <td class="align-top">listener_<wbr>arns</td>
+            <td class="align-top">listener<wbr>Arns</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -7044,7 +7044,7 @@ List of Amazon Resource Names (ARNs) of the load balancer listeners.
     <tbody>
     
         <tr>
-            <td class="align-top">listener_<wbr>arns</td>
+            <td class="align-top">listener<wbr>Arns</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -7576,7 +7576,7 @@ The ARN of the SNS topic through which notifications are sent.
     <tbody>
     
         <tr>
-            <td class="align-top">trigger_<wbr>events</td>
+            <td class="align-top">trigger<wbr>Events</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -7591,7 +7591,7 @@ The event type or types for which notifications are triggered. Some values that 
         </tr>
     
         <tr>
-            <td class="align-top">trigger_<wbr>name</td>
+            <td class="align-top">trigger<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -7606,7 +7606,7 @@ The name of the notification trigger.
         </tr>
     
         <tr>
-            <td class="align-top">trigger_<wbr>target_<wbr>arn</td>
+            <td class="align-top">trigger<wbr>Target<wbr>Arn</td>
             <td class="align-top">
                 
                 <code>str</code>

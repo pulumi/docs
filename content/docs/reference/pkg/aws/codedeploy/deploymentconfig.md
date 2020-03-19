@@ -424,7 +424,7 @@ The name of the deployment config.
             <td class="align-top">minimum_<wbr>healthy_<wbr>hosts</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigminimumhealthyhosts">Dict[deployment_<wbr>config_<wbr>minimum_<wbr>healthy_<wbr>hosts]</a></code>
+                <code><a href="#deploymentconfigminimumhealthyhosts">Dict[Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -439,7 +439,7 @@ A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum H
             <td class="align-top">traffic_<wbr>routing_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfig">Dict[deployment_<wbr>config_<wbr>traffic_<wbr>routing_<wbr>config]</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfig">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -782,7 +782,7 @@ The following output properties are available:
             <td class="align-top">minimum_<wbr>healthy_<wbr>hosts</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigminimumhealthyhosts">Dict[deployment_<wbr>config_<wbr>minimum_<wbr>healthy_<wbr>hosts]</a></code>
+                <code><a href="#deploymentconfigminimumhealthyhosts">Dict[Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts]</a></code>
             </td>
             <td class="align-top">{{% md %}} A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
  {{% /md %}}
@@ -795,7 +795,7 @@ The following output properties are available:
             <td class="align-top">traffic_<wbr>routing_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfig">Dict[deployment_<wbr>config_<wbr>traffic_<wbr>routing_<wbr>config]</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfig">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} A traffic_routing_config block. Traffic Routing Config is documented below.
  {{% /md %}}
@@ -1217,7 +1217,7 @@ The name of the deployment config.
             <td class="align-top">minimum_<wbr>healthy_<wbr>hosts</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigminimumhealthyhosts">Dict[deployment_<wbr>config_<wbr>minimum_<wbr>healthy_<wbr>hosts]</a></code>
+                <code><a href="#deploymentconfigminimumhealthyhosts">Dict[Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1232,7 +1232,7 @@ A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum H
             <td class="align-top">traffic_<wbr>routing_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfig">Dict[deployment_<wbr>config_<wbr>traffic_<wbr>routing_<wbr>config]</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfig">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1691,10 +1691,10 @@ A traffic_routing_config block. Traffic Routing Config is documented below.
     <tbody>
     
         <tr>
-            <td class="align-top">time_<wbr>based_<wbr>canary</td>
+            <td class="align-top">time<wbr>Based<wbr>Canary</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Dict[deployment_<wbr>config_<wbr>traffic_<wbr>routing_<wbr>config_<wbr>time_<wbr>based_<wbr>canary]</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1705,10 +1705,10 @@ A traffic_routing_config block. Traffic Routing Config is documented below.
         </tr>
     
         <tr>
-            <td class="align-top">time_<wbr>based_<wbr>linear</td>
+            <td class="align-top">time<wbr>Based<wbr>Linear</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Dict[deployment_<wbr>config_<wbr>traffic_<wbr>routing_<wbr>config_<wbr>time_<wbr>based_<wbr>linear]</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

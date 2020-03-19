@@ -415,7 +415,7 @@ The VPC Peering Connection ID to manage.
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepteraccepter">Dict[vpc_<wbr>peering_<wbr>connection_<wbr>accepter_<wbr>accepter]</a></code>
+                <code><a href="#vpcpeeringconnectionaccepteraccepter">Dict[Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -446,7 +446,7 @@ Whether or not to accept the peering request. Defaults to `false`.
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepterrequester">Dict[vpc_<wbr>peering_<wbr>connection_<wbr>accepter_<wbr>requester]</a></code>
+                <code><a href="#vpcpeeringconnectionaccepterrequester">Dict[Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -462,7 +462,7 @@ A configuration block that describes [VPC Peering Connection]
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -995,7 +995,7 @@ The following output properties are available:
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepteraccepter">Dict[vpc_<wbr>peering_<wbr>connection_<wbr>accepter_<wbr>accepter]</a></code>
+                <code><a href="#vpcpeeringconnectionaccepteraccepter">Dict[Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter]</a></code>
             </td>
             <td class="align-top">{{% md %}} A configuration block that describes [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options set for the accepter VPC.
@@ -1061,7 +1061,7 @@ The following output properties are available:
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepterrequester">Dict[vpc_<wbr>peering_<wbr>connection_<wbr>accepter_<wbr>requester]</a></code>
+                <code><a href="#vpcpeeringconnectionaccepterrequester">Dict[Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester]</a></code>
             </td>
             <td class="align-top">{{% md %}} A configuration block that describes [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options set for the requester VPC.
@@ -1075,7 +1075,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1724,7 +1724,7 @@ The status of the VPC Peering Connection request.
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepteraccepter">Dict[vpc_<wbr>peering_<wbr>connection_<wbr>accepter_<wbr>accepter]</a></code>
+                <code><a href="#vpcpeeringconnectionaccepteraccepter">Dict[Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1800,7 +1800,7 @@ The ID of the requester VPC.
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepterrequester">Dict[vpc_<wbr>peering_<wbr>connection_<wbr>accepter_<wbr>requester]</a></code>
+                <code><a href="#vpcpeeringconnectionaccepterrequester">Dict[Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1816,7 +1816,7 @@ A configuration block that describes [VPC Peering Connection]
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2110,7 +2110,7 @@ connection in the peer VPC over the VPC Peering Connection.
     <tbody>
     
         <tr>
-            <td class="align-top">allow_<wbr>classic_<wbr>link_<wbr>to_<wbr>remote_<wbr>vpc</td>
+            <td class="align-top">allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -2126,7 +2126,7 @@ with the peer VPC over the VPC Peering Connection.
         </tr>
     
         <tr>
-            <td class="align-top">allow_<wbr>remote_<wbr>vpc_<wbr>dns_<wbr>resolution</td>
+            <td class="align-top">allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -2142,7 +2142,7 @@ private IP addresses when queried from instances in a peer VPC.
         </tr>
     
         <tr>
-            <td class="align-top">allow_<wbr>vpc_<wbr>to_<wbr>remote_<wbr>classic_<wbr>link</td>
+            <td class="align-top">allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -2403,7 +2403,7 @@ connection in the peer VPC over the VPC Peering Connection.
     <tbody>
     
         <tr>
-            <td class="align-top">allow_<wbr>classic_<wbr>link_<wbr>to_<wbr>remote_<wbr>vpc</td>
+            <td class="align-top">allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -2419,7 +2419,7 @@ with the peer VPC over the VPC Peering Connection.
         </tr>
     
         <tr>
-            <td class="align-top">allow_<wbr>remote_<wbr>vpc_<wbr>dns_<wbr>resolution</td>
+            <td class="align-top">allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -2435,7 +2435,7 @@ private IP addresses when queried from instances in a peer VPC.
         </tr>
     
         <tr>
-            <td class="align-top">allow_<wbr>vpc_<wbr>to_<wbr>remote_<wbr>classic_<wbr>link</td>
+            <td class="align-top">allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</td>
             <td class="align-top">
                 
                 <code>bool</code>

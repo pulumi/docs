@@ -640,7 +640,7 @@ A workflow to which the trigger should be associated to. Every workflow graph (D
             <td class="align-top">actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">List[trigger_<wbr>action]</a></code>
+                <code><a href="#triggeraction">List[Trigger<wbr>Action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -700,7 +700,7 @@ The name of the trigger.
             <td class="align-top">predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">Dict[trigger_<wbr>predicate]</a></code>
+                <code><a href="#triggerpredicate">Dict[Trigger<wbr>Predicate]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -730,7 +730,7 @@ A cron expression used to specify the schedule. [Time-Based Schedules for Jobs a
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1259,7 +1259,7 @@ The following output properties are available:
             <td class="align-top">actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">List[trigger_<wbr>action]</a></code>
+                <code><a href="#triggeraction">List[Trigger<wbr>Action]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of actions initiated by this trigger when it fires. Defined below.
  {{% /md %}}
@@ -1324,7 +1324,7 @@ The following output properties are available:
             <td class="align-top">predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">Dict[trigger_<wbr>predicate]</a></code>
+                <code><a href="#triggerpredicate">Dict[Trigger<wbr>Predicate]</a></code>
             </td>
             <td class="align-top">{{% md %}} A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
  {{% /md %}}
@@ -1350,7 +1350,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1978,7 +1978,7 @@ A workflow to which the trigger should be associated to. Every workflow graph (D
             <td class="align-top">actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">List[trigger_<wbr>action]</a></code>
+                <code><a href="#triggeraction">List[Trigger<wbr>Action]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2053,7 +2053,7 @@ The name of the trigger.
             <td class="align-top">predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">Dict[trigger_<wbr>predicate]</a></code>
+                <code><a href="#triggerpredicate">Dict[Trigger<wbr>Predicate]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2083,7 +2083,7 @@ A cron expression used to specify the schedule. [Time-Based Schedules for Jobs a
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2416,7 +2416,7 @@ The job run timeout in minutes. It overrides the timeout value of the job.
             <td class="align-top">arguments</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2428,7 +2428,7 @@ Arguments to be passed to the job. You can specify arguments here that your own 
         </tr>
     
         <tr>
-            <td class="align-top">crawler_<wbr>name</td>
+            <td class="align-top">crawler<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2443,7 +2443,7 @@ The name of the crawler to watch. If this is specified, `crawl_state` must also 
         </tr>
     
         <tr>
-            <td class="align-top">job_<wbr>name</td>
+            <td class="align-top">job<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2667,7 +2667,7 @@ How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or 
             <td class="align-top">conditions</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicatecondition">List[trigger_<wbr>predicate_<wbr>condition]</a></code>
+                <code><a href="#triggerpredicatecondition">List[Trigger<wbr>Predicate<wbr>Condition]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3020,7 +3020,7 @@ The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPP
     <tbody>
     
         <tr>
-            <td class="align-top">crawl_<wbr>state</td>
+            <td class="align-top">crawl<wbr>State</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3035,7 +3035,7 @@ The condition crawl state. Currently, the values supported are `RUNNING`, `SUCCE
         </tr>
     
         <tr>
-            <td class="align-top">crawler_<wbr>name</td>
+            <td class="align-top">crawler<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3050,7 +3050,7 @@ The name of the crawler to watch. If this is specified, `crawl_state` must also 
         </tr>
     
         <tr>
-            <td class="align-top">job_<wbr>name</td>
+            <td class="align-top">job<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3065,7 +3065,7 @@ The name of the job to watch. If this is specified, `state` must also be specifi
         </tr>
     
         <tr>
-            <td class="align-top">logical_<wbr>operator</td>
+            <td class="align-top">logical<wbr>Operator</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -372,7 +372,7 @@ The name of the endpoint configuration. If omitted, this provider will assign a 
             <td class="align-top">production_<wbr>variants</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconfigurationproductionvariant">List[endpoint_<wbr>configuration_<wbr>production_<wbr>variant]</a></code>
+                <code><a href="#endpointconfigurationproductionvariant">List[Endpoint<wbr>Configuration<wbr>Production<wbr>Variant]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -387,7 +387,7 @@ Fields are documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -730,7 +730,7 @@ The following output properties are available:
             <td class="align-top">production_<wbr>variants</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconfigurationproductionvariant">List[endpoint_<wbr>configuration_<wbr>production_<wbr>variant]</a></code>
+                <code><a href="#endpointconfigurationproductionvariant">List[Endpoint<wbr>Configuration<wbr>Production<wbr>Variant]</a></code>
             </td>
             <td class="align-top">{{% md %}} Fields are documented below.
  {{% /md %}}
@@ -743,7 +743,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1165,7 +1165,7 @@ The name of the endpoint configuration. If omitted, this provider will assign a 
             <td class="align-top">production_<wbr>variants</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconfigurationproductionvariant">List[endpoint_<wbr>configuration_<wbr>production_<wbr>variant]</a></code>
+                <code><a href="#endpointconfigurationproductionvariant">List[Endpoint<wbr>Configuration<wbr>Production<wbr>Variant]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1180,7 +1180,7 @@ Fields are documented below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1552,7 +1552,7 @@ A mapping of tags to assign to the resource.
     <tbody>
     
         <tr>
-            <td class="align-top">accelerator_<wbr>type</td>
+            <td class="align-top">accelerator<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1566,7 +1566,7 @@ A mapping of tags to assign to the resource.
         </tr>
     
         <tr>
-            <td class="align-top">initial_<wbr>instance_<wbr>count</td>
+            <td class="align-top">initial<wbr>Instance<wbr>Count</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1580,7 +1580,7 @@ A mapping of tags to assign to the resource.
         </tr>
     
         <tr>
-            <td class="align-top">initial_<wbr>variant_<wbr>weight</td>
+            <td class="align-top">initial<wbr>Variant<wbr>Weight</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1608,7 +1608,7 @@ A mapping of tags to assign to the resource.
         </tr>
     
         <tr>
-            <td class="align-top">model_<wbr>name</td>
+            <td class="align-top">model<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1622,7 +1622,7 @@ A mapping of tags to assign to the resource.
         </tr>
     
         <tr>
-            <td class="align-top">variant_<wbr>name</td>
+            <td class="align-top">variant<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -229,7 +229,7 @@ Name of the domain.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1167,7 +1167,7 @@ The following output properties are available:
             <td class="align-top">advanced_<wbr>options</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value string pairs to specify advanced configuration options.
  {{% /md %}}
@@ -1193,7 +1193,7 @@ The following output properties are available:
             <td class="align-top">cluster_<wbr>configs</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainclusterconfig">List[get_<wbr>domain_<wbr>cluster_<wbr>config]</a></code>
+                <code><a href="#getdomainclusterconfig">List[Get<wbr>Domain<wbr>Cluster<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Cluster configuration of the domain.
  {{% /md %}}
@@ -1206,7 +1206,7 @@ The following output properties are available:
             <td class="align-top">cognito_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomaincognitooption">List[get_<wbr>domain_<wbr>cognito_<wbr>option]</a></code>
+                <code><a href="#getdomaincognitooption">List[Get<wbr>Domain<wbr>Cognito<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain Amazon Cognito Authentication options for Kibana.
  {{% /md %}}
@@ -1270,7 +1270,7 @@ The following output properties are available:
             <td class="align-top">ebs_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainebsoption">List[get_<wbr>domain_<wbr>ebs_<wbr>option]</a></code>
+                <code><a href="#getdomainebsoption">List[Get<wbr>Domain<wbr>Ebs<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}} EBS Options for the instances in the domain.
  {{% /md %}}
@@ -1296,7 +1296,7 @@ The following output properties are available:
             <td class="align-top">encryption_<wbr>at_<wbr>rests</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainencryptionatrest">List[get_<wbr>domain_<wbr>encryption_<wbr>at_<wbr>rest]</a></code>
+                <code><a href="#getdomainencryptionatrest">List[Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest]</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain encryption at rest related options.
  {{% /md %}}
@@ -1348,7 +1348,7 @@ The following output properties are available:
             <td class="align-top">log_<wbr>publishing_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainlogpublishingoption">List[get_<wbr>domain_<wbr>log_<wbr>publishing_<wbr>option]</a></code>
+                <code><a href="#getdomainlogpublishingoption">List[Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain log publishing related options.
  {{% /md %}}
@@ -1361,7 +1361,7 @@ The following output properties are available:
             <td class="align-top">node_<wbr>to_<wbr>node_<wbr>encryptions</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainnodetonodeencryption">List[get_<wbr>domain_<wbr>node_<wbr>to_<wbr>node_<wbr>encryption]</a></code>
+                <code><a href="#getdomainnodetonodeencryption">List[Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption]</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain in transit encryption related options.
  {{% /md %}}
@@ -1388,7 +1388,7 @@ The following output properties are available:
             <td class="align-top">snapshot_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainsnapshotoption">List[get_<wbr>domain_<wbr>snapshot_<wbr>option]</a></code>
+                <code><a href="#getdomainsnapshotoption">List[Get<wbr>Domain<wbr>Snapshot<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1400,7 +1400,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} The tags assigned to the domain.
  {{% /md %}}
@@ -1413,7 +1413,7 @@ The following output properties are available:
             <td class="align-top">vpc_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainvpcoption">List[get_<wbr>domain_<wbr>vpc_<wbr>option]</a></code>
+                <code><a href="#getdomainvpcoption">List[Get<wbr>Domain<wbr>Vpc<wbr>Option]</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC Options for private Elasticsearch domains.
  {{% /md %}}
@@ -1844,7 +1844,7 @@ Indicates whether zone awareness is enabled.
     <tbody>
     
         <tr>
-            <td class="align-top">dedicated_<wbr>master_<wbr>count</td>
+            <td class="align-top">dedicated<wbr>Master<wbr>Count</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1859,7 +1859,7 @@ Number of dedicated master nodes in the cluster.
         </tr>
     
         <tr>
-            <td class="align-top">dedicated_<wbr>master_<wbr>enabled</td>
+            <td class="align-top">dedicated<wbr>Master<wbr>Enabled</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1874,7 +1874,7 @@ Indicates whether dedicated master nodes are enabled for the cluster.
         </tr>
     
         <tr>
-            <td class="align-top">dedicated_<wbr>master_<wbr>type</td>
+            <td class="align-top">dedicated<wbr>Master<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1919,10 +1919,10 @@ Instance type of data nodes in the cluster.
         </tr>
     
         <tr>
-            <td class="align-top">zone_<wbr>awareness_<wbr>configs</td>
+            <td class="align-top">zone<wbr>Awareness<wbr>Configs</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainclusterconfigzoneawarenessconfig">List[get_<wbr>domain_<wbr>cluster_<wbr>config_<wbr>zone_<wbr>awareness_<wbr>config]</a></code>
+                <code><a href="#getdomainclusterconfigzoneawarenessconfig">List[Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1934,7 +1934,7 @@ Configuration block containing zone awareness settings.
         </tr>
     
         <tr>
-            <td class="align-top">zone_<wbr>awareness_<wbr>enabled</td>
+            <td class="align-top">zone<wbr>Awareness<wbr>Enabled</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -2095,7 +2095,7 @@ Number of availability zones used.
     <tbody>
     
         <tr>
-            <td class="align-top">availability_<wbr>zone_<wbr>count</td>
+            <td class="align-top">availability<wbr>Zone<wbr>Count</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2735,7 +2735,7 @@ The type of EBS volumes attached to data nodes.
     <tbody>
     
         <tr>
-            <td class="align-top">ebs_<wbr>enabled</td>
+            <td class="align-top">ebs<wbr>Enabled</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -2781,7 +2781,7 @@ The size of EBS volumes attached to data nodes (in GB).
         </tr>
     
         <tr>
-            <td class="align-top">volume_<wbr>type</td>
+            <td class="align-top">volume<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3283,7 +3283,7 @@ Whether node to node encryption is enabled.
         </tr>
     
         <tr>
-            <td class="align-top">log_<wbr>type</td>
+            <td class="align-top">log<wbr>Type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3608,7 +3608,7 @@ snapshot of the indices in the domain.
     <tbody>
     
         <tr>
-            <td class="align-top">automated_<wbr>snapshot_<wbr>start_<wbr>hour</td>
+            <td class="align-top">automated<wbr>Snapshot<wbr>Start<wbr>Hour</td>
             <td class="align-top">
                 
                 <code>float</code>

@@ -411,7 +411,7 @@ Returns information on a specific snapshot_id.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsnapshotfilter">List[get_<wbr>snapshot_<wbr>filter]</a></code>
+                <code><a href="#getsnapshotfilter">List[Get<wbr>Snapshot<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -488,7 +488,7 @@ Returns information on a specific snapshot_id.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1284,7 +1284,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsnapshotfilter">List[get_<wbr>snapshot_<wbr>filter]</a></code>
+                <code><a href="#getsnapshotfilter">List[Get<wbr>Snapshot<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1422,7 +1422,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags for the resource.
  {{% /md %}}

@@ -623,7 +623,7 @@ A JSON string for supplying list of configurations specific to the EMR instance 
             <td class="align-top">ebs_<wbr>configs</td>
             <td class="align-top">
                 
-                <code><a href="#instancegroupebsconfig">List[instance_<wbr>group_<wbr>ebs_<wbr>config]</a></code>
+                <code><a href="#instancegroupebsconfig">List[Instance<wbr>Group<wbr>Ebs<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1267,7 +1267,7 @@ The following output properties are available:
             <td class="align-top">ebs_<wbr>configs</td>
             <td class="align-top">
                 
-                <code><a href="#instancegroupebsconfig">List[instance_<wbr>group_<wbr>ebs_<wbr>config]</a></code>
+                <code><a href="#instancegroupebsconfig">List[Instance<wbr>Group<wbr>Ebs<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more `ebs_config` blocks as defined below. Changing this forces a new resource to be created.
  {{% /md %}}
@@ -2044,7 +2044,7 @@ A JSON string for supplying list of configurations specific to the EMR instance 
             <td class="align-top">ebs_<wbr>configs</td>
             <td class="align-top">
                 
-                <code><a href="#instancegroupebsconfig">List[instance_<wbr>group_<wbr>ebs_<wbr>config]</a></code>
+                <code><a href="#instancegroupebsconfig">List[Instance<wbr>Group<wbr>Ebs<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2477,7 +2477,7 @@ The volume type. Valid options are &#39;gp2&#39;, &#39;io1&#39; and &#39;standar
         </tr>
     
         <tr>
-            <td class="align-top">volumes_<wbr>per_<wbr>instance</td>
+            <td class="align-top">volumes<wbr>Per<wbr>Instance</td>
             <td class="align-top">
                 
                 <code>float</code>

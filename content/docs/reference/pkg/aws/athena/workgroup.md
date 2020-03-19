@@ -386,7 +386,7 @@ Key-value mapping of resource tags for the workgroup.
             <td class="align-top">configuration</td>
             <td class="align-top">
                 
-                <code><a href="#workgroupconfiguration">Dict[workgroup_<wbr>configuration]</a></code>
+                <code><a href="#workgroupconfiguration">Dict[Workgroup<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -446,7 +446,7 @@ State of the workgroup. Valid values are `DISABLED` or `ENABLED`. Defaults to `E
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -802,7 +802,7 @@ The following output properties are available:
             <td class="align-top">configuration</td>
             <td class="align-top">
                 
-                <code><a href="#workgroupconfiguration">Dict[workgroup_<wbr>configuration]</a></code>
+                <code><a href="#workgroupconfiguration">Dict[Workgroup<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with various settings for the workgroup. Documented below.
  {{% /md %}}
@@ -854,7 +854,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags for the workgroup.
  {{% /md %}}
@@ -1291,7 +1291,7 @@ Amazon Resource Name (ARN) of the workgroup
             <td class="align-top">configuration</td>
             <td class="align-top">
                 
-                <code><a href="#workgroupconfiguration">Dict[workgroup_<wbr>configuration]</a></code>
+                <code><a href="#workgroupconfiguration">Dict[Workgroup<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1351,7 +1351,7 @@ State of the workgroup. Valid values are `DISABLED` or `ENABLED`. Defaults to `E
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1651,7 +1651,7 @@ Configuration block with result settings. Documented below.
     <tbody>
     
         <tr>
-            <td class="align-top">bytes_<wbr>scanned_<wbr>cutoff_<wbr>per_<wbr>query</td>
+            <td class="align-top">bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1666,7 +1666,7 @@ Integer for the upper data usage limit (cutoff) for the amount of bytes a single
         </tr>
     
         <tr>
-            <td class="align-top">enforce_<wbr>workgroup_<wbr>configuration</td>
+            <td class="align-top">enforce<wbr>Workgroup<wbr>Configuration</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1681,7 +1681,7 @@ Boolean whether the settings for the workgroup override client-side settings. Fo
         </tr>
     
         <tr>
-            <td class="align-top">publish_<wbr>cloudwatch_<wbr>metrics_<wbr>enabled</td>
+            <td class="align-top">publish<wbr>Cloudwatch<wbr>Metrics<wbr>Enabled</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1696,10 +1696,10 @@ Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Default
         </tr>
     
         <tr>
-            <td class="align-top">result_<wbr>configuration</td>
+            <td class="align-top">result<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#workgroupconfigurationresultconfiguration">Dict[workgroup_<wbr>configuration_<wbr>result_<wbr>configuration]</a></code>
+                <code><a href="#workgroupconfigurationresultconfiguration">Dict[Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1905,7 +1905,7 @@ The location in Amazon S3 where your query results are stored, such as `s3://pat
             <td class="align-top">encryption_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">Dict[workgroup_<wbr>configuration_<wbr>result_<wbr>configuration_<wbr>encryption_<wbr>configuration]</a></code>
+                <code><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">Dict[Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2123,7 +2123,7 @@ For SSE-KMS and CSE-KMS, this is the KMS key Amazon Resource Name (ARN).
     <tbody>
     
         <tr>
-            <td class="align-top">encryption_<wbr>option</td>
+            <td class="align-top">encryption<wbr>Option</td>
             <td class="align-top">
                 
                 <code>str</code>

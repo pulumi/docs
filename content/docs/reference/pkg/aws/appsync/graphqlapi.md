@@ -619,7 +619,7 @@ The Amazon Cognito User Pool configuration. Defined below.
             <td class="align-top">additional_<wbr>authentication_<wbr>providers</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovider">List[graph_<wbr>ql_<wbr>api_<wbr>additional_<wbr>authentication_<wbr>provider]</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovider">List[Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -649,7 +649,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
             <td class="align-top">log_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapilogconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>log_<wbr>config]</a></code>
+                <code><a href="#graphqlapilogconfig">Dict[Graph<wbr>QLApi<wbr>Log<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -679,7 +679,7 @@ A user-supplied name for the GraphqlApi.
             <td class="align-top">openid_<wbr>connect_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiopenidconnectconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>openid_<wbr>connect_<wbr>config]</a></code>
+                <code><a href="#graphqlapiopenidconnectconfig">Dict[Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -709,7 +709,7 @@ The schema definition, in GraphQL schema language format. This provider cannot p
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -724,7 +724,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">user_<wbr>pool_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiuserpoolconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>user_<wbr>pool_<wbr>config]</a></code>
+                <code><a href="#graphqlapiuserpoolconfig">Dict[Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1223,7 +1223,7 @@ The following output properties are available:
             <td class="align-top">additional_<wbr>authentication_<wbr>providers</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovider">List[graph_<wbr>ql_<wbr>api_<wbr>additional_<wbr>authentication_<wbr>provider]</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovider">List[Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more additional authentication providers for the GraphqlApi. Defined below.
  {{% /md %}}
@@ -1262,7 +1262,7 @@ The following output properties are available:
             <td class="align-top">log_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapilogconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>log_<wbr>config]</a></code>
+                <code><a href="#graphqlapilogconfig">Dict[Graph<wbr>QLApi<wbr>Log<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing logging configuration. Defined below.
  {{% /md %}}
@@ -1288,7 +1288,7 @@ The following output properties are available:
             <td class="align-top">openid_<wbr>connect_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiopenidconnectconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>openid_<wbr>connect_<wbr>config]</a></code>
+                <code><a href="#graphqlapiopenidconnectconfig">Dict[Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing OpenID Connect configuration. Defined below.
  {{% /md %}}
@@ -1314,7 +1314,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1340,7 +1340,7 @@ The following output properties are available:
             <td class="align-top">user_<wbr>pool_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiuserpoolconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>user_<wbr>pool_<wbr>config]</a></code>
+                <code><a href="#graphqlapiuserpoolconfig">Dict[Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} The Amazon Cognito User Pool configuration. Defined below.
  {{% /md %}}
@@ -1942,7 +1942,7 @@ The Amazon Cognito User Pool configuration. Defined below.
             <td class="align-top">additional_<wbr>authentication_<wbr>providers</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovider">List[graph_<wbr>ql_<wbr>api_<wbr>additional_<wbr>authentication_<wbr>provider]</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovider">List[Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1987,7 +1987,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
             <td class="align-top">log_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapilogconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>log_<wbr>config]</a></code>
+                <code><a href="#graphqlapilogconfig">Dict[Graph<wbr>QLApi<wbr>Log<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2017,7 +2017,7 @@ A user-supplied name for the GraphqlApi.
             <td class="align-top">openid_<wbr>connect_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiopenidconnectconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>openid_<wbr>connect_<wbr>config]</a></code>
+                <code><a href="#graphqlapiopenidconnectconfig">Dict[Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2047,7 +2047,7 @@ The schema definition, in GraphQL schema language format. This provider cannot p
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2077,7 +2077,7 @@ Map of URIs associated with the API. e.g. `uris[&#34;GRAPHQL&#34;] = https://ID.
             <td class="align-top">user_<wbr>pool_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiuserpoolconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>user_<wbr>pool_<wbr>config]</a></code>
+                <code><a href="#graphqlapiuserpoolconfig">Dict[Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2350,7 +2350,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
             <td class="align-top">openid_<wbr>connect_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovideropenidconnectconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>additional_<wbr>authentication_<wbr>provider_<wbr>openid_<wbr>connect_<wbr>config]</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovideropenidconnectconfig">Dict[Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Openid<wbr>Connect<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2365,7 +2365,7 @@ Nested argument containing OpenID Connect configuration. Defined below.
             <td class="align-top">user_<wbr>pool_<wbr>config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovideruserpoolconfig">Dict[graph_<wbr>ql_<wbr>api_<wbr>additional_<wbr>authentication_<wbr>provider_<wbr>user_<wbr>pool_<wbr>config]</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovideruserpoolconfig">Dict[Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>User<wbr>Pool<wbr>Config]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2658,7 +2658,7 @@ Issuer for the OpenID Connect configuration. The issuer returned by discovery MU
     <tbody>
     
         <tr>
-            <td class="align-top">auth_<wbr>ttl</td>
+            <td class="align-top">auth<wbr>Ttl</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2688,7 +2688,7 @@ Client identifier of the Relying party at the OpenID identity provider. This ide
         </tr>
     
         <tr>
-            <td class="align-top">iat_<wbr>ttl</td>
+            <td class="align-top">iat<wbr>Ttl</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2954,7 +2954,7 @@ The user pool ID.
     <tbody>
     
         <tr>
-            <td class="align-top">app_<wbr>id_<wbr>client_<wbr>regex</td>
+            <td class="align-top">app<wbr>Id<wbr>Client<wbr>Regex</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2969,7 +2969,7 @@ A regular expression for validating the incoming Amazon Cognito User Pool app cl
         </tr>
     
         <tr>
-            <td class="align-top">aws_<wbr>region</td>
+            <td class="align-top">aws<wbr>Region</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3190,7 +3190,7 @@ Field logging level. Valid values: `ALL`, `ERROR`, `NONE`.
     <tbody>
     
         <tr>
-            <td class="align-top">cloudwatch_<wbr>logs_<wbr>role_<wbr>arn</td>
+            <td class="align-top">cloudwatch<wbr>Logs<wbr>Role<wbr>Arn</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3205,7 +3205,7 @@ Amazon Resource Name of the service role that AWS AppSync will assume to publish
         </tr>
     
         <tr>
-            <td class="align-top">field_<wbr>log_<wbr>level</td>
+            <td class="align-top">field<wbr>Log<wbr>Level</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3501,7 +3501,7 @@ Issuer for the OpenID Connect configuration. The issuer returned by discovery MU
     <tbody>
     
         <tr>
-            <td class="align-top">auth_<wbr>ttl</td>
+            <td class="align-top">auth<wbr>Ttl</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3531,7 +3531,7 @@ Client identifier of the Relying party at the OpenID identity provider. This ide
         </tr>
     
         <tr>
-            <td class="align-top">iat_<wbr>ttl</td>
+            <td class="align-top">iat<wbr>Ttl</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -3842,7 +3842,7 @@ The user pool ID.
     <tbody>
     
         <tr>
-            <td class="align-top">app_<wbr>id_<wbr>client_<wbr>regex</td>
+            <td class="align-top">app<wbr>Id<wbr>Client<wbr>Regex</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3857,7 +3857,7 @@ A regular expression for validating the incoming Amazon Cognito User Pool app cl
         </tr>
     
         <tr>
-            <td class="align-top">aws_<wbr>region</td>
+            <td class="align-top">aws<wbr>Region</td>
             <td class="align-top">
                 
                 <code>str</code>

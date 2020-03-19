@@ -861,7 +861,7 @@ A list of IDs for the security groups that apply to the specified network interf
             <td class="align-top">self_<wbr>managed_<wbr>active_<wbr>directory</td>
             <td class="align-top">
                 
-                <code><a href="#windowsfilesystemselfmanagedactivedirectory">Dict[windows_<wbr>file_<wbr>system_<wbr>self_<wbr>managed_<wbr>active_<wbr>directory]</a></code>
+                <code><a href="#windowsfilesystemselfmanagedactivedirectory">Dict[Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -921,7 +921,7 @@ A list of IDs for the subnets that the file system will be accessible from. File
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1892,7 +1892,7 @@ The following output properties are available:
             <td class="align-top">self_<wbr>managed_<wbr>active_<wbr>directory</td>
             <td class="align-top">
                 
-                <code><a href="#windowsfilesystemselfmanagedactivedirectory">Dict[windows_<wbr>file_<wbr>system_<wbr>self_<wbr>managed_<wbr>active_<wbr>directory]</a></code>
+                <code><a href="#windowsfilesystemselfmanagedactivedirectory">Dict[Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `active_directory_id`. Detailed below.
  {{% /md %}}
@@ -1944,7 +1944,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the file system.
  {{% /md %}}
@@ -3095,7 +3095,7 @@ A list of IDs for the security groups that apply to the specified network interf
             <td class="align-top">self_<wbr>managed_<wbr>active_<wbr>directory</td>
             <td class="align-top">
                 
-                <code><a href="#windowsfilesystemselfmanagedactivedirectory">Dict[windows_<wbr>file_<wbr>system_<wbr>self_<wbr>managed_<wbr>active_<wbr>directory]</a></code>
+                <code><a href="#windowsfilesystemselfmanagedactivedirectory">Dict[Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3155,7 +3155,7 @@ A list of IDs for the subnets that the file system will be accessible from. File
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3620,7 +3620,7 @@ The fully qualified domain name of the self-managed AD directory. For example, `
         </tr>
     
         <tr>
-            <td class="align-top">file_<wbr>system_<wbr>administrators_<wbr>group</td>
+            <td class="align-top">file<wbr>System<wbr>Administrators<wbr>Group</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3635,7 +3635,7 @@ The name of the domain group whose members are granted administrative privileges
         </tr>
     
         <tr>
-            <td class="align-top">organizational_<wbr>unit_<wbr>distinguished_<wbr>name</td>
+            <td class="align-top">organizational<wbr>Unit<wbr>Distinguished<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -407,7 +407,7 @@ The ID of the VPC in which the specific VPC Endpoint is used.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcendpointfilter">List[get_<wbr>vpc_<wbr>endpoint_<wbr>filter]</a></code>
+                <code><a href="#getvpcendpointfilter">List[Get<wbr>Vpc<wbr>Endpoint<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -467,7 +467,7 @@ The state of the specific VPC Endpoint to retrieve.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1290,7 +1290,7 @@ The following output properties are available:
             <td class="align-top">dns_<wbr>entries</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcendpointdnsentry">List[get_<wbr>vpc_<wbr>endpoint_<wbr>dns_<wbr>entry]</a></code>
+                <code><a href="#getvpcendpointdnsentry">List[Get<wbr>Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry]</a></code>
             </td>
             <td class="align-top">{{% md %}} The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
  {{% /md %}}
@@ -1303,7 +1303,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcendpointfilter">List[get_<wbr>vpc_<wbr>endpoint_<wbr>filter]</a></code>
+                <code><a href="#getvpcendpointfilter">List[Get<wbr>Vpc<wbr>Endpoint<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1468,7 +1468,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

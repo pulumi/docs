@@ -520,7 +520,7 @@ Creates a unique compute environment name beginning with the specified prefix. C
             <td class="align-top">compute_<wbr>resources</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresources">Dict[compute_<wbr>environment_<wbr>compute_<wbr>resources]</a></code>
+                <code><a href="#computeenvironmentcomputeresources">Dict[Compute<wbr>Environment<wbr>Compute<wbr>Resources]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1099,7 +1099,7 @@ The following output properties are available:
             <td class="align-top">compute_<wbr>resources</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresources">Dict[compute_<wbr>environment_<wbr>compute_<wbr>resources]</a></code>
+                <code><a href="#computeenvironmentcomputeresources">Dict[Compute<wbr>Environment<wbr>Compute<wbr>Resources]</a></code>
             </td>
             <td class="align-top">{{% md %}} Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
  {{% /md %}}
@@ -1820,7 +1820,7 @@ Creates a unique compute environment name beginning with the specified prefix. C
             <td class="align-top">compute_<wbr>resources</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresources">Dict[compute_<wbr>environment_<wbr>compute_<wbr>resources]</a></code>
+                <code><a href="#computeenvironmentcomputeresources">Dict[Compute<wbr>Environment<wbr>Compute<wbr>Resources]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2720,7 +2720,7 @@ The allocation strategy to use for the compute resource in case not enough insta
         </tr>
     
         <tr>
-            <td class="align-top">bid_<wbr>percentage</td>
+            <td class="align-top">bid<wbr>Percentage</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2735,7 +2735,7 @@ Integer of minimum percentage that a Spot Instance price must be when compared w
         </tr>
     
         <tr>
-            <td class="align-top">desired_<wbr>vcpus</td>
+            <td class="align-top">desired<wbr>Vcpus</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2750,7 +2750,7 @@ The desired number of EC2 vCPUS in the compute environment.
         </tr>
     
         <tr>
-            <td class="align-top">ec2_<wbr>key_<wbr>pair</td>
+            <td class="align-top">ec2Key<wbr>Pair</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2780,7 +2780,7 @@ The Amazon Machine Image (AMI) ID used for instances launched in the compute env
         </tr>
     
         <tr>
-            <td class="align-top">instance_<wbr>role</td>
+            <td class="align-top">instance<wbr>Role</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2813,7 +2813,7 @@ A list of instance types that may be launched.
             <td class="align-top">launch_<wbr>template</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresourceslaunchtemplate">Dict[compute_<wbr>environment_<wbr>compute_<wbr>resources_<wbr>launch_<wbr>template]</a></code>
+                <code><a href="#computeenvironmentcomputeresourceslaunchtemplate">Dict[Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2825,7 +2825,7 @@ The launch template to use for your compute resources. See details below.
         </tr>
     
         <tr>
-            <td class="align-top">max_<wbr>vcpus</td>
+            <td class="align-top">max<wbr>Vcpus</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2840,7 +2840,7 @@ The maximum number of EC2 vCPUs that an environment can reach.
         </tr>
     
         <tr>
-            <td class="align-top">min_<wbr>vcpus</td>
+            <td class="align-top">min<wbr>Vcpus</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2870,7 +2870,7 @@ A list of EC2 security group that are associated with instances launched in the 
         </tr>
     
         <tr>
-            <td class="align-top">spot_<wbr>iam_<wbr>fleet_<wbr>role</td>
+            <td class="align-top">spot<wbr>Iam<wbr>Fleet<wbr>Role</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2903,7 +2903,7 @@ A list of VPC subnets into which the compute resources are launched.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3166,7 +3166,7 @@ The version number of the launch template. Default: The default version of the l
     <tbody>
     
         <tr>
-            <td class="align-top">launch_<wbr>template_<wbr>id</td>
+            <td class="align-top">launch<wbr>Template<wbr>Id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -3181,7 +3181,7 @@ ID of the launch template. You must specify either the launch template ID or lau
         </tr>
     
         <tr>
-            <td class="align-top">launch_<wbr>template_<wbr>name</td>
+            <td class="align-top">launch<wbr>Template<wbr>Name</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -547,7 +547,7 @@ The name of the Windows domain the SMB server belongs to.
             <td class="align-top">mount_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">Dict[location_<wbr>smb_<wbr>mount_<wbr>options]</a></code>
+                <code><a href="#locationsmbmountoptions">Dict[Location<wbr>Smb<wbr>Mount<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -607,7 +607,7 @@ Subdirectory to perform actions as source or destination. Should be exported by 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1157,7 +1157,7 @@ The following output properties are available:
             <td class="align-top">mount_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">Dict[location_<wbr>smb_<wbr>mount_<wbr>options]</a></code>
+                <code><a href="#locationsmbmountoptions">Dict[Location<wbr>Smb<wbr>Mount<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
  {{% /md %}}
@@ -1209,7 +1209,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value pairs of resource tags to assign to the DataSync Location.
  {{% /md %}}
@@ -1878,7 +1878,7 @@ The name of the Windows domain the SMB server belongs to.
             <td class="align-top">mount_<wbr>options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">Dict[location_<wbr>smb_<wbr>mount_<wbr>options]</a></code>
+                <code><a href="#locationsmbmountoptions">Dict[Location<wbr>Smb<wbr>Mount<wbr>Options]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1938,7 +1938,7 @@ Subdirectory to perform actions as source or destination. Should be exported by 
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

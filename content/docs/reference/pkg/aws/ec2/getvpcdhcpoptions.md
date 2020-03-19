@@ -296,7 +296,7 @@ The EC2 DHCP Options ID.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcdhcpoptionsfilter">List[get_<wbr>vpc_<wbr>dhcp_<wbr>options_<wbr>filter]</a></code>
+                <code><a href="#getvpcdhcpoptionsfilter">List[Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -311,7 +311,7 @@ List of custom filters as described below.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -846,7 +846,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcdhcpoptionsfilter">List[get_<wbr>vpc_<wbr>dhcp_<wbr>options_<wbr>filter]</a></code>
+                <code><a href="#getvpcdhcpoptionsfilter">List[Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -923,7 +923,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the resource.
  {{% /md %}}

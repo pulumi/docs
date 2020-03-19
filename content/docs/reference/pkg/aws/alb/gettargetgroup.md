@@ -300,7 +300,7 @@ The unique name of the target group.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -988,7 +988,7 @@ The following output properties are available:
             <td class="align-top">health_<wbr>check</td>
             <td class="align-top">
                 
-                <code><a href="#gettargetgrouphealthcheck">Dict[get_<wbr>target_<wbr>group_<wbr>health_<wbr>check]</a></code>
+                <code><a href="#gettargetgrouphealthcheck">Dict[Get<wbr>Target<wbr>Group<wbr>Health<wbr>Check]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1085,7 +1085,7 @@ The following output properties are available:
             <td class="align-top">stickiness</td>
             <td class="align-top">
                 
-                <code><a href="#gettargetgroupstickiness">Dict[get_<wbr>target_<wbr>group_<wbr>stickiness]</a></code>
+                <code><a href="#gettargetgroupstickiness">Dict[Get<wbr>Target<wbr>Group<wbr>Stickiness]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1097,7 +1097,7 @@ The following output properties are available:
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1628,7 +1628,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">healthy_<wbr>threshold</td>
+            <td class="align-top">healthy<wbr>Threshold</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1726,7 +1726,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">unhealthy_<wbr>threshold</td>
+            <td class="align-top">unhealthy<wbr>Threshold</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1967,7 +1967,7 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">cookie_<wbr>duration</td>
+            <td class="align-top">cookie<wbr>Duration</td>
             <td class="align-top">
                 
                 <code>float</code>

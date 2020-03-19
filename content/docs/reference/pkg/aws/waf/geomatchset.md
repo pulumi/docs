@@ -250,7 +250,7 @@ The name or description of the GeoMatchSet.
             <td class="align-top">geo_<wbr>match_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#geomatchsetgeomatchconstraint">List[geo_<wbr>match_<wbr>set_<wbr>geo_<wbr>match_<wbr>constraint]</a></code>
+                <code><a href="#geomatchsetgeomatchconstraint">List[Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -504,7 +504,7 @@ The following output properties are available:
             <td class="align-top">geo_<wbr>match_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#geomatchsetgeomatchconstraint">List[geo_<wbr>match_<wbr>set_<wbr>geo_<wbr>match_<wbr>constraint]</a></code>
+                <code><a href="#geomatchsetgeomatchconstraint">List[Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
  {{% /md %}}
@@ -819,7 +819,7 @@ Amazon Resource Name (ARN)
             <td class="align-top">geo_<wbr>match_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#geomatchsetgeomatchconstraint">List[geo_<wbr>match_<wbr>set_<wbr>geo_<wbr>match_<wbr>constraint]</a></code>
+                <code><a href="#geomatchsetgeomatchconstraint">List[Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

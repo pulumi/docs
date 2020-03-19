@@ -936,7 +936,7 @@ The process namespace to use for the containers in the task. The valid values ar
             <td class="align-top">placement_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionplacementconstraint">List[task_<wbr>definition_<wbr>placement_<wbr>constraint]</a></code>
+                <code><a href="#taskdefinitionplacementconstraint">List[Task<wbr>Definition<wbr>Placement<wbr>Constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -951,7 +951,7 @@ A set of placement constraints rules that are taken into consideration during ta
             <td class="align-top">proxy_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionproxyconfiguration">Dict[task_<wbr>definition_<wbr>proxy_<wbr>configuration]</a></code>
+                <code><a href="#taskdefinitionproxyconfiguration">Dict[Task<wbr>Definition<wbr>Proxy<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -981,7 +981,7 @@ A set of launch types required by the task. The valid values are `EC2` and `FARG
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1011,7 +1011,7 @@ The ARN of IAM role that allows your Amazon ECS container task to make calls to 
             <td class="align-top">volumes</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolume">List[task_<wbr>definition_<wbr>volume]</a></code>
+                <code><a href="#taskdefinitionvolume">List[Task<wbr>Definition<wbr>Volume]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1881,7 +1881,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
             <td class="align-top">placement_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionplacementconstraint">List[task_<wbr>definition_<wbr>placement_<wbr>constraint]</a></code>
+                <code><a href="#taskdefinitionplacementconstraint">List[Task<wbr>Definition<wbr>Placement<wbr>Constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`.
  {{% /md %}}
@@ -1894,7 +1894,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
             <td class="align-top">proxy_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionproxyconfiguration">Dict[task_<wbr>definition_<wbr>proxy_<wbr>configuration]</a></code>
+                <code><a href="#taskdefinitionproxyconfiguration">Dict[Task<wbr>Definition<wbr>Proxy<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} The proxy configuration details for the App Mesh proxy.
  {{% /md %}}
@@ -1933,7 +1933,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1959,7 +1959,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
             <td class="align-top">volumes</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolume">List[task_<wbr>definition_<wbr>volume]</a></code>
+                <code><a href="#taskdefinitionvolume">List[Task<wbr>Definition<wbr>Volume]</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of volume blocks that containers in your task may use.
  {{% /md %}}
@@ -2986,7 +2986,7 @@ The process namespace to use for the containers in the task. The valid values ar
             <td class="align-top">placement_<wbr>constraints</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionplacementconstraint">List[task_<wbr>definition_<wbr>placement_<wbr>constraint]</a></code>
+                <code><a href="#taskdefinitionplacementconstraint">List[Task<wbr>Definition<wbr>Placement<wbr>Constraint]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3001,7 +3001,7 @@ A set of placement constraints rules that are taken into consideration during ta
             <td class="align-top">proxy_<wbr>configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionproxyconfiguration">Dict[task_<wbr>definition_<wbr>proxy_<wbr>configuration]</a></code>
+                <code><a href="#taskdefinitionproxyconfiguration">Dict[Task<wbr>Definition<wbr>Proxy<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3046,7 +3046,7 @@ The revision of the task in a particular family.
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code>Dict[str, any]</code>
+                <code>Dict[str, Any]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3076,7 +3076,7 @@ The ARN of IAM role that allows your Amazon ECS container task to make calls to 
             <td class="align-top">volumes</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolume">List[task_<wbr>definition_<wbr>volume]</a></code>
+                <code><a href="#taskdefinitionvolume">List[Task<wbr>Definition<wbr>Volume]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3893,10 +3893,10 @@ parameter of container definition in the `mountPoints` section.
     <tbody>
     
         <tr>
-            <td class="align-top">docker_<wbr>volume_<wbr>configuration</td>
+            <td class="align-top">docker<wbr>Volume<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolumedockervolumeconfiguration">Dict[task_<wbr>definition_<wbr>volume_<wbr>docker_<wbr>volume_<wbr>configuration]</a></code>
+                <code><a href="#taskdefinitionvolumedockervolumeconfiguration">Dict[Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3908,10 +3908,10 @@ Used to configure a docker volume
         </tr>
     
         <tr>
-            <td class="align-top">efs_<wbr>volume_<wbr>configuration</td>
+            <td class="align-top">efs<wbr>Volume<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolumeefsvolumeconfiguration">Dict[task_<wbr>definition_<wbr>volume_<wbr>efs_<wbr>volume_<wbr>configuration]</a></code>
+                <code><a href="#taskdefinitionvolumeefsvolumeconfiguration">Dict[Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3923,7 +3923,7 @@ Used to configure a EFS volume. Can be used only with an EC2 type task.
         </tr>
     
         <tr>
-            <td class="align-top">host_<wbr>path</td>
+            <td class="align-top">host<wbr>Path</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -4310,7 +4310,7 @@ The Docker volume driver to use. The driver value must match the driver name pro
         </tr>
     
         <tr>
-            <td class="align-top">driver_<wbr>opts</td>
+            <td class="align-top">driver<wbr>Opts</td>
             <td class="align-top">
                 
                 <code>Dict[str, str]</code>
@@ -4561,7 +4561,7 @@ The ID of the EFS File System.
         </tr>
     
         <tr>
-            <td class="align-top">root_<wbr>directory</td>
+            <td class="align-top">root<wbr>Directory</td>
             <td class="align-top">
                 
                 <code>str</code>
