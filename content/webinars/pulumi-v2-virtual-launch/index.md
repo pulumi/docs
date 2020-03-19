@@ -1,7 +1,11 @@
 ---
 # Name of the webinar.
-title: "Pulumi 2.0 Virtual Launch"
-meta_desc: "Join Pulumi CEO, Joe Duffy, and the Pulumi team for a walk-through of all the improvements and modern infrastructure capabilities of Pulumi 2.0."
+title: "Pulumi Up(date)"
+meta_desc: "Join Pulumi CEO, Joe Duffy, and the Pulumi team for a walk-through of all the improvements and modern infrastructure capabilities of Pulumi."
+
+aliases: [
+    "/webinars/pulumi-up(date)-2020-04-22"
+]
 
 # If the video is pre-recorded or live.
 pre_recorded: false
@@ -10,7 +14,7 @@ pre_recorded: false
 pulumi_tv: false
 
 # The preview image will be shown on the list page.
-preview_image: "/images/webinar/pulumi-v2-virtual-launch.png"
+preview_image: "/images/webinar/pulumi-up(date)-2020-04-22.png"
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
@@ -33,19 +37,19 @@ url_slug: "pulumi-v2-virtual-launch"
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Pulumi 2.0 Virtual Launch"
+    title: "Pulumi Up(date)"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Pulumi 2.0 Virtual Launch"
+    title: "Pulumi Up(date)"
     # Datetime of the webinar.
     datetime: "WED APR 22, 2020 AT 11:00AM PDT"
     # Description of the webinar.
     description: |
-        Pulumi 2.0 makes it easier than ever to master any cloud using your favorite languages.  Learn about new capabilities to help your team plan, build, validate, deploy and secure your cloud resources. With Pulumi’s new superpowers, you’ll spend less time fretting about complex configurations and more time delivering new infrastructure, apps, and services for your customers and stakeholders. Our improved documentation and first-class support for Python, .NET and Go means that more teams can start building, collaborating on and re-using infrastructure code.
+        Join Pulumi CEO, Joe Duffy, and the Pulumi team for a walk-through of all the improvements and modern infrastructure capabilities of Pulumi.
 
     # The webinar presenters
     presenters:
@@ -53,9 +57,7 @@ main:
           role: Founder & CEO, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
-    learn:
-        - Multi language cloud development
-        - Policy as Code - enforcing best practices across organizations.
+
 
 # The right hand side webinar section.
 form:
