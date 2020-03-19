@@ -61,7 +61,7 @@ module.exports = {
             ],
 
             // Whitelist specific classes that were being removed.
-            whitelist: ["supported-cicd-platforms", ":not", ":target", "md:max-w-lg", "blink", "typing", "char", "resource-deprecated"],
+            whitelist: ["supported-cicd-platforms", ":not", ":target", "md:max-w-lg", "blink", "typing", "char", "lntable", "resource-deprecated"],
 
             // Whitelist custom parent selectors and their children.
             whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/],
