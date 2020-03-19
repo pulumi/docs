@@ -1,5 +1,5 @@
 ---
-title: Pulumi Cloud Framework (Preview)
+title: Cloud Framework Preview
 meta_desc: The Cloud framework for Pulumi lets you program infrastructure and application logic using high-level
            cloud-agnostic building blocks.
 aliases: ["/docs/quickstart/cloudfx/"]
@@ -7,23 +7,23 @@ aliases: ["/docs/quickstart/cloudfx/"]
 
 <img src="/images/docs/quickstart/cloudfx-purple.png" align="right">
 
-The Cloud framework for Pulumi lets you program infrastructure and application logic, side by side, using simple, high-level, cloud-agnostic building blocks.
+The Cloud Framework for Pulumi lets you program infrastructure and application logic, side by side, using simple, high-level, cloud-agnostic building blocks.
 
-The Cloud framework must be configured with credentials to deploy and update resources in the target cloud platform.
+The Cloud Framework must be configured with credentials to deploy and update resources in the target cloud adoption platform.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud" >}}) for complete details of the available Cloud framework APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud" >}}) for complete details of the available Cloud Framework [APIs](https://www.pulumi.com/docs/reference/pkg/).
 
 For AWS-specific use cases, see also the [awsx]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}) library which provides higher-level libraries for working with many AWS services.
 
 ## Getting Started
 
-The easiest way to start with the Cloud Framework is to follow one of the tutorials:
+The easiest way to start with the Cloud Framework is to follow one of the tutorials for adoption:
 
 * [A simple serverless REST API]({{< relref "rest-api" >}}): Deploy cloud-agnostic managed REST API
 * [A simple containerized app]({{< relref "service" >}}): Deploy cloud-agnostic containerized services
 * [Serverless + Containers + Infrastructure]({{< relref "thumbnailer" >}}): Deploy a complete cloud-agnostic application using a combination of buckets, serverless functions and containers.
 
-In addition to the tutorials, several interesting examples are available complete with instructions:
+In addition to the tutorials, several interesting examples are available complete with instructions for adoption:
 
 * [HTTP API](https://github.com/pulumi/examples/tree/master/cloud-js-api)
 * [Containers](https://github.com/pulumi/examples/tree/master/cloud-js-containers)
@@ -54,19 +54,19 @@ The provider-specific implementations of this library are also available for use
 
 * JavaScript/TypeScript: [https://www.npmjs.com/package/@pulumi/cloud-aws](https://www.npmjs.com/package/@pulumi/cloud-aws)
 
-The Cloud framework is open source and available in the [pulumi/pulumi-cloud](https://github.com/pulumi/pulumi-cloud) repo.
+The Cloud Framework is open source and available in the [pulumi/pulumi-cloud](https://github.com/pulumi/pulumi-cloud) repo.
 
 ## Authentication
 
-Authentication options must be set for the target cloud provider. See the [AWS setup page]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}) for details (more providers for the Cloud framework coming soon).
+Authentication options must be set for the target cloud provider. See the [AWS setup page]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}) for details (more providers for the Cloud Framework coming soon).
 
 ## Configuration
 
-The Cloud framework accepts the following configuration settings.  These can be provided via `pulumi config set cloud:<option>`.
+The Cloud Framework accepts the following configuration settings.  These can be provided via `pulumi config set cloud:<option>`.
 
 * `provider`: (Required) The provider to deploy cloud resources into. Currently only `aws` is supported.
 
-The AWS implementation of the Cloud framework accepts the following configuration settings.  These can be provided via `pulumi config set cloud-aws:<option>`.
+The AWS implementation of the Cloud Framework accepts the following configuration settings.  These can be provided via `pulumi config set cloud-aws:<option>`.
 
 * `functionMemorySize`: (Optional) Override the Lambda function memory size for all functions.
 * `functionIncludePaths`: (Optional) Comma-separated list of additional paths (relative to the project root) to include in Lambda zip uploads for JavaScript callbacks.  E.g `./img.png,app/`.
