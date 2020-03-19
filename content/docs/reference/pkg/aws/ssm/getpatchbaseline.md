@@ -322,7 +322,7 @@ The owner of the baseline. Valid values: `All`, `AWS`, `Self` (the current accou
     <tbody>
     
         <tr>
-            <td class="align-top">default<wbr>Baseline</td>
+            <td class="align-top">default_<wbr>baseline</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -738,7 +738,7 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">default<wbr>Baseline</td>
+            <td class="align-top">default_<wbr>baseline</td>
             <td class="align-top">
                 
                 <code>bool</code>

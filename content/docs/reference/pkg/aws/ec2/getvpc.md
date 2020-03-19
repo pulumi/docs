@@ -1279,7 +1279,7 @@ selected VPC. May be any of `&#34;default&#34;`, `&#34;dedicated&#34;`, or `&#34
         </tr>
     
         <tr>
-            <td class="align-top">cidr<wbr>Block<wbr>Associations</td>
+            <td class="align-top">cidr_<wbr>block_<wbr>associations</td>
             <td class="align-top">
                 
                 <code><a href="#getvpccidrblockassociation">List[Get<wbr>Vpc<wbr>Cidr<wbr>Block<wbr>Association]</a></code>

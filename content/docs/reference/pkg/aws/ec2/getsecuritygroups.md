@@ -615,7 +615,7 @@ unless the `vpc-id` filter is also used.
         </tr>
     
         <tr>
-            <td class="align-top">vpc<wbr>Ids</td>
+            <td class="align-top">vpc_<wbr>ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

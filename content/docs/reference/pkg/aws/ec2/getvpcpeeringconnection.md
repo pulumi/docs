@@ -740,7 +740,7 @@ The AWS account ID of the owner of the requester VPC of the specific VPC Peering
         </tr>
     
         <tr>
-            <td class="align-top">peer<wbr>Cidr<wbr>Block</td>
+            <td class="align-top">peer_<wbr>cidr_<wbr>block</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1534,7 +1534,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">peer<wbr>Cidr<wbr>Block</td>
+            <td class="align-top">peer_<wbr>cidr_<wbr>block</td>
             <td class="align-top">
                 
                 <code>str</code>

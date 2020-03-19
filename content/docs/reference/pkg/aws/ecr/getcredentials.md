@@ -444,7 +444,7 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">authorization<wbr>Token</td>
+            <td class="align-top">authorization_<wbr>token</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -456,7 +456,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">expires<wbr>At</td>
+            <td class="align-top">expires_<wbr>at</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -481,7 +481,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">proxy<wbr>Endpoint</td>
+            <td class="align-top">proxy_<wbr>endpoint</td>
             <td class="align-top">
                 
                 <code>str</code>

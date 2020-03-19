@@ -663,7 +663,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">status<wbr>Message</td>
+            <td class="align-top">status_<wbr>message</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -689,7 +689,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">target<wbr>Arns</td>
+            <td class="align-top">target_<wbr>arns</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

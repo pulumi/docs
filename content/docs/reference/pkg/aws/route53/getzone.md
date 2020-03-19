@@ -419,7 +419,7 @@ The Hosted Zone name of the desired Hosted Zone.
         </tr>
     
         <tr>
-            <td class="align-top">private<wbr>Zone</td>
+            <td class="align-top">private_<wbr>zone</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -434,7 +434,7 @@ Used with `name` field to get a private Hosted Zone.
         </tr>
     
         <tr>
-            <td class="align-top">resource<wbr>Record<wbr>Set<wbr>Count</td>
+            <td class="align-top">resource_<wbr>record_<wbr>set_<wbr>count</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -1080,7 +1080,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">linked<wbr>Service<wbr>Description</td>
+            <td class="align-top">linked_<wbr>service_<wbr>description</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1093,7 +1093,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">linked<wbr>Service<wbr>Principal</td>
+            <td class="align-top">linked_<wbr>service_<wbr>principal</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1131,7 +1131,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">private<wbr>Zone</td>
+            <td class="align-top">private_<wbr>zone</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1143,7 +1143,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">resource<wbr>Record<wbr>Set<wbr>Count</td>
+            <td class="align-top">resource_<wbr>record_<wbr>set_<wbr>count</td>
             <td class="align-top">
                 
                 <code>float</code>

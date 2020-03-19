@@ -649,7 +649,7 @@ The cidr block of the desired subnet.
         </tr>
     
         <tr>
-            <td class="align-top">default<wbr>For<wbr>Az</td>
+            <td class="align-top">default_<wbr>for_<wbr>az</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1458,7 +1458,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">default<wbr>For<wbr>Az</td>
+            <td class="align-top">default_<wbr>for_<wbr>az</td>
             <td class="align-top">
                 
                 <code>bool</code>

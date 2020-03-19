@@ -262,7 +262,7 @@ to which the underlying AWS account has access, regardless of their state.
     <tbody>
     
         <tr>
-            <td class="align-top">blacklisted<wbr>Names</td>
+            <td class="align-top">blacklisted_<wbr>names</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -277,7 +277,7 @@ List of blacklisted Availability Zone names.
         </tr>
     
         <tr>
-            <td class="align-top">blacklisted<wbr>Zone<wbr>Ids</td>
+            <td class="align-top">blacklisted_<wbr>zone_<wbr>ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -630,7 +630,7 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">blacklisted<wbr>Names</td>
+            <td class="align-top">blacklisted_<wbr>names</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -642,7 +642,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">blacklisted<wbr>Zone<wbr>Ids</td>
+            <td class="align-top">blacklisted_<wbr>zone_<wbr>ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -692,7 +692,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">zone<wbr>Ids</td>
+            <td class="align-top">zone_<wbr>ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

@@ -1023,7 +1023,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">service<wbr>Id</td>
+            <td class="align-top">service_<wbr>id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1074,7 +1074,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">vpc<wbr>Endpoint<wbr>Policy<wbr>Supported</td>
+            <td class="align-top">vpc_<wbr>endpoint_<wbr>policy_<wbr>supported</td>
             <td class="align-top">
                 
                 <code>bool</code>

@@ -364,7 +364,7 @@ prefix of cert to filter by
         </tr>
     
         <tr>
-            <td class="align-top">path<wbr>Prefix</td>
+            <td class="align-top">path_<wbr>prefix</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -982,7 +982,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">path<wbr>Prefix</td>
+            <td class="align-top">path_<wbr>prefix</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -994,7 +994,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">upload<wbr>Date</td>
+            <td class="align-top">upload_<wbr>date</td>
             <td class="align-top">
                 
                 <code>str</code>

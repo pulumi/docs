@@ -271,7 +271,7 @@ several valid keys, for a full reference, check out
         </tr>
     
         <tr>
-            <td class="align-top">instance<wbr>State<wbr>Names</td>
+            <td class="align-top">instance_<wbr>state_<wbr>names</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -286,7 +286,7 @@ A list of instance states that should be applicable to the desired instances. Th
         </tr>
     
         <tr>
-            <td class="align-top">instance<wbr>Tags</td>
+            <td class="align-top">instance_<wbr>tags</td>
             <td class="align-top">
                 
                 <code>Dict[str, Any]</code>
@@ -699,7 +699,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">instance<wbr>State<wbr>Names</td>
+            <td class="align-top">instance_<wbr>state_<wbr>names</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -711,7 +711,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">instance<wbr>Tags</td>
+            <td class="align-top">instance_<wbr>tags</td>
             <td class="align-top">
                 
                 <code>Dict[str, Any]</code>
@@ -736,7 +736,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">public<wbr>Ips</td>
+            <td class="align-top">public_<wbr>ips</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

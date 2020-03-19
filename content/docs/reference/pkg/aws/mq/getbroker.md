@@ -305,7 +305,7 @@ The unique name of the mq broker.
     <tbody>
     
         <tr>
-            <td class="align-top">broker<wbr>Id</td>
+            <td class="align-top">broker_<wbr>id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1169,7 +1169,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">broker<wbr>Id</td>
+            <td class="align-top">broker_<wbr>id</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -425,7 +425,7 @@ several valid keys, for a full reference, check out
         </tr>
     
         <tr>
-            <td class="align-top">most<wbr>Recent</td>
+            <td class="align-top">most_<wbr>recent</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -455,7 +455,7 @@ Returns the snapshots owned by the specified owner id. Multiple owners can be sp
         </tr>
     
         <tr>
-            <td class="align-top">restorable<wbr>By<wbr>User<wbr>Ids</td>
+            <td class="align-top">restorable_<wbr>by_<wbr>user_<wbr>ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -470,7 +470,7 @@ One or more AWS accounts IDs that can create volumes from the snapshot.
         </tr>
     
         <tr>
-            <td class="align-top">snapshot<wbr>Ids</td>
+            <td class="align-top">snapshot_<wbr>ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -1319,7 +1319,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">most<wbr>Recent</td>
+            <td class="align-top">most_<wbr>recent</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1369,7 +1369,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">restorable<wbr>By<wbr>User<wbr>Ids</td>
+            <td class="align-top">restorable_<wbr>by_<wbr>user_<wbr>ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -1394,7 +1394,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">snapshot<wbr>Ids</td>
+            <td class="align-top">snapshot_<wbr>ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

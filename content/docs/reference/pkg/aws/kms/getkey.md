@@ -229,7 +229,7 @@ Key identifier which can be one of the following format:
     <tbody>
     
         <tr>
-            <td class="align-top">grant<wbr>Tokens</td>
+            <td class="align-top">grant_<wbr>tokens</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -985,7 +985,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">deletion<wbr>Date</td>
+            <td class="align-top">deletion_<wbr>date</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1033,7 +1033,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">grant<wbr>Tokens</td>
+            <td class="align-top">grant_<wbr>tokens</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -1070,7 +1070,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">key<wbr>Manager</td>
+            <td class="align-top">key_<wbr>manager</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -348,7 +348,7 @@ The name of the tag key to filter on.
         </tr>
     
         <tr>
-            <td class="align-top">resource<wbr>Owner</td>
+            <td class="align-top">resource_<wbr>owner</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -786,7 +786,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">resource<wbr>Owner</td>
+            <td class="align-top">resource_<wbr>owner</td>
             <td class="align-top">
                 
                 <code>str</code>

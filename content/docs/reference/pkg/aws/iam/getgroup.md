@@ -525,7 +525,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">group<wbr>Id</td>
+            <td class="align-top">group_<wbr>id</td>
             <td class="align-top">
                 
                 <code>str</code>

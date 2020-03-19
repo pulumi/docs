@@ -356,7 +356,7 @@ IAM policy document version. Valid values: `2008-10-17`, `2012-10-17`. Defaults 
     <tbody>
     
         <tr>
-            <td class="align-top">override<wbr>Json</td>
+            <td class="align-top">override_<wbr>json</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -389,7 +389,7 @@ An ID for the policy document.
         </tr>
     
         <tr>
-            <td class="align-top">source<wbr>Json</td>
+            <td class="align-top">source_<wbr>json</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -817,7 +817,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">override<wbr>Json</td>
+            <td class="align-top">override_<wbr>json</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -841,7 +841,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">source<wbr>Json</td>
+            <td class="align-top">source_<wbr>json</td>
             <td class="align-top">
                 
                 <code>str</code>

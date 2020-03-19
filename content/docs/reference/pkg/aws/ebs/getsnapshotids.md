@@ -308,7 +308,7 @@ Returns the snapshots owned by the specified owner id. Multiple owners can be sp
         </tr>
     
         <tr>
-            <td class="align-top">restorable<wbr>By<wbr>User<wbr>Ids</td>
+            <td class="align-top">restorable_<wbr>by_<wbr>user_<wbr>ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -650,7 +650,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">restorable<wbr>By<wbr>User<wbr>Ids</td>
+            <td class="align-top">restorable_<wbr>by_<wbr>user_<wbr>ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

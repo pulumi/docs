@@ -824,7 +824,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">global<wbr>Quota</td>
+            <td class="align-top">global_<wbr>quota</td>
             <td class="align-top">
                 
                 <code>bool</code>

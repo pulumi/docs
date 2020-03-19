@@ -627,7 +627,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">pending<wbr>Tasks<wbr>Count</td>
+            <td class="align-top">pending_<wbr>tasks_<wbr>count</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -640,7 +640,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">registered<wbr>Container<wbr>Instances<wbr>Count</td>
+            <td class="align-top">registered_<wbr>container_<wbr>instances_<wbr>count</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -653,7 +653,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">running<wbr>Tasks<wbr>Count</td>
+            <td class="align-top">running_<wbr>tasks_<wbr>count</td>
             <td class="align-top">
                 
                 <code>float</code>

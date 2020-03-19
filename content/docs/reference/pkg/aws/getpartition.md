@@ -244,7 +244,7 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">dns<wbr>Suffix</td>
+            <td class="align-top">dns_<wbr>suffix</td>
             <td class="align-top">
                 
                 <code>str</code>

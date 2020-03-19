@@ -600,7 +600,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">compute<wbr>Types</td>
+            <td class="align-top">compute_<wbr>types</td>
             <td class="align-top">
                 
                 <code><a href="#getbundlecomputetype">List[Get<wbr>Bundle<wbr>Compute<wbr>Type]</a></code>
@@ -665,7 +665,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">root<wbr>Storages</td>
+            <td class="align-top">root_<wbr>storages</td>
             <td class="align-top">
                 
                 <code><a href="#getbundlerootstorage">List[Get<wbr>Bundle<wbr>Root<wbr>Storage]</a></code>
@@ -678,7 +678,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">user<wbr>Storages</td>
+            <td class="align-top">user_<wbr>storages</td>
             <td class="align-top">
                 
                 <code><a href="#getbundleuserstorage">List[Get<wbr>Bundle<wbr>User<wbr>Storage]</a></code>

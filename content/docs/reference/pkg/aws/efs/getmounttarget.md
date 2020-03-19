@@ -172,7 +172,7 @@ ID of the mount target that you want to have described
     <tbody>
     
         <tr>
-            <td class="align-top">mount<wbr>Target<wbr>Id</td>
+            <td class="align-top">mount_<wbr>target_<wbr>id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -695,7 +695,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">mount<wbr>Target<wbr>Id</td>
+            <td class="align-top">mount_<wbr>target_<wbr>id</td>
             <td class="align-top">
                 
                 <code>str</code>

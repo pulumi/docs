@@ -268,7 +268,7 @@ Amazon Resource Name (ARN) of the certificate authority.
         </tr>
     
         <tr>
-            <td class="align-top">revocation<wbr>Configurations</td>
+            <td class="align-top">revocation_<wbr>configurations</td>
             <td class="align-top">
                 
                 <code><a href="#getcertificateauthorityrevocationconfiguration">List[Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration]</a></code>
@@ -961,7 +961,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">revocation<wbr>Configurations</td>
+            <td class="align-top">revocation_<wbr>configurations</td>
             <td class="align-top">
                 
                 <code><a href="#getcertificateauthorityrevocationconfiguration">List[Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration]</a></code>

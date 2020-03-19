@@ -305,7 +305,7 @@ The name of the ECR Repository.
     <tbody>
     
         <tr>
-            <td class="align-top">image<wbr>Digest</td>
+            <td class="align-top">image_<wbr>digest</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -320,7 +320,7 @@ The sha256 digest of the image manifest. At least one of `image_digest` or `imag
         </tr>
     
         <tr>
-            <td class="align-top">image<wbr>Tag</td>
+            <td class="align-top">image_<wbr>tag</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -773,7 +773,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">image<wbr>Digest</td>
+            <td class="align-top">image_<wbr>digest</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -785,7 +785,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">image<wbr>Pushed<wbr>At</td>
+            <td class="align-top">image_<wbr>pushed_<wbr>at</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -798,7 +798,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">image<wbr>Size<wbr>In<wbr>Bytes</td>
+            <td class="align-top">image_<wbr>size_<wbr>in_<wbr>bytes</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -811,7 +811,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">image<wbr>Tag</td>
+            <td class="align-top">image_<wbr>tag</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -823,7 +823,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">image<wbr>Tags</td>
+            <td class="align-top">image_<wbr>tags</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

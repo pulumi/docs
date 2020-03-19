@@ -283,7 +283,7 @@ Custom filter block as described below.
         </tr>
     
         <tr>
-            <td class="align-top">internet<wbr>Gateway<wbr>Id</td>
+            <td class="align-top">internet_<wbr>gateway_<wbr>id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -668,7 +668,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">internet<wbr>Gateway<wbr>Id</td>
+            <td class="align-top">internet_<wbr>gateway_<wbr>id</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -443,7 +443,7 @@ If true, wait for password data to become available and retrieve it. Useful for 
         </tr>
     
         <tr>
-            <td class="align-top">get<wbr>User<wbr>Data</td>
+            <td class="align-top">get_<wbr>user_<wbr>data</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -473,7 +473,7 @@ Specify the exact Instance ID with which to populate the data source.
         </tr>
     
         <tr>
-            <td class="align-top">instance<wbr>Tags</td>
+            <td class="align-top">instance_<wbr>tags</td>
             <td class="align-top">
                 
                 <code>Dict[str, Any]</code>
@@ -2093,7 +2093,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
         </tr>
     
         <tr>
-            <td class="align-top">credit<wbr>Specifications</td>
+            <td class="align-top">credit_<wbr>specifications</td>
             <td class="align-top">
                 
                 <code><a href="#getinstancecreditspecification">List[Get<wbr>Instance<wbr>Credit<wbr>Specification]</a></code>
@@ -2181,7 +2181,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
         </tr>
     
         <tr>
-            <td class="align-top">get<wbr>User<wbr>Data</td>
+            <td class="align-top">get_<wbr>user_<wbr>data</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -2257,7 +2257,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
         </tr>
     
         <tr>
-            <td class="align-top">instance<wbr>Tags</td>
+            <td class="align-top">instance_<wbr>tags</td>
             <td class="align-top">
                 
                 <code>Dict[str, Any]</code>

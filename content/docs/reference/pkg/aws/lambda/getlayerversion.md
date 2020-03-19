@@ -262,7 +262,7 @@ Specific layer version. Conflicts with `compatible_runtime`. If omitted, the lat
     <tbody>
     
         <tr>
-            <td class="align-top">compatible<wbr>Runtime</td>
+            <td class="align-top">compatible_<wbr>runtime</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -877,7 +877,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">compatible<wbr>Runtime</td>
+            <td class="align-top">compatible_<wbr>runtime</td>
             <td class="align-top">
                 
                 <code>str</code>

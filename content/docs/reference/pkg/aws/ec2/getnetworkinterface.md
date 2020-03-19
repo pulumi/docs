@@ -1163,7 +1163,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">interface<wbr>Type</td>
+            <td class="align-top">interface_<wbr>type</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1254,7 +1254,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">requester<wbr>Id</td>
+            <td class="align-top">requester_<wbr>id</td>
             <td class="align-top">
                 
                 <code>str</code>

@@ -1980,7 +1980,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">db<wbr>Instance<wbr>Arn</td>
+            <td class="align-top">db_<wbr>instance_<wbr>arn</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -1993,7 +1993,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">db<wbr>Instance<wbr>Class</td>
+            <td class="align-top">db_<wbr>instance_<wbr>class</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2018,7 +2018,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">db<wbr>Instance<wbr>Port</td>
+            <td class="align-top">db_<wbr>instance_<wbr>port</td>
             <td class="align-top">
                 
                 <code>float</code>
@@ -2031,7 +2031,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">db<wbr>Name</td>
+            <td class="align-top">db_<wbr>name</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2044,7 +2044,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">db<wbr>Parameter<wbr>Groups</td>
+            <td class="align-top">db_<wbr>parameter_<wbr>groups</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -2057,7 +2057,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">db<wbr>Security<wbr>Groups</td>
+            <td class="align-top">db_<wbr>security_<wbr>groups</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -2070,7 +2070,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">db<wbr>Subnet<wbr>Group</td>
+            <td class="align-top">db_<wbr>subnet_<wbr>group</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -2252,7 +2252,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">option<wbr>Group<wbr>Memberships</td>
+            <td class="align-top">option_<wbr>group_<wbr>memberships</td>
             <td class="align-top">
                 
                 <code>List[str]</code>
@@ -2394,7 +2394,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">vpc<wbr>Security<wbr>Groups</td>
+            <td class="align-top">vpc_<wbr>security_<wbr>groups</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

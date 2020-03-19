@@ -786,7 +786,7 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">auth<wbr>Token<wbr>Enabled</td>
+            <td class="align-top">auth_<wbr>token_<wbr>enabled</td>
             <td class="align-top">
                 
                 <code>bool</code>

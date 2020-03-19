@@ -293,7 +293,7 @@ several valid keys, for a full reference, check out
         </tr>
     
         <tr>
-            <td class="align-top">most<wbr>Recent</td>
+            <td class="align-top">most_<wbr>recent</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1009,7 +1009,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">most<wbr>Recent</td>
+            <td class="align-top">most_<wbr>recent</td>
             <td class="align-top">
                 
                 <code>bool</code>
@@ -1073,7 +1073,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">volume<wbr>Type</td>
+            <td class="align-top">volume_<wbr>type</td>
             <td class="align-top">
                 
                 <code>str</code>

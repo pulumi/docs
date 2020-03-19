@@ -726,7 +726,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">resolver<wbr>Rule<wbr>Ids</td>
+            <td class="align-top">resolver_<wbr>rule_<wbr>ids</td>
             <td class="align-top">
                 
                 <code>List[str]</code>

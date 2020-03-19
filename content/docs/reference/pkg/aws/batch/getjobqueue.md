@@ -617,7 +617,7 @@ of the job queue.
         </tr>
     
         <tr>
-            <td class="align-top">compute<wbr>Environment<wbr>Orders</td>
+            <td class="align-top">compute_<wbr>environment_<wbr>orders</td>
             <td class="align-top">
                 
                 <code><a href="#getjobqueuecomputeenvironmentorder">List[Get<wbr>Job<wbr>Queue<wbr>Compute<wbr>Environment<wbr>Order]</a></code>

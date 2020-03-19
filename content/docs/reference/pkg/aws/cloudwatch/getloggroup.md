@@ -618,7 +618,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">creation<wbr>Time</td>
+            <td class="align-top">creation_<wbr>time</td>
             <td class="align-top">
                 
                 <code>float</code>

@@ -1435,7 +1435,7 @@ Interfaces below for more details.
         </tr>
     
         <tr>
-            <td class="align-top">credit<wbr>Specifications</td>
+            <td class="align-top">credit_<wbr>specifications</td>
             <td class="align-top">
                 
                 <code><a href="#getlaunchtemplatecreditspecification">List[Get<wbr>Launch<wbr>Template<wbr>Credit<wbr>Specification]</a></code>
@@ -1516,7 +1516,7 @@ below for more details.
         </tr>
     
         <tr>
-            <td class="align-top">iam<wbr>Instance<wbr>Profiles</td>
+            <td class="align-top">iam_<wbr>instance_<wbr>profiles</td>
             <td class="align-top">
                 
                 <code><a href="#getlaunchtemplateiaminstanceprofile">List[Get<wbr>Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile]</a></code>

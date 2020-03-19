@@ -216,7 +216,7 @@ The name of the ECS Service
     <tbody>
     
         <tr>
-            <td class="align-top">cluster<wbr>Arn</td>
+            <td class="align-top">cluster_<wbr>arn</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -660,7 +660,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">cluster<wbr>Arn</td>
+            <td class="align-top">cluster_<wbr>arn</td>
             <td class="align-top">
                 
                 <code>str</code>

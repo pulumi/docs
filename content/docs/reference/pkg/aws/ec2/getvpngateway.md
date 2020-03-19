@@ -463,7 +463,7 @@ The Autonomous System Number (ASN) for the Amazon side of the specific VPN Gatew
         </tr>
     
         <tr>
-            <td class="align-top">attached<wbr>Vpc<wbr>Id</td>
+            <td class="align-top">attached_<wbr>vpc_<wbr>id</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -913,7 +913,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">attached<wbr>Vpc<wbr>Id</td>
+            <td class="align-top">attached_<wbr>vpc_<wbr>id</td>
             <td class="align-top">
                 
                 <code>str</code>

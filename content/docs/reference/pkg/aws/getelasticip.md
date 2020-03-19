@@ -1080,7 +1080,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">network<wbr>Interface<wbr>Owner<wbr>Id</td>
+            <td class="align-top">network_<wbr>interface_<wbr>owner_<wbr>id</td>
             <td class="align-top">
                 
                 <code>str</code>

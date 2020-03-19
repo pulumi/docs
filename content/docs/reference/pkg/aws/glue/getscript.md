@@ -440,7 +440,7 @@ The programming language of the resulting code from the DAG. Defaults to `PYTHON
     <tbody>
     
         <tr>
-            <td class="align-top">dag<wbr>Edges</td>
+            <td class="align-top">dag_<wbr>edges</td>
             <td class="align-top">
                 
                 <code><a href="#getscriptdagedge">List[Get<wbr>Script<wbr>Dag<wbr>Edge]</a></code>
@@ -455,7 +455,7 @@ A list of the edges in the DAG. Defined below.
         </tr>
     
         <tr>
-            <td class="align-top">dag<wbr>Nodes</td>
+            <td class="align-top">dag_<wbr>nodes</td>
             <td class="align-top">
                 
                 <code><a href="#getscriptdagnode">List[Get<wbr>Script<wbr>Dag<wbr>Node]</a></code>
@@ -805,7 +805,7 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">dag<wbr>Edges</td>
+            <td class="align-top">dag_<wbr>edges</td>
             <td class="align-top">
                 
                 <code><a href="#getscriptdagedge">List[Get<wbr>Script<wbr>Dag<wbr>Edge]</a></code>
@@ -817,7 +817,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">dag<wbr>Nodes</td>
+            <td class="align-top">dag_<wbr>nodes</td>
             <td class="align-top">
                 
                 <code><a href="#getscriptdagnode">List[Get<wbr>Script<wbr>Dag<wbr>Node]</a></code>
@@ -854,7 +854,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">python<wbr>Script</td>
+            <td class="align-top">python_<wbr>script</td>
             <td class="align-top">
                 
                 <code>str</code>
@@ -867,7 +867,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">scala<wbr>Code</td>
+            <td class="align-top">scala_<wbr>code</td>
             <td class="align-top">
                 
                 <code>str</code>

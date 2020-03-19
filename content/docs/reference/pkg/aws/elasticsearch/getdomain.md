@@ -1190,7 +1190,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">cluster<wbr>Configs</td>
+            <td class="align-top">cluster_<wbr>configs</td>
             <td class="align-top">
                 
                 <code><a href="#getdomainclusterconfig">List[Get<wbr>Domain<wbr>Cluster<wbr>Config]</a></code>
@@ -1293,7 +1293,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">encryption<wbr>At<wbr>Rests</td>
+            <td class="align-top">encryption_<wbr>at_<wbr>rests</td>
             <td class="align-top">
                 
                 <code><a href="#getdomainencryptionatrest">List[Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest]</a></code>
@@ -1358,7 +1358,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">node<wbr>To<wbr>Node<wbr>Encryptions</td>
+            <td class="align-top">node_<wbr>to_<wbr>node_<wbr>encryptions</td>
             <td class="align-top">
                 
                 <code><a href="#getdomainnodetonodeencryption">List[Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption]</a></code>

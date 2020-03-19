@@ -681,7 +681,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">result<wbr>Map</td>
+            <td class="align-top">result_<wbr>map</td>
             <td class="align-top">
                 
                 <code>Dict[str, str]</code>
