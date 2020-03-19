@@ -9,9 +9,9 @@ tags: ["JavaScript","AWS","Containers","Infrastructure","TypeScript"]
 
 > Update: Check out the [Learning Machine Case Study]({{< relref "/case-studies/learning-machine" >}}) where provisioning went from 3 weeks to 1 hour with Pulumi and AWS.
 >
-> **"The impact of serverless capabilities was also transformative for the Learning Machine business. Pulumi enabled a rapid shift to Amazon ECS, AWS Fargate and AWS Lambda — the net effect of which was a 67% reduction in AWS charges. This enabled the team to spend less time focused on maintaining existing infrastructure and more time deploying new applications on AWS and adding new customers.
+> *"The impact of serverless capabilities was also transformative for the Learning Machine business. Pulumi enabled a rapid shift to Amazon ECS, AWS Fargate and AWS Lambda — the net effect of which was a 67% reduction in AWS charges. This enabled the team to spend less time focused on maintaining existing infrastructure and more time deploying new applications on AWS and adding new customers.*
 >
-> “Pulumi is the foundational technology that allowed us to transform our organization,” said Hughes. The entire DevOps process was streamlined and in addition to realizing better productivity and higher quality, the team has new insight into their SaaS offering that they never thought possible."**
+> *Pulumi is the foundational technology that allowed us to transform our organization,” said Hughes. The entire DevOps process was streamlined and in addition to realizing better productivity and higher quality, the team has new insight into their SaaS offering that they never thought possible."*
 
 <!--more-->
 
