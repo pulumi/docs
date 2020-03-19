@@ -12,13 +12,13 @@ tags:
     - microservices
 ---
 
-Abstraction in software is key to building resilient systems by encapsulating behavior and decoupling code. The same principles apply to infrastructure, where we want to declare behavior or state and not implementation details. As an industry, we've moved away from monolithic applications to distributed systems such as serverless, microservices, Kubernetes, and virtual machine deployments. In this article, we'll take a closer look at the characteristics of these architectures and how Pulumi can abstract the components that comprise these systems.
+Abstraction is key to building resilient systems because it encapsulates behavior and decouples code, letting each component perform its function independently. The same principles apply to infrastructure, where we want to declare behavior or state and not implementation details. As an industry, we've moved away from monolithic applications to distributed systems such as serverless, microservices, Kubernetes, and virtual machine deployments. In this article, we'll take a closer look at the characteristics of these architectures and how Pulumi can abstract the components that comprise these systems.
 
 <!--more-->
 
 ## Virtual Machines
 
-Virtual machines arose from the need to use expensive hardware more efficiently. VMs achieve efficiency by sharing the host with separate computing environments that decrease the number of servers needed to run applications. A group of hosts can also be aggregated so that it behaves as a single virtual host with large memory and processing capabilities. Virtual machines can also emulate other environments that have specific hardware requirements or capabilities that the host machine does not have. Finally, virtualization provides the host machine isolation from the guest virtual machines, limiting access to the host machine through an abstraction layer. Virtualization has the added advantage of enabling a fine degree of control over resources available to the virtual machine.
+Virtual machines arose from the need to use expensive hardware more efficiently. VMs are more efficient because they share the host server, decreasing the number of physical servers needed to run applications. A group of hosts can also be aggregated so that it behaves as a single virtual host with large memory and processing capabilities. Virtual machines can emulate other environments that have specific hardware requirements or capabilities that the host machine does not have, thus reducing the need for specific hardware or operating systems. Finally, virtualization provides the host machine isolation from the guest virtual machines by limiting access to the host machine through an abstraction layer. Finally, virtualization has the added advantage of providing a fine degree of control over resources available to the virtual machine.
 
 If virtual machines are part of your infrastructure, Pulumi lets you create virtual machines programmatically across cloud service providers. The Javascript example below illustrates how to deploy a virtual machine on Google Cloud Platform. The script spins up a Debian based instance and creates a network with an open port 22 to let you configure and manage the machine as needed.
 
@@ -65,13 +65,13 @@ echo "Hello, World!" > index.html
 nohup python -m SimpleHTTPServer 80 &
 ```
 
-When the virtual machine is created, it reads a configuration file that creates a webserver. This a basic example, but it shows how to configure virtual machines programmatically, which is useful for scaling horizontally.
+When the virtual machine is created, it reads the configuration file that creates a webserver. This a basic example, but it shows how to configure virtual machines programmatically, which is useful for scaling horizontally.
 
 ## Serverless
 
 Serverless is a computing architecture characterized by server-side logic running in stateless containers that are invoked by events. They are typically ephemeral (often are available for only one call), and managed by third-party cloud providers. Serverless is also called Functions as a Service, or `FaaS`, and well-known implementations include AWS Lambda and Fargate, Azure Functions, and Google Cloud Run and Cloud Functions.
 
-A significant benefit of serverless is that it's a polyglot platform that allows developers to choose languages optimized for a task. For example, scripting languages like Javascript or Python may be more responsive than a language such as Java. Serverless functions should support both synchronous and asynchronous calls. There are use cases that require an immediate response such as processing a video stream and instances where returning the result is not critical as in an ETL batch job.
+A significant benefit of serverless is that it's a polyglot platform that allows developers to choose languages optimized for a task. For example, scripting languages like Javascript or Python may be more responsive than a language such as Java. Serverless functions can support both synchronous and asynchronous calls. There are use cases that require an immediate response such as processing a video stream and instances where returning the result immediately is not critical as in an ETL batch job.
 
 A key part of serverless architecture is an API Gateway that provides logical routes for mapping standard HTTP operations such as GET, PUT, POST, and DELETE to functions. The gateway makes development easier since these are standard and well-known interfaces. In addition to an API Gateway, the serverless platform should provide REST endpoints that allow you to manage the deploy with a CLI, portal, or an automation script. Finally, serverless architecture is extensible and supports integration with event sources and resources from the cloud provider through webhooks and other mechanisms.
 
@@ -126,18 +126,18 @@ export const goEndpoint = functionGo.httpsTriggerUrl;
 
 ## Kubernetes
 
-Kubernetes is a container orchestration system for deploying, scaling, and managing your application. The components that make up the application are in containers, which packages the code with all dependencies included. Containers run on a cluster of nodes, and you declare how to allocate CPU and memory resources to each container. Kubernetes manages the containers by replacing containers that fail and killing containers that don't respond. It can also scale the number of containers as well as load balance the network traffic. These are some of the features that Kubernetes provides:
+Kubernetes is a container orchestration system for deploying, scaling, and managing your application. Applications use multiple containers that contain code and dependencies needed for the code to execute. Kubernetes runs on a cluster of nodes and containers are deployed in pods. Kubernetes manages the pods by replacing containers that fail and killing containers that don't respond. It can also scale the number of containers as needed and load balance the network traffic. These are some of the features that Kubernetes provides:
 
 - Load balancing and traffic distribution across the cluster
-Service discovery
+- Service discovery
 - Create and manage containers
 - Remove failed containers and reassign their resources to a new container
 - Mount storage systems such as local storage and storage on public cloud providers
 - Automated deployments based on different deploy methods such as canary or blue/green deployments
 - Automated rollbacks to last known good state
-Secrets management
+- Secrets management
 
-The following example is based on the [Kubernetes Guestbook](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/) application. The difference between this implementation and the original application is that instead of using YAML to declare the infrastructure, it uses a component written in TypeScript to create the service deployment which is implemented as `k8sjs`.
+The following example is based on the [Kubernetes Guestbook](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/) example. The difference between this implementation and the original application is that instead of using YAML to declare the infrastructure, it uses a component written in TypeScript to create the service deployment which is implemented as `k8sjs`.
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -239,7 +239,7 @@ The [original example](https://github.com/kubernetes/examples/tree/master/guestb
 
 ## Microservices
 
-Microservices are based on the idea that a component in the application is an encapsulation of a business capability. Services are independently deployable and communicate via web service requests, which has the advantage of redeploying only one or selected services and leaving the remaining components up and running. The [12-Factor app](https://12factor.net/) is the canonical pattern for microservice, which is summarized by:
+Microservices are based on the idea that components encapsulate a business capability. Services are independently deployable and communicate via web service requests, which has the advantage of redeploying only one or selected services and leaving the remaining components up and running. The [12-Factor app](https://12factor.net/) is the canonical pattern for microservice, which is summarized by:
 
 - Use declarative methods to configure and deploy applications.
 - Enforce maximum portability between environments by establishing a clean contract with the underlying operating system.
@@ -304,4 +304,4 @@ export const rubyUrl = rubyService.status.url;
 
 ## Conclusion
 
-We've covered the major infrastructure architectural patterns use for deploying modern applications. Whether you use Virtual Machines, Serverless, Kubernetes or Microservices on Containers the goal is to create reusable components that abstract the configuration details and enable plug-and-play architecture. In subsequent articles, we'll take an in-depth look at each pattern and how to implement them on major providers using modern languages.
+We've covered the major infrastructure architectural patterns use for deploying modern applications. Whether you use Virtual Machines, Serverless, Kubernetes or Microservices with containers the goal is to create reusable components that abstract the configuration details and enable plug-and-play architecture. In subsequent articles, we'll take an in-depth look at each pattern and how to implement them on major providers using modern languages.
