@@ -4,7 +4,7 @@ title: "Pulumi Up(date)"
 meta_desc: "Join Pulumi CEO, Joe Duffy, and the Pulumi team for a walk-through of all the improvements and modern infrastructure capabilities of Pulumi."
 
 aliases: [
-    "/webinars/pulumi-up(date)-2020-04-22"
+    "/webinars/pulumi-v2-virtual-launch"
 ]
 
 # If the video is pre-recorded or live.
@@ -32,7 +32,7 @@ external: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "pulumi-v2-virtual-launch"
+url_slug: "pulumi-update-2020-04-22"
 
 # The content of the hero section.
 hero:
