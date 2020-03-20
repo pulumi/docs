@@ -170,7 +170,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 {{% /lang %}}
 
 {{% lang csharp %}}
-Coming soon!
+* [**AWS** (`Pulumi.Aws`)](/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.html)
 {{% /lang %}}
 
 ### Cloud-Agnostic Packages
