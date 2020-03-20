@@ -38,8 +38,10 @@ main:
     title: "Creating modern, cloud native applications by unifying your DevOps teams"
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/M1Es9e9ICJA"
+    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
+    sortable_date: 2019-02-05 10:00:00 -07:00
     # Datetime of the webinar.
-    datetime: 2019-02-05 10:00:00 -07:00
+    datetime: ""
     # Description of the webinar.
     description: >
         Pulumi's Cloud Native Development Platform streamlines DevOps processes and the delivery of cloud native software. Pulumi unlocks the power of general-purpose programming languages to equip your organization with the tools necessary to quickly build and deploy containers on AWS.

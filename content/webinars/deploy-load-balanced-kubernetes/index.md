@@ -43,8 +43,10 @@ main:
     title: "Deploy and Scale a Load-Balanced Kubernetes Service"
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/X96EMLi8uJY"
+    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
+    sortable_date: 2019-11-23 10:00:00 -07:00
     # Datetime of the webinar.
-    datetime: 2019-02-05 10:00:00 -07:00
+    datetime: ""
     # Description of the webinar.
     description: |
         Deploy and scale a load-balanced Kubernetes service using Pulumi, including building, publishing, and running a private container image.

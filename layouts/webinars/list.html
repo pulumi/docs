@@ -24,7 +24,7 @@
                 <h2 id="upcomingWebinars" class="mb-8">Upcoming Webinars</h2>
                 <ul class="list-none mx-auto md:flex md:flex-wrap pl-0">
                     {{ $live_webinars := (where $non_pulumi_tv_webinars ".Params.pre_recorded" false)}}
-                    {{ range $index, $webinar := (sort $live_webinars ".Params.main.datetime") }}
+                    {{ range (sort $live_webinars ".Params.main.sortable_date") }}
                         {{ partial "webinar-list-item" . }}
                     {{ end }}
                 </ul>
@@ -33,7 +33,7 @@
                 <h2 id="pulumiTV" class="mb-8">PulumiTV</h2>
                 <ul class="list-none md:flex md:flex-wrap pl-0">
                     {{ $pulumi_tv_webinars := (where $webinars ".Params.pulumi_tv" true)}}
-                    {{ range $index, $webinar := (sort $pulumi_tv_webinars ".Params.main.datetime") }}
+                    {{ range (sort $pulumi_tv_webinars ".Params.main.sortable_date" "desc") }}
                         {{ partial "webinar-list-item" . }}
                     {{ end }}
                 </ul>
@@ -42,7 +42,7 @@
                 <h2 id="onDemand" class="mb-8">On Demand Webinars</h2>
                 <ul class="list-none md:flex md:flex-wrap pl-0">
                     {{ $recorded_webinars := (where $non_pulumi_tv_webinars ".Params.pre_recorded" true)}}
-                    {{ range $index, $webinar := (sort $recorded_webinars ".Params.main.datetime") }}
+                    {{ range (sort $recorded_webinars ".Params.main.sortable_date" "desc") }}
                         {{ partial "webinar-list-item" . }}
                     {{ end }}
                 </ul>

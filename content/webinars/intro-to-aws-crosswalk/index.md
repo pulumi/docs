@@ -43,8 +43,10 @@ main:
     title: "Introduction to Crosswalk for AWS"
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/PQNfLqUHu64"
+    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
+    sortable_date: 2019-06-14 10:00:00 -07:00
     # Datetime of the webinar.
-    datetime: 2019-02-05 10:00:00 -07:00
+    datetime: ""
     # Description of the webinar.
     description: |
         Meet the team behind Pulumi Crosswalk for AWS, see some of what it can do across AWS ECS, EKS, Lambda, and other AWS workloads, and hear from partners Tableau and AWS on how they are using EKS to get Kubernetes running in AWS.

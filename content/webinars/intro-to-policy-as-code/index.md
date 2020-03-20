@@ -43,8 +43,10 @@ main:
     title: "Introduction to CrossGuard: Infrastructure Policy as Code"
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/-xJT_lON254"
+    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
+    sortable_date: 2019-12-23 10:00:00 -07:00
     # Datetime of the webinar.
-    datetime: 2019-02-05 10:00:00 -07:00
+    datetime: ""
     # Description of the webinar.
     description: |
         Pulumi CrossGuard is a product that provides gated deployments via Policy as Code.
